@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Seven\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-07-13 18:33+0200\n"
-"PO-Revision-Date: 2015-07-13 20:07+0200\n"
+"PO-Revision-Date: 2015-07-13 22:16+0200\n"
 "Last-Translator: mike99 <mike99@mail.to>\n"
 "Language-Team: kraven & mike99\n"
 "Language: de\n"
@@ -479,7 +479,7 @@ msgstr "Farbe für Analoguhr"
 
 #: plugin.py:677
 msgid "satellite information"
-msgstr "Stalliteninformationen"
+msgstr "Satelliteninformationen"
 
 #: plugin.py:678
 msgid "system information"
