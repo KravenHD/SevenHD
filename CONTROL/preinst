@@ -1,0 +1,27 @@
+#!/bin/sh
+echo "Checking for previous installations..."
+if [ -f /usr/share/enigma2/SevenHD/skin.xml ]; then
+    cp /usr/share/enigma2/SevenHD/skin.xml /tmp
+    rm -rf /usr/share/enigma2/SevenHD
+    rm -rf /usr/lib/enigma2/python/Components/Converter/SevenHD*
+    rm -rf /usr/lib/enigma2/python/Components/Renderer/SevenHD*
+		echo "                                                           "
+		echo "          Previous SevenHD installation             "
+		echo "                 was found and removed!                    "
+		echo "                                                           "
+fi
+if [ -f /usr/lib/enigma2/python/Plugins/Extensions/SevenHD/plugin.py ]; then
+    rm -rf /usr/lib/enigma2/python/Plugins/Extensions/SevenHD
+		echo "                                                           "
+		echo "           SevenHD configuration plugin             "
+		echo "                 was found and removed!                    "
+		echo "                                                           "
+fi
+
+
+
+
+echo "                                                           "
+echo "         The Skin SevenHD is now being installed...        "
+echo "                                                          "
+exit 0

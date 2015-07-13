@@ -1,0 +1,12 @@
+<!-- /* System-Info -->
+<eLabel backgroundColor="SevenBackground" position="14,360" size="295,88" transparent="0" zPosition="-1" />
+	<eLabel text="System-Temp:" position="34,368" size="120,22" font="Regular;16" halign="left" valign="center" backgroundColor="SevenBackground" transparent="1" zPosition="1" foregroundColor="SevenFont2" />
+	<widget source="global.CurrentTime" render="SevenHDSYSTemp" position="163,368" size="120,22" font="Regular;16" halign="left" valign="center" foregroundColor="SevenFont1" backgroundColor="SevenBackground" transparent="0" zPosition="1">
+	</widget>
+	<widget source="session.CurrentService" render="Label" position="34,397" size="260,44" font="Regular;16" halign="left" valign="center" transparent="0" zPosition="6" foregroundColor="SevenFont1" backgroundColor="SevenBackground">
+	  <convert type="SevenHDCpuUsage">CPU Utilization:$0 (Core #1: $1, Core #2: $2)</convert>
+	</widget>
+<eLabel backgroundColor="SevenBorder" position="14,360" size="2,89" zPosition="2" />
+  <eLabel backgroundColor="SevenBorder" position="308,360" size="2,89" zPosition="2" />
+  <eLabel backgroundColor="SevenBorder" position="14,360" size="294,2" zPosition="2" />
+  <eLabel backgroundColor="SevenBorder" position="14,447" size="294,2" zPosition="2" />
