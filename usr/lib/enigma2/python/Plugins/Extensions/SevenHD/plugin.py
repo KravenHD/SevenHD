@@ -126,7 +126,7 @@ config.plugins.SevenHD.Background = ConfigSelection(default="000000", choices = 
 				("ffffff", _("white"))
 				])
 				
-config.plugins.SevenHD.BackgroundRight = ConfigSelection(default="1B1775", choices = [
+config.plugins.SevenHD.BackgroundRight = ConfigSelection(default="000001", choices = [
 				("F0A30A", _("amber")),
 				("B27708", _("amber dark")),
 				("000000", _("black")),
@@ -790,7 +790,7 @@ class SevenHD(ConfigListScreen, Screen):
 			self.skinSearchAndReplace = []
 			self.skinSearchAndReplace.append(["0A", config.plugins.SevenHD.BackgroundColorTrans.value])
 			self.skinSearchAndReplace.append(["000000", config.plugins.SevenHD.Background.value])
-			self.skinSearchAndReplace.append(["1B1775", config.plugins.SevenHD.BackgroundRight.value])
+			self.skinSearchAndReplace.append(["000001", config.plugins.SevenHD.BackgroundRight.value])
 			self.skinSearchAndReplace.append(["000050EF", config.plugins.SevenHD.SelectionBackground.value])
 			self.skinSearchAndReplace.append(["00fffff3", config.plugins.SevenHD.Font1.value])
 			self.skinSearchAndReplace.append(["00fffff4", config.plugins.SevenHD.Font2.value])
