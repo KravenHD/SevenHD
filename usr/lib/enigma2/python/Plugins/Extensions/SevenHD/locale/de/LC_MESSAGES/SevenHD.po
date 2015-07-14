@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Seven\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-07-13 18:33+0200\n"
-"PO-Revision-Date: 2015-07-14 11:27+0200\n"
+"PO-Revision-Date: 2015-07-14 12:53+0200\n"
 "Last-Translator: mike99 <mike99@mail.to>\n"
 "Language-Team: kraven & mike99\n"
 "Language: de\n"
@@ -17,6 +17,411 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 1.8.2\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: SevenHDYWeather.py:198 SevenHDYWeather.py:230
+msgid "N"
+msgstr ""
+
+#: SevenHDYWeather.py:200
+msgid "N-NE"
+msgstr "N-NO"
+
+#: SevenHDYWeather.py:202
+msgid "NE"
+msgstr "NO"
+
+#: SevenHDYWeather.py:204
+msgid "E-NE"
+msgstr "O-NO"
+
+#: SevenHDYWeather.py:206
+msgid "E"
+msgstr "O"
+
+#: SevenHDYWeather.py:208
+msgid "E-SE"
+msgstr "O-SO"
+
+#: SevenHDYWeather.py:210
+msgid "SE"
+msgstr "SO"
+
+#: SevenHDYWeather.py:212
+msgid "S-SE"
+msgstr "S-SO"
+
+#: SevenHDYWeather.py:214
+msgid "S"
+msgstr ""
+
+#: SevenHDYWeather.py:216
+msgid "S-SW"
+msgstr ""
+
+#: SevenHDYWeather.py:218
+msgid "SW"
+msgstr ""
+
+#: SevenHDYWeather.py:220
+msgid "W-SW"
+msgstr ""
+
+#: SevenHDYWeather.py:222
+msgid "W"
+msgstr ""
+
+#: SevenHDYWeather.py:224
+msgid "W-NW"
+msgstr ""
+
+#: SevenHDYWeather.py:226
+msgid "NW"
+msgstr ""
+
+#: SevenHDYWeather.py:228
+msgid "N-NW"
+msgstr ""
+
+#: SevenHDYWeather.py:232
+msgid "N/A"
+msgstr ""
+
+#: SevenHDYWeather.py:234
+msgid " km/h"
+msgstr ""
+
+#: SevenHDYWeather.py:251 SevenHDYWeather.py:271 SevenHDYWeather.py:291
+#: SevenHDYWeather.py:311 SevenHDYWeather.py:331
+msgid "Mon"
+msgstr "MO"
+
+#: SevenHDYWeather.py:253 SevenHDYWeather.py:273 SevenHDYWeather.py:293
+#: SevenHDYWeather.py:313 SevenHDYWeather.py:333
+msgid "Tue"
+msgstr "DI"
+
+#: SevenHDYWeather.py:255 SevenHDYWeather.py:275 SevenHDYWeather.py:295
+#: SevenHDYWeather.py:315 SevenHDYWeather.py:335
+msgid "Wed"
+msgstr "MI"
+
+#: SevenHDYWeather.py:257 SevenHDYWeather.py:277 SevenHDYWeather.py:297
+#: SevenHDYWeather.py:317 SevenHDYWeather.py:337
+msgid "Thu"
+msgstr "DO"
+
+#: SevenHDYWeather.py:259 SevenHDYWeather.py:279 SevenHDYWeather.py:299
+#: SevenHDYWeather.py:319 SevenHDYWeather.py:339
+msgid "Fri"
+msgstr "FR"
+
+#: SevenHDYWeather.py:261 SevenHDYWeather.py:281 SevenHDYWeather.py:301
+#: SevenHDYWeather.py:321 SevenHDYWeather.py:341
+msgid "Sat"
+msgstr "SA"
+
+#: SevenHDYWeather.py:263 SevenHDYWeather.py:283 SevenHDYWeather.py:303
+#: SevenHDYWeather.py:323 SevenHDYWeather.py:343
+msgid "Sun"
+msgstr "SO"
+
+#: SevenHDYWeather.py:426 SevenHDYWeather.py:530 SevenHDYWeather.py:634
+#: SevenHDYWeather.py:738 SevenHDYWeather.py:842
+msgid "Tornado"
+msgstr ""
+
+#: SevenHDYWeather.py:428 SevenHDYWeather.py:532 SevenHDYWeather.py:636
+#: SevenHDYWeather.py:740 SevenHDYWeather.py:844
+msgid ""
+"Tropical\n"
+" storm"
+msgstr ""
+"Tropischer\n"
+" Sturm"
+
+#: SevenHDYWeather.py:430 SevenHDYWeather.py:534 SevenHDYWeather.py:638
+#: SevenHDYWeather.py:742 SevenHDYWeather.py:846
+msgid "Hurricane"
+msgstr "Hurrikan"
+
+#: SevenHDYWeather.py:432 SevenHDYWeather.py:536 SevenHDYWeather.py:640
+#: SevenHDYWeather.py:744 SevenHDYWeather.py:848
+msgid ""
+"Severe\n"
+" thunderstorms"
+msgstr ""
+"Schwere\n"
+" Gewitter"
+
+#: SevenHDYWeather.py:434 SevenHDYWeather.py:538 SevenHDYWeather.py:642
+#: SevenHDYWeather.py:746 SevenHDYWeather.py:850
+msgid "Thunderstorms"
+msgstr "Gewitter"
+
+#: SevenHDYWeather.py:436 SevenHDYWeather.py:540 SevenHDYWeather.py:644
+#: SevenHDYWeather.py:748 SevenHDYWeather.py:852
+msgid ""
+"Mixed rain\n"
+" and snow"
+msgstr ""
+"Regen\n"
+" und Schnee"
+
+#: SevenHDYWeather.py:438 SevenHDYWeather.py:542 SevenHDYWeather.py:646
+#: SevenHDYWeather.py:750 SevenHDYWeather.py:854
+msgid ""
+"Mixed rain\n"
+" and sleet"
+msgstr ""
+"Regen\n"
+" und Schneeregen"
+
+#: SevenHDYWeather.py:440 SevenHDYWeather.py:544 SevenHDYWeather.py:648
+#: SevenHDYWeather.py:752 SevenHDYWeather.py:856
+msgid ""
+"Mixed snow\n"
+" and sleet"
+msgstr ""
+"Schnee\n"
+" und Graupel"
+
+#: SevenHDYWeather.py:442 SevenHDYWeather.py:546 SevenHDYWeather.py:650
+#: SevenHDYWeather.py:754 SevenHDYWeather.py:858
+msgid ""
+"Freezing\n"
+" drizzle"
+msgstr ""
+"Frierender\n"
+" Nieselregen"
+
+#: SevenHDYWeather.py:444 SevenHDYWeather.py:548 SevenHDYWeather.py:652
+#: SevenHDYWeather.py:756 SevenHDYWeather.py:860
+msgid "Drizzle"
+msgstr "Nieselregen"
+
+#: SevenHDYWeather.py:446 SevenHDYWeather.py:550 SevenHDYWeather.py:654
+#: SevenHDYWeather.py:758 SevenHDYWeather.py:862
+msgid ""
+"Freezing\n"
+" rain"
+msgstr "Eisregen"
+
+#: SevenHDYWeather.py:448 SevenHDYWeather.py:552 SevenHDYWeather.py:656
+#: SevenHDYWeather.py:760 SevenHDYWeather.py:864
+msgid "Showers"
+msgstr "Regen"
+
+#: SevenHDYWeather.py:450 SevenHDYWeather.py:554 SevenHDYWeather.py:658
+#: SevenHDYWeather.py:762 SevenHDYWeather.py:866
+msgid "Rain"
+msgstr "Regen"
+
+#: SevenHDYWeather.py:452 SevenHDYWeather.py:556 SevenHDYWeather.py:660
+#: SevenHDYWeather.py:764 SevenHDYWeather.py:868
+msgid ""
+"Snow\n"
+" flurries"
+msgstr "Schneetreiben"
+
+#: SevenHDYWeather.py:454 SevenHDYWeather.py:558 SevenHDYWeather.py:662
+#: SevenHDYWeather.py:766 SevenHDYWeather.py:870
+msgid ""
+"Light\n"
+" snow showers"
+msgstr ""
+"Leichte\n"
+" Schneeschauer"
+
+#: SevenHDYWeather.py:456 SevenHDYWeather.py:560 SevenHDYWeather.py:664
+#: SevenHDYWeather.py:768 SevenHDYWeather.py:872
+msgid ""
+"Blowing\n"
+" snow"
+msgstr "Schneetreiben"
+
+#: SevenHDYWeather.py:458 SevenHDYWeather.py:562 SevenHDYWeather.py:666
+#: SevenHDYWeather.py:770 SevenHDYWeather.py:874
+msgid "Snow"
+msgstr "Schnee"
+
+#: SevenHDYWeather.py:460 SevenHDYWeather.py:564 SevenHDYWeather.py:668
+#: SevenHDYWeather.py:772 SevenHDYWeather.py:876
+msgid "Hail"
+msgstr "Hagel"
+
+#: SevenHDYWeather.py:462 SevenHDYWeather.py:566 SevenHDYWeather.py:670
+#: SevenHDYWeather.py:774 SevenHDYWeather.py:878
+msgid "Sleet"
+msgstr "Schneeregen"
+
+#: SevenHDYWeather.py:464 SevenHDYWeather.py:568 SevenHDYWeather.py:672
+#: SevenHDYWeather.py:776 SevenHDYWeather.py:880
+msgid "Dust"
+msgstr "Staub"
+
+#: SevenHDYWeather.py:466 SevenHDYWeather.py:570 SevenHDYWeather.py:674
+#: SevenHDYWeather.py:778 SevenHDYWeather.py:882
+msgid "Foggy"
+msgstr "Nebelig"
+
+#: SevenHDYWeather.py:468 SevenHDYWeather.py:572 SevenHDYWeather.py:676
+#: SevenHDYWeather.py:780 SevenHDYWeather.py:884
+msgid "Haze"
+msgstr "Nebel"
+
+#: SevenHDYWeather.py:470 SevenHDYWeather.py:574 SevenHDYWeather.py:678
+#: SevenHDYWeather.py:782 SevenHDYWeather.py:886
+msgid "Smoky"
+msgstr "Qualmig"
+
+#: SevenHDYWeather.py:472 SevenHDYWeather.py:576 SevenHDYWeather.py:680
+#: SevenHDYWeather.py:784 SevenHDYWeather.py:888
+msgid "Blustery"
+msgstr "Stürmisch"
+
+#: SevenHDYWeather.py:474 SevenHDYWeather.py:578 SevenHDYWeather.py:682
+#: SevenHDYWeather.py:786 SevenHDYWeather.py:890
+msgid "Windy"
+msgstr "Windig"
+
+#: SevenHDYWeather.py:476 SevenHDYWeather.py:580 SevenHDYWeather.py:684
+#: SevenHDYWeather.py:788 SevenHDYWeather.py:892
+msgid "Cold"
+msgstr "Kalt"
+
+#: SevenHDYWeather.py:478 SevenHDYWeather.py:582 SevenHDYWeather.py:686
+#: SevenHDYWeather.py:790 SevenHDYWeather.py:894
+msgid "Cloudy"
+msgstr "Wolkig"
+
+#: SevenHDYWeather.py:480 SevenHDYWeather.py:482 SevenHDYWeather.py:584
+#: SevenHDYWeather.py:586 SevenHDYWeather.py:688 SevenHDYWeather.py:690
+#: SevenHDYWeather.py:792 SevenHDYWeather.py:794 SevenHDYWeather.py:896
+#: SevenHDYWeather.py:898
+msgid ""
+"Mostly\n"
+" cloudy"
+msgstr ""
+"Überwiegend\n"
+" bewölkt"
+
+#: SevenHDYWeather.py:484 SevenHDYWeather.py:486 SevenHDYWeather.py:514
+#: SevenHDYWeather.py:588 SevenHDYWeather.py:590 SevenHDYWeather.py:618
+#: SevenHDYWeather.py:692 SevenHDYWeather.py:694 SevenHDYWeather.py:722
+#: SevenHDYWeather.py:796 SevenHDYWeather.py:798 SevenHDYWeather.py:826
+#: SevenHDYWeather.py:900 SevenHDYWeather.py:902 SevenHDYWeather.py:930
+msgid ""
+"Partly\n"
+" cloudy"
+msgstr ""
+"Teilweise\n"
+" bewölkt"
+
+#: SevenHDYWeather.py:488 SevenHDYWeather.py:592 SevenHDYWeather.py:696
+#: SevenHDYWeather.py:800 SevenHDYWeather.py:904
+msgid "Clear"
+msgstr "Klar"
+
+#: SevenHDYWeather.py:490 SevenHDYWeather.py:594 SevenHDYWeather.py:698
+#: SevenHDYWeather.py:802 SevenHDYWeather.py:906
+msgid "Sunny"
+msgstr "Sonnig"
+
+#: SevenHDYWeather.py:492 SevenHDYWeather.py:494 SevenHDYWeather.py:596
+#: SevenHDYWeather.py:598 SevenHDYWeather.py:700 SevenHDYWeather.py:702
+#: SevenHDYWeather.py:804 SevenHDYWeather.py:806 SevenHDYWeather.py:908
+#: SevenHDYWeather.py:910
+msgid "Fair"
+msgstr "Heiter"
+
+#: SevenHDYWeather.py:496 SevenHDYWeather.py:600 SevenHDYWeather.py:704
+#: SevenHDYWeather.py:808 SevenHDYWeather.py:912
+msgid ""
+"Mixed rain\n"
+" and hail"
+msgstr ""
+"Regen\n"
+" und Hagel"
+
+#: SevenHDYWeather.py:498 SevenHDYWeather.py:602 SevenHDYWeather.py:706
+#: SevenHDYWeather.py:810 SevenHDYWeather.py:914
+msgid "Hot"
+msgstr "Heiss"
+
+#: SevenHDYWeather.py:500 SevenHDYWeather.py:604 SevenHDYWeather.py:708
+#: SevenHDYWeather.py:812 SevenHDYWeather.py:916
+msgid ""
+"Isolated\n"
+" thunderstorms"
+msgstr ""
+"Vereinzelte\n"
+" Gewitter"
+
+#: SevenHDYWeather.py:502 SevenHDYWeather.py:504 SevenHDYWeather.py:606
+#: SevenHDYWeather.py:608 SevenHDYWeather.py:710 SevenHDYWeather.py:712
+#: SevenHDYWeather.py:814 SevenHDYWeather.py:816 SevenHDYWeather.py:918
+#: SevenHDYWeather.py:920
+msgid ""
+"Scattered\n"
+" thunderstorms"
+msgstr ""
+"Vereinzelte\n"
+" Gewitter"
+
+#: SevenHDYWeather.py:506 SevenHDYWeather.py:610 SevenHDYWeather.py:714
+#: SevenHDYWeather.py:818 SevenHDYWeather.py:922
+msgid ""
+"Scattered\n"
+" showers"
+msgstr ""
+"Vereinzelte\n"
+" Regenschauer"
+
+#: SevenHDYWeather.py:508 SevenHDYWeather.py:512 SevenHDYWeather.py:612
+#: SevenHDYWeather.py:616 SevenHDYWeather.py:716 SevenHDYWeather.py:720
+#: SevenHDYWeather.py:820 SevenHDYWeather.py:824 SevenHDYWeather.py:924
+#: SevenHDYWeather.py:928
+msgid "Heavy snow"
+msgstr ""
+"Starker\n"
+" Schneefall"
+
+#: SevenHDYWeather.py:510 SevenHDYWeather.py:614 SevenHDYWeather.py:718
+#: SevenHDYWeather.py:822 SevenHDYWeather.py:926
+msgid ""
+"Scattered\n"
+" snow showers"
+msgstr ""
+"Vereinzelte\n"
+" Schneeschauer"
+
+#: SevenHDYWeather.py:516 SevenHDYWeather.py:620 SevenHDYWeather.py:724
+#: SevenHDYWeather.py:828 SevenHDYWeather.py:932
+msgid "Thundershowers"
+msgstr "Gewitter"
+
+#: SevenHDYWeather.py:518 SevenHDYWeather.py:622 SevenHDYWeather.py:726
+#: SevenHDYWeather.py:830 SevenHDYWeather.py:934
+msgid "Snow showers"
+msgstr "Schneeschauer"
+
+#: SevenHDYWeather.py:520 SevenHDYWeather.py:624 SevenHDYWeather.py:728
+#: SevenHDYWeather.py:832 SevenHDYWeather.py:936
+msgid ""
+"Isolated\n"
+" thundershowers"
+msgstr ""
+"Vereinzelt\n"
+" Gewitter"
+
+#: SevenHDYWeather.py:522 SevenHDYWeather.py:626 SevenHDYWeather.py:730
+#: SevenHDYWeather.py:834 SevenHDYWeather.py:938
+msgid ""
+"Not\n"
+" available"
+msgstr ""
+"Nicht\n"
+" verfügbar"
 
 #: plugin.py:72
 msgid "Atemio4You"
