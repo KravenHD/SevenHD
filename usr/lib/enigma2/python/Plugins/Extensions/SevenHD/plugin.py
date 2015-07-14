@@ -129,7 +129,7 @@ config.plugins.SevenHD.Background = ConfigSelection(default="000000", choices = 
 config.plugins.SevenHD.BackgroundRight = ConfigSelection(default="000001", choices = [
 				("F0A30A", _("amber")),
 				("B27708", _("amber dark")),
-				("000000", _("black")),
+				("000001", _("black")),
 				("1B1775", _("blue")),
 				("0E0C3F", _("blue dark")),
 				("7D5929", _("brown")),
