@@ -1,22 +1,10 @@
 <!-- /* ECM-Info -->
-    <eLabel backgroundColor="SevenBackground" font="Regular2;16" foregroundColor="SevenFont2" halign="left" valign="center" position="990,358" size="70,20" text="CAID:" transparent="1" zPosition="1" />
-    <widget source="session.CurrentService" render="Label" position="1063,358" size="40,20" font="Regular;16" halign="left" valign="center" foregroundColor="SevenFont1" backgroundColor="SevenBackground" transparent="1">
-      <convert type="SevenHDEcmInfoLine">Format:%C</convert>
-    </widget>
-    <widget source="session.CurrentService" render="Label" position="1110,358" size="133,20" font="Regular;16" halign="left" valign="center" foregroundColor="SevenFont1" backgroundColor="SevenBackground" transparent="1">
-      <convert type="SevenHDEcmInfoLine">Crypt</convert>
-    </widget>
-    <eLabel backgroundColor="SevenBackground" font="Regular2;16" foregroundColor="SevenFont2" halign="left" valign="center" position="990,378" size="70,20" text="Reader:" transparent="1" zPosition="1" />
-    <widget source="session.CurrentService" render="Label" position="1063,378" size="180,20" font="Regular;16" halign="left" valign="center" foregroundColor="SevenFont1" backgroundColor="SevenBackground" transparent="1">
-      <convert type="SevenHDEcmInfoLine">Format:%R</convert>
-    </widget>
-    <eLabel backgroundColor="SevenBackground" font="Regular2;16" foregroundColor="SevenFont2" halign="left" valign="center" position="990,398" size="70,20" text="Source:" transparent="1" zPosition="1" />
-    <widget source="session.CurrentService" render="Label" position="1063,398" size="180,20" font="Regular;16" halign="left" valign="center" foregroundColor="SevenFont1" backgroundColor="SevenBackground" transparent="1">
-      <convert type="SevenHDEcmInfoLine">Format:%S</convert>
-    </widget>
-    <eLabel backgroundColor="SevenBackground" font="Regular2;16" foregroundColor="SevenFont2" halign="left" valign="center" position="990,418" size="70,20" text="Time:" transparent="1" zPosition="1" />
-    <widget source="session.CurrentService" render="Label" position="1063,418" size="180,20" font="Regular;16" halign="left" valign="center" foregroundColor="SevenFont1" backgroundColor="SevenBackground" transparent="1">
-      <convert type="SevenHDEcmInfoLine">Format:%T ms</convert>
-    </widget>
-	<panel name="template_ecminfo" />
+<eLabel backgroundColor="SevenBackground" position="969,383" size="295,59" transparent="0" zPosition="-1" />
+<widget source="session.CurrentService" position="974,387" size="285,50" font="Regular; 16" render="Label" halign="center" valign="center" backgroundColor="SevenBackground" transparent="1" zPosition="1">
+    <convert type="SevenHDMyCaidDisplay">Default</convert>
+  </widget>	
+<eLabel backgroundColor="SevenBorder" position="969,382" size="2,60" zPosition="2" />
+  <eLabel backgroundColor="SevenBorder" position="1262,382" size="2,60" zPosition="2" />
+  <eLabel backgroundColor="SevenBorder" position="969,440" size="294,2" zPosition="2" />
+  <eLabel backgroundColor="SevenBorder" position="969,382" size="294,2" zPosition="2" />
 <!-- ECM-Info */ -->
