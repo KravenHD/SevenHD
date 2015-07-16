@@ -21,7 +21,7 @@
     <color name="red" value="#00f23d21" />
     <color name="rssviewtop" value="#45005050" />
     <color name="SevenBackground" value="#0A000000" />
-    <color name="SevenBackgroundRight" value="#4A000001" />
+    <color name="SevenBackgroundRight" value="#4D000001" />
     <color name="SevenBorder" value="#00fffff1" />
     <color name="SevenButtonText" value="#00fffff2" />
     <color name="SevenFont1" value="#00fffff3" />
@@ -2928,7 +2928,7 @@
       <convert type="SevenHDEventTime">EndTime</convert>
       <convert type="SevenHDClockToText">Default</convert>
     </widget>
-    <widget font="Regular;48" halign="center" valign="center" noWrap="1" position="604,528" render="SevenHDRunningText" options="movetype=running,startpoint=0,startdelay=2000,wrap=0,always=0,repeat=2,oneshot=1" size="340,64" source="session.Event_Now" backgroundColor="SevenBackground" transparent="1" zPosition="1" foregroundColor="SevenFont1">
+    <widget font="Regular;48" halign="center" valign="center" noWrap="1" position="604,528" render="SevenHDRunningText" options="movetype=running,startpoint=0,startdelay=2000,wrap=0,always=0,repeat=2,oneshot=1" size="344,64" source="session.Event_Now" backgroundColor="SevenBackground" transparent="1" zPosition="1" foregroundColor="SevenFont1">
       <convert type="SevenHDEventName">Name</convert>
     </widget>
     <widget backgroundColor="SevenBackground" foregroundColor="SevenFont2" font="Regular2; 22" halign="right" noWrap="1" position="430,614" render="Label" size="72,36" source="session.Event_Next" transparent="1" valign="center" zPosition="1">
@@ -2940,7 +2940,7 @@
       <convert type="SevenHDEventTime">EndTime</convert>
       <convert type="SevenHDClockToText">Default</convert>
     </widget>
-    <widget font="Regular2;36" halign="center" valign="center" noWrap="1" position="604,608" render="SevenHDRunningText" options="movetype=running,startpoint=0,startdelay=2000,wrap=0,always=0,repeat=2,oneshot=1" size="340,48" source="session.Event_Next" backgroundColor="SevenBackground" transparent="1" zPosition="1" foregroundColor="SevenFont2">
+    <widget font="Regular2;36" halign="center" valign="center" noWrap="1" position="604,608" render="SevenHDRunningText" options="movetype=running,startpoint=0,startdelay=2000,wrap=0,always=0,repeat=2,oneshot=1" size="344,48" source="session.Event_Next" backgroundColor="SevenBackground" transparent="1" zPosition="1" foregroundColor="SevenFont2">
       <convert type="SevenHDEventName">Name</convert>
     </widget>
     <widget alphatest="blend" position="20,526" render="SevenHDXPicon" size="400,170" source="session.CurrentService" transparent="1" zPosition="4">
@@ -3115,7 +3115,7 @@
       <convert type="SevenHDEventTime">EndTime</convert>
       <convert type="SevenHDClockToText">Default</convert>
     </widget>
-    <widget font="Regular;48" halign="center" valign="center" noWrap="1" position="604,528" render="SevenHDRunningText" options="movetype=running,startpoint=0,startdelay=2000,wrap=0,always=0,repeat=2,oneshot=1" size="340,64" source="session.Event_Now" backgroundColor="SevenBackground" transparent="1" zPosition="1" foregroundColor="SevenFont1">
+    <widget font="Regular;48" halign="center" valign="center" noWrap="1" position="604,528" render="SevenHDRunningText" options="movetype=running,startpoint=0,startdelay=2000,wrap=0,always=0,repeat=2,oneshot=1" size="344,64" source="session.Event_Now" backgroundColor="SevenBackground" transparent="1" zPosition="1" foregroundColor="SevenFont1">
       <convert type="SevenHDEventName">Name</convert>
     </widget>
     <widget backgroundColor="SevenBackground" foregroundColor="SevenFont2" font="Regular2; 22" halign="right" noWrap="1" position="430,614" render="Label" size="72,36" source="session.Event_Next" transparent="1" valign="center" zPosition="1">
@@ -3127,7 +3127,7 @@
       <convert type="SevenHDEventTime">EndTime</convert>
       <convert type="SevenHDClockToText">Default</convert>
     </widget>
-    <widget font="Regular2;36" halign="center" valign="center" noWrap="1" position="604,608" render="SevenHDRunningText" options="movetype=running,startpoint=0,startdelay=2000,wrap=0,always=0,repeat=2,oneshot=1" size="340,48" source="session.Event_Next" backgroundColor="SevenBackground" transparent="1" zPosition="1" foregroundColor="SevenFont2">
+    <widget font="Regular2;36" halign="center" valign="center" noWrap="1" position="604,608" render="SevenHDRunningText" options="movetype=running,startpoint=0,startdelay=2000,wrap=0,always=0,repeat=2,oneshot=1" size="344,48" source="session.Event_Next" backgroundColor="SevenBackground" transparent="1" zPosition="1" foregroundColor="SevenFont2">
       <convert type="SevenHDEventName">Name</convert>
     </widget>
     <widget alphatest="blend" position="20,526" render="SevenHDXPicon" size="400,170" source="session.CurrentService" transparent="1" zPosition="4">
@@ -4086,7 +4086,7 @@
       <convert type="SevenHDEventTime">EndTime</convert>
       <convert type="SevenHDClockToText">Default</convert>
     </widget>
-    <widget font="Regular;48" halign="center" valign="center" noWrap="1" position="434,536" render="SevenHDRunningText" options="movetype=running,startpoint=0,startdelay=2000,wrap=0,always=0,repeat=2,oneshot=1" size="632,64" source="session.Event_Now" backgroundColor="SevenBackground" transparent="1" zPosition="1" foregroundColor="SevenFont1">
+    <widget font="Regular;48" halign="center" valign="center" noWrap="1" position="434,536" render="SevenHDRunningText" options="movetype=running,startpoint=0,startdelay=2000,wrap=0,always=0,repeat=2,oneshot=1" size="515,64" source="session.Event_Now" backgroundColor="SevenBackground" transparent="1" zPosition="1" foregroundColor="SevenFont1">
       <convert type="SevenHDEventName">Name</convert>
     </widget>
     <widget backgroundColor="SevenBackground" foregroundColor="SevenFont2" font="Regular2; 22" halign="right" noWrap="1" position="260,617" render="Label" size="72,36" source="session.Event_Next" transparent="1" valign="center" zPosition="1">
@@ -4098,7 +4098,7 @@
       <convert type="SevenHDEventTime">EndTime</convert>
       <convert type="SevenHDClockToText">Default</convert>
     </widget>
-    <widget font="Regular2;36" halign="center" valign="center" noWrap="1" position="434,611" render="SevenHDRunningText" options="movetype=running,startpoint=0,startdelay=2000,wrap=0,always=0,repeat=2,oneshot=1" size="632,48" source="session.Event_Next" backgroundColor="SevenBackground" transparent="1" zPosition="1" foregroundColor="SevenFont2">
+    <widget font="Regular2;36" halign="center" valign="center" noWrap="1" position="434,611" render="SevenHDRunningText" options="movetype=running,startpoint=0,startdelay=2000,wrap=0,always=0,repeat=2,oneshot=1" size="515,48" source="session.Event_Next" backgroundColor="SevenBackground" transparent="1" zPosition="1" foregroundColor="SevenFont2">
       <convert type="SevenHDEventName">Name</convert>
     </widget>
     <widget alphatest="blend" position="26,548" render="SevenHDXPicon" size="220,132" source="session.CurrentService" transparent="1" zPosition="4">

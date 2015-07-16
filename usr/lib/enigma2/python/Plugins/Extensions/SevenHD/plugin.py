@@ -95,10 +95,10 @@ config.plugins.SevenHD.BackgroundColorTrans = ConfigSelection(default="0A", choi
 				("8C", _("high"))
 				])
 				
-config.plugins.SevenHD.BackgroundRightColorTrans = ConfigSelection(default="4A", choices = [
-				("0A", _("low")),
-				("4A", _("medium")),
-				("8C", _("high"))
+config.plugins.SevenHD.BackgroundRightColorTrans = ConfigSelection(default="4D", choices = [
+				("0D", _("low")),
+				("4D", _("medium")),
+				("8A", _("high"))
 				])
 				
 config.plugins.SevenHD.Background = ConfigSelection(default="000000", choices = [
@@ -838,7 +838,7 @@ class SevenHD(ConfigListScreen, Screen):
 			self.set_font()
 			self.skinSearchAndReplace = []
 			self.skinSearchAndReplace.append(["0A", config.plugins.SevenHD.BackgroundColorTrans.value])
-			self.skinSearchAndReplace.append(["4A", config.plugins.SevenHD.BackgroundRightColorTrans.value])
+			self.skinSearchAndReplace.append(["4D", config.plugins.SevenHD.BackgroundRightColorTrans.value])
 			self.skinSearchAndReplace.append(["000000", config.plugins.SevenHD.Background.value])
 			self.skinSearchAndReplace.append(["000001", config.plugins.SevenHD.BackgroundRight.value])
 			self.skinSearchAndReplace.append(["000050EF", config.plugins.SevenHD.SelectionBackground.value])
