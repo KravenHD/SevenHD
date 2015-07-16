@@ -95,7 +95,7 @@ config.plugins.SevenHD.BackgroundColorTrans = ConfigSelection(default="0A", choi
 				("8C", _("high"))
 				])
 				
-config.plugins.SevenHD.BackgroundRigthColorTrans = ConfigSelection(default="4A", choices = [
+config.plugins.SevenHD.BackgroundRightColorTrans = ConfigSelection(default="4A", choices = [
 				("0A", _("low")),
 				("4A", _("medium")),
 				("8C", _("high"))
