@@ -95,6 +95,12 @@ config.plugins.SevenHD.BackgroundColorTrans = ConfigSelection(default="0A", choi
 				("8C", _("high"))
 				])
 				
+config.plugins.SevenHD.BackgroundRigthColorTrans = ConfigSelection(default="4A", choices = [
+				("0A", _("low")),
+				("4A", _("medium")),
+				("8C", _("high"))
+				])
+				
 config.plugins.SevenHD.Background = ConfigSelection(default="000000", choices = [
 				("F0A30A", _("amber")),
 				("B27708", _("amber dark")),
@@ -684,9 +690,10 @@ class SevenHD(ConfigListScreen, Screen):
 		list.append(getConfigListEntry(_("running text"), config.plugins.SevenHD.RunningText))
 		list.append(getConfigListEntry(_("Weather ID"), config.plugins.SevenHD.weather_city))
 		list.append(getConfigListEntry(_("______________________ background __________________________________"), ))
-		list.append(getConfigListEntry(_("transparency"), config.plugins.SevenHD.BackgroundColorTrans))
 		list.append(getConfigListEntry(_("color layer main"), config.plugins.SevenHD.Background))
+		list.append(getConfigListEntry(_("transparency"), config.plugins.SevenHD.BackgroundColorTrans))
 		list.append(getConfigListEntry(_("color layer right"), config.plugins.SevenHD.BackgroundRight))
+		list.append(getConfigListEntry(_("transparency"), config.plugins.SevenHD.BackgroundRightColorTrans))
 		list.append(getConfigListEntry(_("______________________ colors __________________________________"), ))
 		list.append(getConfigListEntry(_("line"), config.plugins.SevenHD.Line))
 		list.append(getConfigListEntry(_("border"), config.plugins.SevenHD.Border))
@@ -831,6 +838,7 @@ class SevenHD(ConfigListScreen, Screen):
 			self.set_font()
 			self.skinSearchAndReplace = []
 			self.skinSearchAndReplace.append(["0A", config.plugins.SevenHD.BackgroundColorTrans.value])
+			self.skinSearchAndReplace.append(["4A", config.plugins.SevenHD.BackgroundRightColorTrans.value])
 			self.skinSearchAndReplace.append(["000000", config.plugins.SevenHD.Background.value])
 			self.skinSearchAndReplace.append(["000001", config.plugins.SevenHD.BackgroundRight.value])
 			self.skinSearchAndReplace.append(["000050EF", config.plugins.SevenHD.SelectionBackground.value])
