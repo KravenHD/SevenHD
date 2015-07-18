@@ -28,7 +28,7 @@
     <color name="SevenFont2" value="#00fffff4" />
     <color name="SevenLine" value="#00fffff5" />
     <color name="SevenProgress" value="#00fffff6" />
-    <color name="SevenSelection" value="#000050ef" />
+    <color name="SevenSelection" value="#000050EF" />
     <color name="SevenSelFont" value="#00fffff7" />
     <color name="shadow" value="#40101010" />
     <color name="transparent" value="#ff000000" />
