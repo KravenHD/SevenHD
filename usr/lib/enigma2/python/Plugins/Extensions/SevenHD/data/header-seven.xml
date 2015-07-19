@@ -3733,7 +3733,7 @@
     <widget font="Regular2;36" halign="center" valign="center" noWrap="1" position="434,611" render="SevenHDRunningText" options="movetype=running,startpoint=0,startdelay=2000,wrap=0,always=0,repeat=2,oneshot=1" size="515,48" source="session.Event_Next" backgroundColor="SevenBackground" transparent="1" zPosition="1" foregroundColor="SevenFont2">
       <convert type="SevenHDEventName">Name</convert>
     </widget>
-    <widget alphatest="blend" position="26,548" render="SevenHDXPicon" size="220,132" source="session.CurrentService" transparent="1" zPosition="4">
+    <widget alphatest="blend" position="26,552" render="SevenHDXPicon" size="220,132" source="session.CurrentService" transparent="1" zPosition="4">
       <convert type="ServiceName">Reference</convert>
     </widget>
     <widget source="session.CurrentService" render="Label" zPosition="3" position="433,668" size="50,22" font="Regular; 19" halign="right" backgroundColor="SevenBackground" foregroundColor="SevenFont1" transparent="1">
@@ -3908,7 +3908,7 @@
     <widget font="Regular2;36" halign="center" valign="center" noWrap="1" position="434,611" render="SevenHDRunningText" options="movetype=running,startpoint=0,startdelay=2000,wrap=0,always=0,repeat=2,oneshot=1" size="515,48" source="session.Event_Next" backgroundColor="SevenBackground" transparent="1" zPosition="1" foregroundColor="SevenFont2">
       <convert type="SevenHDEventName">Name</convert>
     </widget>
-    <widget alphatest="blend" position="26,548" render="SevenHDXPicon" size="220,132" source="session.CurrentService" transparent="1" zPosition="4">
+    <widget alphatest="blend" position="26,552" render="SevenHDXPicon" size="220,132" source="session.CurrentService" transparent="1" zPosition="4">
       <convert type="ServiceName">Reference</convert>
     </widget>
     <widget source="session.CurrentService" render="Label" zPosition="3" position="433,668" size="50,22" font="Regular; 19" halign="right" backgroundColor="SevenBackground" foregroundColor="SevenFont1" transparent="1">
@@ -4101,7 +4101,7 @@
     <widget font="Regular2;36" halign="center" valign="center" noWrap="1" position="434,611" render="SevenHDRunningText" options="movetype=running,startpoint=0,startdelay=2000,wrap=0,always=0,repeat=2,oneshot=1" size="515,48" source="session.Event_Next" backgroundColor="SevenBackground" transparent="1" zPosition="1" foregroundColor="SevenFont2">
       <convert type="SevenHDEventName">Name</convert>
     </widget>
-    <widget alphatest="blend" position="26,548" render="SevenHDXPicon" size="220,132" source="session.CurrentService" transparent="1" zPosition="4">
+    <widget alphatest="blend" position="26,552" render="SevenHDXPicon" size="220,132" source="session.CurrentService" transparent="1" zPosition="4">
       <convert type="ServiceName">Reference</convert>
     </widget>
     <widget source="session.CurrentService" render="Label" zPosition="3" position="433,668" size="50,22" font="Regular; 19" halign="right" backgroundColor="SevenBackground" foregroundColor="SevenFont1" transparent="1">
