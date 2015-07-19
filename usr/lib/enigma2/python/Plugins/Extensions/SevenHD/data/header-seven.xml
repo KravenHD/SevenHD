@@ -404,7 +404,7 @@
     <eLabel backgroundColor="SevenBorder" position="14,533" size="2,170" zPosition="2" />
     <eLabel backgroundColor="SevenBorder" position="14,533" size="1250,2" zPosition="2" />
     <eLabel backgroundColor="SevenBorder" position="14,701" size="1250,2" zPosition="2" />
-    <eLabel backgroundColor="SevenBackground" position="14,2" size="1250,70" />
+    <eLabel backgroundColor="SevenBackgroundRight" position="14,2" size="1250,70" />
     <eLabel backgroundColor="SevenBorder" position="14,70" size="1250,2" zPosition="2" />
     <eLabel backgroundColor="SevenBorder" position="14,1" size="1250,2" zPosition="2" />
     <eLabel backgroundColor="SevenBorder" position="14,1" size="2,71" zPosition="2" />
@@ -792,7 +792,7 @@
     <eLabel backgroundColor="SevenBorder" position="14,1" size="1250,2" zPosition="2" />
     <eLabel backgroundColor="SevenBorder" position="14,1" size="2,71" zPosition="2" />
     <eLabel backgroundColor="SevenBorder" position="1262,1" size="2,71" zPosition="2" />
-    <eLabel backgroundColor="SevenBackground" position="14,1" size="1250,71" />
+    <eLabel backgroundColor="SevenBackgroundRight" position="14,1" size="1250,71" />
     <eLabel backgroundColor="SevenBackground" position="14,77" size="1250,364" />
     <eLabel backgroundColor="SevenBorder" position="14,441" size="1250,2" zPosition="2" />
     <eLabel backgroundColor="SevenBorder" position="14,75" size="1250,2" zPosition="2" />
@@ -1171,7 +1171,7 @@
     <eLabel backgroundColor="SevenBorder" position="14,1" size="1250,2" zPosition="2" />
     <eLabel backgroundColor="SevenBorder" position="14,1" size="2,71" zPosition="2" />
     <eLabel backgroundColor="SevenBorder" position="1262,1" size="2,71" zPosition="2" />
-    <eLabel backgroundColor="SevenBackground" position="14,1" size="1250,71" />
+    <eLabel backgroundColor="SevenBackgroundRight" position="14,1" size="1250,71" />
     <eLabel backgroundColor="SevenBackground" position="14,77" size="1250,364" />
     <eLabel backgroundColor="SevenBorder" position="14,441" size="1250,2" zPosition="2" />
     <eLabel backgroundColor="SevenBorder" position="14,75" size="1250,2" zPosition="2" />
@@ -1538,7 +1538,7 @@
     <eLabel backgroundColor="SevenBorder" position="14,533" size="2,170" zPosition="2" />
     <eLabel backgroundColor="SevenBorder" position="14,533" size="1250,2" zPosition="2" />
     <eLabel backgroundColor="SevenBorder" position="14,701" size="1250,2" zPosition="2" />
-    <eLabel backgroundColor="SevenBackground" position="14,2" size="1250,70" />
+    <eLabel backgroundColor="SevenBackgroundRight" position="14,2" size="1250,70" />
     <eLabel backgroundColor="SevenBorder" position="14,70" size="1250,2" zPosition="2" />
     <eLabel backgroundColor="SevenBorder" position="14,1" size="1250,2" zPosition="2" />
     <eLabel backgroundColor="SevenBorder" position="14,1" size="2,71" zPosition="2" />
@@ -1918,7 +1918,7 @@
     <eLabel backgroundColor="SevenBorder" position="14,533" size="2,170" zPosition="2" />
     <eLabel backgroundColor="SevenBorder" position="14,533" size="1250,2" zPosition="2" />
     <eLabel backgroundColor="SevenBorder" position="14,701" size="1250,2" zPosition="2" />
-    <eLabel backgroundColor="SevenBackground" position="14,2" size="1250,70" />
+    <eLabel backgroundColor="SevenBackgroundRight" position="14,2" size="1250,70" />
     <eLabel backgroundColor="SevenBorder" position="14,70" size="1250,2" zPosition="2" />
     <eLabel backgroundColor="SevenBorder" position="14,1" size="1250,2" zPosition="2" />
     <eLabel backgroundColor="SevenBorder" position="14,1" size="2,71" zPosition="2" />
@@ -2374,7 +2374,7 @@
 </widget>
   </screen>
   <screen name="template_menu_sibo1">
-    <eLabel backgroundColor="SevenBackground" position="14,2" size="1250,40" />
+    <eLabel backgroundColor="SevenBackgroundRight" position="14,2" size="1250,40" />
     <eLabel backgroundColor="SevenBorder" position="14,40" size="1250,2" zPosition="2" />
     <eLabel backgroundColor="SevenBorder" position="14,1" size="1250,2" zPosition="2" />
     <eLabel backgroundColor="SevenBorder" position="14,1" size="2,41" zPosition="2" />
@@ -2860,7 +2860,7 @@
 </widget>
   </screen>
   <screen name="template_menu_sibzz1">
-    <eLabel backgroundColor="SevenBackground" position="14,2" size="1250,40" />
+    <eLabel backgroundColor="SevenBackgroundRight" position="14,2" size="1250,40" />
     <eLabel backgroundColor="SevenBorder" position="14,40" size="1250,2" zPosition="2" />
     <eLabel backgroundColor="SevenBorder" position="14,1" size="1250,2" zPosition="2" />
     <eLabel backgroundColor="SevenBorder" position="14,1" size="2,41" zPosition="2" />
@@ -3341,7 +3341,7 @@
 </widget>
   </screen>
   <screen name="template_menu_sibzzz1">
-    <eLabel backgroundColor="SevenBackground" position="14,2" size="1250,40" />
+    <eLabel backgroundColor="SevenBackgroundRight" position="14,2" size="1250,40" />
     <eLabel backgroundColor="SevenBorder" position="14,40" size="1250,2" zPosition="2" />
     <eLabel backgroundColor="SevenBorder" position="14,1" size="1250,2" zPosition="2" />
     <eLabel backgroundColor="SevenBorder" position="14,1" size="2,41" zPosition="2" />
@@ -3825,7 +3825,7 @@
 </widget>
   </screen>
   <screen name="template_menu_sibx1">
-    <eLabel backgroundColor="SevenBackground" position="14,2" size="1250,40" />
+    <eLabel backgroundColor="SevenBackgroundRight" position="14,2" size="1250,40" />
     <eLabel backgroundColor="SevenBorder" position="14,40" size="1250,2" zPosition="2" />
     <eLabel backgroundColor="SevenBorder" position="14,1" size="1250,2" zPosition="2" />
     <eLabel backgroundColor="SevenBorder" position="14,1" size="2,41" zPosition="2" />
@@ -4323,7 +4323,7 @@
 </widget>
   </screen>
   <screen name="template_menu_sibz1">
-    <eLabel backgroundColor="SevenBackground" position="14,2" size="1250,40" />
+    <eLabel backgroundColor="SevenBackgroundRight" position="14,2" size="1250,40" />
     <eLabel backgroundColor="SevenBorder" position="14,40" size="1250,2" zPosition="2" />
     <eLabel backgroundColor="SevenBorder" position="14,1" size="1250,2" zPosition="2" />
     <eLabel backgroundColor="SevenBorder" position="14,1" size="2,41" zPosition="2" />
@@ -4690,6 +4690,2025 @@
   <convert type="SevenHDClockToText">InMinutes</convert>
 </widget>
   </screen>
+  <screen name="template_menu_ibo3">
+  <eLabel backgroundColor="SevenBackground" position="15,662" size="1062,40" />
+  <eLabel backgroundColor="SevenBorder" position="1262,534" size="2,170" zPosition="2" />
+  <eLabel backgroundColor="SevenBorder" position="14,534" size="2,170" zPosition="2" />
+  <eLabel backgroundColor="SevenBorder" position="14,533" size="1250,2" zPosition="2" />
+  <eLabel backgroundColor="SevenBorder" position="14,702" size="1250,2" zPosition="2" />
+  <eLabel backgroundColor="SevenLine" position="215,604" size="850,2" zPosition="2" />
+<eLabel backgroundColor="SevenBorder" position="14,660" size="1063,2" zPosition="2" />
+<eLabel backgroundColor="SevenBorder" position="1075,533" size="2,129" zPosition="2" />
+<eLabel backgroundColor="SevenBackgroundRight" position="14,533" size="1062,127" />
+<eLabel backgroundColor="SevenBackground" position="1077,533" size="187,170" />
+  <widget position="215,602" render="Progress" size="850,6" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress">
+    <convert type="SevenHDEventTime">Progress</convert>
+  </widget>
+  <widget alphatest="blend" pixmap="SevenHD/buttons/ico_rec_on.png" position="20,666" render="Pixmap" size="32,32" source="session.RecordState" zPosition="5">
+    <convert type="ConditionalShowHide">Blink</convert>
+  </widget>
+  <widget backgroundColor="SevenBackground" font="Regular;24" halign="right" noWrap="1" position="32,551" render="Label" size="76,36" source="session.Event_Now" transparent="1" valign="center" zPosition="1" foregroundColor="SevenFont1">
+    <convert type="SevenHDEventTime">StartTime</convert>
+    <convert type="SevenHDClockToText">Default</convert>
+  </widget>
+  <eLabel backgroundColor="SevenBackground" font="Regular;24" halign="center" noWrap="1" position="108,551" size="16,36" text="-" transparent="1" valign="center" zPosition="1" foregroundColor="SevenFont1" />
+  <widget backgroundColor="SevenBackground" font="Regular;24" halign="left" noWrap="1" position="124,551" render="Label" size="76,36" source="session.Event_Now" transparent="1" valign="center" zPosition="1" foregroundColor="SevenFont1">
+    <convert type="SevenHDEventTime">EndTime</convert>
+    <convert type="SevenHDClockToText">Default</convert>
+  </widget>
+  <widget font="Regular;48" halign="center" valign="center" noWrap="1" position="215,537" render="SevenHDRunningText" options="movetype=running,startpoint=0,startdelay=2000,wrap=0,always=0,repeat=2,oneshot=1" size="730,64" source="session.Event_Now" backgroundColor="SevenBackground" transparent="1" zPosition="1" foregroundColor="SevenFont1">
+    <convert type="SevenHDEventName">Name</convert>
+  </widget>
+  <widget backgroundColor="SevenBackground" foregroundColor="SevenFont2" font="Regular2; 22" halign="right" noWrap="1" position="36,615" render="Label" size="72,36" source="session.Event_Next" transparent="1" valign="center" zPosition="1">
+    <convert type="SevenHDEventTime">StartTime</convert>
+    <convert type="SevenHDClockToText">Default</convert>
+  </widget>
+  <eLabel backgroundColor="SevenBackground" foregroundColor="SevenFont2" font="Regular2;22" halign="center" noWrap="1" position="108,615" size="16,36" text="-" transparent="1" valign="center" zPosition="1" />
+  <widget backgroundColor="SevenBackground" font="Regular2; 22" foregroundColor="SevenFont2" halign="left" noWrap="1" position="124,615" render="Label" size="72,36" source="session.Event_Next" transparent="1" valign="center" zPosition="1">
+    <convert type="SevenHDEventTime">EndTime</convert>
+    <convert type="SevenHDClockToText">Default</convert>
+  </widget>
+  <widget font="Regular2;36" halign="center" valign="center" noWrap="1" position="215,609" render="SevenHDRunningText" options="movetype=running,startpoint=0,startdelay=2000,wrap=0,always=0,repeat=2,oneshot=1" size="730,48" source="session.Event_Next" backgroundColor="SevenBackground" transparent="1" zPosition="1" foregroundColor="SevenFont2">
+    <convert type="SevenHDEventName">Name</convert>
+  </widget>
+  <widget source="session.CurrentService" render="Label" zPosition="3" position="409,671" size="50,22" font="Regular; 19" halign="right" backgroundColor="SevenBackground" foregroundColor="SevenFont1" transparent="1">
+    <convert type="SevenHDServiceInfo">VideoWidth</convert>
+  </widget>
+  <eLabel text="x" position="459,671" size="15,22" zPosition="3" font="Regular; 19" halign="center" backgroundColor="SevenBackground" foregroundColor="SevenFont1" transparent="1" />
+  <widget source="session.CurrentService" render="Label" zPosition="3" position="474,671" size="62,22" font="Regular; 19" halign="left" backgroundColor="SevenBackground" foregroundColor="SevenFont1" transparent="1">
+    <convert type="SevenHDServiceInfo">VideoHeight</convert>
+  </widget>
+  <widget alphatest="blend" pixmap="SevenHD/buttons/ico_format_on.png" position="255,666" render="Pixmap" size="32,32" source="session.CurrentService" zPosition="2">
+    <convert type="SevenHDServiceInfo">IsWidescreen</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.TunerInfo" render="Pixmap" pixmap="SevenHD/buttons/c_on.png" position="993,666" zPosition="2" size="32,32" backgroundColor="SevenBackground" alphatest="blend" valign="center">
+    <convert type="TunerInfo">TunerUseMask</convert>
+    <convert type="ValueBitTest">4</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.TunerInfo" render="Pixmap" pixmap="SevenHD/buttons/b_on.png" position="953,666" zPosition="2" size="32,32" backgroundColor="SevenBackground" alphatest="blend" valign="center">
+    <convert type="TunerInfo">TunerUseMask</convert>
+    <convert type="ValueBitTest">2</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.TunerInfo" render="Pixmap" pixmap="SevenHD/buttons/a_on.png" position="913,666" zPosition="2" size="32,32" backgroundColor="SevenBackground" alphatest="blend" valign="center">
+    <convert type="TunerInfo">TunerUseMask</convert>
+    <convert type="ValueBitTest">1</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.TunerInfo" render="Pixmap" pixmap="SevenHD/buttons/d_on.png" position="1033,666" zPosition="2" size="32,32" backgroundColor="SevenBackground" alphatest="blend" valign="center">
+    <convert type="TunerInfo">TunerUseMask</convert>
+    <convert type="ValueBitTest">8</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <ePixmap pixmap="SevenHD/buttons/a_off.png" position="913,666" size="32,32" zPosition="1" alphatest="blend" />
+  <ePixmap pixmap="SevenHD/buttons/b_off.png" position="953,666" size="32,32" zPosition="1" alphatest="blend" />
+  <ePixmap pixmap="SevenHD/buttons/c_off.png" position="993,666" size="32,32" zPosition="1" alphatest="blend" />
+  <ePixmap pixmap="SevenHD/buttons/d_off.png" position="1033,666" size="32,32" zPosition="1" alphatest="blend" />
+  <ePixmap alphatest="blend" pixmap="SevenHD/buttons/ico_subtitle_off.png" position="705,666" size="32,32" zPosition="1" />
+  <widget alphatest="blend" pixmap="SevenHD/buttons/ico_subtitle_on.png" position="705,666" render="Pixmap" size="32,32" source="session.CurrentService" zPosition="5">
+    <convert type="SevenHDServiceInfo">SubtitlesAvailable</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <ePixmap alphatest="blend" pixmap="SevenHD/buttons/ico_format_off.png" position="255,666" size="32,32" zPosition="1" />
+  <widget alphatest="blend" pixmap="SevenHD/buttons/ico_hd_on.png" position="215,666" render="Pixmap" size="32,32" source="session.CurrentService" zPosition="2">
+    <convert type="SevenHDServiceInfo">IsHD</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <ePixmap alphatest="blend" pixmap="SevenHD/buttons/ico_hd_off.png" position="215,666" size="32,32" zPosition="1" />
+  <widget alphatest="blend" pixmap="SevenHD/buttons/ico_dolby_on.png" position="295,666" render="Pixmap" size="32,32" source="session.CurrentService" zPosition="2">
+    <convert type="SevenHDServiceInfo">IsMultichannel</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <ePixmap alphatest="blend" pixmap="SevenHD/buttons/ico_dolby_off.png" position="295,666" size="32,32" zPosition="1" />
+  <ePixmap alphatest="blend" pixmap="SevenHD/buttons/ico_sub_off.png" position="570,666" size="32,32" zPosition="1" />
+  <widget source="session.CurrentService" render="Pixmap" pixmap="SevenHD/buttons/ico_sub_on.png" position="570,666" size="32,32" zPosition="2" alphatest="blend">
+    <convert type="SevenHDServiceInfo">SubservicesAvailable</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <ePixmap alphatest="blend" pixmap="SevenHD/buttons/ico_txt_off.png" position="615,666" size="32,32" zPosition="1" />
+  <widget alphatest="blend" pixmap="SevenHD/buttons/ico_txt_on.png" position="615,666" render="Pixmap" size="32,32" source="session.CurrentService" zPosition="5">
+    <convert type="SevenHDServiceInfo">HasTelext</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <ePixmap alphatest="blend" pixmap="SevenHD/buttons/ico_hbbtv_off.png" position="335,666" size="32,32" zPosition="1" />
+  <widget alphatest="blend" pixmap="SevenHD/buttons/ico_hbbtv_on.png" position="335,666" render="Pixmap" size="32,32" source="session.CurrentService" zPosition="5">
+    <convert type="SevenHDServiceInfo">HasHBBTV</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <ePixmap alphatest="blend" pixmap="SevenHD/buttons/ico_crypt_off.png" position="660,666" size="32,32" zPosition="1" />
+  <widget alphatest="blend" pixmap="SevenHD/buttons/ico_crypt_on.png" position="660,666" render="Pixmap" size="32,32" source="session.CurrentService" zPosition="5">
+    <convert type="SevenHDServiceInfo">IsCrypted</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.CurrentService" render="Label" position="775,671" size="89,22" backgroundColor="SevenBackground" transparent="1" zPosition="3" foregroundColor="SevenFont1" font="Regular; 19" valign="center" halign="left">
+    <convert type="SevenHDExtraInfo">OrbitalPositionOrTunerSystem</convert>
+  </widget>
+  <widget source="session.FrontendStatus" render="Label" position="812,671" size="70,21" font="Regular; 19" transparent="1" foregroundColor="SevenFont1" backgroundColor="SevenBackground" zPosition="3" halign="right" valign="center">
+    <convert type="FrontendInfo">SNR</convert>
+  </widget>
+  <widget backgroundColor="SevenBackground" font="Regular; 22" halign="right" position="958,551" render="Label" size="107,36" source="session.Event_Now" transparent="1" valign="center" zPosition="1">
+    <convert type="SevenHDEventTime">Remaining</convert>
+    <convert type="SevenHDRemainingToText">InMinutes</convert>
+  </widget>
+  <widget backgroundColor="SevenBackground" font="Regular2; 22" foregroundColor="SevenFont2" valign="center" halign="right" position="958,615" render="Label" size="107,35" source="session.Event_Next" transparent="1" zPosition="1">
+    <convert type="SevenHDEventTime">Duration</convert>
+    <convert type="SevenHDClockToText">InMinutes</convert>
+  </widget>
+</screen>
+  <screen name="template_menu_sibo3">
+ <eLabel backgroundColor="SevenBackground" position="15,662" size="1062,40" />
+  <eLabel backgroundColor="SevenBorder" position="1262,534" size="2,170" zPosition="2" />
+  <eLabel backgroundColor="SevenBorder" position="14,534" size="2,170" zPosition="2" />
+  <eLabel backgroundColor="SevenBorder" position="14,533" size="1250,2" zPosition="2" />
+  <eLabel backgroundColor="SevenBorder" position="14,702" size="1250,2" zPosition="2" />
+  <eLabel backgroundColor="SevenLine" position="215,604" size="850,2" zPosition="2" />
+<eLabel backgroundColor="SevenBorder" position="14,660" size="1063,2" zPosition="2" />
+<eLabel backgroundColor="SevenBorder" position="1075,533" size="2,129" zPosition="2" />
+<eLabel backgroundColor="SevenBackgroundRight" position="14,533" size="1062,127" />
+<eLabel backgroundColor="SevenBackground" position="1077,533" size="187,170" />
+  <widget position="215,602" render="Progress" size="850,6" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress">
+    <convert type="SevenHDEventTime">Progress</convert>
+  </widget>
+  <widget alphatest="blend" pixmap="SevenHD/buttons/ico_rec_on.png" position="20,666" render="Pixmap" size="32,32" source="session.RecordState" zPosition="5">
+    <convert type="ConditionalShowHide">Blink</convert>
+  </widget>
+  <widget backgroundColor="SevenBackground" font="Regular;24" halign="right" noWrap="1" position="32,551" render="Label" size="76,36" source="session.Event_Now" transparent="1" valign="center" zPosition="1" foregroundColor="SevenFont1">
+    <convert type="SevenHDEventTime">StartTime</convert>
+    <convert type="SevenHDClockToText">Default</convert>
+  </widget>
+  <eLabel backgroundColor="SevenBackground" font="Regular;24" halign="center" noWrap="1" position="108,551" size="16,36" text="-" transparent="1" valign="center" zPosition="1" foregroundColor="SevenFont1" />
+  <widget backgroundColor="SevenBackground" font="Regular;24" halign="left" noWrap="1" position="124,551" render="Label" size="76,36" source="session.Event_Now" transparent="1" valign="center" zPosition="1" foregroundColor="SevenFont1">
+    <convert type="SevenHDEventTime">EndTime</convert>
+    <convert type="SevenHDClockToText">Default</convert>
+  </widget>
+  <widget font="Regular;48" halign="center" valign="center" noWrap="1" position="215,537" render="SevenHDRunningText" options="movetype=running,startpoint=0,startdelay=2000,wrap=0,always=0,repeat=2,oneshot=1" size="730,64" source="session.Event_Now" backgroundColor="SevenBackground" transparent="1" zPosition="1" foregroundColor="SevenFont1">
+    <convert type="SevenHDEventName">Name</convert>
+  </widget>
+  <widget backgroundColor="SevenBackground" foregroundColor="SevenFont2" font="Regular2; 22" halign="right" noWrap="1" position="36,615" render="Label" size="72,36" source="session.Event_Next" transparent="1" valign="center" zPosition="1">
+    <convert type="SevenHDEventTime">StartTime</convert>
+    <convert type="SevenHDClockToText">Default</convert>
+  </widget>
+  <eLabel backgroundColor="SevenBackground" foregroundColor="SevenFont2" font="Regular2;22" halign="center" noWrap="1" position="108,615" size="16,36" text="-" transparent="1" valign="center" zPosition="1" />
+  <widget backgroundColor="SevenBackground" font="Regular2; 22" foregroundColor="SevenFont2" halign="left" noWrap="1" position="124,615" render="Label" size="72,36" source="session.Event_Next" transparent="1" valign="center" zPosition="1">
+    <convert type="SevenHDEventTime">EndTime</convert>
+    <convert type="SevenHDClockToText">Default</convert>
+  </widget>
+  <widget font="Regular2;36" halign="center" valign="center" noWrap="1" position="215,609" render="SevenHDRunningText" options="movetype=running,startpoint=0,startdelay=2000,wrap=0,always=0,repeat=2,oneshot=1" size="730,48" source="session.Event_Next" backgroundColor="SevenBackground" transparent="1" zPosition="1" foregroundColor="SevenFont2">
+    <convert type="SevenHDEventName">Name</convert>
+  </widget>
+  <widget source="session.CurrentService" render="Label" zPosition="3" position="409,671" size="50,22" font="Regular; 19" halign="right" backgroundColor="SevenBackground" foregroundColor="SevenFont1" transparent="1">
+    <convert type="SevenHDServiceInfo">VideoWidth</convert>
+  </widget>
+  <eLabel text="x" position="459,671" size="15,22" zPosition="3" font="Regular; 19" halign="center" backgroundColor="SevenBackground" foregroundColor="SevenFont1" transparent="1" />
+  <widget source="session.CurrentService" render="Label" zPosition="3" position="474,671" size="62,22" font="Regular; 19" halign="left" backgroundColor="SevenBackground" foregroundColor="SevenFont1" transparent="1">
+    <convert type="SevenHDServiceInfo">VideoHeight</convert>
+  </widget>
+  <widget alphatest="blend" pixmap="SevenHD/buttons/ico_format_on.png" position="255,666" render="Pixmap" size="32,32" source="session.CurrentService" zPosition="2">
+    <convert type="SevenHDServiceInfo">IsWidescreen</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.TunerInfo" render="Pixmap" pixmap="SevenHD/buttons/c_on.png" position="993,666" zPosition="2" size="32,32" backgroundColor="SevenBackground" alphatest="blend" valign="center">
+    <convert type="TunerInfo">TunerUseMask</convert>
+    <convert type="ValueBitTest">4</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.TunerInfo" render="Pixmap" pixmap="SevenHD/buttons/b_on.png" position="953,666" zPosition="2" size="32,32" backgroundColor="SevenBackground" alphatest="blend" valign="center">
+    <convert type="TunerInfo">TunerUseMask</convert>
+    <convert type="ValueBitTest">2</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.TunerInfo" render="Pixmap" pixmap="SevenHD/buttons/a_on.png" position="913,666" zPosition="2" size="32,32" backgroundColor="SevenBackground" alphatest="blend" valign="center">
+    <convert type="TunerInfo">TunerUseMask</convert>
+    <convert type="ValueBitTest">1</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.TunerInfo" render="Pixmap" pixmap="SevenHD/buttons/d_on.png" position="1033,666" zPosition="2" size="32,32" backgroundColor="SevenBackground" alphatest="blend" valign="center">
+    <convert type="TunerInfo">TunerUseMask</convert>
+    <convert type="ValueBitTest">8</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <ePixmap pixmap="SevenHD/buttons/a_off.png" position="913,666" size="32,32" zPosition="1" alphatest="blend" />
+  <ePixmap pixmap="SevenHD/buttons/b_off.png" position="953,666" size="32,32" zPosition="1" alphatest="blend" />
+  <ePixmap pixmap="SevenHD/buttons/c_off.png" position="993,666" size="32,32" zPosition="1" alphatest="blend" />
+  <ePixmap pixmap="SevenHD/buttons/d_off.png" position="1033,666" size="32,32" zPosition="1" alphatest="blend" />
+  <ePixmap alphatest="blend" pixmap="SevenHD/buttons/ico_subtitle_off.png" position="705,666" size="32,32" zPosition="1" />
+  <widget alphatest="blend" pixmap="SevenHD/buttons/ico_subtitle_on.png" position="705,666" render="Pixmap" size="32,32" source="session.CurrentService" zPosition="5">
+    <convert type="SevenHDServiceInfo">SubtitlesAvailable</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <ePixmap alphatest="blend" pixmap="SevenHD/buttons/ico_format_off.png" position="255,666" size="32,32" zPosition="1" />
+  <widget alphatest="blend" pixmap="SevenHD/buttons/ico_hd_on.png" position="215,666" render="Pixmap" size="32,32" source="session.CurrentService" zPosition="2">
+    <convert type="SevenHDServiceInfo">IsHD</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <ePixmap alphatest="blend" pixmap="SevenHD/buttons/ico_hd_off.png" position="215,666" size="32,32" zPosition="1" />
+  <widget alphatest="blend" pixmap="SevenHD/buttons/ico_dolby_on.png" position="295,666" render="Pixmap" size="32,32" source="session.CurrentService" zPosition="2">
+    <convert type="SevenHDServiceInfo">IsMultichannel</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <ePixmap alphatest="blend" pixmap="SevenHD/buttons/ico_dolby_off.png" position="295,666" size="32,32" zPosition="1" />
+  <ePixmap alphatest="blend" pixmap="SevenHD/buttons/ico_sub_off.png" position="570,666" size="32,32" zPosition="1" />
+  <widget source="session.CurrentService" render="Pixmap" pixmap="SevenHD/buttons/ico_sub_on.png" position="570,666" size="32,32" zPosition="2" alphatest="blend">
+    <convert type="SevenHDServiceInfo">SubservicesAvailable</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <ePixmap alphatest="blend" pixmap="SevenHD/buttons/ico_txt_off.png" position="615,666" size="32,32" zPosition="1" />
+  <widget alphatest="blend" pixmap="SevenHD/buttons/ico_txt_on.png" position="615,666" render="Pixmap" size="32,32" source="session.CurrentService" zPosition="5">
+    <convert type="SevenHDServiceInfo">HasTelext</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <ePixmap alphatest="blend" pixmap="SevenHD/buttons/ico_hbbtv_off.png" position="335,666" size="32,32" zPosition="1" />
+  <widget alphatest="blend" pixmap="SevenHD/buttons/ico_hbbtv_on.png" position="335,666" render="Pixmap" size="32,32" source="session.CurrentService" zPosition="5">
+    <convert type="SevenHDServiceInfo">HasHBBTV</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <ePixmap alphatest="blend" pixmap="SevenHD/buttons/ico_crypt_off.png" position="660,666" size="32,32" zPosition="1" />
+  <widget alphatest="blend" pixmap="SevenHD/buttons/ico_crypt_on.png" position="660,666" render="Pixmap" size="32,32" source="session.CurrentService" zPosition="5">
+    <convert type="SevenHDServiceInfo">IsCrypted</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.CurrentService" render="Label" position="775,671" size="89,22" backgroundColor="SevenBackground" transparent="1" zPosition="3" foregroundColor="SevenFont1" font="Regular; 19" valign="center" halign="left">
+    <convert type="SevenHDExtraInfo">OrbitalPositionOrTunerSystem</convert>
+  </widget>
+  <widget source="session.FrontendStatus" render="Label" position="812,671" size="70,21" font="Regular; 19" transparent="1" foregroundColor="SevenFont1" backgroundColor="SevenBackground" zPosition="3" halign="right" valign="center">
+    <convert type="FrontendInfo">SNR</convert>
+  </widget>
+  <widget backgroundColor="SevenBackground" font="Regular; 22" halign="right" position="958,551" render="Label" size="107,36" source="session.Event_Now" transparent="1" valign="center" zPosition="1">
+    <convert type="SevenHDEventTime">Remaining</convert>
+    <convert type="SevenHDRemainingToText">InMinutes</convert>
+  </widget>
+  <widget backgroundColor="SevenBackground" font="Regular2; 22" foregroundColor="SevenFont2" valign="center" halign="right" position="958,615" render="Label" size="107,35" source="session.Event_Next" transparent="1" zPosition="1">
+    <convert type="SevenHDEventTime">Duration</convert>
+    <convert type="SevenHDClockToText">InMinutes</convert>
+  </widget> 
+
+
+
+
+
+
+
+<eLabel backgroundColor="SevenBackgroundRight" position="14,2" size="1250,40" />
+  <eLabel backgroundColor="SevenBorder" position="14,40" size="1250,2" zPosition="2" />
+  <eLabel backgroundColor="SevenBorder" position="14,1" size="1250,2" zPosition="2" />
+  <eLabel backgroundColor="SevenBorder" position="14,1" size="2,41" zPosition="2" />
+  <eLabel backgroundColor="SevenBorder" position="1262,1" size="2,41" zPosition="2" />
+  <eLabel backgroundColor="SevenBackground" position="14,45" size="1250,422" />
+  <eLabel backgroundColor="SevenBorder" position="14,465" size="1250,2" zPosition="2" />
+  <eLabel backgroundColor="SevenBorder" position="14,45" size="1250,2" zPosition="2" />
+  <eLabel backgroundColor="SevenBorder" position="14,45" size="2,422" zPosition="2" />
+  <eLabel backgroundColor="SevenBorder" position="1262,45" size="2,422" zPosition="2" />
+  <eLabel backgroundColor="SevenLine" position="37,265" size="1200,2" zPosition="2" />
+  <widget backgroundColor="SevenBackground" font="Regular; 30" halign="center" noWrap="1" position="37,53" foregroundColor="SevenFont1" render="Label" size="1200,38" source="session.Event_Now" transparent="1" zPosition="1" valign="bottom">
+    <convert type="SevenHDEventName">Name</convert>
+  </widget>
+  <widget backgroundColor="SevenBackground" font="Regular; 20" foregroundColor="SevenFont1" halign="center" position="37,98" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,wrap=1,always=0,repeat=2,oneshot=1" size="1200,160" source="session.Event_Now" zPosition="1" transparent="1">
+    <convert type="SevenHDEventName">ExtendedDescription</convert>
+  </widget>
+  <widget backgroundColor="SevenBackground" font="Regular2; 30" foregroundColor="SevenFont2" halign="center" position="37,271" render="Label" size="1200,38" source="session.Event_Next" transparent="1" zPosition="1" valign="bottom">
+    <convert type="SevenHDEventName">Name</convert>
+  </widget>
+  <widget source="global.CurrentTime" render="SevenHDSYSTemp" position="465,10" size="60,22" font="Regular2;12" halign="left" valign="bottom" foregroundColor="SevenFont2" backgroundColor="SevenBackground" noWrap="1" transparent="1" zPosition="3" />
+  <widget source="session.CurrentService" render="Label" position="535,10" size="100,22" font="Regular2;12" halign="left" valign="bottom" foregroundColor="SevenFont2" backgroundColor="SevenBackground" noWrap="1" transparent="1" zPosition="4">
+    <convert type="SevenHDCpuUsage">CPU: $0</convert>
+  </widget>
+  <widget source="session.CurrentService" render="Label" position="620,10" size="210,22" font="Regular2;12" halign="left" valign="bottom" foregroundColor="SevenFont2" backgroundColor="SevenBackground" noWrap="1" transparent="1" zPosition="5">
+    <convert type="SevenHDLayoutInfo">FleshInfo,Short</convert>
+  </widget>
+  <widget source="session.CurrentService" position="37,10" size="500,22" font="Regular2;12" render="Label" halign="left" valign="bottom" foregroundColor="SevenFont2" backgroundColor="SevenBackground" transparent="1" zPosition="1">
+    <convert type="SevenHDMyCaidDisplay">Default</convert>
+  </widget>
+  <eLabel text="SysTemp:" position="400,10" size="70,22" font="Regular2;12" halign="left" valign="bottom" foregroundColor="SevenFont2" backgroundColor="SevenBackground" noWrap="1" transparent="1" zPosition="2" />
+  <widget source="session.CurrentService" render="Label" position="620,10" size="210,22" font="Regular2;12" halign="left" valign="bottom" foregroundColor="SevenFont2" backgroundColor="SevenBackground" noWrap="1" transparent="1" zPosition="5">
+    <convert type="SevenHDLayoutInfo">FleshInfo,Short</convert>
+  </widget>
+  <widget source="session.CurrentService" render="Label" position="779,10" size="200,22" font="Regular2;12" halign="left" valign="bottom" foregroundColor="SevenFont2" backgroundColor="SevenBackground" noWrap="1" transparent="1" zPosition="6">
+    <convert type="SevenHDLayoutInfo">MemTotal,Short</convert>
+  </widget>
+  <widget source="session.CurrentService" render="Label" position="886,10" size="350,22" font="Regular2;12" halign="right" valign="bottom" foregroundColor="SevenFont2" backgroundColor="SevenBackground" noWrap="1" transparent="1" zPosition="7">
+    <convert type="SevenHDLayoutInfo">HddInfo,Full</convert>
+  </widget>
+  <widget backgroundColor="SevenBackground" font="Regular; 20" foregroundColor="SevenFont1" halign="center" position="37,316" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,wrap=1,always=0,repeat=2,oneshot=1" size="1200,132" source="session.Event_Next" zPosition="1" transparent="1">
+    <convert type="SevenHDEventName">ExtendedDescription</convert>
+  </widget>
+  <widget font="Regular2; 40" foregroundColor="SevenFont1" halign="left" noWrap="1" position="23,472" render="Label" size="1020,60" source="session.CurrentService" transparent="1" valign="center" zPosition="1" alphatest="blend">
+  <convert type="ServiceName">Name</convert>
+</widget>
+  
+  
+  
+  
+  
+
+  
+  
+</screen>
+  <screen name="template_menu_sibo3.1">
+  <eLabel backgroundColor="SevenBackground" position="15,662" size="1062,40" />
+  <eLabel backgroundColor="SevenBorder" position="1262,534" size="2,170" zPosition="2" />
+  <eLabel backgroundColor="SevenBorder" position="14,534" size="2,170" zPosition="2" />
+  <eLabel backgroundColor="SevenBorder" position="14,533" size="1250,2" zPosition="2" />
+  <eLabel backgroundColor="SevenBorder" position="14,702" size="1250,2" zPosition="2" />
+  <eLabel backgroundColor="SevenLine" position="215,604" size="850,2" zPosition="2" />
+<eLabel backgroundColor="SevenBorder" position="14,660" size="1063,2" zPosition="2" />
+<eLabel backgroundColor="SevenBorder" position="1075,533" size="2,129" zPosition="2" />
+<eLabel backgroundColor="SevenBackgroundRight" position="14,533" size="1062,127" />
+<eLabel backgroundColor="SevenBackground" position="1077,533" size="187,170" />
+  <widget position="215,602" render="Progress" size="850,6" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress">
+    <convert type="SevenHDEventTime">Progress</convert>
+  </widget>
+  <widget alphatest="blend" pixmap="SevenHD/buttons/ico_rec_on.png" position="20,666" render="Pixmap" size="32,32" source="session.RecordState" zPosition="5">
+    <convert type="ConditionalShowHide">Blink</convert>
+  </widget>
+  <widget backgroundColor="SevenBackground" font="Regular;24" halign="right" noWrap="1" position="32,551" render="Label" size="76,36" source="session.Event_Now" transparent="1" valign="center" zPosition="1" foregroundColor="SevenFont1">
+    <convert type="SevenHDEventTime">StartTime</convert>
+    <convert type="SevenHDClockToText">Default</convert>
+  </widget>
+  <eLabel backgroundColor="SevenBackground" font="Regular;24" halign="center" noWrap="1" position="108,551" size="16,36" text="-" transparent="1" valign="center" zPosition="1" foregroundColor="SevenFont1" />
+  <widget backgroundColor="SevenBackground" font="Regular;24" halign="left" noWrap="1" position="124,551" render="Label" size="76,36" source="session.Event_Now" transparent="1" valign="center" zPosition="1" foregroundColor="SevenFont1">
+    <convert type="SevenHDEventTime">EndTime</convert>
+    <convert type="SevenHDClockToText">Default</convert>
+  </widget>
+  <widget font="Regular;48" halign="center" valign="center" noWrap="1" position="215,537" render="SevenHDRunningText" options="movetype=running,startpoint=0,startdelay=2000,wrap=0,always=0,repeat=2,oneshot=1" size="730,64" source="session.Event_Now" backgroundColor="SevenBackground" transparent="1" zPosition="1" foregroundColor="SevenFont1">
+    <convert type="SevenHDEventName">Name</convert>
+  </widget>
+  <widget backgroundColor="SevenBackground" foregroundColor="SevenFont2" font="Regular2; 22" halign="right" noWrap="1" position="36,615" render="Label" size="72,36" source="session.Event_Next" transparent="1" valign="center" zPosition="1">
+    <convert type="SevenHDEventTime">StartTime</convert>
+    <convert type="SevenHDClockToText">Default</convert>
+  </widget>
+  <eLabel backgroundColor="SevenBackground" foregroundColor="SevenFont2" font="Regular2;22" halign="center" noWrap="1" position="108,615" size="16,36" text="-" transparent="1" valign="center" zPosition="1" />
+  <widget backgroundColor="SevenBackground" font="Regular2; 22" foregroundColor="SevenFont2" halign="left" noWrap="1" position="124,615" render="Label" size="72,36" source="session.Event_Next" transparent="1" valign="center" zPosition="1">
+    <convert type="SevenHDEventTime">EndTime</convert>
+    <convert type="SevenHDClockToText">Default</convert>
+  </widget>
+  <widget font="Regular2;36" halign="center" valign="center" noWrap="1" position="215,609" render="SevenHDRunningText" options="movetype=running,startpoint=0,startdelay=2000,wrap=0,always=0,repeat=2,oneshot=1" size="730,48" source="session.Event_Next" backgroundColor="SevenBackground" transparent="1" zPosition="1" foregroundColor="SevenFont2">
+    <convert type="SevenHDEventName">Name</convert>
+  </widget>
+  <widget source="session.CurrentService" render="Label" zPosition="3" position="409,671" size="50,22" font="Regular; 19" halign="right" backgroundColor="SevenBackground" foregroundColor="SevenFont1" transparent="1">
+    <convert type="SevenHDServiceInfo">VideoWidth</convert>
+  </widget>
+  <eLabel text="x" position="459,671" size="15,22" zPosition="3" font="Regular; 19" halign="center" backgroundColor="SevenBackground" foregroundColor="SevenFont1" transparent="1" />
+  <widget source="session.CurrentService" render="Label" zPosition="3" position="474,671" size="62,22" font="Regular; 19" halign="left" backgroundColor="SevenBackground" foregroundColor="SevenFont1" transparent="1">
+    <convert type="SevenHDServiceInfo">VideoHeight</convert>
+  </widget>
+  <widget alphatest="blend" pixmap="SevenHD/buttons/ico_format_on.png" position="255,666" render="Pixmap" size="32,32" source="session.CurrentService" zPosition="2">
+    <convert type="SevenHDServiceInfo">IsWidescreen</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.TunerInfo" render="Pixmap" pixmap="SevenHD/buttons/c_on.png" position="993,666" zPosition="2" size="32,32" backgroundColor="SevenBackground" alphatest="blend" valign="center">
+    <convert type="TunerInfo">TunerUseMask</convert>
+    <convert type="ValueBitTest">4</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.TunerInfo" render="Pixmap" pixmap="SevenHD/buttons/b_on.png" position="953,666" zPosition="2" size="32,32" backgroundColor="SevenBackground" alphatest="blend" valign="center">
+    <convert type="TunerInfo">TunerUseMask</convert>
+    <convert type="ValueBitTest">2</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.TunerInfo" render="Pixmap" pixmap="SevenHD/buttons/a_on.png" position="913,666" zPosition="2" size="32,32" backgroundColor="SevenBackground" alphatest="blend" valign="center">
+    <convert type="TunerInfo">TunerUseMask</convert>
+    <convert type="ValueBitTest">1</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.TunerInfo" render="Pixmap" pixmap="SevenHD/buttons/d_on.png" position="1033,666" zPosition="2" size="32,32" backgroundColor="SevenBackground" alphatest="blend" valign="center">
+    <convert type="TunerInfo">TunerUseMask</convert>
+    <convert type="ValueBitTest">8</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <ePixmap pixmap="SevenHD/buttons/a_off.png" position="913,666" size="32,32" zPosition="1" alphatest="blend" />
+  <ePixmap pixmap="SevenHD/buttons/b_off.png" position="953,666" size="32,32" zPosition="1" alphatest="blend" />
+  <ePixmap pixmap="SevenHD/buttons/c_off.png" position="993,666" size="32,32" zPosition="1" alphatest="blend" />
+  <ePixmap pixmap="SevenHD/buttons/d_off.png" position="1033,666" size="32,32" zPosition="1" alphatest="blend" />
+  <ePixmap alphatest="blend" pixmap="SevenHD/buttons/ico_subtitle_off.png" position="705,666" size="32,32" zPosition="1" />
+  <widget alphatest="blend" pixmap="SevenHD/buttons/ico_subtitle_on.png" position="705,666" render="Pixmap" size="32,32" source="session.CurrentService" zPosition="5">
+    <convert type="SevenHDServiceInfo">SubtitlesAvailable</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <ePixmap alphatest="blend" pixmap="SevenHD/buttons/ico_format_off.png" position="255,666" size="32,32" zPosition="1" />
+  <widget alphatest="blend" pixmap="SevenHD/buttons/ico_hd_on.png" position="215,666" render="Pixmap" size="32,32" source="session.CurrentService" zPosition="2">
+    <convert type="SevenHDServiceInfo">IsHD</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <ePixmap alphatest="blend" pixmap="SevenHD/buttons/ico_hd_off.png" position="215,666" size="32,32" zPosition="1" />
+  <widget alphatest="blend" pixmap="SevenHD/buttons/ico_dolby_on.png" position="295,666" render="Pixmap" size="32,32" source="session.CurrentService" zPosition="2">
+    <convert type="SevenHDServiceInfo">IsMultichannel</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <ePixmap alphatest="blend" pixmap="SevenHD/buttons/ico_dolby_off.png" position="295,666" size="32,32" zPosition="1" />
+  <ePixmap alphatest="blend" pixmap="SevenHD/buttons/ico_sub_off.png" position="570,666" size="32,32" zPosition="1" />
+  <widget source="session.CurrentService" render="Pixmap" pixmap="SevenHD/buttons/ico_sub_on.png" position="570,666" size="32,32" zPosition="2" alphatest="blend">
+    <convert type="SevenHDServiceInfo">SubservicesAvailable</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <ePixmap alphatest="blend" pixmap="SevenHD/buttons/ico_txt_off.png" position="615,666" size="32,32" zPosition="1" />
+  <widget alphatest="blend" pixmap="SevenHD/buttons/ico_txt_on.png" position="615,666" render="Pixmap" size="32,32" source="session.CurrentService" zPosition="5">
+    <convert type="SevenHDServiceInfo">HasTelext</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <ePixmap alphatest="blend" pixmap="SevenHD/buttons/ico_hbbtv_off.png" position="335,666" size="32,32" zPosition="1" />
+  <widget alphatest="blend" pixmap="SevenHD/buttons/ico_hbbtv_on.png" position="335,666" render="Pixmap" size="32,32" source="session.CurrentService" zPosition="5">
+    <convert type="SevenHDServiceInfo">HasHBBTV</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <ePixmap alphatest="blend" pixmap="SevenHD/buttons/ico_crypt_off.png" position="660,666" size="32,32" zPosition="1" />
+  <widget alphatest="blend" pixmap="SevenHD/buttons/ico_crypt_on.png" position="660,666" render="Pixmap" size="32,32" source="session.CurrentService" zPosition="5">
+    <convert type="SevenHDServiceInfo">IsCrypted</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.CurrentService" render="Label" position="775,671" size="89,22" backgroundColor="SevenBackground" transparent="1" zPosition="3" foregroundColor="SevenFont1" font="Regular; 19" valign="center" halign="left">
+    <convert type="SevenHDExtraInfo">OrbitalPositionOrTunerSystem</convert>
+  </widget>
+  <widget source="session.FrontendStatus" render="Label" position="812,671" size="70,21" font="Regular; 19" transparent="1" foregroundColor="SevenFont1" backgroundColor="SevenBackground" zPosition="3" halign="right" valign="center">
+    <convert type="FrontendInfo">SNR</convert>
+  </widget>
+  <widget backgroundColor="SevenBackground" font="Regular; 22" halign="right" position="958,551" render="Label" size="107,36" source="session.Event_Now" transparent="1" valign="center" zPosition="1">
+    <convert type="SevenHDEventTime">Remaining</convert>
+    <convert type="SevenHDRemainingToText">InMinutes</convert>
+  </widget>
+  <widget backgroundColor="SevenBackground" font="Regular2; 22" foregroundColor="SevenFont2" valign="center" halign="right" position="958,615" render="Label" size="107,35" source="session.Event_Next" transparent="1" zPosition="1">
+    <convert type="SevenHDEventTime">Duration</convert>
+    <convert type="SevenHDClockToText">InMinutes</convert>
+  </widget> 
+
+
+<eLabel backgroundColor="SevenBackgroundRight" position="14,2" size="1250,40" />
+  <eLabel backgroundColor="SevenBorder" position="14,40" size="1250,2" zPosition="2" />
+  <eLabel backgroundColor="SevenBorder" position="14,1" size="1250,2" zPosition="2" />
+  <eLabel backgroundColor="SevenBorder" position="14,1" size="2,41" zPosition="2" />
+  <eLabel backgroundColor="SevenBorder" position="1262,1" size="2,41" zPosition="2" />
+  <eLabel backgroundColor="SevenBackground" position="14,47" size="620,420" />
+  <eLabel backgroundColor="SevenBorder" position="14,465" size="621,2" zPosition="2" />
+  <eLabel backgroundColor="SevenBorder" position="14,45" size="621,2" zPosition="2" />
+  <eLabel backgroundColor="SevenBorder" position="14,45" size="2,420" zPosition="2" />
+  <eLabel backgroundColor="SevenBorder" position="1262,45" size="2,420" zPosition="2" />
+  <eLabel backgroundColor="SevenLine" position="633,45" size="2,420" zPosition="2" />
+  <eLabel backgroundColor="SevenLine" position="643,45" size="2,420" zPosition="2" />
+  <widget backgroundColor="SevenBackground" font="Regular; 30" halign="center" noWrap="1" position="37,50" foregroundColor="SevenFont1" render="Label" size="578,38" source="session.Event_Now" transparent="1" zPosition="1" valign="bottom">
+    <convert type="SevenHDEventName">Name</convert>
+  </widget>
+  <widget backgroundColor="SevenBackground" font="Regular; 20" foregroundColor="SevenFont1" halign="center" position="37,93" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,wrap=1,always=0,repeat=2,oneshot=1" size="578,364" source="session.Event_Now" zPosition="1" transparent="1">
+    <convert type="SevenHDEventName">ExtendedDescription</convert>
+  </widget>
+  <widget backgroundColor="SevenBackground" font="Regular2; 30" foregroundColor="SevenFont2" halign="center" position="666,50" render="Label" size="578,38" source="session.Event_Next" transparent="1" zPosition="1" valign="bottom">
+    <convert type="SevenHDEventName">Name</convert>
+  </widget>
+  <widget source="session.CurrentService" position="37,10" size="500,22" font="Regular2;12" render="Label" halign="left" valign="bottom" foregroundColor="SevenFont2" backgroundColor="SevenBackground" transparent="1" zPosition="1">
+    <convert type="SevenHDMyCaidDisplay">Default</convert>
+  </widget>
+  <eLabel text="SysTemp:" position="400,10" size="70,22" font="Regular2;12" halign="left" valign="bottom" foregroundColor="SevenFont2" backgroundColor="SevenBackground" noWrap="1" transparent="1" zPosition="2" />
+  <widget source="global.CurrentTime" render="SevenHDSYSTemp" position="465,10" size="60,22" font="Regular2;12" halign="left" valign="bottom" foregroundColor="SevenFont2" backgroundColor="SevenBackground" noWrap="1" transparent="1" zPosition="3" />
+  <widget source="session.CurrentService" render="Label" position="535,10" size="100,22" font="Regular2;12" halign="left" valign="bottom" foregroundColor="SevenFont2" backgroundColor="SevenBackground" noWrap="1" transparent="1" zPosition="4">
+    <convert type="SevenHDCpuUsage">CPU: $0</convert>
+  </widget>
+  <widget source="session.CurrentService" render="Label" position="620,10" size="210,22" font="Regular2;12" halign="left" valign="bottom" foregroundColor="SevenFont2" backgroundColor="SevenBackground" noWrap="1" transparent="1" zPosition="5">
+    <convert type="SevenHDLayoutInfo">FleshInfo,Short</convert>
+  </widget>
+  <widget source="session.CurrentService" render="Label" position="779,10" size="200,22" font="Regular2;12" halign="left" valign="bottom" foregroundColor="SevenFont2" backgroundColor="SevenBackground" noWrap="1" transparent="1" zPosition="6">
+    <convert type="SevenHDLayoutInfo">MemTotal,Short</convert>
+  </widget>
+  <widget source="session.CurrentService" render="Label" position="886,10" size="350,22" font="Regular2;12" halign="right" valign="bottom" foregroundColor="SevenFont2" backgroundColor="SevenBackground" noWrap="1" transparent="1" zPosition="7">
+    <convert type="SevenHDLayoutInfo">HddInfo,Full</convert>
+  </widget>
+  <widget source="session.CurrentService" position="37,10" size="500,22" font="Regular2;12" render="Label" halign="left" valign="bottom" foregroundColor="SevenFont2" backgroundColor="SevenBackground" transparent="1" zPosition="1">
+    <convert type="SevenHDMyCaidDisplay">Default</convert>
+  </widget>
+  <eLabel text="SysTemp:" position="400,10" size="70,22" font="Regular2;12" halign="left" valign="bottom" foregroundColor="SevenFont2" backgroundColor="SevenBackground" noWrap="1" transparent="1" zPosition="2" />
+  <widget source="global.CurrentTime" render="SevenHDSYSTemp" position="465,10" size="60,22" font="Regular2;12" halign="left" valign="bottom" foregroundColor="SevenFont2" backgroundColor="SevenBackground" noWrap="1" transparent="1" zPosition="3" />
+  <widget source="session.CurrentService" render="Label" position="535,10" size="100,22" font="Regular2;12" halign="left" valign="bottom" foregroundColor="SevenFont2" backgroundColor="SevenBackground" noWrap="1" transparent="1" zPosition="4">
+    <convert type="SevenHDCpuUsage">CPU: $0</convert>
+  </widget>
+  <widget source="session.CurrentService" render="Label" position="620,10" size="210,22" font="Regular2;12" halign="left" valign="bottom" foregroundColor="SevenFont2" backgroundColor="SevenBackground" noWrap="1" transparent="1" zPosition="5">
+    <convert type="SevenHDLayoutInfo">FleshInfo,Short</convert>
+  </widget>
+  <widget source="session.CurrentService" render="Label" position="779,10" size="200,22" font="Regular2;12" halign="left" valign="bottom" foregroundColor="SevenFont2" backgroundColor="SevenBackground" noWrap="1" transparent="1" zPosition="6">
+    <convert type="SevenHDLayoutInfo">MemTotal,Short</convert>
+  </widget>
+  <widget source="session.CurrentService" render="Label" position="886,10" size="350,22" font="Regular2;12" halign="right" valign="bottom" foregroundColor="SevenFont2" backgroundColor="SevenBackground" noWrap="1" transparent="1" zPosition="7">
+    <convert type="SevenHDLayoutInfo">HddInfo,Full</convert>
+  </widget>
+  <widget backgroundColor="SevenBackground" font="Regular; 20" foregroundColor="SevenFont1" halign="center" position="666,93" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,wrap=1,always=0,repeat=2,oneshot=1" size="578,364" source="session.Event_Next" zPosition="1" transparent="1">
+    <convert type="SevenHDEventName">ExtendedDescription</convert>
+  </widget>
+  <eLabel backgroundColor="SevenBorder" position="643,45" size="621,2" zPosition="2" />
+  <eLabel backgroundColor="SevenBorder" position="643,465" size="621,2" zPosition="2" />
+  <eLabel backgroundColor="SevenBackgroundRight" position="643,47" size="620,420" />
+  <widget font="Regular2; 40" foregroundColor="SevenFont1" halign="left" noWrap="1" position="23,472" render="Label" size="1020,60" source="session.CurrentService" transparent="1" valign="center" zPosition="1" alphatest="blend">
+  <convert type="ServiceName">Name</convert>
+</widget> 
+</screen>
+  <screen name="template_menu_ibzz3">
+  <eLabel backgroundColor="SevenBackground" position="424,661" size="653,43" />
+  <eLabel backgroundColor="SevenBorder" position="1262,520" size="2,183" zPosition="2" />
+  <eLabel backgroundColor="SevenBorder" position="14,520" size="2,183" zPosition="2" />
+  <eLabel backgroundColor="SevenBorder" position="14,520" size="1250,2" zPosition="2" />
+  <eLabel backgroundColor="SevenBorder" position="14,702" size="1250,2" zPosition="2" />
+<eLabel backgroundColor="SevenBorder" position="1075,520" size="2,142" zPosition="2" />
+<eLabel backgroundColor="SevenBorder" position="424,520" size="2,142" zPosition="2" />
+<eLabel backgroundColor="SevenBorder" position="424,661" size="653,2" zPosition="2" />
+<eLabel backgroundColor="SevenBackgroundRight" position="425,522" size="652,140" />
+<eLabel backgroundColor="SevenBackground" position="1077,523" size="187,181" />
+<eLabel backgroundColor="SevenBackground" position="14,523" size="410,181" />
+  <widget position="443,597" render="Progress" size="621,7" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress">
+    <convert type="SevenHDEventTime">Progress</convert>
+  </widget>
+  <eLabel backgroundColor="SevenLine" position="443,600" size="621,1" zPosition="2" />
+  <widget alphatest="blend" pixmap="SevenHD/buttons/ico_rec_on.png" position="1230,485" render="Pixmap" size="32,32" source="session.RecordState" zPosition="5">
+    <convert type="ConditionalShowHide">Blink</convert>
+  </widget>
+  <widget backgroundColor="SevenBackground" font="Regular;24" halign="right" noWrap="1" position="426,542" render="Label" size="76,36" source="session.Event_Now" transparent="1" valign="center" zPosition="1" foregroundColor="SevenFont1">
+    <convert type="SevenHDEventTime">StartTime</convert>
+    <convert type="SevenHDClockToText">Default</convert>
+  </widget>
+  <eLabel backgroundColor="SevenBackground" font="Regular;24" halign="center" noWrap="1" position="502,542" size="16,36" text="-" transparent="1" valign="center" zPosition="1" foregroundColor="SevenFont1" />
+  <widget backgroundColor="SevenBackground" font="Regular;24" halign="left" noWrap="1" position="518,542" render="Label" size="76,36" source="session.Event_Now" transparent="1" valign="center" zPosition="1" foregroundColor="SevenFont1">
+    <convert type="SevenHDEventTime">EndTime</convert>
+    <convert type="SevenHDClockToText">Default</convert>
+  </widget>
+  <widget font="Regular;48" halign="center" valign="center" noWrap="1" position="604,528" render="SevenHDRunningText" options="movetype=running,startpoint=0,startdelay=2000,wrap=0,always=0,repeat=2,oneshot=1" size="344,64" source="session.Event_Now" backgroundColor="SevenBackground" transparent="1" zPosition="1" foregroundColor="SevenFont1">
+    <convert type="SevenHDEventName">Name</convert>
+  </widget>
+  <widget backgroundColor="SevenBackground" foregroundColor="SevenFont2" font="Regular2; 22" halign="right" noWrap="1" position="430,614" render="Label" size="72,36" source="session.Event_Next" transparent="1" valign="center" zPosition="1">
+    <convert type="SevenHDEventTime">StartTime</convert>
+    <convert type="SevenHDClockToText">Default</convert>
+  </widget>
+  <eLabel backgroundColor="SevenBackground" foregroundColor="SevenFont2" font="Regular2;22" halign="center" noWrap="1" position="502,614" size="16,36" text="-" transparent="1" valign="center" zPosition="1" />
+  <widget backgroundColor="SevenBackground" font="Regular2; 22" foregroundColor="SevenFont2" halign="left" noWrap="1" position="518,614" render="Label" size="72,36" source="session.Event_Next" transparent="1" valign="center" zPosition="1">
+    <convert type="SevenHDEventTime">EndTime</convert>
+    <convert type="SevenHDClockToText">Default</convert>
+  </widget>
+  <widget font="Regular2;36" halign="center" valign="center" noWrap="1" position="604,608" render="SevenHDRunningText" options="movetype=running,startpoint=0,startdelay=2000,wrap=0,always=0,repeat=2,oneshot=1" size="344,48" source="session.Event_Next" backgroundColor="SevenBackground" transparent="1" zPosition="1" foregroundColor="SevenFont2">
+    <convert type="SevenHDEventName">Name</convert>
+  </widget>
+  <widget alphatest="blend" position="20,526" render="SevenHDXPicon" size="400,170" source="session.CurrentService" transparent="1" zPosition="4">
+    <convert type="ServiceName">Reference</convert>
+  </widget>
+  <widget source="session.CurrentService" render="Label" zPosition="3" position="450,671" size="50,22" font="Regular; 19" halign="right" backgroundColor="SevenBackground" foregroundColor="SevenFont1" transparent="1">
+    <convert type="SevenHDServiceInfo">VideoWidth</convert>
+  </widget>
+  <eLabel text="x" position="500,671" size="15,22" zPosition="3" font="Regular; 19" halign="center" backgroundColor="SevenBackground" foregroundColor="SevenFont1" transparent="1" />
+  <widget source="session.CurrentService" render="Label" zPosition="3" position="515,671" size="62,22" font="Regular; 19" halign="left" backgroundColor="SevenBackground" foregroundColor="SevenFont1" transparent="1">
+    <convert type="SevenHDServiceInfo">VideoHeight</convert>
+  </widget>
+  <widget alphatest="blend" pixmap="SevenHD/buttons/ico_format_on.png" position="638,666" render="Pixmap" size="32,32" source="session.CurrentService" zPosition="2">
+    <convert type="SevenHDServiceInfo">IsWidescreen</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.TunerInfo" render="Pixmap" pixmap="SevenHD/buttons/c_on.png" position="997,666" zPosition="2" size="32,32" backgroundColor="SevenBackground" alphatest="blend" valign="center">
+    <convert type="TunerInfo">TunerUseMask</convert>
+    <convert type="ValueBitTest">4</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.TunerInfo" render="Pixmap" pixmap="SevenHD/buttons/b_on.png" position="962,666" zPosition="2" size="32,32" backgroundColor="SevenBackground" alphatest="blend" valign="center">
+    <convert type="TunerInfo">TunerUseMask</convert>
+    <convert type="ValueBitTest">2</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.TunerInfo" render="Pixmap" pixmap="SevenHD/buttons/a_on.png" position="927,666" zPosition="2" size="32,32" backgroundColor="SevenBackground" alphatest="blend" valign="center">
+    <convert type="TunerInfo">TunerUseMask</convert>
+    <convert type="ValueBitTest">1</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.TunerInfo" render="Pixmap" pixmap="SevenHD/buttons/d_on.png" position="1032,666" zPosition="2" size="32,32" backgroundColor="SevenBackground" alphatest="blend" valign="center">
+    <convert type="TunerInfo">TunerUseMask</convert>
+    <convert type="ValueBitTest">8</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <ePixmap pixmap="SevenHD/buttons/a_off.png" position="927,666" size="32,32" zPosition="1" alphatest="blend" />
+  <ePixmap pixmap="SevenHD/buttons/b_off.png" position="962,666" size="32,32" zPosition="1" alphatest="blend" />
+  <ePixmap pixmap="SevenHD/buttons/c_off.png" position="997,666" size="32,32" zPosition="1" alphatest="blend" />
+  <ePixmap pixmap="SevenHD/buttons/d_off.png" position="1032,666" size="32,32" zPosition="1" alphatest="blend" />
+  <ePixmap alphatest="blend" pixmap="SevenHD/buttons/ico_subtitle_off.png" position="872,666" size="32,32" zPosition="1" />
+  <widget alphatest="blend" pixmap="SevenHD/buttons/ico_subtitle_on.png" position="872,666" render="Pixmap" size="32,32" source="session.CurrentService" zPosition="5">
+    <convert type="SevenHDServiceInfo">SubtitlesAvailable</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <ePixmap alphatest="blend" pixmap="SevenHD/buttons/ico_format_off.png" position="638,666" size="32,32" zPosition="1" />
+  <widget alphatest="blend" pixmap="SevenHD/buttons/ico_hd_on.png" position="603,666" render="Pixmap" size="32,32" source="session.CurrentService" zPosition="2">
+    <convert type="SevenHDServiceInfo">IsHD</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <ePixmap alphatest="blend" pixmap="SevenHD/buttons/ico_hd_off.png" position="603,666" size="32,32" zPosition="1" />
+  <widget alphatest="blend" pixmap="SevenHD/buttons/ico_dolby_on.png" position="673,666" render="Pixmap" size="32,32" source="session.CurrentService" zPosition="2">
+    <convert type="SevenHDServiceInfo">IsMultichannel</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <ePixmap alphatest="blend" pixmap="SevenHD/buttons/ico_dolby_off.png" position="673,666" size="32,32" zPosition="1" />
+  <ePixmap alphatest="blend" pixmap="SevenHD/buttons/ico_sub_off.png" position="763,666" size="32,32" zPosition="1" />
+  <widget source="session.CurrentService" render="Pixmap" pixmap="SevenHD/buttons/ico_sub_on.png" position="763,666" size="32,32" zPosition="2" alphatest="blend">
+    <convert type="SevenHDServiceInfo">SubservicesAvailable</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <ePixmap alphatest="blend" pixmap="SevenHD/buttons/ico_txt_off.png" position="798,666" size="32,32" zPosition="1" />
+  <widget alphatest="blend" pixmap="SevenHD/buttons/ico_txt_on.png" position="798,666" render="Pixmap" size="32,32" source="session.CurrentService" zPosition="5">
+    <convert type="SevenHDServiceInfo">HasTelext</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <ePixmap alphatest="blend" pixmap="SevenHD/buttons/ico_hbbtv_off.png" position="708,666" size="32,32" zPosition="1" />
+  <widget alphatest="blend" pixmap="SevenHD/buttons/ico_hbbtv_on.png" position="708,666" render="Pixmap" size="32,32" source="session.CurrentService" zPosition="5">
+    <convert type="SevenHDServiceInfo">HasHBBTV</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <ePixmap alphatest="blend" pixmap="SevenHD/buttons/ico_crypt_off.png" position="837,666" size="32,32" zPosition="1" />
+  <widget alphatest="blend" pixmap="SevenHD/buttons/ico_crypt_on.png" position="837,666" render="Pixmap" size="32,32" source="session.CurrentService" zPosition="5">
+    <convert type="SevenHDServiceInfo">IsCrypted</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget backgroundColor="SevenBackground" font="Regular; 22" halign="right" position="958,542" render="Label" size="107,36" source="session.Event_Now" transparent="1" valign="center" zPosition="1">
+    <convert type="SevenHDEventTime">Remaining</convert>
+    <convert type="SevenHDRemainingToText">InMinutes</convert>
+  </widget>
+  <widget backgroundColor="SevenBackground" font="Regular2; 22" foregroundColor="SevenFont2" valign="center" halign="right" position="958,614" render="Label" size="107,35" source="session.Event_Next" transparent="1" zPosition="1">
+    <convert type="SevenHDEventTime">Duration</convert>
+    <convert type="SevenHDClockToText">InMinutes</convert>
+  </widget>
+</screen>
+  <screen name="template_menu_sibzz3">
+  <eLabel backgroundColor="SevenBackground" position="424,661" size="653,43" />
+  <eLabel backgroundColor="SevenBorder" position="1262,520" size="2,183" zPosition="2" />
+  <eLabel backgroundColor="SevenBorder" position="14,520" size="2,183" zPosition="2" />
+  <eLabel backgroundColor="SevenBorder" position="14,520" size="1250,2" zPosition="2" />
+  <eLabel backgroundColor="SevenBorder" position="14,702" size="1250,2" zPosition="2" />
+<eLabel backgroundColor="SevenBorder" position="1075,520" size="2,142" zPosition="2" />
+<eLabel backgroundColor="SevenBorder" position="424,520" size="2,142" zPosition="2" />
+<eLabel backgroundColor="SevenBorder" position="424,661" size="653,2" zPosition="2" />
+<eLabel backgroundColor="SevenBackgroundRight" position="425,522" size="652,140" />
+<eLabel backgroundColor="SevenBackground" position="1077,523" size="187,181" />
+<eLabel backgroundColor="SevenBackground" position="14,523" size="410,181" />
+  <widget position="443,597" render="Progress" size="621,7" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress">
+    <convert type="SevenHDEventTime">Progress</convert>
+  </widget>
+  <eLabel backgroundColor="SevenLine" position="443,600" size="621,1" zPosition="2" />
+  <widget alphatest="blend" pixmap="SevenHD/buttons/ico_rec_on.png" position="1230,485" render="Pixmap" size="32,32" source="session.RecordState" zPosition="5">
+    <convert type="ConditionalShowHide">Blink</convert>
+  </widget>
+  <widget backgroundColor="SevenBackground" font="Regular;24" halign="right" noWrap="1" position="426,542" render="Label" size="76,36" source="session.Event_Now" transparent="1" valign="center" zPosition="1" foregroundColor="SevenFont1">
+    <convert type="SevenHDEventTime">StartTime</convert>
+    <convert type="SevenHDClockToText">Default</convert>
+  </widget>
+  <eLabel backgroundColor="SevenBackground" font="Regular;24" halign="center" noWrap="1" position="502,542" size="16,36" text="-" transparent="1" valign="center" zPosition="1" foregroundColor="SevenFont1" />
+  <widget backgroundColor="SevenBackground" font="Regular;24" halign="left" noWrap="1" position="518,542" render="Label" size="76,36" source="session.Event_Now" transparent="1" valign="center" zPosition="1" foregroundColor="SevenFont1">
+    <convert type="SevenHDEventTime">EndTime</convert>
+    <convert type="SevenHDClockToText">Default</convert>
+  </widget>
+  <widget font="Regular;48" halign="center" valign="center" noWrap="1" position="604,528" render="SevenHDRunningText" options="movetype=running,startpoint=0,startdelay=2000,wrap=0,always=0,repeat=2,oneshot=1" size="344,64" source="session.Event_Now" backgroundColor="SevenBackground" transparent="1" zPosition="1" foregroundColor="SevenFont1">
+    <convert type="SevenHDEventName">Name</convert>
+  </widget>
+  <widget backgroundColor="SevenBackground" foregroundColor="SevenFont2" font="Regular2; 22" halign="right" noWrap="1" position="430,614" render="Label" size="72,36" source="session.Event_Next" transparent="1" valign="center" zPosition="1">
+    <convert type="SevenHDEventTime">StartTime</convert>
+    <convert type="SevenHDClockToText">Default</convert>
+  </widget>
+  <eLabel backgroundColor="SevenBackground" foregroundColor="SevenFont2" font="Regular2;22" halign="center" noWrap="1" position="502,614" size="16,36" text="-" transparent="1" valign="center" zPosition="1" />
+  <widget backgroundColor="SevenBackground" font="Regular2; 22" foregroundColor="SevenFont2" halign="left" noWrap="1" position="518,614" render="Label" size="72,36" source="session.Event_Next" transparent="1" valign="center" zPosition="1">
+    <convert type="SevenHDEventTime">EndTime</convert>
+    <convert type="SevenHDClockToText">Default</convert>
+  </widget>
+  <widget font="Regular2;36" halign="center" valign="center" noWrap="1" position="604,608" render="SevenHDRunningText" options="movetype=running,startpoint=0,startdelay=2000,wrap=0,always=0,repeat=2,oneshot=1" size="344,48" source="session.Event_Next" backgroundColor="SevenBackground" transparent="1" zPosition="1" foregroundColor="SevenFont2">
+    <convert type="SevenHDEventName">Name</convert>
+  </widget>
+  <widget alphatest="blend" position="20,526" render="SevenHDXPicon" size="400,170" source="session.CurrentService" transparent="1" zPosition="4">
+    <convert type="ServiceName">Reference</convert>
+  </widget>
+  <widget source="session.CurrentService" render="Label" zPosition="3" position="450,671" size="50,22" font="Regular; 19" halign="right" backgroundColor="SevenBackground" foregroundColor="SevenFont1" transparent="1">
+    <convert type="SevenHDServiceInfo">VideoWidth</convert>
+  </widget>
+  <eLabel text="x" position="500,671" size="15,22" zPosition="3" font="Regular; 19" halign="center" backgroundColor="SevenBackground" foregroundColor="SevenFont1" transparent="1" />
+  <widget source="session.CurrentService" render="Label" zPosition="3" position="515,671" size="62,22" font="Regular; 19" halign="left" backgroundColor="SevenBackground" foregroundColor="SevenFont1" transparent="1">
+    <convert type="SevenHDServiceInfo">VideoHeight</convert>
+  </widget>
+  <widget alphatest="blend" pixmap="SevenHD/buttons/ico_format_on.png" position="638,666" render="Pixmap" size="32,32" source="session.CurrentService" zPosition="2">
+    <convert type="SevenHDServiceInfo">IsWidescreen</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.TunerInfo" render="Pixmap" pixmap="SevenHD/buttons/c_on.png" position="997,666" zPosition="2" size="32,32" backgroundColor="SevenBackground" alphatest="blend" valign="center">
+    <convert type="TunerInfo">TunerUseMask</convert>
+    <convert type="ValueBitTest">4</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.TunerInfo" render="Pixmap" pixmap="SevenHD/buttons/b_on.png" position="962,666" zPosition="2" size="32,32" backgroundColor="SevenBackground" alphatest="blend" valign="center">
+    <convert type="TunerInfo">TunerUseMask</convert>
+    <convert type="ValueBitTest">2</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.TunerInfo" render="Pixmap" pixmap="SevenHD/buttons/a_on.png" position="927,666" zPosition="2" size="32,32" backgroundColor="SevenBackground" alphatest="blend" valign="center">
+    <convert type="TunerInfo">TunerUseMask</convert>
+    <convert type="ValueBitTest">1</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.TunerInfo" render="Pixmap" pixmap="SevenHD/buttons/d_on.png" position="1032,666" zPosition="2" size="32,32" backgroundColor="SevenBackground" alphatest="blend" valign="center">
+    <convert type="TunerInfo">TunerUseMask</convert>
+    <convert type="ValueBitTest">8</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <ePixmap pixmap="SevenHD/buttons/a_off.png" position="927,666" size="32,32" zPosition="1" alphatest="blend" />
+  <ePixmap pixmap="SevenHD/buttons/b_off.png" position="962,666" size="32,32" zPosition="1" alphatest="blend" />
+  <ePixmap pixmap="SevenHD/buttons/c_off.png" position="997,666" size="32,32" zPosition="1" alphatest="blend" />
+  <ePixmap pixmap="SevenHD/buttons/d_off.png" position="1032,666" size="32,32" zPosition="1" alphatest="blend" />
+  <ePixmap alphatest="blend" pixmap="SevenHD/buttons/ico_subtitle_off.png" position="872,666" size="32,32" zPosition="1" />
+  <widget alphatest="blend" pixmap="SevenHD/buttons/ico_subtitle_on.png" position="872,666" render="Pixmap" size="32,32" source="session.CurrentService" zPosition="5">
+    <convert type="SevenHDServiceInfo">SubtitlesAvailable</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <ePixmap alphatest="blend" pixmap="SevenHD/buttons/ico_format_off.png" position="638,666" size="32,32" zPosition="1" />
+  <widget alphatest="blend" pixmap="SevenHD/buttons/ico_hd_on.png" position="603,666" render="Pixmap" size="32,32" source="session.CurrentService" zPosition="2">
+    <convert type="SevenHDServiceInfo">IsHD</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <ePixmap alphatest="blend" pixmap="SevenHD/buttons/ico_hd_off.png" position="603,666" size="32,32" zPosition="1" />
+  <widget alphatest="blend" pixmap="SevenHD/buttons/ico_dolby_on.png" position="673,666" render="Pixmap" size="32,32" source="session.CurrentService" zPosition="2">
+    <convert type="SevenHDServiceInfo">IsMultichannel</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <ePixmap alphatest="blend" pixmap="SevenHD/buttons/ico_dolby_off.png" position="673,666" size="32,32" zPosition="1" />
+  <ePixmap alphatest="blend" pixmap="SevenHD/buttons/ico_sub_off.png" position="763,666" size="32,32" zPosition="1" />
+  <widget source="session.CurrentService" render="Pixmap" pixmap="SevenHD/buttons/ico_sub_on.png" position="763,666" size="32,32" zPosition="2" alphatest="blend">
+    <convert type="SevenHDServiceInfo">SubservicesAvailable</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <ePixmap alphatest="blend" pixmap="SevenHD/buttons/ico_txt_off.png" position="798,666" size="32,32" zPosition="1" />
+  <widget alphatest="blend" pixmap="SevenHD/buttons/ico_txt_on.png" position="798,666" render="Pixmap" size="32,32" source="session.CurrentService" zPosition="5">
+    <convert type="SevenHDServiceInfo">HasTelext</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <ePixmap alphatest="blend" pixmap="SevenHD/buttons/ico_hbbtv_off.png" position="708,666" size="32,32" zPosition="1" />
+  <widget alphatest="blend" pixmap="SevenHD/buttons/ico_hbbtv_on.png" position="708,666" render="Pixmap" size="32,32" source="session.CurrentService" zPosition="5">
+    <convert type="SevenHDServiceInfo">HasHBBTV</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <ePixmap alphatest="blend" pixmap="SevenHD/buttons/ico_crypt_off.png" position="837,666" size="32,32" zPosition="1" />
+  <widget alphatest="blend" pixmap="SevenHD/buttons/ico_crypt_on.png" position="837,666" render="Pixmap" size="32,32" source="session.CurrentService" zPosition="5">
+    <convert type="SevenHDServiceInfo">IsCrypted</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget backgroundColor="SevenBackground" font="Regular; 22" halign="right" position="958,542" render="Label" size="107,36" source="session.Event_Now" transparent="1" valign="center" zPosition="1">
+    <convert type="SevenHDEventTime">Remaining</convert>
+    <convert type="SevenHDRemainingToText">InMinutes</convert>
+  </widget>
+  <widget backgroundColor="SevenBackground" font="Regular2; 22" foregroundColor="SevenFont2" valign="center" halign="right" position="958,614" render="Label" size="107,35" source="session.Event_Next" transparent="1" zPosition="1">
+    <convert type="SevenHDEventTime">Duration</convert>
+    <convert type="SevenHDClockToText">InMinutes</convert>
+  </widget>
+
+<eLabel backgroundColor="SevenBackgroundRight" position="14,2" size="1250,40" />
+  <eLabel backgroundColor="SevenBorder" position="14,40" size="1250,2" zPosition="2" />
+  <eLabel backgroundColor="SevenBorder" position="14,1" size="1250,2" zPosition="2" />
+  <eLabel backgroundColor="SevenBorder" position="14,1" size="2,41" zPosition="2" />
+  <eLabel backgroundColor="SevenBorder" position="1262,1" size="2,41" zPosition="2" />
+  <eLabel backgroundColor="SevenBackground" position="14,45" size="1250,422" />
+  <eLabel backgroundColor="SevenBorder" position="14,465" size="1250,2" zPosition="2" />
+  <eLabel backgroundColor="SevenBorder" position="14,45" size="1250,2" zPosition="2" />
+  <eLabel backgroundColor="SevenBorder" position="14,45" size="2,422" zPosition="2" />
+  <eLabel backgroundColor="SevenBorder" position="1262,45" size="2,422" zPosition="2" />
+  <eLabel backgroundColor="SevenLine" position="37,265" size="1200,2" zPosition="2" />
+  <widget backgroundColor="SevenBackground" font="Regular; 30" halign="center" noWrap="1" position="37,53" foregroundColor="SevenFont1" render="Label" size="1200,38" source="session.Event_Now" transparent="1" zPosition="1" valign="bottom">
+    <convert type="SevenHDEventName">Name</convert>
+  </widget>
+  <widget backgroundColor="SevenBackground" font="Regular; 20" foregroundColor="SevenFont1" halign="center" position="37,98" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,wrap=1,always=0,repeat=2,oneshot=1" size="1200,160" source="session.Event_Now" zPosition="1" transparent="1">
+    <convert type="SevenHDEventName">ExtendedDescription</convert>
+  </widget>
+  <widget backgroundColor="SevenBackground" font="Regular2; 30" foregroundColor="SevenFont2" halign="center" position="37,271" render="Label" size="1200,38" source="session.Event_Next" transparent="1" zPosition="1" valign="bottom">
+    <convert type="SevenHDEventName">Name</convert>
+  </widget>
+  <widget source="global.CurrentTime" render="SevenHDSYSTemp" position="465,10" size="60,22" font="Regular2;12" halign="left" valign="bottom" foregroundColor="SevenFont2" backgroundColor="SevenBackground" noWrap="1" transparent="1" zPosition="3" />
+  <widget source="session.CurrentService" render="Label" position="535,10" size="100,22" font="Regular2;12" halign="left" valign="bottom" foregroundColor="SevenFont2" backgroundColor="SevenBackground" noWrap="1" transparent="1" zPosition="4">
+    <convert type="SevenHDCpuUsage">CPU: $0</convert>
+  </widget>
+  <widget source="session.CurrentService" render="Label" position="620,10" size="210,22" font="Regular2;12" halign="left" valign="bottom" foregroundColor="SevenFont2" backgroundColor="SevenBackground" noWrap="1" transparent="1" zPosition="5">
+    <convert type="SevenHDLayoutInfo">FleshInfo,Short</convert>
+  </widget>
+  <widget source="session.CurrentService" position="37,10" size="500,22" font="Regular2;12" render="Label" halign="left" valign="bottom" foregroundColor="SevenFont2" backgroundColor="SevenBackground" transparent="1" zPosition="1">
+    <convert type="SevenHDMyCaidDisplay">Default</convert>
+  </widget>
+  <eLabel text="SysTemp:" position="400,10" size="70,22" font="Regular2;12" halign="left" valign="bottom" foregroundColor="SevenFont2" backgroundColor="SevenBackground" noWrap="1" transparent="1" zPosition="2" />
+  <widget source="session.CurrentService" render="Label" position="620,10" size="210,22" font="Regular2;12" halign="left" valign="bottom" foregroundColor="SevenFont2" backgroundColor="SevenBackground" noWrap="1" transparent="1" zPosition="5">
+    <convert type="SevenHDLayoutInfo">FleshInfo,Short</convert>
+  </widget>
+  <widget source="session.CurrentService" render="Label" position="779,10" size="200,22" font="Regular2;12" halign="left" valign="bottom" foregroundColor="SevenFont2" backgroundColor="SevenBackground" noWrap="1" transparent="1" zPosition="6">
+    <convert type="SevenHDLayoutInfo">MemTotal,Short</convert>
+  </widget>
+  <widget source="session.CurrentService" render="Label" position="886,10" size="350,22" font="Regular2;12" halign="right" valign="bottom" foregroundColor="SevenFont2" backgroundColor="SevenBackground" noWrap="1" transparent="1" zPosition="7">
+    <convert type="SevenHDLayoutInfo">HddInfo,Full</convert>
+  </widget>
+  <widget backgroundColor="SevenBackground" font="Regular; 20" foregroundColor="SevenFont1" halign="center" position="37,316" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,wrap=1,always=0,repeat=2,oneshot=1" size="1200,132" source="session.Event_Next" zPosition="1" transparent="1">
+    <convert type="SevenHDEventName">ExtendedDescription</convert>
+  </widget>
+  <widget font="Regular2; 40" foregroundColor="SevenFont1" halign="left" noWrap="1" position="15,470" render="Label" size="1020,50" source="session.CurrentService" transparent="1" valign="center" zPosition="1" alphatest="blend">
+  <convert type="ServiceName">Name</convert>
+</widget>
+</screen>
+  <screen name="template_menu_sibzz3.1">
+  <eLabel backgroundColor="SevenBackground" position="425,661" size="652,43" />
+  <eLabel backgroundColor="SevenBorder" position="1262,520" size="2,183" zPosition="2" />
+  <eLabel backgroundColor="SevenBorder" position="14,520" size="2,183" zPosition="2" />
+  <eLabel backgroundColor="SevenBorder" position="14,520" size="1250,2" zPosition="2" />
+  <eLabel backgroundColor="SevenBorder" position="14,702" size="1250,2" zPosition="2" />
+<eLabel backgroundColor="SevenBorder" position="1075,520" size="2,142" zPosition="2" />
+<eLabel backgroundColor="SevenBorder" position="424,520" size="2,142" zPosition="2" />
+<eLabel backgroundColor="SevenBorder" position="424,661" size="653,2" zPosition="2" />
+<eLabel backgroundColor="SevenBackgroundRight" position="425,522" size="652,140" />
+<eLabel backgroundColor="SevenBackground" position="1077,523" size="187,181" />
+<eLabel backgroundColor="SevenBackground" position="14,523" size="410,181" />
+  <widget position="443,597" render="Progress" size="621,7" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress">
+    <convert type="SevenHDEventTime">Progress</convert>
+  </widget>
+  <eLabel backgroundColor="SevenLine" position="443,600" size="621,1" zPosition="2" />
+  <widget alphatest="blend" pixmap="SevenHD/buttons/ico_rec_on.png" position="1230,485" render="Pixmap" size="32,32" source="session.RecordState" zPosition="5">
+    <convert type="ConditionalShowHide">Blink</convert>
+  </widget>
+  <widget backgroundColor="SevenBackground" font="Regular;24" halign="right" noWrap="1" position="426,542" render="Label" size="76,36" source="session.Event_Now" transparent="1" valign="center" zPosition="1" foregroundColor="SevenFont1">
+    <convert type="SevenHDEventTime">StartTime</convert>
+    <convert type="SevenHDClockToText">Default</convert>
+  </widget>
+  <eLabel backgroundColor="SevenBackground" font="Regular;24" halign="center" noWrap="1" position="502,542" size="16,36" text="-" transparent="1" valign="center" zPosition="1" foregroundColor="SevenFont1" />
+  <widget backgroundColor="SevenBackground" font="Regular;24" halign="left" noWrap="1" position="518,542" render="Label" size="76,36" source="session.Event_Now" transparent="1" valign="center" zPosition="1" foregroundColor="SevenFont1">
+    <convert type="SevenHDEventTime">EndTime</convert>
+    <convert type="SevenHDClockToText">Default</convert>
+  </widget>
+  <widget font="Regular;48" halign="center" valign="center" noWrap="1" position="604,528" render="SevenHDRunningText" options="movetype=running,startpoint=0,startdelay=2000,wrap=0,always=0,repeat=2,oneshot=1" size="344,64" source="session.Event_Now" backgroundColor="SevenBackground" transparent="1" zPosition="1" foregroundColor="SevenFont1">
+    <convert type="SevenHDEventName">Name</convert>
+  </widget>
+  <widget backgroundColor="SevenBackground" foregroundColor="SevenFont2" font="Regular2; 22" halign="right" noWrap="1" position="430,614" render="Label" size="72,36" source="session.Event_Next" transparent="1" valign="center" zPosition="1">
+    <convert type="SevenHDEventTime">StartTime</convert>
+    <convert type="SevenHDClockToText">Default</convert>
+  </widget>
+  <eLabel backgroundColor="SevenBackground" foregroundColor="SevenFont2" font="Regular2;22" halign="center" noWrap="1" position="502,614" size="16,36" text="-" transparent="1" valign="center" zPosition="1" />
+  <widget backgroundColor="SevenBackground" font="Regular2; 22" foregroundColor="SevenFont2" halign="left" noWrap="1" position="518,614" render="Label" size="72,36" source="session.Event_Next" transparent="1" valign="center" zPosition="1">
+    <convert type="SevenHDEventTime">EndTime</convert>
+    <convert type="SevenHDClockToText">Default</convert>
+  </widget>
+  <widget font="Regular2;36" halign="center" valign="center" noWrap="1" position="604,608" render="SevenHDRunningText" options="movetype=running,startpoint=0,startdelay=2000,wrap=0,always=0,repeat=2,oneshot=1" size="344,48" source="session.Event_Next" backgroundColor="SevenBackground" transparent="1" zPosition="1" foregroundColor="SevenFont2">
+    <convert type="SevenHDEventName">Name</convert>
+  </widget>
+  <widget alphatest="blend" position="20,526" render="SevenHDXPicon" size="400,170" source="session.CurrentService" transparent="1" zPosition="4">
+    <convert type="ServiceName">Reference</convert>
+  </widget>
+  <widget source="session.CurrentService" render="Label" zPosition="3" position="450,671" size="50,22" font="Regular; 19" halign="right" backgroundColor="SevenBackground" foregroundColor="SevenFont1" transparent="1">
+    <convert type="SevenHDServiceInfo">VideoWidth</convert>
+  </widget>
+  <eLabel text="x" position="500,671" size="15,22" zPosition="3" font="Regular; 19" halign="center" backgroundColor="SevenBackground" foregroundColor="SevenFont1" transparent="1" />
+  <widget source="session.CurrentService" render="Label" zPosition="3" position="515,671" size="62,22" font="Regular; 19" halign="left" backgroundColor="SevenBackground" foregroundColor="SevenFont1" transparent="1">
+    <convert type="SevenHDServiceInfo">VideoHeight</convert>
+  </widget>
+  <widget alphatest="blend" pixmap="SevenHD/buttons/ico_format_on.png" position="638,666" render="Pixmap" size="32,32" source="session.CurrentService" zPosition="2">
+    <convert type="SevenHDServiceInfo">IsWidescreen</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.TunerInfo" render="Pixmap" pixmap="SevenHD/buttons/c_on.png" position="997,666" zPosition="2" size="32,32" backgroundColor="SevenBackground" alphatest="blend" valign="center">
+    <convert type="TunerInfo">TunerUseMask</convert>
+    <convert type="ValueBitTest">4</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.TunerInfo" render="Pixmap" pixmap="SevenHD/buttons/b_on.png" position="962,666" zPosition="2" size="32,32" backgroundColor="SevenBackground" alphatest="blend" valign="center">
+    <convert type="TunerInfo">TunerUseMask</convert>
+    <convert type="ValueBitTest">2</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.TunerInfo" render="Pixmap" pixmap="SevenHD/buttons/a_on.png" position="927,666" zPosition="2" size="32,32" backgroundColor="SevenBackground" alphatest="blend" valign="center">
+    <convert type="TunerInfo">TunerUseMask</convert>
+    <convert type="ValueBitTest">1</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.TunerInfo" render="Pixmap" pixmap="SevenHD/buttons/d_on.png" position="1032,666" zPosition="2" size="32,32" backgroundColor="SevenBackground" alphatest="blend" valign="center">
+    <convert type="TunerInfo">TunerUseMask</convert>
+    <convert type="ValueBitTest">8</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <ePixmap pixmap="SevenHD/buttons/a_off.png" position="927,666" size="32,32" zPosition="1" alphatest="blend" />
+  <ePixmap pixmap="SevenHD/buttons/b_off.png" position="962,666" size="32,32" zPosition="1" alphatest="blend" />
+  <ePixmap pixmap="SevenHD/buttons/c_off.png" position="997,666" size="32,32" zPosition="1" alphatest="blend" />
+  <ePixmap pixmap="SevenHD/buttons/d_off.png" position="1032,666" size="32,32" zPosition="1" alphatest="blend" />
+  <ePixmap alphatest="blend" pixmap="SevenHD/buttons/ico_subtitle_off.png" position="872,666" size="32,32" zPosition="1" />
+  <widget alphatest="blend" pixmap="SevenHD/buttons/ico_subtitle_on.png" position="872,666" render="Pixmap" size="32,32" source="session.CurrentService" zPosition="5">
+    <convert type="SevenHDServiceInfo">SubtitlesAvailable</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <ePixmap alphatest="blend" pixmap="SevenHD/buttons/ico_format_off.png" position="638,666" size="32,32" zPosition="1" />
+  <widget alphatest="blend" pixmap="SevenHD/buttons/ico_hd_on.png" position="603,666" render="Pixmap" size="32,32" source="session.CurrentService" zPosition="2">
+    <convert type="SevenHDServiceInfo">IsHD</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <ePixmap alphatest="blend" pixmap="SevenHD/buttons/ico_hd_off.png" position="603,666" size="32,32" zPosition="1" />
+  <widget alphatest="blend" pixmap="SevenHD/buttons/ico_dolby_on.png" position="673,666" render="Pixmap" size="32,32" source="session.CurrentService" zPosition="2">
+    <convert type="SevenHDServiceInfo">IsMultichannel</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <ePixmap alphatest="blend" pixmap="SevenHD/buttons/ico_dolby_off.png" position="673,666" size="32,32" zPosition="1" />
+  <ePixmap alphatest="blend" pixmap="SevenHD/buttons/ico_sub_off.png" position="763,666" size="32,32" zPosition="1" />
+  <widget source="session.CurrentService" render="Pixmap" pixmap="SevenHD/buttons/ico_sub_on.png" position="763,666" size="32,32" zPosition="2" alphatest="blend">
+    <convert type="SevenHDServiceInfo">SubservicesAvailable</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <ePixmap alphatest="blend" pixmap="SevenHD/buttons/ico_txt_off.png" position="798,666" size="32,32" zPosition="1" />
+  <widget alphatest="blend" pixmap="SevenHD/buttons/ico_txt_on.png" position="798,666" render="Pixmap" size="32,32" source="session.CurrentService" zPosition="5">
+    <convert type="SevenHDServiceInfo">HasTelext</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <ePixmap alphatest="blend" pixmap="SevenHD/buttons/ico_hbbtv_off.png" position="708,666" size="32,32" zPosition="1" />
+  <widget alphatest="blend" pixmap="SevenHD/buttons/ico_hbbtv_on.png" position="708,666" render="Pixmap" size="32,32" source="session.CurrentService" zPosition="5">
+    <convert type="SevenHDServiceInfo">HasHBBTV</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <ePixmap alphatest="blend" pixmap="SevenHD/buttons/ico_crypt_off.png" position="837,666" size="32,32" zPosition="1" />
+  <widget alphatest="blend" pixmap="SevenHD/buttons/ico_crypt_on.png" position="837,666" render="Pixmap" size="32,32" source="session.CurrentService" zPosition="5">
+    <convert type="SevenHDServiceInfo">IsCrypted</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget backgroundColor="SevenBackground" font="Regular; 22" halign="right" position="958,542" render="Label" size="107,36" source="session.Event_Now" transparent="1" valign="center" zPosition="1">
+    <convert type="SevenHDEventTime">Remaining</convert>
+    <convert type="SevenHDRemainingToText">InMinutes</convert>
+  </widget>
+  <widget backgroundColor="SevenBackground" font="Regular2; 22" foregroundColor="SevenFont2" valign="center" halign="right" position="958,614" render="Label" size="107,35" source="session.Event_Next" transparent="1" zPosition="1">
+    <convert type="SevenHDEventTime">Duration</convert>
+    <convert type="SevenHDClockToText">InMinutes</convert>
+  </widget>
+
+
+<eLabel backgroundColor="SevenBackgroundRight" position="14,2" size="1250,40" />
+  <eLabel backgroundColor="SevenBorder" position="14,40" size="1250,2" zPosition="2" />
+  <eLabel backgroundColor="SevenBorder" position="14,1" size="1250,2" zPosition="2" />
+  <eLabel backgroundColor="SevenBorder" position="14,1" size="2,41" zPosition="2" />
+  <eLabel backgroundColor="SevenBorder" position="1262,1" size="2,41" zPosition="2" />
+  <eLabel backgroundColor="SevenBackground" position="14,47" size="620,420" />
+  <eLabel backgroundColor="SevenBorder" position="14,465" size="621,2" zPosition="2" />
+  <eLabel backgroundColor="SevenBorder" position="14,45" size="621,2" zPosition="2" />
+  <eLabel backgroundColor="SevenBorder" position="14,45" size="2,420" zPosition="2" />
+  <eLabel backgroundColor="SevenBorder" position="1262,45" size="2,420" zPosition="2" />
+  <eLabel backgroundColor="SevenLine" position="633,45" size="2,420" zPosition="2" />
+  <eLabel backgroundColor="SevenLine" position="643,45" size="2,420" zPosition="2" />
+  <widget backgroundColor="SevenBackground" font="Regular; 30" halign="center" noWrap="1" position="37,50" foregroundColor="SevenFont1" render="Label" size="578,38" source="session.Event_Now" transparent="1" zPosition="1" valign="bottom">
+    <convert type="SevenHDEventName">Name</convert>
+  </widget>
+  <widget backgroundColor="SevenBackground" font="Regular; 20" foregroundColor="SevenFont1" halign="center" position="37,93" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,wrap=1,always=0,repeat=2,oneshot=1" size="578,364" source="session.Event_Now" zPosition="1" transparent="1">
+    <convert type="SevenHDEventName">ExtendedDescription</convert>
+  </widget>
+  <widget backgroundColor="SevenBackground" font="Regular2; 30" foregroundColor="SevenFont2" halign="center" position="666,50" render="Label" size="578,38" source="session.Event_Next" transparent="1" zPosition="1" valign="bottom">
+    <convert type="SevenHDEventName">Name</convert>
+  </widget>
+  <widget source="session.CurrentService" position="37,10" size="500,22" font="Regular2;12" render="Label" halign="left" valign="bottom" foregroundColor="SevenFont2" backgroundColor="SevenBackground" transparent="1" zPosition="1">
+    <convert type="SevenHDMyCaidDisplay">Default</convert>
+  </widget>
+  <eLabel text="SysTemp:" position="400,10" size="70,22" font="Regular2;12" halign="left" valign="bottom" foregroundColor="SevenFont2" backgroundColor="SevenBackground" noWrap="1" transparent="1" zPosition="2" />
+  <widget source="global.CurrentTime" render="SevenHDSYSTemp" position="465,10" size="60,22" font="Regular2;12" halign="left" valign="bottom" foregroundColor="SevenFont2" backgroundColor="SevenBackground" noWrap="1" transparent="1" zPosition="3" />
+  <widget source="session.CurrentService" render="Label" position="535,10" size="100,22" font="Regular2;12" halign="left" valign="bottom" foregroundColor="SevenFont2" backgroundColor="SevenBackground" noWrap="1" transparent="1" zPosition="4">
+    <convert type="SevenHDCpuUsage">CPU: $0</convert>
+  </widget>
+  <widget source="session.CurrentService" render="Label" position="620,10" size="210,22" font="Regular2;12" halign="left" valign="bottom" foregroundColor="SevenFont2" backgroundColor="SevenBackground" noWrap="1" transparent="1" zPosition="5">
+    <convert type="SevenHDLayoutInfo">FleshInfo,Short</convert>
+  </widget>
+  <widget source="session.CurrentService" render="Label" position="779,10" size="200,22" font="Regular2;12" halign="left" valign="bottom" foregroundColor="SevenFont2" backgroundColor="SevenBackground" noWrap="1" transparent="1" zPosition="6">
+    <convert type="SevenHDLayoutInfo">MemTotal,Short</convert>
+  </widget>
+  <widget source="session.CurrentService" render="Label" position="886,10" size="350,22" font="Regular2;12" halign="right" valign="bottom" foregroundColor="SevenFont2" backgroundColor="SevenBackground" noWrap="1" transparent="1" zPosition="7">
+    <convert type="SevenHDLayoutInfo">HddInfo,Full</convert>
+  </widget>
+  <widget source="session.CurrentService" position="37,10" size="500,22" font="Regular2;12" render="Label" halign="left" valign="bottom" foregroundColor="SevenFont2" backgroundColor="SevenBackground" transparent="1" zPosition="1">
+    <convert type="SevenHDMyCaidDisplay">Default</convert>
+  </widget>
+  <eLabel text="SysTemp:" position="400,10" size="70,22" font="Regular2;12" halign="left" valign="bottom" foregroundColor="SevenFont2" backgroundColor="SevenBackground" noWrap="1" transparent="1" zPosition="2" />
+  <widget source="global.CurrentTime" render="SevenHDSYSTemp" position="465,10" size="60,22" font="Regular2;12" halign="left" valign="bottom" foregroundColor="SevenFont2" backgroundColor="SevenBackground" noWrap="1" transparent="1" zPosition="3" />
+  <widget source="session.CurrentService" render="Label" position="535,10" size="100,22" font="Regular2;12" halign="left" valign="bottom" foregroundColor="SevenFont2" backgroundColor="SevenBackground" noWrap="1" transparent="1" zPosition="4">
+    <convert type="SevenHDCpuUsage">CPU: $0</convert>
+  </widget>
+  <widget source="session.CurrentService" render="Label" position="620,10" size="210,22" font="Regular2;12" halign="left" valign="bottom" foregroundColor="SevenFont2" backgroundColor="SevenBackground" noWrap="1" transparent="1" zPosition="5">
+    <convert type="SevenHDLayoutInfo">FleshInfo,Short</convert>
+  </widget>
+  <widget source="session.CurrentService" render="Label" position="779,10" size="200,22" font="Regular2;12" halign="left" valign="bottom" foregroundColor="SevenFont2" backgroundColor="SevenBackground" noWrap="1" transparent="1" zPosition="6">
+    <convert type="SevenHDLayoutInfo">MemTotal,Short</convert>
+  </widget>
+  <widget source="session.CurrentService" render="Label" position="886,10" size="350,22" font="Regular2;12" halign="right" valign="bottom" foregroundColor="SevenFont2" backgroundColor="SevenBackground" noWrap="1" transparent="1" zPosition="7">
+    <convert type="SevenHDLayoutInfo">HddInfo,Full</convert>
+  </widget>
+  <widget backgroundColor="SevenBackground" font="Regular; 20" foregroundColor="SevenFont1" halign="center" position="666,93" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,wrap=1,always=0,repeat=2,oneshot=1" size="578,364" source="session.Event_Next" zPosition="1" transparent="1">
+    <convert type="SevenHDEventName">ExtendedDescription</convert>
+  </widget>
+  <eLabel backgroundColor="SevenBorder" position="643,45" size="621,2" zPosition="2" />
+  <eLabel backgroundColor="SevenBorder" position="643,465" size="621,2" zPosition="2" />
+  <eLabel backgroundColor="SevenBackgroundRight" position="643,47" size="620,420" />
+  <widget font="Regular2; 40" foregroundColor="SevenFont1" halign="left" noWrap="1" position="15,470" render="Label" size="1020,50" source="session.CurrentService" transparent="1" valign="center" zPosition="1" alphatest="blend">
+  <convert type="ServiceName">Name</convert>
+</widget> 
+</screen>
+  <screen name="template_menu_ibx3">
+    <eLabel backgroundColor="SevenBackground" position="1076,534" size="186,168" />
+  <eLabel backgroundColor="SevenBorder" position="1075,533" size="2,129" zPosition="2" />
+  <eLabel backgroundColor="SevenBorder" position="14,533" size="2,171" zPosition="2" />
+  <eLabel backgroundColor="SevenBorder" position="14,702" size="1250,2" zPosition="2" />
+  <eLabel backgroundColor="SevenBorder" position="248,660" size="827,2" zPosition="2" />
+  <eLabel backgroundColor="SevenLine" position="273,605" size="793,2" zPosition="2" />
+<eLabel backgroundColor="SevenBorder" position="14,533" size="1250,2" zPosition="2" />
+<eLabel backgroundColor="SevenBorder" position="1262,533" size="2,171" zPosition="2" />
+<eLabel backgroundColor="SevenBorder" position="248,533" size="2,129" zPosition="2" />
+<eLabel backgroundColor="SevenBackgroundRight" position="250,533" size="825,129" />
+<eLabel backgroundColor="SevenBackground" position="248,659" size="828,44" />
+<eLabel backgroundColor="SevenBackground" position="16,534" size="232,168" />
+  <widget position="273,603" render="Progress" size="793,6" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress">
+    <convert type="SevenHDEventTime">Progress</convert>
+  </widget>
+  <widget alphatest="blend" pixmap="SevenHD/buttons/ico_rec_on.png" position="1230,499" render="Pixmap" size="32,32" source="session.RecordState" zPosition="5">
+    <convert type="ConditionalShowHide">Blink</convert>
+  </widget>
+  <widget backgroundColor="SevenBackground" font="Regular;24" halign="right" noWrap="1" position="256,550" render="Label" size="76,36" source="session.Event_Now" transparent="1" valign="center" zPosition="1" foregroundColor="SevenFont1">
+    <convert type="SevenHDEventTime">StartTime</convert>
+    <convert type="SevenHDClockToText">Default</convert>
+  </widget>
+  <eLabel backgroundColor="SevenBackground" font="Regular;24" halign="center" noWrap="1" position="332,550" size="16,36" text="-" transparent="1" valign="center" zPosition="1" foregroundColor="SevenFont1" />
+  <widget backgroundColor="SevenBackground" font="Regular;24" halign="left" noWrap="1" position="348,550" render="Label" size="76,36" source="session.Event_Now" transparent="1" valign="center" zPosition="1" foregroundColor="SevenFont1">
+    <convert type="SevenHDEventTime">EndTime</convert>
+    <convert type="SevenHDClockToText">Default</convert>
+  </widget>
+  <widget font="Regular;48" halign="center" valign="center" noWrap="1" position="434,536" render="SevenHDRunningText" options="movetype=running,startpoint=0,startdelay=2000,wrap=0,always=0,repeat=2,oneshot=1" size="515,64" source="session.Event_Now" backgroundColor="SevenBackground" transparent="1" zPosition="1" foregroundColor="SevenFont1">
+    <convert type="SevenHDEventName">Name</convert>
+  </widget>
+  <widget backgroundColor="SevenBackground" foregroundColor="SevenFont2" font="Regular2; 22" halign="right" noWrap="1" position="260,617" render="Label" size="72,36" source="session.Event_Next" transparent="1" valign="center" zPosition="1">
+    <convert type="SevenHDEventTime">StartTime</convert>
+    <convert type="SevenHDClockToText">Default</convert>
+  </widget>
+  <eLabel backgroundColor="SevenBackground" foregroundColor="SevenFont2" font="Regular2;22" halign="center" noWrap="1" position="332,617" size="16,36" text="-" transparent="1" valign="center" zPosition="1" />
+  <widget backgroundColor="SevenBackground" font="Regular2; 22" foregroundColor="SevenFont2" halign="left" noWrap="1" position="348,617" render="Label" size="72,36" source="session.Event_Next" transparent="1" valign="center" zPosition="1">
+    <convert type="SevenHDEventTime">EndTime</convert>
+    <convert type="SevenHDClockToText">Default</convert>
+  </widget>
+  <widget font="Regular2;36" halign="center" valign="center" noWrap="1" position="434,611" render="SevenHDRunningText" options="movetype=running,startpoint=0,startdelay=2000,wrap=0,always=0,repeat=2,oneshot=1" size="515,48" source="session.Event_Next" backgroundColor="SevenBackground" transparent="1" zPosition="1" foregroundColor="SevenFont2">
+    <convert type="SevenHDEventName">Name</convert>
+  </widget>
+  <widget alphatest="blend" position="22,552" render="SevenHDXPicon" size="220,132" source="session.CurrentService" transparent="1" zPosition="4">
+    <convert type="ServiceName">Reference</convert>
+  </widget>
+  <widget source="session.CurrentService" render="Label" zPosition="3" position="433,671" size="50,22" font="Regular; 19" halign="right" backgroundColor="SevenBackground" foregroundColor="SevenFont1" transparent="1">
+    <convert type="SevenHDServiceInfo">VideoWidth</convert>
+  </widget>
+  <eLabel text="x" position="483,671" size="15,22" zPosition="3" font="Regular; 19" halign="center" backgroundColor="SevenBackground" foregroundColor="SevenFont1" transparent="1" />
+  <widget source="session.CurrentService" render="Label" zPosition="3" position="498,671" size="62,22" font="Regular; 19" halign="left" backgroundColor="SevenBackground" foregroundColor="SevenFont1" transparent="1">
+    <convert type="SevenHDServiceInfo">VideoHeight</convert>
+  </widget>
+  <widget alphatest="blend" pixmap="SevenHD/buttons/ico_format_on.png" position="300,666" render="Pixmap" size="32,32" source="session.CurrentService" zPosition="2">
+    <convert type="SevenHDServiceInfo">IsWidescreen</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.TunerInfo" render="Pixmap" pixmap="SevenHD/buttons/c_on.png" position="993,666" zPosition="2" size="32,32" backgroundColor="SevenBackground" alphatest="blend" valign="center">
+    <convert type="TunerInfo">TunerUseMask</convert>
+    <convert type="ValueBitTest">4</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.TunerInfo" render="Pixmap" pixmap="SevenHD/buttons/b_on.png" position="953,666" zPosition="2" size="32,32" backgroundColor="SevenBackground" alphatest="blend" valign="center">
+    <convert type="TunerInfo">TunerUseMask</convert>
+    <convert type="ValueBitTest">2</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.TunerInfo" render="Pixmap" pixmap="SevenHD/buttons/a_on.png" position="913,666" zPosition="2" size="32,32" backgroundColor="SevenBackground" alphatest="blend" valign="center">
+    <convert type="TunerInfo">TunerUseMask</convert>
+    <convert type="ValueBitTest">1</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.TunerInfo" render="Pixmap" pixmap="SevenHD/buttons/d_on.png" position="1034,666" zPosition="2" size="32,32" backgroundColor="SevenBackground" alphatest="blend" valign="center">
+    <convert type="TunerInfo">TunerUseMask</convert>
+    <convert type="ValueBitTest">8</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <ePixmap pixmap="SevenHD/buttons/a_off.png" position="913,666" size="32,32" zPosition="1" alphatest="blend" />
+  <ePixmap pixmap="SevenHD/buttons/b_off.png" position="953,666" size="32,32" zPosition="1" alphatest="blend" />
+  <ePixmap pixmap="SevenHD/buttons/c_off.png" position="993,666" size="32,32" zPosition="1" alphatest="blend" />
+  <ePixmap pixmap="SevenHD/buttons/d_off.png" position="1034,666" size="32,32" zPosition="1" alphatest="blend" />
+  <ePixmap alphatest="blend" pixmap="SevenHD/buttons/ico_subtitle_off.png" position="744,666" size="32,32" zPosition="1" />
+  <widget alphatest="blend" pixmap="SevenHD/buttons/ico_subtitle_on.png" position="744,666" render="Pixmap" size="32,32" source="session.CurrentService" zPosition="5">
+    <convert type="SevenHDServiceInfo">SubtitlesAvailable</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <ePixmap alphatest="blend" pixmap="SevenHD/buttons/ico_format_off.png" position="300,666" size="32,32" zPosition="1" />
+  <widget alphatest="blend" pixmap="SevenHD/buttons/ico_hd_on.png" position="260,666" render="Pixmap" size="32,32" source="session.CurrentService" zPosition="2">
+    <convert type="SevenHDServiceInfo">IsHD</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <ePixmap alphatest="blend" pixmap="SevenHD/buttons/ico_hd_off.png" position="260,666" size="32,32" zPosition="1" />
+  <widget alphatest="blend" pixmap="SevenHD/buttons/ico_dolby_on.png" position="348,666" render="Pixmap" size="32,32" source="session.CurrentService" zPosition="2">
+    <convert type="SevenHDServiceInfo">IsMultichannel</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <ePixmap alphatest="blend" pixmap="SevenHD/buttons/ico_dolby_off.png" position="348,666" size="32,32" zPosition="1" />
+  <ePixmap alphatest="blend" pixmap="SevenHD/buttons/ico_sub_off.png" position="564,666" size="32,32" zPosition="1" />
+  <widget source="session.CurrentService" render="Pixmap" pixmap="SevenHD/buttons/ico_sub_on.png" position="564,666" size="32,32" zPosition="2" alphatest="blend">
+    <convert type="SevenHDServiceInfo">SubservicesAvailable</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <ePixmap alphatest="blend" pixmap="SevenHD/buttons/ico_txt_off.png" position="624,666" size="32,32" zPosition="1" />
+  <widget alphatest="blend" pixmap="SevenHD/buttons/ico_txt_on.png" position="624,666" render="Pixmap" size="32,32" source="session.CurrentService" zPosition="5">
+    <convert type="SevenHDServiceInfo">HasTelext</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <ePixmap alphatest="blend" pixmap="SevenHD/buttons/ico_hbbtv_off.png" position="388,666" size="32,32" zPosition="1" />
+  <widget alphatest="blend" pixmap="SevenHD/buttons/ico_hbbtv_on.png" position="388,666" render="Pixmap" size="32,32" source="session.CurrentService" zPosition="5">
+    <convert type="SevenHDServiceInfo">HasHBBTV</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <ePixmap alphatest="blend" pixmap="SevenHD/buttons/ico_crypt_off.png" position="684,666" size="32,32" zPosition="1" />
+  <widget alphatest="blend" pixmap="SevenHD/buttons/ico_crypt_on.png" position="684,666" render="Pixmap" size="32,32" source="session.CurrentService" zPosition="5">
+    <convert type="SevenHDServiceInfo">IsCrypted</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.CurrentService" render="Label" position="795,671" size="89,22" backgroundColor="SevenBackground" transparent="1" zPosition="3" foregroundColor="SevenFont1" font="Regular; 19" valign="center" halign="left">
+    <convert type="SevenHDExtraInfo">OrbitalPositionOrTunerSystem</convert>
+  </widget>
+  <widget source="session.FrontendStatus" render="Label" position="832,671" size="70,21" font="Regular; 19" transparent="1" foregroundColor="SevenFont1" backgroundColor="SevenBackground" zPosition="3" halign="right" valign="center">
+    <convert type="FrontendInfo">SNR</convert>
+  </widget>
+  <widget backgroundColor="SevenBackground" font="Regular; 22" halign="right" position="958,550" render="Label" size="107,36" source="session.Event_Now" transparent="1" valign="center" zPosition="1">
+    <convert type="SevenHDEventTime">Remaining</convert>
+    <convert type="SevenHDRemainingToText">InMinutes</convert>
+  </widget>
+  <widget backgroundColor="SevenBackground" font="Regular2; 22" foregroundColor="SevenFont2" valign="center" halign="right" position="958,617" render="Label" size="107,35" source="session.Event_Next" transparent="1" zPosition="1">
+    <convert type="SevenHDEventTime">Duration</convert>
+    <convert type="SevenHDClockToText">InMinutes</convert>
+  </widget>
+</screen>
+  <screen name="template_menu_sibx3">
+  <eLabel backgroundColor="SevenBackground" position="1076,534" size="186,168" />
+  <eLabel backgroundColor="SevenBorder" position="1075,533" size="2,129" zPosition="2" />
+  <eLabel backgroundColor="SevenBorder" position="14,533" size="2,171" zPosition="2" />
+  <eLabel backgroundColor="SevenBorder" position="14,702" size="1250,2" zPosition="2" />
+  <eLabel backgroundColor="SevenBorder" position="248,660" size="827,2" zPosition="2" />
+  <eLabel backgroundColor="SevenLine" position="273,605" size="793,2" zPosition="2" />
+<eLabel backgroundColor="SevenBorder" position="14,533" size="1250,2" zPosition="2" />
+<eLabel backgroundColor="SevenBorder" position="1262,533" size="2,171" zPosition="2" />
+<eLabel backgroundColor="SevenBorder" position="248,533" size="2,129" zPosition="2" />
+<eLabel backgroundColor="SevenBackgroundRight" position="250,533" size="825,129" />
+<eLabel backgroundColor="SevenBackground" position="248,659" size="828,44" />
+<eLabel backgroundColor="SevenBackground" position="16,534" size="232,168" />
+  <widget position="273,603" render="Progress" size="793,6" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress">
+    <convert type="SevenHDEventTime">Progress</convert>
+  </widget>
+  <widget alphatest="blend" pixmap="SevenHD/buttons/ico_rec_on.png" position="1230,499" render="Pixmap" size="32,32" source="session.RecordState" zPosition="5">
+    <convert type="ConditionalShowHide">Blink</convert>
+  </widget>
+  <widget backgroundColor="SevenBackground" font="Regular;24" halign="right" noWrap="1" position="256,550" render="Label" size="76,36" source="session.Event_Now" transparent="1" valign="center" zPosition="1" foregroundColor="SevenFont1">
+    <convert type="SevenHDEventTime">StartTime</convert>
+    <convert type="SevenHDClockToText">Default</convert>
+  </widget>
+  <eLabel backgroundColor="SevenBackground" font="Regular;24" halign="center" noWrap="1" position="332,550" size="16,36" text="-" transparent="1" valign="center" zPosition="1" foregroundColor="SevenFont1" />
+  <widget backgroundColor="SevenBackground" font="Regular;24" halign="left" noWrap="1" position="348,550" render="Label" size="76,36" source="session.Event_Now" transparent="1" valign="center" zPosition="1" foregroundColor="SevenFont1">
+    <convert type="SevenHDEventTime">EndTime</convert>
+    <convert type="SevenHDClockToText">Default</convert>
+  </widget>
+  <widget font="Regular;48" halign="center" valign="center" noWrap="1" position="434,536" render="SevenHDRunningText" options="movetype=running,startpoint=0,startdelay=2000,wrap=0,always=0,repeat=2,oneshot=1" size="515,64" source="session.Event_Now" backgroundColor="SevenBackground" transparent="1" zPosition="1" foregroundColor="SevenFont1">
+    <convert type="SevenHDEventName">Name</convert>
+  </widget>
+  <widget backgroundColor="SevenBackground" foregroundColor="SevenFont2" font="Regular2; 22" halign="right" noWrap="1" position="260,617" render="Label" size="72,36" source="session.Event_Next" transparent="1" valign="center" zPosition="1">
+    <convert type="SevenHDEventTime">StartTime</convert>
+    <convert type="SevenHDClockToText">Default</convert>
+  </widget>
+  <eLabel backgroundColor="SevenBackground" foregroundColor="SevenFont2" font="Regular2;22" halign="center" noWrap="1" position="332,617" size="16,36" text="-" transparent="1" valign="center" zPosition="1" />
+  <widget backgroundColor="SevenBackground" font="Regular2; 22" foregroundColor="SevenFont2" halign="left" noWrap="1" position="348,617" render="Label" size="72,36" source="session.Event_Next" transparent="1" valign="center" zPosition="1">
+    <convert type="SevenHDEventTime">EndTime</convert>
+    <convert type="SevenHDClockToText">Default</convert>
+  </widget>
+  <widget font="Regular2;36" halign="center" valign="center" noWrap="1" position="434,611" render="SevenHDRunningText" options="movetype=running,startpoint=0,startdelay=2000,wrap=0,always=0,repeat=2,oneshot=1" size="515,48" source="session.Event_Next" backgroundColor="SevenBackground" transparent="1" zPosition="1" foregroundColor="SevenFont2">
+    <convert type="SevenHDEventName">Name</convert>
+  </widget>
+  <widget alphatest="blend" position="22,552" render="SevenHDXPicon" size="220,132" source="session.CurrentService" transparent="1" zPosition="4">
+    <convert type="ServiceName">Reference</convert>
+  </widget>
+  <widget source="session.CurrentService" render="Label" zPosition="3" position="433,671" size="50,22" font="Regular; 19" halign="right" backgroundColor="SevenBackground" foregroundColor="SevenFont1" transparent="1">
+    <convert type="SevenHDServiceInfo">VideoWidth</convert>
+  </widget>
+  <eLabel text="x" position="483,671" size="15,22" zPosition="3" font="Regular; 19" halign="center" backgroundColor="SevenBackground" foregroundColor="SevenFont1" transparent="1" />
+  <widget source="session.CurrentService" render="Label" zPosition="3" position="498,671" size="62,22" font="Regular; 19" halign="left" backgroundColor="SevenBackground" foregroundColor="SevenFont1" transparent="1">
+    <convert type="SevenHDServiceInfo">VideoHeight</convert>
+  </widget>
+  <widget alphatest="blend" pixmap="SevenHD/buttons/ico_format_on.png" position="300,666" render="Pixmap" size="32,32" source="session.CurrentService" zPosition="2">
+    <convert type="SevenHDServiceInfo">IsWidescreen</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.TunerInfo" render="Pixmap" pixmap="SevenHD/buttons/c_on.png" position="993,666" zPosition="2" size="32,32" backgroundColor="SevenBackground" alphatest="blend" valign="center">
+    <convert type="TunerInfo">TunerUseMask</convert>
+    <convert type="ValueBitTest">4</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.TunerInfo" render="Pixmap" pixmap="SevenHD/buttons/b_on.png" position="953,666" zPosition="2" size="32,32" backgroundColor="SevenBackground" alphatest="blend" valign="center">
+    <convert type="TunerInfo">TunerUseMask</convert>
+    <convert type="ValueBitTest">2</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.TunerInfo" render="Pixmap" pixmap="SevenHD/buttons/a_on.png" position="913,666" zPosition="2" size="32,32" backgroundColor="SevenBackground" alphatest="blend" valign="center">
+    <convert type="TunerInfo">TunerUseMask</convert>
+    <convert type="ValueBitTest">1</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.TunerInfo" render="Pixmap" pixmap="SevenHD/buttons/d_on.png" position="1034,666" zPosition="2" size="32,32" backgroundColor="SevenBackground" alphatest="blend" valign="center">
+    <convert type="TunerInfo">TunerUseMask</convert>
+    <convert type="ValueBitTest">8</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <ePixmap pixmap="SevenHD/buttons/a_off.png" position="913,666" size="32,32" zPosition="1" alphatest="blend" />
+  <ePixmap pixmap="SevenHD/buttons/b_off.png" position="953,666" size="32,32" zPosition="1" alphatest="blend" />
+  <ePixmap pixmap="SevenHD/buttons/c_off.png" position="993,666" size="32,32" zPosition="1" alphatest="blend" />
+  <ePixmap pixmap="SevenHD/buttons/d_off.png" position="1034,666" size="32,32" zPosition="1" alphatest="blend" />
+  <ePixmap alphatest="blend" pixmap="SevenHD/buttons/ico_subtitle_off.png" position="744,666" size="32,32" zPosition="1" />
+  <widget alphatest="blend" pixmap="SevenHD/buttons/ico_subtitle_on.png" position="744,666" render="Pixmap" size="32,32" source="session.CurrentService" zPosition="5">
+    <convert type="SevenHDServiceInfo">SubtitlesAvailable</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <ePixmap alphatest="blend" pixmap="SevenHD/buttons/ico_format_off.png" position="300,666" size="32,32" zPosition="1" />
+  <widget alphatest="blend" pixmap="SevenHD/buttons/ico_hd_on.png" position="260,666" render="Pixmap" size="32,32" source="session.CurrentService" zPosition="2">
+    <convert type="SevenHDServiceInfo">IsHD</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <ePixmap alphatest="blend" pixmap="SevenHD/buttons/ico_hd_off.png" position="260,666" size="32,32" zPosition="1" />
+  <widget alphatest="blend" pixmap="SevenHD/buttons/ico_dolby_on.png" position="348,666" render="Pixmap" size="32,32" source="session.CurrentService" zPosition="2">
+    <convert type="SevenHDServiceInfo">IsMultichannel</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <ePixmap alphatest="blend" pixmap="SevenHD/buttons/ico_dolby_off.png" position="348,666" size="32,32" zPosition="1" />
+  <ePixmap alphatest="blend" pixmap="SevenHD/buttons/ico_sub_off.png" position="564,666" size="32,32" zPosition="1" />
+  <widget source="session.CurrentService" render="Pixmap" pixmap="SevenHD/buttons/ico_sub_on.png" position="564,666" size="32,32" zPosition="2" alphatest="blend">
+    <convert type="SevenHDServiceInfo">SubservicesAvailable</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <ePixmap alphatest="blend" pixmap="SevenHD/buttons/ico_txt_off.png" position="624,666" size="32,32" zPosition="1" />
+  <widget alphatest="blend" pixmap="SevenHD/buttons/ico_txt_on.png" position="624,666" render="Pixmap" size="32,32" source="session.CurrentService" zPosition="5">
+    <convert type="SevenHDServiceInfo">HasTelext</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <ePixmap alphatest="blend" pixmap="SevenHD/buttons/ico_hbbtv_off.png" position="388,666" size="32,32" zPosition="1" />
+  <widget alphatest="blend" pixmap="SevenHD/buttons/ico_hbbtv_on.png" position="388,666" render="Pixmap" size="32,32" source="session.CurrentService" zPosition="5">
+    <convert type="SevenHDServiceInfo">HasHBBTV</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <ePixmap alphatest="blend" pixmap="SevenHD/buttons/ico_crypt_off.png" position="684,666" size="32,32" zPosition="1" />
+  <widget alphatest="blend" pixmap="SevenHD/buttons/ico_crypt_on.png" position="684,666" render="Pixmap" size="32,32" source="session.CurrentService" zPosition="5">
+    <convert type="SevenHDServiceInfo">IsCrypted</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.CurrentService" render="Label" position="795,671" size="89,22" backgroundColor="SevenBackground" transparent="1" zPosition="3" foregroundColor="SevenFont1" font="Regular; 19" valign="center" halign="left">
+    <convert type="SevenHDExtraInfo">OrbitalPositionOrTunerSystem</convert>
+  </widget>
+  <widget source="session.FrontendStatus" render="Label" position="832,671" size="70,21" font="Regular; 19" transparent="1" foregroundColor="SevenFont1" backgroundColor="SevenBackground" zPosition="3" halign="right" valign="center">
+    <convert type="FrontendInfo">SNR</convert>
+  </widget>
+  <widget backgroundColor="SevenBackground" font="Regular; 22" halign="right" position="958,550" render="Label" size="107,36" source="session.Event_Now" transparent="1" valign="center" zPosition="1">
+    <convert type="SevenHDEventTime">Remaining</convert>
+    <convert type="SevenHDRemainingToText">InMinutes</convert>
+  </widget>
+  <widget backgroundColor="SevenBackground" font="Regular2; 22" foregroundColor="SevenFont2" valign="center" halign="right" position="958,617" render="Label" size="107,35" source="session.Event_Next" transparent="1" zPosition="1">
+    <convert type="SevenHDEventTime">Duration</convert>
+    <convert type="SevenHDClockToText">InMinutes</convert>
+  </widget>
+
+
+  <eLabel backgroundColor="SevenBackgroundRight" position="14,2" size="1250,40" />
+  <eLabel backgroundColor="SevenBorder" position="14,40" size="1250,2" zPosition="2" />
+  <eLabel backgroundColor="SevenBorder" position="14,1" size="1250,2" zPosition="2" />
+  <eLabel backgroundColor="SevenBorder" position="14,1" size="2,41" zPosition="2" />
+  <eLabel backgroundColor="SevenBorder" position="1262,1" size="2,41" zPosition="2" />
+  <eLabel backgroundColor="SevenBackground" position="14,45" size="1250,422" />
+  <eLabel backgroundColor="SevenBorder" position="14,465" size="1250,2" zPosition="2" />
+  <eLabel backgroundColor="SevenBorder" position="14,45" size="1250,2" zPosition="2" />
+  <eLabel backgroundColor="SevenBorder" position="14,45" size="2,422" zPosition="2" />
+  <eLabel backgroundColor="SevenBorder" position="1262,45" size="2,422" zPosition="2" />
+  <eLabel backgroundColor="SevenLine" position="37,265" size="1200,2" zPosition="2" />
+  <widget backgroundColor="SevenBackground" font="Regular; 30" halign="center" noWrap="1" position="37,53" foregroundColor="SevenFont1" render="Label" size="1200,38" source="session.Event_Now" transparent="1" zPosition="1" valign="bottom">
+    <convert type="SevenHDEventName">Name</convert>
+  </widget>
+  <widget backgroundColor="SevenBackground" font="Regular; 20" foregroundColor="SevenFont1" halign="center" position="37,98" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,wrap=1,always=0,repeat=2,oneshot=1" size="1200,160" source="session.Event_Now" zPosition="1" transparent="1">
+    <convert type="SevenHDEventName">ExtendedDescription</convert>
+  </widget>
+  <widget backgroundColor="SevenBackground" font="Regular2; 30" foregroundColor="SevenFont2" halign="center" position="37,271" render="Label" size="1200,38" source="session.Event_Next" transparent="1" zPosition="1" valign="bottom">
+    <convert type="SevenHDEventName">Name</convert>
+  </widget>
+  <widget source="global.CurrentTime" render="SevenHDSYSTemp" position="465,10" size="60,22" font="Regular2;12" halign="left" valign="bottom" foregroundColor="SevenFont2" backgroundColor="SevenBackground" noWrap="1" transparent="1" zPosition="3" />
+  <widget source="session.CurrentService" render="Label" position="535,10" size="100,22" font="Regular2;12" halign="left" valign="bottom" foregroundColor="SevenFont2" backgroundColor="SevenBackground" noWrap="1" transparent="1" zPosition="4">
+    <convert type="SevenHDCpuUsage">CPU: $0</convert>
+  </widget>
+  <widget source="session.CurrentService" render="Label" position="620,10" size="210,22" font="Regular2;12" halign="left" valign="bottom" foregroundColor="SevenFont2" backgroundColor="SevenBackground" noWrap="1" transparent="1" zPosition="5">
+    <convert type="SevenHDLayoutInfo">FleshInfo,Short</convert>
+  </widget>
+  <widget source="session.CurrentService" position="37,10" size="500,22" font="Regular2;12" render="Label" halign="left" valign="bottom" foregroundColor="SevenFont2" backgroundColor="SevenBackground" transparent="1" zPosition="1">
+    <convert type="SevenHDMyCaidDisplay">Default</convert>
+  </widget>
+  <eLabel text="SysTemp:" position="400,10" size="70,22" font="Regular2;12" halign="left" valign="bottom" foregroundColor="SevenFont2" backgroundColor="SevenBackground" noWrap="1" transparent="1" zPosition="2" />
+  <widget source="session.CurrentService" render="Label" position="620,10" size="210,22" font="Regular2;12" halign="left" valign="bottom" foregroundColor="SevenFont2" backgroundColor="SevenBackground" noWrap="1" transparent="1" zPosition="5">
+    <convert type="SevenHDLayoutInfo">FleshInfo,Short</convert>
+  </widget>
+  <widget source="session.CurrentService" render="Label" position="779,10" size="200,22" font="Regular2;12" halign="left" valign="bottom" foregroundColor="SevenFont2" backgroundColor="SevenBackground" noWrap="1" transparent="1" zPosition="6">
+    <convert type="SevenHDLayoutInfo">MemTotal,Short</convert>
+  </widget>
+  <widget source="session.CurrentService" render="Label" position="886,10" size="350,22" font="Regular2;12" halign="right" valign="bottom" foregroundColor="SevenFont2" backgroundColor="SevenBackground" noWrap="1" transparent="1" zPosition="7">
+    <convert type="SevenHDLayoutInfo">HddInfo,Full</convert>
+  </widget>
+  <widget backgroundColor="SevenBackground" font="Regular; 20" foregroundColor="SevenFont1" halign="center" position="37,316" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,wrap=1,always=0,repeat=2,oneshot=1" size="1200,132" source="session.Event_Next" zPosition="1" transparent="1">
+    <convert type="SevenHDEventName">ExtendedDescription</convert>
+  </widget>
+<widget font="Regular2; 40" foregroundColor="SevenFont1" halign="left" noWrap="1" position="15,472" render="Label" size="1020,60" source="session.CurrentService" transparent="1" valign="center" zPosition="1" alphatest="blend">
+  <convert type="ServiceName">Name</convert>
+</widget>
+</screen>
+  <screen name="template_menu_sibx3.1">
+    <eLabel backgroundColor="SevenBackground" position="1076,534" size="186,168" />
+  <eLabel backgroundColor="SevenBorder" position="1075,533" size="2,129" zPosition="2" />
+  <eLabel backgroundColor="SevenBorder" position="14,533" size="2,171" zPosition="2" />
+  <eLabel backgroundColor="SevenBorder" position="14,702" size="1250,2" zPosition="2" />
+  <eLabel backgroundColor="SevenBorder" position="248,660" size="827,2" zPosition="2" />
+  <eLabel backgroundColor="SevenLine" position="273,605" size="793,2" zPosition="2" />
+<eLabel backgroundColor="SevenBorder" position="14,533" size="1250,2" zPosition="2" />
+<eLabel backgroundColor="SevenBorder" position="1262,533" size="2,171" zPosition="2" />
+<eLabel backgroundColor="SevenBorder" position="248,533" size="2,129" zPosition="2" />
+<eLabel backgroundColor="SevenBackgroundRight" position="250,533" size="825,129" />
+<eLabel backgroundColor="SevenBackground" position="248,659" size="828,44" />
+<eLabel backgroundColor="SevenBackground" position="16,534" size="232,168" />
+  <widget position="273,603" render="Progress" size="793,6" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress">
+    <convert type="SevenHDEventTime">Progress</convert>
+  </widget>
+  <widget alphatest="blend" pixmap="SevenHD/buttons/ico_rec_on.png" position="1230,499" render="Pixmap" size="32,32" source="session.RecordState" zPosition="5">
+    <convert type="ConditionalShowHide">Blink</convert>
+  </widget>
+  <widget backgroundColor="SevenBackground" font="Regular;24" halign="right" noWrap="1" position="256,550" render="Label" size="76,36" source="session.Event_Now" transparent="1" valign="center" zPosition="1" foregroundColor="SevenFont1">
+    <convert type="SevenHDEventTime">StartTime</convert>
+    <convert type="SevenHDClockToText">Default</convert>
+  </widget>
+  <eLabel backgroundColor="SevenBackground" font="Regular;24" halign="center" noWrap="1" position="332,550" size="16,36" text="-" transparent="1" valign="center" zPosition="1" foregroundColor="SevenFont1" />
+  <widget backgroundColor="SevenBackground" font="Regular;24" halign="left" noWrap="1" position="348,550" render="Label" size="76,36" source="session.Event_Now" transparent="1" valign="center" zPosition="1" foregroundColor="SevenFont1">
+    <convert type="SevenHDEventTime">EndTime</convert>
+    <convert type="SevenHDClockToText">Default</convert>
+  </widget>
+  <widget font="Regular;48" halign="center" valign="center" noWrap="1" position="434,536" render="SevenHDRunningText" options="movetype=running,startpoint=0,startdelay=2000,wrap=0,always=0,repeat=2,oneshot=1" size="515,64" source="session.Event_Now" backgroundColor="SevenBackground" transparent="1" zPosition="1" foregroundColor="SevenFont1">
+    <convert type="SevenHDEventName">Name</convert>
+  </widget>
+  <widget backgroundColor="SevenBackground" foregroundColor="SevenFont2" font="Regular2; 22" halign="right" noWrap="1" position="260,617" render="Label" size="72,36" source="session.Event_Next" transparent="1" valign="center" zPosition="1">
+    <convert type="SevenHDEventTime">StartTime</convert>
+    <convert type="SevenHDClockToText">Default</convert>
+  </widget>
+  <eLabel backgroundColor="SevenBackground" foregroundColor="SevenFont2" font="Regular2;22" halign="center" noWrap="1" position="332,617" size="16,36" text="-" transparent="1" valign="center" zPosition="1" />
+  <widget backgroundColor="SevenBackground" font="Regular2; 22" foregroundColor="SevenFont2" halign="left" noWrap="1" position="348,617" render="Label" size="72,36" source="session.Event_Next" transparent="1" valign="center" zPosition="1">
+    <convert type="SevenHDEventTime">EndTime</convert>
+    <convert type="SevenHDClockToText">Default</convert>
+  </widget>
+  <widget font="Regular2;36" halign="center" valign="center" noWrap="1" position="434,611" render="SevenHDRunningText" options="movetype=running,startpoint=0,startdelay=2000,wrap=0,always=0,repeat=2,oneshot=1" size="515,48" source="session.Event_Next" backgroundColor="SevenBackground" transparent="1" zPosition="1" foregroundColor="SevenFont2">
+    <convert type="SevenHDEventName">Name</convert>
+  </widget>
+  <widget alphatest="blend" position="22,552" render="SevenHDXPicon" size="220,132" source="session.CurrentService" transparent="1" zPosition="4">
+    <convert type="ServiceName">Reference</convert>
+  </widget>
+  <widget source="session.CurrentService" render="Label" zPosition="3" position="433,671" size="50,22" font="Regular; 19" halign="right" backgroundColor="SevenBackground" foregroundColor="SevenFont1" transparent="1">
+    <convert type="SevenHDServiceInfo">VideoWidth</convert>
+  </widget>
+  <eLabel text="x" position="483,671" size="15,22" zPosition="3" font="Regular; 19" halign="center" backgroundColor="SevenBackground" foregroundColor="SevenFont1" transparent="1" />
+  <widget source="session.CurrentService" render="Label" zPosition="3" position="498,671" size="62,22" font="Regular; 19" halign="left" backgroundColor="SevenBackground" foregroundColor="SevenFont1" transparent="1">
+    <convert type="SevenHDServiceInfo">VideoHeight</convert>
+  </widget>
+  <widget alphatest="blend" pixmap="SevenHD/buttons/ico_format_on.png" position="300,666" render="Pixmap" size="32,32" source="session.CurrentService" zPosition="2">
+    <convert type="SevenHDServiceInfo">IsWidescreen</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.TunerInfo" render="Pixmap" pixmap="SevenHD/buttons/c_on.png" position="993,666" zPosition="2" size="32,32" backgroundColor="SevenBackground" alphatest="blend" valign="center">
+    <convert type="TunerInfo">TunerUseMask</convert>
+    <convert type="ValueBitTest">4</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.TunerInfo" render="Pixmap" pixmap="SevenHD/buttons/b_on.png" position="953,666" zPosition="2" size="32,32" backgroundColor="SevenBackground" alphatest="blend" valign="center">
+    <convert type="TunerInfo">TunerUseMask</convert>
+    <convert type="ValueBitTest">2</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.TunerInfo" render="Pixmap" pixmap="SevenHD/buttons/a_on.png" position="913,666" zPosition="2" size="32,32" backgroundColor="SevenBackground" alphatest="blend" valign="center">
+    <convert type="TunerInfo">TunerUseMask</convert>
+    <convert type="ValueBitTest">1</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.TunerInfo" render="Pixmap" pixmap="SevenHD/buttons/d_on.png" position="1034,666" zPosition="2" size="32,32" backgroundColor="SevenBackground" alphatest="blend" valign="center">
+    <convert type="TunerInfo">TunerUseMask</convert>
+    <convert type="ValueBitTest">8</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <ePixmap pixmap="SevenHD/buttons/a_off.png" position="913,666" size="32,32" zPosition="1" alphatest="blend" />
+  <ePixmap pixmap="SevenHD/buttons/b_off.png" position="953,666" size="32,32" zPosition="1" alphatest="blend" />
+  <ePixmap pixmap="SevenHD/buttons/c_off.png" position="993,666" size="32,32" zPosition="1" alphatest="blend" />
+  <ePixmap pixmap="SevenHD/buttons/d_off.png" position="1034,666" size="32,32" zPosition="1" alphatest="blend" />
+  <ePixmap alphatest="blend" pixmap="SevenHD/buttons/ico_subtitle_off.png" position="744,666" size="32,32" zPosition="1" />
+  <widget alphatest="blend" pixmap="SevenHD/buttons/ico_subtitle_on.png" position="744,666" render="Pixmap" size="32,32" source="session.CurrentService" zPosition="5">
+    <convert type="SevenHDServiceInfo">SubtitlesAvailable</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <ePixmap alphatest="blend" pixmap="SevenHD/buttons/ico_format_off.png" position="300,666" size="32,32" zPosition="1" />
+  <widget alphatest="blend" pixmap="SevenHD/buttons/ico_hd_on.png" position="260,666" render="Pixmap" size="32,32" source="session.CurrentService" zPosition="2">
+    <convert type="SevenHDServiceInfo">IsHD</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <ePixmap alphatest="blend" pixmap="SevenHD/buttons/ico_hd_off.png" position="260,666" size="32,32" zPosition="1" />
+  <widget alphatest="blend" pixmap="SevenHD/buttons/ico_dolby_on.png" position="348,666" render="Pixmap" size="32,32" source="session.CurrentService" zPosition="2">
+    <convert type="SevenHDServiceInfo">IsMultichannel</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <ePixmap alphatest="blend" pixmap="SevenHD/buttons/ico_dolby_off.png" position="348,666" size="32,32" zPosition="1" />
+  <ePixmap alphatest="blend" pixmap="SevenHD/buttons/ico_sub_off.png" position="564,666" size="32,32" zPosition="1" />
+  <widget source="session.CurrentService" render="Pixmap" pixmap="SevenHD/buttons/ico_sub_on.png" position="564,666" size="32,32" zPosition="2" alphatest="blend">
+    <convert type="SevenHDServiceInfo">SubservicesAvailable</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <ePixmap alphatest="blend" pixmap="SevenHD/buttons/ico_txt_off.png" position="624,666" size="32,32" zPosition="1" />
+  <widget alphatest="blend" pixmap="SevenHD/buttons/ico_txt_on.png" position="624,666" render="Pixmap" size="32,32" source="session.CurrentService" zPosition="5">
+    <convert type="SevenHDServiceInfo">HasTelext</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <ePixmap alphatest="blend" pixmap="SevenHD/buttons/ico_hbbtv_off.png" position="388,666" size="32,32" zPosition="1" />
+  <widget alphatest="blend" pixmap="SevenHD/buttons/ico_hbbtv_on.png" position="388,666" render="Pixmap" size="32,32" source="session.CurrentService" zPosition="5">
+    <convert type="SevenHDServiceInfo">HasHBBTV</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <ePixmap alphatest="blend" pixmap="SevenHD/buttons/ico_crypt_off.png" position="684,666" size="32,32" zPosition="1" />
+  <widget alphatest="blend" pixmap="SevenHD/buttons/ico_crypt_on.png" position="684,666" render="Pixmap" size="32,32" source="session.CurrentService" zPosition="5">
+    <convert type="SevenHDServiceInfo">IsCrypted</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.CurrentService" render="Label" position="795,671" size="89,22" backgroundColor="SevenBackground" transparent="1" zPosition="3" foregroundColor="SevenFont1" font="Regular; 19" valign="center" halign="left">
+    <convert type="SevenHDExtraInfo">OrbitalPositionOrTunerSystem</convert>
+  </widget>
+  <widget source="session.FrontendStatus" render="Label" position="832,671" size="70,21" font="Regular; 19" transparent="1" foregroundColor="SevenFont1" backgroundColor="SevenBackground" zPosition="3" halign="right" valign="center">
+    <convert type="FrontendInfo">SNR</convert>
+  </widget>
+  <widget backgroundColor="SevenBackground" font="Regular; 22" halign="right" position="958,550" render="Label" size="107,36" source="session.Event_Now" transparent="1" valign="center" zPosition="1">
+    <convert type="SevenHDEventTime">Remaining</convert>
+    <convert type="SevenHDRemainingToText">InMinutes</convert>
+  </widget>
+  <widget backgroundColor="SevenBackground" font="Regular2; 22" foregroundColor="SevenFont2" valign="center" halign="right" position="958,617" render="Label" size="107,35" source="session.Event_Next" transparent="1" zPosition="1">
+    <convert type="SevenHDEventTime">Duration</convert>
+    <convert type="SevenHDClockToText">InMinutes</convert>
+  </widget>
+
+
+<eLabel backgroundColor="SevenBackgroundRight" position="14,2" size="1250,40" />
+  <eLabel backgroundColor="SevenBorder" position="14,40" size="1250,2" zPosition="2" />
+  <eLabel backgroundColor="SevenBorder" position="14,1" size="1250,2" zPosition="2" />
+  <eLabel backgroundColor="SevenBorder" position="14,1" size="2,41" zPosition="2" />
+  <eLabel backgroundColor="SevenBorder" position="1262,1" size="2,41" zPosition="2" />
+  <eLabel backgroundColor="SevenBackground" position="14,47" size="620,420" />
+  <eLabel backgroundColor="SevenBorder" position="14,465" size="621,2" zPosition="2" />
+  <eLabel backgroundColor="SevenBorder" position="14,45" size="621,2" zPosition="2" />
+  <eLabel backgroundColor="SevenBorder" position="14,45" size="2,420" zPosition="2" />
+  <eLabel backgroundColor="SevenBorder" position="1262,45" size="2,420" zPosition="2" />
+  <eLabel backgroundColor="SevenLine" position="633,45" size="2,420" zPosition="2" />
+  <eLabel backgroundColor="SevenLine" position="643,45" size="2,420" zPosition="2" />
+  <widget backgroundColor="SevenBackground" font="Regular; 30" halign="center" noWrap="1" position="37,50" foregroundColor="SevenFont1" render="Label" size="578,38" source="session.Event_Now" transparent="1" zPosition="1" valign="bottom">
+    <convert type="SevenHDEventName">Name</convert>
+  </widget>
+  <widget backgroundColor="SevenBackground" font="Regular; 20" foregroundColor="SevenFont1" halign="center" position="37,93" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,wrap=1,always=0,repeat=2,oneshot=1" size="578,364" source="session.Event_Now" zPosition="1" transparent="1">
+    <convert type="SevenHDEventName">ExtendedDescription</convert>
+  </widget>
+  <widget backgroundColor="SevenBackground" font="Regular2; 30" foregroundColor="SevenFont2" halign="center" position="666,50" render="Label" size="578,38" source="session.Event_Next" transparent="1" zPosition="1" valign="bottom">
+    <convert type="SevenHDEventName">Name</convert>
+  </widget>
+  <widget source="session.CurrentService" position="37,10" size="500,22" font="Regular2;12" render="Label" halign="left" valign="bottom" foregroundColor="SevenFont2" backgroundColor="SevenBackground" transparent="1" zPosition="1">
+    <convert type="SevenHDMyCaidDisplay">Default</convert>
+  </widget>
+  <eLabel text="SysTemp:" position="400,10" size="70,22" font="Regular2;12" halign="left" valign="bottom" foregroundColor="SevenFont2" backgroundColor="SevenBackground" noWrap="1" transparent="1" zPosition="2" />
+  <widget source="global.CurrentTime" render="SevenHDSYSTemp" position="465,10" size="60,22" font="Regular2;12" halign="left" valign="bottom" foregroundColor="SevenFont2" backgroundColor="SevenBackground" noWrap="1" transparent="1" zPosition="3" />
+  <widget source="session.CurrentService" render="Label" position="535,10" size="100,22" font="Regular2;12" halign="left" valign="bottom" foregroundColor="SevenFont2" backgroundColor="SevenBackground" noWrap="1" transparent="1" zPosition="4">
+    <convert type="SevenHDCpuUsage">CPU: $0</convert>
+  </widget>
+  <widget source="session.CurrentService" render="Label" position="620,10" size="210,22" font="Regular2;12" halign="left" valign="bottom" foregroundColor="SevenFont2" backgroundColor="SevenBackground" noWrap="1" transparent="1" zPosition="5">
+    <convert type="SevenHDLayoutInfo">FleshInfo,Short</convert>
+  </widget>
+  <widget source="session.CurrentService" render="Label" position="779,10" size="200,22" font="Regular2;12" halign="left" valign="bottom" foregroundColor="SevenFont2" backgroundColor="SevenBackground" noWrap="1" transparent="1" zPosition="6">
+    <convert type="SevenHDLayoutInfo">MemTotal,Short</convert>
+  </widget>
+  <widget source="session.CurrentService" render="Label" position="886,10" size="350,22" font="Regular2;12" halign="right" valign="bottom" foregroundColor="SevenFont2" backgroundColor="SevenBackground" noWrap="1" transparent="1" zPosition="7">
+    <convert type="SevenHDLayoutInfo">HddInfo,Full</convert>
+  </widget>
+  <widget source="session.CurrentService" position="37,10" size="500,22" font="Regular2;12" render="Label" halign="left" valign="bottom" foregroundColor="SevenFont2" backgroundColor="SevenBackground" transparent="1" zPosition="1">
+    <convert type="SevenHDMyCaidDisplay">Default</convert>
+  </widget>
+  <eLabel text="SysTemp:" position="400,10" size="70,22" font="Regular2;12" halign="left" valign="bottom" foregroundColor="SevenFont2" backgroundColor="SevenBackground" noWrap="1" transparent="1" zPosition="2" />
+  <widget source="global.CurrentTime" render="SevenHDSYSTemp" position="465,10" size="60,22" font="Regular2;12" halign="left" valign="bottom" foregroundColor="SevenFont2" backgroundColor="SevenBackground" noWrap="1" transparent="1" zPosition="3" />
+  <widget source="session.CurrentService" render="Label" position="535,10" size="100,22" font="Regular2;12" halign="left" valign="bottom" foregroundColor="SevenFont2" backgroundColor="SevenBackground" noWrap="1" transparent="1" zPosition="4">
+    <convert type="SevenHDCpuUsage">CPU: $0</convert>
+  </widget>
+  <widget source="session.CurrentService" render="Label" position="620,10" size="210,22" font="Regular2;12" halign="left" valign="bottom" foregroundColor="SevenFont2" backgroundColor="SevenBackground" noWrap="1" transparent="1" zPosition="5">
+    <convert type="SevenHDLayoutInfo">FleshInfo,Short</convert>
+  </widget>
+  <widget source="session.CurrentService" render="Label" position="779,10" size="200,22" font="Regular2;12" halign="left" valign="bottom" foregroundColor="SevenFont2" backgroundColor="SevenBackground" noWrap="1" transparent="1" zPosition="6">
+    <convert type="SevenHDLayoutInfo">MemTotal,Short</convert>
+  </widget>
+  <widget source="session.CurrentService" render="Label" position="886,10" size="350,22" font="Regular2;12" halign="right" valign="bottom" foregroundColor="SevenFont2" backgroundColor="SevenBackground" noWrap="1" transparent="1" zPosition="7">
+    <convert type="SevenHDLayoutInfo">HddInfo,Full</convert>
+  </widget>
+  <widget backgroundColor="SevenBackground" font="Regular; 20" foregroundColor="SevenFont1" halign="center" position="666,93" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,wrap=1,always=0,repeat=2,oneshot=1" size="578,364" source="session.Event_Next" zPosition="1" transparent="1">
+    <convert type="SevenHDEventName">ExtendedDescription</convert>
+  </widget>
+  <eLabel backgroundColor="SevenBorder" position="643,45" size="621,2" zPosition="2" />
+  <eLabel backgroundColor="SevenBorder" position="643,465" size="621,2" zPosition="2" />
+  <eLabel backgroundColor="SevenBackgroundRight" position="643,47" size="620,420" />
+  <widget font="Regular2; 40" foregroundColor="SevenFont1" halign="left" noWrap="1" position="15,472" render="Label" size="1020,60" source="session.CurrentService" transparent="1" valign="center" zPosition="1" alphatest="blend">
+  <convert type="ServiceName">Name</convert>
+</widget> 
+</screen>
+  <screen name="template_menu_ibz3">
+  <eLabel backgroundColor="SevenBackground" position="1076,534" size="186,168" />
+  <eLabel backgroundColor="SevenBorder" position="1075,533" size="2,129" zPosition="2" />
+  <eLabel backgroundColor="SevenBorder" position="14,533" size="2,171" zPosition="2" />
+  <eLabel backgroundColor="SevenBorder" position="14,702" size="1250,2" zPosition="2" />
+  <eLabel backgroundColor="SevenBorder" position="248,660" size="827,2" zPosition="2" />
+  <eLabel backgroundColor="SevenLine" position="273,605" size="793,2" zPosition="2" />
+<eLabel backgroundColor="SevenBorder" position="14,533" size="1250,2" zPosition="2" />
+<eLabel backgroundColor="SevenBorder" position="1262,533" size="2,171" zPosition="2" />
+<eLabel backgroundColor="SevenBorder" position="248,533" size="2,129" zPosition="2" />
+<eLabel backgroundColor="SevenBackgroundRight" position="250,533" size="825,129" />
+<eLabel backgroundColor="SevenBackground" position="248,659" size="828,44" />
+<eLabel backgroundColor="SevenBackground" position="16,534" size="232,168" />
+  <widget position="273,603" render="Progress" size="793,6" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress">
+    <convert type="SevenHDEventTime">Progress</convert>
+  </widget>
+  <widget alphatest="blend" pixmap="SevenHD/buttons/ico_rec_on.png" position="22,666" render="Pixmap" size="32,32" source="session.RecordState" zPosition="5">
+    <convert type="ConditionalShowHide">Blink</convert>
+  </widget>
+  <widget backgroundColor="SevenBackground" font="Regular;24" halign="right" noWrap="1" position="256,550" render="Label" size="76,36" source="session.Event_Now" transparent="1" valign="center" zPosition="1" foregroundColor="SevenFont1">
+    <convert type="SevenHDEventTime">StartTime</convert>
+    <convert type="SevenHDClockToText">Default</convert>
+  </widget>
+  <eLabel backgroundColor="SevenBackground" font="Regular;24" halign="center" noWrap="1" position="332,550" size="16,36" text="-" transparent="1" valign="center" zPosition="1" foregroundColor="SevenFont1" />
+  <widget backgroundColor="SevenBackground" font="Regular;24" halign="left" noWrap="1" position="348,550" render="Label" size="76,36" source="session.Event_Now" transparent="1" valign="center" zPosition="1" foregroundColor="SevenFont1">
+    <convert type="SevenHDEventTime">EndTime</convert>
+    <convert type="SevenHDClockToText">Default</convert>
+  </widget>
+  <widget font="Regular;48" halign="center" valign="center" noWrap="1" position="434,536" render="SevenHDRunningText" options="movetype=running,startpoint=0,startdelay=2000,wrap=0,always=0,repeat=2,oneshot=1" size="515,64" source="session.Event_Now" backgroundColor="SevenBackground" transparent="1" zPosition="1" foregroundColor="SevenFont1">
+    <convert type="SevenHDEventName">Name</convert>
+  </widget>
+  <widget backgroundColor="SevenBackground" foregroundColor="SevenFont2" font="Regular2; 22" halign="right" noWrap="1" position="260,617" render="Label" size="72,36" source="session.Event_Next" transparent="1" valign="center" zPosition="1">
+    <convert type="SevenHDEventTime">StartTime</convert>
+    <convert type="SevenHDClockToText">Default</convert>
+  </widget>
+  <eLabel backgroundColor="SevenBackground" foregroundColor="SevenFont2" font="Regular2;22" halign="center" noWrap="1" position="332,617" size="16,36" text="-" transparent="1" valign="center" zPosition="1" />
+  <widget backgroundColor="SevenBackground" font="Regular2; 22" foregroundColor="SevenFont2" halign="left" noWrap="1" position="348,617" render="Label" size="72,36" source="session.Event_Next" transparent="1" valign="center" zPosition="1">
+    <convert type="SevenHDEventTime">EndTime</convert>
+    <convert type="SevenHDClockToText">Default</convert>
+  </widget>
+  <widget font="Regular2;36" halign="center" valign="center" noWrap="1" position="434,611" render="SevenHDRunningText" options="movetype=running,startpoint=0,startdelay=2000,wrap=0,always=0,repeat=2,oneshot=1" size="515,48" source="session.Event_Next" backgroundColor="SevenBackground" transparent="1" zPosition="1" foregroundColor="SevenFont2">
+    <convert type="SevenHDEventName">Name</convert>
+  </widget>
+  <widget alphatest="blend" position="22,556" render="SevenHDXPicon" size="220,94" source="session.CurrentService" transparent="1" zPosition="4">
+    <convert type="ServiceName">Reference</convert>
+  </widget>
+  <widget source="session.CurrentService" render="Label" zPosition="3" position="433,671" size="50,22" font="Regular; 19" halign="right" backgroundColor="SevenBackground" foregroundColor="SevenFont1" transparent="1">
+    <convert type="SevenHDServiceInfo">VideoWidth</convert>
+  </widget>
+  <eLabel text="x" position="483,671" size="15,22" zPosition="3" font="Regular; 19" halign="center" backgroundColor="SevenBackground" foregroundColor="SevenFont1" transparent="1" />
+  <widget source="session.CurrentService" render="Label" zPosition="3" position="498,671" size="62,22" font="Regular; 19" halign="left" backgroundColor="SevenBackground" foregroundColor="SevenFont1" transparent="1">
+    <convert type="SevenHDServiceInfo">VideoHeight</convert>
+  </widget>
+  <widget alphatest="blend" pixmap="SevenHD/buttons/ico_format_on.png" position="300,666" render="Pixmap" size="32,32" source="session.CurrentService" zPosition="2">
+    <convert type="SevenHDServiceInfo">IsWidescreen</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.TunerInfo" render="Pixmap" pixmap="SevenHD/buttons/c_on.png" position="993,666" zPosition="2" size="32,32" backgroundColor="SevenBackground" alphatest="blend" valign="center">
+    <convert type="TunerInfo">TunerUseMask</convert>
+    <convert type="ValueBitTest">4</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.TunerInfo" render="Pixmap" pixmap="SevenHD/buttons/b_on.png" position="953,666" zPosition="2" size="32,32" backgroundColor="SevenBackground" alphatest="blend" valign="center">
+    <convert type="TunerInfo">TunerUseMask</convert>
+    <convert type="ValueBitTest">2</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.TunerInfo" render="Pixmap" pixmap="SevenHD/buttons/a_on.png" position="913,666" zPosition="2" size="32,32" backgroundColor="SevenBackground" alphatest="blend" valign="center">
+    <convert type="TunerInfo">TunerUseMask</convert>
+    <convert type="ValueBitTest">1</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.TunerInfo" render="Pixmap" pixmap="SevenHD/buttons/d_on.png" position="1034,666" zPosition="2" size="32,32" backgroundColor="SevenBackground" alphatest="blend" valign="center">
+    <convert type="TunerInfo">TunerUseMask</convert>
+    <convert type="ValueBitTest">8</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <ePixmap pixmap="SevenHD/buttons/a_off.png" position="913,666" size="32,32" zPosition="1" alphatest="blend" />
+  <ePixmap pixmap="SevenHD/buttons/b_off.png" position="953,666" size="32,32" zPosition="1" alphatest="blend" />
+  <ePixmap pixmap="SevenHD/buttons/c_off.png" position="993,666" size="32,32" zPosition="1" alphatest="blend" />
+  <ePixmap pixmap="SevenHD/buttons/d_off.png" position="1034,666" size="32,32" zPosition="1" alphatest="blend" />
+  <ePixmap alphatest="blend" pixmap="SevenHD/buttons/ico_subtitle_off.png" position="744,666" size="32,32" zPosition="1" />
+  <widget alphatest="blend" pixmap="SevenHD/buttons/ico_subtitle_on.png" position="744,666" render="Pixmap" size="32,32" source="session.CurrentService" zPosition="5">
+    <convert type="SevenHDServiceInfo">SubtitlesAvailable</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <ePixmap alphatest="blend" pixmap="SevenHD/buttons/ico_format_off.png" position="300,666" size="32,32" zPosition="1" />
+  <widget alphatest="blend" pixmap="SevenHD/buttons/ico_hd_on.png" position="260,666" render="Pixmap" size="32,32" source="session.CurrentService" zPosition="2">
+    <convert type="SevenHDServiceInfo">IsHD</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <ePixmap alphatest="blend" pixmap="SevenHD/buttons/ico_hd_off.png" position="260,666" size="32,32" zPosition="1" />
+  <widget alphatest="blend" pixmap="SevenHD/buttons/ico_dolby_on.png" position="348,666" render="Pixmap" size="32,32" source="session.CurrentService" zPosition="2">
+    <convert type="SevenHDServiceInfo">IsMultichannel</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <ePixmap alphatest="blend" pixmap="SevenHD/buttons/ico_dolby_off.png" position="348,666" size="32,32" zPosition="1" />
+  <ePixmap alphatest="blend" pixmap="SevenHD/buttons/ico_sub_off.png" position="564,666" size="32,32" zPosition="1" />
+  <widget source="session.CurrentService" render="Pixmap" pixmap="SevenHD/buttons/ico_sub_on.png" position="564,666" size="32,32" zPosition="2" alphatest="blend">
+    <convert type="SevenHDServiceInfo">SubservicesAvailable</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <ePixmap alphatest="blend" pixmap="SevenHD/buttons/ico_txt_off.png" position="624,666" size="32,32" zPosition="1" />
+  <widget alphatest="blend" pixmap="SevenHD/buttons/ico_txt_on.png" position="624,666" render="Pixmap" size="32,32" source="session.CurrentService" zPosition="5">
+    <convert type="SevenHDServiceInfo">HasTelext</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <ePixmap alphatest="blend" pixmap="SevenHD/buttons/ico_hbbtv_off.png" position="388,666" size="32,32" zPosition="1" />
+  <widget alphatest="blend" pixmap="SevenHD/buttons/ico_hbbtv_on.png" position="388,666" render="Pixmap" size="32,32" source="session.CurrentService" zPosition="5">
+    <convert type="SevenHDServiceInfo">HasHBBTV</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <ePixmap alphatest="blend" pixmap="SevenHD/buttons/ico_crypt_off.png" position="684,666" size="32,32" zPosition="1" />
+  <widget alphatest="blend" pixmap="SevenHD/buttons/ico_crypt_on.png" position="684,666" render="Pixmap" size="32,32" source="session.CurrentService" zPosition="5">
+    <convert type="SevenHDServiceInfo">IsCrypted</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.CurrentService" render="Label" position="795,671" size="89,22" backgroundColor="SevenBackground" transparent="1" zPosition="3" foregroundColor="SevenFont1" font="Regular; 19" valign="center" halign="left">
+    <convert type="SevenHDExtraInfo">OrbitalPositionOrTunerSystem</convert>
+  </widget>
+  <widget source="session.FrontendStatus" render="Label" position="832,671" size="70,21" font="Regular; 19" transparent="1" foregroundColor="SevenFont1" backgroundColor="SevenBackground" zPosition="3" halign="right" valign="center">
+    <convert type="FrontendInfo">SNR</convert>
+  </widget>
+  <widget backgroundColor="SevenBackground" font="Regular; 22" halign="right" position="958,550" render="Label" size="107,36" source="session.Event_Now" transparent="1" valign="center" zPosition="1">
+    <convert type="SevenHDEventTime">Remaining</convert>
+    <convert type="SevenHDRemainingToText">InMinutes</convert>
+  </widget>
+  <widget backgroundColor="SevenBackground" font="Regular2; 22" foregroundColor="SevenFont2" valign="center" halign="right" position="958,617" render="Label" size="107,35" source="session.Event_Next" transparent="1" zPosition="1">
+    <convert type="SevenHDEventTime">Duration</convert>
+    <convert type="SevenHDClockToText">InMinutes</convert>
+  </widget>
+</screen>
+  <screen name="template_menu_sibz3">
+   <eLabel backgroundColor="SevenBackground" position="1076,534" size="186,168" />
+  <eLabel backgroundColor="SevenBorder" position="1075,533" size="2,129" zPosition="2" />
+  <eLabel backgroundColor="SevenBorder" position="14,533" size="2,171" zPosition="2" />
+  <eLabel backgroundColor="SevenBorder" position="14,702" size="1250,2" zPosition="2" />
+  <eLabel backgroundColor="SevenBorder" position="248,660" size="827,2" zPosition="2" />
+  <eLabel backgroundColor="SevenLine" position="273,605" size="793,2" zPosition="2" />
+<eLabel backgroundColor="SevenBorder" position="14,533" size="1250,2" zPosition="2" />
+<eLabel backgroundColor="SevenBorder" position="1262,533" size="2,171" zPosition="2" />
+<eLabel backgroundColor="SevenBorder" position="248,533" size="2,129" zPosition="2" />
+<eLabel backgroundColor="SevenBackgroundRight" position="250,533" size="825,129" />
+<eLabel backgroundColor="SevenBackground" position="248,659" size="828,44" />
+<eLabel backgroundColor="SevenBackground" position="16,534" size="232,168" />
+  <widget position="273,603" render="Progress" size="793,6" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress">
+    <convert type="SevenHDEventTime">Progress</convert>
+  </widget>
+  <widget alphatest="blend" pixmap="SevenHD/buttons/ico_rec_on.png" position="22,666" render="Pixmap" size="32,32" source="session.RecordState" zPosition="5">
+    <convert type="ConditionalShowHide">Blink</convert>
+  </widget>
+  <widget backgroundColor="SevenBackground" font="Regular;24" halign="right" noWrap="1" position="256,550" render="Label" size="76,36" source="session.Event_Now" transparent="1" valign="center" zPosition="1" foregroundColor="SevenFont1">
+    <convert type="SevenHDEventTime">StartTime</convert>
+    <convert type="SevenHDClockToText">Default</convert>
+  </widget>
+  <eLabel backgroundColor="SevenBackground" font="Regular;24" halign="center" noWrap="1" position="332,550" size="16,36" text="-" transparent="1" valign="center" zPosition="1" foregroundColor="SevenFont1" />
+  <widget backgroundColor="SevenBackground" font="Regular;24" halign="left" noWrap="1" position="348,550" render="Label" size="76,36" source="session.Event_Now" transparent="1" valign="center" zPosition="1" foregroundColor="SevenFont1">
+    <convert type="SevenHDEventTime">EndTime</convert>
+    <convert type="SevenHDClockToText">Default</convert>
+  </widget>
+  <widget font="Regular;48" halign="center" valign="center" noWrap="1" position="434,536" render="SevenHDRunningText" options="movetype=running,startpoint=0,startdelay=2000,wrap=0,always=0,repeat=2,oneshot=1" size="515,64" source="session.Event_Now" backgroundColor="SevenBackground" transparent="1" zPosition="1" foregroundColor="SevenFont1">
+    <convert type="SevenHDEventName">Name</convert>
+  </widget>
+  <widget backgroundColor="SevenBackground" foregroundColor="SevenFont2" font="Regular2; 22" halign="right" noWrap="1" position="260,617" render="Label" size="72,36" source="session.Event_Next" transparent="1" valign="center" zPosition="1">
+    <convert type="SevenHDEventTime">StartTime</convert>
+    <convert type="SevenHDClockToText">Default</convert>
+  </widget>
+  <eLabel backgroundColor="SevenBackground" foregroundColor="SevenFont2" font="Regular2;22" halign="center" noWrap="1" position="332,617" size="16,36" text="-" transparent="1" valign="center" zPosition="1" />
+  <widget backgroundColor="SevenBackground" font="Regular2; 22" foregroundColor="SevenFont2" halign="left" noWrap="1" position="348,617" render="Label" size="72,36" source="session.Event_Next" transparent="1" valign="center" zPosition="1">
+    <convert type="SevenHDEventTime">EndTime</convert>
+    <convert type="SevenHDClockToText">Default</convert>
+  </widget>
+  <widget font="Regular2;36" halign="center" valign="center" noWrap="1" position="434,611" render="SevenHDRunningText" options="movetype=running,startpoint=0,startdelay=2000,wrap=0,always=0,repeat=2,oneshot=1" size="515,48" source="session.Event_Next" backgroundColor="SevenBackground" transparent="1" zPosition="1" foregroundColor="SevenFont2">
+    <convert type="SevenHDEventName">Name</convert>
+  </widget>
+  <widget alphatest="blend" position="22,556" render="SevenHDXPicon" size="220,94" source="session.CurrentService" transparent="1" zPosition="4">
+    <convert type="ServiceName">Reference</convert>
+  </widget>
+  <widget source="session.CurrentService" render="Label" zPosition="3" position="433,671" size="50,22" font="Regular; 19" halign="right" backgroundColor="SevenBackground" foregroundColor="SevenFont1" transparent="1">
+    <convert type="SevenHDServiceInfo">VideoWidth</convert>
+  </widget>
+  <eLabel text="x" position="483,671" size="15,22" zPosition="3" font="Regular; 19" halign="center" backgroundColor="SevenBackground" foregroundColor="SevenFont1" transparent="1" />
+  <widget source="session.CurrentService" render="Label" zPosition="3" position="498,671" size="62,22" font="Regular; 19" halign="left" backgroundColor="SevenBackground" foregroundColor="SevenFont1" transparent="1">
+    <convert type="SevenHDServiceInfo">VideoHeight</convert>
+  </widget>
+  <widget alphatest="blend" pixmap="SevenHD/buttons/ico_format_on.png" position="300,666" render="Pixmap" size="32,32" source="session.CurrentService" zPosition="2">
+    <convert type="SevenHDServiceInfo">IsWidescreen</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.TunerInfo" render="Pixmap" pixmap="SevenHD/buttons/c_on.png" position="993,666" zPosition="2" size="32,32" backgroundColor="SevenBackground" alphatest="blend" valign="center">
+    <convert type="TunerInfo">TunerUseMask</convert>
+    <convert type="ValueBitTest">4</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.TunerInfo" render="Pixmap" pixmap="SevenHD/buttons/b_on.png" position="953,666" zPosition="2" size="32,32" backgroundColor="SevenBackground" alphatest="blend" valign="center">
+    <convert type="TunerInfo">TunerUseMask</convert>
+    <convert type="ValueBitTest">2</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.TunerInfo" render="Pixmap" pixmap="SevenHD/buttons/a_on.png" position="913,666" zPosition="2" size="32,32" backgroundColor="SevenBackground" alphatest="blend" valign="center">
+    <convert type="TunerInfo">TunerUseMask</convert>
+    <convert type="ValueBitTest">1</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.TunerInfo" render="Pixmap" pixmap="SevenHD/buttons/d_on.png" position="1034,666" zPosition="2" size="32,32" backgroundColor="SevenBackground" alphatest="blend" valign="center">
+    <convert type="TunerInfo">TunerUseMask</convert>
+    <convert type="ValueBitTest">8</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <ePixmap pixmap="SevenHD/buttons/a_off.png" position="913,666" size="32,32" zPosition="1" alphatest="blend" />
+  <ePixmap pixmap="SevenHD/buttons/b_off.png" position="953,666" size="32,32" zPosition="1" alphatest="blend" />
+  <ePixmap pixmap="SevenHD/buttons/c_off.png" position="993,666" size="32,32" zPosition="1" alphatest="blend" />
+  <ePixmap pixmap="SevenHD/buttons/d_off.png" position="1034,666" size="32,32" zPosition="1" alphatest="blend" />
+  <ePixmap alphatest="blend" pixmap="SevenHD/buttons/ico_subtitle_off.png" position="744,666" size="32,32" zPosition="1" />
+  <widget alphatest="blend" pixmap="SevenHD/buttons/ico_subtitle_on.png" position="744,666" render="Pixmap" size="32,32" source="session.CurrentService" zPosition="5">
+    <convert type="SevenHDServiceInfo">SubtitlesAvailable</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <ePixmap alphatest="blend" pixmap="SevenHD/buttons/ico_format_off.png" position="300,666" size="32,32" zPosition="1" />
+  <widget alphatest="blend" pixmap="SevenHD/buttons/ico_hd_on.png" position="260,666" render="Pixmap" size="32,32" source="session.CurrentService" zPosition="2">
+    <convert type="SevenHDServiceInfo">IsHD</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <ePixmap alphatest="blend" pixmap="SevenHD/buttons/ico_hd_off.png" position="260,666" size="32,32" zPosition="1" />
+  <widget alphatest="blend" pixmap="SevenHD/buttons/ico_dolby_on.png" position="348,666" render="Pixmap" size="32,32" source="session.CurrentService" zPosition="2">
+    <convert type="SevenHDServiceInfo">IsMultichannel</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <ePixmap alphatest="blend" pixmap="SevenHD/buttons/ico_dolby_off.png" position="348,666" size="32,32" zPosition="1" />
+  <ePixmap alphatest="blend" pixmap="SevenHD/buttons/ico_sub_off.png" position="564,666" size="32,32" zPosition="1" />
+  <widget source="session.CurrentService" render="Pixmap" pixmap="SevenHD/buttons/ico_sub_on.png" position="564,666" size="32,32" zPosition="2" alphatest="blend">
+    <convert type="SevenHDServiceInfo">SubservicesAvailable</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <ePixmap alphatest="blend" pixmap="SevenHD/buttons/ico_txt_off.png" position="624,666" size="32,32" zPosition="1" />
+  <widget alphatest="blend" pixmap="SevenHD/buttons/ico_txt_on.png" position="624,666" render="Pixmap" size="32,32" source="session.CurrentService" zPosition="5">
+    <convert type="SevenHDServiceInfo">HasTelext</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <ePixmap alphatest="blend" pixmap="SevenHD/buttons/ico_hbbtv_off.png" position="388,666" size="32,32" zPosition="1" />
+  <widget alphatest="blend" pixmap="SevenHD/buttons/ico_hbbtv_on.png" position="388,666" render="Pixmap" size="32,32" source="session.CurrentService" zPosition="5">
+    <convert type="SevenHDServiceInfo">HasHBBTV</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <ePixmap alphatest="blend" pixmap="SevenHD/buttons/ico_crypt_off.png" position="684,666" size="32,32" zPosition="1" />
+  <widget alphatest="blend" pixmap="SevenHD/buttons/ico_crypt_on.png" position="684,666" render="Pixmap" size="32,32" source="session.CurrentService" zPosition="5">
+    <convert type="SevenHDServiceInfo">IsCrypted</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.CurrentService" render="Label" position="795,671" size="89,22" backgroundColor="SevenBackground" transparent="1" zPosition="3" foregroundColor="SevenFont1" font="Regular; 19" valign="center" halign="left">
+    <convert type="SevenHDExtraInfo">OrbitalPositionOrTunerSystem</convert>
+  </widget>
+  <widget source="session.FrontendStatus" render="Label" position="832,671" size="70,21" font="Regular; 19" transparent="1" foregroundColor="SevenFont1" backgroundColor="SevenBackground" zPosition="3" halign="right" valign="center">
+    <convert type="FrontendInfo">SNR</convert>
+  </widget>
+  <widget backgroundColor="SevenBackground" font="Regular; 22" halign="right" position="958,550" render="Label" size="107,36" source="session.Event_Now" transparent="1" valign="center" zPosition="1">
+    <convert type="SevenHDEventTime">Remaining</convert>
+    <convert type="SevenHDRemainingToText">InMinutes</convert>
+  </widget>
+  <widget backgroundColor="SevenBackground" font="Regular2; 22" foregroundColor="SevenFont2" valign="center" halign="right" position="958,617" render="Label" size="107,35" source="session.Event_Next" transparent="1" zPosition="1">
+    <convert type="SevenHDEventTime">Duration</convert>
+    <convert type="SevenHDClockToText">InMinutes</convert>
+  </widget>
+
+
+  <eLabel backgroundColor="SevenBackgroundRight" position="14,2" size="1250,40" />
+  <eLabel backgroundColor="SevenBorder" position="14,40" size="1250,2" zPosition="2" />
+  <eLabel backgroundColor="SevenBorder" position="14,1" size="1250,2" zPosition="2" />
+  <eLabel backgroundColor="SevenBorder" position="14,1" size="2,41" zPosition="2" />
+  <eLabel backgroundColor="SevenBorder" position="1262,1" size="2,41" zPosition="2" />
+  <eLabel backgroundColor="SevenBackground" position="14,45" size="1250,422" />
+  <eLabel backgroundColor="SevenBorder" position="14,465" size="1250,2" zPosition="2" />
+  <eLabel backgroundColor="SevenBorder" position="14,45" size="1250,2" zPosition="2" />
+  <eLabel backgroundColor="SevenBorder" position="14,45" size="2,422" zPosition="2" />
+  <eLabel backgroundColor="SevenBorder" position="1262,45" size="2,422" zPosition="2" />
+  <eLabel backgroundColor="SevenLine" position="37,265" size="1200,2" zPosition="2" />
+  <widget backgroundColor="SevenBackground" font="Regular; 30" halign="center" noWrap="1" position="37,53" foregroundColor="SevenFont1" render="Label" size="1200,38" source="session.Event_Now" transparent="1" zPosition="1" valign="bottom">
+    <convert type="SevenHDEventName">Name</convert>
+  </widget>
+  <widget backgroundColor="SevenBackground" font="Regular; 20" foregroundColor="SevenFont1" halign="center" position="37,98" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,wrap=1,always=0,repeat=2,oneshot=1" size="1200,160" source="session.Event_Now" zPosition="1" transparent="1">
+    <convert type="SevenHDEventName">ExtendedDescription</convert>
+  </widget>
+  <widget backgroundColor="SevenBackground" font="Regular2; 30" foregroundColor="SevenFont2" halign="center" position="37,271" render="Label" size="1200,38" source="session.Event_Next" transparent="1" zPosition="1" valign="bottom">
+    <convert type="SevenHDEventName">Name</convert>
+  </widget>
+  <widget source="global.CurrentTime" render="SevenHDSYSTemp" position="465,10" size="60,22" font="Regular2;12" halign="left" valign="bottom" foregroundColor="SevenFont2" backgroundColor="SevenBackground" noWrap="1" transparent="1" zPosition="3" />
+  <widget source="session.CurrentService" render="Label" position="535,10" size="100,22" font="Regular2;12" halign="left" valign="bottom" foregroundColor="SevenFont2" backgroundColor="SevenBackground" noWrap="1" transparent="1" zPosition="4">
+    <convert type="SevenHDCpuUsage">CPU: $0</convert>
+  </widget>
+  <widget source="session.CurrentService" render="Label" position="620,10" size="210,22" font="Regular2;12" halign="left" valign="bottom" foregroundColor="SevenFont2" backgroundColor="SevenBackground" noWrap="1" transparent="1" zPosition="5">
+    <convert type="SevenHDLayoutInfo">FleshInfo,Short</convert>
+  </widget>
+  <widget source="session.CurrentService" position="37,10" size="500,22" font="Regular2;12" render="Label" halign="left" valign="bottom" foregroundColor="SevenFont2" backgroundColor="SevenBackground" transparent="1" zPosition="1">
+    <convert type="SevenHDMyCaidDisplay">Default</convert>
+  </widget>
+  <eLabel text="SysTemp:" position="400,10" size="70,22" font="Regular2;12" halign="left" valign="bottom" foregroundColor="SevenFont2" backgroundColor="SevenBackground" noWrap="1" transparent="1" zPosition="2" />
+  <widget source="session.CurrentService" render="Label" position="620,10" size="210,22" font="Regular2;12" halign="left" valign="bottom" foregroundColor="SevenFont2" backgroundColor="SevenBackground" noWrap="1" transparent="1" zPosition="5">
+    <convert type="SevenHDLayoutInfo">FleshInfo,Short</convert>
+  </widget>
+  <widget source="session.CurrentService" render="Label" position="779,10" size="200,22" font="Regular2;12" halign="left" valign="bottom" foregroundColor="SevenFont2" backgroundColor="SevenBackground" noWrap="1" transparent="1" zPosition="6">
+    <convert type="SevenHDLayoutInfo">MemTotal,Short</convert>
+  </widget>
+  <widget source="session.CurrentService" render="Label" position="886,10" size="350,22" font="Regular2;12" halign="right" valign="bottom" foregroundColor="SevenFont2" backgroundColor="SevenBackground" noWrap="1" transparent="1" zPosition="7">
+    <convert type="SevenHDLayoutInfo">HddInfo,Full</convert>
+  </widget>
+  <widget backgroundColor="SevenBackground" font="Regular; 20" foregroundColor="SevenFont1" halign="center" position="37,316" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,wrap=1,always=0,repeat=2,oneshot=1" size="1200,132" source="session.Event_Next" zPosition="1" transparent="1">
+    <convert type="SevenHDEventName">ExtendedDescription</convert>
+  </widget>
+<widget font="Regular2; 40" foregroundColor="SevenFont1" halign="left" noWrap="1" position="15,472" render="Label" size="1020,60" source="session.CurrentService" transparent="1" valign="center" zPosition="1" alphatest="blend">
+  <convert type="ServiceName">Name</convert>
+</widget>
+</screen>
+  <screen name="template_menu_sibz3.1">
+   <eLabel backgroundColor="SevenBackground" position="1076,534" size="186,168" />
+  <eLabel backgroundColor="SevenBorder" position="1075,533" size="2,129" zPosition="2" />
+  <eLabel backgroundColor="SevenBorder" position="14,533" size="2,171" zPosition="2" />
+  <eLabel backgroundColor="SevenBorder" position="14,702" size="1250,2" zPosition="2" />
+  <eLabel backgroundColor="SevenBorder" position="248,660" size="827,2" zPosition="2" />
+  <eLabel backgroundColor="SevenLine" position="273,605" size="793,2" zPosition="2" />
+<eLabel backgroundColor="SevenBorder" position="14,533" size="1250,2" zPosition="2" />
+<eLabel backgroundColor="SevenBorder" position="1262,533" size="2,171" zPosition="2" />
+<eLabel backgroundColor="SevenBorder" position="248,533" size="2,129" zPosition="2" />
+<eLabel backgroundColor="SevenBackgroundRight" position="250,533" size="825,129" />
+<eLabel backgroundColor="SevenBackground" position="248,659" size="828,44" />
+<eLabel backgroundColor="SevenBackground" position="16,534" size="232,168" />
+  <widget position="273,603" render="Progress" size="793,6" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress">
+    <convert type="SevenHDEventTime">Progress</convert>
+  </widget>
+  <widget alphatest="blend" pixmap="SevenHD/buttons/ico_rec_on.png" position="22,666" render="Pixmap" size="32,32" source="session.RecordState" zPosition="5">
+    <convert type="ConditionalShowHide">Blink</convert>
+  </widget>
+  <widget backgroundColor="SevenBackground" font="Regular;24" halign="right" noWrap="1" position="256,550" render="Label" size="76,36" source="session.Event_Now" transparent="1" valign="center" zPosition="1" foregroundColor="SevenFont1">
+    <convert type="SevenHDEventTime">StartTime</convert>
+    <convert type="SevenHDClockToText">Default</convert>
+  </widget>
+  <eLabel backgroundColor="SevenBackground" font="Regular;24" halign="center" noWrap="1" position="332,550" size="16,36" text="-" transparent="1" valign="center" zPosition="1" foregroundColor="SevenFont1" />
+  <widget backgroundColor="SevenBackground" font="Regular;24" halign="left" noWrap="1" position="348,550" render="Label" size="76,36" source="session.Event_Now" transparent="1" valign="center" zPosition="1" foregroundColor="SevenFont1">
+    <convert type="SevenHDEventTime">EndTime</convert>
+    <convert type="SevenHDClockToText">Default</convert>
+  </widget>
+  <widget font="Regular;48" halign="center" valign="center" noWrap="1" position="434,536" render="SevenHDRunningText" options="movetype=running,startpoint=0,startdelay=2000,wrap=0,always=0,repeat=2,oneshot=1" size="515,64" source="session.Event_Now" backgroundColor="SevenBackground" transparent="1" zPosition="1" foregroundColor="SevenFont1">
+    <convert type="SevenHDEventName">Name</convert>
+  </widget>
+  <widget backgroundColor="SevenBackground" foregroundColor="SevenFont2" font="Regular2; 22" halign="right" noWrap="1" position="260,617" render="Label" size="72,36" source="session.Event_Next" transparent="1" valign="center" zPosition="1">
+    <convert type="SevenHDEventTime">StartTime</convert>
+    <convert type="SevenHDClockToText">Default</convert>
+  </widget>
+  <eLabel backgroundColor="SevenBackground" foregroundColor="SevenFont2" font="Regular2;22" halign="center" noWrap="1" position="332,617" size="16,36" text="-" transparent="1" valign="center" zPosition="1" />
+  <widget backgroundColor="SevenBackground" font="Regular2; 22" foregroundColor="SevenFont2" halign="left" noWrap="1" position="348,617" render="Label" size="72,36" source="session.Event_Next" transparent="1" valign="center" zPosition="1">
+    <convert type="SevenHDEventTime">EndTime</convert>
+    <convert type="SevenHDClockToText">Default</convert>
+  </widget>
+  <widget font="Regular2;36" halign="center" valign="center" noWrap="1" position="434,611" render="SevenHDRunningText" options="movetype=running,startpoint=0,startdelay=2000,wrap=0,always=0,repeat=2,oneshot=1" size="515,48" source="session.Event_Next" backgroundColor="SevenBackground" transparent="1" zPosition="1" foregroundColor="SevenFont2">
+    <convert type="SevenHDEventName">Name</convert>
+  </widget>
+  <widget alphatest="blend" position="22,556" render="SevenHDXPicon" size="220,94" source="session.CurrentService" transparent="1" zPosition="4">
+    <convert type="ServiceName">Reference</convert>
+  </widget>
+  <widget source="session.CurrentService" render="Label" zPosition="3" position="433,671" size="50,22" font="Regular; 19" halign="right" backgroundColor="SevenBackground" foregroundColor="SevenFont1" transparent="1">
+    <convert type="SevenHDServiceInfo">VideoWidth</convert>
+  </widget>
+  <eLabel text="x" position="483,671" size="15,22" zPosition="3" font="Regular; 19" halign="center" backgroundColor="SevenBackground" foregroundColor="SevenFont1" transparent="1" />
+  <widget source="session.CurrentService" render="Label" zPosition="3" position="498,671" size="62,22" font="Regular; 19" halign="left" backgroundColor="SevenBackground" foregroundColor="SevenFont1" transparent="1">
+    <convert type="SevenHDServiceInfo">VideoHeight</convert>
+  </widget>
+  <widget alphatest="blend" pixmap="SevenHD/buttons/ico_format_on.png" position="300,666" render="Pixmap" size="32,32" source="session.CurrentService" zPosition="2">
+    <convert type="SevenHDServiceInfo">IsWidescreen</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.TunerInfo" render="Pixmap" pixmap="SevenHD/buttons/c_on.png" position="993,666" zPosition="2" size="32,32" backgroundColor="SevenBackground" alphatest="blend" valign="center">
+    <convert type="TunerInfo">TunerUseMask</convert>
+    <convert type="ValueBitTest">4</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.TunerInfo" render="Pixmap" pixmap="SevenHD/buttons/b_on.png" position="953,666" zPosition="2" size="32,32" backgroundColor="SevenBackground" alphatest="blend" valign="center">
+    <convert type="TunerInfo">TunerUseMask</convert>
+    <convert type="ValueBitTest">2</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.TunerInfo" render="Pixmap" pixmap="SevenHD/buttons/a_on.png" position="913,666" zPosition="2" size="32,32" backgroundColor="SevenBackground" alphatest="blend" valign="center">
+    <convert type="TunerInfo">TunerUseMask</convert>
+    <convert type="ValueBitTest">1</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.TunerInfo" render="Pixmap" pixmap="SevenHD/buttons/d_on.png" position="1034,666" zPosition="2" size="32,32" backgroundColor="SevenBackground" alphatest="blend" valign="center">
+    <convert type="TunerInfo">TunerUseMask</convert>
+    <convert type="ValueBitTest">8</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <ePixmap pixmap="SevenHD/buttons/a_off.png" position="913,666" size="32,32" zPosition="1" alphatest="blend" />
+  <ePixmap pixmap="SevenHD/buttons/b_off.png" position="953,666" size="32,32" zPosition="1" alphatest="blend" />
+  <ePixmap pixmap="SevenHD/buttons/c_off.png" position="993,666" size="32,32" zPosition="1" alphatest="blend" />
+  <ePixmap pixmap="SevenHD/buttons/d_off.png" position="1034,666" size="32,32" zPosition="1" alphatest="blend" />
+  <ePixmap alphatest="blend" pixmap="SevenHD/buttons/ico_subtitle_off.png" position="744,666" size="32,32" zPosition="1" />
+  <widget alphatest="blend" pixmap="SevenHD/buttons/ico_subtitle_on.png" position="744,666" render="Pixmap" size="32,32" source="session.CurrentService" zPosition="5">
+    <convert type="SevenHDServiceInfo">SubtitlesAvailable</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <ePixmap alphatest="blend" pixmap="SevenHD/buttons/ico_format_off.png" position="300,666" size="32,32" zPosition="1" />
+  <widget alphatest="blend" pixmap="SevenHD/buttons/ico_hd_on.png" position="260,666" render="Pixmap" size="32,32" source="session.CurrentService" zPosition="2">
+    <convert type="SevenHDServiceInfo">IsHD</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <ePixmap alphatest="blend" pixmap="SevenHD/buttons/ico_hd_off.png" position="260,666" size="32,32" zPosition="1" />
+  <widget alphatest="blend" pixmap="SevenHD/buttons/ico_dolby_on.png" position="348,666" render="Pixmap" size="32,32" source="session.CurrentService" zPosition="2">
+    <convert type="SevenHDServiceInfo">IsMultichannel</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <ePixmap alphatest="blend" pixmap="SevenHD/buttons/ico_dolby_off.png" position="348,666" size="32,32" zPosition="1" />
+  <ePixmap alphatest="blend" pixmap="SevenHD/buttons/ico_sub_off.png" position="564,666" size="32,32" zPosition="1" />
+  <widget source="session.CurrentService" render="Pixmap" pixmap="SevenHD/buttons/ico_sub_on.png" position="564,666" size="32,32" zPosition="2" alphatest="blend">
+    <convert type="SevenHDServiceInfo">SubservicesAvailable</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <ePixmap alphatest="blend" pixmap="SevenHD/buttons/ico_txt_off.png" position="624,666" size="32,32" zPosition="1" />
+  <widget alphatest="blend" pixmap="SevenHD/buttons/ico_txt_on.png" position="624,666" render="Pixmap" size="32,32" source="session.CurrentService" zPosition="5">
+    <convert type="SevenHDServiceInfo">HasTelext</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <ePixmap alphatest="blend" pixmap="SevenHD/buttons/ico_hbbtv_off.png" position="388,666" size="32,32" zPosition="1" />
+  <widget alphatest="blend" pixmap="SevenHD/buttons/ico_hbbtv_on.png" position="388,666" render="Pixmap" size="32,32" source="session.CurrentService" zPosition="5">
+    <convert type="SevenHDServiceInfo">HasHBBTV</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <ePixmap alphatest="blend" pixmap="SevenHD/buttons/ico_crypt_off.png" position="684,666" size="32,32" zPosition="1" />
+  <widget alphatest="blend" pixmap="SevenHD/buttons/ico_crypt_on.png" position="684,666" render="Pixmap" size="32,32" source="session.CurrentService" zPosition="5">
+    <convert type="SevenHDServiceInfo">IsCrypted</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.CurrentService" render="Label" position="795,671" size="89,22" backgroundColor="SevenBackground" transparent="1" zPosition="3" foregroundColor="SevenFont1" font="Regular; 19" valign="center" halign="left">
+    <convert type="SevenHDExtraInfo">OrbitalPositionOrTunerSystem</convert>
+  </widget>
+  <widget source="session.FrontendStatus" render="Label" position="832,671" size="70,21" font="Regular; 19" transparent="1" foregroundColor="SevenFont1" backgroundColor="SevenBackground" zPosition="3" halign="right" valign="center">
+    <convert type="FrontendInfo">SNR</convert>
+  </widget>
+  <widget backgroundColor="SevenBackground" font="Regular; 22" halign="right" position="958,550" render="Label" size="107,36" source="session.Event_Now" transparent="1" valign="center" zPosition="1">
+    <convert type="SevenHDEventTime">Remaining</convert>
+    <convert type="SevenHDRemainingToText">InMinutes</convert>
+  </widget>
+  <widget backgroundColor="SevenBackground" font="Regular2; 22" foregroundColor="SevenFont2" valign="center" halign="right" position="958,617" render="Label" size="107,35" source="session.Event_Next" transparent="1" zPosition="1">
+    <convert type="SevenHDEventTime">Duration</convert>
+    <convert type="SevenHDClockToText">InMinutes</convert>
+  </widget>
+
+
+<eLabel backgroundColor="SevenBackgroundRight" position="14,2" size="1250,40" />
+  <eLabel backgroundColor="SevenBorder" position="14,40" size="1250,2" zPosition="2" />
+  <eLabel backgroundColor="SevenBorder" position="14,1" size="1250,2" zPosition="2" />
+  <eLabel backgroundColor="SevenBorder" position="14,1" size="2,41" zPosition="2" />
+  <eLabel backgroundColor="SevenBorder" position="1262,1" size="2,41" zPosition="2" />
+  <eLabel backgroundColor="SevenBackground" position="14,47" size="620,420" />
+  <eLabel backgroundColor="SevenBorder" position="14,465" size="621,2" zPosition="2" />
+  <eLabel backgroundColor="SevenBorder" position="14,45" size="621,2" zPosition="2" />
+  <eLabel backgroundColor="SevenBorder" position="14,45" size="2,420" zPosition="2" />
+  <eLabel backgroundColor="SevenBorder" position="1262,45" size="2,420" zPosition="2" />
+  <eLabel backgroundColor="SevenLine" position="633,45" size="2,420" zPosition="2" />
+  <eLabel backgroundColor="SevenLine" position="643,45" size="2,420" zPosition="2" />
+  <widget backgroundColor="SevenBackground" font="Regular; 30" halign="center" noWrap="1" position="37,50" foregroundColor="SevenFont1" render="Label" size="578,38" source="session.Event_Now" transparent="1" zPosition="1" valign="bottom">
+    <convert type="SevenHDEventName">Name</convert>
+  </widget>
+  <widget backgroundColor="SevenBackground" font="Regular; 20" foregroundColor="SevenFont1" halign="center" position="37,93" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,wrap=1,always=0,repeat=2,oneshot=1" size="578,364" source="session.Event_Now" zPosition="1" transparent="1">
+    <convert type="SevenHDEventName">ExtendedDescription</convert>
+  </widget>
+  <widget backgroundColor="SevenBackground" font="Regular2; 30" foregroundColor="SevenFont2" halign="center" position="666,50" render="Label" size="578,38" source="session.Event_Next" transparent="1" zPosition="1" valign="bottom">
+    <convert type="SevenHDEventName">Name</convert>
+  </widget>
+  <widget source="session.CurrentService" position="37,10" size="500,22" font="Regular2;12" render="Label" halign="left" valign="bottom" foregroundColor="SevenFont2" backgroundColor="SevenBackground" transparent="1" zPosition="1">
+    <convert type="SevenHDMyCaidDisplay">Default</convert>
+  </widget>
+  <eLabel text="SysTemp:" position="400,10" size="70,22" font="Regular2;12" halign="left" valign="bottom" foregroundColor="SevenFont2" backgroundColor="SevenBackground" noWrap="1" transparent="1" zPosition="2" />
+  <widget source="global.CurrentTime" render="SevenHDSYSTemp" position="465,10" size="60,22" font="Regular2;12" halign="left" valign="bottom" foregroundColor="SevenFont2" backgroundColor="SevenBackground" noWrap="1" transparent="1" zPosition="3" />
+  <widget source="session.CurrentService" render="Label" position="535,10" size="100,22" font="Regular2;12" halign="left" valign="bottom" foregroundColor="SevenFont2" backgroundColor="SevenBackground" noWrap="1" transparent="1" zPosition="4">
+    <convert type="SevenHDCpuUsage">CPU: $0</convert>
+  </widget>
+  <widget source="session.CurrentService" render="Label" position="620,10" size="210,22" font="Regular2;12" halign="left" valign="bottom" foregroundColor="SevenFont2" backgroundColor="SevenBackground" noWrap="1" transparent="1" zPosition="5">
+    <convert type="SevenHDLayoutInfo">FleshInfo,Short</convert>
+  </widget>
+  <widget source="session.CurrentService" render="Label" position="779,10" size="200,22" font="Regular2;12" halign="left" valign="bottom" foregroundColor="SevenFont2" backgroundColor="SevenBackground" noWrap="1" transparent="1" zPosition="6">
+    <convert type="SevenHDLayoutInfo">MemTotal,Short</convert>
+  </widget>
+  <widget source="session.CurrentService" render="Label" position="886,10" size="350,22" font="Regular2;12" halign="right" valign="bottom" foregroundColor="SevenFont2" backgroundColor="SevenBackground" noWrap="1" transparent="1" zPosition="7">
+    <convert type="SevenHDLayoutInfo">HddInfo,Full</convert>
+  </widget>
+  <widget source="session.CurrentService" position="37,10" size="500,22" font="Regular2;12" render="Label" halign="left" valign="bottom" foregroundColor="SevenFont2" backgroundColor="SevenBackground" transparent="1" zPosition="1">
+    <convert type="SevenHDMyCaidDisplay">Default</convert>
+  </widget>
+  <eLabel text="SysTemp:" position="400,10" size="70,22" font="Regular2;12" halign="left" valign="bottom" foregroundColor="SevenFont2" backgroundColor="SevenBackground" noWrap="1" transparent="1" zPosition="2" />
+  <widget source="global.CurrentTime" render="SevenHDSYSTemp" position="465,10" size="60,22" font="Regular2;12" halign="left" valign="bottom" foregroundColor="SevenFont2" backgroundColor="SevenBackground" noWrap="1" transparent="1" zPosition="3" />
+  <widget source="session.CurrentService" render="Label" position="535,10" size="100,22" font="Regular2;12" halign="left" valign="bottom" foregroundColor="SevenFont2" backgroundColor="SevenBackground" noWrap="1" transparent="1" zPosition="4">
+    <convert type="SevenHDCpuUsage">CPU: $0</convert>
+  </widget>
+  <widget source="session.CurrentService" render="Label" position="620,10" size="210,22" font="Regular2;12" halign="left" valign="bottom" foregroundColor="SevenFont2" backgroundColor="SevenBackground" noWrap="1" transparent="1" zPosition="5">
+    <convert type="SevenHDLayoutInfo">FleshInfo,Short</convert>
+  </widget>
+  <widget source="session.CurrentService" render="Label" position="779,10" size="200,22" font="Regular2;12" halign="left" valign="bottom" foregroundColor="SevenFont2" backgroundColor="SevenBackground" noWrap="1" transparent="1" zPosition="6">
+    <convert type="SevenHDLayoutInfo">MemTotal,Short</convert>
+  </widget>
+  <widget source="session.CurrentService" render="Label" position="886,10" size="350,22" font="Regular2;12" halign="right" valign="bottom" foregroundColor="SevenFont2" backgroundColor="SevenBackground" noWrap="1" transparent="1" zPosition="7">
+    <convert type="SevenHDLayoutInfo">HddInfo,Full</convert>
+  </widget>
+  <widget backgroundColor="SevenBackground" font="Regular; 20" foregroundColor="SevenFont1" halign="center" position="666,93" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,wrap=1,always=0,repeat=2,oneshot=1" size="578,364" source="session.Event_Next" zPosition="1" transparent="1">
+    <convert type="SevenHDEventName">ExtendedDescription</convert>
+  </widget>
+  <eLabel backgroundColor="SevenBorder" position="643,45" size="621,2" zPosition="2" />
+  <eLabel backgroundColor="SevenBorder" position="643,465" size="621,2" zPosition="2" />
+  <eLabel backgroundColor="SevenBackgroundRight" position="643,47" size="620,420" />
+  <widget font="Regular2; 40" foregroundColor="SevenFont1" halign="left" noWrap="1" position="15,472" render="Label" size="1020,60" source="session.CurrentService" transparent="1" valign="center" zPosition="1" alphatest="blend">
+  <convert type="ServiceName">Name</convert>
+</widget> 
+</screen> 
   <screen name="template_menu_quick1">
     <ePixmap pixmap="SevenHD/buttons/key_red1.png" position="22,669" size="32,37" backgroundColor="SevenBackground" alphatest="blend" />
     <ePixmap pixmap="SevenHD/buttons/key_green1.png" position="222,669" size="32,37" backgroundColor="SevenBackground" alphatest="blend" />
@@ -4871,4 +6890,3 @@
     <widget name="Field9" font="Regular;22" noWrap="1" halign="left" valign="center" foregroundColor="SevenFont1" backgroundColor="SevenBackground" transparent="1" zPosition="1" />
   </screen>
   <!-- TEMPLATES */-->
-
