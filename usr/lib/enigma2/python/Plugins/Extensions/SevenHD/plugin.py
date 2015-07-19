@@ -92,13 +92,13 @@ config.plugins.SevenHD.Volume = ConfigSelection(default="volume-original", choic
 config.plugins.SevenHD.BackgroundColorTrans = ConfigSelection(default="0A", choices = [
 				("0A", _("low")),
 				("4A", _("medium")),
-				("8C", _("high"))
+				("8A", _("high"))
 				])
 				
-config.plugins.SevenHD.BackgroundRightColorTrans = ConfigSelection(default="4D", choices = [
+config.plugins.SevenHD.BackgroundRightColorTrans = ConfigSelection(default="0D", choices = [
 				("0D", _("low")),
 				("4D", _("medium")),
-				("8A", _("high"))
+				("8C", _("high"))
 				])
 				
 config.plugins.SevenHD.Background = ConfigSelection(default="000000", choices = [
@@ -136,6 +136,68 @@ config.plugins.SevenHD.BackgroundRight = ConfigSelection(default="000001", choic
 				("F0A30A", _("amber")),
 				("B27708", _("amber dark")),
 				("000001", _("black")),
+				("1B1775", _("blue")),
+				("0E0C3F", _("blue dark")),
+				("7D5929", _("brown")),
+				("3F2D15", _("brown dark")),
+				("0050EF", _("cobalt")),
+				("001F59", _("cobalt dark")),
+				("1BA1E2", _("cyan")),
+				("0F5B7F", _("cyan dark")),
+				("999999", _("grey")),
+				("3F3F3F", _("grey dark")),
+				("70AD11", _("green")),
+				("213305", _("green dark")),
+				("6D8764", _("olive")),
+				("313D2D", _("olive dark")),
+				("C3461B", _("orange")),
+				("892E13", _("orange dark")),
+				("F472D0", _("pink")),
+				("723562", _("pink dark")),
+				("E51400", _("red")),
+				("330400", _("red dark")),
+				("647687", _("steel")),
+				("262C33", _("steel dark")),
+				("6C0AAB", _("violet")),
+				("1F0333", _("violet dark")),
+				("ffffff", _("white"))
+				])
+				
+config.plugins.SevenHD.BackgroundIB1 = ConfigSelection(default="000002", choices = [
+				("F0A30A", _("amber")),
+				("B27708", _("amber dark")),
+				("000002", _("black")),
+				("1B1775", _("blue")),
+				("0E0C3F", _("blue dark")),
+				("7D5929", _("brown")),
+				("3F2D15", _("brown dark")),
+				("0050EF", _("cobalt")),
+				("001F59", _("cobalt dark")),
+				("1BA1E2", _("cyan")),
+				("0F5B7F", _("cyan dark")),
+				("999999", _("grey")),
+				("3F3F3F", _("grey dark")),
+				("70AD11", _("green")),
+				("213305", _("green dark")),
+				("6D8764", _("olive")),
+				("313D2D", _("olive dark")),
+				("C3461B", _("orange")),
+				("892E13", _("orange dark")),
+				("F472D0", _("pink")),
+				("723562", _("pink dark")),
+				("E51400", _("red")),
+				("330400", _("red dark")),
+				("647687", _("steel")),
+				("262C33", _("steel dark")),
+				("6C0AAB", _("violet")),
+				("1F0333", _("violet dark")),
+				("ffffff", _("white"))
+				])
+				
+config.plugins.SevenHD.BackgroundIB2 = ConfigSelection(default="000003", choices = [
+				("F0A30A", _("amber")),
+				("B27708", _("amber dark")),
+				("000003", _("black")),
 				("1B1775", _("blue")),
 				("0E0C3F", _("blue dark")),
 				("7D5929", _("brown")),
@@ -461,9 +523,9 @@ config.plugins.SevenHD.AnalogStyle = ConfigSelection(default="00999999", choices
 				])
 				
 config.plugins.SevenHD.InfobarStyle = ConfigSelection(default="infobar-style-original", choices = [
-				("infobar-style-original", _("original")),
-				("infobar-style-original2", _("original 2")),
-				("infobar-style-original3", _("original 3")),
+				("infobar-style-original", _("Original")),
+				("infobar-style-original2", _("Original 2")),
+				("infobar-style-original3", _("Original 3")),
 				("infobar-style-zpicon", _("ZPicon")),
 				("infobar-style-zpicon2", _("ZPicon 2")),
 				("infobar-style-zpicon3", _("ZPicon 3")),
@@ -730,6 +792,8 @@ class SevenHD(ConfigListScreen, Screen):
 		list.append(getConfigListEntry(_("button text"), config.plugins.SevenHD.ButtonText))
 		list.append(getConfigListEntry(_("______________________ infobar __________________________________"), ))
 		list.append(getConfigListEntry(_("style"), config.plugins.SevenHD.InfobarStyle))
+		list.append(getConfigListEntry(_("color 1"), config.plugins.SevenHD.BackgroundIB1))
+		list.append(getConfigListEntry(_("color 2"), config.plugins.SevenHD.BackgroundIB2))
 		if config.plugins.SevenHD.InfobarStyle.value == "infobar-style-original":
 			list.append(getConfigListEntry(_("channelname"), config.plugins.SevenHD.InfobarChannelName1))
 		if config.plugins.SevenHD.InfobarStyle.value == "infobar-style-original2" or config.plugins.SevenHD.InfobarStyle.value == "infobar-style-original3":
@@ -871,8 +935,10 @@ class SevenHD(ConfigListScreen, Screen):
 			self.set_font()
 			self.skinSearchAndReplace = []
 			self.skinSearchAndReplace.append(["0A", config.plugins.SevenHD.BackgroundColorTrans.value])
-			self.skinSearchAndReplace.append(["4D", config.plugins.SevenHD.BackgroundRightColorTrans.value])
+			self.skinSearchAndReplace.append(["0D", config.plugins.SevenHD.BackgroundRightColorTrans.value])
 			self.skinSearchAndReplace.append(["000000", config.plugins.SevenHD.Background.value])
+			self.skinSearchAndReplace.append(["000002", config.plugins.SevenHD.BackgroundIB1.value])
+			self.skinSearchAndReplace.append(["000003", config.plugins.SevenHD.BackgroundIB2.value])
 			self.skinSearchAndReplace.append(["000001", config.plugins.SevenHD.BackgroundRight.value])
 			self.skinSearchAndReplace.append(["000050EF", config.plugins.SevenHD.SelectionBackground.value])
 			self.skinSearchAndReplace.append(["00fffff3", config.plugins.SevenHD.Font1.value])
