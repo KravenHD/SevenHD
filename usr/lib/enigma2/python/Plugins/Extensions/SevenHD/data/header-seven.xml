@@ -6615,21 +6615,21 @@
     <eLabel backgroundColor="SevenBorder" position="394,6" size="2,708" zPosition="2" />
   </screen>
   <!-- InfoBarTunerState -->
-  <screen name="TunerState" title="Tuner State" flags="wfNoBorder" position="14,133" size="957,32" zPosition="5" padding="20" spacing="15" backgroundColor="transparent">
+<screen name="TunerState" title="Tuner State" flags="wfNoBorder" position="14,133" size="957,32" zPosition="5" padding="20" spacing="15" backgroundColor="transparent">
     <widget name="Background" backgroundColor="SevenBackground" borderWidth="2" borderColor="SevenBorder" position="0,0" size="957,32" zPosition="-1" transparent="1" />
     <eLabel backgroundColor="SevenBorder" position="0,0" size="2,32" zPosition="-1" />
     <eLabel backgroundColor="SevenBackground" position="0,0" size="957,32" zPosition="-2" />
     <widget name="Type" pixmaps="/usr/lib/enigma2/python/Plugins/Extensions/InfoBarTunerState/record.png,/usr/lib/enigma2/python/Plugins/Extensions/InfoBarTunerState/stream.png,/usr/lib/enigma2/python/Plugins/Extensions/InfoBarTunerState/finished.png,/usr/lib/enigma2/python/Plugins/Extensions/InfoBarTunerState/info.png" position="0,0" size="32,32" zPosition="1" backgroundColor="SevenBackground" transparent="1" alphatest="on" />
     <widget name="Progress" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/InfoBarTunerState/progress.png" position="0,0" size="80,10" zPosition="1" borderWidth="2" borderColor="SevenFont1" backgroundColor="SevenBackground" transparent="1" />
-    <widget name="Field0" font="Regular;22" noWrap="1" halign="left" valign="center" foregroundColor="SevenFont1" backgroundColor="SevenBackground" transparent="1" zPosition="1" />
-    <widget name="Field1" font="Regular;22" noWrap="1" halign="left" valign="center" foregroundColor="SevenFont1" backgroundColor="SevenBackground" transparent="1" zPosition="1" />
-    <widget name="Field2" font="Regular;22" noWrap="1" halign="left" valign="center" foregroundColor="SevenFont1" backgroundColor="SevenBackground" transparent="1" zPosition="1" />
-    <widget name="Field3" font="Regular;22" noWrap="1" halign="left" valign="center" foregroundColor="SevenFont1" backgroundColor="SevenBackground" transparent="1" zPosition="1" />
-    <widget name="Field4" font="Regular;22" noWrap="1" halign="left" valign="center" foregroundColor="SevenFont1" backgroundColor="SevenBackground" transparent="1" zPosition="1" />
-    <widget name="Field5" font="Regular;22" noWrap="1" halign="left" valign="center" foregroundColor="SevenFont1" backgroundColor="SevenBackground" transparent="1" zPosition="1" />
-    <widget name="Field6" font="Regular;22" noWrap="1" halign="left" valign="center" foregroundColor="SevenFont1" backgroundColor="SevenBackground" transparent="1" zPosition="1" />
-    <widget name="Field7" font="Regular;22" noWrap="1" halign="left" valign="center" foregroundColor="SevenFont1" backgroundColor="SevenBackground" transparent="1" zPosition="1" />
-    <widget name="Field8" font="Regular;22" noWrap="1" halign="left" valign="center" foregroundColor="SevenFont1" backgroundColor="SevenBackground" transparent="1" zPosition="1" />
-    <widget name="Field9" font="Regular;22" noWrap="1" halign="left" valign="center" foregroundColor="SevenFont1" backgroundColor="SevenBackground" transparent="1" zPosition="1" />
+    <widget name="Field0" font="Regular;22" noWrap="1" halign="left" valign="center" foregroundColor="SevenFont1" backgroundColor="SevenBackground" transparent="1" zPosition="1" size="955,720" />
+    <widget name="Field1" font="Regular;22" noWrap="1" halign="left" valign="center" foregroundColor="SevenFont1" backgroundColor="SevenBackground" transparent="1" zPosition="1" size="955,720" />
+    <widget name="Field2" font="Regular;22" noWrap="1" halign="left" valign="center" foregroundColor="SevenFont1" backgroundColor="SevenBackground" transparent="1" zPosition="1" size="955,720" />
+    <widget name="Field3" font="Regular;22" noWrap="1" halign="left" valign="center" foregroundColor="SevenFont1" backgroundColor="SevenBackground" transparent="1" zPosition="1" size="955,720" />
+    <widget name="Field4" font="Regular;22" noWrap="1" halign="left" valign="center" foregroundColor="SevenFont1" backgroundColor="SevenBackground" transparent="1" zPosition="1" size="955,720" />
+    <widget name="Field5" font="Regular;22" noWrap="1" halign="left" valign="center" foregroundColor="SevenFont1" backgroundColor="SevenBackground" transparent="1" zPosition="1" size="955,720" />
+    <widget name="Field6" font="Regular;22" noWrap="1" halign="left" valign="center" foregroundColor="SevenFont1" backgroundColor="SevenBackground" transparent="1" zPosition="1" size="955,720" />
+    <widget name="Field7" font="Regular;22" noWrap="1" halign="left" valign="center" foregroundColor="SevenFont1" backgroundColor="SevenBackground" transparent="1" zPosition="1" size="955,720" />
+    <widget name="Field8" font="Regular;22" noWrap="1" halign="left" valign="center" foregroundColor="SevenFont1" backgroundColor="SevenBackground" transparent="1" zPosition="1" size="955,720" />
+    <widget name="Field9" font="Regular;22" noWrap="1" halign="left" valign="center" foregroundColor="SevenFont1" backgroundColor="SevenBackground" transparent="1" zPosition="1" size="955,720" />
   </screen>
   <!-- TEMPLATES */-->
