@@ -86,7 +86,8 @@ config.plugins.SevenHD.Volume = ConfigSelection(default="volume-original", choic
 				("volume-left", _("left")),
 				("volume-right", _("right")),
 				("volume-top", _("top")),
-				("volume-number", _("number"))
+				("volume-number", _("number")),
+				("volume-center", _("center"))
 				])
 				
 config.plugins.SevenHD.BackgroundColorTrans = ConfigSelection(default="0A", choices = [
@@ -723,7 +724,6 @@ class SevenHD(ConfigListScreen, Screen):
   <eLabel position="70,12" size="708,46" text="SevenHD - Konfigurationstool" font="Regular; 35" valign="center" halign="center" transparent="1" backgroundColor="#00000000" foregroundColor="#00ffffff" name="," />
 <eLabel position="891,657" size="372,46" text="Thanks to http://www.gigablue-support.org/" font="Regular; 12" valign="center" halign="center" transparent="1" backgroundColor="#00000000" foregroundColor="#00ffffff" name="," />
   <widget name="helperimage" position="891,178" size="372,328" zPosition="1" backgroundColor="#00000000" />
-  <eLabel backgroundColor="#00000000" position="0,0" size="1280,720" transparent="0" zPosition="-9" />
   <widget backgroundColor="#00000000" font="Regular2; 34" foregroundColor="#00ffffff" position="70,12" render="Label" size="708,46" source="Title" transparent="1" halign="center" valign="center" noWrap="1" />
     <eLabel backgroundColor="#00000000" position="6,6" size="842,708" transparent="0" zPosition="-9" foregroundColor="#00ffffff" />
     <eLabel backgroundColor="#00ffffff" position="6,6" size="842,2" zPosition="2" />
@@ -744,7 +744,7 @@ class SevenHD(ConfigListScreen, Screen):
     <eLabel backgroundColor="#00ffffff" position="878,714" size="396,2" zPosition="2" />
     <eLabel backgroundColor="#00ffffff" position="878,6" size="2,708" zPosition="2" />
     <eLabel backgroundColor="#00ffffff" position="1274,6" size="2,708" zPosition="2" />
-<eLabel position="891,88" size="372,46" text="Version: 2.2" font="Regular; 35" valign="center" halign="center" transparent="1" backgroundColor="#00000000" foregroundColor="#00ffffff" name="," />
+<eLabel position="891,88" size="372,46" text="Version: 2.3" font="Regular; 35" valign="center" halign="center" transparent="1" backgroundColor="#00000000" foregroundColor="#00ffffff" name="," />
 </screen>
 """
 
@@ -1074,6 +1074,7 @@ class SevenHD(ConfigListScreen, Screen):
 			console1 = eConsoleAppContainer()
 			console2 = eConsoleAppContainer()
 			console3 = eConsoleAppContainer()
+			console4 = eConsoleAppContainer()
 			
 			#buttons
 			console1.execute("rm -rf /usr/share/enigma2/SevenHD/buttons/*.*; rm -rf /usr/share/enigma2/SevenHD/buttons; wget -q http://www.gigablue-support.org/skins/SevenHD/%s.tar.gz -O /tmp/%s.tar.gz; tar xf /tmp/%s.tar.gz -C /usr/share/enigma2/SevenHD/" % (str(config.plugins.SevenHD.ButtonStyle.value), str(config.plugins.SevenHD.ButtonStyle.value), str(config.plugins.SevenHD.ButtonStyle.value)))
@@ -1081,6 +1082,8 @@ class SevenHD(ConfigListScreen, Screen):
 			console2.execute("rm -rf /usr/share/enigma2/SevenHD/WetterIcons/*.*; rm -rf /usr/share/enigma2/SevenHD/WetterIcons; wget -q http://www.gigablue-support.org/skins/SevenHD/%s.tar.gz -O /tmp/%s.tar.gz; tar xf /tmp/%s.tar.gz -C /usr/share/enigma2/SevenHD/" % (str(config.plugins.SevenHD.WeatherStyle.value), str(config.plugins.SevenHD.WeatherStyle.value), str(config.plugins.SevenHD.WeatherStyle.value)))
 			#clock
 			console3.execute("rm -rf /usr/share/enigma2/SevenHD/clock/*.*; rm -rf /usr/share/enigma2/SevenHD/clock; wget -q http://www.gigablue-support.org/skins/SevenHD/%s.tar.gz -O /tmp/%s.tar.gz; tar xf /tmp/%s.tar.gz -C /usr/share/enigma2/SevenHD/" % (str(config.plugins.SevenHD.ClockStyle.value), str(config.plugins.SevenHD.ClockStyle.value), str(config.plugins.SevenHD.ClockStyle.value)))
+			#volume
+			console4.execute("rm -rf /usr/share/enigma2/SevenHD/volume/*.*; rm -rf /usr/share/enigma2/SevenHD/volume; wget -q http://www.gigablue-support.org/skins/SevenHD/%s.tar.gz -O /tmp/%s.tar.gz; tar xf /tmp/%s.tar.gz -C /usr/share/enigma2/SevenHD/" % (str(config.plugins.SevenHD.Volume.value), str(config.plugins.SevenHD.Volume.value), str(config.plugins.SevenHD.Volume.value)))
 						
 		except:
 			self.session.open(MessageBox, _("Error creating Skin!"), MessageBox.TYPE_ERROR)

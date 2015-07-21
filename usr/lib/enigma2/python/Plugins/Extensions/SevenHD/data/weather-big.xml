@@ -1,97 +1,97 @@
 
 <!-- /* Weather -->
-  <widget backgroundColor="SevenBackground" font="Regular2; 20" foregroundColor="SevenFont2" render="Label" position="22,22" size="60,25" source="session.CurrentService" zPosition="3" halign="center" transparent="1" noWrap="1">
+  <widget backgroundColor="SevenBackgroundIB1" font="Regular2; 20" foregroundColor="SevenFont2" render="Label" position="22,22" size="60,25" source="session.CurrentService" zPosition="3" halign="center" transparent="0" noWrap="1">
     <convert type="SevenHDYWeather">fweekday0</convert>
   </widget>
-  <widget alphatest="blend" render="SevenHDPiconUni" position="83,10" size="50,50" source="session.CurrentService" path="WetterIcons" transparent="1" zPosition="8">
+  <widget alphatest="blend" render="SevenHDPiconUni" position="83,10" size="50,50" source="session.CurrentService" path="WetterIcons" transparent="0" zPosition="8">
     <convert type="SevenHDYWeather">fpicon0</convert>
   </widget>
-  <widget Wrap="1" backgroundColor="SevenBackground" font="Regular2; 16" foregroundColor="SevenFont2" render="Label" position="50,60" size="118,38" source="session.CurrentService" halign="center" transparent="1" zPosition="8" valign="center">
+  <widget Wrap="1" backgroundColor="SevenBackgroundIB1" font="Regular2; 16" foregroundColor="SevenFont2" render="Label" position="50,60" size="118,38" source="session.CurrentService" halign="center" transparent="0" zPosition="8" valign="center">
     <convert type="SevenHDYWeather">ftext0</convert>
   </widget>
-  <widget noWrap="1" backgroundColor="SevenBackground" font="Regular; 18" foregroundColor="SevenFont1" render="Label" position="133,10" size="60,25" source="session.CurrentService" zPosition="8" halign="center" transparent="1">
+  <widget noWrap="1" backgroundColor="SevenBackgroundIB1" font="Regular; 18" foregroundColor="SevenFont1" render="Label" position="133,10" size="60,25" source="session.CurrentService" zPosition="8" halign="center" transparent="0">
     <convert type="SevenHDYWeather">ftemp_high0</convert>
   </widget>
-  <widget noWrap="1" backgroundColor="SevenBackground" font="Regular; 18" foregroundColor="SevenFont1" render="Label" position="133,35" size="60,25" source="session.CurrentService" zPosition="8" halign="center" transparent="1">
+  <widget noWrap="1" backgroundColor="SevenBackgroundIB1" font="Regular; 18" foregroundColor="SevenFont1" render="Label" position="133,35" size="60,25" source="session.CurrentService" zPosition="8" halign="center" transparent="0">
     <convert type="SevenHDYWeather">ftemp_low0</convert>
   </widget>
-  <widget backgroundColor="SevenBackground" font="Regular2; 20" foregroundColor="SevenFont2" render="Label" position="209,22" size="60,25" source="session.CurrentService" zPosition="3" halign="center" transparent="1" noWrap="1">
+  <widget backgroundColor="SevenBackgroundIB1" font="Regular2; 20" foregroundColor="SevenFont2" render="Label" position="209,22" size="60,25" source="session.CurrentService" zPosition="3" halign="center" transparent="0" noWrap="1">
     <convert type="SevenHDYWeather">fweekday1</convert>
   </widget>
-  <widget alphatest="blend" render="SevenHDPiconUni" position="269,10" size="50,50" source="session.CurrentService" path="WetterIcons" transparent="1" zPosition="5">
+  <widget alphatest="blend" render="SevenHDPiconUni" position="269,10" size="50,50" source="session.CurrentService" path="WetterIcons" transparent="0" zPosition="5">
     <convert type="SevenHDYWeather">fpicon1</convert>
   </widget>
-  <widget Wrap="1" backgroundColor="SevenBackground" font="Regular2; 16" foregroundColor="SevenFont2" render="Label" position="235,61" size="118,38" source="session.CurrentService" halign="center" transparent="1" zPosition="8" valign="center">
+  <widget Wrap="1" backgroundColor="SevenBackgroundIB1" font="Regular2; 16" foregroundColor="SevenFont2" render="Label" position="235,61" size="118,38" source="session.CurrentService" halign="center" transparent="0" zPosition="8" valign="center">
     <convert type="SevenHDYWeather">ftext1</convert>
   </widget>
-  <widget noWrap="1" backgroundColor="SevenBackground" font="Regular; 18" foregroundColor="SevenFont1" render="Label" position="319,10" size="60,25" source="session.CurrentService" zPosition="8" halign="center" transparent="1">
+  <widget noWrap="1" backgroundColor="SevenBackgroundIB1" font="Regular; 18" foregroundColor="SevenFont1" render="Label" position="319,10" size="60,25" source="session.CurrentService" zPosition="8" halign="center" transparent="0">
     <convert type="SevenHDYWeather">ftemp_high1</convert>
   </widget>
-  <widget noWrap="1" backgroundColor="SevenBackground" font="Regular; 18" foregroundColor="SevenFont1" render="Label" position="319,35" size="60,25" source="session.CurrentService" zPosition="8" halign="center" transparent="1">
+  <widget noWrap="1" backgroundColor="SevenBackgroundIB1" font="Regular; 18" foregroundColor="SevenFont1" render="Label" position="319,35" size="60,25" source="session.CurrentService" zPosition="8" halign="center" transparent="0">
     <convert type="SevenHDYWeather">ftemp_low1</convert>
   </widget>
- <widget backgroundColor="SevenBackground" font="Regular2; 20" foregroundColor="SevenFont2" render="Label" position="395,22" size="60,25" source="session.CurrentService" zPosition="3" halign="center" transparent="1" noWrap="1">
+ <widget backgroundColor="SevenBackgroundIB1" font="Regular2; 20" foregroundColor="SevenFont2" render="Label" position="395,22" size="60,25" source="session.CurrentService" zPosition="3" halign="center" transparent="0" noWrap="1">
     <convert type="SevenHDYWeather">fweekday2</convert>
   </widget>
-  <widget alphatest="blend" render="SevenHDPiconUni" position="456,10" size="50,50" source="session.CurrentService" path="WetterIcons" transparent="1" zPosition="5">
+  <widget alphatest="blend" render="SevenHDPiconUni" position="456,10" size="50,50" source="session.CurrentService" path="WetterIcons" transparent="0" zPosition="5">
     <convert type="SevenHDYWeather">fpicon2</convert>
   </widget>
-  <widget Wrap="1" backgroundColor="SevenBackground" font="Regular2; 16" foregroundColor="SevenFont2" render="Label" position="424,61" size="118,38" source="session.CurrentService" halign="center" transparent="1" zPosition="8" valign="center">
+  <widget Wrap="1" backgroundColor="SevenBackgroundIB1" font="Regular2; 16" foregroundColor="SevenFont2" render="Label" position="424,61" size="118,38" source="session.CurrentService" halign="center" transparent="0" zPosition="8" valign="center">
     <convert type="SevenHDYWeather">ftext2</convert>
   </widget>
-  <widget noWrap="1" backgroundColor="SevenBackground" font="Regular; 18" foregroundColor="SevenFont1" render="Label" position="505,10" size="60,25" source="session.CurrentService" zPosition="8" halign="center" transparent="1">
+  <widget noWrap="1" backgroundColor="SevenBackgroundIB1" font="Regular; 18" foregroundColor="SevenFont1" render="Label" position="505,10" size="60,25" source="session.CurrentService" zPosition="8" halign="center" transparent="0">
     <convert type="SevenHDYWeather">ftemp_high2</convert>
   </widget>
-  <widget noWrap="1" backgroundColor="SevenBackground" font="Regular; 18" foregroundColor="SevenFont1" render="Label" position="505,35" size="60,25" source="session.CurrentService" zPosition="8" halign="center" transparent="1">
+  <widget noWrap="1" backgroundColor="SevenBackgroundIB1" font="Regular; 18" foregroundColor="SevenFont1" render="Label" position="505,35" size="60,25" source="session.CurrentService" zPosition="8" halign="center" transparent="0">
     <convert type="SevenHDYWeather">ftemp_low2</convert>
   </widget>
-  <widget backgroundColor="SevenBackground" font="Regular2; 20" foregroundColor="SevenFont2" render="Label" position="580,22" size="60,25" source="session.CurrentService" zPosition="3" halign="center" transparent="1" noWrap="1">
+  <widget backgroundColor="SevenBackgroundIB1" font="Regular2; 20" foregroundColor="SevenFont2" render="Label" position="580,22" size="60,25" source="session.CurrentService" zPosition="3" halign="center" transparent="0" noWrap="1">
     <convert type="SevenHDYWeather">fweekday3</convert>
   </widget>
-  <widget alphatest="blend" render="SevenHDPiconUni" position="641,10" size="50,50" source="session.CurrentService" path="WetterIcons" transparent="1" zPosition="5">
+  <widget alphatest="blend" render="SevenHDPiconUni" position="641,10" size="50,50" source="session.CurrentService" path="WetterIcons" transparent="0" zPosition="5">
     <convert type="SevenHDYWeather">fpicon3</convert>
   </widget>
-  <widget Wrap="1" backgroundColor="SevenBackground" font="Regular2; 16" foregroundColor="SevenFont2" render="Label" position="609,61" size="118,38" source="session.CurrentService" halign="center" transparent="1" zPosition="8" valign="center">
+  <widget Wrap="1" backgroundColor="SevenBackgroundIB1" font="Regular2; 16" foregroundColor="SevenFont2" render="Label" position="609,61" size="118,38" source="session.CurrentService" halign="center" transparent="0" zPosition="8" valign="center">
     <convert type="SevenHDYWeather">ftext3</convert>
   </widget>
-<widget noWrap="1" backgroundColor="SevenBackground" font="Regular; 18" foregroundColor="SevenFont1" render="Label" position="691,10" size="60,25" source="session.CurrentService" zPosition="8" halign="center" transparent="1">
+<widget noWrap="1" backgroundColor="SevenBackgroundIB1" font="Regular; 18" foregroundColor="SevenFont1" render="Label" position="691,10" size="60,25" source="session.CurrentService" zPosition="8" halign="center" transparent="0">
     <convert type="SevenHDYWeather">ftemp_high3</convert>
   </widget>
-<widget noWrap="1" backgroundColor="SevenBackground" font="Regular; 18" foregroundColor="SevenFont1" render="Label" position="691,35" size="60,25" source="session.CurrentService" zPosition="8" halign="center" transparent="1">
+<widget noWrap="1" backgroundColor="SevenBackgroundIB1" font="Regular; 18" foregroundColor="SevenFont1" render="Label" position="691,35" size="60,25" source="session.CurrentService" zPosition="8" halign="center" transparent="0">
     <convert type="SevenHDYWeather">ftemp_low3</convert>
   </widget>
-  <widget backgroundColor="SevenBackground" font="Regular2; 20" foregroundColor="SevenFont2" render="Label" position="765,22" size="60,25" source="session.CurrentService" zPosition="3" halign="center" transparent="1" noWrap="1">
+  <widget backgroundColor="SevenBackgroundIB1" font="Regular2; 20" foregroundColor="SevenFont2" render="Label" position="765,22" size="60,25" source="session.CurrentService" zPosition="3" halign="center" transparent="0" noWrap="1">
     <convert type="SevenHDYWeather">fweekday4</convert>
  </widget>
-  <widget alphatest="blend" render="SevenHDPiconUni" position="826,10" size="50,50" source="session.CurrentService" path="WetterIcons" transparent="1" zPosition="5">
+  <widget alphatest="blend" render="SevenHDPiconUni" position="826,10" size="50,50" source="session.CurrentService" path="WetterIcons" transparent="0" zPosition="5">
     <convert type="SevenHDYWeather">fpicon4</convert>
   </widget>
-  <widget Wrap="1" backgroundColor="SevenBackground" font="Regular2; 16" foregroundColor="SevenFont2" render="Label" position="794,61" size="118,38" source="session.CurrentService" halign="center" transparent="1" zPosition="8" valign="center">
+  <widget Wrap="1" backgroundColor="SevenBackgroundIB1" font="Regular2; 16" foregroundColor="SevenFont2" render="Label" position="794,61" size="118,38" source="session.CurrentService" halign="center" transparent="0" zPosition="8" valign="center">
     <convert type="SevenHDYWeather">ftext4</convert>
   </widget>
-  <widget noWrap="1" backgroundColor="SevenBackground" font="Regular; 18" foregroundColor="SevenFont1" render="Label" position="876,10" size="60,25" source="session.CurrentService" zPosition="8" halign="center" transparent="1">
+  <widget noWrap="1" backgroundColor="SevenBackgroundIB1" font="Regular; 18" foregroundColor="SevenFont1" render="Label" position="876,10" size="60,25" source="session.CurrentService" zPosition="8" halign="center" transparent="0">
     <convert type="SevenHDYWeather">ftemp_high4</convert>
   </widget>
-  <widget noWrap="1" backgroundColor="SevenBackground" font="Regular; 18" foregroundColor="SevenFont1" render="Label" position="876,35" size="60,25" source="session.CurrentService" zPosition="8" halign="center" transparent="1">
+  <widget noWrap="1" backgroundColor="SevenBackgroundIB1" font="Regular; 18" foregroundColor="SevenFont1" render="Label" position="876,35" size="60,25" source="session.CurrentService" zPosition="8" halign="center" transparent="0">
     <convert type="SevenHDYWeather">ftemp_low4</convert>
   </widget>
-<eLabel text="Aktuelle Temp:" position="1000,8" size="170,22" zPosition="5" halign="left" font="Regular2; 18" backgroundColor="SevenBackground" transparent="1" foregroundColor="SevenFont2" />
-<widget noWrap="1" backgroundColor="SevenBackground" font="Regular; 18" foregroundColor="SevenFont1" render="Label" position="1160,8" size="70,22" source="session.CurrentService" zPosition="3" halign="left" transparent="1">
+<eLabel text="Aktuelle Temp:" position="1000,8" size="150,22" zPosition="5" halign="left" font="Regular2; 18" backgroundColor="SevenBackgroundIB1" transparent="0" foregroundColor="SevenFont2" />
+<widget noWrap="1" backgroundColor="SevenBackgroundIB1" font="Regular; 18" foregroundColor="SevenFont1" render="Label" position="1160,8" size="70,22" source="session.CurrentService" zPosition="3" halign="left" transparent="0">
     <convert type="SevenHDYWeather">temp</convert>
   </widget>
-<eLabel text="Wind:" position="1000,32" size="70,22" zPosition="5" halign="left" font="Regular2; 18" backgroundColor="SevenBackground" transparent="1" foregroundColor="SevenFont2" />
-<widget Wrap="1" backgroundColor="SevenBackground" font="Regular; 18" foregroundColor="SevenFont1" render="Label" position="1070,32" size="90,22" source="session.CurrentService" zPosition="3" halign="right" transparent="1">
+<eLabel text="Wind:" position="1000,32" size="60,22" zPosition="5" halign="left" font="Regular2; 18" backgroundColor="SevenBackgroundIB1" transparent="0" foregroundColor="SevenFont2" />
+<widget Wrap="1" backgroundColor="SevenBackgroundIB1" font="Regular; 18" foregroundColor="SevenFont1" render="Label" position="1070,32" size="90,22" source="session.CurrentService" zPosition="3" halign="right" transparent="0">
   <convert type="SevenHDYWeather">speed</convert>
   </widget>
-<widget Wrap="1" backgroundColor="SevenBackground" font="Regular; 18" foregroundColor="SevenFont1" render="Label" position="1165,32" size="75,22" source="session.CurrentService" zPosition="3" halign="left" transparent="1">
+<widget Wrap="1" backgroundColor="SevenBackgroundIB1" font="Regular; 18" foregroundColor="SevenFont1" render="Label" position="1165,32" size="75,22" source="session.CurrentService" zPosition="3" halign="left" transparent="0">
   <convert type="SevenHDYWeather">direction</convert>
   </widget>
- <eLabel text="Luftfeuchtigkeit:" position="1000,56" size="180,25" zPosition="5" halign="left" font="Regular2; 18" backgroundColor="SevenBackground" transparent="1" foregroundColor="SevenFont2" />
-  <widget noWrap="1" backgroundColor="SevenBackground" font="Regular; 18" foregroundColor="SevenFont1" render="Label" position="1170,56" size="60,22" source="session.CurrentService" zPosition="3" halign="left" transparent="1">
+ <eLabel text="Luftfeuchtigkeit:" position="1000,56" size="160,25" zPosition="5" halign="left" font="Regular2; 18" backgroundColor="SevenBackgroundIB1" transparent="0" foregroundColor="SevenFont2" />
+  <widget noWrap="1" backgroundColor="SevenBackgroundIB1" font="Regular; 18" foregroundColor="SevenFont1" render="Label" position="1170,56" size="60,22" source="session.CurrentService" zPosition="3" halign="left" transparent="0">
     <convert type="SevenHDYWeather">humidity</convert>
   </widget>
- <eLabel text="Ort:" position="1000,80" size="60,25" zPosition="5" halign="left" font="Regular2; 18" backgroundColor="SevenBackground" transparent="1" foregroundColor="SevenFont2" />
-  <widget noWrap="1" backgroundColor="SevenBackground" font="Regular; 18" foregroundColor="SevenFont1" render="Label" position="1060,80" size="180,22" source="session.CurrentService" zPosition="3" halign="left" transparent="1">
+ <eLabel text="Ort:" position="1000,80" size="60,25" zPosition="5" halign="left" font="Regular2; 18" backgroundColor="SevenBackgroundIB1" transparent="0" foregroundColor="SevenFont2" />
+  <widget noWrap="1" backgroundColor="SevenBackgroundIB1" font="Regular; 18" foregroundColor="SevenFont1" render="Label" position="1060,80" size="180,22" source="session.CurrentService" zPosition="3" halign="left" transparent="0">
     <convert type="SevenHDYWeather">city</convert>
   </widget>
   <panel name="template_weather_big" />
