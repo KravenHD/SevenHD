@@ -1,5 +1,6 @@
 <!--/* Volume -->
-<screen name="Volume" position="548,286" size="184,184" zPosition="99" title="Volume" flags="wfNoBorder" backgroundColor="transparent">
-<widget source="global.CurrentTime" render="SevenHDVolumeCycle" position="0,0" size="184,184" alphatest="blend" transparent="1" />
+<screen name="Volume" position="548,286" size="200,200" zPosition="99" title="Volume" flags="wfNoBorder" backgroundColor="transparent">
+<widget source="global.CurrentTime" render="SevenHDVolumeCycle" position="0,0" size="200,200" alphatest="blend" transparent="1" />
+<ePixmap pixmap="SevenHD/volume/back.png" position="0,0" size="200,200" backgroundColor="transparent" alphatest="blend" />
 </screen>
 <!-- Volume */-->
