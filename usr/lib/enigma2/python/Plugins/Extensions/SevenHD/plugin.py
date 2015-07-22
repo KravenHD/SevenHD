@@ -319,6 +319,37 @@ config.plugins.SevenHD.Font2 = ConfigSelection(default="00fffff4", choices = [
 				("00fffff4", _("white"))
 				])
 				
+config.plugins.SevenHD.FontCN = ConfigSelection(default="00fffff8", choices = [
+				("00F0A30A", _("amber")),
+				("00B27708", _("amber dark")),
+				("00000000", _("black")),
+				("001B1775", _("blue")),
+				("000E0C3F", _("blue dark")),
+				("007D5929", _("brown")),
+				("003F2D15", _("brown dark")),
+				("000050EF", _("cobalt")),
+				("00001F59", _("cobalt dark")),
+				("001BA1E2", _("cyan")),
+				("000F5B7F", _("cyan dark")),
+				("00999999", _("grey")),
+				("003F3F3F", _("grey dark")),
+				("0070AD11", _("green")),
+				("00213305", _("green dark")),
+				("006D8764", _("olive")),
+				("00313D2D", _("olive dark")),
+				("00C3461B", _("orange")),
+				("00892E13", _("orange dark")),
+				("00F472D0", _("pink")),
+				("00723562", _("pink dark")),
+				("00E51400", _("red")),
+				("00330400", _("red dark")),
+				("00647687", _("steel")),
+				("00262C33", _("steel dark")),
+				("006C0AAB", _("violet")),
+				("001F0333", _("violet dark")),
+				("00fffff8", _("white"))
+				])
+				
 config.plugins.SevenHD.SelectionFont = ConfigSelection(default="00fffff7", choices = [
 				("00F0A30A", _("amber")),
 				("00B27708", _("amber dark")),
@@ -577,7 +608,14 @@ config.plugins.SevenHD.RunningText = ConfigSelection(default="movetype=running",
 				
 config.plugins.SevenHD.ButtonStyle = ConfigSelection(default="buttons_seven_white", choices = [
 				("buttons_seven_white", _("white")),
-				("buttons_seven_black", _("black"))
+				("buttons_seven_black", _("black")),
+				("buttons_seven_blue", _("blue")),
+				("buttons_seven_green", _("green")),
+				("buttons_seven_grey", _("grey")),
+				("buttons_seven_orange", _("orange")),
+				("buttons_seven_red", _("red")),
+				("buttons_seven_violet", _("violet")),
+				("buttons_seven_yellow", _("yellow"))
 				])
 config.plugins.SevenHD.ClockStyle = ConfigSelection(default="clock-standard", choices = [
 				("clock-standard", _("standard")),
@@ -806,6 +844,7 @@ class SevenHD(ConfigListScreen, Screen):
 			list.append(getConfigListEntry(_("channelname"), config.plugins.SevenHD.InfobarChannelName5))
 		if config.plugins.SevenHD.InfobarStyle.value == "infobar-style-zzpicon2" or config.plugins.SevenHD.InfobarStyle.value == "infobar-style-zzpicon3":
 			list.append(getConfigListEntry(_("channelname"), config.plugins.SevenHD.InfobarChannelName6))
+		list.append(getConfigListEntry(_("color channelname"), config.plugins.SevenHD.FontCN))
 		list.append(getConfigListEntry(_("clock"), config.plugins.SevenHD.ClockStyle))
 		if config.plugins.SevenHD.ClockStyle.value == "clock-analog":
 			list.append(getConfigListEntry(_("color clock analog"), config.plugins.SevenHD.AnalogStyle))
@@ -943,6 +982,7 @@ class SevenHD(ConfigListScreen, Screen):
 			self.skinSearchAndReplace.append(["000050EF", config.plugins.SevenHD.SelectionBackground.value])
 			self.skinSearchAndReplace.append(["00fffff3", config.plugins.SevenHD.Font1.value])
 			self.skinSearchAndReplace.append(["00fffff4", config.plugins.SevenHD.Font2.value])
+			self.skinSearchAndReplace.append(["00fffff8", config.plugins.SevenHD.FontCN.value])
 			self.skinSearchAndReplace.append(["00fffff7", config.plugins.SevenHD.SelectionFont.value])
 			self.skinSearchAndReplace.append(["00fffff2", config.plugins.SevenHD.ButtonText.value])
 			self.skinSearchAndReplace.append(["00fffff6", config.plugins.SevenHD.Progress.value])
