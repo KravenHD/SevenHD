@@ -573,12 +573,15 @@ config.plugins.SevenHD.InfobarStyle = ConfigSelection(default="infobar-style-ori
 				
 config.plugins.SevenHD.ChannelSelectionStyle = ConfigSelection(default="channelselection-twocolumns", choices = [
 				("channelselection-twocolumns", _("two columns")),
+				("channelselection-twocolumns2", _("two columns 2")),
 				("channelselection-threecolumns", _("three columns")),
+				("channelselection-threecolumnsminitv", _("three columns miniTV")),
 				("channelselection-zpicon", _("ZPicon")),
 				("channelselection-xpicon", _("XPicon")),
 				("channelselection-zzpicon", _("ZZPicon")),
 				("channelselection-zzzpicon", _("ZZZPicon")),
-				("channelselection-minitv", _("miniTV"))
+				("channelselection-minitv", _("miniTV")),
+				("channelselection-pip", _("miniTV/PiP"))
 				])
 				
 config.plugins.SevenHD.NumberZapExt = ConfigSelection(default="numberzapext-none", choices = [
@@ -610,6 +613,7 @@ config.plugins.SevenHD.ButtonStyle = ConfigSelection(default="buttons_seven_whit
 				("buttons_seven_white", _("white")),
 				("buttons_seven_black", _("black")),
 				("buttons_seven_blue", _("blue")),
+				("buttons_seven_black_silver", _("black/silver")),
 				("buttons_seven_green", _("green")),
 				("buttons_seven_grey", _("grey")),
 				("buttons_seven_orange", _("orange")),
@@ -782,7 +786,7 @@ class SevenHD(ConfigListScreen, Screen):
     <eLabel backgroundColor="#00ffffff" position="878,714" size="396,2" zPosition="2" />
     <eLabel backgroundColor="#00ffffff" position="878,6" size="2,708" zPosition="2" />
     <eLabel backgroundColor="#00ffffff" position="1274,6" size="2,708" zPosition="2" />
-<eLabel position="891,88" size="372,46" text="Version: 2.3" font="Regular; 35" valign="center" halign="center" transparent="1" backgroundColor="#00000000" foregroundColor="#00ffffff" name="," />
+<eLabel position="891,88" size="372,46" text="Version: 2.4" font="Regular; 35" valign="center" halign="center" transparent="1" backgroundColor="#00000000" foregroundColor="#00ffffff" name="," />
 </screen>
 """
 
@@ -808,17 +812,17 @@ class SevenHD(ConfigListScreen, Screen):
 
 	def mylist(self):
 		list = []
-		list.append(getConfigListEntry(_("______________________ system __________________________________"), ))
+		list.append(getConfigListEntry(_("_____________________________________________ system _________________________________________________"), ))
 		list.append(getConfigListEntry(_("image"), config.plugins.SevenHD.Image))
 		list.append(getConfigListEntry(_("button style"), config.plugins.SevenHD.ButtonStyle))
 		list.append(getConfigListEntry(_("running text"), config.plugins.SevenHD.RunningText))
 		list.append(getConfigListEntry(_("Weather ID"), config.plugins.SevenHD.weather_city))
-		list.append(getConfigListEntry(_("______________________ background __________________________________"), ))
+		list.append(getConfigListEntry(_("_____________________________________________ background _____________________________________________"), ))
 		list.append(getConfigListEntry(_("color layer main"), config.plugins.SevenHD.Background))
 		list.append(getConfigListEntry(_("transparency"), config.plugins.SevenHD.BackgroundColorTrans))
 		list.append(getConfigListEntry(_("color layer right"), config.plugins.SevenHD.BackgroundRight))
 		list.append(getConfigListEntry(_("transparency"), config.plugins.SevenHD.BackgroundRightColorTrans))
-		list.append(getConfigListEntry(_("______________________ colors __________________________________"), ))
+		list.append(getConfigListEntry(_("_____________________________________________ colors _________________________________________________"), ))
 		list.append(getConfigListEntry(_("line"), config.plugins.SevenHD.Line))
 		list.append(getConfigListEntry(_("border"), config.plugins.SevenHD.Border))
 		list.append(getConfigListEntry(_("listselection"), config.plugins.SevenHD.SelectionBackground))
@@ -828,7 +832,7 @@ class SevenHD(ConfigListScreen, Screen):
 		list.append(getConfigListEntry(_("font 2"), config.plugins.SevenHD.Font2))
 		list.append(getConfigListEntry(_("selection font"), config.plugins.SevenHD.SelectionFont))
 		list.append(getConfigListEntry(_("button text"), config.plugins.SevenHD.ButtonText))
-		list.append(getConfigListEntry(_("______________________ infobar __________________________________"), ))
+		list.append(getConfigListEntry(_("_____________________________________________ infobar ________________________________________________"), ))
 		list.append(getConfigListEntry(_("style"), config.plugins.SevenHD.InfobarStyle))
 		list.append(getConfigListEntry(_("color 1"), config.plugins.SevenHD.BackgroundIB1))
 		list.append(getConfigListEntry(_("color 2"), config.plugins.SevenHD.BackgroundIB2))
@@ -848,11 +852,12 @@ class SevenHD(ConfigListScreen, Screen):
 		list.append(getConfigListEntry(_("clock"), config.plugins.SevenHD.ClockStyle))
 		if config.plugins.SevenHD.ClockStyle.value == "clock-analog":
 			list.append(getConfigListEntry(_("color clock analog"), config.plugins.SevenHD.AnalogStyle))
+		list.append(getConfigListEntry(_("______________________________________________ infobar extras_________________________________________"), ))
 		list.append(getConfigListEntry(_("weather"), config.plugins.SevenHD.WeatherStyle))
 		list.append(getConfigListEntry(_("satellite information"), config.plugins.SevenHD.SatInfo))
 		list.append(getConfigListEntry(_("system information"), config.plugins.SevenHD.SysInfo))
 		list.append(getConfigListEntry(_("ecm information"), config.plugins.SevenHD.ECMInfo))
-		list.append(getConfigListEntry(_("______________________ general __________________________________"), ))
+		list.append(getConfigListEntry(_("______________________________________________ general _______________________________________________"), ))
 		if config.plugins.SevenHD.InfobarStyle.value == "infobar-style-original":
 			list.append(getConfigListEntry(_("second infobar"), config.plugins.SevenHD.SIB1))
 		if config.plugins.SevenHD.InfobarStyle.value == "infobar-style-xpicon":
