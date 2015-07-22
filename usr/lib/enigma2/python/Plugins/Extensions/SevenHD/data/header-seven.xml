@@ -20,10 +20,10 @@
     <color name="rds_text_bg" value="#00003258" />
     <color name="red" value="#00f23d21" />
     <color name="rssviewtop" value="#45005050" />
-    <color name="SevenBackground" value="#0a000000" />
-    <color name="SevenBackgroundIB1" value="#0a000002" />
-    <color name="SevenBackgroundIB2" value="#0d000003" />
-    <color name="SevenBackgroundRight" value="#0d000001" />
+    <color name="SevenBackground" value="#0A000000" />
+    <color name="SevenBackgroundIB1" value="#0A000002" />
+    <color name="SevenBackgroundIB2" value="#0D000003" />
+    <color name="SevenBackgroundRight" value="#0D000001" />
     <color name="SevenBorder" value="#00fffff1" />
     <color name="SevenButtonText" value="#00fffff2" />
     <color name="SevenFont1" value="#00fffff3" />
@@ -31,7 +31,7 @@
     <color name="SevenFontCN" value="#00fffff8" />
     <color name="SevenLine" value="#00fffff5" />
     <color name="SevenProgress" value="#00fffff6" />
-    <color name="SevenSelection" value="#000050ef" />
+    <color name="SevenSelection" value="#000050EF" />
     <color name="SevenSelFont" value="#00fffff7" />
     <color name="shadow" value="#40101010" />
     <color name="transparent" value="#ff000000" />
