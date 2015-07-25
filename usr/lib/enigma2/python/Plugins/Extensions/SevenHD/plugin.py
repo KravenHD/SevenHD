@@ -561,12 +561,15 @@ config.plugins.SevenHD.InfobarStyle = ConfigSelection(default="infobar-style-ori
 				("infobar-style-zpicon", _("ZPicon")),
 				("infobar-style-zpicon2", _("ZPicon 2")),
 				("infobar-style-zpicon3", _("ZPicon 3")),
+				("infobar-style-zpicon4", _("ZPicon 4")),
 				("infobar-style-xpicon", _("XPicon")),
 				("infobar-style-xpicon2", _("XPicon 2")),
 				("infobar-style-xpicon3", _("XPicon 3")),
+				("infobar-style-xpicon4", _("XPicon 4")),
 				("infobar-style-zzpicon", _("ZZPicon")),
 				("infobar-style-zzpicon2", _("ZZPicon 2")),
 				("infobar-style-zzpicon3", _("ZZPicon 3")),
+				("infobar-style-zzpicon4", _("ZZPicon 4")),
 				("infobar-style-zzzpicon", _("ZZZPicon")),
 				("infobar-style-zzzpicon2", _("ZZZPicon 2"))
 				])
@@ -613,13 +616,19 @@ config.plugins.SevenHD.ButtonStyle = ConfigSelection(default="buttons_seven_whit
 				("buttons_seven_white", _("white")),
 				("buttons_seven_black", _("black")),
 				("buttons_seven_blue", _("blue")),
-				("buttons_seven_black_silver", _("black/silver")),
 				("buttons_seven_green", _("green")),
 				("buttons_seven_grey", _("grey")),
 				("buttons_seven_orange", _("orange")),
 				("buttons_seven_red", _("red")),
 				("buttons_seven_violet", _("violet")),
-				("buttons_seven_yellow", _("yellow"))
+				("buttons_seven_yellow", _("yellow")),
+				("buttons_seven_black_blue", _("black/blue")),
+				("buttons_seven_black_green", _("black/green")),
+				("buttons_seven_black_orange", _("black/orange")),
+				("buttons_seven_black_red", _("black/red")),
+				("buttons_seven_black_silver", _("black/silver")),
+				("buttons_seven_black_violet", _("black/violet")),
+				("buttons_seven_black_yellow", _("black/yellow"))
 				])
 config.plugins.SevenHD.ClockStyle = ConfigSelection(default="clock-standard", choices = [
 				("clock-standard", _("standard")),
@@ -656,72 +665,104 @@ config.plugins.SevenHD.ECMInfo = ConfigSelection(default="none", choices = [
 				
 config.plugins.SevenHD.SIB1 = ConfigSelection(default="infobar-style-original_end", choices = [
 				("infobar-style-original_end", _("top/bottom")),
-				("infobar-style-original_end2", _("left/right"))
+				("infobar-style-original_end2", _("left/right")),
+				("infobar-style-original_end3", _("full"))
 				])
 				
 config.plugins.SevenHD.SIB2 = ConfigSelection(default="infobar-style-xpicon_end", choices = [
 				("infobar-style-xpicon_end", _("top/bottom")),
-				("infobar-style-xpicon_end2", _("left/right"))
+				("infobar-style-xpicon_end2", _("left/right")),
+				("infobar-style-xpicon_end3", _("full"))
 				])
 				
 config.plugins.SevenHD.SIB3 = ConfigSelection(default="infobar-style-zpicon_end", choices = [
 				("infobar-style-zpicon_end", _("top/bottom")),
-				("infobar-style-zpicon_end2", _("left/right"))
+				("infobar-style-zpicon_end2", _("left/right")),
+				("infobar-style-zpicon_end3", _("full"))
 				])
 				
 config.plugins.SevenHD.SIB4 = ConfigSelection(default="infobar-style-zzpicon_end", choices = [
 				("infobar-style-zzpicon_end", _("top/bottom")),
-				("infobar-style-zzpicon_end2", _("left/right"))
+				("infobar-style-zzpicon_end2", _("left/right")),
+				("infobar-style-zzpicon_end3", _("full"))
 				])
 				
 config.plugins.SevenHD.SIB5 = ConfigSelection(default="infobar-style-zzzpicon_end", choices = [
 				("infobar-style-zzzpicon_end", _("top/bottom")),
-				("infobar-style-zzzpicon_end2", _("left/right"))
+				("infobar-style-zzzpicon_end2", _("left/right")),
+				("infobar-style-zzzpicon_end3", _("full"))
 				])
 				
 config.plugins.SevenHD.SIB10 = ConfigSelection(default="infobar-style-original2_end", choices = [
 				("infobar-style-original2_end", _("top/bottom")),
-				("infobar-style-original2_end2", _("left/right"))
+				("infobar-style-original2_end2", _("left/right")),
+				("infobar-style-original2_end3", _("full"))
 				])
 				
 config.plugins.SevenHD.SIB20 = ConfigSelection(default="infobar-style-xpicon2_end", choices = [
 				("infobar-style-xpicon2_end", _("top/bottom")),
-				("infobar-style-xpicon2_end2", _("left/right"))
+				("infobar-style-xpicon2_end2", _("left/right")),
+				("infobar-style-xpicon2_end3", _("full"))
 				])
 				
 config.plugins.SevenHD.SIB30 = ConfigSelection(default="infobar-style-zpicon2_end", choices = [
 				("infobar-style-zpicon2_end", _("top/bottom")),
-				("infobar-style-zpicon2_end2", _("left/right"))
+				("infobar-style-zpicon2_end2", _("left/right")),
+				("infobar-style-zpicon2_end3", _("full"))
 				])
 				
 config.plugins.SevenHD.SIB40 = ConfigSelection(default="infobar-style-zzpicon2_end", choices = [
 				("infobar-style-zzpicon2_end", _("top/bottom")),
-				("infobar-style-zzpicon2_end2", _("left/right"))
+				("infobar-style-zzpicon2_end2", _("left/right")),
+				("infobar-style-zzpicon2_end3", _("full"))
 				])
 				
 config.plugins.SevenHD.SIB50 = ConfigSelection(default="infobar-style-zzzpicon2_end", choices = [
 				("infobar-style-zzzpicon2_end", _("top/bottom")),
-				("infobar-style-zzzpicon2_end2", _("left/right"))
+				("infobar-style-zzzpicon2_end2", _("left/right")),
+				("infobar-style-zzzpicon2_end3", _("full"))
 				])
 				
 config.plugins.SevenHD.SIB100 = ConfigSelection(default="infobar-style-original3_end", choices = [
 				("infobar-style-original3_end", _("top/bottom")),
-				("infobar-style-original3_end2", _("left/right"))
+				("infobar-style-original3_end2", _("left/right")),
+				("infobar-style-original3_end3", _("full"))
 				])
 				
 config.plugins.SevenHD.SIB200 = ConfigSelection(default="infobar-style-xpicon3_end", choices = [
 				("infobar-style-xpicon3_end", _("top/bottom")),
-				("infobar-style-xpicon3_end2", _("left/right"))
+				("infobar-style-xpicon3_end2", _("left/right")),
+				("infobar-style-xpicon3_end3", _("full"))
+				])
+				
+config.plugins.SevenHD.SIB210 = ConfigSelection(default="infobar-style-xpicon4_end", choices = [
+				("infobar-style-xpicon4_end", _("top/bottom")),
+				("infobar-style-xpicon4_end2", _("left/right")),
+				("infobar-style-xpicon4_end3", _("full"))
 				])
 				
 config.plugins.SevenHD.SIB300 = ConfigSelection(default="infobar-style-zpicon3_end", choices = [
 				("infobar-style-zpicon3_end", _("top/bottom")),
-				("infobar-style-zpicon3_end2", _("left/right"))
+				("infobar-style-zpicon3_end2", _("left/right")),
+				("infobar-style-zpicon3_end3", _("full"))
+				])
+				
+config.plugins.SevenHD.SIB310 = ConfigSelection(default="infobar-style-zpicon4_end", choices = [
+				("infobar-style-zpicon4_end", _("top/bottom")),
+				("infobar-style-zpicon4_end2", _("left/right")),
+				("infobar-style-zpicon4_end3", _("full"))
 				])
 				
 config.plugins.SevenHD.SIB400 = ConfigSelection(default="infobar-style-zzpicon3_end", choices = [
 				("infobar-style-zzpicon3_end", _("top/bottom")),
-				("infobar-style-zzpicon3_end2", _("left/right"))
+				("infobar-style-zzpicon3_end2", _("left/right")),
+				("infobar-style-zzpicon3_end3", _("full"))
+				])
+				
+config.plugins.SevenHD.SIB410 = ConfigSelection(default="infobar-style-zzpicon4_end", choices = [
+				("infobar-style-zzpicon4_end", _("top/bottom")),
+				("infobar-style-zzpicon4_end2", _("left/right")),
+				("infobar-style-zzpicon4_end3", _("full"))
 				])
 				
 config.plugins.SevenHD.InfobarChannelName1 = ConfigSelection(default="none", choices = [
@@ -752,6 +793,16 @@ config.plugins.SevenHD.InfobarChannelName5 = ConfigSelection(default="none", cho
 config.plugins.SevenHD.InfobarChannelName6 = ConfigSelection(default="none", choices = [
 				("none", _("off")),
 				("name-zzpicon2", _("on"))
+				])
+				
+config.plugins.SevenHD.InfobarChannelName10 = ConfigSelection(default="none", choices = [
+				("none", _("off")),
+				("name-zxpicon4", _("on"))
+				])
+				
+config.plugins.SevenHD.InfobarChannelName11 = ConfigSelection(default="none", choices = [
+				("none", _("off")),
+				("name-zzpicon4", _("on"))
 				])
 				
 #######################################################################
@@ -848,6 +899,10 @@ class SevenHD(ConfigListScreen, Screen):
 			list.append(getConfigListEntry(_("channelname"), config.plugins.SevenHD.InfobarChannelName5))
 		if config.plugins.SevenHD.InfobarStyle.value == "infobar-style-zzpicon2" or config.plugins.SevenHD.InfobarStyle.value == "infobar-style-zzpicon3":
 			list.append(getConfigListEntry(_("channelname"), config.plugins.SevenHD.InfobarChannelName6))
+		if config.plugins.SevenHD.InfobarStyle.value == "infobar-style-xpicon4" or config.plugins.SevenHD.InfobarStyle.value == "infobar-style-zpicon4":
+			list.append(getConfigListEntry(_("channelname"), config.plugins.SevenHD.InfobarChannelName10))
+		if config.plugins.SevenHD.InfobarStyle.value == "infobar-style-zzpicon4":
+			list.append(getConfigListEntry(_("channelname"), config.plugins.SevenHD.InfobarChannelName11))
 		list.append(getConfigListEntry(_("color channelname"), config.plugins.SevenHD.FontCN))
 		list.append(getConfigListEntry(_("clock"), config.plugins.SevenHD.ClockStyle))
 		if config.plugins.SevenHD.ClockStyle.value == "clock-analog":
@@ -882,10 +937,16 @@ class SevenHD(ConfigListScreen, Screen):
 			list.append(getConfigListEntry(_("second infobar"), config.plugins.SevenHD.SIB100))
 		if config.plugins.SevenHD.InfobarStyle.value == "infobar-style-xpicon3":
 			list.append(getConfigListEntry(_("second infobar"), config.plugins.SevenHD.SIB200))
+		if config.plugins.SevenHD.InfobarStyle.value == "infobar-style-xpicon4":
+			list.append(getConfigListEntry(_("second infobar"), config.plugins.SevenHD.SIB210))
 		if config.plugins.SevenHD.InfobarStyle.value == "infobar-style-zpicon3":
 			list.append(getConfigListEntry(_("second infobar"), config.plugins.SevenHD.SIB300))
+		if config.plugins.SevenHD.InfobarStyle.value == "infobar-style-zpicon4":
+			list.append(getConfigListEntry(_("second infobar"), config.plugins.SevenHD.SIB310))
 		if config.plugins.SevenHD.InfobarStyle.value == "infobar-style-zzpicon3":
 			list.append(getConfigListEntry(_("second infobar"), config.plugins.SevenHD.SIB400))
+		if config.plugins.SevenHD.InfobarStyle.value == "infobar-style-zzpicon4":
+			list.append(getConfigListEntry(_("second infobar"), config.plugins.SevenHD.SIB410))
 		list.append(getConfigListEntry(_("channel selection"), config.plugins.SevenHD.ChannelSelectionStyle))
 		list.append(getConfigListEntry(_("EMC"), config.plugins.SevenHD.EMCStyle))
 		list.append(getConfigListEntry(_("ExtNumberZap"), config.plugins.SevenHD.NumberZapExt))
@@ -1029,6 +1090,10 @@ class SevenHD(ConfigListScreen, Screen):
 				self.appendSkinFile(self.daten + config.plugins.SevenHD.InfobarChannelName5.value + ".xml")
 			elif config.plugins.SevenHD.InfobarStyle.value == "infobar-style-zzpicon2" or config.plugins.SevenHD.InfobarStyle.value == "infobar-style-zzpicon3":
 				self.appendSkinFile(self.daten + config.plugins.SevenHD.InfobarChannelName6.value + ".xml")
+			elif config.plugins.SevenHD.InfobarStyle.value == "infobar-style-xpicon4" or config.plugins.SevenHD.InfobarStyle.value == "infobar-style-zpicon4":
+				self.appendSkinFile(self.daten + config.plugins.SevenHD.InfobarChannelName10.value + ".xml")
+			elif config.plugins.SevenHD.InfobarStyle.value == "infobar-style-zzpicon4":
+				self.appendSkinFile(self.daten + config.plugins.SevenHD.InfobarChannelName11.value + ".xml")
 
 			###ecm-info
 			self.appendSkinFile(self.daten + config.plugins.SevenHD.ECMInfo.value + ".xml")
@@ -1076,10 +1141,16 @@ class SevenHD(ConfigListScreen, Screen):
 				self.appendSkinFile(self.daten + config.plugins.SevenHD.SIB100.value + ".xml")
 			if config.plugins.SevenHD.InfobarStyle.value == "infobar-style-xpicon3":
 				self.appendSkinFile(self.daten + config.plugins.SevenHD.SIB200.value + ".xml")
+			if config.plugins.SevenHD.InfobarStyle.value == "infobar-style-xpicon4":
+				self.appendSkinFile(self.daten + config.plugins.SevenHD.SIB210.value + ".xml")
 			if config.plugins.SevenHD.InfobarStyle.value == "infobar-style-zpicon3":
 				self.appendSkinFile(self.daten + config.plugins.SevenHD.SIB300.value + ".xml")
+			if config.plugins.SevenHD.InfobarStyle.value == "infobar-style-zpicon4":
+				self.appendSkinFile(self.daten + config.plugins.SevenHD.SIB310.value + ".xml")
 			if config.plugins.SevenHD.InfobarStyle.value == "infobar-style-zzpicon3":
 				self.appendSkinFile(self.daten + config.plugins.SevenHD.SIB400.value + ".xml")
+			if config.plugins.SevenHD.InfobarStyle.value == "infobar-style-zzpicon4":
+				self.appendSkinFile(self.daten + config.plugins.SevenHD.SIB410.value + ".xml")
 
 			###Main XML
 			self.appendSkinFile(self.daten + "main.xml")
