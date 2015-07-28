@@ -688,9 +688,9 @@
     <eLabel backgroundColor="SevenBorder" position="14,75" size="620,2" zPosition="2" />
     <eLabel backgroundColor="SevenBorder" position="14,75" size="2,367" zPosition="2" />
     <eLabel backgroundColor="SevenBorder" position="1262,75" size="2,367" zPosition="2" />
-    <eLabel backgroundColor="SevenLine" position="633,75" size="2,367" zPosition="2" />
+    <eLabel backgroundColor="SevenBorder" position="633,75" size="2,367" zPosition="2" />
     <eLabel backgroundColor="SevenLine" position="14,516" size="1250,2" zPosition="2" />
-    <eLabel backgroundColor="SevenLine" position="643,75" size="2,367" zPosition="2" />
+    <eLabel backgroundColor="SevenBorder" position="643,75" size="2,367" zPosition="2" />
     <widget position="14,514" render="Progress" size="1250,6" backgroundColor="black" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress">
       <convert type="SevenHDEventTime">Progress</convert>
     </widget>
@@ -1221,7 +1221,7 @@
     <eLabel backgroundColor="SevenBorder" position="14,1" size="1250,2" zPosition="2" />
     <eLabel backgroundColor="SevenBorder" position="14,1" size="2,71" zPosition="2" />
     <eLabel backgroundColor="SevenBorder" position="1262,1" size="2,71" zPosition="2" />
-    <eLabel backgroundColor="SevenLine" position="643,75" size="2,367" zPosition="2" />
+    <eLabel backgroundColor="SevenBorder" position="643,75" size="2,367" zPosition="2" />
     <eLabel backgroundColor="SevenBackgroundIB2" position="14,1" size="1250,71" />
     <widget position="14,501" backgroundColor="black" render="Progress" size="1250,6" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress">
       <convert type="SevenHDEventTime">Progress</convert>
@@ -1755,7 +1755,7 @@
     <eLabel backgroundColor="SevenBorder" position="14,1" size="2,71" zPosition="2" />
     <eLabel backgroundColor="SevenBorder" position="1262,1" size="2,71" zPosition="2" />
     <eLabel backgroundColor="SevenBackgroundIB2" position="14,1" size="1250,71" transparent="0" />
-    <eLabel backgroundColor="SevenLine" position="643,75" size="2,367" zPosition="2" />
+    <eLabel backgroundColor="SevenBorder" position="643,75" size="2,367" zPosition="2" />
     <widget source="session.CurrentService" render="Label" position="1107,40" size="89,22" backgroundColor="SevenBackgroundIB2" transparent="1" zPosition="3" foregroundColor="SevenFont1" font="Regular; 19" valign="center" halign="left">
       <convert type="SevenHDExtraInfo">OrbitalPositionOrTunerSystem</convert>
     </widget>
@@ -2284,7 +2284,7 @@
     <eLabel backgroundColor="SevenBorder" position="14,1" size="2,71" zPosition="2" />
     <eLabel backgroundColor="SevenBorder" position="1262,1" size="2,71" zPosition="2" />
     <eLabel backgroundColor="SevenLine" position="14,516" size="1250,2" zPosition="2" />
-    <eLabel backgroundColor="SevenLine" position="643,75" size="2,367" zPosition="2" />
+    <eLabel backgroundColor="SevenBorder" position="643,75" size="2,367" zPosition="2" />
     <widget position="14,514" backgroundColor="black" render="Progress" size="1250,6" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress">
       <convert type="SevenHDEventTime">Progress</convert>
     </widget>
@@ -2821,7 +2821,7 @@
     <eLabel backgroundColor="SevenBorder" position="14,1" size="2,71" zPosition="2" />
     <eLabel backgroundColor="SevenBorder" position="1262,1" size="2,71" zPosition="2" />
     <eLabel backgroundColor="SevenLine" position="14,516" size="1250,2" zPosition="2" />
-    <eLabel backgroundColor="SevenLine" position="643,75" size="2,367" zPosition="2" />
+    <eLabel backgroundColor="SevenBorder" position="643,75" size="2,367" zPosition="2" />
     <widget position="14,514" backgroundColor="black" render="Progress" size="1250,6" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress">
       <convert type="SevenHDEventTime">Progress</convert>
     </widget>
@@ -3436,8 +3436,8 @@
     <eLabel backgroundColor="SevenBorder" position="14,45" size="621,2" zPosition="2" />
     <eLabel backgroundColor="SevenBorder" position="14,45" size="2,420" zPosition="2" />
     <eLabel backgroundColor="SevenBorder" position="1262,45" size="2,420" zPosition="2" />
-    <eLabel backgroundColor="SevenLine" position="633,45" size="2,420" zPosition="2" />
-    <eLabel backgroundColor="SevenLine" position="643,45" size="2,420" zPosition="2" />
+    <eLabel backgroundColor="SevenBorder" position="633,45" size="2,420" zPosition="2" />
+    <eLabel backgroundColor="SevenBorder" position="643,45" size="2,420" zPosition="2" />
     <widget backgroundColor="SevenBackgroundIB1" font="Regular; 30" halign="center" noWrap="1" position="37,50" foregroundColor="SevenFont1" render="Label" size="578,38" source="session.Event_Now" transparent="0" zPosition="1" valign="bottom">
       <convert type="SevenHDEventName">Name</convert>
     </widget>
@@ -4054,8 +4054,8 @@
     <eLabel backgroundColor="SevenBorder" position="14,45" size="621,2" zPosition="2" />
     <eLabel backgroundColor="SevenBorder" position="14,45" size="2,420" zPosition="2" />
     <eLabel backgroundColor="SevenBorder" position="1262,45" size="2,420" zPosition="2" />
-    <eLabel backgroundColor="SevenLine" position="633,45" size="2,420" zPosition="2" />
-    <eLabel backgroundColor="SevenLine" position="643,45" size="2,420" zPosition="2" />
+    <eLabel backgroundColor="SevenBorder" position="633,45" size="2,420" zPosition="2" />
+    <eLabel backgroundColor="SevenBorder" position="643,45" size="2,420" zPosition="2" />
     <widget backgroundColor="SevenBackgroundIB1" font="Regular; 30" halign="center" noWrap="1" position="37,50" foregroundColor="SevenFont1" render="Label" size="578,38" source="session.Event_Now" transparent="0" zPosition="1" valign="bottom">
       <convert type="SevenHDEventName">Name</convert>
     </widget>
@@ -4663,8 +4663,8 @@
     <eLabel backgroundColor="SevenBorder" position="14,45" size="621,2" zPosition="2" />
     <eLabel backgroundColor="SevenBorder" position="14,45" size="2,399" zPosition="2" />
     <eLabel backgroundColor="SevenBorder" position="1262,45" size="2,399" zPosition="2" />
-    <eLabel backgroundColor="SevenLine" position="633,45" size="2,399" zPosition="2" />
-    <eLabel backgroundColor="SevenLine" position="643,45" size="2,399" zPosition="2" />
+    <eLabel backgroundColor="SevenBorder" position="633,45" size="2,399" zPosition="2" />
+    <eLabel backgroundColor="SevenBorder" position="643,45" size="2,399" zPosition="2" />
     <widget backgroundColor="SevenBackgroundIB1" font="Regular; 30" halign="center" noWrap="1" position="37,50" foregroundColor="SevenFont1" render="Label" size="578,38" source="session.Event_Now" transparent="0" zPosition="1" valign="bottom">
       <convert type="SevenHDEventName">Name</convert>
     </widget>
@@ -5281,8 +5281,8 @@
     <eLabel backgroundColor="SevenBorder" position="14,45" size="621,2" zPosition="2" />
     <eLabel backgroundColor="SevenBorder" position="14,45" size="2,420" zPosition="2" />
     <eLabel backgroundColor="SevenBorder" position="1262,45" size="2,420" zPosition="2" />
-    <eLabel backgroundColor="SevenLine" position="633,45" size="2,420" zPosition="2" />
-    <eLabel backgroundColor="SevenLine" position="643,45" size="2,420" zPosition="2" />
+    <eLabel backgroundColor="SevenBorder" position="633,45" size="2,420" zPosition="2" />
+    <eLabel backgroundColor="SevenBorder" position="643,45" size="2,420" zPosition="2" />
     <widget backgroundColor="SevenBackgroundIB1" font="Regular; 30" halign="center" noWrap="1" position="37,50" foregroundColor="SevenFont1" render="Label" size="578,38" source="session.Event_Now" transparent="0" zPosition="1" valign="bottom">
       <convert type="SevenHDEventName">Name</convert>
     </widget>
@@ -5911,7 +5911,7 @@
     <eLabel backgroundColor="SevenBorder" position="14,45" size="621,2" zPosition="2" />
     <eLabel backgroundColor="SevenBorder" position="14,45" size="2,420" zPosition="2" />
     <eLabel backgroundColor="SevenBorder" position="1262,45" size="2,420" zPosition="2" />
-    <eLabel backgroundColor="SevenLine" position="633,45" size="2,420" zPosition="2" />
+    <eLabel backgroundColor="SevenBorder" position="633,45" size="2,420" zPosition="2" />
     <widget backgroundColor="SevenBackgroundIB1" font="Regular; 30" halign="center" noWrap="1" position="37,50" foregroundColor="SevenFont1" render="Label" size="578,38" source="session.Event_Now" transparent="0" zPosition="1" valign="bottom">
       <convert type="SevenHDEventName">Name</convert>
     </widget>
@@ -6063,7 +6063,7 @@
     <widget source="session.FrontendStatus" render="Label" position="832,668" size="70,21" font="Regular; 19" transparent="1" foregroundColor="SevenFont1" backgroundColor="SevenBackgroundIB1" zPosition="3" halign="right" valign="center">
       <convert type="FrontendInfo">SNR</convert>
     </widget>
-    <eLabel backgroundColor="SevenLine" position="643,45" size="2,420" zPosition="2" />
+    <eLabel backgroundColor="SevenBorder" position="643,45" size="2,420" zPosition="2" />
     <widget backgroundColor="SevenBackgroundIB1" font="Regular; 22" halign="right" position="958,550" render="Label" size="107,36" source="session.Event_Now" transparent="0" valign="center" zPosition="1">
       <convert type="SevenHDEventTime">Remaining</convert>
       <convert type="SevenHDRemainingToText">InMinutes</convert>
@@ -6669,8 +6669,8 @@
     <eLabel backgroundColor="SevenBorder" position="14,45" size="621,2" zPosition="2" />
     <eLabel backgroundColor="SevenBorder" position="14,45" size="2,420" zPosition="2" />
     <eLabel backgroundColor="SevenBorder" position="1262,45" size="2,420" zPosition="2" />
-    <eLabel backgroundColor="SevenLine" position="633,45" size="2,420" zPosition="2" />
-    <eLabel backgroundColor="SevenLine" position="643,45" size="2,420" zPosition="2" />
+    <eLabel backgroundColor="SevenBorder" position="633,45" size="2,420" zPosition="2" />
+    <eLabel backgroundColor="SevenBorder" position="643,45" size="2,420" zPosition="2" />
     <widget backgroundColor="SevenBackgroundIB1" font="Regular; 30" halign="center" noWrap="1" position="37,50" foregroundColor="SevenFont1" render="Label" size="578,38" source="session.Event_Now" transparent="0" zPosition="1" valign="bottom">
       <convert type="SevenHDEventName">Name</convert>
     </widget>
@@ -7300,8 +7300,8 @@
     <eLabel backgroundColor="SevenBorder" position="14,45" size="621,2" zPosition="2" />
     <eLabel backgroundColor="SevenBorder" position="14,45" size="2,420" zPosition="2" />
     <eLabel backgroundColor="SevenBorder" position="1262,45" size="2,420" zPosition="2" />
-    <eLabel backgroundColor="SevenLine" position="633,45" size="2,420" zPosition="2" />
-    <eLabel backgroundColor="SevenLine" position="643,45" size="2,420" zPosition="2" />
+    <eLabel backgroundColor="SevenBorder" position="633,45" size="2,420" zPosition="2" />
+    <eLabel backgroundColor="SevenBorder" position="643,45" size="2,420" zPosition="2" />
     <widget backgroundColor="SevenBackgroundIB1" font="Regular; 30" halign="center" noWrap="1" position="37,50" foregroundColor="SevenFont1" render="Label" size="578,38" source="session.Event_Now" transparent="0" zPosition="1" valign="bottom">
       <convert type="SevenHDEventName">Name</convert>
     </widget>
@@ -7816,8 +7816,8 @@
     <eLabel backgroundColor="SevenBorder" position="14,45" size="621,2" zPosition="2" />
     <eLabel backgroundColor="SevenBorder" position="14,45" size="2,399" zPosition="2" />
     <eLabel backgroundColor="SevenBorder" position="1262,45" size="2,399" zPosition="2" />
-    <eLabel backgroundColor="SevenLine" position="633,45" size="2,399" zPosition="2" />
-    <eLabel backgroundColor="SevenLine" position="643,45" size="2,399" zPosition="2" />
+    <eLabel backgroundColor="SevenBorder" position="633,45" size="2,399" zPosition="2" />
+    <eLabel backgroundColor="SevenBorder" position="643,45" size="2,399" zPosition="2" />
     <widget backgroundColor="SevenBackgroundIB1" font="Regular; 30" halign="center" noWrap="1" position="37,50" foregroundColor="SevenFont1" render="Label" size="578,38" source="session.Event_Now" transparent="0" zPosition="1" valign="bottom">
       <convert type="SevenHDEventName">Name</convert>
     </widget>
@@ -8591,8 +8591,8 @@
     <eLabel backgroundColor="SevenBorder" position="14,45" size="621,2" zPosition="2" />
     <eLabel backgroundColor="SevenBorder" position="14,45" size="2,420" zPosition="2" />
     <eLabel backgroundColor="SevenBorder" position="1262,45" size="2,420" zPosition="2" />
-    <eLabel backgroundColor="SevenLine" position="633,45" size="2,420" zPosition="2" />
-    <eLabel backgroundColor="SevenLine" position="643,45" size="2,420" zPosition="2" />
+    <eLabel backgroundColor="SevenBorder" position="633,45" size="2,420" zPosition="2" />
+    <eLabel backgroundColor="SevenBorder" position="643,45" size="2,420" zPosition="2" />
     <widget backgroundColor="SevenBackgroundIB1" font="Regular; 30" halign="center" noWrap="1" position="37,50" foregroundColor="SevenFont1" render="Label" size="578,38" source="session.Event_Now" transparent="0" zPosition="1" valign="bottom">
       <convert type="SevenHDEventName">Name</convert>
     </widget>
@@ -9245,8 +9245,8 @@
     <eLabel backgroundColor="SevenBorder" position="14,45" size="621,2" zPosition="2" />
     <eLabel backgroundColor="SevenBorder" position="14,45" size="2,420" zPosition="2" />
     <eLabel backgroundColor="SevenBorder" position="1262,45" size="2,420" zPosition="2" />
-    <eLabel backgroundColor="SevenLine" position="633,45" size="2,420" zPosition="2" />
-    <eLabel backgroundColor="SevenLine" position="643,45" size="2,420" zPosition="2" />
+    <eLabel backgroundColor="SevenBorder" position="633,45" size="2,420" zPosition="2" />
+    <eLabel backgroundColor="SevenBorder" position="643,45" size="2,420" zPosition="2" />
     <widget backgroundColor="SevenBackgroundIB1" font="Regular; 30" halign="center" noWrap="1" position="37,50" foregroundColor="SevenFont1" render="Label" size="578,38" source="session.Event_Now" transparent="0" zPosition="1" valign="bottom">
       <convert type="SevenHDEventName">Name</convert>
     </widget>
@@ -9955,8 +9955,8 @@
     <eLabel backgroundColor="SevenBorder" position="14,45" size="621,2" zPosition="2" />
     <eLabel backgroundColor="SevenBorder" position="14,45" size="2,420" zPosition="2" />
     <eLabel backgroundColor="SevenBorder" position="1262,45" size="2,420" zPosition="2" />
-    <eLabel backgroundColor="SevenLine" position="633,45" size="2,420" zPosition="2" />
-    <eLabel backgroundColor="SevenLine" position="643,45" size="2,420" zPosition="2" />
+    <eLabel backgroundColor="SevenBorder" position="633,45" size="2,420" zPosition="2" />
+    <eLabel backgroundColor="SevenBorder" position="643,45" size="2,420" zPosition="2" />
     <widget backgroundColor="SevenBackgroundIB1" font="Regular; 30" halign="center" noWrap="1" position="37,50" foregroundColor="SevenFont1" render="Label" size="578,38" source="session.Event_Now" transparent="0" zPosition="1" valign="bottom">
       <convert type="SevenHDEventName">Name</convert>
     </widget>
@@ -10516,8 +10516,8 @@
   <eLabel backgroundColor="SevenBorder" position="14,45" size="621,2" zPosition="2" />
   <eLabel backgroundColor="SevenBorder" position="14,45" size="2,420" zPosition="2" />
   <eLabel backgroundColor="SevenBorder" position="1262,45" size="2,420" zPosition="2" />
-  <eLabel backgroundColor="SevenLine" position="633,45" size="2,420" zPosition="2" />
-  <eLabel backgroundColor="SevenLine" position="643,45" size="2,420" zPosition="2" />
+  <eLabel backgroundColor="SevenBorder" position="633,45" size="2,420" zPosition="2" />
+  <eLabel backgroundColor="SevenBorder" position="643,45" size="2,420" zPosition="2" />
   <widget backgroundColor="SevenBackgroundIB1" font="Regular; 30" halign="center" noWrap="1" position="37,50" foregroundColor="SevenFont1" render="Label" size="578,38" source="session.Event_Now" transparent="0" zPosition="1" valign="bottom">
     <convert type="SevenHDEventName">Name</convert>
   </widget>
@@ -11355,8 +11355,8 @@
     <eLabel backgroundColor="SevenBorder" position="14,45" size="621,2" zPosition="2" />
     <eLabel backgroundColor="SevenBorder" position="14,45" size="2,399" zPosition="2" />
     <eLabel backgroundColor="SevenBorder" position="1262,45" size="2,399" zPosition="2" />
-    <eLabel backgroundColor="SevenLine" position="633,45" size="2,399" zPosition="2" />
-    <eLabel backgroundColor="SevenLine" position="643,45" size="2,399" zPosition="2" />
+    <eLabel backgroundColor="SevenBorder" position="633,45" size="2,399" zPosition="2" />
+    <eLabel backgroundColor="SevenBorder" position="643,45" size="2,399" zPosition="2" />
     <widget backgroundColor="SevenBackgroundIB1" font="Regular; 30" halign="center" noWrap="1" position="37,50" foregroundColor="SevenFont1" render="Label" size="578,38" source="session.Event_Now" transparent="0" zPosition="1" valign="bottom">
       <convert type="SevenHDEventName">Name</convert>
     </widget>
@@ -11914,7 +11914,7 @@
     <eLabel backgroundColor="SevenBackgroundIB2" position="290,533" size="785,129" />
     <eLabel backgroundColor="SevenBackgroundIB1" position="288,659" size="788,44" />
     <eLabel backgroundColor="SevenBackgroundIB1" position="16,474" size="272,228" />
-    <widget position="313,603" backgroundColor="SevenBackgroundIB2" render="Progress" size="753,6" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress">
+    <widget position="312,603" backgroundColor="SevenBackgroundIB2" render="Progress" size="753,6" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress">
       <convert type="SevenHDEventTime">Progress</convert>
     </widget>
     <widget alphatest="blend" pixmap="SevenHD/buttons/ico_rec_on.png" position="1228,537" render="Pixmap" size="32,32" source="session.RecordState" zPosition="15" transparent="1">
@@ -12042,8 +12042,8 @@
     <eLabel backgroundColor="SevenBorder" position="14,45" size="621,2" zPosition="2" />
     <eLabel backgroundColor="SevenBorder" position="14,45" size="2,420" zPosition="2" />
     <eLabel backgroundColor="SevenBorder" position="1262,45" size="2,420" zPosition="2" />
-    <eLabel backgroundColor="SevenLine" position="633,45" size="2,420" zPosition="2" />
-    <eLabel backgroundColor="SevenLine" position="643,45" size="2,420" zPosition="2" />
+    <eLabel backgroundColor="SevenBorder" position="633,45" size="2,420" zPosition="2" />
+    <eLabel backgroundColor="SevenBorder" position="643,45" size="2,420" zPosition="2" />
     <widget backgroundColor="SevenBackgroundIB1" font="Regular; 30" halign="center" noWrap="1" position="37,50" foregroundColor="SevenFont1" render="Label" size="578,38" source="session.Event_Now" transparent="0" zPosition="1" valign="bottom">
       <convert type="SevenHDEventName">Name</convert>
     </widget>
