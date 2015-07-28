@@ -558,6 +558,7 @@ config.plugins.SevenHD.InfobarStyle = ConfigSelection(default="infobar-style-ori
 				("infobar-style-original", _("Original")),
 				("infobar-style-original2", _("Original 2")),
 				("infobar-style-original3", _("Original 3")),
+				("infobar-style-original4", _("Original 4")),
 				("infobar-style-zpicon", _("ZPicon")),
 				("infobar-style-zpicon2", _("ZPicon 2")),
 				("infobar-style-zpicon3", _("ZPicon 3")),
@@ -571,7 +572,9 @@ config.plugins.SevenHD.InfobarStyle = ConfigSelection(default="infobar-style-ori
 				("infobar-style-zzpicon3", _("ZZPicon 3")),
 				("infobar-style-zzpicon4", _("ZZPicon 4")),
 				("infobar-style-zzzpicon", _("ZZZPicon")),
-				("infobar-style-zzzpicon2", _("ZZZPicon 2"))
+				("infobar-style-zzzpicon2", _("ZZZPicon 2")),
+				("infobar-style-zzzpicon3", _("ZZZPicon 3")),
+				("infobar-style-zzzpicon4", _("ZZZPicon 4"))
 				])
 				
 config.plugins.SevenHD.ChannelSelectionStyle = ConfigSelection(default="channelselection-twocolumns", choices = [
@@ -729,6 +732,12 @@ config.plugins.SevenHD.SIB100 = ConfigSelection(default="infobar-style-original3
 				("infobar-style-original3_end3", _("full"))
 				])
 				
+config.plugins.SevenHD.SIB110 = ConfigSelection(default="infobar-style-original4_end", choices = [
+				("infobar-style-original4_end", _("top/bottom")),
+				("infobar-style-original4_end2", _("left/right")),
+				("infobar-style-original4_end3", _("full"))
+				])
+				
 config.plugins.SevenHD.SIB200 = ConfigSelection(default="infobar-style-xpicon3_end", choices = [
 				("infobar-style-xpicon3_end", _("top/bottom")),
 				("infobar-style-xpicon3_end2", _("left/right")),
@@ -763,6 +772,18 @@ config.plugins.SevenHD.SIB410 = ConfigSelection(default="infobar-style-zzpicon4_
 				("infobar-style-zzpicon4_end", _("top/bottom")),
 				("infobar-style-zzpicon4_end2", _("left/right")),
 				("infobar-style-zzpicon4_end3", _("full"))
+				])
+				
+config.plugins.SevenHD.SIB500 = ConfigSelection(default="infobar-style-zzzpicon3_end", choices = [
+				("infobar-style-zzzpicon3_end", _("top/bottom")),
+				("infobar-style-zzzpicon3_end2", _("left/right")),
+				("infobar-style-zzzpicon3_end3", _("full"))
+				])
+				
+config.plugins.SevenHD.SIB510 = ConfigSelection(default="infobar-style-zzzpicon4_end", choices = [
+				("infobar-style-zzzpicon4_end", _("top/bottom")),
+				("infobar-style-zzzpicon4_end2", _("left/right")),
+				("infobar-style-zzzpicon4_end3", _("full"))
 				])
 				
 config.plugins.SevenHD.InfobarChannelName1 = ConfigSelection(default="none", choices = [
@@ -805,6 +826,16 @@ config.plugins.SevenHD.InfobarChannelName11 = ConfigSelection(default="none", ch
 				("name-zzpicon4", _("on"))
 				])
 				
+config.plugins.SevenHD.InfobarChannelName12 = ConfigSelection(default="none", choices = [
+				("none", _("off")),
+				("name-zzzpicon3", _("on"))
+				])
+				
+config.plugins.SevenHD.InfobarChannelName13 = ConfigSelection(default="none", choices = [
+				("none", _("off")),
+				("name-zzzpicon4", _("on"))
+				])
+				
 #######################################################################
 
 class SevenHD(ConfigListScreen, Screen):
@@ -837,7 +868,7 @@ class SevenHD(ConfigListScreen, Screen):
     <eLabel backgroundColor="#00ffffff" position="878,714" size="396,2" zPosition="2" />
     <eLabel backgroundColor="#00ffffff" position="878,6" size="2,708" zPosition="2" />
     <eLabel backgroundColor="#00ffffff" position="1274,6" size="2,708" zPosition="2" />
-<eLabel position="891,88" size="372,46" text="Version: 2.4" font="Regular; 35" valign="center" halign="center" transparent="1" backgroundColor="#00000000" foregroundColor="#00ffffff" name="," />
+<eLabel position="891,88" size="372,46" text="Version: 2.5" font="Regular; 35" valign="center" halign="center" transparent="1" backgroundColor="#00000000" foregroundColor="#00ffffff" name="," />
 </screen>
 """
 
@@ -865,31 +896,31 @@ class SevenHD(ConfigListScreen, Screen):
 		list = []
 		list.append(getConfigListEntry(_("_____________________________________________ system _________________________________________________"), ))
 		list.append(getConfigListEntry(_("image"), config.plugins.SevenHD.Image))
-		list.append(getConfigListEntry(_("button style"), config.plugins.SevenHD.ButtonStyle))
+		list.append(getConfigListEntry(_("button style"), config.plugins.SevenHD.ButtonStyle, 'Button'))
 		list.append(getConfigListEntry(_("running text"), config.plugins.SevenHD.RunningText))
-		list.append(getConfigListEntry(_("Weather ID"), config.plugins.SevenHD.weather_city))
+		list.append(getConfigListEntry(_("Weather ID"), config.plugins.SevenHD.weather_city, 'WeatherID'))
 		list.append(getConfigListEntry(_("_____________________________________________ background _____________________________________________"), ))
-		list.append(getConfigListEntry(_("color layer main"), config.plugins.SevenHD.Background))
+		list.append(getConfigListEntry(_("color layer main"), config.plugins.SevenHD.Background, 'Main'))
 		list.append(getConfigListEntry(_("transparency"), config.plugins.SevenHD.BackgroundColorTrans))
-		list.append(getConfigListEntry(_("color layer right"), config.plugins.SevenHD.BackgroundRight))
+		list.append(getConfigListEntry(_("color layer right"), config.plugins.SevenHD.BackgroundRight, 'Right'))
 		list.append(getConfigListEntry(_("transparency"), config.plugins.SevenHD.BackgroundRightColorTrans))
 		list.append(getConfigListEntry(_("_____________________________________________ colors _________________________________________________"), ))
-		list.append(getConfigListEntry(_("line"), config.plugins.SevenHD.Line))
-		list.append(getConfigListEntry(_("border"), config.plugins.SevenHD.Border))
-		list.append(getConfigListEntry(_("listselection"), config.plugins.SevenHD.SelectionBackground))
-		list.append(getConfigListEntry(_("listselection border"), config.plugins.SevenHD.SelectionBorder))
-		list.append(getConfigListEntry(_("progress-/volumebar"), config.plugins.SevenHD.Progress))
-		list.append(getConfigListEntry(_("font 1"), config.plugins.SevenHD.Font1))
-		list.append(getConfigListEntry(_("font 2"), config.plugins.SevenHD.Font2))
-		list.append(getConfigListEntry(_("selection font"), config.plugins.SevenHD.SelectionFont))
-		list.append(getConfigListEntry(_("button text"), config.plugins.SevenHD.ButtonText))
+		list.append(getConfigListEntry(_("line"), config.plugins.SevenHD.Line, 'Line'))
+		list.append(getConfigListEntry(_("border"), config.plugins.SevenHD.Border, 'Border'))
+		list.append(getConfigListEntry(_("listselection"), config.plugins.SevenHD.SelectionBackground, 'Listselection'))
+		list.append(getConfigListEntry(_("listselection border"), config.plugins.SevenHD.SelectionBorder, 'Listborder'))
+		list.append(getConfigListEntry(_("progress-/volumebar"), config.plugins.SevenHD.Progress, 'Progress'))
+		list.append(getConfigListEntry(_("font 1"), config.plugins.SevenHD.Font1, 'Font1'))
+		list.append(getConfigListEntry(_("font 2"), config.plugins.SevenHD.Font2, 'Font2'))
+		list.append(getConfigListEntry(_("selection font"), config.plugins.SevenHD.SelectionFont, 'Selfont'))
+		list.append(getConfigListEntry(_("button text"), config.plugins.SevenHD.ButtonText, 'Buttontext'))
 		list.append(getConfigListEntry(_("_____________________________________________ infobar ________________________________________________"), ))
 		list.append(getConfigListEntry(_("style"), config.plugins.SevenHD.InfobarStyle))
-		list.append(getConfigListEntry(_("color 1"), config.plugins.SevenHD.BackgroundIB1))
-		list.append(getConfigListEntry(_("color 2"), config.plugins.SevenHD.BackgroundIB2))
+		list.append(getConfigListEntry(_("color 1"), config.plugins.SevenHD.BackgroundIB1, 'Color1'))
+		list.append(getConfigListEntry(_("color 2"), config.plugins.SevenHD.BackgroundIB2, 'Color2'))
 		if config.plugins.SevenHD.InfobarStyle.value == "infobar-style-original":
 			list.append(getConfigListEntry(_("channelname"), config.plugins.SevenHD.InfobarChannelName1))
-		if config.plugins.SevenHD.InfobarStyle.value == "infobar-style-original2" or config.plugins.SevenHD.InfobarStyle.value == "infobar-style-original3":
+		if config.plugins.SevenHD.InfobarStyle.value == "infobar-style-original2" or config.plugins.SevenHD.InfobarStyle.value == "infobar-style-original3" or config.plugins.SevenHD.InfobarStyle.value == "infobar-style-original4":
 			list.append(getConfigListEntry(_("channelname"), config.plugins.SevenHD.InfobarChannelName2))
 		if config.plugins.SevenHD.InfobarStyle.value == "infobar-style-zpicon" or config.plugins.SevenHD.InfobarStyle.value == "infobar-style-xpicon":
 			list.append(getConfigListEntry(_("channelname"), config.plugins.SevenHD.InfobarChannelName3))
@@ -903,7 +934,11 @@ class SevenHD(ConfigListScreen, Screen):
 			list.append(getConfigListEntry(_("channelname"), config.plugins.SevenHD.InfobarChannelName10))
 		if config.plugins.SevenHD.InfobarStyle.value == "infobar-style-zzpicon4":
 			list.append(getConfigListEntry(_("channelname"), config.plugins.SevenHD.InfobarChannelName11))
-		list.append(getConfigListEntry(_("color channelname"), config.plugins.SevenHD.FontCN))
+		if config.plugins.SevenHD.InfobarStyle.value == "infobar-style-zzzpicon3":
+			list.append(getConfigListEntry(_("channelname"), config.plugins.SevenHD.InfobarChannelName12))
+		if config.plugins.SevenHD.InfobarStyle.value == "infobar-style-zzzpicon4":
+			list.append(getConfigListEntry(_("channelname"), config.plugins.SevenHD.InfobarChannelName13))
+		list.append(getConfigListEntry(_("color channelname"), config.plugins.SevenHD.FontCN, 'ColorCN'))
 		list.append(getConfigListEntry(_("clock"), config.plugins.SevenHD.ClockStyle))
 		if config.plugins.SevenHD.ClockStyle.value == "clock-analog":
 			list.append(getConfigListEntry(_("color clock analog"), config.plugins.SevenHD.AnalogStyle))
@@ -935,6 +970,8 @@ class SevenHD(ConfigListScreen, Screen):
 			list.append(getConfigListEntry(_("second infobar"), config.plugins.SevenHD.SIB50))
 		if config.plugins.SevenHD.InfobarStyle.value == "infobar-style-original3":
 			list.append(getConfigListEntry(_("second infobar"), config.plugins.SevenHD.SIB100))
+		if config.plugins.SevenHD.InfobarStyle.value == "infobar-style-original4":
+			list.append(getConfigListEntry(_("second infobar"), config.plugins.SevenHD.SIB110))
 		if config.plugins.SevenHD.InfobarStyle.value == "infobar-style-xpicon3":
 			list.append(getConfigListEntry(_("second infobar"), config.plugins.SevenHD.SIB200))
 		if config.plugins.SevenHD.InfobarStyle.value == "infobar-style-xpicon4":
@@ -947,6 +984,10 @@ class SevenHD(ConfigListScreen, Screen):
 			list.append(getConfigListEntry(_("second infobar"), config.plugins.SevenHD.SIB400))
 		if config.plugins.SevenHD.InfobarStyle.value == "infobar-style-zzpicon4":
 			list.append(getConfigListEntry(_("second infobar"), config.plugins.SevenHD.SIB410))
+		if config.plugins.SevenHD.InfobarStyle.value == "infobar-style-zzzpicon3":
+			list.append(getConfigListEntry(_("second infobar"), config.plugins.SevenHD.SIB500))
+		if config.plugins.SevenHD.InfobarStyle.value == "infobar-style-zzzpicon4":
+			list.append(getConfigListEntry(_("second infobar"), config.plugins.SevenHD.SIB510))
 		list.append(getConfigListEntry(_("channel selection"), config.plugins.SevenHD.ChannelSelectionStyle))
 		list.append(getConfigListEntry(_("EMC"), config.plugins.SevenHD.EMCStyle))
 		list.append(getConfigListEntry(_("ExtNumberZap"), config.plugins.SevenHD.NumberZapExt))
@@ -961,11 +1002,13 @@ class SevenHD(ConfigListScreen, Screen):
 	def GetPicturePath(self):
 		try:
 			returnValue = self["config"].getCurrent()[1].value
-			if returnValue == "infobar-style-original_end" or returnValue == "infobar-style-original2_end" or returnValue == "infobar-style-original3_end" or returnValue == "infobar-style-zpicon_end" or returnValue == "infobar-style-zpicon2_end" or returnValue == "infobar-style-zpicon3_end" or returnValue == "infobar-style-xpicon_end" or returnValue == "infobar-style-xpicon2_end" or returnValue == "infobar-style-xpicon3_end" or returnValue == "infobar-style-zzpicon_end" or returnValue == "infobar-style-zzpicon2_end" or returnValue == "infobar-style-zzpicon3_end" or returnValue == "infobar-style-zzzpicon_end" or returnValue == "infobar-style-zzzpicon2_end":
+			if returnValue == "infobar-style-original_end" or returnValue == "infobar-style-original2_end" or returnValue == "infobar-style-original3_end" or returnValue == "infobar-style-original4_end" or returnValue == "infobar-style-zpicon_end" or returnValue == "infobar-style-zpicon2_end" or returnValue == "infobar-style-zpicon3_end" or returnValue == "infobar-style-zpicon4_end" or returnValue == "infobar-style-xpicon_end" or returnValue == "infobar-style-xpicon2_end" or returnValue == "infobar-style-xpicon3_end" or returnValue == "infobar-style-xpicon4_end" or returnValue == "infobar-style-zzpicon_end" or returnValue == "infobar-style-zzpicon2_end" or returnValue == "infobar-style-zzpicon3_end" or returnValue == "infobar-style-zzpicon4_end" or returnValue == "infobar-style-zzzpicon_end" or returnValue == "infobar-style-zzzpicon2_end" or returnValue == "infobar-style-zzzpicon3_end" or returnValue == "infobar-style-zzzpicon3_end":
 				path = "/usr/lib/enigma2/python/Plugins/Extensions/SevenHD/images/SIB1.jpg"
-			elif returnValue == "infobar-style-original_end2" or returnValue == "infobar-style-original2_end2" or returnValue == "infobar-style-original3_end2" or returnValue == "infobar-style-zpicon_end2" or returnValue == "infobar-style-zpicon2_end2" or returnValue == "infobar-style-zpicon3_end2" or returnValue == "infobar-style-xpicon_end2" or returnValue == "infobar-style-xpicon2_end2" or returnValue == "infobar-style-xpicon3_end2" or returnValue == "infobar-style-zzpicon_end2" or returnValue == "infobar-style-zzpicon2_end2" or returnValue == "infobar-style-zzpicon3_end2" or returnValue == "infobar-style-zzzpicon_end2" or returnValue == "infobar-style-zzzpicon2_end2":
+			elif returnValue == "infobar-style-original_end2" or returnValue == "infobar-style-original2_end2" or returnValue == "infobar-style-original3_end2" or returnValue == "infobar-style-original4_end2" or returnValue == "infobar-style-zpicon_end2" or returnValue == "infobar-style-zpicon2_end2" or returnValue == "infobar-style-zpicon3_end2" or returnValue == "infobar-style-zpicon4_end2" or returnValue == "infobar-style-xpicon_end2" or returnValue == "infobar-style-xpicon2_end2" or returnValue == "infobar-style-xpicon3_end2" or returnValue == "infobar-style-xpicon4_end2" or returnValue == "infobar-style-zzpicon_end2" or returnValue == "infobar-style-zzpicon2_end2" or returnValue == "infobar-style-zzpicon3_end2" or returnValue == "infobar-style-zzpicon4_end2" or returnValue == "infobar-style-zzzpicon_end2" or returnValue == "infobar-style-zzzpicon2_end2" or returnValue == "infobar-style-zzzpicon3_end2" or returnValue == "infobar-style-zzzpicon3_end2":
 				path = "/usr/lib/enigma2/python/Plugins/Extensions/SevenHD/images/SIB2.jpg"
-			if returnValue == "name-original" or returnValue == "name-original2" or returnValue == "name-original3" or returnValue == "name-zxpicon" or returnValue == "name-zxpicon2" or returnValue == "name-zxpicon3" or returnValue == "name-zzpicon" or returnValue == "name-zzpicon2" or returnValue == "name-zzpicon3" or returnValue == "name-zzzpicon" or returnValue == "name-zzzpicon2":
+			elif returnValue == "infobar-style-original_end3" or returnValue == "infobar-style-original2_end3" or returnValue == "infobar-style-original3_end3" or returnValue == "infobar-style-original4_end3" or returnValue == "infobar-style-zpicon_end3" or returnValue == "infobar-style-zpicon2_end3" or returnValue == "infobar-style-zpicon3_end3" or returnValue == "infobar-style-zpicon4_end3" or returnValue == "infobar-style-xpicon_end3" or returnValue == "infobar-style-xpicon2_end3" or returnValue == "infobar-style-xpicon3_end3" or returnValue == "infobar-style-xpicon4_end3" or returnValue == "infobar-style-zzpicon_end3" or returnValue == "infobar-style-zzpicon2_end3" or returnValue == "infobar-style-zzpicon3_end3" or returnValue == "infobar-style-zzpicon4_end3" or returnValue == "infobar-style-zzzpicon_end3" or returnValue == "infobar-style-zzzpicon2_end3" or returnValue == "infobar-style-zzzpicon3_end3" or returnValue == "infobar-style-zzzpicon3_end3":
+				path = "/usr/lib/enigma2/python/Plugins/Extensions/SevenHD/images/SIB3.jpg"
+			elif returnValue == "name-original" or returnValue == "name-original2" or returnValue == "name-zxpicon" or returnValue == "name-zxpicon2" or returnValue == "name-zxpicon3" or returnValue == "name-zzpicon" or returnValue == "name-zzpicon2" or returnValue == "name-zzpicon3" or returnValue == "name-zzzpicon" or returnValue == "name-zzzpicon2" or returnValue == "name-zzzpicon3" or returnValue == "name-zzzpicon4":
 				path = "/usr/lib/enigma2/python/Plugins/Extensions/SevenHD/images/name.jpg"
 			else:
 				path = "/usr/lib/enigma2/python/Plugins/Extensions/SevenHD/images/" + returnValue + ".jpg"
@@ -973,7 +1016,14 @@ class SevenHD(ConfigListScreen, Screen):
 				return path
 			else:
 				## colors
-				return "/usr/lib/enigma2/python/Plugins/Extensions/SevenHD/images/colors.jpg"
+				try:
+                                   returnValue = self["config"].getCurrent()[2]
+                                   #self.session.open(MessageBox, _(returnValue), MessageBox.TYPE_INFO)
+                                   path = "/usr/lib/enigma2/python/Plugins/Extensions/SevenHD/images/" + returnValue + ".jpg"
+                                   if fileExists(path):
+				      return path
+                                except:
+                                   return "/usr/lib/enigma2/python/Plugins/Extensions/SevenHD/images/colors.jpg"
 		except:
 			## weather
 			return "/usr/lib/enigma2/python/Plugins/Extensions/SevenHD/images/924938.jpg"
@@ -1037,7 +1087,6 @@ class SevenHD(ConfigListScreen, Screen):
 
 		try:
 			#global tag search and replace in all skin elements
-			self.set_font()
 			self.skinSearchAndReplace = []
 			self.skinSearchAndReplace.append(["0A", config.plugins.SevenHD.BackgroundColorTrans.value])
 			self.skinSearchAndReplace.append(["0D", config.plugins.SevenHD.BackgroundRightColorTrans.value])
@@ -1080,7 +1129,7 @@ class SevenHD(ConfigListScreen, Screen):
 			###Channelname
 			if config.plugins.SevenHD.InfobarStyle.value == "infobar-style-original":
 				self.appendSkinFile(self.daten + config.plugins.SevenHD.InfobarChannelName1.value + ".xml")
-			elif config.plugins.SevenHD.InfobarStyle.value == "infobar-style-original2" or config.plugins.SevenHD.InfobarStyle.value == "infobar-style-original3":
+			elif config.plugins.SevenHD.InfobarStyle.value == "infobar-style-original2" or config.plugins.SevenHD.InfobarStyle.value == "infobar-style-original3" or config.plugins.SevenHD.InfobarStyle.value == "infobar-style-original4":
 				self.appendSkinFile(self.daten + config.plugins.SevenHD.InfobarChannelName2.value + ".xml")
 			elif config.plugins.SevenHD.InfobarStyle.value == "infobar-style-zpicon" or config.plugins.SevenHD.InfobarStyle.value == "infobar-style-xpicon":
 				self.appendSkinFile(self.daten + config.plugins.SevenHD.InfobarChannelName3.value + ".xml")
@@ -1094,6 +1143,10 @@ class SevenHD(ConfigListScreen, Screen):
 				self.appendSkinFile(self.daten + config.plugins.SevenHD.InfobarChannelName10.value + ".xml")
 			elif config.plugins.SevenHD.InfobarStyle.value == "infobar-style-zzpicon4":
 				self.appendSkinFile(self.daten + config.plugins.SevenHD.InfobarChannelName11.value + ".xml")
+			elif config.plugins.SevenHD.InfobarStyle.value == "infobar-style-zzzpicon3":
+				self.appendSkinFile(self.daten + config.plugins.SevenHD.InfobarChannelName12.value + ".xml")
+			elif config.plugins.SevenHD.InfobarStyle.value == "infobar-style-zzzpicon4":
+				self.appendSkinFile(self.daten + config.plugins.SevenHD.InfobarChannelName13.value + ".xml")
 
 			###ecm-info
 			self.appendSkinFile(self.daten + config.plugins.SevenHD.ECMInfo.value + ".xml")
@@ -1139,6 +1192,8 @@ class SevenHD(ConfigListScreen, Screen):
 				self.appendSkinFile(self.daten + config.plugins.SevenHD.SIB50.value + ".xml")
 			if config.plugins.SevenHD.InfobarStyle.value == "infobar-style-original3":
 				self.appendSkinFile(self.daten + config.plugins.SevenHD.SIB100.value + ".xml")
+			if config.plugins.SevenHD.InfobarStyle.value == "infobar-style-original4":
+				self.appendSkinFile(self.daten + config.plugins.SevenHD.SIB110.value + ".xml")
 			if config.plugins.SevenHD.InfobarStyle.value == "infobar-style-xpicon3":
 				self.appendSkinFile(self.daten + config.plugins.SevenHD.SIB200.value + ".xml")
 			if config.plugins.SevenHD.InfobarStyle.value == "infobar-style-xpicon4":
@@ -1151,6 +1206,10 @@ class SevenHD(ConfigListScreen, Screen):
 				self.appendSkinFile(self.daten + config.plugins.SevenHD.SIB400.value + ".xml")
 			if config.plugins.SevenHD.InfobarStyle.value == "infobar-style-zzpicon4":
 				self.appendSkinFile(self.daten + config.plugins.SevenHD.SIB410.value + ".xml")
+			if config.plugins.SevenHD.InfobarStyle.value == "infobar-style-zzzpicon3":
+				self.appendSkinFile(self.daten + config.plugins.SevenHD.SIB500.value + ".xml")
+			if config.plugins.SevenHD.InfobarStyle.value == "infobar-style-zzzpicon4":
+				self.appendSkinFile(self.daten + config.plugins.SevenHD.SIB510.value + ".xml")
 
 			###Main XML
 			self.appendSkinFile(self.daten + "main.xml")
@@ -1236,64 +1295,6 @@ class SevenHD(ConfigListScreen, Screen):
 			for item in tmpSearchAndReplace:
 				skinLine = skinLine.replace(item[0], item[1])
 			self.skin_lines.append(skinLine)
-
-	def set_font(self):
-		'''header-kraven.xml; header-seven; header-zero
-		handel = 97
-		noto= 95
-		opensans= 93
-		proxima = 103'''
-		#config.plugins.SevenHD.Header.value
-		new_font = config.plugins.SevenHD.FontStyle.value
-		if new_font == "noto":
-			new_scale = 'scale="95"'
-			new_font_name1 = 'NotoSans-Regular.ttf'
-			new_font_name2 = 'NotoSans-Bold.ttf'
-		elif new_font == "handel":
-			new_scale = 'scale="97"'
-			new_font_name1 = 'HandelGotD.ttf'
-			new_font_name2 = 'HandelGotDBol.ttf'
-		elif new_font == "proxima":
-			new_scale = 'scale="103"'
-			new_font_name1 = 'Proxima Nova Regular.otf'
-			new_font_name2 = 'Proxima Nova Bold.otf'
-		elif new_font == "opensans":
-			new_scale = 'scale="93"'
-			new_font_name1 = 'setrixHD.ttf'
-			new_font_name2 = 'OpenSans-Regular.ttf'
-			
-		old_xml = self.daten + config.plugins.SevenHD.Header.value + ".xml"
-		new_xml = self.daten + config.plugins.SevenHD.Header.value + ".xml_new"
-		
-		fin = open(old_xml)
-		fout = open(new_xml, "wt")
-		
-		for line in fin.readlines():
-			if line.find('NotoSans-Regular.ttf')>= 0:
-				fout.write( line.replace('NotoSans-Regular.ttf', new_font_name1).replace('scale="95"', new_scale))
-			elif line.find('NotoSans-Bold.ttf')>= 0:
-				fout.write( line.replace('NotoSans-Bold.ttf', new_font_name2).replace('scale="95"', new_scale))
-			elif line.find('HandelGotD.ttf')>= 0:
-				fout.write( line.replace('HandelGotD.ttf', new_font_name1).replace('scale="97"', new_scale))
-			elif line.find('HandelGotDBol.ttf')>= 0:
-				fout.write( line.replace('HandelGotDBol.ttf', new_font_name2).replace('scale="97"', new_scale))
-			elif line.find('Proxima Nova Regular.otf')>= 0:
-				fout.write( line.replace('Proxima Nova Regular.otf', new_font_name1).replace('scale="103"', new_scale))
-			elif line.find('Proxima Nova Bold.otf')>= 0: 
-				fout.write( line.replace('Proxima Nova Bold.otf', new_font_name2).replace('scale="103"', new_scale)) 
-			elif line.find('setrixHD.ttf')>= 0:
-				fout.write( line.replace('setrixHD.ttf', new_font_name1).replace('scale="93"', new_scale))
-			elif line.find('OpenSans-Regular.ttf')>= 0: 
-				fout.write( line.replace('OpenSans-Regular.ttf', new_font_name2).replace('scale="93"', new_scale))
-			else:
-				fout.write( line )
-		
-		fin.close()
-		fout.close()
-		
-		remove(old_xml)
-		rename(new_xml, old_xml)
-		
 
 	def restartGUI(self, answer):
 		if answer is True:
