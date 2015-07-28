@@ -3244,10 +3244,10 @@
       <convert type="SevenHDServiceInfo">IsCrypted</convert>
       <convert type="ConditionalShowHide" />
     </widget>
-    <widget source="session.CurrentService" render="Label" position="765,668" size="89,22" backgroundColor="SevenBackgroundIB1" transparent="1" zPosition="3" foregroundColor="SevenFont1" font="Regular; 19" valign="center" halign="left">
+    <widget source="session.CurrentService" render="Label" position="760,668" size="89,22" backgroundColor="SevenBackgroundIB1" transparent="1" zPosition="3" foregroundColor="SevenFont1" font="Regular; 19" valign="center" halign="left">
       <convert type="SevenHDExtraInfo">OrbitalPositionOrTunerSystem</convert>
     </widget>
-    <widget source="session.FrontendStatus" render="Label" position="812,668" size="70,21" font="Regular; 19" transparent="1" foregroundColor="SevenFont1" backgroundColor="SevenBackgroundIB1" zPosition="3" halign="right" valign="center">
+    <widget source="session.FrontendStatus" render="Label" position="817,668" size="70,21" font="Regular; 19" transparent="1" foregroundColor="SevenFont1" backgroundColor="SevenBackgroundIB1" zPosition="3" halign="right" valign="center">
       <convert type="FrontendInfo">SNR</convert>
     </widget>
     <widget backgroundColor="SevenBackgroundIB1" font="Regular; 22" halign="right" position="958,551" render="Label" size="107,36" source="session.Event_Now" transparent="0" valign="center" zPosition="1">
@@ -3410,10 +3410,10 @@
       <convert type="SevenHDServiceInfo">IsCrypted</convert>
       <convert type="ConditionalShowHide" />
     </widget>
-    <widget source="session.CurrentService" render="Label" position="765,668" size="89,22" backgroundColor="SevenBackgroundIB1" transparent="1" zPosition="3" foregroundColor="SevenFont1" font="Regular; 19" valign="center" halign="left">
+    <widget source="session.CurrentService" render="Label" position="760,668" size="89,22" backgroundColor="SevenBackgroundIB1" transparent="1" zPosition="3" foregroundColor="SevenFont1" font="Regular; 19" valign="center" halign="left">
       <convert type="SevenHDExtraInfo">OrbitalPositionOrTunerSystem</convert>
     </widget>
-    <widget source="session.FrontendStatus" render="Label" position="812,668" size="70,21" font="Regular; 19" transparent="1" foregroundColor="SevenFont1" backgroundColor="SevenBackgroundIB1" zPosition="3" halign="right" valign="center">
+    <widget source="session.FrontendStatus" render="Label" position="817,668" size="70,21" font="Regular; 19" transparent="1" foregroundColor="SevenFont1" backgroundColor="SevenBackgroundIB1" zPosition="3" halign="right" valign="center">
       <convert type="FrontendInfo">SNR</convert>
     </widget>
     <widget backgroundColor="SevenBackgroundIB1" font="Regular; 22" halign="right" position="958,551" render="Label" size="107,36" source="session.Event_Now" transparent="0" valign="center" zPosition="1">
@@ -3583,10 +3583,10 @@
       <convert type="SevenHDServiceInfo">IsCrypted</convert>
       <convert type="ConditionalShowHide" />
     </widget>
-    <widget source="session.CurrentService" render="Label" position="765,668" size="89,22" backgroundColor="SevenBackgroundIB1" transparent="1" zPosition="3" foregroundColor="SevenFont1" font="Regular; 19" valign="center" halign="left">
+    <widget source="session.CurrentService" render="Label" position="760,668" size="89,22" backgroundColor="SevenBackgroundIB1" transparent="1" zPosition="3" foregroundColor="SevenFont1" font="Regular; 19" valign="center" halign="left">
       <convert type="SevenHDExtraInfo">OrbitalPositionOrTunerSystem</convert>
     </widget>
-    <widget source="session.FrontendStatus" render="Label" position="812,668" size="70,21" font="Regular; 19" transparent="1" foregroundColor="SevenFont1" backgroundColor="SevenBackgroundIB1" zPosition="3" halign="right" valign="center">
+    <widget source="session.FrontendStatus" render="Label" position="817,668" size="70,21" font="Regular; 19" transparent="1" foregroundColor="SevenFont1" backgroundColor="SevenBackgroundIB1" zPosition="3" halign="right" valign="center">
       <convert type="FrontendInfo">SNR</convert>
     </widget>
     <widget backgroundColor="SevenBackgroundIB1" font="Regular; 22" halign="right" position="958,551" render="Label" size="107,36" source="session.Event_Now" transparent="0" valign="center" zPosition="1">
@@ -3745,10 +3745,10 @@
       <convert type="SevenHDServiceInfo">IsCrypted</convert>
       <convert type="ConditionalShowHide" />
     </widget>
-    <widget source="session.CurrentService" render="Label" position="765,668" size="89,22" backgroundColor="SevenBackgroundIB1" transparent="1" zPosition="3" foregroundColor="SevenFont1" font="Regular; 19" valign="center" halign="left">
+    <widget source="session.CurrentService" render="Label" position="760,668" size="89,22" backgroundColor="SevenBackgroundIB1" transparent="1" zPosition="3" foregroundColor="SevenFont1" font="Regular; 19" valign="center" halign="left">
       <convert type="SevenHDExtraInfo">OrbitalPositionOrTunerSystem</convert>
     </widget>
-    <widget source="session.FrontendStatus" render="Label" position="812,668" size="70,21" font="Regular; 19" transparent="1" foregroundColor="SevenFont1" backgroundColor="SevenBackgroundIB1" zPosition="3" halign="right" valign="center">
+    <widget source="session.FrontendStatus" render="Label" position="817,668" size="70,21" font="Regular; 19" transparent="1" foregroundColor="SevenFont1" backgroundColor="SevenBackgroundIB1" zPosition="3" halign="right" valign="center">
       <convert type="FrontendInfo">SNR</convert>
     </widget>
     <widget backgroundColor="SevenBackgroundIB1" font="Regular; 22" halign="right" position="958,551" render="Label" size="107,36" source="session.Event_Now" transparent="0" valign="center" zPosition="1">
@@ -5086,10 +5086,10 @@
       <convert type="SevenHDServiceInfo">IsCrypted</convert>
       <convert type="ConditionalShowHide" />
     </widget>
-    <widget source="session.CurrentService" render="Label" position="785,668" size="89,22" backgroundColor="SevenBackgroundIB1" transparent="1" zPosition="3" foregroundColor="SevenFont1" font="Regular; 19" valign="center" halign="left">
+    <widget source="session.CurrentService" render="Label" position="780,668" size="89,22" backgroundColor="SevenBackgroundIB1" transparent="1" zPosition="3" foregroundColor="SevenFont1" font="Regular; 19" valign="center" halign="left">
       <convert type="SevenHDExtraInfo">OrbitalPositionOrTunerSystem</convert>
     </widget>
-    <widget source="session.FrontendStatus" render="Label" position="832,668" size="70,21" font="Regular; 19" transparent="1" foregroundColor="SevenFont1" backgroundColor="SevenBackgroundIB1" zPosition="3" halign="right" valign="center">
+    <widget source="session.FrontendStatus" render="Label" position="837,668" size="70,21" font="Regular; 19" transparent="1" foregroundColor="SevenFont1" backgroundColor="SevenBackgroundIB1" zPosition="3" halign="right" valign="center">
       <convert type="FrontendInfo">SNR</convert>
     </widget>
     <widget backgroundColor="SevenBackgroundIB1" font="Regular; 22" halign="right" position="958,550" render="Label" size="107,36" source="session.Event_Now" transparent="0" valign="center" zPosition="1">
@@ -5255,10 +5255,10 @@
       <convert type="SevenHDServiceInfo">IsCrypted</convert>
       <convert type="ConditionalShowHide" />
     </widget>
-    <widget source="session.CurrentService" render="Label" position="785,668" size="89,22" backgroundColor="SevenBackgroundIB1" transparent="1" zPosition="3" foregroundColor="SevenFont1" font="Regular; 19" valign="center" halign="left">
+    <widget source="session.CurrentService" render="Label" position="780,668" size="89,22" backgroundColor="SevenBackgroundIB1" transparent="1" zPosition="3" foregroundColor="SevenFont1" font="Regular; 19" valign="center" halign="left">
       <convert type="SevenHDExtraInfo">OrbitalPositionOrTunerSystem</convert>
     </widget>
-    <widget source="session.FrontendStatus" render="Label" position="832,668" size="70,21" font="Regular; 19" transparent="1" foregroundColor="SevenFont1" backgroundColor="SevenBackgroundIB1" zPosition="3" halign="right" valign="center">
+    <widget source="session.FrontendStatus" render="Label" position="837,668" size="70,21" font="Regular; 19" transparent="1" foregroundColor="SevenFont1" backgroundColor="SevenBackgroundIB1" zPosition="3" halign="right" valign="center">
       <convert type="FrontendInfo">SNR</convert>
     </widget>
     <widget backgroundColor="SevenBackgroundIB1" font="Regular; 22" halign="right" position="958,550" render="Label" size="107,36" source="session.Event_Now" transparent="0" valign="center" zPosition="1">
@@ -5428,10 +5428,10 @@
       <convert type="SevenHDServiceInfo">IsCrypted</convert>
       <convert type="ConditionalShowHide" />
     </widget>
-    <widget source="session.CurrentService" render="Label" position="785,668" size="89,22" backgroundColor="SevenBackgroundIB1" transparent="1" zPosition="3" foregroundColor="SevenFont1" font="Regular; 19" valign="center" halign="left">
+    <widget source="session.CurrentService" render="Label" position="780,668" size="89,22" backgroundColor="SevenBackgroundIB1" transparent="1" zPosition="3" foregroundColor="SevenFont1" font="Regular; 19" valign="center" halign="left">
       <convert type="SevenHDExtraInfo">OrbitalPositionOrTunerSystem</convert>
     </widget>
-    <widget source="session.FrontendStatus" render="Label" position="832,668" size="70,21" font="Regular; 19" transparent="1" foregroundColor="SevenFont1" backgroundColor="SevenBackgroundIB1" zPosition="3" halign="right" valign="center">
+    <widget source="session.FrontendStatus" render="Label" position="837,668" size="70,21" font="Regular; 19" transparent="1" foregroundColor="SevenFont1" backgroundColor="SevenBackgroundIB1" zPosition="3" halign="right" valign="center">
       <convert type="FrontendInfo">SNR</convert>
     </widget>
     <widget backgroundColor="SevenBackgroundIB1" font="Regular; 22" halign="right" position="958,550" render="Label" size="107,36" source="session.Event_Now" transparent="0" valign="center" zPosition="1">
@@ -5590,10 +5590,10 @@
       <convert type="SevenHDServiceInfo">IsCrypted</convert>
       <convert type="ConditionalShowHide" />
     </widget>
-    <widget source="session.CurrentService" render="Label" position="785,668" size="89,22" backgroundColor="SevenBackgroundIB1" transparent="1" zPosition="3" foregroundColor="SevenFont1" font="Regular; 19" valign="center" halign="left">
+    <widget source="session.CurrentService" render="Label" position="780,668" size="89,22" backgroundColor="SevenBackgroundIB1" transparent="1" zPosition="3" foregroundColor="SevenFont1" font="Regular; 19" valign="center" halign="left">
       <convert type="SevenHDExtraInfo">OrbitalPositionOrTunerSystem</convert>
     </widget>
-    <widget source="session.FrontendStatus" render="Label" position="832,668" size="70,21" font="Regular; 19" transparent="1" foregroundColor="SevenFont1" backgroundColor="SevenBackgroundIB1" zPosition="3" halign="right" valign="center">
+    <widget source="session.FrontendStatus" render="Label" position="837,668" size="70,21" font="Regular; 19" transparent="1" foregroundColor="SevenFont1" backgroundColor="SevenBackgroundIB1" zPosition="3" halign="right" valign="center">
       <convert type="FrontendInfo">SNR</convert>
     </widget>
     <widget backgroundColor="SevenBackgroundIB1" font="Regular; 22" halign="right" position="958,550" render="Label" size="107,36" source="session.Event_Now" transparent="0" valign="center" zPosition="1">
@@ -5716,10 +5716,10 @@
       <convert type="SevenHDServiceInfo">IsCrypted</convert>
       <convert type="ConditionalShowHide" />
     </widget>
-    <widget source="session.CurrentService" render="Label" position="785,668" size="89,22" backgroundColor="SevenBackgroundIB1" transparent="1" zPosition="3" foregroundColor="SevenFont1" font="Regular; 19" valign="center" halign="left">
+    <widget source="session.CurrentService" render="Label" position="780,668" size="89,22" backgroundColor="SevenBackgroundIB1" transparent="1" zPosition="3" foregroundColor="SevenFont1" font="Regular; 19" valign="center" halign="left">
       <convert type="SevenHDExtraInfo">OrbitalPositionOrTunerSystem</convert>
     </widget>
-    <widget source="session.FrontendStatus" render="Label" position="832,668" size="70,21" font="Regular; 19" transparent="1" foregroundColor="SevenFont1" backgroundColor="SevenBackgroundIB1" zPosition="3" halign="right" valign="center">
+    <widget source="session.FrontendStatus" render="Label" position="837,668" size="70,21" font="Regular; 19" transparent="1" foregroundColor="SevenFont1" backgroundColor="SevenBackgroundIB1" zPosition="3" halign="right" valign="center">
       <convert type="FrontendInfo">SNR</convert>
     </widget>
     <widget backgroundColor="SevenBackgroundIB1" font="Regular; 22" halign="right" position="958,550" render="Label" size="107,36" source="session.Event_Now" transparent="0" valign="center" zPosition="1">
@@ -5885,10 +5885,10 @@
       <convert type="SevenHDServiceInfo">IsCrypted</convert>
       <convert type="ConditionalShowHide" />
     </widget>
-    <widget source="session.CurrentService" render="Label" position="785,668" size="89,22" backgroundColor="SevenBackgroundIB1" transparent="1" zPosition="3" foregroundColor="SevenFont1" font="Regular; 19" valign="center" halign="left">
+    <widget source="session.CurrentService" render="Label" position="780,668" size="89,22" backgroundColor="SevenBackgroundIB1" transparent="1" zPosition="3" foregroundColor="SevenFont1" font="Regular; 19" valign="center" halign="left">
       <convert type="SevenHDExtraInfo">OrbitalPositionOrTunerSystem</convert>
     </widget>
-    <widget source="session.FrontendStatus" render="Label" position="832,668" size="70,21" font="Regular; 19" transparent="1" foregroundColor="SevenFont1" backgroundColor="SevenBackgroundIB1" zPosition="3" halign="right" valign="center">
+    <widget source="session.FrontendStatus" render="Label" position="837,668" size="70,21" font="Regular; 19" transparent="1" foregroundColor="SevenFont1" backgroundColor="SevenBackgroundIB1" zPosition="3" halign="right" valign="center">
       <convert type="FrontendInfo">SNR</convert>
     </widget>
     <widget backgroundColor="SevenBackgroundIB1" font="Regular; 22" halign="right" position="958,550" render="Label" size="107,36" source="session.Event_Now" transparent="0" valign="center" zPosition="1">
@@ -6057,10 +6057,10 @@
       <convert type="SevenHDServiceInfo">IsCrypted</convert>
       <convert type="ConditionalShowHide" />
     </widget>
-    <widget source="session.CurrentService" render="Label" position="785,668" size="89,22" backgroundColor="SevenBackgroundIB1" transparent="1" zPosition="3" foregroundColor="SevenFont1" font="Regular; 19" valign="center" halign="left">
+    <widget source="session.CurrentService" render="Label" position="780,668" size="89,22" backgroundColor="SevenBackgroundIB1" transparent="1" zPosition="3" foregroundColor="SevenFont1" font="Regular; 19" valign="center" halign="left">
       <convert type="SevenHDExtraInfo">OrbitalPositionOrTunerSystem</convert>
     </widget>
-    <widget source="session.FrontendStatus" render="Label" position="832,668" size="70,21" font="Regular; 19" transparent="1" foregroundColor="SevenFont1" backgroundColor="SevenBackgroundIB1" zPosition="3" halign="right" valign="center">
+    <widget source="session.FrontendStatus" render="Label" position="837,668" size="70,21" font="Regular; 19" transparent="1" foregroundColor="SevenFont1" backgroundColor="SevenBackgroundIB1" zPosition="3" halign="right" valign="center">
       <convert type="FrontendInfo">SNR</convert>
     </widget>
     <eLabel backgroundColor="SevenBorder" position="643,45" size="2,420" zPosition="2" />
@@ -6220,10 +6220,10 @@
       <convert type="SevenHDServiceInfo">IsCrypted</convert>
       <convert type="ConditionalShowHide" />
     </widget>
-    <widget source="session.CurrentService" render="Label" position="785,668" size="89,22" backgroundColor="SevenBackgroundIB1" transparent="1" zPosition="3" foregroundColor="SevenFont1" font="Regular; 19" valign="center" halign="left">
+    <widget source="session.CurrentService" render="Label" position="780,668" size="89,22" backgroundColor="SevenBackgroundIB1" transparent="1" zPosition="3" foregroundColor="SevenFont1" font="Regular; 19" valign="center" halign="left">
       <convert type="SevenHDExtraInfo">OrbitalPositionOrTunerSystem</convert>
     </widget>
-    <widget source="session.FrontendStatus" render="Label" position="832,668" size="70,21" font="Regular; 19" transparent="1" foregroundColor="SevenFont1" backgroundColor="SevenBackgroundIB1" zPosition="3" halign="right" valign="center">
+    <widget source="session.FrontendStatus" render="Label" position="837,668" size="70,21" font="Regular; 19" transparent="1" foregroundColor="SevenFont1" backgroundColor="SevenBackgroundIB1" zPosition="3" halign="right" valign="center">
       <convert type="FrontendInfo">SNR</convert>
     </widget>
     
@@ -6348,10 +6348,10 @@
       <convert type="SevenHDServiceInfo">IsCrypted</convert>
       <convert type="ConditionalShowHide" />
     </widget>
-    <widget source="session.CurrentService" render="Label" position="765,671" size="89,22" backgroundColor="SevenBackgroundIB1" transparent="1" zPosition="3" foregroundColor="SevenFont1" font="Regular; 19" valign="center" halign="left">
+    <widget source="session.CurrentService" render="Label" position="760,671" size="89,22" backgroundColor="SevenBackgroundIB1" transparent="1" zPosition="3" foregroundColor="SevenFont1" font="Regular; 19" valign="center" halign="left">
       <convert type="SevenHDExtraInfo">OrbitalPositionOrTunerSystem</convert>
     </widget>
-    <widget source="session.FrontendStatus" render="Label" position="812,671" size="70,21" font="Regular; 19" transparent="1" foregroundColor="SevenFont1" backgroundColor="SevenBackgroundIB1" zPosition="3" halign="right" valign="center">
+    <widget source="session.FrontendStatus" render="Label" position="817,671" size="70,21" font="Regular; 19" transparent="1" foregroundColor="SevenFont1" backgroundColor="SevenBackgroundIB1" zPosition="3" halign="right" valign="center">
       <convert type="FrontendInfo">SNR</convert>
     </widget>
     <widget backgroundColor="SevenBackgroundIB2" font="Regular; 22" halign="right" position="958,551" render="Label" size="107,36" source="session.Event_Now" transparent="0" valign="center" zPosition="1">
@@ -6475,10 +6475,10 @@
       <convert type="SevenHDServiceInfo">IsCrypted</convert>
       <convert type="ConditionalShowHide" />
     </widget>
-    <widget source="session.CurrentService" render="Label" position="765,671" size="89,22" backgroundColor="SevenBackgroundIB1" transparent="1" zPosition="3" foregroundColor="SevenFont1" font="Regular; 19" valign="center" halign="left">
+    <widget source="session.CurrentService" render="Label" position="760,671" size="89,22" backgroundColor="SevenBackgroundIB1" transparent="1" zPosition="3" foregroundColor="SevenFont1" font="Regular; 19" valign="center" halign="left">
       <convert type="SevenHDExtraInfo">OrbitalPositionOrTunerSystem</convert>
     </widget>
-    <widget source="session.FrontendStatus" render="Label" position="812,671" size="70,21" font="Regular; 19" transparent="1" foregroundColor="SevenFont1" backgroundColor="SevenBackgroundIB1" zPosition="3" halign="right" valign="center">
+    <widget source="session.FrontendStatus" render="Label" position="817,671" size="70,21" font="Regular; 19" transparent="1" foregroundColor="SevenFont1" backgroundColor="SevenBackgroundIB1" zPosition="3" halign="right" valign="center">
       <convert type="FrontendInfo">SNR</convert>
     </widget>
     <widget backgroundColor="SevenBackgroundIB2" font="Regular; 22" halign="right" position="958,551" render="Label" size="107,36" source="session.Event_Now" transparent="0" valign="center" zPosition="1">
@@ -6645,10 +6645,10 @@
       <convert type="SevenHDServiceInfo">IsCrypted</convert>
       <convert type="ConditionalShowHide" />
     </widget>
-    <widget source="session.CurrentService" render="Label" position="765,671" size="89,22" backgroundColor="SevenBackgroundIB1" transparent="1" zPosition="3" foregroundColor="SevenFont1" font="Regular; 19" valign="center" halign="left">
+    <widget source="session.CurrentService" render="Label" position="760,671" size="89,22" backgroundColor="SevenBackgroundIB1" transparent="1" zPosition="3" foregroundColor="SevenFont1" font="Regular; 19" valign="center" halign="left">
       <convert type="SevenHDExtraInfo">OrbitalPositionOrTunerSystem</convert>
     </widget>
-    <widget source="session.FrontendStatus" render="Label" position="812,671" size="70,21" font="Regular; 19" transparent="1" foregroundColor="SevenFont1" backgroundColor="SevenBackgroundIB1" zPosition="3" halign="right" valign="center">
+    <widget source="session.FrontendStatus" render="Label" position="817,671" size="70,21" font="Regular; 19" transparent="1" foregroundColor="SevenFont1" backgroundColor="SevenBackgroundIB1" zPosition="3" halign="right" valign="center">
       <convert type="FrontendInfo">SNR</convert>
     </widget>
     <widget backgroundColor="SevenBackgroundIB2" font="Regular; 22" halign="right" position="958,551" render="Label" size="107,36" source="session.Event_Now" transparent="0" valign="center" zPosition="1">
@@ -6819,10 +6819,10 @@
       <convert type="SevenHDServiceInfo">IsCrypted</convert>
       <convert type="ConditionalShowHide" />
     </widget>
-    <widget source="session.CurrentService" render="Label" position="765,671" size="89,22" backgroundColor="SevenBackgroundIB1" transparent="1" zPosition="3" foregroundColor="SevenFont1" font="Regular; 19" valign="center" halign="left">
+    <widget source="session.CurrentService" render="Label" position="760,671" size="89,22" backgroundColor="SevenBackgroundIB1" transparent="1" zPosition="3" foregroundColor="SevenFont1" font="Regular; 19" valign="center" halign="left">
       <convert type="SevenHDExtraInfo">OrbitalPositionOrTunerSystem</convert>
     </widget>
-    <widget source="session.FrontendStatus" render="Label" position="812,671" size="70,21" font="Regular; 19" transparent="1" foregroundColor="SevenFont1" backgroundColor="SevenBackgroundIB1" zPosition="3" halign="right" valign="center">
+    <widget source="session.FrontendStatus" render="Label" position="817,671" size="70,21" font="Regular; 19" transparent="1" foregroundColor="SevenFont1" backgroundColor="SevenBackgroundIB1" zPosition="3" halign="right" valign="center">
       <convert type="FrontendInfo">SNR</convert>
     </widget>
     <widget backgroundColor="SevenBackgroundIB2" font="Regular; 22" halign="right" position="958,551" render="Label" size="107,36" source="session.Event_Now" transparent="0" valign="center" zPosition="1">
@@ -8260,10 +8260,10 @@
       <convert type="SevenHDServiceInfo">IsCrypted</convert>
       <convert type="ConditionalShowHide" />
     </widget>
-    <widget source="session.CurrentService" render="Label" position="785,671" size="89,22" backgroundColor="SevenBackgroundIB1" transparent="1" zPosition="3" foregroundColor="SevenFont1" font="Regular; 19" valign="center" halign="left">
+    <widget source="session.CurrentService" render="Label" position="780,671" size="89,22" backgroundColor="SevenBackgroundIB1" transparent="1" zPosition="3" foregroundColor="SevenFont1" font="Regular; 19" valign="center" halign="left">
       <convert type="SevenHDExtraInfo">OrbitalPositionOrTunerSystem</convert>
     </widget>
-    <widget source="session.FrontendStatus" render="Label" position="832,671" size="70,21" font="Regular; 19" transparent="1" foregroundColor="SevenFont1" backgroundColor="SevenBackgroundIB1" zPosition="3" halign="right" valign="center">
+    <widget source="session.FrontendStatus" render="Label" position="837,671" size="70,21" font="Regular; 19" transparent="1" foregroundColor="SevenFont1" backgroundColor="SevenBackgroundIB1" zPosition="3" halign="right" valign="center">
       <convert type="FrontendInfo">SNR</convert>
     </widget>
     <widget backgroundColor="SevenBackgroundIB2" font="Regular; 22" halign="right" position="958,550" render="Label" size="107,36" source="session.Event_Now" transparent="0" valign="center" zPosition="1">
@@ -8392,10 +8392,10 @@
       <convert type="SevenHDServiceInfo">IsCrypted</convert>
       <convert type="ConditionalShowHide" />
     </widget>
-    <widget source="session.CurrentService" render="Label" position="785,671" size="89,22" backgroundColor="SevenBackgroundIB1" transparent="1" zPosition="3" foregroundColor="SevenFont1" font="Regular; 19" valign="center" halign="left">
+    <widget source="session.CurrentService" render="Label" position="780,671" size="89,22" backgroundColor="SevenBackgroundIB1" transparent="1" zPosition="3" foregroundColor="SevenFont1" font="Regular; 19" valign="center" halign="left">
       <convert type="SevenHDExtraInfo">OrbitalPositionOrTunerSystem</convert>
     </widget>
-    <widget source="session.FrontendStatus" render="Label" position="832,671" size="70,21" font="Regular; 19" transparent="1" foregroundColor="SevenFont1" backgroundColor="SevenBackgroundIB1" zPosition="3" halign="right" valign="center">
+    <widget source="session.FrontendStatus" render="Label" position="837,671" size="70,21" font="Regular; 19" transparent="1" foregroundColor="SevenFont1" backgroundColor="SevenBackgroundIB1" zPosition="3" halign="right" valign="center">
       <convert type="FrontendInfo">SNR</convert>
     </widget>
     <widget backgroundColor="SevenBackgroundIB2" font="Regular; 22" halign="right" position="958,550" render="Label" size="107,36" source="session.Event_Now" transparent="0" valign="center" zPosition="1">
@@ -8567,10 +8567,10 @@
       <convert type="SevenHDServiceInfo">IsCrypted</convert>
       <convert type="ConditionalShowHide" />
     </widget>
-    <widget source="session.CurrentService" render="Label" position="785,671" size="89,22" backgroundColor="SevenBackgroundIB1" transparent="1" zPosition="3" foregroundColor="SevenFont1" font="Regular; 19" valign="center" halign="left">
+    <widget source="session.CurrentService" render="Label" position="780,671" size="89,22" backgroundColor="SevenBackgroundIB1" transparent="1" zPosition="3" foregroundColor="SevenFont1" font="Regular; 19" valign="center" halign="left">
       <convert type="SevenHDExtraInfo">OrbitalPositionOrTunerSystem</convert>
     </widget>
-    <widget source="session.FrontendStatus" render="Label" position="832,671" size="70,21" font="Regular; 19" transparent="1" foregroundColor="SevenFont1" backgroundColor="SevenBackgroundIB1" zPosition="3" halign="right" valign="center">
+    <widget source="session.FrontendStatus" render="Label" position="837,671" size="70,21" font="Regular; 19" transparent="1" foregroundColor="SevenFont1" backgroundColor="SevenBackgroundIB1" zPosition="3" halign="right" valign="center">
       <convert type="FrontendInfo">SNR</convert>
     </widget>
     <widget backgroundColor="SevenBackgroundIB2" font="Regular; 22" halign="right" position="958,550" render="Label" size="107,36" source="session.Event_Now" transparent="0" valign="center" zPosition="1">
@@ -8746,10 +8746,10 @@
       <convert type="SevenHDServiceInfo">IsCrypted</convert>
       <convert type="ConditionalShowHide" />
     </widget>
-    <widget source="session.CurrentService" render="Label" position="785,671" size="89,22" backgroundColor="SevenBackgroundIB1" transparent="1" zPosition="3" foregroundColor="SevenFont1" font="Regular; 19" valign="center" halign="left">
+    <widget source="session.CurrentService" render="Label" position="780,671" size="89,22" backgroundColor="SevenBackgroundIB1" transparent="1" zPosition="3" foregroundColor="SevenFont1" font="Regular; 19" valign="center" halign="left">
       <convert type="SevenHDExtraInfo">OrbitalPositionOrTunerSystem</convert>
     </widget>
-    <widget source="session.FrontendStatus" render="Label" position="832,671" size="70,21" font="Regular; 19" transparent="1" foregroundColor="SevenFont1" backgroundColor="SevenBackgroundIB1" zPosition="3" halign="right" valign="center">
+    <widget source="session.FrontendStatus" render="Label" position="837,671" size="70,21" font="Regular; 19" transparent="1" foregroundColor="SevenFont1" backgroundColor="SevenBackgroundIB1" zPosition="3" halign="right" valign="center">
       <convert type="FrontendInfo">SNR</convert>
     </widget>
     <widget backgroundColor="SevenBackgroundIB2" font="Regular; 22" halign="right" position="958,550" render="Label" size="107,36" source="session.Event_Now" transparent="0" valign="center" zPosition="1">
@@ -8914,10 +8914,10 @@
       <convert type="SevenHDServiceInfo">IsCrypted</convert>
       <convert type="ConditionalShowHide" />
     </widget>
-    <widget source="session.CurrentService" render="Label" position="785,671" size="89,22" backgroundColor="SevenBackgroundIB1" transparent="1" zPosition="3" foregroundColor="SevenFont1" font="Regular; 19" valign="center" halign="left">
+    <widget source="session.CurrentService" render="Label" position="780,671" size="89,22" backgroundColor="SevenBackgroundIB1" transparent="1" zPosition="3" foregroundColor="SevenFont1" font="Regular; 19" valign="center" halign="left">
       <convert type="SevenHDExtraInfo">OrbitalPositionOrTunerSystem</convert>
     </widget>
-    <widget source="session.FrontendStatus" render="Label" position="832,671" size="70,21" font="Regular; 19" transparent="1" foregroundColor="SevenFont1" backgroundColor="SevenBackgroundIB1" zPosition="3" halign="right" valign="center">
+    <widget source="session.FrontendStatus" render="Label" position="837,671" size="70,21" font="Regular; 19" transparent="1" foregroundColor="SevenFont1" backgroundColor="SevenBackgroundIB1" zPosition="3" halign="right" valign="center">
       <convert type="FrontendInfo">SNR</convert>
     </widget>
     <widget backgroundColor="SevenBackgroundIB2" font="Regular; 22" halign="right" position="958,550" render="Label" size="107,36" source="session.Event_Now" transparent="0" valign="center" zPosition="1">
@@ -9046,10 +9046,10 @@
       <convert type="SevenHDServiceInfo">IsCrypted</convert>
       <convert type="ConditionalShowHide" />
     </widget>
-    <widget source="session.CurrentService" render="Label" position="785,671" size="89,22" backgroundColor="SevenBackgroundIB1" transparent="1" zPosition="3" foregroundColor="SevenFont1" font="Regular; 19" valign="center" halign="left">
+    <widget source="session.CurrentService" render="Label" position="780,671" size="89,22" backgroundColor="SevenBackgroundIB1" transparent="1" zPosition="3" foregroundColor="SevenFont1" font="Regular; 19" valign="center" halign="left">
       <convert type="SevenHDExtraInfo">OrbitalPositionOrTunerSystem</convert>
     </widget>
-    <widget source="session.FrontendStatus" render="Label" position="832,671" size="70,21" font="Regular; 19" transparent="1" foregroundColor="SevenFont1" backgroundColor="SevenBackgroundIB1" zPosition="3" halign="right" valign="center">
+    <widget source="session.FrontendStatus" render="Label" position="837,671" size="70,21" font="Regular; 19" transparent="1" foregroundColor="SevenFont1" backgroundColor="SevenBackgroundIB1" zPosition="3" halign="right" valign="center">
       <convert type="FrontendInfo">SNR</convert>
     </widget>
     <widget backgroundColor="SevenBackgroundIB2" font="Regular; 22" halign="right" position="958,550" render="Label" size="107,36" source="session.Event_Now" transparent="0" valign="center" zPosition="1">
@@ -9221,10 +9221,10 @@
       <convert type="SevenHDServiceInfo">IsCrypted</convert>
       <convert type="ConditionalShowHide" />
     </widget>
-    <widget source="session.CurrentService" render="Label" position="785,671" size="89,22" backgroundColor="SevenBackgroundIB1" transparent="1" zPosition="3" foregroundColor="SevenFont1" font="Regular; 19" valign="center" halign="left">
+    <widget source="session.CurrentService" render="Label" position="780,671" size="89,22" backgroundColor="SevenBackgroundIB1" transparent="1" zPosition="3" foregroundColor="SevenFont1" font="Regular; 19" valign="center" halign="left">
       <convert type="SevenHDExtraInfo">OrbitalPositionOrTunerSystem</convert>
     </widget>
-    <widget source="session.FrontendStatus" render="Label" position="832,671" size="70,21" font="Regular; 19" transparent="1" foregroundColor="SevenFont1" backgroundColor="SevenBackgroundIB1" zPosition="3" halign="right" valign="center">
+    <widget source="session.FrontendStatus" render="Label" position="837,671" size="70,21" font="Regular; 19" transparent="1" foregroundColor="SevenFont1" backgroundColor="SevenBackgroundIB1" zPosition="3" halign="right" valign="center">
       <convert type="FrontendInfo">SNR</convert>
     </widget>
     <widget backgroundColor="SevenBackgroundIB2" font="Regular; 22" halign="right" position="958,550" render="Label" size="107,36" source="session.Event_Now" transparent="0" valign="center" zPosition="1">
@@ -9440,10 +9440,10 @@
       <convert type="SevenHDServiceInfo">IsCrypted</convert>
       <convert type="ConditionalShowHide" />
     </widget>
-    <widget source="session.CurrentService" render="Label" position="785,671" size="89,22" backgroundColor="SevenBackgroundIB1" transparent="1" zPosition="3" foregroundColor="SevenFont1" font="Regular; 19" valign="center" halign="left">
+    <widget source="session.CurrentService" render="Label" position="780,671" size="89,22" backgroundColor="SevenBackgroundIB1" transparent="1" zPosition="3" foregroundColor="SevenFont1" font="Regular; 19" valign="center" halign="left">
       <convert type="SevenHDExtraInfo">OrbitalPositionOrTunerSystem</convert>
     </widget>
-    <widget source="session.FrontendStatus" render="Label" position="832,671" size="70,21" font="Regular; 19" transparent="1" foregroundColor="SevenFont1" backgroundColor="SevenBackgroundIB1" zPosition="3" halign="right" valign="center">
+    <widget source="session.FrontendStatus" render="Label" position="837,671" size="70,21" font="Regular; 19" transparent="1" foregroundColor="SevenFont1" backgroundColor="SevenBackgroundIB1" zPosition="3" halign="right" valign="center">
       <convert type="FrontendInfo">SNR</convert>
     </widget>
     <widget backgroundColor="SevenBackgroundIB2" font="Regular; 22" halign="right" position="958,550" render="Label" size="107,36" source="session.Event_Now" transparent="0" valign="center" zPosition="1">

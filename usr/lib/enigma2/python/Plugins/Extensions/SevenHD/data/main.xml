@@ -788,11 +788,11 @@
   </screen>
   <!-- ********** Network ********** -->
   <!-- AdapterSetup -->
- <screen backgroundColor="transparent" flags="wfNoBorder" name="AdapterSetup" position="0,0" size="1280,720" title="Network Setup">
+<screen backgroundColor="transparent" flags="wfNoBorder" name="AdapterSetup" position="0,0" size="1280,720" title="Network Setup">
     <widget backgroundColor="SevenBackground" font="Regular2;24" foregroundColor="SevenFont2" position="70,80" render="Label" size="495,30" source="Adapter" transparent="0" />
     <widget backgroundColor="SevenBackground" enableWrapAround="1" itemHeight="30" name="config" position="70,130" size="708,200" transparent="0" />
     <widget backgroundColor="SevenBackground" font="Regular2;24" foregroundColor="SevenFont2" halign="center" position="70,600" render="Label" size="708,30" source="introduction2" transparent="0" />
-    
+    <eLabel backgroundColor="SevenLine" position="200,388" size="430,2" zPosition="2" />
  <widget source="introduction" render="Label" position="200,350" size="430,32" font="Regular;24" halign="center" backgroundColor="SevenBackground" transparent="0" />
   <widget source="IPtext" render="Label" position="200,400" size="210,24" font="Regular;20" halign="right" foregroundColor="SevenFont1" backgroundColor="SevenBackground" transparent="0" />
   <widget source="Netmasktext" render="Label" position="200,430" size="210,24" font="Regular;20" halign="right" foregroundColor="SevenFont1" backgroundColor="SevenBackground" transparent="0" />
@@ -804,10 +804,9 @@
   <widget source="Gateway" render="Label" position="420,460" size="210,24" font="Regular;20" halign="left" backgroundColor="SevenBackground" transparent="0" />
   <widget source="DNS1" render="Label" position="420,490" size="210,24" font="Regular;20" halign="left" backgroundColor="SevenBackground" transparent="0" />
   <widget source="DNS2" render="Label" position="420,520" size="210,24" font="Regular;20" halign="left" backgroundColor="SevenBackground" transparent="0" />
-
 <panel name="template_menu_left_button" />
-    <panel name="template_colorkey_text_source" />
-  </screen>
+<panel name="template_colorkey_text_source" />
+</screen>
   <!-- AdapterSetupConfiguration -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="AdapterSetupConfiguration" position="0,0" size="1280,720" title="Network Configuration...">
     <widget backgroundColor="SevenBackground" font="Regular2;24" foregroundColor="SevenFont2" position="70,80" render="Label" size="495,28" source="IF" transparent="0" />
