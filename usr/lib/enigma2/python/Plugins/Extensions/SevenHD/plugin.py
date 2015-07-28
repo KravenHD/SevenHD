@@ -555,30 +555,30 @@ config.plugins.SevenHD.AnalogStyle = ConfigSelection(default="00999999", choices
 				])
 				
 config.plugins.SevenHD.InfobarStyle = ConfigSelection(default="infobar-style-original", choices = [
-				("infobar-style-original", _("Original")),
+				("infobar-style-original", _("Original 1")),
 				("infobar-style-original2", _("Original 2")),
 				("infobar-style-original3", _("Original 3")),
 				("infobar-style-original4", _("Original 4")),
-				("infobar-style-zpicon", _("ZPicon")),
+				("infobar-style-zpicon", _("ZPicon 1")),
 				("infobar-style-zpicon2", _("ZPicon 2")),
 				("infobar-style-zpicon3", _("ZPicon 3")),
 				("infobar-style-zpicon4", _("ZPicon 4")),
-				("infobar-style-xpicon", _("XPicon")),
+				("infobar-style-xpicon", _("XPicon 1")),
 				("infobar-style-xpicon2", _("XPicon 2")),
 				("infobar-style-xpicon3", _("XPicon 3")),
 				("infobar-style-xpicon4", _("XPicon 4")),
-				("infobar-style-zzpicon", _("ZZPicon")),
+				("infobar-style-zzpicon", _("ZZPicon 1")),
 				("infobar-style-zzpicon2", _("ZZPicon 2")),
 				("infobar-style-zzpicon3", _("ZZPicon 3")),
 				("infobar-style-zzpicon4", _("ZZPicon 4")),
-				("infobar-style-zzzpicon", _("ZZZPicon")),
+				("infobar-style-zzzpicon", _("ZZZPicon 1")),
 				("infobar-style-zzzpicon2", _("ZZZPicon 2")),
 				("infobar-style-zzzpicon3", _("ZZZPicon 3")),
 				("infobar-style-zzzpicon4", _("ZZZPicon 4"))
 				])
 				
 config.plugins.SevenHD.ChannelSelectionStyle = ConfigSelection(default="channelselection-twocolumns", choices = [
-				("channelselection-twocolumns", _("two columns")),
+				("channelselection-twocolumns", _("two columns 1")),
 				("channelselection-twocolumns2", _("two columns 2")),
 				("channelselection-threecolumns", _("three columns")),
 				("channelselection-threecolumnsminitv", _("three columns miniTV")),
