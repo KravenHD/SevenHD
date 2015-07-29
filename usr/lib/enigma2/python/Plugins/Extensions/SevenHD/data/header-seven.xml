@@ -462,6 +462,40 @@
 <eLabel position="580,487" size="680,2" backgroundColor="SevenLine" />
 <eLabel backgroundColor="SevenLine" position="18,623" size="530,2" zPosition="2" />
 </screen>
+<screen name="template_menu_cs8_button">
+  <widget backgroundColor="SevenBackground" font="Regular2; 34" foregroundColor="SevenFont2" position="18,14" render="Label" size="680,46" source="Title" transparent="0" halign="left" valign="center" noWrap="1" />
+  <eLabel backgroundColor="SevenBackgroundRight" position="721,6" size="555,708" transparent="0" zPosition="-9" foregroundColor="SevenFont2" />
+  <eLabel backgroundColor="SevenBorder" position="721,714" size="555,2" zPosition="2" />
+  <eLabel backgroundColor="SevenBorder" position="6,714" size="701,2" zPosition="2" />
+  <eLabel backgroundColor="SevenBorder" position="721,6" size="2,709" zPosition="2" />
+  <eLabel backgroundColor="SevenLine" position="730,64" size="530,2" zPosition="2" />
+  <eLabel backgroundColor="SevenLine" position="730,399" size="530,2" zPosition="2" />
+
+  <ePixmap pixmap="SevenHD/buttons/key_red1.png" position="22,670" size="32,37" backgroundColor="SevenBackground" alphatest="blend" />
+  <ePixmap pixmap="SevenHD/buttons/key_green1.png" position="222,670" size="32,37" backgroundColor="SevenBackground" alphatest="blend" />
+  <ePixmap pixmap="SevenHD/buttons/key_yellow1.png" position="422,670" size="32,37" backgroundColor="SevenBackgroundRight" alphatest="blend" />
+  <ePixmap pixmap="SevenHD/buttons/key_blue1.png" position="737,670" size="32,37" backgroundColor="SevenBackgroundRight" alphatest="blend" />
+  <widget source="global.CurrentTime" render="Label" position="1153,669" size="100,28" font="Regular;26" halign="right" backgroundColor="SevenBackgroundRight" transparent="0" valign="center" foregroundColor="SevenFont1">
+    <convert type="SevenHDClockToText">Default</convert>
+  </widget>
+  <eLabel backgroundColor="SevenBorder" position="1274,6" size="2,708" zPosition="2" />
+  <eLabel backgroundColor="SevenBorder" position="6,6" size="2,708" zPosition="2" />
+  <eLabel backgroundColor="SevenLine" position="18,64" size="680,2" zPosition="2" />
+  <eLabel backgroundColor="SevenLine" position="18,656" size="680,2" zPosition="2" />
+  
+  <eLabel backgroundColor="SevenLine" position="730,656" size="530,2" zPosition="2" />
+  
+  <widget font="Regular; 20" halign="left" valign="center" name="key_red" position="64,662" size="148,48" backgroundColor="SevenBackground" foregroundColor="SevenButtonText" transparent="0" zPosition="1" />
+  <widget font="Regular; 20" halign="left" valign="center" name="key_green" position="263,662" size="148,48" backgroundColor="SevenBackground" foregroundColor="SevenButtonText" transparent="0" zPosition="1" />
+  <widget font="Regular; 20" halign="left" valign="center" name="key_yellow" position="463,662" size="148,48" backgroundColor="SevenBackground" foregroundColor="SevenButtonText" transparent="0" zPosition="1" />
+  <widget font="Regular; 20" halign="left" valign="center" name="key_blue" position="780,662" size="148,48" backgroundColor="SevenBackgroundRight" foregroundColor="SevenButtonText" transparent="0" zPosition="2" />
+  <eLabel backgroundColor="SevenBackground" position="7,6" size="700,708" transparent="0" zPosition="-9" foregroundColor="SevenFont2" />
+  <eLabel backgroundColor="SevenBorder" position="705,6" size="2,709" zPosition="2" />
+  <eLabel backgroundColor="SevenBorder" position="6,6" size="701,2" zPosition="2" />
+  <eLabel backgroundColor="SevenBorder" position="721,6" size="555,2" zPosition="2" />
+
+
+</screen>
   <screen name="template_menu_ib1">
     <eLabel backgroundColor="SevenBackgroundIB1" position="14,533" size="1250,168" />
     <eLabel backgroundColor="SevenBorder" position="1262,533" size="2,170" zPosition="2" />
@@ -479,7 +513,7 @@
     <widget alphatest="blend" position="14,451" render="SevenHDXPicon" size="100,60" source="session.CurrentService" transparent="0" zPosition="4">
       <convert type="ServiceName">Reference</convert>
     </widget>
-    <widget alphatest="blend" pixmap="SevenHD/buttons/ico_rec_on.png" position="1119,480" render="Pixmap" size="32,32" source="session.RecordState" zPosition="5">
+    <widget alphatest="blend" pixmap="SevenHD/buttons/ico_rec_on.png" position="1228,537" render="Pixmap" size="32,32" source="session.RecordState" zPosition="5" transparent="1">
       <convert type="ConditionalShowHide">Blink</convert>
     </widget>
     <widget backgroundColor="SevenBackgroundIB1" font="Regular;24" halign="right" noWrap="1" position="32,572" render="Label" size="76,36" source="session.Event_Now" transparent="0" valign="center" zPosition="1" foregroundColor="SevenFont1">
@@ -621,7 +655,7 @@
     <widget alphatest="blend" position="14,450" render="SevenHDXPicon" size="100,60" source="session.CurrentService" transparent="0" zPosition="4">
       <convert type="ServiceName">Reference</convert>
     </widget>
-    <widget alphatest="blend" pixmap="SevenHD/buttons/ico_rec_on.png" position="1119,480" render="Pixmap" size="32,32" source="session.RecordState" zPosition="5">
+    <widget alphatest="blend" pixmap="SevenHD/buttons/ico_rec_on.png" position="1228,537" render="Pixmap" size="32,32" source="session.RecordState" zPosition="5" transparent="1">
       <convert type="ConditionalShowHide">Blink</convert>
     </widget>
     <widget font="Regular2; 40" foregroundColor="SevenFontCN" halign="left" noWrap="1" position="121,450" render="Label" size="1020,60" source="session.CurrentService" transparent="1" valign="center" zPosition="1" alphatest="blend">
@@ -787,7 +821,7 @@
     <widget alphatest="blend" position="14,450" render="SevenHDXPicon" size="100,60" source="session.CurrentService" transparent="0" zPosition="4">
       <convert type="ServiceName">Reference</convert>
     </widget>
-    <widget alphatest="blend" pixmap="SevenHD/buttons/ico_rec_on.png" position="1119,480" render="Pixmap" size="32,32" source="session.RecordState" zPosition="5">
+    <widget alphatest="blend" pixmap="SevenHD/buttons/ico_rec_on.png" position="1228,537" render="Pixmap" size="32,32" source="session.RecordState" zPosition="5" transparent="1">
       <convert type="ConditionalShowHide">Blink</convert>
     </widget>
     <widget font="Regular2; 40" foregroundColor="SevenFontCN" halign="left" noWrap="1" position="121,450" render="Label" size="1020,60" source="session.CurrentService" transparent="1" valign="center" zPosition="1" alphatest="blend">
@@ -953,7 +987,7 @@
     <widget alphatest="blend" position="14,450" render="SevenHDXPicon" size="100,60" source="session.CurrentService" transparent="0" zPosition="4">
       <convert type="ServiceName">Reference</convert>
     </widget>
-    <widget alphatest="blend" pixmap="SevenHD/buttons/ico_rec_on.png" position="1119,480" render="Pixmap" size="32,32" source="session.RecordState" zPosition="5">
+    <widget alphatest="blend" pixmap="SevenHD/buttons/ico_rec_on.png" position="1228,537" render="Pixmap" size="32,32" source="session.RecordState" zPosition="5" transparent="1">
       <convert type="ConditionalShowHide">Blink</convert>
     </widget>
     <widget font="Regular2; 40" foregroundColor="SevenFontCN" halign="left" noWrap="1" position="121,450" render="Label" size="1020,60" source="session.CurrentService" transparent="1" valign="center" zPosition="1" alphatest="blend">
@@ -1015,7 +1049,7 @@
       <convert type="SevenHDEventTime">Remaining</convert>
       <convert type="SevenHDRemainingToText">InMinutes</convert>
     </widget>
-    <widget alphatest="blend" pixmap="SevenHD/buttons/ico_rec_on.png" position="1119,467" render="Pixmap" size="32,32" source="session.RecordState" zPosition="5">
+    <widget alphatest="blend" pixmap="SevenHD/buttons/ico_rec_on.png" position="1227,525" render="Pixmap" size="32,32" source="session.RecordState" zPosition="5" transparent="1">
       <convert type="ConditionalShowHide">Blink</convert>
     </widget>
     <widget backgroundColor="SevenBackgroundIB1" font="Regular;24" halign="right" noWrap="1" position="426,572" render="Label" size="76,36" source="session.Event_Now" transparent="0" valign="center" zPosition="1" foregroundColor="SevenFont1">
@@ -1157,7 +1191,7 @@
       <convert type="SevenHDEventTime">Remaining</convert>
       <convert type="SevenHDRemainingToText">InMinutes</convert>
     </widget>
-    <widget alphatest="blend" pixmap="SevenHD/buttons/ico_rec_on.png" position="1119,467" render="Pixmap" size="32,32" source="session.RecordState" zPosition="5">
+    <widget alphatest="blend" pixmap="SevenHD/buttons/ico_rec_on.png" position="1227,525" render="Pixmap" size="32,32" source="session.RecordState" zPosition="5" transparent="1">
       <convert type="ConditionalShowHide">Blink</convert>
     </widget>
     <widget font="Regular2; 40" foregroundColor="SevenFont2" halign="left" noWrap="1" position="14,437" render="Label" size="1020,60" source="session.CurrentService" transparent="1" valign="center" zPosition="1" alphatest="blend">
@@ -1308,7 +1342,7 @@
       <convert type="SevenHDEventTime">Remaining</convert>
       <convert type="SevenHDRemainingToText">InMinutes</convert>
     </widget>
-    <widget alphatest="blend" pixmap="SevenHD/buttons/ico_rec_on.png" position="1119,467" render="Pixmap" size="32,32" source="session.RecordState" zPosition="5">
+    <widget alphatest="blend" pixmap="SevenHD/buttons/ico_rec_on.png" position="1227,525" render="Pixmap" size="32,32" source="session.RecordState" zPosition="5" transparent="1">
       <convert type="ConditionalShowHide">Blink</convert>
     </widget>
     <widget font="Regular2; 40" foregroundColor="SevenFontCN" halign="left" noWrap="1" position="14,437" render="Label" size="1020,60" source="session.CurrentService" transparent="1" valign="center" zPosition="1" alphatest="blend">
@@ -1476,7 +1510,7 @@
       <convert type="SevenHDEventTime">Remaining</convert>
       <convert type="SevenHDRemainingToText">InMinutes</convert>
     </widget>
-    <widget alphatest="blend" pixmap="SevenHD/buttons/ico_rec_on.png" position="1119,467" render="Pixmap" size="32,32" source="session.RecordState" zPosition="5">
+    <widget alphatest="blend" pixmap="SevenHD/buttons/ico_rec_on.png" position="1227,525" render="Pixmap" size="32,32" source="session.RecordState" zPosition="5" transparent="1">
       <convert type="ConditionalShowHide">Blink</convert>
     </widget>
     <widget font="Regular2; 40" foregroundColor="SevenFontCN" halign="left" noWrap="1" position="14,437" render="Label" size="1020,60" source="session.CurrentService" transparent="1" valign="center" zPosition="1" alphatest="blend">
@@ -1548,7 +1582,7 @@
     <widget position="428,531" backgroundColor="SevenBackgroundIB1" render="Progress" size="825,6" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress">
       <convert type="SevenHDEventTime">Progress</convert>
     </widget>
-    <widget alphatest="blend" pixmap="SevenHD/buttons/ico_rec_on.png" position="24,662" render="Pixmap" size="32,32" source="session.RecordState" zPosition="15" transparent="1">
+    <widget alphatest="blend" pixmap="SevenHD/buttons/ico_rec_on.png" position="1227,553" render="Pixmap" size="32,32" source="session.RecordState" zPosition="5" transparent="1">
       <convert type="ConditionalShowHide">Blink</convert>
     </widget>
     <widget font="Regular2; 50" backgroundColor="SevenBackgroundIB1" foregroundColor="SevenFontCN" halign="center" noWrap="1" position="429,457" render="Label" size="820,64" source="session.CurrentService" transparent="0" valign="center" zPosition="1" alphatest="blend">
@@ -1686,7 +1720,7 @@
     <widget backgroundColor="SevenBackgroundIB1" font="Regular2; 30" foregroundColor="SevenFont2" halign="center" position="37,263" render="Label" size="1200,38" source="session.Event_Next" transparent="0" zPosition="1" valign="bottom">
       <convert type="SevenHDEventName">Name</convert>
     </widget>
-    <widget alphatest="blend" pixmap="SevenHD/buttons/ico_rec_on.png" position="24,662" render="Pixmap" size="32,32" source="session.RecordState" zPosition="15" transparent="1">
+    <widget alphatest="blend" pixmap="SevenHD/buttons/ico_rec_on.png" position="1227,553" render="Pixmap" size="32,32" source="session.RecordState" zPosition="5" transparent="1">
       <convert type="ConditionalShowHide">Blink</convert>
     </widget>
     <widget font="Regular2; 50" backgroundColor="SevenBackgroundIB1" foregroundColor="SevenFontCN" halign="center" noWrap="1" position="429,457" render="Label" size="820,64" source="session.CurrentService" transparent="0" valign="center" zPosition="1" alphatest="blend">
@@ -1833,7 +1867,7 @@
       <convert type="SevenHDServiceInfo">IsCrypted</convert>
       <convert type="ConditionalShowHide" />
     </widget>
-    <widget alphatest="blend" pixmap="SevenHD/buttons/ico_rec_on.png" position="24,662" render="Pixmap" size="32,32" source="session.RecordState" zPosition="15" transparent="1">
+    <widget alphatest="blend" pixmap="SevenHD/buttons/ico_rec_on.png" position="1227,553" render="Pixmap" size="32,32" source="session.RecordState" zPosition="5" transparent="1">
       <convert type="ConditionalShowHide">Blink</convert>
     </widget>
     <widget font="Regular2; 50" backgroundColor="SevenBackgroundIB1" foregroundColor="SevenFontCN" halign="center" noWrap="1" position="429,457" render="Label" size="820,64" source="session.CurrentService" transparent="0" valign="center" zPosition="1" alphatest="blend">
@@ -1998,7 +2032,7 @@
       <convert type="SevenHDServiceInfo">IsCrypted</convert>
       <convert type="ConditionalShowHide" />
     </widget>
-    <widget alphatest="blend" pixmap="SevenHD/buttons/ico_rec_on.png" position="24,662" render="Pixmap" size="32,32" source="session.RecordState" zPosition="15" transparent="1">
+    <widget alphatest="blend" pixmap="SevenHD/buttons/ico_rec_on.png" position="1227,553" render="Pixmap" size="32,32" source="session.RecordState" zPosition="5" transparent="1">
       <convert type="ConditionalShowHide">Blink</convert>
     </widget>
     <widget font="Regular2; 50" backgroundColor="SevenBackgroundIB1" foregroundColor="SevenFontCN" halign="center" noWrap="1" position="429,457" render="Label" size="820,64" source="session.CurrentService" transparent="0" valign="center" zPosition="1" alphatest="blend">
@@ -2072,7 +2106,7 @@
     <widget position="14,514" backgroundColor="black" render="Progress" size="1250,6" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress">
       <convert type="SevenHDEventTime">Progress</convert>
     </widget>
-    <widget alphatest="blend" pixmap="SevenHD/buttons/ico_rec_on.png" position="1119,480" render="Pixmap" size="32,32" source="session.RecordState" zPosition="5">
+    <widget alphatest="blend" pixmap="SevenHD/buttons/ico_rec_on.png" position="1227,538" render="Pixmap" size="32,32" source="session.RecordState" zPosition="5" transparent="1">
       <convert type="ConditionalShowHide">Blink</convert>
     </widget>
     <widget font="Regular2; 24" halign="right" position="1144,476" render="Label" size="120,36" source="session.Event_Now" transparent="1" valign="center" zPosition="1" foregroundColor="SevenFont1" alphatest="blend">
@@ -2214,7 +2248,7 @@
     <widget backgroundColor="SevenBackgroundIB1" font="Regular2; 30" foregroundColor="SevenFont2" halign="center" position="37,263" render="Label" size="1200,38" source="session.Event_Next" transparent="0" zPosition="1" valign="bottom">
       <convert type="SevenHDEventName">Name</convert>
     </widget>
-    <widget alphatest="blend" pixmap="SevenHD/buttons/ico_rec_on.png" position="1119,480" render="Pixmap" size="32,32" source="session.RecordState" zPosition="5">
+    <widget alphatest="blend" pixmap="SevenHD/buttons/ico_rec_on.png" position="1227,538" render="Pixmap" size="32,32" source="session.RecordState" zPosition="5" transparent="1">
       <convert type="ConditionalShowHide">Blink</convert>
     </widget>
     <widget font="Regular2; 40" foregroundColor="SevenFontCN" halign="left" noWrap="1" position="15,450" render="Label" size="1020,60" source="session.CurrentService" transparent="1" valign="center" zPosition="1" alphatest="blend">
@@ -2365,7 +2399,7 @@
       <convert type="SevenHDServiceInfo">IsCrypted</convert>
       <convert type="ConditionalShowHide" />
     </widget>
-    <widget alphatest="blend" pixmap="SevenHD/buttons/ico_rec_on.png" position="1119,480" render="Pixmap" size="32,32" source="session.RecordState" zPosition="5">
+    <widget alphatest="blend" pixmap="SevenHD/buttons/ico_rec_on.png" position="1227,538" render="Pixmap" size="32,32" source="session.RecordState" zPosition="5" transparent="1">
       <convert type="ConditionalShowHide">Blink</convert>
     </widget>
     <widget font="Regular2; 40" foregroundColor="SevenFontCN" halign="left" noWrap="1" position="15,450" render="Label" size="1020,60" source="session.CurrentService" transparent="1" valign="center" zPosition="1" alphatest="blend">
@@ -2533,7 +2567,7 @@
       <convert type="SevenHDServiceInfo">IsCrypted</convert>
       <convert type="ConditionalShowHide" />
     </widget>
-    <widget alphatest="blend" pixmap="SevenHD/buttons/ico_rec_on.png" position="1119,480" render="Pixmap" size="32,32" source="session.RecordState" zPosition="5">
+    <widget alphatest="blend" pixmap="SevenHD/buttons/ico_rec_on.png" position="1227,538" render="Pixmap" size="32,32" source="session.RecordState" zPosition="5" transparent="1">
       <convert type="ConditionalShowHide">Blink</convert>
     </widget>
     <widget font="Regular2; 40" foregroundColor="SevenFontCN" halign="left" noWrap="1" position="15,450" render="Label" size="1020,60" source="session.CurrentService" transparent="1" valign="center" zPosition="1" alphatest="blend">
@@ -2609,7 +2643,7 @@
     <widget position="14,514" render="Progress" size="1250,6" source="session.Event_Now" backgroundColor="black" transparent="1" zPosition="7" foregroundColor="SevenProgress">
       <convert type="SevenHDEventTime">Progress</convert>
     </widget>
-    <widget alphatest="blend" pixmap="SevenHD/buttons/ico_rec_on.png" position="1119,480" render="Pixmap" size="32,32" source="session.RecordState" zPosition="5">
+    <widget alphatest="blend" pixmap="SevenHD/buttons/ico_rec_on.png" position="1227,538" render="Pixmap" size="32,32" source="session.RecordState" zPosition="5" transparent="1">
       <convert type="ConditionalShowHide">Blink</convert>
     </widget>
     <widget font="Regular2; 24" halign="right" position="1144,476" render="Label" size="120,36" source="session.Event_Now" transparent="1" valign="center" zPosition="1" foregroundColor="SevenFont1" alphatest="blend">
@@ -2751,7 +2785,7 @@
     <widget backgroundColor="SevenBackgroundIB1" font="Regular2; 30" foregroundColor="SevenFont2" halign="center" position="37,263" render="Label" size="1200,38" source="session.Event_Next" transparent="0" zPosition="1" valign="bottom">
       <convert type="SevenHDEventName">Name</convert>
     </widget>
-    <widget alphatest="blend" pixmap="SevenHD/buttons/ico_rec_on.png" position="1119,480" render="Pixmap" size="32,32" source="session.RecordState" zPosition="5">
+    <widget alphatest="blend" pixmap="SevenHD/buttons/ico_rec_on.png" position="1227,538" render="Pixmap" size="32,32" source="session.RecordState" zPosition="5" transparent="1">
       <convert type="ConditionalShowHide">Blink</convert>
     </widget>
     <widget font="Regular2; 40" foregroundColor="SevenFontCN" halign="left" noWrap="1" position="15,450" render="Label" size="1020,60" source="session.CurrentService" transparent="1" valign="center" zPosition="1" alphatest="blend">
@@ -2902,7 +2936,7 @@
       <convert type="SevenHDServiceInfo">IsCrypted</convert>
       <convert type="ConditionalShowHide" />
     </widget>
-    <widget alphatest="blend" pixmap="SevenHD/buttons/ico_rec_on.png" position="1119,480" render="Pixmap" size="32,32" source="session.RecordState" zPosition="5">
+    <widget alphatest="blend" pixmap="SevenHD/buttons/ico_rec_on.png" position="1227,538" render="Pixmap" size="32,32" source="session.RecordState" zPosition="5" transparent="1">
       <convert type="ConditionalShowHide">Blink</convert>
     </widget>
     <widget font="Regular2; 40" foregroundColor="SevenFontCN" halign="left" noWrap="1" position="15,450" render="Label" size="1020,60" source="session.CurrentService" transparent="1" valign="center" zPosition="1" alphatest="blend">
@@ -3070,7 +3104,7 @@
       <convert type="SevenHDServiceInfo">IsCrypted</convert>
       <convert type="ConditionalShowHide" />
     </widget>
-    <widget alphatest="blend" pixmap="SevenHD/buttons/ico_rec_on.png" position="1119,480" render="Pixmap" size="32,32" source="session.RecordState" zPosition="5">
+    <widget alphatest="blend" pixmap="SevenHD/buttons/ico_rec_on.png" position="1227,538" render="Pixmap" size="32,32" source="session.RecordState" zPosition="5" transparent="1">
       <convert type="ConditionalShowHide">Blink</convert>
     </widget>
     <widget font="Regular2; 40" foregroundColor="SevenFontCN" halign="left" noWrap="1" position="15,450" render="Label" size="1020,60" source="session.CurrentService" transparent="1" valign="center" zPosition="1" alphatest="blend">
@@ -3146,7 +3180,7 @@
     <widget position="215,602" backgroundColor="SevenBackgroundIB1" render="Progress" size="850,6" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress">
       <convert type="SevenHDEventTime">Progress</convert>
     </widget>
-    <widget alphatest="blend" pixmap="SevenHD/buttons/ico_rec_on.png" position="20,663" render="Pixmap" size="32,32" source="session.RecordState" zPosition="5">
+    <widget alphatest="blend" pixmap="SevenHD/buttons/ico_rec_on.png" position="1227,538" render="Pixmap" size="32,32" source="session.RecordState" zPosition="5" transparent="1">
       <convert type="ConditionalShowHide">Blink</convert>
     </widget>
     <widget backgroundColor="SevenBackgroundIB1" font="Regular;24" halign="right" noWrap="1" position="32,551" render="Label" size="76,36" source="session.Event_Now" transparent="0" valign="center" zPosition="1" foregroundColor="SevenFont1">
@@ -3309,7 +3343,7 @@
     <widget position="215,602" backgroundColor="SevenBackgroundIB1" render="Progress" size="850,6" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress">
       <convert type="SevenHDEventTime">Progress</convert>
     </widget>
-    <widget alphatest="blend" pixmap="SevenHD/buttons/ico_rec_on.png" position="20,663" render="Pixmap" size="32,32" source="session.RecordState" zPosition="5">
+    <widget alphatest="blend" pixmap="SevenHD/buttons/ico_rec_on.png" position="1227,538" render="Pixmap" size="32,32" source="session.RecordState" zPosition="5" transparent="1">
       <convert type="ConditionalShowHide">Blink</convert>
     </widget>
     <widget font="Regular2; 40" foregroundColor="SevenFont2" halign="left" noWrap="1" position="23,472" render="Label" size="1020,60" source="session.CurrentService" transparent="1" valign="center" zPosition="1" alphatest="blend">
@@ -3482,7 +3516,7 @@
     <widget position="215,602" backgroundColor="SevenBackgroundIB1" render="Progress" size="850,6" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress">
       <convert type="SevenHDEventTime">Progress</convert>
     </widget>
-    <widget alphatest="blend" pixmap="SevenHD/buttons/ico_rec_on.png" position="20,663" render="Pixmap" size="32,32" source="session.RecordState" zPosition="5">
+    <widget alphatest="blend" pixmap="SevenHD/buttons/ico_rec_on.png" position="1227,538" render="Pixmap" size="32,32" source="session.RecordState" zPosition="5" transparent="1">
       <convert type="ConditionalShowHide">Blink</convert>
     </widget>
     <widget font="Regular2; 40" foregroundColor="SevenFontCN" halign="left" noWrap="1" position="23,472" render="Label" size="1020,60" source="session.CurrentService" transparent="1" valign="center" zPosition="1" alphatest="blend">
@@ -3644,7 +3678,7 @@
     <widget position="215,602" backgroundColor="SevenBackgroundIB1" render="Progress" size="850,6" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress">
       <convert type="SevenHDEventTime">Progress</convert>
     </widget>
-    <widget alphatest="blend" pixmap="SevenHD/buttons/ico_rec_on.png" position="20,663" render="Pixmap" size="32,32" source="session.RecordState" zPosition="5">
+    <widget alphatest="blend" pixmap="SevenHD/buttons/ico_rec_on.png" position="1227,538" render="Pixmap" size="32,32" source="session.RecordState" zPosition="5" transparent="1">
       <convert type="ConditionalShowHide">Blink</convert>
     </widget>
     <widget font="Regular2; 40" foregroundColor="SevenFontCN" halign="left" noWrap="1" position="23,472" render="Label" size="1020,60" source="session.CurrentService" transparent="1" valign="center" zPosition="1" alphatest="blend">
@@ -4376,7 +4410,7 @@
     <widget position="428,531" backgroundColor="SevenBackgroundIB1" render="Progress" size="825,6" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress">
       <convert type="SevenHDEventTime">Progress</convert>
     </widget>
-    <widget alphatest="blend" pixmap="SevenHD/buttons/ico_rec_on.png" position="24,662" render="Pixmap" size="32,32" source="session.RecordState" zPosition="15" transparent="1">
+    <widget alphatest="blend" pixmap="SevenHD/buttons/ico_rec_on.png" position="1227,540" render="Pixmap" size="32,32" source="session.RecordState" zPosition="5" transparent="1">
       <convert type="ConditionalShowHide">Blink</convert>
     </widget>
     <widget font="Regular2; 50" backgroundColor="SevenBackgroundIB1" foregroundColor="SevenFontCN" halign="center" noWrap="1" position="429,457" render="Label" size="820,64" source="session.CurrentService" transparent="0" valign="center" zPosition="1" alphatest="blend">
@@ -4538,7 +4572,7 @@
     <widget position="428,531" backgroundColor="SevenBackgroundIB1" render="Progress" size="825,6" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress">
       <convert type="SevenHDEventTime">Progress</convert>
     </widget>
-    <widget alphatest="blend" pixmap="SevenHD/buttons/ico_rec_on.png" position="24,662" render="Pixmap" size="32,32" source="session.RecordState" zPosition="15" transparent="1">
+    <widget alphatest="blend" pixmap="SevenHD/buttons/ico_rec_on.png" position="1227,540" render="Pixmap" size="32,32" source="session.RecordState" zPosition="5" transparent="1">
       <convert type="ConditionalShowHide">Blink</convert>
     </widget>
     <widget font="Regular2; 50" backgroundColor="SevenBackgroundIB1" foregroundColor="SevenFontCN" halign="center" noWrap="1" position="429,457" render="Label" size="820,64" source="session.CurrentService" transparent="0" valign="center" zPosition="1" alphatest="blend">
@@ -4706,7 +4740,7 @@
     <widget position="428,531" backgroundColor="SevenBackgroundIB1" render="Progress" size="825,6" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress">
       <convert type="SevenHDEventTime">Progress</convert>
     </widget>
-    <widget alphatest="blend" pixmap="SevenHD/buttons/ico_rec_on.png" position="24,662" render="Pixmap" size="32,32" source="session.RecordState" zPosition="15" transparent="1">
+    <widget alphatest="blend" pixmap="SevenHD/buttons/ico_rec_on.png" position="1227,540" render="Pixmap" size="32,32" source="session.RecordState" zPosition="5" transparent="1">
       <convert type="ConditionalShowHide">Blink</convert>
     </widget>
     <widget font="Regular2; 50" backgroundColor="SevenBackgroundIB1" foregroundColor="SevenFontCN" halign="center" noWrap="1" position="429,457" render="Label" size="820,64" source="session.CurrentService" transparent="0" valign="center" zPosition="1" alphatest="blend">
@@ -4862,7 +4896,7 @@
     <widget position="428,531" backgroundColor="SevenBackgroundIB1" render="Progress" size="825,6" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress">
       <convert type="SevenHDEventTime">Progress</convert>
     </widget>
-    <widget alphatest="blend" pixmap="SevenHD/buttons/ico_rec_on.png" position="24,662" render="Pixmap" size="32,32" source="session.RecordState" zPosition="15" transparent="1">
+    <widget alphatest="blend" pixmap="SevenHD/buttons/ico_rec_on.png" position="1227,540" render="Pixmap" size="32,32" source="session.RecordState" zPosition="5" transparent="1">
       <convert type="ConditionalShowHide">Blink</convert>
     </widget>
     <widget font="Regular2; 50" backgroundColor="SevenBackgroundIB1" foregroundColor="SevenFontCN" halign="center" noWrap="1" position="429,457" render="Label" size="820,64" source="session.CurrentService" transparent="0" valign="center" zPosition="1" alphatest="blend">
@@ -5615,7 +5649,7 @@
     <widget position="273,603" backgroundColor="SevenBackgroundIB1" render="Progress" size="793,6" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress">
       <convert type="SevenHDEventTime">Progress</convert>
     </widget>
-    <widget alphatest="blend" pixmap="SevenHD/buttons/ico_rec_on.png" position="26,663" render="Pixmap" size="32,32" source="session.RecordState" zPosition="5">
+    <widget alphatest="blend" pixmap="SevenHD/buttons/ico_rec_on.png" position="1227,537" render="Pixmap" size="32,32" source="session.RecordState" zPosition="15" transparent="0">
       <convert type="ConditionalShowHide">Blink</convert>
     </widget>
     <widget backgroundColor="SevenBackgroundIB1" font="Regular;24" halign="right" noWrap="1" position="256,550" render="Label" size="76,36" source="session.Event_Now" transparent="0" valign="center" zPosition="1" foregroundColor="SevenFont1">
@@ -5781,7 +5815,7 @@
     <widget position="273,603" backgroundColor="SevenBackgroundIB1" render="Progress" size="793,6" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress">
       <convert type="SevenHDEventTime">Progress</convert>
     </widget>
-    <widget alphatest="blend" pixmap="SevenHD/buttons/ico_rec_on.png" position="26,663" render="Pixmap" size="32,32" source="session.RecordState" zPosition="5">
+    <widget alphatest="blend" pixmap="SevenHD/buttons/ico_rec_on.png" position="1227,537" render="Pixmap" size="32,32" source="session.RecordState" zPosition="15" transparent="0">
       <convert type="ConditionalShowHide">Blink</convert>
     </widget>
     <widget font="Regular2; 40" foregroundColor="SevenFontCN" halign="left" noWrap="1" position="15,472" render="Label" size="1020,60" source="session.CurrentService" transparent="1" valign="center" zPosition="1" alphatest="blend">
@@ -5953,7 +5987,7 @@
     <widget position="273,603" render="Progress" backgroundColor="SevenBackgroundIB1" size="793,6" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress">
       <convert type="SevenHDEventTime">Progress</convert>
     </widget>
-    <widget alphatest="blend" pixmap="SevenHD/buttons/ico_rec_on.png" position="26,663" render="Pixmap" size="32,32" source="session.RecordState" zPosition="5">
+    <widget alphatest="blend" pixmap="SevenHD/buttons/ico_rec_on.png" position="1227,537" render="Pixmap" size="32,32" source="session.RecordState" zPosition="15" transparent="0">
       <convert type="ConditionalShowHide">Blink</convert>
     </widget>
     <widget font="Regular2; 40" foregroundColor="SevenFontCN" halign="left" noWrap="1" position="15,472" render="Label" size="1020,60" source="session.CurrentService" transparent="1" valign="center" zPosition="1" alphatest="blend">
@@ -6116,7 +6150,7 @@
     <widget position="273,603" render="Progress" backgroundColor="SevenBackgroundIB1" size="793,6" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress">
       <convert type="SevenHDEventTime">Progress</convert>
     </widget>
-    <widget alphatest="blend" pixmap="SevenHD/buttons/ico_rec_on.png" position="26,663" render="Pixmap" size="32,32" source="session.RecordState" zPosition="5">
+    <widget alphatest="blend" pixmap="SevenHD/buttons/ico_rec_on.png" position="1227,537" render="Pixmap" size="32,32" source="session.RecordState" zPosition="15" transparent="0">
       <convert type="ConditionalShowHide">Blink</convert>
     </widget>
     <widget font="Regular2; 40" foregroundColor="SevenFontCN" halign="left" noWrap="1" position="15,472" render="Label" size="1020,60" source="session.CurrentService" transparent="1" valign="center" zPosition="1" alphatest="blend">
@@ -6250,7 +6284,7 @@
     <widget position="215,602" backgroundColor="SevenBackgroundIB2" render="Progress" size="850,6" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress">
       <convert type="SevenHDEventTime">Progress</convert>
     </widget>
-    <widget alphatest="blend" pixmap="SevenHD/buttons/ico_rec_on.png" position="20,666" render="Pixmap" size="32,32" source="session.RecordState" zPosition="5">
+    <widget alphatest="blend" pixmap="SevenHD/buttons/ico_rec_on.png" position="1227,537" render="Pixmap" size="32,32" source="session.RecordState" zPosition="15" transparent="0">
       <convert type="ConditionalShowHide">Blink</convert>
     </widget>
     <widget backgroundColor="SevenBackgroundIB2" font="Regular;24" halign="right" noWrap="1" position="32,551" render="Label" size="76,36" source="session.Event_Now" transparent="0" valign="center" zPosition="1" foregroundColor="SevenFont1">
@@ -6377,7 +6411,7 @@
     <widget position="215,602" backgroundColor="SevenBackgroundIB2" render="Progress" size="850,6" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress">
       <convert type="SevenHDEventTime">Progress</convert>
     </widget>
-    <widget alphatest="blend" pixmap="SevenHD/buttons/ico_rec_on.png" position="20,666" render="Pixmap" size="32,32" source="session.RecordState" zPosition="5">
+    <widget alphatest="blend" pixmap="SevenHD/buttons/ico_rec_on.png" position="1227,537" render="Pixmap" size="32,32" source="session.RecordState" zPosition="15" transparent="0">
       <convert type="ConditionalShowHide">Blink</convert>
     </widget>
     <widget backgroundColor="SevenBackgroundIB2" font="Regular;24" halign="right" noWrap="1" position="32,551" render="Label" size="76,36" source="session.Event_Now" transparent="0" valign="center" zPosition="1" foregroundColor="SevenFont1">
@@ -6547,7 +6581,7 @@
     <widget position="215,602" backgroundColor="SevenBackgroundIB2" render="Progress" size="850,6" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress">
       <convert type="SevenHDEventTime">Progress</convert>
     </widget>
-    <widget alphatest="blend" pixmap="SevenHD/buttons/ico_rec_on.png" position="20,666" render="Pixmap" size="32,32" source="session.RecordState" zPosition="5">
+    <widget alphatest="blend" pixmap="SevenHD/buttons/ico_rec_on.png" position="1227,537" render="Pixmap" size="32,32" source="session.RecordState" zPosition="15" transparent="0">
       <convert type="ConditionalShowHide">Blink</convert>
     </widget>
     <widget backgroundColor="SevenBackgroundIB2" font="Regular;24" halign="right" noWrap="1" position="32,551" render="Label" size="76,36" source="session.Event_Now" transparent="0" valign="center" zPosition="1" foregroundColor="SevenFont1">
@@ -6721,7 +6755,7 @@
     <widget position="215,602" backgroundColor="SevenBackgroundIB2" render="Progress" size="850,6" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress">
       <convert type="SevenHDEventTime">Progress</convert>
     </widget>
-    <widget alphatest="blend" pixmap="SevenHD/buttons/ico_rec_on.png" position="20,666" render="Pixmap" size="32,32" source="session.RecordState" zPosition="5">
+    <widget alphatest="blend" pixmap="SevenHD/buttons/ico_rec_on.png" position="1227,537" render="Pixmap" size="32,32" source="session.RecordState" zPosition="15" transparent="0">
       <convert type="ConditionalShowHide">Blink</convert>
     </widget>
     <widget backgroundColor="SevenBackgroundIB2" font="Regular;24" halign="right" noWrap="1" position="32,551" render="Label" size="76,36" source="session.Event_Now" transparent="0" valign="center" zPosition="1" foregroundColor="SevenFont1">
@@ -7692,9 +7726,9 @@
   <widget position="443,600" backgroundColor="SevenBackgroundIB2" render="Progress" size="622,6" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress">
     <convert type="SevenHDEventTime">Progress</convert>
   </widget>
-  <widget alphatest="blend" pixmap="SevenHD/buttons/ico_rec_on.png" position="24,662" render="Pixmap" size="32,32" source="session.RecordState" zPosition="15" transparent="1">
-    <convert type="ConditionalShowHide">Blink</convert>
-  </widget>
+  <widget alphatest="blend" pixmap="SevenHD/buttons/ico_rec_on.png" position="1227,537" render="Pixmap" size="32,32" source="session.RecordState" zPosition="15" transparent="0">
+      <convert type="ConditionalShowHide">Blink</convert>
+    </widget>
   <widget font="Regular2; 50" backgroundColor="SevenBackgroundIB1" foregroundColor="SevenFontCN" halign="left" noWrap="1" position="429,456" render="Label" size="820,64" source="session.CurrentService" transparent="1" valign="center" zPosition="1" alphatest="blend">
     <convert type="ServiceName">Name</convert>
   </widget>
@@ -7866,9 +7900,9 @@
   <widget position="443,600" backgroundColor="SevenBackgroundIB2" render="Progress" size="622,6" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress">
     <convert type="SevenHDEventTime">Progress</convert>
   </widget>
-  <widget alphatest="blend" pixmap="SevenHD/buttons/ico_rec_on.png" position="24,662" render="Pixmap" size="32,32" source="session.RecordState" zPosition="15" transparent="1">
-    <convert type="ConditionalShowHide">Blink</convert>
-  </widget>
+  <widget alphatest="blend" pixmap="SevenHD/buttons/ico_rec_on.png" position="1227,537" render="Pixmap" size="32,32" source="session.RecordState" zPosition="15" transparent="0">
+      <convert type="ConditionalShowHide">Blink</convert>
+    </widget>
   <widget font="Regular2; 50" backgroundColor="SevenBackgroundIB1" foregroundColor="SevenFontCN" halign="left" noWrap="1" position="429,456" render="Label" size="820,64" source="session.CurrentService" transparent="1" valign="center" zPosition="1" alphatest="blend">
     <convert type="ServiceName">Name</convert>
   </widget>
@@ -8029,9 +8063,9 @@
   <widget position="443,600" backgroundColor="SevenBackgroundIB2" render="Progress" size="622,6" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress">
     <convert type="SevenHDEventTime">Progress</convert>
   </widget>
-  <widget alphatest="blend" pixmap="SevenHD/buttons/ico_rec_on.png" position="24,662" render="Pixmap" size="32,32" source="session.RecordState" zPosition="15" transparent="1">
-    <convert type="ConditionalShowHide">Blink</convert>
-  </widget>
+  <widget alphatest="blend" pixmap="SevenHD/buttons/ico_rec_on.png" position="1227,537" render="Pixmap" size="32,32" source="session.RecordState" zPosition="15" transparent="0">
+      <convert type="ConditionalShowHide">Blink</convert>
+    </widget>
   <widget font="Regular2; 50" backgroundColor="SevenBackgroundIB1" foregroundColor="SevenFontCN" halign="left" noWrap="1" position="429,456" render="Label" size="820,64" source="session.CurrentService" transparent="1" valign="center" zPosition="1" alphatest="blend">
     <convert type="ServiceName">Name</convert>
   </widget>
@@ -8813,7 +8847,7 @@
     <widget position="273,603" backgroundColor="SevenBackgroundIB2" render="Progress" size="793,6" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress">
       <convert type="SevenHDEventTime">Progress</convert>
     </widget>
-    <widget alphatest="blend" pixmap="SevenHD/buttons/ico_rec_on.png" position="22,666" render="Pixmap" size="32,32" source="session.RecordState" zPosition="5">
+    <widget alphatest="blend" pixmap="SevenHD/buttons/ico_rec_on.png" position="1227,537" render="Pixmap" size="32,32" source="session.RecordState" zPosition="15" transparent="0">
       <convert type="ConditionalShowHide">Blink</convert>
     </widget>
     <widget backgroundColor="SevenBackgroundIB2" font="Regular;24" halign="right" noWrap="1" position="256,550" render="Label" size="76,36" source="session.Event_Now" transparent="0" valign="center" zPosition="1" foregroundColor="SevenFont1">
@@ -8945,7 +8979,7 @@
     <widget position="273,603" backgroundColor="SevenBackgroundIB2" render="Progress" size="793,6" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress">
       <convert type="SevenHDEventTime">Progress</convert>
     </widget>
-    <widget alphatest="blend" pixmap="SevenHD/buttons/ico_rec_on.png" position="22,666" render="Pixmap" size="32,32" source="session.RecordState" zPosition="5">
+    <widget alphatest="blend" pixmap="SevenHD/buttons/ico_rec_on.png" position="1227,537" render="Pixmap" size="32,32" source="session.RecordState" zPosition="15" transparent="0">
       <convert type="ConditionalShowHide">Blink</convert>
     </widget>
     <widget backgroundColor="SevenBackgroundIB2" font="Regular;24" halign="right" noWrap="1" position="256,550" render="Label" size="76,36" source="session.Event_Now" transparent="0" valign="center" zPosition="1" foregroundColor="SevenFont1">
@@ -9120,7 +9154,7 @@
     <widget position="273,603" render="Progress" size="793,6" backgroundColor="SevenBackgroundIB2" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress">
       <convert type="SevenHDEventTime">Progress</convert>
     </widget>
-    <widget alphatest="blend" pixmap="SevenHD/buttons/ico_rec_on.png" position="22,666" render="Pixmap" size="32,32" source="session.RecordState" zPosition="5">
+    <widget alphatest="blend" pixmap="SevenHD/buttons/ico_rec_on.png" position="1227,537" render="Pixmap" size="32,32" source="session.RecordState" zPosition="15" transparent="0">
       <convert type="ConditionalShowHide">Blink</convert>
     </widget>
     <widget backgroundColor="SevenBackgroundIB2" font="Regular;24" halign="right" noWrap="1" position="256,550" render="Label" size="76,36" source="session.Event_Now" transparent="0" valign="center" zPosition="1" foregroundColor="SevenFont1">
@@ -9339,7 +9373,7 @@
     <widget position="273,603" render="Progress" size="793,6" backgroundColor="SevenBackgroundIB2" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress">
       <convert type="SevenHDEventTime">Progress</convert>
     </widget>
-    <widget alphatest="blend" pixmap="SevenHD/buttons/ico_rec_on.png" position="22,666" render="Pixmap" size="32,32" source="session.RecordState" zPosition="5">
+    <widget alphatest="blend" pixmap="SevenHD/buttons/ico_rec_on.png" position="1227,537" render="Pixmap" size="32,32" source="session.RecordState" zPosition="15" transparent="0">
       <convert type="ConditionalShowHide">Blink</convert>
     </widget>
     <widget backgroundColor="SevenBackgroundIB2" font="Regular;24" halign="right" noWrap="1" position="256,550" render="Label" size="76,36" source="session.Event_Now" transparent="0" valign="center" zPosition="1" foregroundColor="SevenFont1">
@@ -11025,9 +11059,9 @@
   <widget position="443,600" backgroundColor="SevenBackgroundIB2" render="Progress" size="622,6" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress">
     <convert type="SevenHDEventTime">Progress</convert>
   </widget>
-  <widget alphatest="blend" pixmap="SevenHD/buttons/ico_rec_on.png" position="24,662" render="Pixmap" size="32,32" source="session.RecordState" zPosition="15" transparent="1">
-    <convert type="ConditionalShowHide">Blink</convert>
-  </widget>
+  <widget alphatest="blend" pixmap="SevenHD/buttons/ico_rec_on.png" position="1227,537" render="Pixmap" size="32,32" source="session.RecordState" zPosition="15" transparent="0">
+      <convert type="ConditionalShowHide">Blink</convert>
+    </widget>
   
   <widget backgroundColor="SevenBackgroundIB2" font="Regular;24" halign="right" noWrap="1" position="426,551" render="Label" size="76,36" source="session.Event_Now" transparent="0" valign="center" zPosition="1" foregroundColor="SevenFont1">
     <convert type="SevenHDEventTime">StartTime</convert>
@@ -11214,9 +11248,9 @@
   <widget position="443,600" backgroundColor="SevenBackgroundIB2" render="Progress" size="622,6" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress">
     <convert type="SevenHDEventTime">Progress</convert>
   </widget>
-  <widget alphatest="blend" pixmap="SevenHD/buttons/ico_rec_on.png" position="24,662" render="Pixmap" size="32,32" source="session.RecordState" zPosition="15" transparent="1">
-    <convert type="ConditionalShowHide">Blink</convert>
-  </widget>
+  <widget alphatest="blend" pixmap="SevenHD/buttons/ico_rec_on.png" position="1227,537" render="Pixmap" size="32,32" source="session.RecordState" zPosition="15" transparent="0">
+      <convert type="ConditionalShowHide">Blink</convert>
+    </widget>
   <widget font="Regular2; 40" backgroundColor="SevenBackgroundIB1" foregroundColor="SevenFontCN" halign="left" noWrap="1" position="429,466" render="Label" size="640,64" source="session.CurrentService" transparent="1" valign="center" zPosition="1" alphatest="blend">
     <convert type="ServiceName">Name</convert>
   </widget>
@@ -11405,9 +11439,9 @@
   <widget position="443,600" backgroundColor="SevenBackgroundIB2" render="Progress" size="622,6" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress">
     <convert type="SevenHDEventTime">Progress</convert>
   </widget>
-  <widget alphatest="blend" pixmap="SevenHD/buttons/ico_rec_on.png" position="24,662" render="Pixmap" size="32,32" source="session.RecordState" zPosition="15" transparent="1">
-    <convert type="ConditionalShowHide">Blink</convert>
-  </widget>
+  <widget alphatest="blend" pixmap="SevenHD/buttons/ico_rec_on.png" position="1227,537" render="Pixmap" size="32,32" source="session.RecordState" zPosition="15" transparent="0">
+      <convert type="ConditionalShowHide">Blink</convert>
+    </widget>
   <widget font="Regular2; 40" backgroundColor="SevenBackgroundIB1" foregroundColor="SevenFontCN" halign="left" noWrap="1" position="429,466" render="Label" size="640,64" source="session.CurrentService" transparent="1" valign="center" zPosition="1" alphatest="blend">
     <convert type="ServiceName">Name</convert>
   </widget>
@@ -11585,9 +11619,9 @@
   <widget position="443,600" backgroundColor="SevenBackgroundIB2" render="Progress" size="622,6" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress">
     <convert type="SevenHDEventTime">Progress</convert>
   </widget>
-  <widget alphatest="blend" pixmap="SevenHD/buttons/ico_rec_on.png" position="24,662" render="Pixmap" size="32,32" source="session.RecordState" zPosition="15" transparent="1">
-    <convert type="ConditionalShowHide">Blink</convert>
-  </widget>
+  <widget alphatest="blend" pixmap="SevenHD/buttons/ico_rec_on.png" position="1227,537" render="Pixmap" size="32,32" source="session.RecordState" zPosition="15" transparent="0">
+      <convert type="ConditionalShowHide">Blink</convert>
+    </widget>
   <widget font="Regular2; 40" backgroundColor="SevenBackgroundIB1" foregroundColor="SevenFontCN" halign="left" noWrap="1" position="429,466" render="Label" size="640,64" source="session.CurrentService" transparent="1" valign="center" zPosition="1" alphatest="blend">
     <convert type="ServiceName">Name</convert>
   </widget>
@@ -13022,7 +13056,7 @@
   <eLabel backgroundColor="SevenBackgroundIB1" position="15,4" size="955,103" />
 <eLabel backgroundColor="SevenBorder" position="969,4" size="2,103" zPosition="2" />
 <eLabel backgroundColor="SevenBackgroundIB2" position="971,4" size="292,103" />
-</screen>&gt;
+</screen>
   <screen name="template_weather_small">
     <eLabel backgroundColor="SevenBorder" position="969,14" size="2,119" zPosition="2" />
     <eLabel backgroundColor="SevenBorder" position="1262,14" size="2,119" zPosition="2" />
@@ -13152,3 +13186,4 @@
     <widget name="Field9" font="Regular;22" noWrap="1" halign="left" valign="center" foregroundColor="SevenFont1" backgroundColor="SevenBackground" transparent="1" zPosition="1" size="955,720" />
   </screen>
   <!-- TEMPLATES */-->
+
