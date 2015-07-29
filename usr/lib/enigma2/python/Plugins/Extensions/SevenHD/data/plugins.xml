@@ -301,16 +301,16 @@
     <widget backgroundColor="SevenBackground" font="Regular; 22" halign="right" position="680,671" render="Label" shadowColor="SevenBackground" shadowOffset="-1,-1" size="120,40" source="session.CurrentService" transparent="0" valign="center" zPosition="1">
       <convert type="ServicePosition">Position</convert>
     </widget>
-    <widget backgroundColor="SevenBackground" font="Regular; 20" halign="right" position="948,632" render="Label" size="122,25" source="session.CurrentService" transparent="0" valign="Center" zPosition="1">
+    <widget backgroundColor="SevenBackground" font="Regular; 20" halign="right" position="948,632" render="Label" size="122,25" source="session.CurrentService" transparent="1" valign="Center" zPosition="1">
       <convert type="ServicePosition">Remaining</convert>
     </widget>
     <widget position="212,660" render="PositionGauge" size="858,7" source="session.CurrentService" transparent="1">
       <convert type="ServicePosition">Gauge</convert>
     </widget>
-    <widget borderWidth="0" position="212,662" render="Progress" size="858,5" source="session.CurrentService" transparent="0">
+    <widget borderWidth="0" position="212,662" render="Progress" size="858,5" source="session.CurrentService" transparent="1">
       <convert type="ServicePosition">Position</convert>
     </widget>
-    <eLabel backgroundColor="SevenFont1" foregroundColor="SevenFont1" position="212,664" size="858,1" zPosition="-1" />
+    <eLabel backgroundColor="SevenLine" foregroundColor="SevenFont1" position="212,664" size="858,1" zPosition="-1" transparent="1" />
     <widget name="subtitleLabel" position="329,671" size="110,40" font="Regular; 18" backgroundColor="SevenBackground" transparent="0" />
     <widget name="audioLabel" position="212,671" size="110,40" font="Regular; 18" backgroundColor="SevenBackground" transparent="0" />
     <widget name="chapterLabel" position="447,672" size="225,40" font="Regular; 18" backgroundColor="SevenBackground" transparent="0" />
@@ -392,7 +392,7 @@
       <convert type="ServicePosition">Position</convert>
     </widget>
     <eLabel backgroundColor="SevenBackground" font="Regular; 20" halign="right" position="1017,629" size="50,35" text="min" transparent="1" valign="center" zPosition="1" />
-    <eLabel backgroundColor="SevenFont1" foregroundColor="SevenFont1" position="210,670" size="858,1" zPosition="-1" />
+    <eLabel backgroundColor="SevenLine" foregroundColor="SevenFont1" position="210,670" size="858,1" zPosition="-1" />
     <widget source="session.CurrentService" render="Label" position="823,677" size="90,35" font="Regular; 20" halign="right" valign="center" backgroundColor="SevenBackground" transparent="1" zPosition="1" text="13:45" foregroundColor="SevenFont1">
       <convert type="SevenHDServiceEndTime">EndTime</convert>
     </widget>
@@ -937,7 +937,7 @@
       <convert type="ServicePosition">Position</convert>
     </widget>
     <eLabel backgroundColor="SevenBackground" font="Regular; 20" halign="right" position="1017,629" size="50,35" text="min" transparent="1" valign="center" zPosition="1" />
-    <eLabel backgroundColor="SevenFont1" foregroundColor="SevenFont1" position="210,670" size="858,1" zPosition="-1" />
+    <eLabel backgroundColor="SevenLine" foregroundColor="SevenFont1" position="210,670" size="858,1" zPosition="-1" />
     <widget source="session.CurrentService" render="Label" position="823,677" size="90,35" font="Regular; 20" halign="right" valign="center" backgroundColor="SevenBackground" transparent="1" zPosition="1" text="13:45" foregroundColor="SevenFont1">
       <convert type="SevenHDServiceEndTime">EndTime</convert>
     </widget>
@@ -1577,7 +1577,7 @@
     <eLabel backgroundColor="SevenBorder" position="6,6" size="2,708" zPosition="2" />
     <eLabel backgroundColor="SevenBorder" position="848,6" size="2,708" zPosition="2" />
     <eLabel backgroundColor="SevenLine" position="18,64" size="816,2" zPosition="2" />
-    <eLabel backgroundColor="SevenBorder" foregroundColor="SevenBorder" position="18,656" size="816,2" zPosition="2" />
+    <eLabel backgroundColor="SevenLine" foregroundColor="SevenLine" position="18,656" size="816,2" zPosition="2" />
     <ePixmap pixmap="SevenHD/buttons/key_red1.png" position="22,675" size="32,32" backgroundColor="SevenBackground" alphatest="blend" />
     <ePixmap pixmap="SevenHD/buttons/key_green1.png" position="222,670" size="32,32" backgroundColor="SevenBackground" alphatest="blend" />
     <ePixmap pixmap="SevenHD/buttons/key_yellow1.png" position="422,670" size="32,32" backgroundColor="SevenBackground" alphatest="blend" transparent="0" />
@@ -1590,7 +1590,7 @@
     <eLabel backgroundColor="SevenBorder" position="878,714" size="398,2" zPosition="2" />
     <eLabel backgroundColor="SevenBorder" position="878,6" size="2,708" zPosition="2" />
     <eLabel backgroundColor="SevenBorder" position="1274,6" size="2,708" zPosition="2" />
-    <eLabel position="891,88" size="372,46" text="Version: 2.5" font="Regular; 35" valign="center" halign="center" transparent="0" backgroundColor="SevenBackgroundRight" foregroundColor="SevenFont2" name="," />
+    <eLabel position="891,88" size="372,46" text="Version: 2.6" font="Regular; 35" valign="center" halign="center" transparent="0" backgroundColor="SevenBackgroundRight" foregroundColor="SevenFont2" name="," />
   </screen>
 
   <!-- plugins -->
