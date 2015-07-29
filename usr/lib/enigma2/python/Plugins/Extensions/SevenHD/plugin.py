@@ -580,6 +580,7 @@ config.plugins.SevenHD.InfobarStyle = ConfigSelection(default="infobar-style-ori
 config.plugins.SevenHD.ChannelSelectionStyle = ConfigSelection(default="channelselection-twocolumns", choices = [
 				("channelselection-twocolumns", _("two columns 1")),
 				("channelselection-twocolumns2", _("two columns 2")),
+				("channelselection-twocolumns3", _("two columns 3")),
 				("channelselection-threecolumns", _("three columns")),
 				("channelselection-threecolumnsminitv", _("three columns miniTV")),
 				("channelselection-zpicon", _("ZPicon")),
@@ -868,7 +869,7 @@ class SevenHD(ConfigListScreen, Screen):
     <eLabel backgroundColor="#00ffffff" position="878,714" size="396,2" zPosition="2" />
     <eLabel backgroundColor="#00ffffff" position="878,6" size="2,708" zPosition="2" />
     <eLabel backgroundColor="#00ffffff" position="1274,6" size="2,708" zPosition="2" />
-<eLabel position="891,88" size="372,46" text="Version: 2.5" font="Regular; 35" valign="center" halign="center" transparent="1" backgroundColor="#00000000" foregroundColor="#00ffffff" name="," />
+<eLabel position="891,88" size="372,46" text="Version: 2.6" font="Regular; 35" valign="center" halign="center" transparent="1" backgroundColor="#00000000" foregroundColor="#00ffffff" name="," />
 </screen>
 """
 
@@ -941,7 +942,7 @@ class SevenHD(ConfigListScreen, Screen):
 		list.append(getConfigListEntry(_("color channelname"), config.plugins.SevenHD.FontCN, 'ColorCN'))
 		list.append(getConfigListEntry(_("clock"), config.plugins.SevenHD.ClockStyle))
 		if config.plugins.SevenHD.ClockStyle.value == "clock-analog":
-			list.append(getConfigListEntry(_("color clock analog"), config.plugins.SevenHD.AnalogStyle))
+			list.append(getConfigListEntry(_("color clock analog"), config.plugins.SevenHD.AnalogStyle, 'Analog'))
 		list.append(getConfigListEntry(_("______________________________________________ infobar extras_________________________________________"), ))
 		list.append(getConfigListEntry(_("weather"), config.plugins.SevenHD.WeatherStyle))
 		list.append(getConfigListEntry(_("satellite information"), config.plugins.SevenHD.SatInfo))
