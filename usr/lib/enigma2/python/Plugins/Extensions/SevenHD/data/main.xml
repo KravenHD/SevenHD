@@ -152,8 +152,8 @@
   </screen>
   <!-- ********** EPG ********** -->
   <!-- EPGSelection -->
-  <screen backgroundColor="transparent" flags="wfNoBorder" name="EPGSelection" position="0,0" size="1280,720" title="EPG Selection">
-  <widget backgroundColor="SevenBackground" itemHeight="30" foregroundColor="SevenFont1" font="Regular; 22" name="list" enableWrapAround="1" scrollbarMode="showNever" position="70,80" size="708,570" transparent="0" zPosition="3" />
+<screen backgroundColor="transparent" flags="wfNoBorder" name="EPGSelection" position="0,0" size="1280,720" title="EPG Selection">
+  <widget backgroundColor="SevenBackground" itemHeight="30" foregroundColor="SevenFont1" font="Regular; 22" name="list" enableWrapAround="1" scrollbarMode="showOnDemand" scrollbarWidth="2" position="70,80" size="708,570" transparent="0" zPosition="3" />
   <widget alphatest="blend" position="898,16" render="Picon" size="220,132" source="Service" transparent="0" zPosition="4">
     <convert type="ServiceName">Reference</convert>
   </widget>
@@ -1314,7 +1314,7 @@
   </screen>
   <!-- TimerEditList -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="TimerEditList" position="0,0" size="1280,720" title="Timer Editor">
-    <widget name="timerlist" position="45,80" size="766,540" scrollbarMode="showOnDemand" transparent="0" />
+    <widget name="timerlist" position="45,80" size="766,540" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="0" />
     <panel name="template_menu_left_button" />
     <panel name="template_colorkey_text" />
   </screen>
