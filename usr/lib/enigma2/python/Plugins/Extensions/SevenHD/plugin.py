@@ -130,6 +130,8 @@ config.plugins.SevenHD.Background = ConfigSelection(default="000000", choices = 
 				("262C33", _("steel dark")),
 				("6C0AAB", _("violet")),
 				("1F0333", _("violet dark")),
+				("FFBE00", _("yellow dark")),
+				("FFF006", _("yellow")),
 				("ffffff", _("white"))
 				])
 				
@@ -161,6 +163,8 @@ config.plugins.SevenHD.BackgroundRight = ConfigSelection(default="000001", choic
 				("262C33", _("steel dark")),
 				("6C0AAB", _("violet")),
 				("1F0333", _("violet dark")),
+				("FFBE00", _("yellow dark")),
+				("FFF006", _("yellow")),
 				("ffffff", _("white"))
 				])
 				
@@ -192,6 +196,8 @@ config.plugins.SevenHD.BackgroundIB1 = ConfigSelection(default="000002", choices
 				("262C33", _("steel dark")),
 				("6C0AAB", _("violet")),
 				("1F0333", _("violet dark")),
+				("FFBE00", _("yellow dark")),
+				("FFF006", _("yellow")),
 				("ffffff", _("white"))
 				])
 				
@@ -223,6 +229,8 @@ config.plugins.SevenHD.BackgroundIB2 = ConfigSelection(default="000003", choices
 				("262C33", _("steel dark")),
 				("6C0AAB", _("violet")),
 				("1F0333", _("violet dark")),
+				("FFBE00", _("yellow dark")),
+				("FFF006", _("yellow")),
 				("ffffff", _("white"))
 				])
 				
@@ -254,6 +262,8 @@ config.plugins.SevenHD.SelectionBackground = ConfigSelection(default="000050EF",
 				("00262C33", _("steel dark")),
 				("006C0AAB", _("violet")),
 				("001F0333", _("violet dark")),
+				("00FFBE00", _("yellow dark")),
+				("00FFF006", _("yellow")),
 				("00ffffff", _("white"))
 				])
 				
@@ -285,6 +295,8 @@ config.plugins.SevenHD.Font1 = ConfigSelection(default="00fffff3", choices = [
 				("00262C33", _("steel dark")),
 				("006C0AAB", _("violet")),
 				("001F0333", _("violet dark")),
+				("00FFBE00", _("yellow dark")),
+				("00FFF006", _("yellow")),
 				("00fffff3", _("white"))
 				])
 				
@@ -316,6 +328,8 @@ config.plugins.SevenHD.Font2 = ConfigSelection(default="00fffff4", choices = [
 				("00262C33", _("steel dark")),
 				("006C0AAB", _("violet")),
 				("001F0333", _("violet dark")),
+				("00FFBE00", _("yellow dark")),
+				("00FFF006", _("yellow")),
 				("00fffff4", _("white"))
 				])
 				
@@ -347,6 +361,8 @@ config.plugins.SevenHD.FontCN = ConfigSelection(default="00fffff8", choices = [
 				("00262C33", _("steel dark")),
 				("006C0AAB", _("violet")),
 				("001F0333", _("violet dark")),
+				("00FFBE00", _("yellow dark")),
+				("00FFF006", _("yellow")),
 				("00fffff8", _("white"))
 				])
 				
@@ -378,6 +394,8 @@ config.plugins.SevenHD.SelectionFont = ConfigSelection(default="00fffff7", choic
 				("00262C33", _("steel dark")),
 				("006C0AAB", _("violet")),
 				("001F0333", _("violet dark")),
+				("00FFBE00", _("yellow dark")),
+				("00FFF006", _("yellow")),
 				("00fffff7", _("white"))
 				])
 				
@@ -409,6 +427,8 @@ config.plugins.SevenHD.ButtonText = ConfigSelection(default="00fffff2", choices 
 				("00262C33", _("steel dark")),
 				("006C0AAB", _("violet")),
 				("001F0333", _("violet dark")),
+				("00FFBE00", _("yellow dark")),
+				("00FFF006", _("yellow")),
 				("00fffff2", _("white"))
 				])
 				
@@ -441,6 +461,8 @@ config.plugins.SevenHD.Border = ConfigSelection(default="00fffff1", choices = [
 				("006C0AAB", _("violet")),
 				("001F0333", _("violet dark")),
 				("00fffff1", _("white")),
+				("00FFBE00", _("yellow dark")),
+				("00FFF006", _("yellow")),
 				("ff000000", _("off"))
 				])
 				
@@ -472,6 +494,8 @@ config.plugins.SevenHD.Progress = ConfigSelection(default="00fffff6", choices = 
 				("00262C33", _("steel dark")),
 				("006C0AAB", _("violet")),
 				("001F0333", _("violet dark")),
+				("00FFBE00", _("yellow dark")),
+				("00FFF006", _("yellow")),
 				("00fffff6", _("white"))
 				])
 				
@@ -503,6 +527,8 @@ config.plugins.SevenHD.Line = ConfigSelection(default="00fffff5", choices = [
 				("00262C33", _("steel dark")),
 				("006C0AAB", _("violet")),
 				("001F0333", _("violet dark")),
+				("00FFBE00", _("yellow dark")),
+				("00FFF006", _("yellow")),
 				("00fffff5", _("white"))
 				])
 				
@@ -534,6 +560,8 @@ config.plugins.SevenHD.SelectionBorder = ConfigSelection(default="00ffffff", cho
 				("00262C33", _("steel dark")),
 				("006C0AAB", _("violet")),
 				("001F0333", _("violet dark")),
+				("00FFBE00", _("yellow dark")),
+				("00FFF006", _("yellow")),
 				("00ffffff", _("white"))
 				])
 				
@@ -646,6 +674,7 @@ config.plugins.SevenHD.ClockStyle = ConfigSelection(default="clock-standard", ch
 config.plugins.SevenHD.WeatherStyle = ConfigSelection(default="none", choices = [
 				("none", _("off")),
 				("weather-big", _("big")),
+				("weather-left", _("left")),
 				("weather-small", _("small"))
 				])
 				
