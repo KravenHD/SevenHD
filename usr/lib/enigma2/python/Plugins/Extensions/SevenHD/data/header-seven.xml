@@ -13057,6 +13057,13 @@
 <eLabel backgroundColor="SevenBorder" position="969,4" size="2,103" zPosition="2" />
 <eLabel backgroundColor="SevenBackgroundIB2" position="971,4" size="292,103" />
 </screen>
+<screen name="template_weather_left">
+ <eLabel backgroundColor="SevenBorder" position="202,4" size="2,405" zPosition="2" />
+  <eLabel backgroundColor="SevenBorder" position="14,4" size="2,405" zPosition="2" />
+  <eLabel backgroundColor="SevenBorder" position="14,4" size="190,2" zPosition="2" />
+  <eLabel backgroundColor="SevenBorder" position="14,408" size="190,2" zPosition="2" />
+  <eLabel backgroundColor="SevenBackgroundIB1" position="15,6" size="189,403" />
+</screen>
   <screen name="template_weather_small">
     <eLabel backgroundColor="SevenBorder" position="969,14" size="2,119" zPosition="2" />
     <eLabel backgroundColor="SevenBorder" position="1262,14" size="2,119" zPosition="2" />

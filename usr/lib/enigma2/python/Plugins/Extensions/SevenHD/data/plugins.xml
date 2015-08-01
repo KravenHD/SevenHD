@@ -1593,4 +1593,16 @@
     <eLabel position="891,88" size="372,46" text="Version: 2.6" font="Regular; 35" valign="center" halign="center" transparent="0" backgroundColor="SevenBackgroundRight" foregroundColor="SevenFont2" name="," />
   </screen>
 
+  <!-- Sky Select -->
+<screen name="skyselectscreen" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
+    <widget name="bestellungen" position="70,80" size="708,540" font="Regular;20" backgroundColor="SevenBackground" foregroundColor="SevenFont1" transparent="0" />
+  <eLabel backgroundColor="SevenBackgroundIB1" font="Regular;34" halign="center" noWrap="1" position="70,12" size="708,46" text="Sky Select Planer" transparent="0" valign="center" zPosition="1" foregroundColor="SevenFont1" />
+<eLabel backgroundColor="SevenBackground" position="6,6" size="842,708" transparent="0" zPosition="-9" />
+  <eLabel backgroundColor="SevenBorder" position="6,6" size="842,2" zPosition="2" />
+  <eLabel backgroundColor="SevenBorder" position="6,714" size="844,2" zPosition="2" />
+  <eLabel backgroundColor="SevenBorder" position="6,6" size="2,708" zPosition="2" />
+  <eLabel backgroundColor="SevenBorder" position="848,6" size="2,708" zPosition="2" />
+  <eLabel backgroundColor="SevenLine" position="18,64" size="816,2" zPosition="2" />
+  <eLabel backgroundColor="SevenLine" position="18,656" size="816,2" zPosition="2" />
+</screen>
   <!-- plugins -->
