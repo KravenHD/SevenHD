@@ -22,7 +22,7 @@
   </widget>
   <eLabel text="jetzt läuft:" position="488,19" size="180,30" font="Regular2; 23" halign="left" foregroundColor="SevenFont2" backgroundColor="SevenBackgroundRight" transparent="0" zPosition="2" />
   <eLabel text="es folgt:" position="488,376" size="180,30" font="Regular2; 23" halign="left" foregroundColor="SevenFont2" backgroundColor="SevenBackgroundRight" transparent="0" zPosition="2" />
-  <widget source="ServiceEvent" render="SevenHDSingleEpgListNobile" position="925,77" size="339,570" font="Regular;17" foregroundColor="SevenFont1" backgroundColor="SevenBackgroundRight" noWrap="1" transparent="0" />
+  <widget source="ServiceEvent" render="SevenHDSingleEpgList" position="925,77" size="339,570" font="Regular;17" foregroundColor="SevenFont1" backgroundColor="SevenBackgroundRight" noWrap="1" transparent="0" />
   <widget source="ServiceEvent" render="Label" position="488,415" zPosition="1" size="408,25" font="Regular2; 20" halign="center" backgroundColor="SevenBackgroundRight" transparent="0" foregroundColor="SevenFont2">
   <convert type="SevenHDServiceNameEventNobile">NextEvent</convert>
 </widget>
