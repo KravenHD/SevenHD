@@ -4,7 +4,7 @@
   <widget source="ServiceEvent" render="Label" position="18,21" size="530,30" font="Regular; 23" halign="center" foregroundColor="SevenFont2" backgroundColor="SevenBackground" transparent="1">
     <convert type="ServiceName">Name</convert>
   </widget>  
-  <widget source="ServiceEvent" render="SevenHDSingleEpgListNobile" position="18,75" size="530,310" font="Regular;17" foregroundColor="SevenFont2" backgroundColor="SevenBackground" noWrap="1" transparent="1" />
+  <widget source="ServiceEvent" render="SevenHDSingleEpgList" position="18,75" size="530,310" font="Regular;17" foregroundColor="SevenFont2" backgroundColor="SevenBackground" noWrap="1" transparent="1" />
   
   <widget backgroundColor="SevenBackground" font="Regular; 20" foregroundColor="SevenFont1" position="18,410" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,wrap=1,always=0,repeat=2,oneshot=1" size="530,238" source="Event" valign="top" transparent="1">
     <convert type="SevenHDEventName">BothDescriptionsFiltered</convert>
