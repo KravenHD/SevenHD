@@ -1,7 +1,7 @@
 
  <!-- /* ChannelSelection XPicon-->
 <screen backgroundColor="transparent" flags="wfNoBorder" name="ChannelSelection" position="0,0" size="1280,720" title="Channel Selection">
-  <widget backgroundColor="SevenBackground" scrollbarMode="showNever" foregroundColorMarkedSelected="green" foregroundColor="SevenFont1" colorEventProgressbarBorder="SevenLine" colorEventProgressbarBorderSelected="SevenLine" colorServiceDescription="SevenFont2" colorServiceDescriptionSelected="SevenSelFont" colorServiceRecording="red" foregroundColorServiceNotAvail="yellow" itemHeight="50" name="list" position="17,78" serviceInfoFont="Regular;23" serviceItemHeight="35" serviceNameFont="Regular2;25" serviceNumberFont="Regular;25" size="816,564" transparent="0" />
+  <widget backgroundColor="SevenBackground" scrollbarMode="showNever" foregroundColorMarkedSelected="green" foregroundColor="SevenFont1" colorEventProgressbarBorder="SevenBorder" colorEventProgressbarBorderSelected="SevenBorder" colorServiceDescription="SevenFont2" colorServiceDescriptionSelected="SevenSelFont" colorServiceRecording="red" foregroundColorServiceNotAvail="yellow" itemHeight="50" name="list" position="17,78" serviceInfoFont="Regular;23" serviceItemHeight="35" serviceNameFont="Regular2;25" serviceNumberFont="Regular;25" size="816,564" transparent="0" />
   <widget source="ServiceEvent" render="SevenHDSingleEpgList" position="891,561" size="362,113" noWrap="1" font="Regular2;22" foregroundColor="SevenFont2" backgroundColor="SevenBackgroundRight" transparent="0">
   </widget>
   <widget alphatest="blend" position="965,104" render="SevenHDXPicon" size="220,132" source="ServiceEvent" transparent="0" zPosition="4">
