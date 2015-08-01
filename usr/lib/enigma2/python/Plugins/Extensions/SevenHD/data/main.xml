@@ -1737,7 +1737,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,orgpos.y()))
   <!-- ********** Audio and Video  ********** -->
   <!-- VideoFinetune -->
   <screen backgroundColor="black" flags="wfNoBorder" name="VideoFinetune" position="0,0" size="1280,720">
-    <widget position="6,6" render="Canvas" size="1280,720" source="Canvas" />
+    <widget position="0,0" render="Canvas" size="1280,720" source="Canvas" />
   </screen>
   <!-- UI3DSetupScreen -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="UI3DSetupScreen" position="0,0" size="1280,720" title="UI 3D setup">
