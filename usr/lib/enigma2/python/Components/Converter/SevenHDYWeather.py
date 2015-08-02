@@ -19,7 +19,6 @@
 from Components.config import config
 from Components.Converter.Converter import Converter
 from Components.Element import cached
-from Components.Console import Console as iConsole
 from Tools.Directories import fileExists, resolveFilename, SCOPE_LANGUAGE, SCOPE_PLUGINS
 from Poll import Poll
 import time, gettext, os
@@ -148,18 +147,14 @@ class SevenHDYWeather(Poll, Converter, object):
 			self.type = self.fpicon4
 		elif type == "cityid":
 			self.type = self.cityid
-		self.iConsole = iConsole()
 		self.poll_interval = time_update_ms
 		self.poll_enabled = True
+		
 	def write_none(self):
-		self.iConsole.ePopen("echo -e 'None' >> /tmp/SevenHDweather.xml")
+		os.popen("echo -e 'None' >> /tmp/SevenHDweather.xml")
 		
 	def get_xmlfile(self):
-		self.iConsole.ePopen("wget -P /tmp -T2 'http://weather.yahooapis.com/forecastrss?w=%s&u=c' -O /tmp/SevenHDweather.xml" % config.plugins.SevenHD.weather_city.value, self.control_xml)
-		
-	def control_xml(self, result, retval, extra_args):
-		if retval is not 0:
-			self.write_none()
+		os.popen("wget -P /tmp -T2 'http://weather.yahooapis.com/forecastrss?w=%s&u=c' -O /tmp/SevenHDweather.xml" % str(config.plugins.SevenHD.weather_city.value))
 			
 	@cached
 	def getText(self):
