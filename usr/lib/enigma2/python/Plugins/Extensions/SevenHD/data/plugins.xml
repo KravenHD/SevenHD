@@ -398,7 +398,7 @@
     </widget>
     <eLabel backgroundColor="SevenBackground" font="Regular; 20" halign="center" position="903,677" size="60,35" text="Uhr" transparent="1" valign="center" zPosition="1" foregroundColor="SevenFont1" />
     <eLabel backgroundColor="SevenBackground" font="Regular; 20" halign="left" position="771,677" size="120,35" text="läuft bis " transparent="1" valign="center" zPosition="1" foregroundColor="SevenFont1" />
-    <widget name="Cover" position="1140,566" size="100,151" zPosition="1" alphatest="on" />
+    <widget name="Cover" position="1111,490" size="150,227" zPosition="1" alphatest="on" />
     <panel name="template_player" />
   </screen>
   <!-- EnhancedMovieCenterMenu -->
@@ -943,7 +943,7 @@
     </widget>
     <eLabel backgroundColor="SevenBackground" font="Regular; 20" halign="center" position="903,677" size="60,35" text="Uhr" transparent="1" valign="center" zPosition="1" foregroundColor="SevenFont1" />
     <eLabel backgroundColor="SevenBackground" font="Regular; 20" halign="left" position="771,677" size="120,35" text="läuft bis " transparent="1" valign="center" zPosition="1" foregroundColor="SevenFont1" />
-    <widget name="Cover" position="1140,566" size="100,151" zPosition="1" alphatest="on" />
+    <widget name="Cover" position="1111,490" size="150,227" zPosition="1" alphatest="on" />
     <panel name="template_player" />
   </screen>
   <!-- MovieEpgSetup -->
@@ -1604,5 +1604,31 @@
   <eLabel backgroundColor="SevenBorder" position="848,6" size="2,708" zPosition="2" />
   <eLabel backgroundColor="SevenLine" position="18,64" size="816,2" zPosition="2" />
   <eLabel backgroundColor="SevenLine" position="18,656" size="816,2" zPosition="2" />
+</screen>
+
+<!-- SHOUTcast -->
+<screen name="SHOUTcastStreamripperRecordingPath" size="1280,720" title="Select record path for streamripper">
+<widget name="target" position="70,80" size="708,22" valign="center" font="Regular2;22" backgroundColor="SevenBackground" foregroundColor="SevenFont2" />
+<widget name="filelist" position="70,112" zPosition="1" size="708,504" font="Regular2;22" foregroundColor="SevenFont1" backgroundColor="SevenBackground" scrollbarMode="showOnDemand" />
+<panel name="template_menu_left_button" />
+<panel name="template_colorkey_text_source" />
+</screen>
+
+<screen name="SHOUTcastWidget" title="SHOUTcast" size="1280,720">
+	<widget name="headertext" position="70,80" zPosition="1" size="708,22" font="Regular2;20" transparent="1" foregroundColor="SevenFont2" backgroundColor="SevenBackground" />
+	<widget name="statustext" position="70,624" zPosition="1" size="708,22" font="Regular2;20" halign="center" valign="center" transparent="0" backgroundColor="SevenBackground" foregroundColor="SevenFont2" />
+	<widget name="list" position="70,110" zPosition="2" size="708,504" scrollbarMode="showOnDemand" transparent="0" font="Regular1;22" foregroundColor="SevenFont1" backgroundColor="SevenBackground" />
+	<widget name="titel" position="890,73" zPosition="1" size="373,46" font="Regular2;18" transparent="1" backgroundColor="SevenBackgroundRight" foregroundColor="SevenFont2" halign="center" />
+	<widget name="station" position="890,663" zPosition="1" size="373,46" font="Regular2;18" transparent="1" backgroundColor="SevenBackgroundRight" foregroundColor="SevenFont2" halign="center" />
+	<widget name="console" position="70,110" zPosition="1" size="708,504" font="Regular;18" transparent="1" foregroundColor="SevenFont1" backgroundColor="SevenBackground" />
+	<widget name="cover" zPosition="2" position="890,131" size="373,516" alphatest="blend" />
+<panel name="template_menu_left_right_button" />
+<panel name="template_colorkey_text_source" />
+</screen>
+
+<screen name="SHOUTcastSetup" size="1280,720" title="SHOUTcast Setup">
+<widget name="config" position="70,80" size="708,504" valign="center" font="Regular;22" backgroundColor="SevenBackground" foregroundColor="SevenFont2" />
+<panel name="template_menu_left_button" />
+<panel name="template_colorkey_text_source" />
 </screen>
   <!-- plugins -->
