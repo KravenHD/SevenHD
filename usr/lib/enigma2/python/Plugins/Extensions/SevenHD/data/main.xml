@@ -178,7 +178,7 @@
       <convert type="SevenHDEventTime">Remaining</convert>
       <convert type="SevenHDRemainingToText">InMinutes</convert>
     </widget>
-    <widget position="6,495" render="Progress" size="1265,3" source="session.Event_Now" transparent="0" zPosition="7" foregroundColor="SevenProgress" backgroundColor="SevenBackground">
+    <widget position="6,495" render="Progress" size="1265,3" source="session.Event_Now" transparent="0" zPosition="7" foregroundColor="SevenProgress" backgroundColor="SevenBackground" pixmap="SevenHD/progress/progress1280.png">
       <convert type="SevenHDEventTime">Progress</convert>
     </widget>
     <widget backgroundColor="SevenBackground" font="Regular2; 20" foregroundColor="SevenFont2" position="725,525" render="Label" size="529,125" source="Event" transparent="0">
@@ -271,7 +271,7 @@
     <convert type="SevenHDEventTime">EndTime</convert>
     <convert type="SevenHDClockToText">Format:%H:%M</convert>
   </widget>
-  <widget backgroundColor="SevenFont1" borderWidth="0" position="146,138" render="Progress" size="990,5" source="Event" transparent="1" zPosition="20" foregroundColor="SevenProgress">
+  <widget backgroundColor="SevenFont1" borderWidth="0" position="146,138" render="Progress" size="990,5" source="Event" transparent="1" zPosition="20" foregroundColor="SevenProgress" pixmap="SevenHD/progress/progress990.png">
     <convert type="SevenHDEventTime">Progress</convert>
   </widget>
   <widget backgroundColor="SevenBackground" font="Regular2; 19" position="70,165" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,wrap=1,always=0,repeat=2,oneshot=1" size="1153,120" source="Event" valign="top" zPosition="-8" foregroundColor="SevenFont2">
@@ -303,7 +303,7 @@
     <convert type="SevenHDEventTime">EndTime</convert>
     <convert type="SevenHDClockToText">Format:%H:%M</convert>
   </widget>
-  <widget source="Event" render="Progress" position="101,117" size="990,5" borderWidth="0" backgroundColor="SevenBackground" foregroundColor="SevenProgress" transparent="1" zPosition="1">
+  <widget source="Event" render="Progress" position="101,117" size="990,5" borderWidth="0" backgroundColor="SevenBackground" foregroundColor="SevenProgress" transparent="1" zPosition="1" pixmap="SevenHD/progress/progress990.png">
     <convert type="SevenHDEventTime">Progress</convert>
   </widget>
   <widget backgroundColor="SevenBackground" font="Regular2; 21" position="25,141" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,wrap=1,always=0,repeat=2,oneshot=1" size="1230,108" source="Event" valign="top" zPosition="-8" foregroundColor="SevenFont2">
@@ -330,7 +330,7 @@
     <convert type="SevenHDEventTime">EndTime</convert>
     <convert type="SevenHDClockToText">Format:%H:%M</convert>
   </widget>
-  <widget source="Event" render="Progress" position="101,123" size="535,5" borderWidth="0" backgroundColor="SevenBackground" foregroundColor="SevenProgress" transparent="1" zPosition="1">
+  <widget source="Event" render="Progress" position="101,123" size="535,5" borderWidth="0" backgroundColor="SevenBackground" foregroundColor="SevenProgress" transparent="1" zPosition="1" pixmap="SevenHD/progress/progress535.png">
     <convert type="SevenHDEventTime">Progress</convert>
   </widget>
   <widget source="Event" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,wrap=1,always=0,repeat=2,oneshot=1" position="25,145" size="880,104" font="Regular2; 19" backgroundColor="SevenBackground" foregroundColor="SevenFont1" valign="top" zPosition="-8">
@@ -388,7 +388,7 @@
   <convert type="ServiceName">Name</convert>
 </widget>
   <eLabel position="8,70" size="1264,1" backgroundColor="SevenLine" />
-  <widget source="Event" render="Progress" foregroundColor="SevenProgress" position="8,67" size="1264,6" transparent="1" alphatest="on">
+  <widget source="Event" render="Progress" foregroundColor="SevenProgress" position="8,67" size="1264,6" transparent="1" zPosition="2" alphatest="on" pixmap="SevenHD/progress/progress1280.png">
     <convert type="SevenHDEventTime">Progress</convert>
   </widget>
   <widget source="global.CurrentTime" render="Label" position="1135,226" size="126,40" backgroundColor="SevenBackground" zPosition="1" SevenBackground="1" font="Regular; 38" valign="center" halign="center">
@@ -1621,7 +1621,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,orgpos.y()))
       <convert type="SevenHDEventTime">Remaining</convert>
       <convert type="SevenHDRemainingToText">InMinutes</convert>
     </widget>
-    <widget source="ServiceEvent" render="Progress" position="891,150" size="362,3" borderWidth="0" backgroundColor="SevenBackground" foregroundColor="SevenProgress" transparent="1" zPosition="1">
+    <widget source="ServiceEvent" render="Progress" position="891,150" size="362,3" borderWidth="0" backgroundColor="SevenBackground" foregroundColor="SevenProgress" transparent="1" zPosition="1" pixmap="SevenHD/progress/progress362.png">
       <convert type="SevenHDEventTime">Progress</convert>
     </widget>
     <eLabel position="891,151" size="362,1" backgroundColor="SevenFont2" foregroundColor="SevenFont2" />
@@ -1698,7 +1698,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,orgpos.y()))
     <widget backgroundColor="SevenBackground" font="LCD; 38" foregroundColor="SevenFont1" halign="left" position="268,106" render="Label" size="720,40" source="RdsDecoder" transparent="0">
       <convert type="RdsInfo">RadioText</convert>
     </widget>
-    <widget foregroundColor="orange" position="487,163" render="Progress" size="370,13" source="session.Event_Now" transparent="0" zPosition="5">
+    <widget foregroundColor="orange" position="487,163" render="Progress" size="370,13" source="session.Event_Now" transparent="0" zPosition="5" pixmap="SevenHD/progress/progress1280.png">
       <convert type="SevenHDEventTime">Progress</convert>
     </widget>
     <widget backgroundColor="SevenBackground" font="Regular2; 26" noWrap="1" position="230,23" render="Label" size="240,28" source="session.CurrentService" transparent="0">

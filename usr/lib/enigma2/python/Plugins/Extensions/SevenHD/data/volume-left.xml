@@ -1,6 +1,6 @@
 <!--/* Volume -->
 <screen name="Volume" position="14,140" size="26,223" title="Volume" flags="wfNoBorder" backgroundColor="transparent" zPosition="99">
-  <widget name="Volume" position="8,5" size="11,213" zPosition="3" transparent="0" foregroundColor="SevenProgress" orientation="orBottomToTop" />
+  <widget name="Volume" position="8,5" size="11,213" zPosition="3" transparent="0" foregroundColor="SevenProgress" orientation="orBottomToTop" pixmap="SevenHD/progress/progress213v.png" />
   <eLabel position="0,0" size="25,222" backgroundColor="SevenBackground" zPosition="-2" transparent="0" />
   <eLabel backgroundColor="SevenBorder" position="24,0" size="2,223" zPosition="2" />
   <eLabel backgroundColor="SevenBorder" position="0,0" size="3,223" zPosition="2" />

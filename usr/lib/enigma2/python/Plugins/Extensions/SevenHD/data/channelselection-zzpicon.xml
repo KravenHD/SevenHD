@@ -1,13 +1,13 @@
 
  <!-- /* ChannelSelection ZZPicon-->
 <screen backgroundColor="transparent" flags="wfNoBorder" name="ChannelSelection" position="0,0" size="1280,720" title="Channel Selection">
-  <widget backgroundColor="SevenBackground" scrollbarMode="showNever" foregroundColorMarkedSelected="green" foregroundColor="SevenFont1" colorEventProgressbarBorder="SevenBorder" colorEventProgressbarBorderSelected="SevenBorder" colorServiceDescription="SevenFont2" colorServiceDescriptionSelected="SevenSelFont" colorServiceRecording="red" foregroundColorServiceNotAvail="yellow" itemHeight="50" name="list" position="17,78" serviceInfoFont="Regular;23" serviceItemHeight="35" serviceNameFont="Regular2;25" serviceNumberFont="Regular;25" size="816,564" transparent="0" />
+  <widget backgroundColor="SevenBackground" scrollbarMode="showNever" picServiceEventProgressbar="SevenHD/progress/progress52.png" colorEventProgressbar="SevenProgress" colorEventProgressbarSelected="SevenProgress" foregroundColorMarkedSelected="green" foregroundColor="SevenFont1" colorEventProgressbarBorder="SevenBorder" colorEventProgressbarBorderSelected="SevenBorder" colorServiceDescription="SevenFont2" colorServiceDescriptionSelected="SevenSelFont" colorServiceRecording="red" foregroundColorServiceNotAvail="yellow" itemHeight="50" name="list" position="17,78" serviceInfoFont="Regular;23" serviceItemHeight="35" serviceNameFont="Regular2;25" serviceNumberFont="Regular;25" size="816,564" transparent="0" />
   <widget source="ServiceEvent" render="SevenHDSingleEpgList" position="868,561" size="400,113" noWrap="1" font="Regular2;22" foregroundColor="SevenFont2" backgroundColor="SevenBackgroundRight" transparent="0">
   </widget>
   <widget alphatest="blend" position="868,100" render="SevenHDXPicon" size="400,170" source="ServiceEvent" transparent="0" zPosition="4">
     <convert type="SevenHDRefString">ServicelistRef</convert>
   </widget>
-  <widget source="ServiceEvent" render="Progress" position="868,279" size="400,3" borderWidth="0" backgroundColor="SevenBackground" foregroundColor="SevenProgress" transparent="1" zPosition="1">
+  <widget source="ServiceEvent" render="Progress" position="868,279" size="400,3" borderWidth="0" backgroundColor="SevenBackground" foregroundColor="SevenProgress" transparent="1" zPosition="1" pixmap="SevenHD/progress/progress426.png">
     <convert type="SevenHDEventTime">Progress</convert>
   </widget>
   <eLabel position="868,280" size="400,1" backgroundColor="SevenLine" />

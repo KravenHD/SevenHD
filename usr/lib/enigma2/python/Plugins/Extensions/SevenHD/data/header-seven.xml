@@ -503,7 +503,7 @@
     <eLabel backgroundColor="SevenBorder" position="14,533" size="1250,2" zPosition="2" />
     <eLabel backgroundColor="SevenBorder" position="14,701" size="1250,2" zPosition="2" />
     <eLabel backgroundColor="SevenLine" position="14,516" size="1250,2" zPosition="2" />
-    <widget position="14,514" backgroundColor="black" render="Progress" size="1250,6" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress">
+    <widget position="14,514" backgroundColor="black" render="Progress" size="1250,6" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress" pixmap="SevenHD/progress/progress1280.png">
       <convert type="SevenHDEventTime">Progress</convert>
     </widget>
     <widget font="Regular2; 24" halign="right" position="1144,476" render="Label" size="120,36" source="session.Event_Now" transparent="1" valign="center" zPosition="1" foregroundColor="SevenFont1" alphatest="blend">
@@ -559,7 +559,7 @@
     <eLabel backgroundColor="SevenBorder" position="1262,75" size="2,367" zPosition="2" />
     <eLabel backgroundColor="SevenLine" position="37,257" size="1200,2" zPosition="2" />
     <eLabel backgroundColor="SevenLine" position="14,516" size="1250,2" zPosition="2" />
-    <widget position="14,514" backgroundColor="black" render="Progress" size="1250,6" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress">
+    <widget position="14,514" backgroundColor="black" render="Progress" size="1250,6" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress" pixmap="SevenHD/progress/progress1280.png">
       <convert type="SevenHDEventTime">Progress</convert>
     </widget>
     <widget source="session.CurrentService" render="Label" position="1107,40" size="89,22" backgroundColor="SevenBackgroundIB2" transparent="1" zPosition="3" foregroundColor="SevenFont1" font="Regular; 19" valign="center" halign="left">
@@ -725,7 +725,7 @@
     <eLabel backgroundColor="SevenBorder" position="633,75" size="2,367" zPosition="2" />
     <eLabel backgroundColor="SevenLine" position="14,516" size="1250,2" zPosition="2" />
     <eLabel backgroundColor="SevenBorder" position="643,75" size="2,367" zPosition="2" />
-    <widget position="14,514" render="Progress" size="1250,6" backgroundColor="black" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress">
+    <widget position="14,514" render="Progress" size="1250,6" backgroundColor="black" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress" pixmap="SevenHD/progress/progress1280.png">
       <convert type="SevenHDEventTime">Progress</convert>
     </widget>
     <widget source="session.CurrentService" render="Label" position="1107,40" size="89,22" backgroundColor="SevenBackgroundIB2" transparent="1" zPosition="3" foregroundColor="SevenFont1" font="Regular; 19" valign="center" halign="left">
@@ -894,7 +894,7 @@
     
     <eLabel backgroundColor="SevenLine" position="14,516" size="1250,2" zPosition="2" />
     
-    <widget position="14,514" render="Progress" size="1250,6" backgroundColor="black" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress">
+    <widget position="14,514" render="Progress" size="1250,6" backgroundColor="black" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress" pixmap="SevenHD/progress/progress1280.png">
       <convert type="SevenHDEventTime">Progress</convert>
     </widget>
     <widget source="session.CurrentService" render="Label" position="1107,40" size="89,22" backgroundColor="SevenBackgroundIB2" transparent="1" zPosition="3" foregroundColor="SevenFont1" font="Regular; 19" valign="center" halign="left">
@@ -1041,7 +1041,7 @@
     <eLabel backgroundColor="SevenBorder" position="14,520" size="2,183" zPosition="2" />
     <eLabel backgroundColor="SevenBorder" position="14,520" size="1250,2" zPosition="2" />
     <eLabel backgroundColor="SevenBorder" position="14,701" size="1250,2" zPosition="2" />
-    <widget position="14,501" backgroundColor="black" render="Progress" size="1250,6" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress">
+    <widget position="14,501" backgroundColor="black" render="Progress" size="1250,6" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress" pixmap="SevenHD/progress/progress1280.png">
       <convert type="SevenHDEventTime">Progress</convert>
     </widget>
     <eLabel backgroundColor="SevenLine" position="14,505" size="1250,2" zPosition="2" />
@@ -1097,7 +1097,7 @@
     <eLabel backgroundColor="SevenBorder" position="14,75" size="2,367" zPosition="2" />
     <eLabel backgroundColor="SevenBorder" position="1262,75" size="2,367" zPosition="2" />
     <eLabel backgroundColor="SevenLine" position="37,257" size="1200,2" zPosition="2" />
-    <widget position="14,501" backgroundColor="black" render="Progress" size="1250,6" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress">
+    <widget position="14,501" backgroundColor="black" render="Progress" size="1250,6" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress" pixmap="SevenHD/progress/progress1280.png">
       <convert type="SevenHDEventTime">Progress</convert>
     </widget>
     <eLabel backgroundColor="SevenLine" position="14,505" size="1250,2" zPosition="2" />
@@ -1257,7 +1257,7 @@
     <eLabel backgroundColor="SevenBorder" position="1262,1" size="2,71" zPosition="2" />
     <eLabel backgroundColor="SevenBorder" position="643,75" size="2,367" zPosition="2" />
     <eLabel backgroundColor="SevenBackgroundIB2" position="14,1" size="1250,71" />
-    <widget position="14,501" backgroundColor="black" render="Progress" size="1250,6" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress">
+    <widget position="14,501" backgroundColor="black" render="Progress" size="1250,6" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress" pixmap="SevenHD/progress/progress1280.png">
       <convert type="SevenHDEventTime">Progress</convert>
     </widget>
     <eLabel backgroundColor="SevenLine" position="14,505" size="1250,2" zPosition="2" />
@@ -1425,7 +1425,7 @@
     <eLabel backgroundColor="SevenBorder" position="14,1" size="2,71" zPosition="2" />
     <eLabel backgroundColor="SevenBorder" position="1262,1" size="2,71" zPosition="2" />
     <eLabel backgroundColor="SevenBackgroundIB2" position="14,1" size="1250,71" />
-    <widget position="14,501" backgroundColor="black" render="Progress" size="1250,6" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress">
+    <widget position="14,501" backgroundColor="black" render="Progress" size="1250,6" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress" pixmap="SevenHD/progress/progress1280.png">
       <convert type="SevenHDEventTime">Progress</convert>
     </widget>
     <eLabel backgroundColor="SevenLine" position="14,505" size="1250,2" zPosition="2" />
@@ -1579,7 +1579,7 @@
     <eLabel backgroundColor="SevenBorder" position="14,447" size="1250,2" zPosition="2" />
     <eLabel backgroundColor="SevenBorder" position="14,701" size="1250,2" zPosition="2" />
     <eLabel backgroundColor="SevenLine" position="429,533" size="825,2" zPosition="2" />
-    <widget position="428,531" backgroundColor="SevenBackgroundIB1" render="Progress" size="825,6" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress">
+    <widget position="428,531" backgroundColor="SevenBackgroundIB1" render="Progress" size="825,6" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress" pixmap="SevenHD/progress/progress858.png">
       <convert type="SevenHDEventTime">Progress</convert>
     </widget>
     <widget alphatest="blend" pixmap="SevenHD/buttons/ico_rec_on.png" position="1227,553" render="Pixmap" size="32,32" source="session.RecordState" zPosition="5" transparent="1">
@@ -1773,7 +1773,7 @@
     <widget backgroundColor="SevenBackgroundIB1" font="Regular; 20" foregroundColor="SevenFont1" halign="center" position="37,306" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,wrap=1,always=0,repeat=2,oneshot=1" size="1200,130" source="session.Event_Next" zPosition="1" transparent="0">
       <convert type="SevenHDEventName">ExtendedDescription</convert>
     </widget>
-    <widget position="428,531" backgroundColor="SevenBackgroundIB1" render="Progress" size="825,6" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress">
+    <widget position="428,531" backgroundColor="SevenBackgroundIB1" render="Progress" size="825,6" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress" pixmap="SevenHD/progress/progress858.png">
       <convert type="SevenHDEventTime">Progress</convert>
     </widget>
   </screen>
@@ -1917,7 +1917,7 @@
     <widget source="session.CurrentService" render="Label" position="886,10" size="350,22" font="Regular2;12" halign="right" valign="bottom" foregroundColor="SevenFont2" backgroundColor="SevenBackgroundIB2" noWrap="1" transparent="1" zPosition="7">
       <convert type="SevenHDLayoutInfo">HddInfo,Full</convert>
     </widget>
-    <widget position="428,531" backgroundColor="SevenBackgroundIB1" render="Progress" size="825,6" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress">
+    <widget position="428,531" backgroundColor="SevenBackgroundIB1" render="Progress" size="825,6" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress" pixmap="SevenHD/progress/progress858.png">
       <convert type="SevenHDEventTime">Progress</convert>
     </widget>
     <eLabel backgroundColor="SevenBorder" position="14,440" size="620,2" zPosition="2" />
@@ -2082,7 +2082,7 @@
     <widget source="session.CurrentService" render="Label" position="886,10" size="350,22" font="Regular2;12" halign="right" valign="bottom" foregroundColor="SevenFont2" backgroundColor="SevenBackgroundIB2" noWrap="1" transparent="1" zPosition="7">
       <convert type="SevenHDLayoutInfo">HddInfo,Full</convert>
     </widget>
-    <widget position="428,531" backgroundColor="SevenBackgroundIB1" render="Progress" size="825,6" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress">
+    <widget position="428,531" backgroundColor="SevenBackgroundIB1" render="Progress" size="825,6" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress" pixmap="SevenHD/progress/progress858.png">
       <convert type="SevenHDEventTime">Progress</convert>
     </widget>
     <eLabel backgroundColor="SevenBorder" position="14,440" size="1250,2" zPosition="2" />
@@ -2103,7 +2103,7 @@
     <eLabel backgroundColor="SevenBorder" position="14,533" size="1250,2" zPosition="2" />
     <eLabel backgroundColor="SevenBorder" position="14,701" size="1250,2" zPosition="2" />
     <eLabel backgroundColor="SevenLine" position="14,516" size="1250,2" zPosition="2" />
-    <widget position="14,514" backgroundColor="black" render="Progress" size="1250,6" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress">
+    <widget position="14,514" backgroundColor="black" render="Progress" size="1250,6" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress" pixmap="SevenHD/progress/progress1280.png">
       <convert type="SevenHDEventTime">Progress</convert>
     </widget>
     <widget alphatest="blend" pixmap="SevenHD/buttons/ico_rec_on.png" position="1227,538" render="Pixmap" size="32,32" source="session.RecordState" zPosition="5" transparent="1">
@@ -2159,7 +2159,7 @@
     <eLabel backgroundColor="SevenBorder" position="1262,75" size="2,367" zPosition="2" />
     <eLabel backgroundColor="SevenLine" position="37,257" size="1200,2" zPosition="2" />
     <eLabel backgroundColor="SevenLine" position="14,516" size="1250,2" zPosition="2" />
-    <widget position="14,514" backgroundColor="black" render="Progress" size="1250,6" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress">
+    <widget position="14,514" backgroundColor="black" render="Progress" size="1250,6" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress" pixmap="SevenHD/progress/progress1280.png">
       <convert type="SevenHDEventTime">Progress</convert>
     </widget>
     <widget source="session.CurrentService" render="Label" position="1107,40" size="89,22" backgroundColor="SevenBackgroundIB2" transparent="1" zPosition="3" foregroundColor="SevenFont1" font="Regular; 19" valign="center" halign="left">
@@ -2319,7 +2319,7 @@
     <eLabel backgroundColor="SevenBorder" position="1262,1" size="2,71" zPosition="2" />
     <eLabel backgroundColor="SevenLine" position="14,516" size="1250,2" zPosition="2" />
     <eLabel backgroundColor="SevenBorder" position="643,75" size="2,367" zPosition="2" />
-    <widget position="14,514" backgroundColor="black" render="Progress" size="1250,6" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress">
+    <widget position="14,514" backgroundColor="black" render="Progress" size="1250,6" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress" pixmap="SevenHD/progress/progress1280.png">
       <convert type="SevenHDEventTime">Progress</convert>
     </widget>
     <widget source="session.CurrentService" render="Label" position="1107,40" size="89,22" backgroundColor="SevenBackgroundIB2" transparent="1" zPosition="3" foregroundColor="SevenFont1" font="Regular; 19" valign="center" halign="left">
@@ -2487,7 +2487,7 @@
     <eLabel backgroundColor="SevenBorder" position="14,1" size="2,71" zPosition="2" />
     <eLabel backgroundColor="SevenBorder" position="1262,1" size="2,71" zPosition="2" />
     <eLabel backgroundColor="SevenLine" position="14,516" size="1250,2" zPosition="2" />
-    <widget position="14,514" backgroundColor="black" render="Progress" size="1250,6" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress">
+    <widget position="14,514" backgroundColor="black" render="Progress" size="1250,6" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress" pixmap="SevenHD/progress/progress1280.png">
       <convert type="SevenHDEventTime">Progress</convert>
     </widget>
     <widget source="session.CurrentService" render="Label" position="1107,40" size="89,22" backgroundColor="SevenBackgroundIB2" transparent="1" zPosition="3" foregroundColor="SevenFont1" font="Regular; 19" valign="center" halign="left">
@@ -2640,7 +2640,7 @@
     <eLabel backgroundColor="SevenBorder" position="14,533" size="1250,2" zPosition="2" />
     <eLabel backgroundColor="SevenBorder" position="14,701" size="1250,2" zPosition="2" />
     <eLabel backgroundColor="SevenLine" position="14,516" size="1250,2" zPosition="2" />
-    <widget position="14,514" render="Progress" size="1250,6" source="session.Event_Now" backgroundColor="black" transparent="1" zPosition="7" foregroundColor="SevenProgress">
+    <widget position="14,514" render="Progress" size="1250,6" source="session.Event_Now" backgroundColor="black" transparent="1" zPosition="7" foregroundColor="SevenProgress" pixmap="SevenHD/progress/progress1280.png">
       <convert type="SevenHDEventTime">Progress</convert>
     </widget>
     <widget alphatest="blend" pixmap="SevenHD/buttons/ico_rec_on.png" position="1227,538" render="Pixmap" size="32,32" source="session.RecordState" zPosition="5" transparent="1">
@@ -2696,7 +2696,7 @@
     <eLabel backgroundColor="SevenBorder" position="1262,75" size="2,367" zPosition="2" />
     <eLabel backgroundColor="SevenLine" position="37,257" size="1200,2" zPosition="2" />
     <eLabel backgroundColor="SevenLine" position="14,516" size="1250,2" zPosition="2" />
-    <widget position="14,514" backgroundColor="black" render="Progress" size="1250,6" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress">
+    <widget position="14,514" backgroundColor="black" render="Progress" size="1250,6" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress" pixmap="SevenHD/progress/progress1280.png">
       <convert type="SevenHDEventTime">Progress</convert>
     </widget>
     <widget source="session.CurrentService" render="Label" position="1107,40" size="89,22" backgroundColor="SevenBackgroundIB2" transparent="1" zPosition="3" foregroundColor="SevenFont1" font="Regular; 19" valign="center" halign="left">
@@ -2856,7 +2856,7 @@
     <eLabel backgroundColor="SevenBorder" position="1262,1" size="2,71" zPosition="2" />
     <eLabel backgroundColor="SevenLine" position="14,516" size="1250,2" zPosition="2" />
     <eLabel backgroundColor="SevenBorder" position="643,75" size="2,367" zPosition="2" />
-    <widget position="14,514" backgroundColor="black" render="Progress" size="1250,6" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress">
+    <widget position="14,514" backgroundColor="black" render="Progress" size="1250,6" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress" pixmap="SevenHD/progress/progress1280.png">
       <convert type="SevenHDEventTime">Progress</convert>
     </widget>
     <widget source="session.CurrentService" render="Label" position="1107,40" size="89,22" backgroundColor="SevenBackgroundIB2" transparent="1" zPosition="3" foregroundColor="SevenFont1" font="Regular; 19" valign="center" halign="left">
@@ -3024,7 +3024,7 @@
     <eLabel backgroundColor="SevenBorder" position="14,1" size="2,71" zPosition="2" />
     <eLabel backgroundColor="SevenBorder" position="1262,1" size="2,71" zPosition="2" />
     <eLabel backgroundColor="SevenLine" position="14,516" size="1250,2" zPosition="2" />
-    <widget position="14,514" backgroundColor="black" render="Progress" size="1250,6" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress">
+    <widget position="14,514" backgroundColor="black" render="Progress" size="1250,6" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress" pixmap="SevenHD/progress/progress1280.png">
       <convert type="SevenHDEventTime">Progress</convert>
     </widget>
     <widget source="session.CurrentService" render="Label" position="1107,40" size="89,22" backgroundColor="SevenBackgroundIB2" transparent="1" zPosition="3" foregroundColor="SevenFont1" font="Regular; 19" valign="center" halign="left">
@@ -3177,7 +3177,7 @@
     <eLabel backgroundColor="SevenBorder" position="14,533" size="1250,2" zPosition="2" />
     <eLabel backgroundColor="SevenBorder" position="14,701" size="1250,2" zPosition="2" />
     <eLabel backgroundColor="SevenLine" position="215,604" size="850,2" zPosition="2" />
-    <widget position="215,602" backgroundColor="SevenBackgroundIB1" render="Progress" size="850,6" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress">
+    <widget position="215,602" backgroundColor="SevenBackgroundIB1" render="Progress" size="850,6" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress" pixmap="SevenHD/progress/progress858.png">
       <convert type="SevenHDEventTime">Progress</convert>
     </widget>
     <widget alphatest="blend" pixmap="SevenHD/buttons/ico_rec_on.png" position="1227,538" render="Pixmap" size="32,32" source="session.RecordState" zPosition="5" transparent="1">
@@ -3340,7 +3340,7 @@
     <eLabel backgroundColor="SevenBorder" position="14,533" size="1250,2" zPosition="2" />
     <eLabel backgroundColor="SevenBorder" position="14,701" size="1250,2" zPosition="2" />
     <eLabel backgroundColor="SevenLine" position="215,604" size="850,2" zPosition="2" />
-    <widget position="215,602" backgroundColor="SevenBackgroundIB1" render="Progress" size="850,6" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress">
+    <widget position="215,602" backgroundColor="SevenBackgroundIB1" render="Progress" size="850,6" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress" pixmap="SevenHD/progress/progress858.png">
       <convert type="SevenHDEventTime">Progress</convert>
     </widget>
     <widget alphatest="blend" pixmap="SevenHD/buttons/ico_rec_on.png" position="1227,538" render="Pixmap" size="32,32" source="session.RecordState" zPosition="5" transparent="1">
@@ -3513,7 +3513,7 @@
     <eLabel backgroundColor="SevenBorder" position="14,533" size="1250,2" zPosition="2" />
     <eLabel backgroundColor="SevenBorder" position="14,701" size="1250,2" zPosition="2" />
     <eLabel backgroundColor="SevenLine" position="215,604" size="850,2" zPosition="2" />
-    <widget position="215,602" backgroundColor="SevenBackgroundIB1" render="Progress" size="850,6" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress">
+    <widget position="215,602" backgroundColor="SevenBackgroundIB1" render="Progress" size="850,6" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress" pixmap="SevenHD/progress/progress858.png">
       <convert type="SevenHDEventTime">Progress</convert>
     </widget>
     <widget alphatest="blend" pixmap="SevenHD/buttons/ico_rec_on.png" position="1227,538" render="Pixmap" size="32,32" source="session.RecordState" zPosition="5" transparent="1">
@@ -3675,7 +3675,7 @@
     <eLabel backgroundColor="SevenBorder" position="14,533" size="1250,2" zPosition="2" />
     <eLabel backgroundColor="SevenBorder" position="14,701" size="1250,2" zPosition="2" />
     <eLabel backgroundColor="SevenLine" position="215,604" size="850,2" zPosition="2" />
-    <widget position="215,602" backgroundColor="SevenBackgroundIB1" render="Progress" size="850,6" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress">
+    <widget position="215,602" backgroundColor="SevenBackgroundIB1" render="Progress" size="850,6" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress" pixmap="SevenHD/progress/progress858.png">
       <convert type="SevenHDEventTime">Progress</convert>
     </widget>
     <widget alphatest="blend" pixmap="SevenHD/buttons/ico_rec_on.png" position="1227,538" render="Pixmap" size="32,32" source="session.RecordState" zPosition="5" transparent="1">
@@ -3800,7 +3800,7 @@
     <eLabel backgroundColor="SevenBorder" position="14,520" size="2,183" zPosition="2" />
     <eLabel backgroundColor="SevenBorder" position="14,520" size="1250,2" zPosition="2" />
     <eLabel backgroundColor="SevenBorder" position="14,701" size="1250,2" zPosition="2" />
-    <widget position="443,597" backgroundColor="SevenBackgroundIB1" render="Progress" size="621,7" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress">
+    <widget position="443,597" backgroundColor="SevenBackgroundIB1" render="Progress" size="621,7" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress" pixmap="SevenHD/progress/progress621.png">
       <convert type="SevenHDEventTime">Progress</convert>
     </widget>
     <eLabel backgroundColor="SevenLine" position="443,600" size="621,1" zPosition="2" />
@@ -3960,7 +3960,7 @@
     <eLabel backgroundColor="SevenBorder" position="14,520" size="2,183" zPosition="2" />
     <eLabel backgroundColor="SevenBorder" position="14,520" size="1250,2" zPosition="2" />
     <eLabel backgroundColor="SevenBorder" position="14,701" size="1250,2" zPosition="2" />
-    <widget position="443,597" backgroundColor="SevenBackgroundIB1" render="Progress" size="621,7" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress">
+    <widget position="443,597" backgroundColor="SevenBackgroundIB1" render="Progress" size="621,7" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress" pixmap="SevenHD/progress/progress621.png">
       <convert type="SevenHDEventTime">Progress</convert>
     </widget>
     <eLabel backgroundColor="SevenLine" position="443,600" size="621,1" zPosition="2" />
@@ -4127,7 +4127,7 @@
     <eLabel backgroundColor="SevenBorder" position="14,520" size="2,183" zPosition="2" />
     <eLabel backgroundColor="SevenBorder" position="14,520" size="1250,2" zPosition="2" />
     <eLabel backgroundColor="SevenBorder" position="14,701" size="1250,2" zPosition="2" />
-    <widget position="443,597" backgroundColor="SevenBackgroundIB1" render="Progress" size="621,7" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress">
+    <widget position="443,597" backgroundColor="SevenBackgroundIB1" render="Progress" size="621,7" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress" pixmap="SevenHD/progress/progress621.png">
       <convert type="SevenHDEventTime">Progress</convert>
     </widget>
     <eLabel backgroundColor="SevenLine" position="443,600" size="621,1" zPosition="2" />
@@ -4283,7 +4283,7 @@
     <eLabel backgroundColor="SevenBorder" position="14,520" size="2,183" zPosition="2" />
     <eLabel backgroundColor="SevenBorder" position="14,520" size="1250,2" zPosition="2" />
     <eLabel backgroundColor="SevenBorder" position="14,701" size="1250,2" zPosition="2" />
-    <widget position="443,597" backgroundColor="SevenBackgroundIB1" render="Progress" size="621,7" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress">
+    <widget position="443,597" backgroundColor="SevenBackgroundIB1" render="Progress" size="621,7" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress" pixmap="SevenHD/progress/progress621.png">
       <convert type="SevenHDEventTime">Progress</convert>
     </widget>
     <eLabel backgroundColor="SevenLine" position="443,600" size="621,1" zPosition="2" />
@@ -4407,7 +4407,7 @@
     <eLabel backgroundColor="SevenBorder" position="14,447" size="1250,2" zPosition="2" />
     <eLabel backgroundColor="SevenBorder" position="14,701" size="1250,2" zPosition="2" />
     <eLabel backgroundColor="SevenLine" position="429,533" size="825,2" zPosition="2" />
-    <widget position="428,531" backgroundColor="SevenBackgroundIB1" render="Progress" size="825,6" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress">
+    <widget position="428,531" backgroundColor="SevenBackgroundIB1" render="Progress" size="825,6" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress" pixmap="SevenHD/progress/progress858.png">
       <convert type="SevenHDEventTime">Progress</convert>
     </widget>
     <widget alphatest="blend" pixmap="SevenHD/buttons/ico_rec_on.png" position="1227,540" render="Pixmap" size="32,32" source="session.RecordState" zPosition="5" transparent="1">
@@ -4569,7 +4569,7 @@
     <eLabel backgroundColor="SevenBorder" position="14,442" size="1250,2" zPosition="2" />
     <eLabel backgroundColor="SevenBorder" position="14,701" size="1250,2" zPosition="2" />
     <eLabel backgroundColor="SevenLine" position="429,533" size="825,2" zPosition="2" />
-    <widget position="428,531" backgroundColor="SevenBackgroundIB1" render="Progress" size="825,6" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress">
+    <widget position="428,531" backgroundColor="SevenBackgroundIB1" render="Progress" size="825,6" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress" pixmap="SevenHD/progress/progress858.png">
       <convert type="SevenHDEventTime">Progress</convert>
     </widget>
     <widget alphatest="blend" pixmap="SevenHD/buttons/ico_rec_on.png" position="1227,540" render="Pixmap" size="32,32" source="session.RecordState" zPosition="5" transparent="1">
@@ -4737,7 +4737,7 @@
     <eLabel backgroundColor="SevenBorder" position="14,447" size="1250,2" zPosition="2" />
     <eLabel backgroundColor="SevenBorder" position="14,701" size="1250,2" zPosition="2" />
     <eLabel backgroundColor="SevenLine" position="429,533" size="825,2" zPosition="2" />
-    <widget position="428,531" backgroundColor="SevenBackgroundIB1" render="Progress" size="825,6" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress">
+    <widget position="428,531" backgroundColor="SevenBackgroundIB1" render="Progress" size="825,6" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress" pixmap="SevenHD/progress/progress858.png">
       <convert type="SevenHDEventTime">Progress</convert>
     </widget>
     <widget alphatest="blend" pixmap="SevenHD/buttons/ico_rec_on.png" position="1227,540" render="Pixmap" size="32,32" source="session.RecordState" zPosition="5" transparent="1">
@@ -4893,7 +4893,7 @@
     <eLabel backgroundColor="SevenBorder" position="14,447" size="1250,2" zPosition="2" />
     <eLabel backgroundColor="SevenBorder" position="14,701" size="1250,2" zPosition="2" />
     <eLabel backgroundColor="SevenLine" position="429,533" size="825,2" zPosition="2" />
-    <widget position="428,531" backgroundColor="SevenBackgroundIB1" render="Progress" size="825,6" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress">
+    <widget position="428,531" backgroundColor="SevenBackgroundIB1" render="Progress" size="825,6" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress" pixmap="SevenHD/progress/progress858.png">
       <convert type="SevenHDEventTime">Progress</convert>
     </widget>
     <widget alphatest="blend" pixmap="SevenHD/buttons/ico_rec_on.png" position="1227,540" render="Pixmap" size="32,32" source="session.RecordState" zPosition="5" transparent="1">
@@ -5016,7 +5016,7 @@
     <eLabel backgroundColor="SevenBorder" position="14,533" size="1250,2" zPosition="2" />
     <eLabel backgroundColor="SevenBorder" position="14,701" size="1250,2" zPosition="2" />
     <eLabel backgroundColor="SevenLine" position="273,605" size="793,2" zPosition="2" />
-    <widget position="273,603" backgroundColor="SevenBackgroundIB1" render="Progress" size="793,6" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress">
+    <widget position="273,603" backgroundColor="SevenBackgroundIB1" render="Progress" size="793,6" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress" pixmap="SevenHD/progress/progress793.png">
       <convert type="SevenHDEventTime">Progress</convert>
     </widget>
     <widget alphatest="blend" pixmap="SevenHD/buttons/ico_rec_on.png" position="1227,537" render="Pixmap" size="32,32" source="session.RecordState" zPosition="15" transparent="1">
@@ -5182,7 +5182,7 @@
     <eLabel backgroundColor="SevenBorder" position="14,533" size="1250,2" zPosition="2" />
     <eLabel backgroundColor="SevenBorder" position="14,701" size="1250,2" zPosition="2" />
     <eLabel backgroundColor="SevenLine" position="273,605" size="793,2" zPosition="2" />
-    <widget position="273,603" backgroundColor="SevenBackgroundIB1" render="Progress" size="793,6" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress">
+    <widget position="273,603" backgroundColor="SevenBackgroundIB1" render="Progress" size="793,6" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress" pixmap="SevenHD/progress/progress793.png">
       <convert type="SevenHDEventTime">Progress</convert>
     </widget>
     <widget alphatest="blend" pixmap="SevenHD/buttons/ico_rec_on.png" position="1227,537" render="Pixmap" size="32,32" source="session.RecordState" zPosition="15" transparent="1">
@@ -5355,7 +5355,7 @@
     <eLabel backgroundColor="SevenBorder" position="14,533" size="1250,2" zPosition="2" />
     <eLabel backgroundColor="SevenBorder" position="14,701" size="1250,2" zPosition="2" />
     <eLabel backgroundColor="SevenLine" position="273,605" size="793,2" zPosition="2" />
-    <widget position="273,603" render="Progress" backgroundColor="SevenBackgroundIB1" size="793,6" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress">
+    <widget position="273,603" render="Progress" backgroundColor="SevenBackgroundIB1" size="793,6" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress" pixmap="SevenHD/progress/progress793.png">
       <convert type="SevenHDEventTime">Progress</convert>
     </widget>
     <widget alphatest="blend" pixmap="SevenHD/buttons/ico_rec_on.png" position="1227,537" render="Pixmap" size="32,32" source="session.RecordState" zPosition="15" transparent="0">
@@ -5517,7 +5517,7 @@
     <eLabel backgroundColor="SevenBorder" position="14,533" size="1250,2" zPosition="2" />
     <eLabel backgroundColor="SevenBorder" position="14,701" size="1250,2" zPosition="2" />
     <eLabel backgroundColor="SevenLine" position="273,605" size="793,2" zPosition="2" />
-    <widget position="273,603" render="Progress" backgroundColor="SevenBackgroundIB1" size="793,6" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress">
+    <widget position="273,603" render="Progress" backgroundColor="SevenBackgroundIB1" size="793,6" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress" pixmap="SevenHD/progress/progress793.png">
       <convert type="SevenHDEventTime">Progress</convert>
     </widget>
     <widget alphatest="blend" pixmap="SevenHD/buttons/ico_rec_on.png" position="1227,537" render="Pixmap" size="32,32" source="session.RecordState" zPosition="15" transparent="0">
@@ -5646,7 +5646,7 @@
     <eLabel backgroundColor="SevenBorder" position="14,533" size="1250,2" zPosition="2" />
     <eLabel backgroundColor="SevenBorder" position="14,701" size="1250,2" zPosition="2" />
     <eLabel backgroundColor="SevenLine" position="273,605" size="793,2" zPosition="2" />
-    <widget position="273,603" backgroundColor="SevenBackgroundIB1" render="Progress" size="793,6" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress">
+    <widget position="273,603" backgroundColor="SevenBackgroundIB1" render="Progress" size="793,6" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress" pixmap="SevenHD/progress/progress793.png">
       <convert type="SevenHDEventTime">Progress</convert>
     </widget>
     <widget alphatest="blend" pixmap="SevenHD/buttons/ico_rec_on.png" position="1227,537" render="Pixmap" size="32,32" source="session.RecordState" zPosition="15" transparent="0">
@@ -5812,7 +5812,7 @@
     <eLabel backgroundColor="SevenBorder" position="14,533" size="1250,2" zPosition="2" />
     <eLabel backgroundColor="SevenBorder" position="14,701" size="1250,2" zPosition="2" />
     <eLabel backgroundColor="SevenLine" position="273,605" size="793,2" zPosition="2" />
-    <widget position="273,603" backgroundColor="SevenBackgroundIB1" render="Progress" size="793,6" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress">
+    <widget position="273,603" backgroundColor="SevenBackgroundIB1" render="Progress" size="793,6" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress" pixmap="SevenHD/progress/progress793.png">
       <convert type="SevenHDEventTime">Progress</convert>
     </widget>
     <widget alphatest="blend" pixmap="SevenHD/buttons/ico_rec_on.png" position="1227,537" render="Pixmap" size="32,32" source="session.RecordState" zPosition="15" transparent="0">
@@ -5984,7 +5984,7 @@
     <eLabel backgroundColor="SevenBorder" position="14,533" size="1250,2" zPosition="2" />
     <eLabel backgroundColor="SevenBorder" position="14,701" size="1250,2" zPosition="2" />
     <eLabel backgroundColor="SevenLine" position="273,605" size="793,2" zPosition="2" />
-    <widget position="273,603" render="Progress" backgroundColor="SevenBackgroundIB1" size="793,6" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress">
+    <widget position="273,603" render="Progress" backgroundColor="SevenBackgroundIB1" size="793,6" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress" pixmap="SevenHD/progress/progress793.png">
       <convert type="SevenHDEventTime">Progress</convert>
     </widget>
     <widget alphatest="blend" pixmap="SevenHD/buttons/ico_rec_on.png" position="1227,537" render="Pixmap" size="32,32" source="session.RecordState" zPosition="15" transparent="0">
@@ -6147,7 +6147,7 @@
     <eLabel backgroundColor="SevenBorder" position="14,533" size="1250,2" zPosition="2" />
     <eLabel backgroundColor="SevenBorder" position="14,701" size="1250,2" zPosition="2" />
     <eLabel backgroundColor="SevenLine" position="273,605" size="793,2" zPosition="2" />
-    <widget position="273,603" render="Progress" backgroundColor="SevenBackgroundIB1" size="793,6" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress">
+    <widget position="273,603" render="Progress" backgroundColor="SevenBackgroundIB1" size="793,6" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress" pixmap="SevenHD/progress/progress793.png">
       <convert type="SevenHDEventTime">Progress</convert>
     </widget>
     <widget alphatest="blend" pixmap="SevenHD/buttons/ico_rec_on.png" position="1227,537" render="Pixmap" size="32,32" source="session.RecordState" zPosition="15" transparent="0">
@@ -6281,7 +6281,7 @@
     <eLabel backgroundColor="SevenBorder" position="1075,533" size="2,129" zPosition="2" />
     <eLabel backgroundColor="SevenBackgroundIB2" position="14,533" size="1062,127" />
     <eLabel backgroundColor="SevenBackgroundIB1" position="1077,533" size="187,170" />
-    <widget position="215,602" backgroundColor="SevenBackgroundIB2" render="Progress" size="850,6" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress">
+    <widget position="215,602" backgroundColor="SevenBackgroundIB2" render="Progress" size="850,6" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress" pixmap="SevenHD/progress/progress858.png">
       <convert type="SevenHDEventTime">Progress</convert>
     </widget>
     <widget alphatest="blend" pixmap="SevenHD/buttons/ico_rec_on.png" position="1227,537" render="Pixmap" size="32,32" source="session.RecordState" zPosition="15" transparent="0">
@@ -6408,7 +6408,7 @@
     <eLabel backgroundColor="SevenBorder" position="1075,533" size="2,129" zPosition="2" />
     <eLabel backgroundColor="SevenBackgroundIB2" position="14,533" size="1062,127" />
     <eLabel backgroundColor="SevenBackgroundIB1" position="1077,533" size="187,170" />
-    <widget position="215,602" backgroundColor="SevenBackgroundIB2" render="Progress" size="850,6" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress">
+    <widget position="215,602" backgroundColor="SevenBackgroundIB2" render="Progress" size="850,6" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress" pixmap="SevenHD/progress/progress858.png">
       <convert type="SevenHDEventTime">Progress</convert>
     </widget>
     <widget alphatest="blend" pixmap="SevenHD/buttons/ico_rec_on.png" position="1227,537" render="Pixmap" size="32,32" source="session.RecordState" zPosition="15" transparent="0">
@@ -6578,7 +6578,7 @@
     <eLabel backgroundColor="SevenBorder" position="1075,533" size="2,129" zPosition="2" />
     <eLabel backgroundColor="SevenBackgroundIB2" position="14,533" size="1062,127" />
     <eLabel backgroundColor="SevenBackgroundIB1" position="1077,533" size="187,170" />
-    <widget position="215,602" backgroundColor="SevenBackgroundIB2" render="Progress" size="850,6" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress">
+    <widget position="215,602" backgroundColor="SevenBackgroundIB2" render="Progress" size="850,6" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress" pixmap="SevenHD/progress/progress858.png">
       <convert type="SevenHDEventTime">Progress</convert>
     </widget>
     <widget alphatest="blend" pixmap="SevenHD/buttons/ico_rec_on.png" position="1227,537" render="Pixmap" size="32,32" source="session.RecordState" zPosition="15" transparent="0">
@@ -6752,7 +6752,7 @@
     <eLabel backgroundColor="SevenBorder" position="1075,533" size="2,129" zPosition="2" />
     <eLabel backgroundColor="SevenBackgroundIB2" position="14,533" size="1062,127" />
     <eLabel backgroundColor="SevenBackgroundIB1" position="1077,533" size="187,170" />
-    <widget position="215,602" backgroundColor="SevenBackgroundIB2" render="Progress" size="850,6" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress">
+    <widget position="215,602" backgroundColor="SevenBackgroundIB2" render="Progress" size="850,6" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress" pixmap="SevenHD/progress/progress858.png">
       <convert type="SevenHDEventTime">Progress</convert>
     </widget>
     <widget alphatest="blend" pixmap="SevenHD/buttons/ico_rec_on.png" position="1227,537" render="Pixmap" size="32,32" source="session.RecordState" zPosition="15" transparent="0">
@@ -6916,7 +6916,7 @@
     <eLabel backgroundColor="SevenBackgroundIB2" position="425,522" size="652,140" />
     <eLabel backgroundColor="SevenBackgroundIB1" position="1077,520" size="187,183" />
     <eLabel backgroundColor="SevenBackgroundIB1" position="14,520" size="410,183" />
-    <widget position="443,597" backgroundColor="SevenBackgroundIB2" render="Progress" size="621,7" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress">
+    <widget position="443,597" backgroundColor="SevenBackgroundIB2" render="Progress" size="621,7" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress" pixmap="SevenHD/progress/progress621.png">
       <convert type="SevenHDEventTime">Progress</convert>
     </widget>
     <eLabel backgroundColor="SevenLine" position="443,600" size="621,1" zPosition="2" />
@@ -7042,7 +7042,7 @@
     <eLabel backgroundColor="SevenBackgroundIB2" position="425,522" size="652,140" />
     <eLabel backgroundColor="SevenBackgroundIB1" position="1077,520" size="187,183" />
     <eLabel backgroundColor="SevenBackgroundIB1" position="14,520" size="410,183" />
-    <widget position="443,597" backgroundColor="SevenBackgroundIB2" render="Progress" size="621,7" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress">
+    <widget position="443,597" backgroundColor="SevenBackgroundIB2" render="Progress" size="621,7" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress" pixmap="SevenHD/progress/progress621.png">
       <convert type="SevenHDEventTime">Progress</convert>
     </widget>
     <eLabel backgroundColor="SevenLine" position="443,600" size="621,1" zPosition="2" />
@@ -7211,7 +7211,7 @@
     <eLabel backgroundColor="SevenBackgroundIB2" position="425,522" size="652,140" />
     <eLabel backgroundColor="SevenBackgroundIB1" position="1077,520" size="187,183" />
     <eLabel backgroundColor="SevenBackgroundIB1" position="14,520" size="410,183" />
-    <widget position="443,597" backgroundColor="SevenBackgroundIB2" render="Progress" size="621,7" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress">
+    <widget position="443,597" backgroundColor="SevenBackgroundIB2" render="Progress" size="621,7" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress" pixmap="SevenHD/progress/progress621.png">
       <convert type="SevenHDEventTime">Progress</convert>
     </widget>
     <eLabel backgroundColor="SevenLine" position="443,600" size="621,1" zPosition="2" />
@@ -7384,7 +7384,7 @@
     <eLabel backgroundColor="SevenBackgroundIB2" position="425,522" size="652,140" />
     <eLabel backgroundColor="SevenBackgroundIB1" position="1077,520" size="187,183" />
     <eLabel backgroundColor="SevenBackgroundIB1" position="14,520" size="410,183" />
-    <widget position="443,597" backgroundColor="SevenBackgroundIB2" render="Progress" size="621,7" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress">
+    <widget position="443,597" backgroundColor="SevenBackgroundIB2" render="Progress" size="621,7" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress" pixmap="SevenHD/progress/progress621.png">
       <convert type="SevenHDEventTime">Progress</convert>
     </widget>
     <eLabel backgroundColor="SevenLine" position="443,600" size="621,1" zPosition="2" />
@@ -7548,7 +7548,7 @@
 <eLabel backgroundColor="SevenBackgroundIB2" position="425,533" size="654,170" />
 <eLabel backgroundColor="SevenBorder" position="14,447" size="2,256" zPosition="2" />
 
-  <widget position="443,600" backgroundColor="SevenBackgroundIB2" render="Progress" size="622,6" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress">
+  <widget position="443,600" backgroundColor="SevenBackgroundIB2" render="Progress" size="622,6" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress" pixmap="SevenHD/progress/progress621.png">
     <convert type="SevenHDEventTime">Progress</convert>
   </widget>
   <widget alphatest="blend" pixmap="SevenHD/buttons/ico_rec_on.png" position="24,662" render="Pixmap" size="32,32" source="session.RecordState" zPosition="15" transparent="1">
@@ -7723,7 +7723,7 @@
 <eLabel backgroundColor="SevenBackgroundIB2" position="425,533" size="654,170" />
 <eLabel backgroundColor="SevenBorder" position="14,447" size="2,256" zPosition="2" />
 
-  <widget position="443,600" backgroundColor="SevenBackgroundIB2" render="Progress" size="622,6" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress">
+  <widget position="443,600" backgroundColor="SevenBackgroundIB2" render="Progress" size="622,6" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress" pixmap="SevenHD/progress/progress621.png">
     <convert type="SevenHDEventTime">Progress</convert>
   </widget>
   <widget alphatest="blend" pixmap="SevenHD/buttons/ico_rec_on.png" position="1227,537" render="Pixmap" size="32,32" source="session.RecordState" zPosition="15" transparent="0">
@@ -7897,7 +7897,7 @@
 <eLabel backgroundColor="SevenBackgroundIB2" position="425,533" size="654,170" />
 <eLabel backgroundColor="SevenBorder" position="14,447" size="2,256" zPosition="2" />
 
-  <widget position="443,600" backgroundColor="SevenBackgroundIB2" render="Progress" size="622,6" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress">
+  <widget position="443,600" backgroundColor="SevenBackgroundIB2" render="Progress" size="622,6" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress" pixmap="SevenHD/progress/progress621.png">
     <convert type="SevenHDEventTime">Progress</convert>
   </widget>
   <widget alphatest="blend" pixmap="SevenHD/buttons/ico_rec_on.png" position="1227,537" render="Pixmap" size="32,32" source="session.RecordState" zPosition="15" transparent="0">
@@ -8060,7 +8060,7 @@
 <eLabel backgroundColor="SevenBackgroundIB2" position="425,533" size="654,170" />
 <eLabel backgroundColor="SevenBorder" position="14,447" size="2,256" zPosition="2" />
 
-  <widget position="443,600" backgroundColor="SevenBackgroundIB2" render="Progress" size="622,6" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress">
+  <widget position="443,600" backgroundColor="SevenBackgroundIB2" render="Progress" size="622,6" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress" pixmap="SevenHD/progress/progress621.png">
     <convert type="SevenHDEventTime">Progress</convert>
   </widget>
   <widget alphatest="blend" pixmap="SevenHD/buttons/ico_rec_on.png" position="1227,537" render="Pixmap" size="32,32" source="session.RecordState" zPosition="15" transparent="0">
@@ -8190,7 +8190,7 @@
     <eLabel backgroundColor="SevenBackgroundIB2" position="250,533" size="825,129" />
     <eLabel backgroundColor="SevenBackgroundIB1" position="248,659" size="828,44" />
     <eLabel backgroundColor="SevenBackgroundIB1" position="16,534" size="232,168" />
-    <widget position="273,603" backgroundColor="SevenBackgroundIB2" render="Progress" size="793,6" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress">
+    <widget position="273,603" backgroundColor="SevenBackgroundIB2" render="Progress" size="793,6" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress" pixmap="SevenHD/progress/progress793.png">
       <convert type="SevenHDEventTime">Progress</convert>
     </widget>
     <widget alphatest="blend" pixmap="SevenHD/buttons/ico_rec_on.png" position="1228,537" render="Pixmap" size="32,32" source="session.RecordState" zPosition="15" transparent="1">
@@ -8322,7 +8322,7 @@
     <eLabel backgroundColor="SevenBackgroundIB2" position="250,533" size="825,129" />
     <eLabel backgroundColor="SevenBackgroundIB1" position="248,659" size="828,44" />
     <eLabel backgroundColor="SevenBackgroundIB1" position="16,534" size="232,168" />
-    <widget position="273,603" backgroundColor="SevenBackgroundIB2" render="Progress" size="793,6" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress">
+    <widget position="273,603" backgroundColor="SevenBackgroundIB2" render="Progress" size="793,6" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress" pixmap="SevenHD/progress/progress793.png">
       <convert type="SevenHDEventTime">Progress</convert>
     </widget>
     <widget alphatest="blend" pixmap="SevenHD/buttons/ico_rec_on.png" position="1228,537" render="Pixmap" size="32,32" source="session.RecordState" zPosition="15" transparent="1">
@@ -8497,7 +8497,7 @@
     <eLabel backgroundColor="SevenBackgroundIB2" position="250,533" size="825,129" />
     <eLabel backgroundColor="SevenBackgroundIB1" position="248,659" size="828,44" />
     <eLabel backgroundColor="SevenBackgroundIB1" position="16,534" size="232,168" />
-    <widget position="273,603" backgroundColor="SevenBackgroundIB2" render="Progress" size="793,6" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress">
+    <widget position="273,603" backgroundColor="SevenBackgroundIB2" render="Progress" size="793,6" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress" pixmap="SevenHD/progress/progress793.png">
       <convert type="SevenHDEventTime">Progress</convert>
     </widget>
     <widget alphatest="blend" pixmap="SevenHD/buttons/ico_rec_on.png" position="1228,537" render="Pixmap" size="32,32" source="session.RecordState" zPosition="15" transparent="1">
@@ -8676,7 +8676,7 @@
     <eLabel backgroundColor="SevenBackgroundIB2" position="250,533" size="825,129" />
     <eLabel backgroundColor="SevenBackgroundIB1" position="248,659" size="828,44" />
     <eLabel backgroundColor="SevenBackgroundIB1" position="16,534" size="232,168" />
-    <widget position="273,603" backgroundColor="SevenBackgroundIB2" render="Progress" size="793,6" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress">
+    <widget position="273,603" backgroundColor="SevenBackgroundIB2" render="Progress" size="793,6" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress" pixmap="SevenHD/progress/progress793.png">
       <convert type="SevenHDEventTime">Progress</convert>
     </widget>
     <widget alphatest="blend" pixmap="SevenHD/buttons/ico_rec_on.png" position="1228,537" render="Pixmap" size="32,32" source="session.RecordState" zPosition="15" transparent="1">
@@ -8844,7 +8844,7 @@
     <eLabel backgroundColor="SevenBackgroundIB2" position="250,533" size="825,129" />
     <eLabel backgroundColor="SevenBackgroundIB1" position="248,659" size="828,44" />
     <eLabel backgroundColor="SevenBackgroundIB1" position="16,534" size="232,168" />
-    <widget position="273,603" backgroundColor="SevenBackgroundIB2" render="Progress" size="793,6" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress">
+    <widget position="273,603" backgroundColor="SevenBackgroundIB2" render="Progress" size="793,6" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress" pixmap="SevenHD/progress/progress793.png">
       <convert type="SevenHDEventTime">Progress</convert>
     </widget>
     <widget alphatest="blend" pixmap="SevenHD/buttons/ico_rec_on.png" position="1227,537" render="Pixmap" size="32,32" source="session.RecordState" zPosition="15" transparent="0">
@@ -8976,7 +8976,7 @@
     <eLabel backgroundColor="SevenBackgroundIB2" position="250,533" size="825,129" />
     <eLabel backgroundColor="SevenBackgroundIB1" position="248,659" size="828,44" />
     <eLabel backgroundColor="SevenBackgroundIB1" position="16,534" size="232,168" />
-    <widget position="273,603" backgroundColor="SevenBackgroundIB2" render="Progress" size="793,6" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress">
+    <widget position="273,603" backgroundColor="SevenBackgroundIB2" render="Progress" size="793,6" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress" pixmap="SevenHD/progress/progress793.png">
       <convert type="SevenHDEventTime">Progress</convert>
     </widget>
     <widget alphatest="blend" pixmap="SevenHD/buttons/ico_rec_on.png" position="1227,537" render="Pixmap" size="32,32" source="session.RecordState" zPosition="15" transparent="0">
@@ -9151,7 +9151,7 @@
     <eLabel backgroundColor="SevenBackgroundIB2" position="250,533" size="825,129" />
     <eLabel backgroundColor="SevenBackgroundIB1" position="248,659" size="828,44" />
     <eLabel backgroundColor="SevenBackgroundIB1" position="16,534" size="232,168" />
-    <widget position="273,603" render="Progress" size="793,6" backgroundColor="SevenBackgroundIB2" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress">
+    <widget position="273,603" render="Progress" size="793,6" backgroundColor="SevenBackgroundIB2" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress" pixmap="SevenHD/progress/progress793.png">
       <convert type="SevenHDEventTime">Progress</convert>
     </widget>
     <widget alphatest="blend" pixmap="SevenHD/buttons/ico_rec_on.png" position="1227,537" render="Pixmap" size="32,32" source="session.RecordState" zPosition="15" transparent="0">
@@ -9370,7 +9370,7 @@
     <eLabel backgroundColor="SevenBackgroundIB2" position="250,533" size="825,129" />
     <eLabel backgroundColor="SevenBackgroundIB1" position="248,659" size="828,44" />
     <eLabel backgroundColor="SevenBackgroundIB1" position="16,534" size="232,168" />
-    <widget position="273,603" render="Progress" size="793,6" backgroundColor="SevenBackgroundIB2" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress">
+    <widget position="273,603" render="Progress" size="793,6" backgroundColor="SevenBackgroundIB2" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress" pixmap="SevenHD/progress/progress793.png">
       <convert type="SevenHDEventTime">Progress</convert>
     </widget>
     <widget alphatest="blend" pixmap="SevenHD/buttons/ico_rec_on.png" position="1227,537" render="Pixmap" size="32,32" source="session.RecordState" zPosition="15" transparent="0">
@@ -9543,7 +9543,7 @@
     <eLabel backgroundColor="SevenBorder" position="1075,533" size="2,129" zPosition="2" />
     <eLabel backgroundColor="SevenBackgroundIB2" position="14,533" size="1062,127" />
     <eLabel backgroundColor="SevenBackgroundIB1" position="1077,533" size="187,170" />
-    <widget position="215,602" backgroundColor="SevenBackgroundIB2" render="Progress" size="850,6" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress">
+    <widget position="215,602" backgroundColor="SevenBackgroundIB2" render="Progress" size="850,6" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress" pixmap="SevenHD/progress/progress858.png">
       <convert type="SevenHDEventTime">Progress</convert>
     </widget>
     <widget alphatest="blend" pixmap="SevenHD/buttons/ico_rec_on.png" position="1228,536" render="Pixmap" size="32,32" source="session.RecordState" zPosition="5" transparent="1">
@@ -9684,7 +9684,7 @@
     <eLabel backgroundColor="SevenBorder" position="1075,533" size="2,129" zPosition="2" />
     <eLabel backgroundColor="SevenBackgroundIB2" position="14,533" size="1062,127" />
     <eLabel backgroundColor="SevenBackgroundIB1" position="1077,533" size="187,170" />
-    <widget position="215,602" backgroundColor="SevenBackgroundIB2" render="Progress" size="850,6" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress">
+    <widget position="215,602" backgroundColor="SevenBackgroundIB2" render="Progress" size="850,6" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress" pixmap="SevenHD/progress/progress858.png">
       <convert type="SevenHDEventTime">Progress</convert>
     </widget>
     <widget alphatest="blend" pixmap="SevenHD/buttons/ico_rec_on.png" position="1228,536" render="Pixmap" size="32,32" source="session.RecordState" zPosition="5" transparent="1">
@@ -9868,7 +9868,7 @@
     <eLabel backgroundColor="SevenBorder" position="1075,533" size="2,129" zPosition="2" />
     <eLabel backgroundColor="SevenBackgroundIB2" position="14,533" size="1062,127" />
     <eLabel backgroundColor="SevenBackgroundIB1" position="1077,533" size="187,170" />
-    <widget position="215,602" backgroundColor="SevenBackgroundIB2" render="Progress" size="850,6" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress">
+    <widget position="215,602" backgroundColor="SevenBackgroundIB2" render="Progress" size="850,6" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress" pixmap="SevenHD/progress/progress858.png">
       <convert type="SevenHDEventTime">Progress</convert>
     </widget>
     <widget alphatest="blend" pixmap="SevenHD/buttons/ico_rec_on.png" position="1228,536" render="Pixmap" size="32,32" source="session.RecordState" zPosition="5" transparent="1">
@@ -10056,7 +10056,7 @@
     <eLabel backgroundColor="SevenBorder" position="1075,533" size="2,129" zPosition="2" />
     <eLabel backgroundColor="SevenBackgroundIB2" position="14,533" size="1062,127" />
     <eLabel backgroundColor="SevenBackgroundIB1" position="1077,533" size="187,170" />
-    <widget position="215,602" backgroundColor="SevenBackgroundIB2" render="Progress" size="850,6" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress">
+    <widget position="215,602" backgroundColor="SevenBackgroundIB2" render="Progress" size="850,6" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress" pixmap="SevenHD/progress/progress858.png">
       <convert type="SevenHDEventTime">Progress</convert>
     </widget>
     <widget alphatest="blend" pixmap="SevenHD/buttons/ico_rec_on.png" position="1228,536" render="Pixmap" size="32,32" source="session.RecordState" zPosition="5" transparent="1">
@@ -10234,7 +10234,7 @@
   <eLabel backgroundColor="SevenBackgroundIB2" position="425,522" size="652,140" />
   <eLabel backgroundColor="SevenBackgroundIB1" position="1077,520" size="187,183" />
   <eLabel backgroundColor="SevenBackgroundIB1" position="16,475" size="410,227" />
-  <widget position="443,597" backgroundColor="SevenBackgroundIB2" render="Progress" size="621,7" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress">
+  <widget position="443,597" backgroundColor="SevenBackgroundIB2" render="Progress" size="621,7" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress" pixmap="SevenHD/progress/progress621.png">
     <convert type="SevenHDEventTime">Progress</convert>
   </widget>
   <eLabel backgroundColor="SevenLine" position="443,600" size="621,1" zPosition="2" />
@@ -10412,7 +10412,7 @@
   <eLabel backgroundColor="SevenBackgroundIB2" position="425,522" size="652,140" />
   <eLabel backgroundColor="SevenBackgroundIB1" position="1077,520" size="187,183" />
   <eLabel backgroundColor="SevenBackgroundIB1" position="16,475" size="410,227" />
-  <widget position="443,597" backgroundColor="SevenBackgroundIB2" render="Progress" size="621,7" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress">
+  <widget position="443,597" backgroundColor="SevenBackgroundIB2" render="Progress" size="621,7" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress" pixmap="SevenHD/progress/progress621.png">
     <convert type="SevenHDEventTime">Progress</convert>
   </widget>
   <eLabel backgroundColor="SevenLine" position="443,600" size="621,1" zPosition="2" />
@@ -10596,7 +10596,7 @@
   <eLabel backgroundColor="SevenBackgroundIB2" position="425,522" size="652,140" />
   <eLabel backgroundColor="SevenBackgroundIB1" position="1077,520" size="187,183" />
   <eLabel backgroundColor="SevenBackgroundIB1" position="16,475" size="410,227" />
-  <widget position="443,597" backgroundColor="SevenBackgroundIB2" render="Progress" size="621,7" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress">
+  <widget position="443,597" backgroundColor="SevenBackgroundIB2" render="Progress" size="621,7" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress" pixmap="SevenHD/progress/progress621.png">
     <convert type="SevenHDEventTime">Progress</convert>
   </widget>
   <eLabel backgroundColor="SevenLine" position="443,600" size="621,1" zPosition="2" />
@@ -10735,7 +10735,7 @@
   <eLabel backgroundColor="SevenBackgroundIB2" position="425,522" size="652,140" />
   <eLabel backgroundColor="SevenBackgroundIB1" position="1077,520" size="187,183" />
   <eLabel backgroundColor="SevenBackgroundIB1" position="16,475" size="410,227" />
-  <widget position="443,597" backgroundColor="SevenBackgroundIB2" render="Progress" size="621,7" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress">
+  <widget position="443,597" backgroundColor="SevenBackgroundIB2" render="Progress" size="621,7" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress" pixmap="SevenHD/progress/progress621.png">
     <convert type="SevenHDEventTime">Progress</convert>
   </widget>
   <eLabel backgroundColor="SevenLine" position="443,600" size="621,1" zPosition="2" />
@@ -10911,7 +10911,7 @@
     <eLabel backgroundColor="SevenBackgroundIB2" position="290,533" size="785,129" />
     <eLabel backgroundColor="SevenBackgroundIB1" position="288,659" size="788,44" />
     <eLabel backgroundColor="SevenBackgroundIB1" position="16,474" size="272,228" />
-    <widget position="313,603" backgroundColor="SevenBackgroundIB2" render="Progress" size="753,6" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress">
+    <widget position="313,603" backgroundColor="SevenBackgroundIB2" render="Progress" size="753,6" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress" pixmap="SevenHD/progress/progress793.png">
       <convert type="SevenHDEventTime">Progress</convert>
     </widget>
     <widget alphatest="blend" pixmap="SevenHD/buttons/ico_rec_on.png" position="1228,537" render="Pixmap" size="32,32" source="session.RecordState" zPosition="15" transparent="1">
@@ -11056,7 +11056,7 @@
 <eLabel backgroundColor="SevenBorder" position="14,447" size="2,256" zPosition="2" />
 <eLabel backgroundColor="SevenBorder" position="14,447" size="410,2" zPosition="2" />
 
-  <widget position="443,600" backgroundColor="SevenBackgroundIB2" render="Progress" size="622,6" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress">
+  <widget position="443,600" backgroundColor="SevenBackgroundIB2" render="Progress" size="622,6" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress" pixmap="SevenHD/progress/progress621.png">
     <convert type="SevenHDEventTime">Progress</convert>
   </widget>
   <widget alphatest="blend" pixmap="SevenHD/buttons/ico_rec_on.png" position="1227,537" render="Pixmap" size="32,32" source="session.RecordState" zPosition="15" transparent="0">
@@ -11245,7 +11245,7 @@
 <eLabel backgroundColor="SevenBorder" position="14,447" size="2,256" zPosition="2" />
 <eLabel backgroundColor="SevenBorder" position="1077,447" size="185,2" zPosition="2" />
 
-  <widget position="443,600" backgroundColor="SevenBackgroundIB2" render="Progress" size="622,6" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress">
+  <widget position="443,600" backgroundColor="SevenBackgroundIB2" render="Progress" size="622,6" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress" pixmap="SevenHD/progress/progress621.png">
     <convert type="SevenHDEventTime">Progress</convert>
   </widget>
   <widget alphatest="blend" pixmap="SevenHD/buttons/ico_rec_on.png" position="1227,537" render="Pixmap" size="32,32" source="session.RecordState" zPosition="15" transparent="0">
@@ -11436,7 +11436,7 @@
 <eLabel backgroundColor="SevenBackgroundIB2" position="425,533" size="654,170" />
 <eLabel backgroundColor="SevenBorder" position="14,447" size="2,256" zPosition="2" />
 <eLabel backgroundColor="SevenBorder" position="1077,447" size="185,2" zPosition="2" />
-  <widget position="443,600" backgroundColor="SevenBackgroundIB2" render="Progress" size="622,6" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress">
+  <widget position="443,600" backgroundColor="SevenBackgroundIB2" render="Progress" size="622,6" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress" pixmap="SevenHD/progress/progress621.png">
     <convert type="SevenHDEventTime">Progress</convert>
   </widget>
   <widget alphatest="blend" pixmap="SevenHD/buttons/ico_rec_on.png" position="1227,537" render="Pixmap" size="32,32" source="session.RecordState" zPosition="15" transparent="0">
@@ -11616,7 +11616,7 @@
 <eLabel backgroundColor="SevenBackgroundIB2" position="425,533" size="654,170" />
 <eLabel backgroundColor="SevenBorder" position="14,447" size="2,256" zPosition="2" />
 <eLabel backgroundColor="SevenBorder" position="1077,447" size="185,2" zPosition="2" />
-  <widget position="443,600" backgroundColor="SevenBackgroundIB2" render="Progress" size="622,6" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress">
+  <widget position="443,600" backgroundColor="SevenBackgroundIB2" render="Progress" size="622,6" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress" pixmap="SevenHD/progress/progress621.png">
     <convert type="SevenHDEventTime">Progress</convert>
   </widget>
   <widget alphatest="blend" pixmap="SevenHD/buttons/ico_rec_on.png" position="1227,537" render="Pixmap" size="32,32" source="session.RecordState" zPosition="15" transparent="0">
@@ -11762,7 +11762,7 @@
     <eLabel backgroundColor="SevenBackgroundIB2" position="290,533" size="785,129" />
     <eLabel backgroundColor="SevenBackgroundIB1" position="288,659" size="788,44" />
     <eLabel backgroundColor="SevenBackgroundIB1" position="16,474" size="272,228" />
-    <widget position="313,603" backgroundColor="SevenBackgroundIB2" render="Progress" size="753,6" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress">
+    <widget position="313,603" backgroundColor="SevenBackgroundIB2" render="Progress" size="753,6" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress" pixmap="SevenHD/progress/progress793.png">
       <convert type="SevenHDEventTime">Progress</convert>
     </widget>
     <widget alphatest="blend" pixmap="SevenHD/buttons/ico_rec_on.png" position="1228,537" render="Pixmap" size="32,32" source="session.RecordState" zPosition="15" transparent="1">
@@ -11948,7 +11948,7 @@
     <eLabel backgroundColor="SevenBackgroundIB2" position="290,533" size="785,129" />
     <eLabel backgroundColor="SevenBackgroundIB1" position="288,659" size="788,44" />
     <eLabel backgroundColor="SevenBackgroundIB1" position="16,474" size="272,228" />
-    <widget position="312,603" backgroundColor="SevenBackgroundIB2" render="Progress" size="753,6" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress">
+    <widget position="312,603" backgroundColor="SevenBackgroundIB2" render="Progress" size="753,6" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress" pixmap="SevenHD/progress/progress793.png">
       <convert type="SevenHDEventTime">Progress</convert>
     </widget>
     <widget alphatest="blend" pixmap="SevenHD/buttons/ico_rec_on.png" position="1228,537" render="Pixmap" size="32,32" source="session.RecordState" zPosition="15" transparent="1">
@@ -12138,7 +12138,7 @@
     <eLabel backgroundColor="SevenBackgroundIB2" position="290,533" size="785,129" />
     <eLabel backgroundColor="SevenBackgroundIB1" position="288,659" size="788,44" />
     <eLabel backgroundColor="SevenBackgroundIB1" position="16,474" size="272,228" />
-    <widget position="313,603" backgroundColor="SevenBackgroundIB2" render="Progress" size="753,6" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress">
+    <widget position="313,603" backgroundColor="SevenBackgroundIB2" render="Progress" size="753,6" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress" pixmap="SevenHD/progress/progress793.png">
       <convert type="SevenHDEventTime">Progress</convert>
     </widget>
     <widget alphatest="blend" pixmap="SevenHD/buttons/ico_rec_on.png" position="1228,537" render="Pixmap" size="32,32" source="session.RecordState" zPosition="15" transparent="1">
@@ -12317,7 +12317,7 @@
   <eLabel backgroundColor="SevenBackgroundIB2" position="290,533" size="785,129" />
   <eLabel backgroundColor="SevenBackgroundIB1" position="288,659" size="788,44" />
   <eLabel backgroundColor="SevenBackgroundIB1" position="16,474" size="272,228" />
-  <widget position="313,603" backgroundColor="SevenBackgroundIB2" render="Progress" size="753,6" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress">
+  <widget position="313,603" backgroundColor="SevenBackgroundIB2" render="Progress" size="753,6" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress" pixmap="SevenHD/progress/progress793.png">
     <convert type="SevenHDEventTime">Progress</convert>
   </widget>
   <widget alphatest="blend" pixmap="SevenHD/buttons/ico_rec_on.png" position="1228,537" render="Pixmap" size="32,32" source="session.RecordState" zPosition="15" transparent="1">
@@ -12461,7 +12461,7 @@
   <eLabel backgroundColor="SevenBackgroundIB2" position="290,533" size="785,129" />
   <eLabel backgroundColor="SevenBackgroundIB1" position="288,659" size="788,44" />
   <eLabel backgroundColor="SevenBackgroundIB1" position="16,474" size="272,228" />
-  <widget position="313,603" backgroundColor="SevenBackgroundIB2" render="Progress" size="753,6" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress">
+  <widget position="313,603" backgroundColor="SevenBackgroundIB2" render="Progress" size="753,6" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress" pixmap="SevenHD/progress/progress793.png">
     <convert type="SevenHDEventTime">Progress</convert>
   </widget>
   <widget alphatest="blend" pixmap="SevenHD/buttons/ico_rec_on.png" position="1228,537" render="Pixmap" size="32,32" source="session.RecordState" zPosition="15" transparent="1">
@@ -12647,7 +12647,7 @@
   <eLabel backgroundColor="SevenBackgroundIB2" position="290,533" size="785,129" />
   <eLabel backgroundColor="SevenBackgroundIB1" position="288,659" size="788,44" />
   <eLabel backgroundColor="SevenBackgroundIB1" position="16,474" size="272,228" />
-  <widget position="313,603" backgroundColor="SevenBackgroundIB2" render="Progress" size="753,6" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress">
+  <widget position="313,603" backgroundColor="SevenBackgroundIB2" render="Progress" size="753,6" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress" pixmap="SevenHD/progress/progress793.png">
     <convert type="SevenHDEventTime">Progress</convert>
   </widget>
   <widget alphatest="blend" pixmap="SevenHD/buttons/ico_rec_on.png" position="1228,537" render="Pixmap" size="32,32" source="session.RecordState" zPosition="15" transparent="1">
@@ -12837,7 +12837,7 @@
   <eLabel backgroundColor="SevenBackgroundIB2" position="290,533" size="785,129" />
   <eLabel backgroundColor="SevenBackgroundIB1" position="288,659" size="788,44" />
   <eLabel backgroundColor="SevenBackgroundIB1" position="16,474" size="272,228" />
-  <widget position="313,603" backgroundColor="SevenBackgroundIB2" render="Progress" size="753,6" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress">
+  <widget position="313,603" backgroundColor="SevenBackgroundIB2" render="Progress" size="753,6" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress" pixmap="SevenHD/progress/progress793.png">
     <convert type="SevenHDEventTime">Progress</convert>
   </widget>
   <widget alphatest="blend" pixmap="SevenHD/buttons/ico_rec_on.png" position="1228,537" render="Pixmap" size="32,32" source="session.RecordState" zPosition="15" transparent="1">
