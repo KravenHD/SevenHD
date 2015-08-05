@@ -20,7 +20,10 @@ class SevenHDSYSTemp(Renderer, VariableText):
 				elif path.exists('/proc/stb/fp/temp_sensor'):
 					out_line = popen("cat /proc/stb/fp/temp_sensor").readline()
 					systemp = out_line.replace('\n', '')
-				if not systemp == "-- " and len(systemp) > 2:
+				elif path.exists('/proc/stb/fp/temp_sensor_avs'):
+					out_line = popen("cat /proc/stb/fp/temp_sensor_avs").readline()
+					systemp = out_line.replace('\n', '').strip()
+                                if not systemp == "-- " and len(systemp) > 2:
 					systemp = systemp[:2]
 			except:
 				pass

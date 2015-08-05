@@ -28,6 +28,7 @@
     <eLabel text="https://github.com/openatv" position="477,173" size="352,28" font="Regular2; 19" transparent="0" zPosition="1" foregroundColor="SevenFont2" />
     <eLabel text="https://github.com/oe-alliance" position="477,213" size="354,28" font="Regular2; 19" transparent="0" zPosition="1" foregroundColor="SevenFont2" />
     <widget name="AboutScrollLabel" position="70,253" size="650,360" scrollbarMode="showOnDemand" font="Regular;20" transparent="0" zPosition="1" />
+    <ePixmap pixmap="SevenHD/buttons/key_info.png" position="778,610" size="32,37" backgroundColor="SevenBackground" alphatest="blend" />
     <panel name="template_menu_left" />
   </screen>
   

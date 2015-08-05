@@ -1,8 +1,7 @@
 <!-- /* System-Info -->
 <eLabel backgroundColor="SevenBackgroundIB1" position="969,347" size="295,37" transparent="0" zPosition="-1" />
 	<eLabel text="CPU-Temp:" position="975,355" size="120,22" font="Regular;16" halign="left" valign="center" backgroundColor="SevenBackgroundIB1" transparent="0" zPosition="1" foregroundColor="SevenFont2" />
-	<widget source="global.CurrentTime" render="SevenHDSYSTemp" position="1059,355" size="40,22" font="Regular;16" halign="left" valign="center" foregroundColor="SevenFont1" backgroundColor="SevenBackgroundIB1" transparent="0" zPosition="1">
-	</widget>
+	<widget source="global.CurrentTime" render="SevenHDSYSTemp" position="1059,355" size="40,22" font="Regular;16" halign="left" valign="center" foregroundColor="SevenFont2" backgroundColor="SevenBackgroundIB1" noWrap="1" transparent="1" zPosition="3" />
 	<widget source="session.CurrentService" render="Label" position="1105,355" size="152,22" font="Regular;16" halign="left" valign="center" transparent="0" zPosition="6" foregroundColor="SevenFont1" backgroundColor="SevenBackgroundIB1">
 	  <convert type="SevenHDCpuUsage">CPU Utilization:$0</convert>
 	</widget>

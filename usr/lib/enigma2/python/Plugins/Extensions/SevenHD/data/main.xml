@@ -1083,25 +1083,25 @@
   </screen>
   <!-- SystemNetworkInfo -->
   <screen name="SystemNetworkInfo" position="0,0" size="1280,720" title="SystemInfo" flags="wfNoBorder" backgroundColor="transparent">
-    <widget name="AboutScrollLabel" position="70,80" size="708,200" font="Regular;20" foregroundColor="SevenFont1" backgroundColor="SevenBackground" transparent="1" zPosition="1" />
-    <widget source="LabelBSSID" render="Label" position="70,294" size="200,25" valign="left" font="Regular;20" backgroundColor="SevenBackground" foregroundColor="SevenFont1" transparent="1" />
-    <widget source="LabelESSID" render="Label" position="70,329" size="200,25" valign="center" font="Regular;20" backgroundColor="SevenBackground" foregroundColor="SevenFont1" transparent="1" />
-    <widget source="LabelQuality" render="Label" position="70,364" size="200,25" valign="center" font="Regular;20" backgroundColor="SevenBackground" foregroundColor="SevenFont1" transparent="1" />
-    <widget source="LabelSignal" render="Label" position="70,399" size="200,25" valign="center" font="Regular;20" backgroundColor="SevenBackground" foregroundColor="SevenFont1" transparent="1" />
-    <widget source="LabelBitrate" render="Label" position="70,435" size="200,25" valign="center" font="Regular;20" backgroundColor="SevenBackground" foregroundColor="SevenFont1" transparent="1" />
-    <widget source="LabelEnc" render="Label" position="70,469" size="200,25" valign="center" font="Regular;20" backgroundColor="SevenBackground" foregroundColor="SevenFont1" transparent="1" />
-    <widget source="BSSID" render="Label" position="245,294" size="310,25" valign="center" font="Regular;20" backgroundColor="SevenBackground" foregroundColor="SevenFont1" transparent="1" />
-    <widget source="ESSID" render="Label" position="245,329" size="310,25" valign="center" font="Regular;20" backgroundColor="SevenBackground" foregroundColor="SevenFont1" transparent="1" />
-    <widget source="quality" render="Label" position="245,364" size="310,25" valign="center" font="Regular;20" backgroundColor="SevenBackground" foregroundColor="SevenFont1" transparent="1" />
-    <widget source="signal" render="Label" position="245,399" size="310,25" valign="center" font="Regular;20" backgroundColor="SevenBackground" foregroundColor="SevenFont1" transparent="1" />
-    <widget source="bitrate" render="Label" position="245,434" size="310,25" valign="center" font="Regular;20" backgroundColor="SevenBackground" foregroundColor="SevenFont1" transparent="1" />
-    <widget source="enc" render="Label" position="245,469" size="310,25" valign="center" font="Regular;20" backgroundColor="SevenBackground" foregroundColor="SevenFont1" transparent="1" />
-    <widget source="IFtext" render="Label" position="70,504" size="120,25" zPosition="10" font="Regular;20" backgroundColor="SevenBackground" foregroundColor="SevenFont1" halign="left" transparent="1" />
-    <widget source="IF" render="Label" position="181,504" size="375,25" zPosition="10" font="Regular;20" backgroundColor="SevenBackground" foregroundColor="SevenFont1" halign="left" transparent="1" />
-    <widget source="Statustext" render="Label" position="70,544" size="150,28" zPosition="10" font="Regular2;22" backgroundColor="SevenBackground" foregroundColor="SevenFont2" halign="left" transparent="1" />
-    <widget name="statuspic" pixmaps="skin_default/buttons/button_green.png,skin_default/buttons/button_green_off.png" position="220,550" zPosition="10" size="15,16" transparent="1" alphatest="on" />
-    <panel name="template_menu_left" />
-  </screen>
+  <widget name="AboutScrollLabel" position="70,80" size="708,260" font="Regular;20" foregroundColor="SevenFont1" backgroundColor="SevenBackground" transparent="1" zPosition="1" />
+  <widget source="LabelBSSID" render="Label" position="70,354" size="200,25" valign="left" font="Regular;20" backgroundColor="SevenBackground" foregroundColor="SevenFont1" transparent="1" />
+  <widget source="LabelESSID" render="Label" position="70,389" size="200,25" valign="center" font="Regular;20" backgroundColor="SevenBackground" foregroundColor="SevenFont1" transparent="1" />
+  <widget source="LabelQuality" render="Label" position="70,424" size="200,25" valign="center" font="Regular;20" backgroundColor="SevenBackground" foregroundColor="SevenFont1" transparent="1" />
+  <widget source="LabelSignal" render="Label" position="70,459" size="200,25" valign="center" font="Regular;20" backgroundColor="SevenBackground" foregroundColor="SevenFont1" transparent="1" />
+  <widget source="LabelBitrate" render="Label" position="70,495" size="200,25" valign="center" font="Regular;20" backgroundColor="SevenBackground" foregroundColor="SevenFont1" transparent="1" />
+  <widget source="LabelEnc" render="Label" position="70,529" size="200,25" valign="center" font="Regular;20" backgroundColor="SevenBackground" foregroundColor="SevenFont1" transparent="1" />
+  <widget source="BSSID" render="Label" position="245,354" size="310,25" valign="center" font="Regular;20" backgroundColor="SevenBackground" foregroundColor="SevenFont1" transparent="1" />
+  <widget source="ESSID" render="Label" position="245,389" size="310,25" valign="center" font="Regular;20" backgroundColor="SevenBackground" foregroundColor="SevenFont1" transparent="1" />
+  <widget source="quality" render="Label" position="245,424" size="310,25" valign="center" font="Regular;20" backgroundColor="SevenBackground" foregroundColor="SevenFont1" transparent="1" />
+  <widget source="signal" render="Label" position="245,459" size="310,25" valign="center" font="Regular;20" backgroundColor="SevenBackground" foregroundColor="SevenFont1" transparent="1" />
+  <widget source="bitrate" render="Label" position="245,495" size="310,25" valign="center" font="Regular;20" backgroundColor="SevenBackground" foregroundColor="SevenFont1" transparent="1" />
+  <widget source="enc" render="Label" position="245,529" size="310,25" valign="center" font="Regular;20" backgroundColor="SevenBackground" foregroundColor="SevenFont1" transparent="1" />
+  <widget source="IFtext" render="Label" position="70,564" size="120,25" zPosition="10" font="Regular;20" backgroundColor="SevenBackground" foregroundColor="SevenFont1" halign="left" transparent="1" />
+  <widget source="IF" render="Label" position="181,564" size="375,25" zPosition="10" font="Regular;20" backgroundColor="SevenBackground" foregroundColor="SevenFont1" halign="left" transparent="1" />
+  <widget source="Statustext" render="Label" position="70,604" size="150,28" zPosition="10" font="Regular2;22" backgroundColor="SevenBackground" foregroundColor="SevenFont2" halign="left" transparent="1" />
+  <widget name="statuspic" pixmaps="skin_default/buttons/button_green.png,skin_default/buttons/button_green_off.png" position="220,610" zPosition="10" size="15,16" transparent="1" alphatest="on" />
+  <panel name="template_menu_left" />
+</screen>
   <!-- NetworkMountsMenu -->
   <screen name="NetworkMountsMenu" position="0,0" size="1280,720" title="Mounts Setup" flags="wfNoBorder" backgroundColor="transparent">
     <widget name="menulist" position="70,80" size="708,510" itemHeight="30" font="Regular;20" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColorSelected="SevenSelection" foregroundColorSelected="SevenFont1" backgroundColor="SevenBackground" foregroundColor="SevenFont1" transparent="0" />

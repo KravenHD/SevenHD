@@ -1590,7 +1590,7 @@
   <eLabel backgroundColor="SevenBorder" position="878,714" size="398,2" zPosition="2" />
   <eLabel backgroundColor="SevenBorder" position="878,6" size="2,708" zPosition="2" />
   <eLabel backgroundColor="SevenBorder" position="1274,6" size="2,708" zPosition="2" />
-  <eLabel position="891,88" size="372,46" text="Version: 2.7" font="Regular; 35" valign="center" halign="center" transparent="0" backgroundColor="SevenBackgroundRight" foregroundColor="SevenFont2" name="," />
+  <eLabel position="891,88" size="372,46" text="Version: 2.8" font="Regular; 35" valign="center" halign="center" transparent="0" backgroundColor="SevenBackgroundRight" foregroundColor="SevenFont2" name="," />
 </screen>
 
   <!-- Sky Select -->

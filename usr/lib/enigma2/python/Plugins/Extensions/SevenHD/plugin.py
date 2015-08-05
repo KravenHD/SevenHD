@@ -60,9 +60,7 @@ def translateBlock(block):
 			block = block.replace(x[0], x[1])
 	return block
 
-
 #############################################################
-
 config.plugins.SevenHD = ConfigSubsection()
 config.plugins.SevenHD.weather_city = ConfigNumber(default="924938")
 
@@ -81,9 +79,9 @@ config.plugins.SevenHD.Header = ConfigSelection(default="header-seven", choices 
 				
 config.plugins.SevenHD.Volume = ConfigSelection(default="volume-original", choices = [
 				("volume-original", _("original")),
-				("volume-left", _("left")),
-				("volume-right", _("right")),
-				("volume-top", _("top")),
+				("volume-left-side", _("left")),
+				("volume-right-side", _("right")),
+				("volume-ontop", _("top")),
 				("volume-number", _("number")),
 				("volume-center", _("center"))
 				])
@@ -99,471 +97,93 @@ config.plugins.SevenHD.BackgroundRightColorTrans = ConfigSelection(default="0D",
 				("4D", _("medium")),
 				("8C", _("high"))
 				])
-				
-config.plugins.SevenHD.Background = ConfigSelection(default="000000", choices = [
-				("F0A30A", _("amber")),
-				("B27708", _("amber dark")),
-				("000000", _("black")),
-				("1B1775", _("blue")),
-				("0E0C3F", _("blue dark")),
-				("7D5929", _("brown")),
-				("3F2D15", _("brown dark")),
-				("0050EF", _("cobalt")),
-				("001F59", _("cobalt dark")),
-				("1BA1E2", _("cyan")),
-				("0F5B7F", _("cyan dark")),
-				("999999", _("grey")),
-				("3F3F3F", _("grey dark")),
-				("70AD11", _("green")),
-				("213305", _("green dark")),
-				("6D8764", _("olive")),
-				("313D2D", _("olive dark")),
-				("C3461B", _("orange")),
-				("892E13", _("orange dark")),
-				("F472D0", _("pink")),
-				("723562", _("pink dark")),
-				("E51400", _("red")),
-				("330400", _("red dark")),
-				("647687", _("steel")),
-				("262C33", _("steel dark")),
-				("6C0AAB", _("violet")),
-				("1F0333", _("violet dark")),
-				("FFBE00", _("yellow dark")),
-				("FFF006", _("yellow")),
-				("ffffff", _("white"))
-				])
-				
-config.plugins.SevenHD.BackgroundRight = ConfigSelection(default="000001", choices = [
-				("F0A30A", _("amber")),
-				("B27708", _("amber dark")),
-				("000001", _("black")),
-				("1B1775", _("blue")),
-				("0E0C3F", _("blue dark")),
-				("7D5929", _("brown")),
-				("3F2D15", _("brown dark")),
-				("0050EF", _("cobalt")),
-				("001F59", _("cobalt dark")),
-				("1BA1E2", _("cyan")),
-				("0F5B7F", _("cyan dark")),
-				("999999", _("grey")),
-				("3F3F3F", _("grey dark")),
-				("70AD11", _("green")),
-				("213305", _("green dark")),
-				("6D8764", _("olive")),
-				("313D2D", _("olive dark")),
-				("C3461B", _("orange")),
-				("892E13", _("orange dark")),
-				("F472D0", _("pink")),
-				("723562", _("pink dark")),
-				("E51400", _("red")),
-				("330400", _("red dark")),
-				("647687", _("steel")),
-				("262C33", _("steel dark")),
-				("6C0AAB", _("violet")),
-				("1F0333", _("violet dark")),
-				("FFBE00", _("yellow dark")),
-				("FFF006", _("yellow")),
-				("ffffff", _("white"))
-				])
-				
-config.plugins.SevenHD.BackgroundIB1 = ConfigSelection(default="000002", choices = [
-				("F0A30A", _("amber")),
-				("B27708", _("amber dark")),
-				("000002", _("black")),
-				("1B1775", _("blue")),
-				("0E0C3F", _("blue dark")),
-				("7D5929", _("brown")),
-				("3F2D15", _("brown dark")),
-				("0050EF", _("cobalt")),
-				("001F59", _("cobalt dark")),
-				("1BA1E2", _("cyan")),
-				("0F5B7F", _("cyan dark")),
-				("999999", _("grey")),
-				("3F3F3F", _("grey dark")),
-				("70AD11", _("green")),
-				("213305", _("green dark")),
-				("6D8764", _("olive")),
-				("313D2D", _("olive dark")),
-				("C3461B", _("orange")),
-				("892E13", _("orange dark")),
-				("F472D0", _("pink")),
-				("723562", _("pink dark")),
-				("E51400", _("red")),
-				("330400", _("red dark")),
-				("647687", _("steel")),
-				("262C33", _("steel dark")),
-				("6C0AAB", _("violet")),
-				("1F0333", _("violet dark")),
-				("FFBE00", _("yellow dark")),
-				("FFF006", _("yellow")),
-				("ffffff", _("white"))
-				])
-				
-config.plugins.SevenHD.BackgroundIB2 = ConfigSelection(default="000003", choices = [
-				("F0A30A", _("amber")),
-				("B27708", _("amber dark")),
-				("000003", _("black")),
-				("1B1775", _("blue")),
-				("0E0C3F", _("blue dark")),
-				("7D5929", _("brown")),
-				("3F2D15", _("brown dark")),
-				("0050EF", _("cobalt")),
-				("001F59", _("cobalt dark")),
-				("1BA1E2", _("cyan")),
-				("0F5B7F", _("cyan dark")),
-				("999999", _("grey")),
-				("3F3F3F", _("grey dark")),
-				("70AD11", _("green")),
-				("213305", _("green dark")),
-				("6D8764", _("olive")),
-				("313D2D", _("olive dark")),
-				("C3461B", _("orange")),
-				("892E13", _("orange dark")),
-				("F472D0", _("pink")),
-				("723562", _("pink dark")),
-				("E51400", _("red")),
-				("330400", _("red dark")),
-				("647687", _("steel")),
-				("262C33", _("steel dark")),
-				("6C0AAB", _("violet")),
-				("1F0333", _("violet dark")),
-				("FFBE00", _("yellow dark")),
-				("FFF006", _("yellow")),
-				("ffffff", _("white"))
-				])
-				
-config.plugins.SevenHD.SelectionBackground = ConfigSelection(default="000050EF", choices = [
-				("00F0A30A", _("amber")),
-				("00B27708", _("amber dark")),
-				("00000000", _("black")),
-				("001B1775", _("blue")),
-				("000E0C3F", _("blue dark")),
-				("007D5929", _("brown")),
-				("003F2D15", _("brown dark")),
-				("000050EF", _("cobalt")),
-				("00001F59", _("cobalt dark")),
-				("001BA1E2", _("cyan")),
-				("000F5B7F", _("cyan dark")),
-				("00999999", _("grey")),
-				("003F3F3F", _("grey dark")),
-				("0070AD11", _("green")),
-				("00213305", _("green dark")),
-				("006D8764", _("olive")),
-				("00313D2D", _("olive dark")),
-				("00C3461B", _("orange")),
-				("00892E13", _("orange dark")),
-				("00F472D0", _("pink")),
-				("00723562", _("pink dark")),
-				("00E51400", _("red")),
-				("00330400", _("red dark")),
-				("00647687", _("steel")),
-				("00262C33", _("steel dark")),
-				("006C0AAB", _("violet")),
-				("001F0333", _("violet dark")),
-				("00FFBE00", _("yellow dark")),
-				("00FFF006", _("yellow")),
-				("00ffffff", _("white"))
-				])
-				
-config.plugins.SevenHD.Font1 = ConfigSelection(default="00fffff3", choices = [
-				("00F0A30A", _("amber")),
-				("00B27708", _("amber dark")),
-				("00000000", _("black")),
-				("001B1775", _("blue")),
-				("000E0C3F", _("blue dark")),
-				("007D5929", _("brown")),
-				("003F2D15", _("brown dark")),
-				("000050EF", _("cobalt")),
-				("00001F59", _("cobalt dark")),
-				("001BA1E2", _("cyan")),
-				("000F5B7F", _("cyan dark")),
-				("00999999", _("grey")),
-				("003F3F3F", _("grey dark")),
-				("0070AD11", _("green")),
-				("00213305", _("green dark")),
-				("006D8764", _("olive")),
-				("00313D2D", _("olive dark")),
-				("00C3461B", _("orange")),
-				("00892E13", _("orange dark")),
-				("00F472D0", _("pink")),
-				("00723562", _("pink dark")),
-				("00E51400", _("red")),
-				("00330400", _("red dark")),
-				("00647687", _("steel")),
-				("00262C33", _("steel dark")),
-				("006C0AAB", _("violet")),
-				("001F0333", _("violet dark")),
-				("00FFBE00", _("yellow dark")),
-				("00FFF006", _("yellow")),
-				("00fffff3", _("white"))
-				])
-				
-config.plugins.SevenHD.Font2 = ConfigSelection(default="00fffff4", choices = [
-				("00F0A30A", _("amber")),
-				("00B27708", _("amber dark")),
-				("00000000", _("black")),
-				("001B1775", _("blue")),
-				("000E0C3F", _("blue dark")),
-				("007D5929", _("brown")),
-				("003F2D15", _("brown dark")),
-				("000050EF", _("cobalt")),
-				("00001F59", _("cobalt dark")),
-				("001BA1E2", _("cyan")),
-				("000F5B7F", _("cyan dark")),
-				("00999999", _("grey")),
-				("003F3F3F", _("grey dark")),
-				("0070AD11", _("green")),
-				("00213305", _("green dark")),
-				("006D8764", _("olive")),
-				("00313D2D", _("olive dark")),
-				("00C3461B", _("orange")),
-				("00892E13", _("orange dark")),
-				("00F472D0", _("pink")),
-				("00723562", _("pink dark")),
-				("00E51400", _("red")),
-				("00330400", _("red dark")),
-				("00647687", _("steel")),
-				("00262C33", _("steel dark")),
-				("006C0AAB", _("violet")),
-				("001F0333", _("violet dark")),
-				("00FFBE00", _("yellow dark")),
-				("00FFF006", _("yellow")),
-				("00fffff4", _("white"))
-				])
-				
-config.plugins.SevenHD.FontCN = ConfigSelection(default="00fffff8", choices = [
-				("00F0A30A", _("amber")),
-				("00B27708", _("amber dark")),
-				("00000000", _("black")),
-				("001B1775", _("blue")),
-				("000E0C3F", _("blue dark")),
-				("007D5929", _("brown")),
-				("003F2D15", _("brown dark")),
-				("000050EF", _("cobalt")),
-				("00001F59", _("cobalt dark")),
-				("001BA1E2", _("cyan")),
-				("000F5B7F", _("cyan dark")),
-				("00999999", _("grey")),
-				("003F3F3F", _("grey dark")),
-				("0070AD11", _("green")),
-				("00213305", _("green dark")),
-				("006D8764", _("olive")),
-				("00313D2D", _("olive dark")),
-				("00C3461B", _("orange")),
-				("00892E13", _("orange dark")),
-				("00F472D0", _("pink")),
-				("00723562", _("pink dark")),
-				("00E51400", _("red")),
-				("00330400", _("red dark")),
-				("00647687", _("steel")),
-				("00262C33", _("steel dark")),
-				("006C0AAB", _("violet")),
-				("001F0333", _("violet dark")),
-				("00FFBE00", _("yellow dark")),
-				("00FFF006", _("yellow")),
-				("00fffff8", _("white"))
-				])
-				
-config.plugins.SevenHD.SelectionFont = ConfigSelection(default="00fffff7", choices = [
-				("00F0A30A", _("amber")),
-				("00B27708", _("amber dark")),
-				("00000000", _("black")),
-				("001B1775", _("blue")),
-				("000E0C3F", _("blue dark")),
-				("007D5929", _("brown")),
-				("003F2D15", _("brown dark")),
-				("000050EF", _("cobalt")),
-				("00001F59", _("cobalt dark")),
-				("001BA1E2", _("cyan")),
-				("000F5B7F", _("cyan dark")),
-				("00999999", _("grey")),
-				("003F3F3F", _("grey dark")),
-				("0070AD11", _("green")),
-				("00213305", _("green dark")),
-				("006D8764", _("olive")),
-				("00313D2D", _("olive dark")),
-				("00C3461B", _("orange")),
-				("00892E13", _("orange dark")),
-				("00F472D0", _("pink")),
-				("00723562", _("pink dark")),
-				("00E51400", _("red")),
-				("00330400", _("red dark")),
-				("00647687", _("steel")),
-				("00262C33", _("steel dark")),
-				("006C0AAB", _("violet")),
-				("001F0333", _("violet dark")),
-				("00FFBE00", _("yellow dark")),
-				("00FFF006", _("yellow")),
-				("00fffff7", _("white"))
-				])
-				
-config.plugins.SevenHD.ButtonText = ConfigSelection(default="00fffff2", choices = [
-				("00F0A30A", _("amber")),
-				("00B27708", _("amber dark")),
-				("00000000", _("black")),
-				("001B1775", _("blue")),
-				("000E0C3F", _("blue dark")),
-				("007D5929", _("brown")),
-				("003F2D15", _("brown dark")),
-				("000050EF", _("cobalt")),
-				("00001F59", _("cobalt dark")),
-				("001BA1E2", _("cyan")),
-				("000F5B7F", _("cyan dark")),
-				("00999999", _("grey")),
-				("003F3F3F", _("grey dark")),
-				("0070AD11", _("green")),
-				("00213305", _("green dark")),
-				("006D8764", _("olive")),
-				("00313D2D", _("olive dark")),
-				("00C3461B", _("orange")),
-				("00892E13", _("orange dark")),
-				("00F472D0", _("pink")),
-				("00723562", _("pink dark")),
-				("00E51400", _("red")),
-				("00330400", _("red dark")),
-				("00647687", _("steel")),
-				("00262C33", _("steel dark")),
-				("006C0AAB", _("violet")),
-				("001F0333", _("violet dark")),
-				("00FFBE00", _("yellow dark")),
-				("00FFF006", _("yellow")),
-				("00fffff2", _("white"))
-				])
-				
-config.plugins.SevenHD.Border = ConfigSelection(default="00fffff1", choices = [
-				("00F0A30A", _("amber")),
-				("00B27708", _("amber dark")),
-				("00000000", _("black")),
-				("001B1775", _("blue")),
-				("000E0C3F", _("blue dark")),
-				("007D5929", _("brown")),
-				("003F2D15", _("brown dark")),
-				("000050EF", _("cobalt")),
-				("00001F59", _("cobalt dark")),
-				("001BA1E2", _("cyan")),
-				("000F5B7F", _("cyan dark")),
-				("00999999", _("grey")),
-				("003F3F3F", _("grey dark")),
-				("0070AD11", _("green")),
-				("00213305", _("green dark")),
-				("006D8764", _("olive")),
-				("00313D2D", _("olive dark")),
-				("00C3461B", _("orange")),
-				("00892E13", _("orange dark")),
-				("00F472D0", _("pink")),
-				("00723562", _("pink dark")),
-				("00E51400", _("red")),
-				("00330400", _("red dark")),
-				("00647687", _("steel")),
-				("00262C33", _("steel dark")),
-				("006C0AAB", _("violet")),
-				("001F0333", _("violet dark")),
-				("00fffff1", _("white")),
-				("00FFBE00", _("yellow dark")),
-				("00FFF006", _("yellow")),
-				("ff000000", _("off"))
-				])
-				
-config.plugins.SevenHD.Progress = ConfigSelection(default="00fffff6", choices = [
-				("00F0A30A", _("amber")),
-				("00B27708", _("amber dark")),
-				("00000000", _("black")),
-				("001B1775", _("blue")),
-				("000E0C3F", _("blue dark")),
-				("007D5929", _("brown")),
-				("003F2D15", _("brown dark")),
-				("000050EF", _("cobalt")),
-				("00001F59", _("cobalt dark")),
-				("001BA1E2", _("cyan")),
-				("000F5B7F", _("cyan dark")),
-				("00999999", _("grey")),
-				("003F3F3F", _("grey dark")),
-				("0070AD11", _("green")),
-				("00213305", _("green dark")),
-				("006D8764", _("olive")),
-				("00313D2D", _("olive dark")),
-				("00C3461B", _("orange")),
-				("00892E13", _("orange dark")),
-				("00F472D0", _("pink")),
-				("00723562", _("pink dark")),
-				("00E51400", _("red")),
-				("00330400", _("red dark")),
-				("00647687", _("steel")),
-				("00262C33", _("steel dark")),
-				("006C0AAB", _("violet")),
-				("001F0333", _("violet dark")),
-				("00FFBE00", _("yellow dark")),
-				("00FFF006", _("yellow")),
-				("00fffff6", _("white")),
-                                ("progress", _("colorfull"))
-				])
-				
-config.plugins.SevenHD.Line = ConfigSelection(default="00fffff5", choices = [
-				("00F0A30A", _("amber")),
-				("00B27708", _("amber dark")),
-				("00000000", _("black")),
-				("001B1775", _("blue")),
-				("000E0C3F", _("blue dark")),
-				("007D5929", _("brown")),
-				("003F2D15", _("brown dark")),
-				("000050EF", _("cobalt")),
-				("00001F59", _("cobalt dark")),
-				("001BA1E2", _("cyan")),
-				("000F5B7F", _("cyan dark")),
-				("00999999", _("grey")),
-				("003F3F3F", _("grey dark")),
-				("0070AD11", _("green")),
-				("00213305", _("green dark")),
-				("006D8764", _("olive")),
-				("00313D2D", _("olive dark")),
-				("00C3461B", _("orange")),
-				("00892E13", _("orange dark")),
-				("00F472D0", _("pink")),
-				("00723562", _("pink dark")),
-				("00E51400", _("red")),
-				("00330400", _("red dark")),
-				("00647687", _("steel")),
-				("00262C33", _("steel dark")),
-				("006C0AAB", _("violet")),
-				("001F0333", _("violet dark")),
-				("00FFBE00", _("yellow dark")),
-				("00FFF006", _("yellow")),
-				("00fffff5", _("white"))
-				])
-				
-config.plugins.SevenHD.SelectionBorder = ConfigSelection(default="00ffffff", choices = [
-				("00F0A30A", _("amber")),
-				("00B27708", _("amber dark")),
-				("00000000", _("black")),
-				("001B1775", _("blue")),
-				("000E0C3F", _("blue dark")),
-				("007D5929", _("brown")),
-				("003F2D15", _("brown dark")),
-				("000050EF", _("cobalt")),
-				("00001F59", _("cobalt dark")),
-				("001BA1E2", _("cyan")),
-				("000F5B7F", _("cyan dark")),
-				("00999999", _("grey")),
-				("003F3F3F", _("grey dark")),
-				("0070AD11", _("green")),
-				("00213305", _("green dark")),
-				("006D8764", _("olive")),
-				("00313D2D", _("olive dark")),
-				("00C3461B", _("orange")),
-				("00892E13", _("orange dark")),
-				("00F472D0", _("pink")),
-				("00723562", _("pink dark")),
-				("00E51400", _("red")),
-				("00330400", _("red dark")),
-				("00647687", _("steel")),
-				("00262C33", _("steel dark")),
-				("006C0AAB", _("violet")),
-				("001F0333", _("violet dark")),
-				("00FFBE00", _("yellow dark")),
-				("00FFF006", _("yellow")),
-				("00ffffff", _("white"))
-				])
-				
+
+ColorList = []
+ColorList.append(("00F0A30A", _("amber")))
+ColorList.append(("00B27708", _("amber dark")))
+ColorList.append(("001B1775", _("blue")))
+ColorList.append(("000E0C3F", _("blue dark")))
+ColorList.append(("007D5929", _("brown")))
+ColorList.append(("003F2D15", _("brown dark")))
+ColorList.append(("000050EF", _("cobalt")))
+ColorList.append(("00001F59", _("cobalt dark")))
+ColorList.append(("001BA1E2", _("cyan")))
+ColorList.append(("000F5B7F", _("cyan dark")))
+ColorList.append(("00999999", _("grey")))
+ColorList.append(("003F3F3F", _("grey dark")))
+ColorList.append(("0070AD11", _("green")))
+ColorList.append(("00213305", _("green dark")))
+ColorList.append(("006D8764", _("olive")))
+ColorList.append(("00313D2D", _("olive dark")))
+ColorList.append(("00C3461B", _("orange")))
+ColorList.append(("00892E13", _("orange dark")))
+ColorList.append(("00F472D0", _("pink")))
+ColorList.append(("00723562", _("pink dark")))
+ColorList.append(("00E51400", _("red")))
+ColorList.append(("00330400", _("red dark")))
+ColorList.append(("00647687", _("steel")))
+ColorList.append(("00262C33", _("steel dark")))
+ColorList.append(("006C0AAB", _("violet")))
+ColorList.append(("001F0333", _("violet dark")))
+ColorList.append(("00FFBE00", _("yellow dark")))
+ColorList.append(("00FFF006", _("yellow")))
+
+BackgroundList = [("00000000", _("black")), ("00ffffff", _("white"))]
+BackgroundList = ColorList + BackgroundList
+config.plugins.SevenHD.Background = ConfigSelection(default="00000000", choices = BackgroundList)
+
+BackgroundRightList = [("00000001", _("black")), ("00ffffff", _("white"))]
+BackgroundRightList = ColorList + BackgroundRightList
+config.plugins.SevenHD.BackgroundRight = ConfigSelection(default="00000001", choices = BackgroundRightList)				
+
+BackgroundIB1List = [("00000002", _("black")), ("00ffffff", _("white"))]
+BackgroundIB1List = ColorList + BackgroundIB1List
+config.plugins.SevenHD.BackgroundIB1 = ConfigSelection(default="00000002", choices = BackgroundIB1List)
+
+BackgroundIB2List = [("00000003", _("black")), ("00ffffff", _("white"))]
+BackgroundIB2List = ColorList + BackgroundIB2List
+config.plugins.SevenHD.BackgroundIB2 = ConfigSelection(default="00000003", choices = BackgroundIB2List)
+
+SelectionBackgroundList = [("00000000", _("black")), ("00ffffff", _("white"))]
+SelectionBackgroundList = ColorList + SelectionBackgroundList
+config.plugins.SevenHD.SelectionBackground = ConfigSelection(default="000050EF", choices = SelectionBackgroundList)
+
+Font1List = [("00000000", _("black")), ("00fffff3", _("white"))]
+Font1List = ColorList + Font1List
+config.plugins.SevenHD.Font1 = ConfigSelection(default="00fffff3", choices = Font1List)
+
+Font2List = [("00000000", _("black")), ("00fffff4", _("white"))]
+Font2List = ColorList + Font2List
+config.plugins.SevenHD.Font2 = ConfigSelection(default="00fffff4", choices = Font2List)
+
+FontCNList = [("00000000", _("black")), ("00fffff8", _("white"))]
+FontCNList = ColorList + FontCNList
+config.plugins.SevenHD.FontCN = ConfigSelection(default="00fffff8", choices = FontCNList)
+
+SelectionFontList = [("00000000", _("black")), ("00fffff7", _("white"))]
+SelectionFontList = ColorList + SelectionFontList
+config.plugins.SevenHD.SelectionFont = ConfigSelection(default="00fffff7", choices = SelectionFontList)
+
+ButtonTextList = [("00000000", _("black")), ("00fffff2", _("white"))]
+ButtonTextList = ColorList + ButtonTextList
+config.plugins.SevenHD.ButtonText = ConfigSelection(default="00fffff2", choices = ButtonTextList)
+
+BorderList = [("00000000", _("black")), ("00fffff1", _("white")), ("ff000000", _("off"))]
+BorderList = ColorList + BorderList
+config.plugins.SevenHD.Border = ConfigSelection(default="00fffff1", choices = BorderList)
+
+ProgressList = [("00000000", _("black")), ("00fffff6", _("white")), ("progress", _("bunt"))]
+ProgressList = ColorList + ProgressList
+config.plugins.SevenHD.Progress = ConfigSelection(default="00fffff6", choices = ProgressList)
+
+LineList = [("00000000", _("black")), ("00fffff5", _("white"))]
+LineList = ColorList + LineList
+config.plugins.SevenHD.Line = ConfigSelection(default="00fffff5", choices = LineList)
+
+SelectionBorderList = [("00000000", _("black")), ("00ffffff", _("white"))]
+SelectionBorderList = ColorList + SelectionBorderList
+config.plugins.SevenHD.SelectionBorder = ConfigSelection(default="00ffffff", choices = SelectionBorderList)
+
 config.plugins.SevenHD.AnalogStyle = ConfigSelection(default="00999999", choices = [
 				("00F0A30A", _("amber")),
 				("00000000", _("black")),
@@ -611,9 +231,13 @@ config.plugins.SevenHD.ChannelSelectionStyle = ConfigSelection(default="channels
 				("channelselection-threecolumns", _("three columns")),
 				("channelselection-threecolumnsminitv", _("three columns miniTV")),
 				("channelselection-zpicon", _("ZPicon")),
+				("channelselection-minitvz", _("ZPicon/miniTV")),
 				("channelselection-xpicon", _("XPicon")),
+				("channelselection-minitvx", _("XPicon/miniTV")),
 				("channelselection-zzpicon", _("ZZPicon")),
+				("channelselection-minitvzz", _("ZZPicon/miniTV")),
 				("channelselection-zzzpicon", _("ZZZPicon")),
+				("channelselection-minitvzzz", _("ZZZPicon/miniTV")),
 				("channelselection-minitv", _("miniTV")),
 				("channelselection-pip", _("miniTV/PiP"))
 				])
@@ -674,7 +298,7 @@ config.plugins.SevenHD.ClockStyle = ConfigSelection(default="clock-standard", ch
 config.plugins.SevenHD.WeatherStyle = ConfigSelection(default="none", choices = [
 				("none", _("off")),
 				("weather-big", _("big")),
-				("weather-left", _("left")),
+				("weather-left-side", _("left")),
 				("weather-small", _("small"))
 				])
 				
@@ -718,7 +342,7 @@ class SevenHD(ConfigListScreen, Screen):
                          <eLabel font="Regular; 20" foregroundColor="#00ffffff" backgroundColor="#00000000" halign="left" valign="center" position="464,662" size="148,48" text="Reboot" transparent="1" />
                          <widget name="config" position="18,72" size="816,575" transparent="1" zPosition="1" backgroundColor="#00000000" />
                          <eLabel position="70,12" size="708,46" text="SevenHD - Konfigurationstool" font="Regular; 35" valign="center" halign="center" transparent="1" backgroundColor="#00000000" foregroundColor="#00ffffff" name="," />
-                         <eLabel position="891,657" size="372,46" text="Thanks to TBX and http://www.gigablue-support.org/" font="Regular; 12" valign="center" halign="center" transparent="1" backgroundColor="#00000000" foregroundColor="#00ffffff" name="," />
+                         <eLabel position="891,657" size="372,46" text="Thanks to http://www.gigablue-support.org/" font="Regular; 12" valign="center" halign="center" transparent="1" backgroundColor="#00000000" foregroundColor="#00ffffff" name="," />
                          <widget name="helperimage" position="891,178" size="372,328" zPosition="1" backgroundColor="#00000000" />
                          <widget backgroundColor="#00000000" font="Regular2; 34" foregroundColor="#00ffffff" position="70,12" render="Label" size="708,46" source="Title" transparent="1" halign="center" valign="center" noWrap="1" />
                          <eLabel backgroundColor="#00000000" position="6,6" size="842,708" transparent="0" zPosition="-9" foregroundColor="#00ffffff" />
@@ -740,7 +364,7 @@ class SevenHD(ConfigListScreen, Screen):
                          <eLabel backgroundColor="#00ffffff" position="878,714" size="396,2" zPosition="2" />
                          <eLabel backgroundColor="#00ffffff" position="878,6" size="2,708" zPosition="2" />
                          <eLabel backgroundColor="#00ffffff" position="1274,6" size="2,708" zPosition="2" />
-                         <eLabel position="891,88" size="372,46" text="Version: 2.7" font="Regular; 35" valign="center" halign="center" transparent="1" backgroundColor="#00000000" foregroundColor="#00ffffff" name="," />
+                         <eLabel position="891,88" size="372,46" text="Version: 2.8" font="Regular; 35" valign="center" halign="center" transparent="1" backgroundColor="#00000000" foregroundColor="#00ffffff" name="," />
                   </screen>
                """
 
@@ -757,7 +381,6 @@ class SevenHD(ConfigListScreen, Screen):
 		self["helperimage"] = Pixmap()
                 self.PicLoad = ePicLoad()
 		self.PicLoad.PictureData.get().append(self.DecodePicture)
-		
 		list = []
 		ConfigListScreen.__init__(self, list)
 		
@@ -766,18 +389,21 @@ class SevenHD(ConfigListScreen, Screen):
 
 	def mylist(self):
 		list = []
-		list.append(getConfigListEntry(_("_____________________________________________ system _________________________________________________"), ))
-		list.append(getConfigListEntry(_("image"), config.plugins.SevenHD.Image))
+		#list.append(getConfigListEntry(_("_____________________________________________ system _________________________________________________"), ))
+		list.append(getConfigListEntry(_('{:_^102}'.format(' system ')), ))
+                list.append(getConfigListEntry(_("image"), config.plugins.SevenHD.Image))
 		list.append(getConfigListEntry(_("button style"), config.plugins.SevenHD.ButtonStyle, 'Button'))
 		list.append(getConfigListEntry(_("running text"), config.plugins.SevenHD.RunningText))
 		list.append(getConfigListEntry(_("Weather ID"), config.plugins.SevenHD.weather_city, 'WeatherID'))
-		list.append(getConfigListEntry(_("_____________________________________________ background _____________________________________________"), ))
-		list.append(getConfigListEntry(_("color layer main"), config.plugins.SevenHD.Background, 'Main'))
+		#list.append(getConfigListEntry(_("_____________________________________________ background _____________________________________________"), ))
+		list.append(getConfigListEntry(_('{:_^102}'.format(' background ')), ))
+                list.append(getConfigListEntry(_("color layer main"), config.plugins.SevenHD.Background, 'Main'))
 		list.append(getConfigListEntry(_("transparency"), config.plugins.SevenHD.BackgroundColorTrans))
 		list.append(getConfigListEntry(_("color layer right"), config.plugins.SevenHD.BackgroundRight, 'Right'))
 		list.append(getConfigListEntry(_("transparency"), config.plugins.SevenHD.BackgroundRightColorTrans))
-		list.append(getConfigListEntry(_("_____________________________________________ colors _________________________________________________"), ))
-		list.append(getConfigListEntry(_("line"), config.plugins.SevenHD.Line, 'Line'))
+		#list.append(getConfigListEntry(_("_____________________________________________ colors _________________________________________________"), ))
+		list.append(getConfigListEntry(_('{:_^102}'.format(' colors ')), ))
+                list.append(getConfigListEntry(_("line"), config.plugins.SevenHD.Line, 'Line'))
 		list.append(getConfigListEntry(_("border"), config.plugins.SevenHD.Border, 'Border'))
 		list.append(getConfigListEntry(_("listselection"), config.plugins.SevenHD.SelectionBackground, 'Listselection'))
 		list.append(getConfigListEntry(_("listselection border"), config.plugins.SevenHD.SelectionBorder, 'Listborder'))
@@ -786,8 +412,9 @@ class SevenHD(ConfigListScreen, Screen):
 		list.append(getConfigListEntry(_("font 2"), config.plugins.SevenHD.Font2, 'Font2'))
 		list.append(getConfigListEntry(_("selection font"), config.plugins.SevenHD.SelectionFont, 'Selfont'))
 		list.append(getConfigListEntry(_("button text"), config.plugins.SevenHD.ButtonText, 'Buttontext'))
-		list.append(getConfigListEntry(_("_____________________________________________ infobar ________________________________________________"), ))
-		list.append(getConfigListEntry(_("style"), config.plugins.SevenHD.InfobarStyle))
+		#list.append(getConfigListEntry(_("_____________________________________________ infobar ________________________________________________"), ))
+		list.append(getConfigListEntry(_('{:_^102}'.format(' infobar ')), ))
+                list.append(getConfigListEntry(_("style"), config.plugins.SevenHD.InfobarStyle))
 		list.append(getConfigListEntry(_("color 1"), config.plugins.SevenHD.BackgroundIB1, 'Color1'))
 		list.append(getConfigListEntry(_("color 2"), config.plugins.SevenHD.BackgroundIB2, 'Color2'))
 		list.append(getConfigListEntry(_("channelname"), config.plugins.SevenHD.InfobarChannelName))
@@ -795,13 +422,14 @@ class SevenHD(ConfigListScreen, Screen):
 		list.append(getConfigListEntry(_("clock"), config.plugins.SevenHD.ClockStyle))
 		if config.plugins.SevenHD.ClockStyle.value == "clock-analog":
 			list.append(getConfigListEntry(_("color clock analog"), config.plugins.SevenHD.AnalogStyle, 'Analog'))
-		list.append(getConfigListEntry(_("______________________________________________ infobar extras_________________________________________"), ))
-		list.append(getConfigListEntry(_("weather"), config.plugins.SevenHD.WeatherStyle))
+		#list.append(getConfigListEntry(_("______________________________________________ infobar extras_________________________________________"), ))
+		list.append(getConfigListEntry(_('{:_^102}'.format(' infobar extras ')), ))
+                list.append(getConfigListEntry(_("weather"), config.plugins.SevenHD.WeatherStyle))
 		list.append(getConfigListEntry(_("satellite information"), config.plugins.SevenHD.SatInfo))
 		list.append(getConfigListEntry(_("system information"), config.plugins.SevenHD.SysInfo))
 		list.append(getConfigListEntry(_("ecm information"), config.plugins.SevenHD.ECMInfo))
-		list.append(getConfigListEntry(_("______________________________________________ general _______________________________________________"), ))
-		
+		#list.append(getConfigListEntry(_("______________________________________________ general _______________________________________________"), ))
+		list.append(getConfigListEntry(_('{:_^102}'.format(' general ')), ))
                 list.append(getConfigListEntry(_("second infobar"), config.plugins.SevenHD.SIB))
 		list.append(getConfigListEntry(_("channel selection"), config.plugins.SevenHD.ChannelSelectionStyle))
 		list.append(getConfigListEntry(_("EMC"), config.plugins.SevenHD.EMCStyle))
@@ -907,10 +535,14 @@ class SevenHD(ConfigListScreen, Screen):
 			self.skinSearchAndReplace = []
 			self.skinSearchAndReplace.append(["0A", config.plugins.SevenHD.BackgroundColorTrans.value])
 			self.skinSearchAndReplace.append(["0D", config.plugins.SevenHD.BackgroundRightColorTrans.value])
-			self.skinSearchAndReplace.append(["000000", config.plugins.SevenHD.Background.value])
-			self.skinSearchAndReplace.append(["000002", config.plugins.SevenHD.BackgroundIB1.value])
-			self.skinSearchAndReplace.append(["000003", config.plugins.SevenHD.BackgroundIB2.value])
-			self.skinSearchAndReplace.append(["000001", config.plugins.SevenHD.BackgroundRight.value])
+                        self.Background = config.plugins.SevenHD.Background.value
+                        self.skinSearchAndReplace.append(["000000", self.Background[2:8]])
+			self.BackgroundIB1 = config.plugins.SevenHD.BackgroundIB1.value
+                        self.skinSearchAndReplace.append(["000002", self.BackgroundIB1[2:8]])
+			self.BackgroundIB2 = config.plugins.SevenHD.BackgroundIB2.value
+                        self.skinSearchAndReplace.append(["000003", self.BackgroundIB2[2:8]])
+			self.BackgroundRight = config.plugins.SevenHD.BackgroundRight.value
+                        self.skinSearchAndReplace.append(["000001", self.BackgroundRight[2:8]])
 			self.skinSearchAndReplace.append(["000050EF", config.plugins.SevenHD.SelectionBackground.value])
 			self.skinSearchAndReplace.append(["00fffff3", config.plugins.SevenHD.Font1.value])
 			self.skinSearchAndReplace.append(["00fffff4", config.plugins.SevenHD.Font2.value])
@@ -962,10 +594,10 @@ class SevenHD(ConfigListScreen, Screen):
 			self.appendSkinFile(self.daten + config.plugins.SevenHD.InfobarStyle.value + "-main.xml")
                         
                         ###Channelname
-			if config.plugins.SevenHD.InfobarChannelName.value == "none":
-				self.appendSkinFile(self.daten + config.plugins.SevenHD.InfobarChannelName.value + ".xml")
-			else:
-				self.appendSkinFile(self.daten + config.plugins.SevenHD.InfobarStyle.value + "-ICN.xml")
+                        if config.plugins.SevenHD.InfobarChannelName.value == "none":
+                           self.appendSkinFile(self.daten + config.plugins.SevenHD.InfobarChannelName.value + ".xml")
+                        else:
+                           self.appendSkinFile(self.daten + config.plugins.SevenHD.InfobarStyle.value + "-ICN.xml")
                         
 			###ecm-info
 			self.appendSkinFile(self.daten + config.plugins.SevenHD.ECMInfo.value + ".xml")
@@ -1041,7 +673,7 @@ class SevenHD(ConfigListScreen, Screen):
 			#progress
 			if config.plugins.SevenHD.Progress.value == "progress":
 				console5.execute("rm -rf /usr/share/enigma2/SevenHD/progress/*.*; rm -rf /usr/share/enigma2/SevenHD/progress; wget -q http://www.gigablue-support.org/skins/SevenHD/%s.tar.gz -O /tmp/%s.tar.gz; tar xf /tmp/%s.tar.gz -C /usr/share/enigma2/SevenHD/" % (str(config.plugins.SevenHD.Progress.value), str(config.plugins.SevenHD.Progress.value), str(config.plugins.SevenHD.Progress.value)))
-						
+			
 		except:
 			self.session.open(MessageBox, _("Error creating Skin!"), MessageBox.TYPE_ERROR)
 
