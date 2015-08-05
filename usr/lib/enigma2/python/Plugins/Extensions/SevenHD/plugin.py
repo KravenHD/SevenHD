@@ -283,7 +283,8 @@ config.plugins.SevenHD.ButtonStyle = ConfigSelection(default="buttons_seven_whit
 				("buttons_seven_black_red", _("black/red")),
 				("buttons_seven_black_silver", _("black/silver")),
 				("buttons_seven_black_violet", _("black/violet")),
-				("buttons_seven_black_yellow", _("black/yellow"))
+				("buttons_seven_black_yellow", _("black/yellow")),
+				("buttons_seven_colorfull", _("colorfull"))
 				])
 				
 config.plugins.SevenHD.ClockStyle = ConfigSelection(default="clock-standard", choices = [
