@@ -20,7 +20,12 @@
 #
 #
 #######################################################################
+version = '2.7.8.1'
+import os
+import re
+import socket
 import gettext
+import urllib
 from Plugins.Plugin import PluginDescriptor
 from Screens.Screen import Screen
 from Screens.MessageBox import MessageBox
@@ -38,7 +43,10 @@ from Components.Language import language
 from os import environ, listdir, remove, rename, system
 from shutil import move
 from skin import parseColor
+from urllib import urlencode
+from urllib2 import urlopen, URLError
 from enigma import ePicLoad, getDesktop, eConsoleAppContainer
+from Tools.BoundFunction import boundFunction
 from Tools.Directories import fileExists, resolveFilename, SCOPE_LANGUAGE, SCOPE_PLUGINS
 #############################################################
 
@@ -62,7 +70,12 @@ def translateBlock(block):
 
 #############################################################
 config.plugins.SevenHD = ConfigSubsection()
+
 config.plugins.SevenHD.weather_city = ConfigNumber(default="924938")
+
+config.plugins.SevenHD.AutoWoeID = ConfigYesNo(default= True)
+
+config.plugins.SevenHD.debug = ConfigYesNo(default = False)
 
 config.plugins.SevenHD.Image = ConfigSelection(default="main-custom-openatv", choices = [
 				("main-custom-atemio4you", _("Atemio4You")),
@@ -341,6 +354,7 @@ class SevenHD(ConfigListScreen, Screen):
                          <eLabel font="Regular; 20" foregroundColor="#00ffffff" backgroundColor="#00000000" halign="left" valign="center" position="64,662" size="148,48" text="Cancel" transparent="1" />
                          <eLabel font="Regular; 20" foregroundColor="#00ffffff" backgroundColor="#00000000" halign="left" valign="center" position="264,662" size="148,48" text="Save" transparent="1" />
                          <eLabel font="Regular; 20" foregroundColor="#00ffffff" backgroundColor="#00000000" halign="left" valign="center" position="464,662" size="148,48" text="Reboot" transparent="1" />
+                         <eLabel font="Regular; 20" foregroundColor="#00ffffff" backgroundColor="#00000000" halign="left" valign="center" position="664,662" size="148,48" text="Weather ID" transparent="1" />
                          <widget name="config" position="18,72" size="816,575" transparent="1" zPosition="1" backgroundColor="#00000000" />
                          <eLabel position="70,12" size="708,46" text="SevenHD - Konfigurationstool" font="Regular; 35" valign="center" halign="center" transparent="1" backgroundColor="#00000000" foregroundColor="#00ffffff" name="," />
                          <eLabel position="891,657" size="372,46" text="Thanks to http://www.gigablue-support.org/" font="Regular; 12" valign="center" halign="center" transparent="1" backgroundColor="#00000000" foregroundColor="#00ffffff" name="," />
@@ -365,7 +379,7 @@ class SevenHD(ConfigListScreen, Screen):
                          <eLabel backgroundColor="#00ffffff" position="878,714" size="396,2" zPosition="2" />
                          <eLabel backgroundColor="#00ffffff" position="878,6" size="2,708" zPosition="2" />
                          <eLabel backgroundColor="#00ffffff" position="1274,6" size="2,708" zPosition="2" />
-                         <eLabel position="891,88" size="372,46" text="Version: 2.8" font="Regular; 35" valign="center" halign="center" transparent="1" backgroundColor="#00000000" foregroundColor="#00ffffff" name="," />
+                         <eLabel position="891,88" size="372,46" text="Version: 2.6" font="Regular; 35" valign="center" halign="center" transparent="1" backgroundColor="#00000000" foregroundColor="#00ffffff" name="," />
                   </screen>
                """
 
@@ -395,7 +409,6 @@ class SevenHD(ConfigListScreen, Screen):
                 list.append(getConfigListEntry(_("image"), config.plugins.SevenHD.Image))
 		list.append(getConfigListEntry(_("button style"), config.plugins.SevenHD.ButtonStyle, 'Button'))
 		list.append(getConfigListEntry(_("running text"), config.plugins.SevenHD.RunningText))
-		list.append(getConfigListEntry(_("Weather ID"), config.plugins.SevenHD.weather_city, 'WeatherID'))
 		#list.append(getConfigListEntry(_("_____________________________________________ background _____________________________________________"), ))
 		list.append(getConfigListEntry(_('{:_^102}'.format(' background ')), ))
                 list.append(getConfigListEntry(_("color layer main"), config.plugins.SevenHD.Background, 'Main'))
@@ -422,11 +435,15 @@ class SevenHD(ConfigListScreen, Screen):
 		list.append(getConfigListEntry(_("color channelname"), config.plugins.SevenHD.FontCN, 'ColorCN'))
 		list.append(getConfigListEntry(_("clock"), config.plugins.SevenHD.ClockStyle))
 		if config.plugins.SevenHD.ClockStyle.value == "clock-analog":
-			list.append(getConfigListEntry(_("color clock analog"), config.plugins.SevenHD.AnalogStyle, 'Analog'))
+		   list.append(getConfigListEntry(_("color clock analog"), config.plugins.SevenHD.AnalogStyle, 'Analog'))
 		#list.append(getConfigListEntry(_("______________________________________________ infobar extras_________________________________________"), ))
 		list.append(getConfigListEntry(_('{:_^102}'.format(' infobar extras ')), ))
                 list.append(getConfigListEntry(_("weather"), config.plugins.SevenHD.WeatherStyle))
-		list.append(getConfigListEntry(_("satellite information"), config.plugins.SevenHD.SatInfo))
+		if config.plugins.SevenHD.WeatherStyle.value != 'none':
+                   list.append(getConfigListEntry(_("Auto Weather ID Function"), config.plugins.SevenHD.AutoWoeID))
+                   if config.plugins.SevenHD.AutoWoeID.value == False:
+                      list.append(getConfigListEntry(_("Weather ID"), config.plugins.SevenHD.weather_city, 'WeatherID'))
+                list.append(getConfigListEntry(_("satellite information"), config.plugins.SevenHD.SatInfo))
 		list.append(getConfigListEntry(_("system information"), config.plugins.SevenHD.SysInfo))
 		list.append(getConfigListEntry(_("ecm information"), config.plugins.SevenHD.ECMInfo))
 		#list.append(getConfigListEntry(_("______________________________________________ general _______________________________________________"), ))
@@ -437,7 +454,9 @@ class SevenHD(ConfigListScreen, Screen):
 		list.append(getConfigListEntry(_("ExtNumberZap"), config.plugins.SevenHD.NumberZapExt))
 		list.append(getConfigListEntry(_("volume style"), config.plugins.SevenHD.Volume))
 		list.append(getConfigListEntry(_("CoolTVGuide"), config.plugins.SevenHD.CoolTVGuide))
-		
+		list.append(getConfigListEntry(_('{:_^102}'.format(' debug ')), ))
+                list.append(getConfigListEntry(_("Debug Mode (only for skinning)"), config.plugins.SevenHD.debug))
+                
 		self["config"].list = list
 		self["config"].l.setList(list)
 		
@@ -507,9 +526,19 @@ class SevenHD(ConfigListScreen, Screen):
 		restartbox.setTitle(_("Restart GUI"))
 
 	def showInfo(self):
-		self.session.open(MessageBox, _("Information"), MessageBox.TYPE_INFO)
-
-	def getDataByKey(self, list, key):
+		options = []
+		options.extend(((_("Hier koennte ihre Werbung stehen ...."), boundFunction(self.send_to_msg_box, "Ehrlich jetzt?")),))
+		if config.plugins.SevenHD.WeatherStyle.value != 'none':
+                   if config.plugins.SevenHD.AutoWoeID.value == True:
+                      options.extend(((_("Auto Weather ID"), self.getgeo),))
+		options.extend(((_("Information"), boundFunction(self.send_to_msg_box, "Information")),))
+                self.session.openWithCallback(self.menuCallback, ChoiceBox,list = options)
+                
+ 	
+        def send_to_msg_box(self, my_msg):
+	        self.session.open(MessageBox,_('%s' % str(my_msg)), MessageBox.TYPE_INFO)
+	
+        def getDataByKey(self, list, key):
 		for item in list:
 		    if item["key"] == key:
                        return item
@@ -524,8 +553,8 @@ class SevenHD(ConfigListScreen, Screen):
 	def save(self):
 		if fileExists("/tmp/SevenHDweather.xml"):
 			remove('/tmp/SevenHDweather.xml')
-
-		for x in self["config"].list:
+		
+                for x in self["config"].list:
 			if len(x) > 1:
 			   x[1].save()
 			else:
@@ -728,10 +757,78 @@ class SevenHD(ConfigListScreen, Screen):
 					pass
 		self.close()
 
-#############################################################
+        def getgeo(self):
+        	# Auto Weather ID Function by .:TBX:.
+        	#    for MyMetrix or Kraven Skins
+	        
+                WOEID_SEARCH_URL     = 'http://query.yahooapis.com/v1/public/yql'
+        	WOEID_QUERY_STRING   = 'select woeid from geo.placefinder where text="%s"'
+                
+                try:
+                        res = urllib.urlopen('http://mxtoolbox.com/WhatIsMyIP/')
+                        data = res.read()
+                        city = re.search('<h1 class="GeoTableHeader">City</h1>(.*?)</td>', data, re.S).group(1)
+                        
+                        params = {'q': WOEID_QUERY_STRING % city.strip(), 'format': 'xml'}
+                        url = '?'.join((WOEID_SEARCH_URL, urlencode(params)))  
+                        
+                        try:
+                            handler = urllib.urlopen(url)
+                        except URLError:
+        	            self.an_error()
+                        except socket.timeout:
+                            self.an_error()
+                    
+                        content_type = handler.info().dict['content-type']
+                        try:
+                            charset = re.search('charset\=(.*)', content_type).group(1)
+                        except AttributeError:
+                            charset = 'utf-8'
+                            
+                        if charset.lower() != 'utf-8':
+                            json_response = handler.read().decode(charset).encode('utf-8')
+                        else:
+                            json_response = handler.read()
+                        
+                        handler.close()
+                        woeid_count = re.findall('<woeid>(\d{5,10})</woeid>', json_response, re.S)
+                        
+                        if len(woeid_count) == 1:
+                           woeid = woeid_count[0]
+                           config.plugins.SevenHD.weather_city.value = woeid
+                           self.session.open(MessageBox, _(city.strip() + ' is detected and set as your Location.\nIf that should not be right then set\nAuto Weather ID Function to "OFF".'), MessageBox.TYPE_INFO)
 
+                        else:
+                           woeid_list = []
+                           for woeid in woeid_count:
+                               woeid_list.extend(((_('%s' % str(woeid)), boundFunction(self.set_woeid, '%s' % str(woeid))),))
+                           
+                           self.session.openWithCallback(self.menuCallback, ChoiceBox, list = woeid_list, title = "Choose youre right ID")
+                           self.session.open(MessageBox, _('Is this detected WOEID wrong,\nchoose another and set as your Location.\n\nIf not the right one in the List set\nAuto Weather ID Function to "OFF".'), MessageBox.TYPE_INFO)   
+                           
+                except:
+                    self.debug('error2\n')
+                    self.an_error()
+
+        def set_woeid(self, woeid):
+                config.plugins.SevenHD.weather_city.value = str(woeid)
+                               
+        def menuCallback(self, ret):
+		ret and ret[1]()
+		
+        def an_error(self):
+                config.plugins.SevenHD.weather_city.value = "924938"
+                config.plugins.SevenHD.AutoWoeID.value = False
+        
+        def debug(self, what):
+                if config.plugins.SevenHD.debug.value:
+                   #self.session.open(MessageBox, _(what), MessageBox.TYPE_INFO)
+                   f = open('/tmp/kraven_debug', 'a+')
+                   f.write(str(what) + '\n')
+                   f.close() 
+                          
 def main(session, **kwargs):
-	session.open(SevenHD,"/usr/lib/enigma2/python/Plugins/Extensions/SevenHD/images/main-custom-openatv.jpg")
+        session.open(SevenHD,"/usr/lib/enigma2/python/Plugins/Extensions/SevenHD/images/main-custom-openatv.jpg")
 
 def Plugins(**kwargs):
 	screenwidth = getDesktop(0).size().width()
