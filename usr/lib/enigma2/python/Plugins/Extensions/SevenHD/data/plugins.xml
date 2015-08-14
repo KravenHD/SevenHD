@@ -1846,4 +1846,15 @@
 <panel name="template_menu_left_button" />
 <panel name="template_colorkey_text_source" />
 </screen>
+
+<!-- OscamUpdaterView -->
+<screen name="OscamUpdaterView" position="0,0" size="1280,720" title="Downloading list..." flags="wfNoBorder" backgroundColor="transparent">
+	<widget source="oscamInfo" render="Label" font="Regular; 18" foregroundColor="SevenFont1" backgroundColor="SevenBackground" halign="left" position="70,80" size="708,66" transparent="0" />
+	<widget name="oscamList" position="70,163" size="708,452" transparent="1" scrollbarMode="showOnDemand" foregroundColor="SevenFont1" backgroundColor="SevenBackground" />
+	<widget source="downloadProgressText" position="70,163" size="708,452" font="Regular;20" valign="center" halign="center" zPosition="2" foregroundColor="SevenFont1" backgroundColor="SevenBackground" />
+	<widget source="changeLogDate" render="Label" position="888,67" size="378,60" font="Regular2;18" foregroundColor="SevenFont2" backgroundColor="SevenBackgroundRight" halign="center" />
+	<widget source="changeLogText" render="Label" position="888,132" size="378,577" font="Regular2;20" foregroundColor="SevenFont2" backgroundColor="SevenBackgroundRight" halign="center" />
+<panel name="template_menu_left_right_button" />
+<panel name="template_colorkey_text_source" />
+</screen>
   <!-- plugins -->
