@@ -1,10 +1,10 @@
 <!-- /* ECM-Info -->
 <eLabel backgroundColor="SevenBackgroundIB1" position="969,383" size="295,59" transparent="0" zPosition="-1" />
-<widget source="session.CurrentService" position="974,387" size="285,50" font="Regular; 16" render="Label" halign="center" valign="center" backgroundColor="SevenBackgroundIB1" transparent="0" zPosition="1">
+<widget source="session.CurrentService" position="974,387" size="285,50" font="Regular; 16" render="Label" halign="center" valign="center" backgroundColor="SevenBackgroundIB1" foreColor="SevenFontNowIB" transparent="0" zPosition="1">
     <convert type="SevenHDMyCaidDisplay">Default</convert>
   </widget>	
-<eLabel backgroundColor="SevenBorder" position="969,382" size="2,60" zPosition="2" />
-  <eLabel backgroundColor="SevenBorder" position="1262,382" size="2,60" zPosition="2" />
-  <eLabel backgroundColor="SevenBorder" position="969,440" size="294,2" zPosition="2" />
-  <eLabel backgroundColor="SevenBorder" position="969,382" size="294,2" zPosition="2" />
+<eLabel backgroundColor="SevenBorderIB" position="969,382" size="2,60" zPosition="2" />
+  <eLabel backgroundColor="SevenBorderIB" position="1262,382" size="2,60" zPosition="2" />
+  <eLabel backgroundColor="SevenBorderIB" position="969,440" size="294,2" zPosition="2" />
+  <eLabel backgroundColor="SevenBorderIB" position="969,382" size="294,2" zPosition="2" />
 <!-- ECM-Info */ -->

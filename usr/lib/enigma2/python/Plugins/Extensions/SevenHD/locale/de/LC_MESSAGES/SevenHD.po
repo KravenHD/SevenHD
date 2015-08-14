@@ -1,22 +1,935 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
-# Kraven <kravenhd@web.de>, 2015.
-#
 msgid ""
 msgstr ""
-"Project-Id-Version: Seven\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-07-13 18:33+0200\n"
-"PO-Revision-Date: 2015-08-03 18:54+0200\n"
-"Last-Translator: mike99 <mike99@mail.to>\n"
-"Language-Team: kraven & mike99\n"
-"Language: de\n"
+"Project-Id-Version: \n"
+"POT-Creation-Date: 2015-08-12 13:30+0200\n"
+"PO-Revision-Date: 2015-08-13 18:34+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: de_DE\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 1.8.2\n"
+"X-Poedit-Basepath: ../../../../../../../../../../sevenhd_tbx1\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: ChannelSettings.py:119 InfobarSettings.py:130
+msgid "{:_^102}"
+msgstr ""
+
+#: ChannelSettings.py:120
+msgid "__________________________________________ channelselection __________________________________________"
+msgstr "____________________________________________ Kanalauswahl ___________________________________________"
+
+#: ChannelSettings.py:121 InfobarSettings.py:138
+msgid "style"
+msgstr "Stil"
+
+#: ChannelSettings.py:122 InfobarSettings.py:123 MenuPluginSettings.py:121
+msgid "_____________________________________________ background _____________________________________________"
+msgstr "_____________________________________________ Hintergrund _____________________________________________"
+
+#: ChannelSettings.py:123
+msgid "color right"
+msgstr "Farbe Rechts"
+
+#: ChannelSettings.py:126
+msgid "color middle"
+msgstr "Farbe Mitte"
+
+#: ChannelSettings.py:127
+msgid "color left"
+msgstr "Farbe Links"
+
+#: ChannelSettings.py:128 InfobarSettings.py:126 MenuPluginSettings.py:124
+msgid "_____________________________________________ color lines ____________________________________________"
+msgstr "_____________________________________________ Linienfarbe ____________________________________________"
+
+#: ChannelSettings.py:129 InfobarSettings.py:127 MenuPluginSettings.py:125
+msgid "line"
+msgstr "Linie"
+
+#: ChannelSettings.py:130 InfobarSettings.py:128 MenuPluginSettings.py:126
+#: MenuPluginSettings.py:129
+msgid "border"
+msgstr "Rahmen"
+
+#: ChannelSettings.py:131
+msgid "__________________________________________ color description _________________________________________"
+msgstr "______________________________________ Farbe für Beschreibungen _______________________________________"
+
+#: ChannelSettings.py:132
+msgid "bouquet name"
+msgstr "Bouquetname"
+
+#: ChannelSettings.py:133
+msgid "program name"
+msgstr "Programmname"
+
+#: ChannelSettings.py:134
+msgid "next events"
+msgstr "Nächste Sendungen"
+
+#: ChannelSettings.py:135
+msgid "runtime"
+msgstr "Laufzeit"
+
+#: ChannelSettings.py:137
+msgid "channel name"
+msgstr "Sendername"
+
+#: ChannelSettings.py:139
+msgid "time"
+msgstr "Uhrzeit"
+
+#: ChannelSettings.py:143
+msgid "prime time"
+msgstr "Prime Time"
+
+#: ChannelSettings.py:144
+msgid "program description now"
+msgstr "Beschreibung aktuelles Programm"
+
+#: ChannelSettings.py:146
+msgid "program description next"
+msgstr "Beschreibung nächstes Programm"
+
+#: ChannelSettings.py:147 MainSettings.py:122
+msgid "buttons"
+msgstr "Textfarbe Buttons"
+
+#: ChannelSettings.py:148
+msgid "______________________________________________ color list ____________________________________________"
+msgstr "____________________________________________ List Einträge ___________________________________________"
+
+#: ChannelSettings.py:149
+msgid "channel name and number"
+msgstr "Sendername und Nummer"
+
+#: ChannelSettings.py:150
+msgid "program"
+msgstr "Programm"
+
+#: ChannelSettings.py:222 InfobarExtraSettings.py:206 InfobarSettings.py:230
+#: MainSettings.py:221 MenuPluginSettings.py:206 SonstigeSettings.py:202
+msgid ""
+"Debug Picture\n"
+"\"kraven_debug.png\" saved in /tmp\n"
+msgstr ""
+"Debug Picture\n"
+"\"kraven_debug.png\" gespeichert in /tmp\n"
+
+#: ChannelSettings.py:250 InfobarExtraSettings.py:221 InfobarSettings.py:259
+#: MainSettings.py:242 MenuPluginSettings.py:225 SonstigeSettings.py:214
+#: plugin.py:503
+msgid "Information"
+msgstr "Informationen"
+
+#: ChannelSettings.py:272
+msgid "[ChannelSettings]\n"
+msgstr ""
+
+#: GlobalImport.py:72
+msgid "NotoSans-Regular"
+msgstr ""
+
+#: GlobalImport.py:76
+msgid "SevenHD"
+msgstr ""
+
+#: GlobalImport.py:80 GlobalImport.py:132 GlobalImport.py:279
+msgid "black"
+msgstr "Schwarz"
+
+#: GlobalImport.py:81 GlobalImport.py:131 GlobalImport.py:291
+msgid "white"
+msgstr "Weiß"
+
+#: GlobalImport.py:82 GlobalImport.py:278
+msgid "amber"
+msgstr "Bernstein"
+
+#: GlobalImport.py:83
+msgid "amber dark"
+msgstr "dunkles Bernstein"
+
+#: GlobalImport.py:84 GlobalImport.py:133 GlobalImport.py:280
+msgid "blue"
+msgstr "Blau"
+
+#: GlobalImport.py:85
+msgid "blue dark"
+msgstr "dunkels Blau"
+
+#: GlobalImport.py:86 GlobalImport.py:281
+msgid "brown"
+msgstr "Braun"
+
+#: GlobalImport.py:87
+msgid "brown dark"
+msgstr "dunkles Braun"
+
+#: GlobalImport.py:88 GlobalImport.py:282
+msgid "cobalt"
+msgstr "Kobalt"
+
+#: GlobalImport.py:89
+msgid "cobalt dark"
+msgstr "dunkles Kobalt"
+
+#: GlobalImport.py:90 GlobalImport.py:283
+msgid "cyan"
+msgstr "Cyan"
+
+#: GlobalImport.py:91
+msgid "cyan dark"
+msgstr "dunkles Cyan"
+
+#: GlobalImport.py:92 GlobalImport.py:135 GlobalImport.py:284
+msgid "grey"
+msgstr "Grau"
+
+#: GlobalImport.py:93
+msgid "grey dark"
+msgstr "dunkles Grau"
+
+#: GlobalImport.py:94 GlobalImport.py:134 GlobalImport.py:285
+msgid "green"
+msgstr "Grün"
+
+#: GlobalImport.py:95
+msgid "green dark"
+msgstr "dunkles Grün"
+
+#: GlobalImport.py:96
+msgid "olive"
+msgstr "Oliv"
+
+#: GlobalImport.py:97
+msgid "olive dark"
+msgstr "dunkles Oliv"
+
+#: GlobalImport.py:98 GlobalImport.py:136 GlobalImport.py:286
+msgid "orange"
+msgstr "Orange"
+
+#: GlobalImport.py:99
+msgid "orange dark"
+msgstr "dunkles Orange"
+
+#: GlobalImport.py:100 GlobalImport.py:287
+msgid "pink"
+msgstr "Pink"
+
+#: GlobalImport.py:101
+msgid "pink dark"
+msgstr "dunkles Pink"
+
+#: GlobalImport.py:102 GlobalImport.py:137 GlobalImport.py:288
+msgid "red"
+msgstr "Rot"
+
+#: GlobalImport.py:103
+msgid "red dark"
+msgstr "dunkles Rot"
+
+#: GlobalImport.py:104 GlobalImport.py:289
+msgid "steel"
+msgstr "Stahl"
+
+#: GlobalImport.py:105
+msgid "steel dark"
+msgstr "dunkles Stahl"
+
+#: GlobalImport.py:106 GlobalImport.py:138 GlobalImport.py:290
+msgid "violet"
+msgstr "Violet"
+
+#: GlobalImport.py:107
+msgid "violet dark"
+msgstr "dunkles Violet"
+
+#: GlobalImport.py:108
+msgid "yellow dark"
+msgstr "dunkles Gelb"
+
+#: GlobalImport.py:109 GlobalImport.py:139
+msgid "yellow"
+msgstr "Gelb"
+
+#: GlobalImport.py:112 GlobalImport.py:151 GlobalImport.py:166
+#: GlobalImport.py:186 GlobalImport.py:252 GlobalImport.py:307
+#: GlobalImport.py:320 GlobalImport.py:325 GlobalImport.py:330
+#: GlobalImport.py:364
+msgid "off"
+msgstr "Aus"
+
+#: GlobalImport.py:113
+msgid "low"
+msgstr "Niedrig"
+
+#: GlobalImport.py:114
+msgid "medium"
+msgstr "Mittel"
+
+#: GlobalImport.py:115
+msgid "high"
+msgstr "Hoch"
+
+#: GlobalImport.py:116 GlobalImport.py:236
+msgid "full"
+msgstr "Voll"
+
+#: GlobalImport.py:122
+msgid "Atemio4You"
+msgstr ""
+
+#: GlobalImport.py:123
+msgid "HDMU"
+msgstr ""
+
+#: GlobalImport.py:124
+msgid "openATV"
+msgstr ""
+
+#: GlobalImport.py:125
+msgid "openHDF"
+msgstr ""
+
+#: GlobalImport.py:126
+msgid "openMIPS"
+msgstr ""
+
+#: GlobalImport.py:127
+msgid "openNFR"
+msgstr ""
+
+#: GlobalImport.py:140
+msgid "black/blue"
+msgstr "Schwarz/Blau"
+
+#: GlobalImport.py:141
+msgid "black/green"
+msgstr "Schwarz/Grün"
+
+#: GlobalImport.py:142
+msgid "black/orange"
+msgstr "Schwarz/Orange"
+
+#: GlobalImport.py:143
+msgid "black/red"
+msgstr "Schwarz/Rot"
+
+#: GlobalImport.py:144
+msgid "black/silver"
+msgstr "Schwarz/Silber"
+
+#: GlobalImport.py:145
+msgid "black/violet"
+msgstr "Schwarz/Violet"
+
+#: GlobalImport.py:146
+msgid "black/yellow"
+msgstr "Schwarz/Gelb"
+
+#: GlobalImport.py:150 GlobalImport.py:253 GlobalImport.py:321
+#: GlobalImport.py:326 GlobalImport.py:331
+msgid "on"
+msgstr "Ein"
+
+#: GlobalImport.py:155
+msgid "original"
+msgstr "Original"
+
+#: GlobalImport.py:156 GlobalImport.py:309
+msgid "left"
+msgstr "Links"
+
+#: GlobalImport.py:157 MenuPluginSettings.py:123
+msgid "right"
+msgstr "Rechts"
+
+#: GlobalImport.py:158
+msgid "top"
+msgstr "Oben"
+
+#: GlobalImport.py:159
+msgid "number"
+msgstr "Nummer"
+
+#: GlobalImport.py:160
+msgid "center"
+msgstr "Mitte"
+
+#: GlobalImport.py:167
+msgid "ZPicons"
+msgstr ""
+
+#: GlobalImport.py:168
+msgid "XPicons"
+msgstr ""
+
+#: GlobalImport.py:169
+msgid "ZZPicons"
+msgstr ""
+
+#: GlobalImport.py:170
+msgid "ZZZPicons"
+msgstr ""
+
+#: GlobalImport.py:194
+msgid "bunt"
+msgstr "Bunt"
+
+#: GlobalImport.py:211
+msgid "Original 1"
+msgstr ""
+
+#: GlobalImport.py:212
+msgid "Original 2"
+msgstr ""
+
+#: GlobalImport.py:213
+msgid "Original 3"
+msgstr ""
+
+#: GlobalImport.py:214
+msgid "Original 4"
+msgstr ""
+
+#: GlobalImport.py:215
+msgid "ZPicon 1"
+msgstr ""
+
+#: GlobalImport.py:216
+msgid "ZPicon 2"
+msgstr ""
+
+#: GlobalImport.py:217
+msgid "ZPicon 3"
+msgstr ""
+
+#: GlobalImport.py:218
+msgid "ZPicon 4"
+msgstr ""
+
+#: GlobalImport.py:219
+msgid "XPicon 1"
+msgstr ""
+
+#: GlobalImport.py:220
+msgid "XPicon 2"
+msgstr ""
+
+#: GlobalImport.py:221
+msgid "XPicon 3"
+msgstr ""
+
+#: GlobalImport.py:222
+msgid "XPicon 4"
+msgstr ""
+
+#: GlobalImport.py:223
+msgid "ZZPicon 1"
+msgstr ""
+
+#: GlobalImport.py:224
+msgid "ZZPicon 2"
+msgstr ""
+
+#: GlobalImport.py:225
+msgid "ZZPicon 3"
+msgstr ""
+
+#: GlobalImport.py:226
+msgid "ZZPicon 4"
+msgstr ""
+
+#: GlobalImport.py:227
+msgid "ZZZPicon 1"
+msgstr ""
+
+#: GlobalImport.py:228
+msgid "ZZZPicon 2"
+msgstr ""
+
+#: GlobalImport.py:229
+msgid "ZZZPicon 3"
+msgstr ""
+
+#: GlobalImport.py:230
+msgid "ZZZPicon 4"
+msgstr ""
+
+#: GlobalImport.py:234
+msgid "top/bottom"
+msgstr "Oben/Unten"
+
+#: GlobalImport.py:235
+msgid "left/right"
+msgstr "Links/Rechts"
+
+#: GlobalImport.py:269
+msgid "standard"
+msgstr "Standard"
+
+#: GlobalImport.py:270
+msgid "with seconds"
+msgstr "mit Sekunden"
+
+#: GlobalImport.py:271
+msgid "with weekday"
+msgstr "mit Wochentag"
+
+#: GlobalImport.py:272
+msgid "analog"
+msgstr "Analog"
+
+#: GlobalImport.py:273 InfobarExtraSettings.py:124
+msgid "weather"
+msgstr "Wetter"
+
+#: GlobalImport.py:274
+msgid "android"
+msgstr "Android"
+
+#: GlobalImport.py:308
+msgid "big"
+msgstr "Groß"
+
+#: GlobalImport.py:310
+msgid "small"
+msgstr "Klein"
+
+#: GlobalImport.py:339
+msgid "two columns 1"
+msgstr "zwei Spalten (1)"
+
+#: GlobalImport.py:340
+msgid "two columns 2"
+msgstr "zwei Spalten (2)"
+
+#: GlobalImport.py:341
+msgid "two columns 3"
+msgstr "zwei Spalten (3)"
+
+#: GlobalImport.py:342
+msgid "three columns"
+msgstr "drei Spalten"
+
+#: GlobalImport.py:343
+msgid "three columns miniTV"
+msgstr "drei Spalten mit MiniTV"
+
+#: GlobalImport.py:344
+msgid "ZPicon"
+msgstr ""
+
+#: GlobalImport.py:345
+msgid "ZPicon/miniTV"
+msgstr ""
+
+#: GlobalImport.py:346
+msgid "XPicon"
+msgstr ""
+
+#: GlobalImport.py:347
+msgid "XPicon/miniTV"
+msgstr ""
+
+#: GlobalImport.py:348
+msgid "ZZPicon"
+msgstr ""
+
+#: GlobalImport.py:349
+msgid "ZZPicon/miniTV"
+msgstr ""
+
+#: GlobalImport.py:350
+msgid "ZZZPicon"
+msgstr ""
+
+#: GlobalImport.py:351
+msgid "ZZZPicon/miniTV"
+msgstr ""
+
+#: GlobalImport.py:352 GlobalImport.py:400
+msgid "miniTV"
+msgstr ""
+
+#: GlobalImport.py:353
+msgid "miniTV/PiP"
+msgstr ""
+
+#: GlobalImport.py:401
+msgid "picon"
+msgstr "Picon"
+
+#: GlobalImport.py:405
+msgid "no cover"
+msgstr "kein Cover"
+
+#: GlobalImport.py:406
+msgid "small cover"
+msgstr "kleines Cover"
+
+#: GlobalImport.py:407
+msgid "big cover"
+msgstr "großes Cover"
+
+#: GlobalImport.py:408
+msgid "very big cover"
+msgstr "sehr großes Cover"
+
+#: InfobarExtraSettings.py:119
+msgid "___________________________________________ infobar extras ___________________________________________"
+msgstr "___________________________________________ Infobar Extras ___________________________________________"
+
+#: InfobarExtraSettings.py:120
+msgid "satellite information"
+msgstr "Satellieten Informationen"
+
+#: InfobarExtraSettings.py:121
+msgid "system information"
+msgstr "System Informationen"
+
+#: InfobarExtraSettings.py:122
+msgid "ECM information"
+msgstr "ECM Informationen"
+
+#: InfobarExtraSettings.py:123
+msgid "______________________________________________ weather _______________________________________________"
+msgstr "_______________________________________________ Wetter ________________________________________________"
+
+#: InfobarExtraSettings.py:126
+msgid "auto weather ID"
+msgstr "Automatische WOEID"
+
+#: InfobarExtraSettings.py:128
+msgid "weather ID"
+msgstr "WOEID"
+
+#: InfobarExtraSettings.py:290
+msgid ""
+" is detected and set as your Location.\n"
+"If that should not be right then set\n"
+"Auto Weather ID Function to \"OFF\"."
+msgstr ""
+"wurde erkannt und als deine Region gesetzt.\n"
+"Ist das nicht richtig, dann schalt die\n"
+"Automatische WOEID Funktion aus."
+
+#: InfobarExtraSettings.py:296 plugin.py:510
+#, python-format
+msgid "%s"
+msgstr ""
+
+#: InfobarExtraSettings.py:299
+msgid ""
+"Is this detected WOEID wrong,\n"
+"choose another and set as your Location.\n"
+"\n"
+"If not the right one in the List set\n"
+"Auto Weather ID Function to \"OFF\"."
+msgstr ""
+"Ist diese WOEID nicht richtig, such eine andere aus.\n"
+"\n"
+"Ist nicht die richtig WOEID in der Liste,\n"
+"dann schalt die Automatische WOEID Funktion aus."
+
+#: InfobarExtraSettings.py:318
+msgid "[InfobarExtraSettings]\n"
+msgstr ""
+
+#: InfobarSettings.py:119
+msgid "_______________________________________________ style ________________________________________________"
+msgstr "________________________________________________ Stil ________________________________________________"
+
+#: InfobarSettings.py:120
+msgid "infobar"
+msgstr "Infobar"
+
+#: InfobarSettings.py:121
+msgid "second infobar"
+msgstr "Zweite Infobar"
+
+#: InfobarSettings.py:124
+msgid "color 1"
+msgstr "Farbe 1"
+
+#: InfobarSettings.py:125
+msgid "color 2"
+msgstr "Farbe 2"
+
+#: InfobarSettings.py:129 MenuPluginSettings.py:131
+msgid "______________________________________________ color font ____________________________________________"
+msgstr "_____________________________________________ Schriftfarbe ___________________________________________"
+
+#: InfobarSettings.py:131
+msgid "channelname"
+msgstr "Sendername"
+
+#: InfobarSettings.py:133
+msgid "color channelname"
+msgstr "Farbe Sendername"
+
+#: InfobarSettings.py:134
+msgid "now event"
+msgstr "aktuelles Programm"
+
+#: InfobarSettings.py:135
+msgid "next event"
+msgstr "nächstes Programm"
+
+#: InfobarSettings.py:136
+msgid "indicate"
+msgstr "Infospalte"
+
+#: InfobarSettings.py:137
+msgid "________________________________________________ clock _______________________________________________"
+msgstr "_________________________________________________ Uhr ________________________________________________"
+
+#: InfobarSettings.py:140
+msgid "color clock"
+msgstr "Farbe Uhr"
+
+#: InfobarSettings.py:141 InfobarSettings.py:147 InfobarSettings.py:150
+#: InfobarSettings.py:154 InfobarSettings.py:157
+msgid "color date"
+msgstr "Farbe Datum"
+
+#: InfobarSettings.py:142
+msgid "color pointer hour"
+msgstr "Farbe Stundenzeiger"
+
+#: InfobarSettings.py:143
+msgid "color pointer minute"
+msgstr "Farbe Minutenzeiger"
+
+#: InfobarSettings.py:144
+msgid "color pointer second"
+msgstr "Farbe Sekundenzeiger"
+
+#: InfobarSettings.py:146 InfobarSettings.py:149 InfobarSettings.py:153
+msgid "color time"
+msgstr "Farbe Zeit"
+
+#: InfobarSettings.py:151
+msgid "color weekday"
+msgstr "Farbe Wochentag"
+
+#: InfobarSettings.py:155
+msgid "color weather"
+msgstr "Farbe Wetter"
+
+#: InfobarSettings.py:281
+msgid "[InfobarSettings]\n"
+msgstr ""
+
+#: MainSettings.py:120
+msgid "_______________________________________ global system settings _______________________________________"
+msgstr "________________________________________ Haupteinstellungen _________________________________________"
+
+#: MainSettings.py:121
+msgid "image"
+msgstr "Image"
+
+#: MainSettings.py:123
+msgid "running text"
+msgstr "Lauftext"
+
+#: MainSettings.py:124
+msgid "volume style"
+msgstr "Stil Lautstärke"
+
+#: MainSettings.py:125
+msgid "progress-/volumebar"
+msgstr "Fortschritts-/Lautstärkebalken"
+
+#: MainSettings.py:126
+msgid "___________________________________________ transparency _____________________________________________"
+msgstr "___________________________________________ Transparenz _____________________________________________"
+
+#: MainSettings.py:127
+msgid "main window"
+msgstr "Hauptfenster"
+
+#: MainSettings.py:128
+msgid "right window"
+msgstr "Hauptfenster Rechts"
+
+#: MainSettings.py:129
+msgid "______________________________________________ plugins _______________________________________________"
+msgstr "______________________________________________ Plugins _______________________________________________"
+
+#: MainSettings.py:130
+msgid "EMC"
+msgstr ""
+
+#: MainSettings.py:133
+msgid "ExtNumberZap"
+msgstr ""
+
+#: MainSettings.py:135 MainSettings.py:137
+msgid "{:<121}{:>1}"
+msgstr ""
+
+#: MainSettings.py:140
+msgid "{:<124}{:>1}"
+msgstr ""
+
+#: MainSettings.py:142
+msgid "CoolTVGuide"
+msgstr ""
+
+#: MainSettings.py:264
+msgid "[MainSettingsScreen]\n"
+msgstr ""
+
+#: MenuPluginSettings.py:119
+msgid "__________________________________________ MENU und PLUGINS __________________________________________"
+msgstr "________________________________________ MENÜ und PLUGINS ____________________________________________"
+
+#: MenuPluginSettings.py:120
+msgid " "
+msgstr ""
+
+#: MenuPluginSettings.py:122
+msgid "main"
+msgstr "Hauptfenster"
+
+#: MenuPluginSettings.py:127
+msgid "____________________________________________ listselection ___________________________________________"
+msgstr "____________________________________________ Auswahlbalken ___________________________________________"
+
+#: MenuPluginSettings.py:128
+msgid "color"
+msgstr "Farbe"
+
+#: MenuPluginSettings.py:130
+msgid "selection font"
+msgstr "Schriftfarbe"
+
+#: MenuPluginSettings.py:132
+msgid "font 1"
+msgstr "Schrift 1"
+
+#: MenuPluginSettings.py:133
+msgid "font 2"
+msgstr "Schrift 2"
+
+#: MenuPluginSettings.py:134
+msgid "button text"
+msgstr "Textfarbe Buttons"
+
+#: MenuPluginSettings.py:247
+msgid "[MenuPluginSettings]\n"
+msgstr ""
+
+#: SonstigeSettings.py:119
+msgid "_______________________________________________ debug ________________________________________________"
+msgstr "_______________________________________________ DEBUG ________________________________________________"
+
+#: SonstigeSettings.py:120
+msgid "Debug Mode (only for skinning)"
+msgstr "Debug Mode (nur zum Skinnen)"
+
+#: SonstigeSettings.py:121
+msgid "MSG Box Debug Mode (only for skinning)"
+msgstr "MessageBox Debug Mode (nur zum Skinnen)"
+
+#: SonstigeSettings.py:123
+msgid "Grab png Debug Mode (only for skinning)"
+msgstr "Bild Debug Mode (nur zum Skinnen)"
+
+#: SonstigeSettings.py:236
+msgid "[SonstigeSettings]\n"
+msgstr ""
+
+#: plugin.py:137
+msgid "main setting"
+msgstr "Haupteinstellungen"
+
+#: plugin.py:138
+msgid "menu and plugins"
+msgstr "Menü und Plugins"
+
+#: plugin.py:139
+msgid "infobar and second infobar"
+msgstr "Infobar und Zweite Infobar"
+
+#: plugin.py:140
+msgid "infobar extras"
+msgstr "Infobar Extras"
+
+#: plugin.py:141
+msgid "channel selection"
+msgstr "Kanalauswahl"
+
+#: plugin.py:142
+msgid "other settings"
+msgstr "Sonstige Einstellungen"
+
+#: plugin.py:143
+msgid "system osd settings"
+msgstr "System OSD Einstellungen"
+
+#: plugin.py:144
+msgid "system channel settings"
+msgstr "System Kanalauswahl Einstellungen"
+
+#: plugin.py:451
+msgid "Error creating Skin!"
+msgstr "Fehler beim erstellen des Skin!"
+
+#: plugin.py:486
+msgid "Hier koennte ihre Werbung stehen ...."
+msgstr ""
+
+#: plugin.py:488 plugin.py:514
+msgid "Show Debug Log"
+msgstr "Zeige Debug Log"
+
+#: plugin.py:492
+msgid "Open NumberZapExt Setup"
+msgstr "Öffne das NumberZapExt Setup"
+
+#: plugin.py:494 plugin.py:496
+msgid "Install NumberZapExt?"
+msgstr "NumberZapExt installieren?"
+
+#: plugin.py:499
+msgid "Install CoolTVGuide?"
+msgstr "CoolTVGuide installieren?"
+
+#: plugin.py:501
+msgid "Share my Skin"
+msgstr "Skin Share"
+
+#: plugin.py:518
+msgid "Share my Skin Config"
+msgstr "Verteile Skin Config"
+
+#: plugin.py:519
+msgid "Load shared Skin Config"
+msgstr "Lade andere Skin Config"
+
+#: plugin.py:527
+msgid "Install Plugin"
+msgstr "Installiere Plugin"
+
+#: plugin.py:539
+msgid "Restart GUI"
+msgstr "GUI neu starten"
+
+#: plugin.py:558
+msgid "[PluginScreen]\n"
+msgstr ""
+
+#: plugin.py:572 plugin.py:574
+msgid "Configuration tool for SevenHD"
+msgstr "Konfigurations-Tool für SevenHD"
 
 #: SevenHDYWeather.py:198 SevenHDYWeather.py:230
 msgid "N"
@@ -423,599 +1336,9 @@ msgstr ""
 "Nicht\n"
 " verfügbar"
 
-#: plugin.py:72
-msgid "Atemio4You"
-msgstr ""
-
-#: plugin.py:73
-msgid "HDMU"
-msgstr ""
-
-#: plugin.py:74
-msgid "openATV"
-msgstr ""
-
-#: plugin.py:75
-msgid "openHDF"
-msgstr ""
-
-#: plugin.py:76
-msgid "openMIPS"
-msgstr ""
-
-#: plugin.py:77
-msgid "openNFR"
-msgstr ""
-
-#: plugin.py:81
-msgid "SevenHD"
-msgstr ""
-
-#: plugin.py:85 plugin.py:458
-msgid "original"
-msgstr "Original"
-
-#: plugin.py:86
-msgid "left"
-msgstr "links"
-
-#: plugin.py:87
-msgid "right"
-msgstr "rechts"
-
-#: plugin.py:88
-msgid "top"
-msgstr "oben"
-
-#: plugin.py:89
-msgid "number"
-msgstr "Nummer"
-
-#: plugin.py:93
-msgid "low"
-msgstr "niedrig"
-
-#: plugin.py:94
-msgid "medium"
-msgstr "mittel"
-
-#: plugin.py:95
-msgid "high"
-msgstr "hoch"
-
-#: plugin.py:99 plugin.py:130 plugin.py:161 plugin.py:192 plugin.py:223
-#: plugin.py:254 plugin.py:285 plugin.py:316 plugin.py:348 plugin.py:379
-#: plugin.py:410 plugin.py:441
-msgid "amber"
-msgstr "Bernstein"
-
-#: plugin.py:100 plugin.py:131 plugin.py:162 plugin.py:193 plugin.py:224
-#: plugin.py:255 plugin.py:286 plugin.py:317 plugin.py:349 plugin.py:380
-#: plugin.py:411
-msgid "amber dark"
-msgstr "dunkles Bernstein"
-
-#: plugin.py:101 plugin.py:132 plugin.py:163 plugin.py:194 plugin.py:225
-#: plugin.py:256 plugin.py:287 plugin.py:318 plugin.py:350 plugin.py:381
-#: plugin.py:412 plugin.py:442 plugin.py:507
-msgid "black"
-msgstr "Schwarz"
-
-#: plugin.py:102 plugin.py:133 plugin.py:164 plugin.py:195 plugin.py:226
-#: plugin.py:257 plugin.py:288 plugin.py:319 plugin.py:351 plugin.py:382
-#: plugin.py:413 plugin.py:443
-msgid "blue"
-msgstr "Blau"
-
-#: plugin.py:103 plugin.py:134 plugin.py:165 plugin.py:196 plugin.py:227
-#: plugin.py:258 plugin.py:289 plugin.py:320 plugin.py:352 plugin.py:383
-#: plugin.py:414
-msgid "blue dark"
-msgstr "dunkles Blau"
-
-#: plugin.py:104 plugin.py:135 plugin.py:166 plugin.py:197 plugin.py:228
-#: plugin.py:259 plugin.py:290 plugin.py:321 plugin.py:353 plugin.py:384
-#: plugin.py:415 plugin.py:444
-msgid "brown"
-msgstr "Braun"
-
-#: plugin.py:105 plugin.py:136 plugin.py:167 plugin.py:198 plugin.py:229
-#: plugin.py:260 plugin.py:291 plugin.py:322 plugin.py:354 plugin.py:385
-#: plugin.py:416
-msgid "brown dark"
-msgstr "dunkles Braun"
-
-#: plugin.py:106 plugin.py:137 plugin.py:168 plugin.py:199 plugin.py:230
-#: plugin.py:261 plugin.py:292 plugin.py:323 plugin.py:355 plugin.py:386
-#: plugin.py:417 plugin.py:445
-msgid "cobalt"
-msgstr "Kobalt"
-
-#: plugin.py:107 plugin.py:138 plugin.py:169 plugin.py:200 plugin.py:231
-#: plugin.py:262 plugin.py:293 plugin.py:324 plugin.py:356 plugin.py:387
-#: plugin.py:418
-msgid "cobalt dark"
-msgstr "dunkles Kobalt"
-
-#: plugin.py:108 plugin.py:139 plugin.py:170 plugin.py:201 plugin.py:232
-#: plugin.py:263 plugin.py:294 plugin.py:325 plugin.py:357 plugin.py:388
-#: plugin.py:419 plugin.py:446
-msgid "cyan"
-msgstr "Cyan"
-
-#: plugin.py:109 plugin.py:140 plugin.py:171 plugin.py:202 plugin.py:233
-#: plugin.py:264 plugin.py:295 plugin.py:326 plugin.py:358 plugin.py:389
-#: plugin.py:420
-msgid "cyan dark"
-msgstr "dunkles Cyan"
-
-#: plugin.py:110 plugin.py:141 plugin.py:172 plugin.py:203 plugin.py:234
-#: plugin.py:265 plugin.py:296 plugin.py:327 plugin.py:359 plugin.py:390
-#: plugin.py:421 plugin.py:447
-msgid "grey"
-msgstr "Grau"
-
-#: plugin.py:111 plugin.py:142 plugin.py:173 plugin.py:204 plugin.py:235
-#: plugin.py:266 plugin.py:297 plugin.py:328 plugin.py:360 plugin.py:391
-#: plugin.py:422
-msgid "grey dark"
-msgstr "dunkles Grau"
-
-#: plugin.py:112 plugin.py:143 plugin.py:174 plugin.py:205 plugin.py:236
-#: plugin.py:267 plugin.py:298 plugin.py:329 plugin.py:361 plugin.py:392
-#: plugin.py:423 plugin.py:448
-msgid "green"
-msgstr "Grün"
-
-#: plugin.py:113 plugin.py:144 plugin.py:175 plugin.py:206 plugin.py:237
-#: plugin.py:268 plugin.py:299 plugin.py:330 plugin.py:362 plugin.py:393
-#: plugin.py:424
-msgid "green dark"
-msgstr "dunkles Grün"
-
-#: plugin.py:625
-msgid "black/blue"
-msgstr "Schwarz/Blau"
-
-#: plugin.py:626
-msgid "black/green"
-msgstr "Schwarz/Grün"
-
-#: plugin.py:627
-msgid "black/orange"
-msgstr "Schwarz/Orange"
-
-#: plugin.py:628
-msgid "black/red"
-msgstr "Schwarz/Rot"
-
-#: plugin.py:629
-msgid "black/silver"
-msgstr "Schwarz/Silber"
-
-#: plugin.py:630
-msgid "black/violet"
-msgstr "Schwarz/Violett"
-
-#: plugin.py:631
-msgid "black/yellow"
-msgstr "Schwarz/Gelb"
-
-msgid "colorfull"
-msgstr "Bunt"
-
-#: plugin.py:114 plugin.py:145 plugin.py:176 plugin.py:207 plugin.py:238
-#: plugin.py:269 plugin.py:300 plugin.py:331 plugin.py:363 plugin.py:394
-#: plugin.py:425
-msgid "olive"
-msgstr "Oliv"
-
-#: plugin.py:115 plugin.py:146 plugin.py:177 plugin.py:208 plugin.py:239
-#: plugin.py:270 plugin.py:301 plugin.py:332 plugin.py:364 plugin.py:395
-#: plugin.py:426
-msgid "olive dark"
-msgstr "dunkles Oliv"
-
-#: plugin.py:116 plugin.py:147 plugin.py:178 plugin.py:209 plugin.py:240
-#: plugin.py:271 plugin.py:302 plugin.py:333 plugin.py:365 plugin.py:396
-#: plugin.py:427 plugin.py:449
-msgid "orange"
-msgstr "Orange"
-
-#: plugin.py:117 plugin.py:148 plugin.py:179 plugin.py:210 plugin.py:241
-#: plugin.py:272 plugin.py:303 plugin.py:334 plugin.py:366 plugin.py:397
-#: plugin.py:428
-msgid "orange dark"
-msgstr "dunkles Orange"
-
-#: plugin.py:118 plugin.py:149 plugin.py:180 plugin.py:211 plugin.py:242
-#: plugin.py:273 plugin.py:304 plugin.py:335 plugin.py:367 plugin.py:398
-#: plugin.py:429 plugin.py:450
-msgid "pink"
-msgstr "Pink"
-
-#: plugin.py:119 plugin.py:150 plugin.py:181 plugin.py:212 plugin.py:243
-#: plugin.py:274 plugin.py:305 plugin.py:336 plugin.py:368 plugin.py:399
-#: plugin.py:430
-msgid "pink dark"
-msgstr "dunkles Pink"
-
-#: plugin.py:120 plugin.py:151 plugin.py:182 plugin.py:213 plugin.py:244
-#: plugin.py:275 plugin.py:306 plugin.py:337 plugin.py:369 plugin.py:400
-#: plugin.py:431 plugin.py:451
-msgid "red"
-msgstr "Rot"
-
-#: plugin.py:121 plugin.py:152 plugin.py:183 plugin.py:214 plugin.py:245
-#: plugin.py:276 plugin.py:307 plugin.py:338 plugin.py:370 plugin.py:401
-#: plugin.py:432
-msgid "red dark"
-msgstr "dunkles Rot"
-
-#: plugin.py:122 plugin.py:153 plugin.py:184 plugin.py:215 plugin.py:246
-#: plugin.py:277 plugin.py:308 plugin.py:339 plugin.py:371 plugin.py:402
-#: plugin.py:433 plugin.py:452
-msgid "steel"
-msgstr "Stahlgrau"
-
-#: plugin.py:123 plugin.py:154 plugin.py:185 plugin.py:216 plugin.py:247
-#: plugin.py:278 plugin.py:309 plugin.py:340 plugin.py:372 plugin.py:403
-#: plugin.py:434
-msgid "steel dark"
-msgstr "dunkles Stahlgrau"
-
-#: plugin.py:124 plugin.py:155 plugin.py:186 plugin.py:217 plugin.py:248
-#: plugin.py:279 plugin.py:310 plugin.py:341 plugin.py:373 plugin.py:404
-#: plugin.py:435 plugin.py:453
-msgid "violet"
-msgstr "Violett"
-
-#: plugin.py:125 plugin.py:156 plugin.py:187 plugin.py:218 plugin.py:249
-#: plugin.py:280 plugin.py:311 plugin.py:342 plugin.py:374 plugin.py:405
-#: plugin.py:436
-msgid "violet dark"
-msgstr "dunkles Violett"
-
-msgid "yellow dark"
-msgstr "dunkles Gelb"
-
-#: plugin.py:126 plugin.py:157 plugin.py:188 plugin.py:219 plugin.py:250
-#: plugin.py:281 plugin.py:312 plugin.py:343 plugin.py:375 plugin.py:406
-#: plugin.py:437 plugin.py:454 plugin.py:506
-msgid "white"
-msgstr "Weiß"
-
-#: plugin.py:344 plugin.py:481 plugin.py:502 plugin.py:519 plugin.py:528
-#: plugin.py:533 plugin.py:539
-msgid "off"
-msgstr "Aus"
-
-#: plugin.py:459
-msgid "noPicon"
-msgstr "kein Picon"
-
-#: plugin.py:460 plugin.py:473
-msgid "ZPicon"
-msgstr ""
-
-#: plugin.py:461
-msgid "ZPicon 2"
-msgstr ""
-
-#: plugin.py:462 plugin.py:474
-msgid "XPicon"
-msgstr ""
-
-#: plugin.py:463
-msgid "XPicon 2"
-msgstr ""
-
-#: plugin.py:464 plugin.py:475
-msgid "ZZPicon"
-msgstr ""
-
-#: plugin.py:465
-msgid "ZZPicon 2"
-msgstr ""
-
-#: plugin.py:466 plugin.py:476
-msgid "ZZZPicon"
-msgstr ""
-
-#: plugin.py:467
-msgid "ZZZPicon 2"
-msgstr ""
-
-#: plugin.py:471
-msgid "two columns 1"
-msgstr "zwei Spalten 1"
-
-#: plugin.py:576
-msgid "two columns 2"
-msgstr "zwei Spalten 2"
-
-#: plugin.py:583
-msgid "two columns 3"
-msgstr "zwei Spalten 3"
-
-#: plugin.py:472
-msgid "three columns"
-msgstr "drei Spalten"
-
-#: plugin.py:578
-msgid "three columns miniTV"
-msgstr "drei Spalten miniTV"
-
-#: plugin.py:477 plugin.py:489
-msgid "miniTV"
-msgstr ""
-
-#: plugin.py:477 plugin.py:584
-msgid "miniTV/PiP"
-msgstr "miniTV/Bild in Bild"
-
-#: plugin.py:482
-msgid "ZPicons"
-msgstr ""
-
-#: plugin.py:483
-msgid "XPicons"
-msgstr ""
-
-#: plugin.py:484
-msgid "ZZPicons"
-msgstr ""
-
-#: plugin.py:485
-msgid "ZZZPicons"
-msgstr ""
-
-#: plugin.py:490
-msgid "picon"
-msgstr "Picon"
-
-#: plugin.py:494
-msgid "no cover"
-msgstr "kein Cover"
-
-#: plugin.py:495
-msgid "small cover"
-msgstr "kleines Cover"
-
-#: plugin.py:496
-msgid "big cover"
-msgstr "großes Cover"
-
-#: plugin.py:497
-msgid "very big cover"
-msgstr "sehr großes Cover"
-
-#: plugin.py:501 plugin.py:529 plugin.py:540
-msgid "on"
-msgstr "An"
-
-#: plugin.py:510
-msgid "standard"
-msgstr "Standard"
-
-#: plugin.py:511
-msgid "with seconds"
-msgstr "mit Sekunden"
-
-#: plugin.py:512
-msgid "with weekday"
-msgstr "mit Wochentag"
-
-#: plugin.py:513
-msgid "analog"
-msgstr "Analog"
-
-#: plugin.py:514 plugin.py:676
-msgid "weather"
-msgstr "Wetter"
-
-#: plugin.py:515
-msgid "android"
-msgstr "Android"
-
-#: plugin.py:520 plugin.py:535
-msgid "big"
-msgstr "groß"
-
-#: plugin.py:521 plugin.py:534
-msgid "small"
-msgstr "klein"
-
-#: plugin.py:525
-msgid "NotoSans-Regular"
-msgstr ""
-
-#: plugin.py:544 plugin.py:549 plugin.py:554 plugin.py:559 plugin.py:564
-#: plugin.py:569 plugin.py:574 plugin.py:579 plugin.py:584 plugin.py:589
-msgid "top/bottom"
-msgstr "oben/unten"
-
-#: plugin.py:545 plugin.py:550 plugin.py:555 plugin.py:560 plugin.py:565
-#: plugin.py:570 plugin.py:575 plugin.py:580 plugin.py:585 plugin.py:590
-msgid "left/right"
-msgstr "links/rechts"
-
-#: plugin.py:669 plugin.py:675 plugin.py:681 plugin.py:687 plugin.py:693
-#: plugin.py:699 plugin.py:705 plugin.py:711 plugin.py:717 plugin.py:723
-#: plugin.py:729 plugin.py:735 plugin.py:741 plugin.py:747 plugin.py:753
-#: plugin.py:759 plugin.py:765
-msgid "full"
-msgstr "voll"
-
-#: plugin.py:652
-msgid "_____________________________________________ system _________________________________________________"
-msgstr "_____________________________________________ System _________________________________________________"
-
-#: plugin.py:653
-msgid "image"
-msgstr "Image"
-
-#: plugin.py:654
-msgid "button style"
-msgstr "Button Style"
-
-#: plugin.py:655
-msgid "running text"
-msgstr "Lauftext"
-
-#: plugin.py:656
-msgid "Weather ID"
-msgstr "Wetter ID"
-
-#: plugin.py:657
-msgid "_____________________________________________ background _____________________________________________"
-msgstr "_____________________________________________ Hintergrund _____________________________________________"
-
-#: plugin.py:658
-msgid "transparency"
-msgstr "Transparenz"
-
-#: plugin.py:659
-msgid "color layer main"
-msgstr "Farbe Hauptfenster"
-
-#: plugin.py:660
-msgid "color layer right"
-msgstr "Farbe rechtes Fenster"
-
-#: plugin.py:661
-msgid "_____________________________________________ colors _________________________________________________"
-msgstr "_____________________________________________ Farben _________________________________________________"
-
-#: plugin.py:662
-msgid "line"
-msgstr "Linie"
-
-#: plugin.py:663
-msgid "border"
-msgstr "Rand"
-
-#: plugin.py:664
-msgid "listselection"
-msgstr "Auswahlbalken"
-
-#: plugin.py:665
-msgid "listselection border"
-msgstr "Auswahlbalkenrahmen"
-
-#: plugin.py:666
-msgid "progress-/volumebar"
-msgstr "Fortschritts-/Lautstärkebalken"
-
-#: plugin.py:667
-msgid "font 1"
-msgstr "Schrift 1"
-
-#: plugin.py:668
-msgid "font 2"
-msgstr "Schrift 2"
-
-#: plugin.py:669
-msgid "selection font"
-msgstr "Schrift Auswahlbalken"
-
-#: plugin.py:670
-msgid "button text"
-msgstr "Button Text"
-
-#: plugin.py:671
-msgid "_____________________________________________ infobar ________________________________________________"
-msgstr "_____________________________________________ Infobar ________________________________________________"
-
-#: plugin.py:672
-msgid "style"
-msgstr "Stil"
-
-#: plugin.py:795
-msgid "color 1"
-msgstr "Farbe 1"
-
-#: plugin.py:796
-msgid "color 2"
-msgstr "Farbe 2"
-
-#: plugin.py:703 plugin.py:705 plugin.py:707 plugin.py:709 plugin.py:711
-#: plugin.py:713
-msgid "channelname"
-msgstr "Kanalname"
-
-#: plugin.py:847
-msgid "color channelname"
-msgstr "Farbe Kanalname"
-
-#: plugin.py:673
-msgid "clock"
-msgstr "Uhr"
-
-#: plugin.py:675
-msgid "color clock analog"
-msgstr "Farbe für Analoguhr"
-
-#: plugin.py:855
-msgid "______________________________________________ infobar extras_________________________________________"
-msgstr "_____________________________________________ Infobar Extras________________________________________________"
-
-#: plugin.py:677
-msgid "satellite information"
-msgstr "Satelliteninformationen"
-
-#: plugin.py:678
-msgid "system information"
-msgstr "Systeminformationen"
-
-#: plugin.py:679
-msgid "ecm information"
-msgstr "ECM-Informationen"
-
-#: plugin.py:680
-msgid "______________________________________________ general _______________________________________________"
-msgstr "______________________________________________ Allgemein _______________________________________________"
-
-#: plugin.py:682 plugin.py:684 plugin.py:686 plugin.py:688 plugin.py:690
-#: plugin.py:692 plugin.py:694 plugin.py:696 plugin.py:698 plugin.py:700
-msgid "second infobar"
-msgstr "zweite Infobar"
-
-#: plugin.py:701
-msgid "channel selection"
-msgstr "Kanalauswahl"
-
-#: plugin.py:702
-msgid "EMC"
-msgstr ""
-
-#: plugin.py:703
-msgid "ExtNumberZap"
-msgstr ""
-
-#: plugin.py:704
-msgid "volume style"
-msgstr "Lautstärke"
-
-#: plugin.py:705
-msgid "CoolTVGuide"
-msgstr ""
-
 #: plugin.py:759
 msgid "Do you really want to reboot now?"
 msgstr "Wollen Sie jetzt neu starten?"
-
-#: plugin.py:760 plugin.py:922
-msgid "Restart GUI"
-msgstr "GUI neu starten"
-
-#: plugin.py:763
-msgid "Information"
-msgstr "Informationen"
-
-#: plugin.py:915
-msgid "Error creating Skin!"
-msgstr "Fehler beim Erstellen des Skin!"
 
 #: plugin.py:921
 msgid ""
@@ -1027,6 +1350,63 @@ msgstr ""
 "\n"
 "Wollen Sie jetzt neu starten?"
 
-#: plugin.py:1033 plugin.py:1035
-msgid "Configuration tool for SevenHD"
-msgstr ""
+#~ msgid " infobar extras "
+#~ msgstr "Infobar Extras"
+
+#~ msgid " weather "
+#~ msgstr "Wetter"
+
+#~ msgid "clock"
+#~ msgstr "Uhr"
+
+#~ msgid "transparency"
+#~ msgstr "Transparenz"
+
+#~ msgid "plugins"
+#~ msgstr "Plugins"
+
+#~ msgid "not installed"
+#~ msgstr "nicht installiert"
+
+#~ msgid "background"
+#~ msgstr "Hintergrund"
+
+#~ msgid "MENU und PLUGINS"
+#~ msgstr "Menü und Plugins"
+
+#~ msgid "color font"
+#~ msgstr "Farbe Schrift"
+
+#~ msgid "color lines"
+#~ msgstr "Farbe Linie"
+
+#~ msgid "listselection"
+#~ msgstr "List Einstellungen"
+
+#~ msgid "debug"
+#~ msgstr "Debug"
+
+#~ msgid "grab Picture"
+#~ msgstr "mache Bild"
+
+#~ msgid ""
+#~ "Youre Skin Config is ready to share.\n"
+#~ "Look in /tmp for youre Skin File."
+#~ msgstr ""
+#~ "Deine Skin Konfiguration ist bereit zum teilen.\n"
+#~ "Schau unter /tmp für Dein Skin File."
+
+#~ msgid "Anything goes wrong"
+#~ msgstr "Irgendetwas läuft falsch"
+
+#~ msgid "New Skin Config is saved."
+#~ msgstr "Neue Skin Konfiguration wurde gespeichert."
+
+#~ msgid "Skin Config is wrong"
+#~ msgstr "Skin Konfiguration ist falsch"
+
+#~ msgid "New Skin Config is load."
+#~ msgstr "Neue Skin Konfiguration wurde geladen."
+
+#~ msgid "Only Numbers allowed!"
+#~ msgstr "NEs sind nur Ziffern zulässig!"

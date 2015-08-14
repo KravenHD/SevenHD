@@ -251,19 +251,9 @@
     <widget name="ButtonBluetext" font="Regular; 20" halign="left" valign="center" position="664,662" size="148,48" backgroundColor="SevenBackground" foregroundColor="SevenButtonText" transparent="0" zPosition="1" />
     <panel name="template_menu_left_button" />
   </screen>
-  <!-- SoftcamPanel -->
-  <screen backgroundColor="transparent" flags="wfNoBorder" name="SoftCamPanel" position="0,0" size="1280,720" title="SoftCam Panel">
-    <widget name="config" position="70,80" size="345,60" />
-    <widget name="enigma2" position="455,80" size="320,30" zPosition="2" font="Regular;17" />
-    <widget name="actifcam2" zPosition="2" position="70,215" size="345,30" font="Regular2; 18" halign="left" foregroundColor="SevenFont2" />
-    <widget name="actifcam" zPosition="2" position="70,161" size="345,30" font="Regular2; 18" halign="left" foregroundColor="SevenFont2" />
-    <widget name="ecminfo" position="70,282" size="345,260" zPosition="2" font="Regular;17" />
-    <panel name="template_menu_left_button" />
-    <panel name="template_colorkey_text_source" />
-  </screen>
   <!-- NFRCamManager -->
-  <screen name="NFRCamManager" position="0,0" size="1280,720" title="NFR SoftCam Manager" flags="wfNoBorder" backgroundColor="transparent">
-    <widget source="list" render="Listbox" position="70,80" size="705,270" scrollbarMode="showOnDemand">
+<screen name="NFRCamManager" position="0,0" size="1280,720" title="NFR SoftCam Manager" flags="wfNoBorder" backgroundColor="transparent">
+    <widget source="list" render="Listbox" position="70,80" size="705,270" transparent="0" foregroundColor="SevenFont1" backgroundColor="SevenBackground" scrollbarMode="showNever">
       <convert type="TemplatedMultiContent">
 				{"template": [
 						MultiContentEntryText(pos = (5, 1), size = (540, 28), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 0 is the name
@@ -276,7 +266,7 @@
 				}
 			</convert>
     </widget>
-    <widget name="ecminfo" position="70,360" size="705,270" zPosition="2" font="Regular;17" />
+    <widget name="status" position="70,360" size="705,270" transparent="0" foregroundColor="SevenFont1" backgroundColor="SevenBackground" font="Regular;17" />
     <panel name="template_menu_left_button" />
     <panel name="template_colorkey_text" />
   </screen>
@@ -314,8 +304,8 @@
     <panel name="template_colorkey_text" />
   </screen>
   <!-- NFR4XChooseOnLineImage-->
-  <screen name="NFR4XChooseOnLineImage" title="NFR4XBoot - Download OnLine Images" position="0,0" size="1280,720" backgroundColor="transparent" flags="wfNoBorder">
-    <widget source="list" render="Listbox" position="70,80" size="708,520" scrollbarMode="showOnDemand" transparent="0">
+<screen name="NFR4XChooseOnLineImage" title="NFR4XBoot - Download OnLine Images" position="0,0" size="1280,720" backgroundColor="transparent" flags="wfNoBorder">
+    <widget source="list" render="Listbox" position="70,80" size="1108,520" scrollbarMode="showNever" transparent="0">
       <convert type="TemplatedMultiContent">
 {"template": [
 	MultiContentEntryText(pos = (0, 10), size = (830, 30), font=0, flags = RT_HALIGN_RIGHT, text = 0),
@@ -327,28 +317,28 @@
 	}
  </convert>
     </widget>
-    <panel name="template_menu_left" />
+    <panel name="template_menu_full" />
   </screen>
   <!-- NFR4XBootImageInstall-->
   <screen name="NFR4XBootImageInstall" title="NFR4XBoot - Image Installation" position="0,0" size="1280,720" backgroundColor="transparent" flags="wfNoBorder">
-    <widget name="config" position="70,80" size="705,360" scrollbarMode="showOnDemand" transparent="0" />
+    <widget name="config" position="70,80" size="705,360" scrollbarMode="showNever" transparent="0" />
     <widget name="HelpWindow" position="125,450" size="600,200" transparent="0" alphatest="blend" zPosition="2" />
     <panel name="template_menu_left_button" />
     <panel name="template_colorkey_text" />
   </screen>
   <!-- NFR4XBootImageChoose-->
-  <screen name="NFR4XBootImageChoose" title="NFR4XBoot - Image Choose" position="0,0" size="1280,720" backgroundColor="transparent" flags="wfNoBorder">
-    <widget name="label2" position="163,98" size="300,30" zPosition="1" font="Regular;20" backgroundColor="yellow" transparent="0" foregroundColor="yellow" />
-    <widget name="label3" position="163,150" size="300,30" zPosition="1" font="Regular;20" backgroundColor="yellow" transparent="0" foregroundColor="yellow" />
-    <widget name="label4" position="163,188" size="357,30" zPosition="1" font="Regular;20" backgroundColor="yellow" transparent="0" foregroundColor="yellow" />
-    <widget name="label5" position="163,225" size="357,30" zPosition="1" font="Regular;20" backgroundColor="yellow" transparent="0" foregroundColor="yellow" />
-    <widget name="label6" position="478,98" size="300,30" zPosition="1" halign="right" font="Regular;20" backgroundColor="green" foregroundColor="green" transparent="0" />
-    <widget name="label7" position="478,150" size="300,30" zPosition="1" halign="right" font="Regular;20" backgroundColor="green" foregroundColor="green" transparent="0" />
-    <widget name="label8" position="422,188" size="357,30" zPosition="1" halign="right" font="Regular;20" backgroundColor="green" foregroundColor="green" transparent="0" />
-    <widget name="label9" position="421,225" size="357,30" zPosition="1" halign="right" font="Regular;20" backgroundColor="green" foregroundColor="green" transparent="0" />
-    <widget name="label10" position="163,264" size="550,30" zPosition="1" font="Regular;20" backgroundColor="yellow" transparent="0" foregroundColor="yellow" />
-    <widget name="label11" position="677,264" size="103,30" zPosition="1" halign="right" font="Regular;20" backgroundColor="green" foregroundColor="green" transparent="0" />
-    <widget name="label1" position="65,320" size="715,22" zPosition="1" halign="center" font="Regular;18" backgroundColor="green" transparent="0" foregroundColor="green" />
+<screen name="NFR4XBootImageChoose" title="NFR4XBoot - Image Choose" position="0,0" size="1280,720" backgroundColor="transparent" flags="wfNoBorder">
+    <widget name="label2" position="163,98" size="300,30" zPosition="1" font="Regular;20" backgroundColor="SevenBackground" transparent="0" foregroundColor="yellow" />
+    <widget name="label3" position="163,150" size="300,30" zPosition="1" font="Regular;20" backgroundColor="SevenBackground" transparent="0" foregroundColor="yellow" />
+    <widget name="label4" position="163,188" size="357,30" zPosition="1" font="Regular;20" backgroundColor="SevenBackground" transparent="1" foregroundColor="yellow" />
+    <widget name="label5" position="163,225" size="357,30" zPosition="1" font="Regular;20" backgroundColor="SevenBackground" transparent="1" foregroundColor="yellow" />
+    <widget name="label6" position="478,98" size="300,30" zPosition="1" halign="right" font="Regular;20" backgroundColor="SevenBackground" foregroundColor="green" transparent="0" />
+    <widget name="label7" position="478,150" size="300,30" zPosition="1" halign="right" font="Regular;20" backgroundColor="SevenBackground" foregroundColor="green" transparent="0" />
+    <widget name="label8" position="422,188" size="357,30" zPosition="1" halign="right" font="Regular;20" backgroundColor="SevenBackground" foregroundColor="green" transparent="1" />
+    <widget name="label9" position="421,225" size="357,30" zPosition="1" halign="right" font="Regular;20" backgroundColor="SevenBackground" foregroundColor="green" transparent="1" />
+    <widget name="label10" position="163,264" size="550,30" zPosition="1" font="Regular;20" backgroundColor="SevenBackground" transparent="1" foregroundColor="yellow" />
+    <widget name="label11" position="677,264" size="103,30" zPosition="1" halign="right" font="Regular;20" backgroundColor="SevenBackground" foregroundColor="green" transparent="1" />
+    <widget name="label1" position="65,320" size="715,22" zPosition="1" halign="center" font="Regular;18" backgroundColor="SevenBackground" transparent="0" foregroundColor="green" />
     <widget name="device_icon" position="65,98" size="80,80" alphatest="on" />
     <widget name="free_space_progressbar" position="163,132" size="615,13" borderWidth="1" zPosition="3" />
     <widget name="config" position="65,370" size="715,268" scrollbarMode="showOnDemand" transparent="0" />
@@ -363,5 +353,24 @@
     <panel name="template_menu_left_button" />
     <panel name="template_colorkey_text" />
   </screen>
+  <!-- SpinnerSelection-->
+<screen backgroundColor="transparent" flags="wfNoBorder" name="SpinnerSelectionBox" position="0,0" size="1280,720" title="SpinnerSelection">
+  <widget position="70,80" name="list" itemHeight="30" font="Regular;20" foregroundColor="SevenFont1" backgroundColor="SevenBackground" size="708,504" transparent="0" />
+  <widget name="bild" position="1005,264" size="150,150" backgroundColor="SevenBackground" transparent="0" />
+  <widget name="text" position="895,193" size="365,60" font="Regular2;20" backgroundColor="SevenBackgroundRight" foregroundColor="SevenFont2" halign="center" transparent="0" />
+<panel name="template_menu_left_right" />
+</screen>
+  <!-- RadiologoSelection-->
+  <screen backgroundColor="transparent" flags="wfNoBorder" name="RadiologoSetupScreen" position="0,0" size="1280,720" title="Info Panel">
+  <widget position="70,80" name="Mlist" font="Regular;20" foregroundColor="SevenFont1" backgroundColor="SevenBackground" size="708,504" transparent="0" />
+  <widget name="label1" position="70,599" size="708,40" font="Regular2;20" backgroundColor="SevenBackground" foregroundColor="SevenFont2" />
+<panel name="template_menu_left" />
+</screen>
+  <!-- BootlogoSelection-->
+  <screen backgroundColor="transparent" flags="wfNoBorder" name="BootlogoSetupScreen" position="0,0" size="1280,720" title="Info Panel">
+  <widget position="70,80" name="Mlist" font="Regular;20" foregroundColor="SevenFont1" backgroundColor="SevenBackground" size="708,504" transparent="0" />
+  <widget name="label1" position="70,599" size="708,40" font="Regular2;20" backgroundColor="SevenBackground" foregroundColor="SevenFont2" />
+<panel name="template_menu_left" />
+</screen>
   <!-- main-custom-nfr */ -->
   

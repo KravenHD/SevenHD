@@ -1,8 +1,6 @@
  
 <!-- /* main-custom-openmips -->
-
 <!-- ********** openMips ********** -->
-
 <!-- About -->
 <screen backgroundColor="transparent" flags="wfNoBorder" name="About" position="1,1" size="1280,720" title="About">
     <widget backgroundColor="SevenBackground" font="Regular2; 26" position="70,71" render="Label" size="700,40" source="EnigmaVersion" transparent="0" />
@@ -19,8 +17,6 @@
     <widget backgroundColor="SevenBackground" font="Regular2; 24" position="70,560" render="Label" size="700,65" source="hddA" transparent="0" />
 <panel name="template_menu_left" />
   </screen>
- 
- 
  <!-- AboutOE -->
   <screen name="AboutOE" position="0,0" size="1280,720" title="About" flags="wfNoBorder" backgroundColor="transparent">
     <widget source="lab1" render="Label" position="70,123" size="369,35" font="Regular;30" transparent="0" zPosition="2" />
@@ -32,38 +28,28 @@
     <widget name="AboutScrollLabel" position="70,253" size="650,360" scrollbarMode="showOnDemand" font="Regular;20" transparent="0" zPosition="1" />
 <panel name="template_menu_left" />
   </screen>
-  
-  
 <!-- HotkeySetup -->
 <screen backgroundColor="transparent" flags="wfNoBorder" name="HotkeySetup" position="0,0" size="1280,720" title="Tasteneinstellungen">
   <widget name="list" position="40,99" size="385,529" scrollbarMode="showOnDemand" font="Regular;22" itemHeight="28" transparent="0" foregroundColor="white" enableWrapAround="1" backgroundColor="SevenBackground" zPosition="-8" />
   <widget name="choosen" position="427,99" size="385,530" scrollbarMode="showOnDemand" font="Regular2; 22" itemHeight="28" foregroundColor="SevenFont1" backgroundColor="SevenBackground" zPosition="-8" />
   <widget name="description" position="938,239" size="302,250" font="Regular2; 16" foregroundColor="SevenFont2" valign="center" halign="center" backgroundColor="SevenBackgroundRight" zPosition="-8" />
-
 <panel name="template_menu_left_right_button" />
 <panel name="template_colorkey_text_source" />
 </screen>
-
-
 <!-- HotkeySetupSelect -->
 <screen backgroundColor="transparent" flags="wfNoBorder" name="HotkeySetupSelect" position="0,0" size="1280,720" title="Tasteneinstellungen">
-  
   <widget name="list" position="40,99" size="385,529" scrollbarMode="showOnDemand" font="Regular;22" itemHeight="28" transparent="0" foregroundColor="white" enableWrapAround="1" backgroundColor="SevenBackground" zPosition="-8" />
   <widget name="choosen" position="427,99" size="385,530" scrollbarMode="showOnDemand" font="Regular2; 22" itemHeight="28" backgroundColor="SevenBackground" zPosition="-8" />
   <widget name="description" position="938,239" size="302,250" font="Regular2; 16" foregroundColor="SevenFont2" valign="center" halign="center" backgroundColor="SevenBackgroundRight" zPosition="-8" />
 <panel name="template_menu_left_right_button" />
 <panel name="template_colorkey_text_source" />
 </screen>
-
-
 <!-- OSD3DSetupScreen -->
 <screen backgroundColor="transparent" flags="wfNoBorder" name="OSD3DSetupScreen" position="0,0" size="1280,720" title="OSD 3D Setup">
   <widget name="config" backgroundColor="SevenBackground" position="70,80" zPosition="1" size="708,540" />
 <panel name="template_menu_left_button" />
 <panel name="template_colorkey_text_source" />
 </screen>
-
-
 <!-- GBAspectRatioSwitchSetup -->
 <screen name="GBAspectRatioSwitchSetup" position="0,0" size="1280,720" title="GBAspectRatioSwitchSetup" flags="wfNoBorder" backgroundColor="transparent">
   <widget name="config" position="71,80" size="708,495" scrollbarMode="showOnDemand" backgroundColor="SevenBackground" zPosition="-8" />
@@ -71,8 +57,6 @@
 <panel name="template_menu_left_button" />
 <panel name="template_colorkey_text_button" />
 </screen>
-
-
 <!-- SwapManager -->
 <screen name="SwapManager" title="Swap File Manager" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
   <widget name="autostart_off" position="102,413" zPosition="1" pixmap="skin_default/icons/lock_off.png" size="32,32" alphatest="on" />
@@ -88,32 +72,24 @@
 <panel name="template_menu_left_button" />
 <panel name="template_colorkey_text" />
 </screen>
-
-
 <!-- FastScanScreen -->
 <screen backgroundColor="transparent" flags="wfNoBorder" name="FastScanScreen" position="0,0" size="1280,720" title="Fast Scan">
   <widget name="config" position="70,80" size="708,540" font="Regular;22" foregroundColor="SevenFont1" transparent="0" halign="left" valign="top" />
 <panel name="template_menu_left_button" />
 <panel name="template_colorkey_text_source" />
 </screen>
-
-
 <!-- ZapHistoryBrowser -->
 <screen backgroundColor="transparent" flags="wfNoBorder" name="ZapHistoryBrowser" position="0,0" size="1280,720" title="Zap History Browser">
   <widget name="list" position="70,80" size="708,540" scrollbarMode="showOnDemand" itemHeight="50" backgroundColor="SevenBackground" zPosition="-8" />
 <panel name="template_menu_left_button" />
 <panel name="template_colorkey_text_source" />
 </screen>
-
-
 <!-- OMMetrixWeatherSetup -->
 <screen backgroundColor="transparent" flags="wfNoBorder" name="OMMetrixWeatherSetup" position="0,0" size="1280,720" title="OMMetrixWeatherSetup">
   <widget name="config" position="70,80" size="708,540" itemHeight="30" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="SevenBackground" transparent="0" />
 <panel name="template_menu_left_button" />
 <panel name="template_colorkey_text_source" />
 </screen>
-
-
 <!-- Softcam Panel -->
 <screen backgroundColor="transparent" flags="wfNoBorder" name="SoftCamPanel" position="0,0" size="1280,720" title="SoftCam Panel">
   <widget name="entries" position="62,115" size="755,150" />
@@ -123,9 +99,6 @@
 <widget name="text" position="106,321" size="345,260" zPosition="2" font="Regular;17" />
 <panel name="template_menu_left" />
 </screen>
- 
- 
- 
 <!-- SoftcamPackages -->
 <screen name="SoftCamPackages" position="0,0" size="1280,720" title="Install Softcams" flags="wfNoBorder" backgroundColor="transparent">
 <widget source="list" render="Listbox" position="70,80" size="705,540" scrollbarMode="showOnDemand">
@@ -143,8 +116,6 @@
 </widget>
 <panel name="template_menu_left" />
 </screen>
-
-
 <!-- HddSetup -->
 <screen backgroundColor="transparent" flags="wfNoBorder" name="HddSetup" position="0,0" size="1280,720" title="Hard Drive Setup">
   <widget source="menu" render="Listbox" position="70,80" size="708,540" scrollbarMode="showOnDemand" itemHeight="50" transparent="0">
@@ -162,8 +133,6 @@
 <panel name="template_menu_left_button" />
 <panel name="template_colorkey_text_source" />
 </screen>
-
-
 <!-- HddPartitions -->
 <screen backgroundColor="transparent" flags="wfNoBorder" name="HddPartitions" position="0,0" size="1280,720" title="Hard Drive Partitions">
   <widget name="label_disk" position="70,71" font="Regular2; 26" size="708,30" halign="center" valign="center" backgroundColor="SevenBackground" transparent="0" foregroundColor="SevenFont2" />
@@ -182,9 +151,6 @@
 <panel name="template_menu_left_button" />
 <panel name="template_colorkey_text_source" />
 </screen>
-
-
-
 <!-- HddMounts -->
 <screen backgroundColor="transparent" flags="wfNoBorder" name="HddMount" position="0,0" size="1280,720" title="Hard Drive Mount">
   <widget name="menu" render="Listbox" position="70,80" size="708,540" scrollbarMode="showOnDemand" itemHeight="50" transparent="0">
@@ -202,9 +168,6 @@
 <panel name="template_menu_left_button" />
 <panel name="template_colorkey_text_source" />
 </screen>
-
-
-
 <!-- HddInfo -->
 <screen backgroundColor="transparent" flags="wfNoBorder" name="HddInfo" position="0,0" size="1280,720" title="Hard Drive Info">
    <widget name="config" position="95,237" size="585,30" scrollbarMode="showOnDemand" backgroundColor="SevenBackground" transparent="0" />
@@ -220,8 +183,6 @@
 <panel name="template_menu_left_button" />
 <panel name="template_colorkey_text_source" />
 </screen>
-
-
 <!-- HddFastRemove -->
 <screen backgroundColor="transparent" flags="wfNoBorder" name="HddFastRemove" position="0,0" size="1280,720" title="Hard Drive Fast Umount">
    <widget name="menu" render="Listbox" position="70,80" size="708,540" scrollbarMode="showOnDemand" itemHeight="50" transparent="0">
@@ -239,8 +200,6 @@
 <panel name="template_menu_left_button" />
 <panel name="template_colorkey_text_source" />
 </screen>
-
-
 <!-- LCDSkinSelector -->
 <screen name="LCDSkinSelector" position="0,0" size="1280,720" title="LCD Skin-Selector" backgroundColor="transparent">
 <widget name="lab1" position="70,201" size="250,26" zPosition="1" font="Regular;22" halign="left" transparent="0" />
@@ -250,8 +209,6 @@
 <widget name="lab3" position="70,113" halign="center" size="700,26" zPosition="1" foregroundColor="SevenFont2" font="Regular2; 22" transparent="0" />
 <panel name="template_menu_left" />
 </screen>
-
-
 <!-- LCDClockSelector -->
 <screen name="LCDClockSelector" position="0,0" size="1280,720" title="LCD Clock-Selector" backgroundColor="transparent">
 <widget name="lab1" position="70,201" size="250,26" zPosition="1" font="Regular;22" halign="left" transparent="0" />
@@ -261,17 +218,12 @@
 <widget name="lab3" position="70,113" halign="center" size="700,26" zPosition="1" foregroundColor="SevenFont2" font="Regular2; 22" transparent="0" />
 <panel name="template_menu_left" />
 </screen>
-
-
 <!-- LED_GigaSetup -->
 <screen name="LED_GigaSetup" position="0,0" size="1280,720" title="LED Setup" backgroundColor="transparent">
 <widget name="config" position="70,80" size="708,540" scrollbarMode="showOnDemand" transparent="0" />
 <panel name="template_menu_left_button" />
 <panel name="template_colorkey_text_source" />
 </screen>
-
-
-
 <!-- SoftcamSetup -->
 <screen name="SoftcamSetup" position="0,0" size="1280,720" title="SoftcamSetup" backgroundColor="transparent">
 <widget name="config" position="70,129" size="550,200" backgroundColor="SevenBackground" transparent="0" />
@@ -279,7 +231,6 @@
 <panel name="template_menu_left_button" />
 <panel name="template_colorkey_text_source" />
 </screen>
-
  <!-- GraphMultiEPGList -->
 <screen backgroundColor="transparent" flags="wfNoBorder" name="GraphMultiEPGList" position="0,0" size="1280,720" title="Electronic Program Guide">
   <widget backgroundColor="SevenBackground" font="Regular2; 28" position="25,70" render="Label" size="700,39" source="Event" transparent="1">
@@ -307,5 +258,10 @@
   <panel name="template_menu_full_button" />
   <panel name="template_colorkey_text" />
 </screen>
-
+ <!-- GigaBlue IPBox Client -->
+<screen name="GBIpboxMenu" position="0, 0" flags="wfNoBorder" title="GigaBlue IPBox Client" transparent="0" backgroundColor="transparent" size="1280, 720">
+<widget name="config" position="21,80" size="806,540" scrollbarMode="showOnDemand" backgroundColor="SevenBackground" transparent="0" />
+<panel name="template_menu_left_button" />
+<panel name="template_colorkey_text" />
+</screen>
 <!-- main-custom-openmips */ -->

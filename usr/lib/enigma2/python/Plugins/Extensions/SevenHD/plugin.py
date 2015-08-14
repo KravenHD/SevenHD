@@ -20,36 +20,41 @@
 #
 #
 #######################################################################
-version = '2.7.8.1'
-import os
-import re
-import socket
-import gettext
-import urllib
-from Plugins.Plugin import PluginDescriptor
-from Screens.Screen import Screen
-from Screens.MessageBox import MessageBox
-from Screens.ChoiceBox import ChoiceBox
-from Screens.Console import Console
-from Screens.Standby import TryQuitMainloop
-from Components.ActionMap import ActionMap
-from Components.AVSwitch import AVSwitch
-from Components.config import config, configfile, ConfigYesNo, ConfigSubsection, getConfigListEntry, ConfigSelection, ConfigNumber, ConfigText, ConfigInteger
-from Components.ConfigList import ConfigListScreen
-from Components.Sources.StaticText import StaticText
-from Components.Label import Label
-from Components.Pixmap import Pixmap
-from Components.Language import language
-from os import environ, listdir, remove, rename, system
-from shutil import move
-from skin import parseColor
-from urllib import urlencode
-from urllib2 import urlopen, URLError
-from enigma import ePicLoad, getDesktop, eConsoleAppContainer
-from Tools.BoundFunction import boundFunction
-from Tools.Directories import fileExists, resolveFilename, SCOPE_LANGUAGE, SCOPE_PLUGINS
+from GlobalImport import *
+version = '3.0.0'
+from MainSettings import MainSettings
+from MenuPluginSettings import MenuPluginSettings
+from InfobarSettings import InfobarSettings
+from InfobarExtraSettings import InfobarExtraSettings
+from ChannelSettings import ChannelSettings
+from SonstigeSettings import SonstigeSettings
+from ShareSkinSettings import ShareSkinSettings
+
+class MainMenuList(MenuList):
+    def __init__(self, list, font0 = 24, font1 = 16, itemHeight = 50, enableWrapAround = True):
+        MenuList.__init__(self, list, enableWrapAround, eListboxPythonMultiContent)
+        screenwidth = getDesktop(0).size().width()
+        if screenwidth and screenwidth == 1920:
+            self.l.setFont(0, gFont("Regular", int(font0*1.5)))
+            self.l.setFont(1, gFont("Regular", int(font1*1.5)))
+            self.l.setItemHeight(int(itemHeight*1.5))
+        else:
+            self.l.setFont(0, gFont("Regular", font0))
+            self.l.setFont(1, gFont("Regular", font1))
+            self.l.setItemHeight(itemHeight)
+
 #############################################################
 
+def MenuEntryItem(itemDescription, key):
+    res = [(itemDescription, key)]
+    screenwidth = getDesktop(0).size().width()
+    if screenwidth and screenwidth == 1920:
+        res.append(MultiContentEntryText(pos=(15, 8), size=(660, 68), font=0, text=itemDescription))
+    else:
+        res.append(MultiContentEntryText(pos=(10, 5), size=(440, 45), font=0, text=itemDescription))
+    return res
+
+#############################################################
 lang = language.getLanguage()
 environ["LANGUAGE"] = lang[:2]
 gettext.bindtextdomain("enigma2", resolveFilename(SCOPE_LANGUAGE))
@@ -67,298 +72,18 @@ def translateBlock(block):
 		if block.__contains__(x[0]):
 			block = block.replace(x[0], x[1])
 	return block
-
 #############################################################
-config.plugins.SevenHD = ConfigSubsection()
-
-config.plugins.SevenHD.weather_city = ConfigNumber(default="924938")
-
-config.plugins.SevenHD.AutoWoeID = ConfigYesNo(default= True)
-
-config.plugins.SevenHD.debug = ConfigYesNo(default = False)
-
-config.plugins.SevenHD.Image = ConfigSelection(default="main-custom-openatv", choices = [
-				("main-custom-atemio4you", _("Atemio4You")),
-				("main-custom-hdmu", _("HDMU")),
-				("main-custom-openatv", _("openATV")),
-				("main-custom-openhdf", _("openHDF")),
-				("main-custom-openmips", _("openMIPS")),
-				("main-custom-opennfr", _("openNFR"))
-				])
-				
-config.plugins.SevenHD.Header = ConfigSelection(default="header-seven", choices = [
-				("header-seven", _("SevenHD"))
-				])
-				
-config.plugins.SevenHD.Volume = ConfigSelection(default="volume-original", choices = [
-				("volume-original", _("original")),
-				("volume-left-side", _("left")),
-				("volume-right-side", _("right")),
-				("volume-ontop", _("top")),
-				("volume-number", _("number")),
-				("volume-center", _("center"))
-				])
-				
-config.plugins.SevenHD.BackgroundColorTrans = ConfigSelection(default="0A", choices = [
-				("0A", _("low")),
-				("4A", _("medium")),
-				("8A", _("high"))
-				])
-				
-config.plugins.SevenHD.BackgroundRightColorTrans = ConfigSelection(default="0D", choices = [
-				("0D", _("low")),
-				("4D", _("medium")),
-				("8C", _("high"))
-				])
-
-ColorList = []
-ColorList.append(("00F0A30A", _("amber")))
-ColorList.append(("00B27708", _("amber dark")))
-ColorList.append(("001B1775", _("blue")))
-ColorList.append(("000E0C3F", _("blue dark")))
-ColorList.append(("007D5929", _("brown")))
-ColorList.append(("003F2D15", _("brown dark")))
-ColorList.append(("000050EF", _("cobalt")))
-ColorList.append(("00001F59", _("cobalt dark")))
-ColorList.append(("001BA1E2", _("cyan")))
-ColorList.append(("000F5B7F", _("cyan dark")))
-ColorList.append(("00999999", _("grey")))
-ColorList.append(("003F3F3F", _("grey dark")))
-ColorList.append(("0070AD11", _("green")))
-ColorList.append(("00213305", _("green dark")))
-ColorList.append(("006D8764", _("olive")))
-ColorList.append(("00313D2D", _("olive dark")))
-ColorList.append(("00C3461B", _("orange")))
-ColorList.append(("00892E13", _("orange dark")))
-ColorList.append(("00F472D0", _("pink")))
-ColorList.append(("00723562", _("pink dark")))
-ColorList.append(("00E51400", _("red")))
-ColorList.append(("00330400", _("red dark")))
-ColorList.append(("00647687", _("steel")))
-ColorList.append(("00262C33", _("steel dark")))
-ColorList.append(("006C0AAB", _("violet")))
-ColorList.append(("001F0333", _("violet dark")))
-ColorList.append(("00FFBE00", _("yellow dark")))
-ColorList.append(("00FFF006", _("yellow")))
-
-BackgroundList = [("00000000", _("black")), ("00ffffff", _("white"))]
-BackgroundList = ColorList + BackgroundList
-config.plugins.SevenHD.Background = ConfigSelection(default="00000000", choices = BackgroundList)
-
-BackgroundRightList = [("00000001", _("black")), ("00ffffff", _("white"))]
-BackgroundRightList = ColorList + BackgroundRightList
-config.plugins.SevenHD.BackgroundRight = ConfigSelection(default="00000001", choices = BackgroundRightList)				
-
-BackgroundIB1List = [("00000002", _("black")), ("00ffffff", _("white"))]
-BackgroundIB1List = ColorList + BackgroundIB1List
-config.plugins.SevenHD.BackgroundIB1 = ConfigSelection(default="00000002", choices = BackgroundIB1List)
-
-BackgroundIB2List = [("00000003", _("black")), ("00ffffff", _("white"))]
-BackgroundIB2List = ColorList + BackgroundIB2List
-config.plugins.SevenHD.BackgroundIB2 = ConfigSelection(default="00000003", choices = BackgroundIB2List)
-
-SelectionBackgroundList = [("00000000", _("black")), ("00ffffff", _("white"))]
-SelectionBackgroundList = ColorList + SelectionBackgroundList
-config.plugins.SevenHD.SelectionBackground = ConfigSelection(default="000050EF", choices = SelectionBackgroundList)
-
-Font1List = [("00000000", _("black")), ("00fffff3", _("white"))]
-Font1List = ColorList + Font1List
-config.plugins.SevenHD.Font1 = ConfigSelection(default="00fffff3", choices = Font1List)
-
-Font2List = [("00000000", _("black")), ("00fffff4", _("white"))]
-Font2List = ColorList + Font2List
-config.plugins.SevenHD.Font2 = ConfigSelection(default="00fffff4", choices = Font2List)
-
-FontCNList = [("00000000", _("black")), ("00fffff8", _("white"))]
-FontCNList = ColorList + FontCNList
-config.plugins.SevenHD.FontCN = ConfigSelection(default="00fffff8", choices = FontCNList)
-
-SelectionFontList = [("00000000", _("black")), ("00fffff7", _("white"))]
-SelectionFontList = ColorList + SelectionFontList
-config.plugins.SevenHD.SelectionFont = ConfigSelection(default="00fffff7", choices = SelectionFontList)
-
-ButtonTextList = [("00000000", _("black")), ("00fffff2", _("white"))]
-ButtonTextList = ColorList + ButtonTextList
-config.plugins.SevenHD.ButtonText = ConfigSelection(default="00fffff2", choices = ButtonTextList)
-
-BorderList = [("00000000", _("black")), ("00fffff1", _("white")), ("ff000000", _("off"))]
-BorderList = ColorList + BorderList
-config.plugins.SevenHD.Border = ConfigSelection(default="00fffff1", choices = BorderList)
-
-ProgressList = [("00000000", _("black")), ("00fffff6", _("white")), ("progress", _("bunt"))]
-ProgressList = ColorList + ProgressList
-config.plugins.SevenHD.Progress = ConfigSelection(default="00fffff6", choices = ProgressList)
-
-LineList = [("00000000", _("black")), ("00fffff5", _("white"))]
-LineList = ColorList + LineList
-config.plugins.SevenHD.Line = ConfigSelection(default="00fffff5", choices = LineList)
-
-SelectionBorderList = [("00000000", _("black")), ("00ffffff", _("white"))]
-SelectionBorderList = ColorList + SelectionBorderList
-config.plugins.SevenHD.SelectionBorder = ConfigSelection(default="00ffffff", choices = SelectionBorderList)
-
-config.plugins.SevenHD.AnalogStyle = ConfigSelection(default="00999999", choices = [
-				("00F0A30A", _("amber")),
-				("00000000", _("black")),
-				("001B1775", _("blue")),
-				("007D5929", _("brown")),
-				("000050EF", _("cobalt")),
-				("001BA1E2", _("cyan")),
-				("00999999", _("grey")),
-				("0070AD11", _("green")),
-				("00C3461B", _("orange")),
-				("00F472D0", _("pink")),
-				("00E51400", _("red")),
-				("00647687", _("steel")),
-				("006C0AAB", _("violet")),
-				("00ffffff", _("white"))
-				])
-				
-config.plugins.SevenHD.InfobarStyle = ConfigSelection(default="infobar-style-original", choices = [
-				("infobar-style-original", _("Original 1")),
-				("infobar-style-original2", _("Original 2")),
-				("infobar-style-original3", _("Original 3")),
-				("infobar-style-original4", _("Original 4")),
-				("infobar-style-zpicon", _("ZPicon 1")),
-				("infobar-style-zpicon2", _("ZPicon 2")),
-				("infobar-style-zpicon3", _("ZPicon 3")),
-				("infobar-style-zpicon4", _("ZPicon 4")),
-				("infobar-style-xpicon", _("XPicon 1")),
-				("infobar-style-xpicon2", _("XPicon 2")),
-				("infobar-style-xpicon3", _("XPicon 3")),
-				("infobar-style-xpicon4", _("XPicon 4")),
-				("infobar-style-zzpicon", _("ZZPicon 1")),
-				("infobar-style-zzpicon2", _("ZZPicon 2")),
-				("infobar-style-zzpicon3", _("ZZPicon 3")),
-				("infobar-style-zzpicon4", _("ZZPicon 4")),
-				("infobar-style-zzzpicon", _("ZZZPicon 1")),
-				("infobar-style-zzzpicon2", _("ZZZPicon 2")),
-				("infobar-style-zzzpicon3", _("ZZZPicon 3")),
-				("infobar-style-zzzpicon4", _("ZZZPicon 4"))
-				])
-				
-config.plugins.SevenHD.ChannelSelectionStyle = ConfigSelection(default="channelselection-twocolumns", choices = [
-				("channelselection-twocolumns", _("two columns 1")),
-				("channelselection-twocolumns2", _("two columns 2")),
-				("channelselection-twocolumns3", _("two columns 3")),
-				("channelselection-threecolumns", _("three columns")),
-				("channelselection-threecolumnsminitv", _("three columns miniTV")),
-				("channelselection-zpicon", _("ZPicon")),
-				("channelselection-minitvz", _("ZPicon/miniTV")),
-				("channelselection-xpicon", _("XPicon")),
-				("channelselection-minitvx", _("XPicon/miniTV")),
-				("channelselection-zzpicon", _("ZZPicon")),
-				("channelselection-minitvzz", _("ZZPicon/miniTV")),
-				("channelselection-zzzpicon", _("ZZZPicon")),
-				("channelselection-minitvzzz", _("ZZZPicon/miniTV")),
-				("channelselection-minitv", _("miniTV")),
-				("channelselection-pip", _("miniTV/PiP"))
-				])
-				
-config.plugins.SevenHD.NumberZapExt = ConfigSelection(default="numberzapext-none", choices = [
-				("numberzapext-none", _("off")),
-				("numberzapext-zpicon", _("ZPicons")),
-				("numberzapext-xpicon", _("XPicons")),
-				("numberzapext-zzpicon", _("ZZPicons")),
-				("numberzapext-zzzpicon", _("ZZZPicons"))
-				])
-				
-config.plugins.SevenHD.CoolTVGuide = ConfigSelection(default="cooltv-minitv", choices = [
-				("cooltv-minitv", _("miniTV")),
-				("cooltv-picon", _("picon"))
-				])
-				
-config.plugins.SevenHD.EMCStyle = ConfigSelection(default="emc-bigcover", choices = [
-				("emc-nocover", _("no cover")),
-				("emc-smallcover", _("small cover")),
-				("emc-bigcover", _("big cover")),
-				("emc-verybigcover", _("very big cover"))
-				])
-				
-config.plugins.SevenHD.RunningText = ConfigSelection(default="movetype=running", choices = [
-				("movetype=running", _("on")),
-				("movetype=none", _("off"))
-				])
-				
-config.plugins.SevenHD.ButtonStyle = ConfigSelection(default="buttons_seven_white", choices = [
-				("buttons_seven_white", _("white")),
-				("buttons_seven_black", _("black")),
-				("buttons_seven_blue", _("blue")),
-				("buttons_seven_green", _("green")),
-				("buttons_seven_grey", _("grey")),
-				("buttons_seven_orange", _("orange")),
-				("buttons_seven_red", _("red")),
-				("buttons_seven_violet", _("violet")),
-				("buttons_seven_yellow", _("yellow")),
-				("buttons_seven_black_blue", _("black/blue")),
-				("buttons_seven_black_green", _("black/green")),
-				("buttons_seven_black_orange", _("black/orange")),
-				("buttons_seven_black_red", _("black/red")),
-				("buttons_seven_black_silver", _("black/silver")),
-				("buttons_seven_black_violet", _("black/violet")),
-				("buttons_seven_black_yellow", _("black/yellow")),
-				("buttons_seven_colorfull", _("colorfull"))
-				])
-				
-config.plugins.SevenHD.ClockStyle = ConfigSelection(default="clock-standard", choices = [
-				("clock-standard", _("standard")),
-				("clock-seconds", _("with seconds")),
-				("clock-weekday", _("with weekday")),
-				("clock-analog", _("analog")),
-				("clock-weather", _("weather")),
-				("clock-android", _("android"))
-				])
-				
-config.plugins.SevenHD.WeatherStyle = ConfigSelection(default="none", choices = [
-				("none", _("off")),
-				("weather-big", _("big")),
-				("weather-left-side", _("left")),
-				("weather-small", _("small"))
-				])
-				
-config.plugins.SevenHD.FontStyle = ConfigSelection(default="noto", choices = [
-				("Noto", _("NotoSans-Regular"))
-				])
-				
-config.plugins.SevenHD.SatInfo = ConfigSelection(default="none", choices = [
-				("none", _("off")),
-				("satinfo-on", _("on"))
-				])
-				
-config.plugins.SevenHD.SysInfo = ConfigSelection(default="none", choices = [
-				("none", _("off")),
-				("sysinfo-on", _("on"))
-				])
-				
-config.plugins.SevenHD.ECMInfo = ConfigSelection(default="none", choices = [
-				("none", _("off")),
-				("ecminfo-on", _("on"))
-				])
-
-config.plugins.SevenHD.SIB = ConfigSelection(default="-top", choices = [
-				("-top", _("top/bottom")),
-				("-left", _("left/right")),
-				("-full", _("full"))
-				])				
-
-config.plugins.SevenHD.InfobarChannelName = ConfigSelection(default="none", choices = [
-				("none", _("off")),
-				("-ICN", _("on"))
-				])
-				
-#######################################################################
-
-class SevenHD(ConfigListScreen, Screen):
-	skin = """
+class SevenHD(Screen):
+    skin = """
                   <screen name="SevenHD-Setup" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
                          <eLabel font="Regular; 20" foregroundColor="#00ffffff" backgroundColor="#00000000" halign="left" valign="center" position="64,662" size="148,48" text="Cancel" transparent="1" />
                          <eLabel font="Regular; 20" foregroundColor="#00ffffff" backgroundColor="#00000000" halign="left" valign="center" position="264,662" size="148,48" text="Save" transparent="1" />
                          <eLabel font="Regular; 20" foregroundColor="#00ffffff" backgroundColor="#00000000" halign="left" valign="center" position="464,662" size="148,48" text="Reboot" transparent="1" />
-                         <eLabel font="Regular; 20" foregroundColor="#00ffffff" backgroundColor="#00000000" halign="left" valign="center" position="664,662" size="148,48" text="Weather ID" transparent="1" />
-                         <widget name="config" position="18,72" size="816,575" transparent="1" zPosition="1" backgroundColor="#00000000" />
+                         <eLabel font="Regular; 20" foregroundColor="#00ffffff" backgroundColor="#00000000" halign="left" valign="center" position="664,662" size="148,48" text="Extras" transparent="1" />
+                         <widget name="menuList" position="18,72" size="816,575" backgroundColor="#00000000"  scrollbarMode="showOnDemand" transparent="1" />
                          <eLabel position="70,12" size="708,46" text="SevenHD - Konfigurationstool" font="Regular; 35" valign="center" halign="center" transparent="1" backgroundColor="#00000000" foregroundColor="#00ffffff" name="," />
                          <eLabel position="891,657" size="372,46" text="Thanks to http://www.gigablue-support.org/" font="Regular; 12" valign="center" halign="center" transparent="1" backgroundColor="#00000000" foregroundColor="#00ffffff" name="," />
-                         <widget name="helperimage" position="891,178" size="372,328" zPosition="1" backgroundColor="#00000000" />
+                         <widget name="helperimage" position="891,274" size="372,209" zPosition="1" backgroundColor="#00000000" />
                          <widget backgroundColor="#00000000" font="Regular2; 34" foregroundColor="#00ffffff" position="70,12" render="Label" size="708,46" source="Title" transparent="1" halign="center" valign="center" noWrap="1" />
                          <eLabel backgroundColor="#00000000" position="6,6" size="842,708" transparent="0" zPosition="-9" foregroundColor="#00ffffff" />
                          <eLabel backgroundColor="#00ffffff" position="6,6" size="842,2" zPosition="2" />
@@ -379,456 +104,504 @@ class SevenHD(ConfigListScreen, Screen):
                          <eLabel backgroundColor="#00ffffff" position="878,714" size="396,2" zPosition="2" />
                          <eLabel backgroundColor="#00ffffff" position="878,6" size="2,708" zPosition="2" />
                          <eLabel backgroundColor="#00ffffff" position="1274,6" size="2,708" zPosition="2" />
-                         <eLabel position="891,88" size="372,46" text="Version: 2.6" font="Regular; 35" valign="center" halign="center" transparent="1" backgroundColor="#00000000" foregroundColor="#00ffffff" name="," />
+                         <eLabel position="891,88" size="372,46" text="Version: 3.0.0" font="Regular; 35" valign="center" halign="center" transparent="1" backgroundColor="#00000000" foregroundColor="#00ffffff" name="," />
                   </screen>
-               """
-
-	def __init__(self, session, args = None, picPath = None):
-		self.skin_lines = []
-		Screen.__init__(self, session)
-		self.session = session
-		self.datei = "/usr/share/enigma2/SevenHD/skin.xml"
-		self.dateiTMP = self.datei + ".tmp"
-		self.daten = "/usr/lib/enigma2/python/Plugins/Extensions/SevenHD/data/"
-		self.komponente = "/usr/lib/enigma2/python/Plugins/Extensions/SevenHD/comp/"
-		self.picPath = picPath
-		self.Scale = AVSwitch().getFramebufferScale()
-		self["helperimage"] = Pixmap()
-                self.PicLoad = ePicLoad()
-		self.PicLoad.PictureData.get().append(self.DecodePicture)
-		list = []
-		ConfigListScreen.__init__(self, list)
-		
-		self["actions"] = ActionMap(["OkCancelActions","DirectionActions", "InputActions", "ColorActions"], {"left": self.keyLeft,"down": self.keyDown,"up": self.keyUp,"right": self.keyRight,"red": self.exit,"yellow": self.reboot, "blue": self.showInfo, "green": self.save,"cancel": self.exit}, -1)
-		self.onLayoutFinish.append(self.mylist)
-
-	def mylist(self):
-		list = []
-		#list.append(getConfigListEntry(_("_____________________________________________ system _________________________________________________"), ))
-		list.append(getConfigListEntry(_('{:_^102}'.format(' system ')), ))
-                list.append(getConfigListEntry(_("image"), config.plugins.SevenHD.Image))
-		list.append(getConfigListEntry(_("button style"), config.plugins.SevenHD.ButtonStyle, 'Button'))
-		list.append(getConfigListEntry(_("running text"), config.plugins.SevenHD.RunningText))
-		#list.append(getConfigListEntry(_("_____________________________________________ background _____________________________________________"), ))
-		list.append(getConfigListEntry(_('{:_^102}'.format(' background ')), ))
-                list.append(getConfigListEntry(_("color layer main"), config.plugins.SevenHD.Background, 'Main'))
-		list.append(getConfigListEntry(_("transparency"), config.plugins.SevenHD.BackgroundColorTrans))
-		list.append(getConfigListEntry(_("color layer right"), config.plugins.SevenHD.BackgroundRight, 'Right'))
-		list.append(getConfigListEntry(_("transparency"), config.plugins.SevenHD.BackgroundRightColorTrans))
-		#list.append(getConfigListEntry(_("_____________________________________________ colors _________________________________________________"), ))
-		list.append(getConfigListEntry(_('{:_^102}'.format(' colors ')), ))
-                list.append(getConfigListEntry(_("line"), config.plugins.SevenHD.Line, 'Line'))
-		list.append(getConfigListEntry(_("border"), config.plugins.SevenHD.Border, 'Border'))
-		list.append(getConfigListEntry(_("listselection"), config.plugins.SevenHD.SelectionBackground, 'Listselection'))
-		list.append(getConfigListEntry(_("listselection border"), config.plugins.SevenHD.SelectionBorder, 'Listborder'))
-		list.append(getConfigListEntry(_("progress-/volumebar"), config.plugins.SevenHD.Progress, 'Progress'))
-		list.append(getConfigListEntry(_("font 1"), config.plugins.SevenHD.Font1, 'Font1'))
-		list.append(getConfigListEntry(_("font 2"), config.plugins.SevenHD.Font2, 'Font2'))
-		list.append(getConfigListEntry(_("selection font"), config.plugins.SevenHD.SelectionFont, 'Selfont'))
-		list.append(getConfigListEntry(_("button text"), config.plugins.SevenHD.ButtonText, 'Buttontext'))
-		#list.append(getConfigListEntry(_("_____________________________________________ infobar ________________________________________________"), ))
-		list.append(getConfigListEntry(_('{:_^102}'.format(' infobar ')), ))
-                list.append(getConfigListEntry(_("style"), config.plugins.SevenHD.InfobarStyle))
-		list.append(getConfigListEntry(_("color 1"), config.plugins.SevenHD.BackgroundIB1, 'Color1'))
-		list.append(getConfigListEntry(_("color 2"), config.plugins.SevenHD.BackgroundIB2, 'Color2'))
-		list.append(getConfigListEntry(_("channelname"), config.plugins.SevenHD.InfobarChannelName))
-		list.append(getConfigListEntry(_("color channelname"), config.plugins.SevenHD.FontCN, 'ColorCN'))
-		list.append(getConfigListEntry(_("clock"), config.plugins.SevenHD.ClockStyle))
-		if config.plugins.SevenHD.ClockStyle.value == "clock-analog":
-		   list.append(getConfigListEntry(_("color clock analog"), config.plugins.SevenHD.AnalogStyle, 'Analog'))
-		#list.append(getConfigListEntry(_("______________________________________________ infobar extras_________________________________________"), ))
-		list.append(getConfigListEntry(_('{:_^102}'.format(' infobar extras ')), ))
-                list.append(getConfigListEntry(_("weather"), config.plugins.SevenHD.WeatherStyle))
-		if config.plugins.SevenHD.WeatherStyle.value != 'none':
-                   list.append(getConfigListEntry(_("Auto Weather ID Function"), config.plugins.SevenHD.AutoWoeID))
-                   if config.plugins.SevenHD.AutoWoeID.value == False:
-                      list.append(getConfigListEntry(_("Weather ID"), config.plugins.SevenHD.weather_city, 'WeatherID'))
-                list.append(getConfigListEntry(_("satellite information"), config.plugins.SevenHD.SatInfo))
-		list.append(getConfigListEntry(_("system information"), config.plugins.SevenHD.SysInfo))
-		list.append(getConfigListEntry(_("ecm information"), config.plugins.SevenHD.ECMInfo))
-		#list.append(getConfigListEntry(_("______________________________________________ general _______________________________________________"), ))
-		list.append(getConfigListEntry(_('{:_^102}'.format(' general ')), ))
-                list.append(getConfigListEntry(_("second infobar"), config.plugins.SevenHD.SIB))
-		list.append(getConfigListEntry(_("channel selection"), config.plugins.SevenHD.ChannelSelectionStyle))
-		list.append(getConfigListEntry(_("EMC"), config.plugins.SevenHD.EMCStyle))
-		list.append(getConfigListEntry(_("ExtNumberZap"), config.plugins.SevenHD.NumberZapExt))
-		list.append(getConfigListEntry(_("volume style"), config.plugins.SevenHD.Volume))
-		list.append(getConfigListEntry(_("CoolTVGuide"), config.plugins.SevenHD.CoolTVGuide))
-		list.append(getConfigListEntry(_('{:_^102}'.format(' debug ')), ))
-                list.append(getConfigListEntry(_("Debug Mode (only for skinning)"), config.plugins.SevenHD.debug))
-                
-		self["config"].list = list
-		self["config"].l.setList(list)
-		
-		self.ShowPicture()
-
-	def GetPicturePath(self):
-		try:
-			returnValue = self["config"].getCurrent()[1].value
-			
-                        if returnValue.endswith('-top'):
-                                path = "/usr/lib/enigma2/python/Plugins/Extensions/SevenHD/images/SIB1.jpg"
-                        elif returnValue.endswith('-left'):
-                                path = "/usr/lib/enigma2/python/Plugins/Extensions/SevenHD/images/SIB2.jpg"
-                        elif returnValue.endswith('-full'):
-                                path = "/usr/lib/enigma2/python/Plugins/Extensions/SevenHD/images/SIB3.jpg"
-			elif returnValue.endswith('-ICN'):
-				path = "/usr/lib/enigma2/python/Plugins/Extensions/SevenHD/images/name.jpg"
-			else:
-				path = "/usr/lib/enigma2/python/Plugins/Extensions/SevenHD/images/" + returnValue + ".jpg"
-			
-                        if fileExists(path):
-				return path
-			else:
-				## colors
-				try:
-                                   returnValue = self["config"].getCurrent()[2]
-                                   #self.session.open(MessageBox, _(returnValue), MessageBox.TYPE_INFO)
-                                   path = "/usr/lib/enigma2/python/Plugins/Extensions/SevenHD/images/" + returnValue + ".jpg"
-                                   if fileExists(path):
-				      return path
-                                except:
-                                   return "/usr/lib/enigma2/python/Plugins/Extensions/SevenHD/images/colors.jpg"
-		except:
-			## weather
-			return "/usr/lib/enigma2/python/Plugins/Extensions/SevenHD/images/924938.jpg"
-
-        def ShowPicture(self):
-		self.PicLoad.setPara([self["helperimage"].instance.size().width(),self["helperimage"].instance.size().height(),self.Scale[0],self.Scale[1],0,1,"#002C2C39"])
-		if self.picPath is not None:
-                   self.PicLoad.startDecode(self.picPath)
-                   self.picPath = None
-                else:
-                   self.PicLoad.startDecode(self.GetPicturePath())
-
-	def DecodePicture(self, PicInfo = ""):
-		ptr = self.PicLoad.getData()
-		self["helperimage"].instance.setPixmap(ptr)
-
-	def keyLeft(self):
-		ConfigListScreen.keyLeft(self)
-		self.mylist()
-
-	def keyRight(self):
-		ConfigListScreen.keyRight(self)
-		self.mylist()
-
-	def keyDown(self):
-		self["config"].instance.moveSelection(self["config"].instance.moveDown)
-		self.mylist()
-
-	def keyUp(self):
-		self["config"].instance.moveSelection(self["config"].instance.moveUp)
-		self.mylist()
-
-	def reboot(self):
-		restartbox = self.session.openWithCallback(self.restartGUI,MessageBox,_("Do you really want to reboot now?"), MessageBox.TYPE_YESNO)
-		restartbox.setTitle(_("Restart GUI"))
-
-	def showInfo(self):
-		options = []
-		options.extend(((_("Hier koennte ihre Werbung stehen ...."), boundFunction(self.send_to_msg_box, "Ehrlich jetzt?")),))
-		if config.plugins.SevenHD.WeatherStyle.value != 'none':
-                   if config.plugins.SevenHD.AutoWoeID.value == True:
-                      options.extend(((_("Auto Weather ID"), self.getgeo),))
-		options.extend(((_("Information"), boundFunction(self.send_to_msg_box, "Information")),))
-                self.session.openWithCallback(self.menuCallback, ChoiceBox,list = options)
-                
- 	
-        def send_to_msg_box(self, my_msg):
-	        self.session.open(MessageBox,_('%s' % str(my_msg)), MessageBox.TYPE_INFO)
-	
-        def getDataByKey(self, list, key):
-		for item in list:
-		    if item["key"] == key:
-                       return item
-		return list[0]
-
-	def getFontStyleData(self, key):
-		return self.getDataByKey(channelselFontStyles, key)
-
-	def getFontSizeData(self, key):
-		return self.getDataByKey(channelInfoFontSizes, key)
-
-	def save(self):
-		if fileExists("/tmp/SevenHDweather.xml"):
-			remove('/tmp/SevenHDweather.xml')
-		
-                for x in self["config"].list:
-			if len(x) > 1:
-			   x[1].save()
-			else:
-			   pass
-                
-		try:
-			#global tag search and replace in all skin elements
-			self.skinSearchAndReplace = []
-			self.skinSearchAndReplace.append(["0A", config.plugins.SevenHD.BackgroundColorTrans.value])
-			self.skinSearchAndReplace.append(["0D", config.plugins.SevenHD.BackgroundRightColorTrans.value])
-                        self.Background = config.plugins.SevenHD.Background.value
-                        self.skinSearchAndReplace.append(["000000", self.Background[2:8]])
-			self.BackgroundIB1 = config.plugins.SevenHD.BackgroundIB1.value
-                        self.skinSearchAndReplace.append(["000002", self.BackgroundIB1[2:8]])
-			self.BackgroundIB2 = config.plugins.SevenHD.BackgroundIB2.value
-                        self.skinSearchAndReplace.append(["000003", self.BackgroundIB2[2:8]])
-			self.BackgroundRight = config.plugins.SevenHD.BackgroundRight.value
-                        self.skinSearchAndReplace.append(["000001", self.BackgroundRight[2:8]])
-			self.skinSearchAndReplace.append(["000050EF", config.plugins.SevenHD.SelectionBackground.value])
-			self.skinSearchAndReplace.append(["00fffff3", config.plugins.SevenHD.Font1.value])
-			self.skinSearchAndReplace.append(["00fffff4", config.plugins.SevenHD.Font2.value])
-			self.skinSearchAndReplace.append(["00fffff8", config.plugins.SevenHD.FontCN.value])
-			self.skinSearchAndReplace.append(["00fffff7", config.plugins.SevenHD.SelectionFont.value])
-			self.skinSearchAndReplace.append(["00fffff2", config.plugins.SevenHD.ButtonText.value])
-                        
-                        ### Progress
-                        if config.plugins.SevenHD.Progress.value == "progress":
-                           self.skinSearchAndReplace.append(["SevenHD/progress/progress52.png","SevenHD/progress/progress52_1.png"])
-                           self.skinSearchAndReplace.append(["SevenHD/progress/progress170.png","SevenHD/progress/progress170_1.png"])
-                           self.skinSearchAndReplace.append(["SevenHD/progress/progress213.png","SevenHD/progress/progress213_1.png"])
-                           self.skinSearchAndReplace.append(["SevenHD/progress/progress213v.png","SevenHD/progress/progress213v_1.png"])
-                           self.skinSearchAndReplace.append(["SevenHD/progress/progress300.png","SevenHD/progress/progress300_1.png"])
-                           self.skinSearchAndReplace.append(["SevenHD/progress/progress362.png","SevenHD/progress/progress362_1.png"])
-                           self.skinSearchAndReplace.append(["SevenHD/progress/progress426.png","SevenHD/progress/progress426_1.png"])
-                           self.skinSearchAndReplace.append(["SevenHD/progress/progress535.png","SevenHD/progress/progress535_1.png"])
-                           self.skinSearchAndReplace.append(["SevenHD/progress/progress621.png","SevenHD/progress/progress621_1.png"])
-                           self.skinSearchAndReplace.append(["SevenHD/progress/progress793.png","SevenHD/progress/progress793_1.png"])
-                           self.skinSearchAndReplace.append(["SevenHD/progress/progress858.png","SevenHD/progress/progress858_1.png"])
-                           self.skinSearchAndReplace.append(["SevenHD/progress/progress990.png","SevenHD/progress/progress990_1.png"])
-                           self.skinSearchAndReplace.append(["SevenHD/progress/progress1280.png","SevenHD/progress/progress1280_1.png"])
-                        else:
-                           self.skinSearchAndReplace.append(["00fffff6", config.plugins.SevenHD.Progress.value])
-                        
-                        self.skinSearchAndReplace.append(["00fffff1", config.plugins.SevenHD.Border.value])
-			self.skinSearchAndReplace.append(["00fffff5", config.plugins.SevenHD.Line.value])
-			self.skinSearchAndReplace.append(["buttons_seven_white", config.plugins.SevenHD.ButtonStyle.value])
-			self.skinSearchAndReplace.append(["movetype=running", config.plugins.SevenHD.RunningText.value])
-			
-			self.selectionbordercolor = config.plugins.SevenHD.SelectionBorder.value
-			self.borset = ("borset_" + self.selectionbordercolor + ".png")
-			self.skinSearchAndReplace.append(["borset.png", self.borset])
-			
-			self.analogstylecolor = config.plugins.SevenHD.AnalogStyle.value
-			self.analog = ("analog_" + self.analogstylecolor + ".png")
-			self.skinSearchAndReplace.append(["analog.png", self.analog])
-			
-			### Header
-			self.appendSkinFile(self.daten + config.plugins.SevenHD.Header.value + ".xml")
-			
-                        ### Volume
-			self.appendSkinFile(self.daten + config.plugins.SevenHD.Volume.value + ".xml")
-			
-                        ###ChannelSelection
-			self.appendSkinFile(self.daten + config.plugins.SevenHD.ChannelSelectionStyle.value + ".xml")
-                        
-                        ###Infobar_main
-			self.appendSkinFile(self.daten + config.plugins.SevenHD.InfobarStyle.value + "-main.xml")
-                        
-                        ###Channelname
-                        if config.plugins.SevenHD.InfobarChannelName.value == "none":
-                           self.appendSkinFile(self.daten + config.plugins.SevenHD.InfobarChannelName.value + ".xml")
-                        else:
-                           self.appendSkinFile(self.daten + config.plugins.SevenHD.InfobarStyle.value + "-ICN.xml")
-                        
-			###ecm-info
-			self.appendSkinFile(self.daten + config.plugins.SevenHD.ECMInfo.value + ".xml")
-                        
-                        ###clock-style xml
-			self.appendSkinFile(self.daten + config.plugins.SevenHD.ClockStyle.value + ".xml")
-                        
-                        ###sat-info
-			self.appendSkinFile(self.daten + config.plugins.SevenHD.SatInfo.value + ".xml")
-                        
-                        ###sys-info
-			self.appendSkinFile(self.daten + config.plugins.SevenHD.SysInfo.value + ".xml")
-                        
-                        ###weather-style
-			self.appendSkinFile(self.daten + config.plugins.SevenHD.WeatherStyle.value + ".xml")
-                        
-                        ###Infobar_middle
-			self.appendSkinFile(self.daten + config.plugins.SevenHD.InfobarStyle.value + "-middle.xml")
-                        
-                        ###clock-style xml
-			self.appendSkinFile(self.daten + config.plugins.SevenHD.ClockStyle.value + ".xml")
-                        
-                        ###Infobar_end
-			self.appendSkinFile(self.daten + config.plugins.SevenHD.InfobarStyle.value + config.plugins.SevenHD.SIB.value + ".xml")
-                        
-			###Main XML
-			self.appendSkinFile(self.daten + "main.xml")
-                        
-                        ###Plugins XML
-			self.appendSkinFile(self.daten + "plugins.xml")
-                        
-                        #EMCSTYLE
-			self.appendSkinFile(self.daten + config.plugins.SevenHD.EMCStyle.value +".xml")
-                        
-                        #NumberZapExtStyle
-			self.appendSkinFile(self.daten + config.plugins.SevenHD.NumberZapExt.value + ".xml")
-                        
-                        ###custom-main XML
-			self.appendSkinFile(self.daten + config.plugins.SevenHD.Image.value + ".xml")
-                        
-                        ###cooltv XML
-			self.appendSkinFile(self.daten + config.plugins.SevenHD.CoolTVGuide.value + ".xml")
-                        
-                        ###skin-user
-			try:
-				self.appendSkinFile(self.daten + "skin-user.xml")
-			except:
-				pass
-			###skin-end
-			self.appendSkinFile(self.daten + "skin-end.xml")
-                        
-                        xFile = open(self.dateiTMP, "w")
-			for xx in self.skin_lines:
-			    xFile.writelines(xx)
-			xFile.close()
-
-			move(self.dateiTMP, self.datei)
-			
-			console1 = eConsoleAppContainer()
-			console2 = eConsoleAppContainer()
-			console3 = eConsoleAppContainer()
-			console4 = eConsoleAppContainer()
-			console5 = eConsoleAppContainer()
-			
-			#buttons
-			console1.execute("rm -rf /usr/share/enigma2/SevenHD/buttons/*.*; rm -rf /usr/share/enigma2/SevenHD/buttons; wget -q http://www.gigablue-support.org/skins/SevenHD/%s.tar.gz -O /tmp/%s.tar.gz; tar xf /tmp/%s.tar.gz -C /usr/share/enigma2/SevenHD/" % (str(config.plugins.SevenHD.ButtonStyle.value), str(config.plugins.SevenHD.ButtonStyle.value), str(config.plugins.SevenHD.ButtonStyle.value)))
-			#weather
-			console2.execute("rm -rf /usr/share/enigma2/SevenHD/WetterIcons/*.*; rm -rf /usr/share/enigma2/SevenHD/WetterIcons; wget -q http://www.gigablue-support.org/skins/SevenHD/%s.tar.gz -O /tmp/%s.tar.gz; tar xf /tmp/%s.tar.gz -C /usr/share/enigma2/SevenHD/" % (str(config.plugins.SevenHD.WeatherStyle.value), str(config.plugins.SevenHD.WeatherStyle.value), str(config.plugins.SevenHD.WeatherStyle.value)))
-			#clock
-			console3.execute("rm -rf /usr/share/enigma2/SevenHD/clock/*.*; rm -rf /usr/share/enigma2/SevenHD/clock; wget -q http://www.gigablue-support.org/skins/SevenHD/%s.tar.gz -O /tmp/%s.tar.gz; tar xf /tmp/%s.tar.gz -C /usr/share/enigma2/SevenHD/" % (str(config.plugins.SevenHD.ClockStyle.value), str(config.plugins.SevenHD.ClockStyle.value), str(config.plugins.SevenHD.ClockStyle.value)))
-			#volume
-			console4.execute("rm -rf /usr/share/enigma2/SevenHD/volume/*.*; rm -rf /usr/share/enigma2/SevenHD/volume; wget -q http://www.gigablue-support.org/skins/SevenHD/%s.tar.gz -O /tmp/%s.tar.gz; tar xf /tmp/%s.tar.gz -C /usr/share/enigma2/SevenHD/" % (str(config.plugins.SevenHD.Volume.value), str(config.plugins.SevenHD.Volume.value), str(config.plugins.SevenHD.Volume.value)))
-			#progress
-			if config.plugins.SevenHD.Progress.value == "progress":
-				console5.execute("rm -rf /usr/share/enigma2/SevenHD/progress/*.*; rm -rf /usr/share/enigma2/SevenHD/progress; wget -q http://www.gigablue-support.org/skins/SevenHD/%s.tar.gz -O /tmp/%s.tar.gz; tar xf /tmp/%s.tar.gz -C /usr/share/enigma2/SevenHD/" % (str(config.plugins.SevenHD.Progress.value), str(config.plugins.SevenHD.Progress.value), str(config.plugins.SevenHD.Progress.value)))
-			
-		except:
-			self.session.open(MessageBox, _("Error creating Skin!"), MessageBox.TYPE_ERROR)
-
-		self.restart()
-
-	def restart(self):
-		configfile.save()
-		restartbox = self.session.openWithCallback(self.restartGUI,MessageBox,_("GUI needs a restart to download files and apply a new skin.\nDo you want to Restart the GUI now?"), MessageBox.TYPE_YESNO)
-		restartbox.setTitle(_("Restart GUI"))
-
-	def appendSkinFile(self, appendFileName, skinPartSearchAndReplace=None):
-		"""
-		add skin file to main skin content
-
-		appendFileName:
-		 xml skin-part to add
-
-		skinPartSearchAndReplace:
-		 (optional) a list of search and replace arrays. first element, search, second for replace
-		"""
-		skFile = open(appendFileName, "r")
-		file_lines = skFile.readlines()
-		skFile.close()
-
-		tmpSearchAndReplace = []
-
-		if skinPartSearchAndReplace is not None:
-			tmpSearchAndReplace = self.skinSearchAndReplace + skinPartSearchAndReplace
-		else:
-			tmpSearchAndReplace = self.skinSearchAndReplace
-
-		for skinLine in file_lines:
-			for item in tmpSearchAndReplace:
-				skinLine = skinLine.replace(item[0], item[1])
-			self.skin_lines.append(skinLine)
-
-	def restartGUI(self, answer):
-		if answer is True:
-			config.skin.primary_skin.setValue("SevenHD/skin.xml")
-			config.skin.save()
-			configfile.save()
-			self.session.open(TryQuitMainloop, 3)
-		else:
-			self.close()
-
-	def exit(self):
-		for x in self["config"].list:
-			if len(x) > 1:
-					x[1].cancel()
-			else:
-					pass
-		self.close()
-
-        def getgeo(self):
-        	# Auto Weather ID Function by .:TBX:.
-        	#    for MyMetrix or Kraven Skins
-	        
-                WOEID_SEARCH_URL     = 'http://query.yahooapis.com/v1/public/yql'
-        	WOEID_QUERY_STRING   = 'select woeid from geo.placefinder where text="%s"'
-                
-                try:
-                        res = urllib.urlopen('http://mxtoolbox.com/WhatIsMyIP/')
-                        data = res.read()
-                        city = re.search('<h1 class="GeoTableHeader">City</h1>(.*?)</td>', data, re.S).group(1)
-                        
-                        params = {'q': WOEID_QUERY_STRING % city.strip(), 'format': 'xml'}
-                        url = '?'.join((WOEID_SEARCH_URL, urlencode(params)))  
-                        
-                        try:
-                            handler = urllib.urlopen(url)
-                        except URLError:
-        	            self.an_error()
-                        except socket.timeout:
-                            self.an_error()
-                    
-                        content_type = handler.info().dict['content-type']
-                        try:
-                            charset = re.search('charset\=(.*)', content_type).group(1)
-                        except AttributeError:
-                            charset = 'utf-8'
-                            
-                        if charset.lower() != 'utf-8':
-                            json_response = handler.read().decode(charset).encode('utf-8')
-                        else:
-                            json_response = handler.read()
-                        
-                        handler.close()
-                        woeid_count = re.findall('<woeid>(\d{5,10})</woeid>', json_response, re.S)
-                        
-                        if len(woeid_count) == 1:
-                           woeid = woeid_count[0]
-                           config.plugins.SevenHD.weather_city.value = woeid
-                           self.session.open(MessageBox, _(city.strip() + ' is detected and set as your Location.\nIf that should not be right then set\nAuto Weather ID Function to "OFF".'), MessageBox.TYPE_INFO)
-
-                        else:
-                           woeid_list = []
-                           for woeid in woeid_count:
-                               woeid_list.extend(((_('%s' % str(woeid)), boundFunction(self.set_woeid, '%s' % str(woeid))),))
-                           
-                           self.session.openWithCallback(self.menuCallback, ChoiceBox, list = woeid_list, title = "Choose youre right ID")
-                           self.session.open(MessageBox, _('Is this detected WOEID wrong,\nchoose another and set as your Location.\n\nIf not the right one in the List set\nAuto Weather ID Function to "OFF".'), MessageBox.TYPE_INFO)   
-                           
-                except:
-                    self.debug('error2\n')
-                    self.an_error()
-
-        def set_woeid(self, woeid):
-                config.plugins.SevenHD.weather_city.value = str(woeid)
-                               
-        def menuCallback(self, ret):
-		ret and ret[1]()
-		
-        def an_error(self):
-                config.plugins.SevenHD.weather_city.value = "924938"
-                config.plugins.SevenHD.AutoWoeID.value = False
+               """ 
+    def __init__(self, session, args = None):
+        self.session = session
         
-        def debug(self, what):
-                if config.plugins.SevenHD.debug.value:
-                   #self.session.open(MessageBox, _(what), MessageBox.TYPE_INFO)
-                   f = open('/tmp/kraven_debug', 'a+')
-                   f.write(str(what) + '\n')
-                   f.close() 
-                          
+        Screen.__init__(self, session)
+        
+        self.Scale = AVSwitch().getFramebufferScale()
+        self.PicLoad = ePicLoad()
+        self["helperimage"] = Pixmap()
+
+        self["actions"] = ActionMap(
+            [
+                "OkCancelActions",
+                "DirectionActions",
+                "InputActions",
+                "ColorActions"
+            ],
+            {
+                "ok": self.ok,
+                "cancel": self.exit,
+                "red": self.exit,
+                "green": self.save,
+                "yellow": self.reboot,
+                "blue": self.showInfo
+                
+            }, -1)	
+        creator = 'openATV'
+        try:
+           image = os.popen('cat /etc/image-version').read()
+           if 'creator=OpenMips' in image: 
+              creator = 'OpenMips'
+        except:
+           try:
+              image = os.popen('cat /etc/motd').read()
+              if 'HDMU' in image: 
+                 creator = 'OpenMips'
+           except:
+              creator = 'unknow'
+        self.debug('Image-Type: ' + str(creator) + '\n')   
+           
+        list = []
+        list.append(MenuEntryItem(_("main setting"), "MainSettings"))
+        list.append(MenuEntryItem(_("menu and plugins"), "MenuPluginSettings"))
+        list.append(MenuEntryItem(_("infobar and second infobar"), "InfobarSettings"))
+        list.append(MenuEntryItem(_("infobar extras"), "InfobarExtraSettings"))
+        list.append(MenuEntryItem(_("channel selection"), "ChannelSettings"))
+        list.append(MenuEntryItem(_("other settings"), "SonstigeSettings"))
+        list.append(MenuEntryItem(_("system osd settings"), "SystemOSDSettings"))
+        if creator != 'OpenMips':
+           list.append(MenuEntryItem(_("system channel settings"), "SystemChannelSettings"))
+        
+        self["menuList"] = MainMenuList([], font0=24, font1=16, itemHeight=50)
+        self["menuList"].l.setList(list)
+
+        if not self.__selectionChanged in self["menuList"].onSelectionChanged:
+            self["menuList"].onSelectionChanged.append(self.__selectionChanged)
+
+        self.onChangedEntry = []
+
+        self.onLayoutFinish.append(self.UpdatePicture)
+
+    def __del__(self):
+        self["menuList"].onSelectionChanged.remove(self.__selectionChanged)
+
+    def UpdatePicture(self):
+        self.PicLoad.PictureData.get().append(self.DecodePicture)
+        self.onLayoutFinish.append(self.ShowPicture)
+
+    def ShowPicture(self):
+        if self["helperimage"] is None or self["helperimage"].instance is None:
+            return
+
+        cur = self["menuList"].getCurrent()
+
+        if cur:
+            selectedKey = cur[0][1]
+            self.debug('def ShowPicture\nneed: ' + MAIN_IMAGE_PATH + str(selectedKey) + '.jpg\n')
+            if selectedKey == "MainSettings":
+               imageUrl = MAIN_IMAGE_PATH + str("MAINSETTINGS.jpg")
+            elif selectedKey == "MenuPluginSettings":
+               imageUrl = MAIN_IMAGE_PATH + str("MENU.jpg")
+            elif selectedKey == "InfobarSettings":
+               imageUrl = MAIN_IMAGE_PATH + str("IB.jpg")
+            elif selectedKey == "InfobarExtraSettings":
+               imageUrl = MAIN_IMAGE_PATH + str("EXTRA.jpg")
+            elif selectedKey == "ChannelSettings":
+               imageUrl = MAIN_IMAGE_PATH + str("CS.jpg")
+            elif selectedKey == "SonstigeSettings":
+               imageUrl = MAIN_IMAGE_PATH + str("OTHER.jpg")
+            elif selectedKey == "SystemOSDSettings":
+               imageUrl = MAIN_IMAGE_PATH + str("OSD.jpg")
+            elif selectedKey == "SystemChannelSettings":
+               imageUrl = MAIN_IMAGE_PATH + str("SCS.jpg")
+                        
+        self.PicLoad.setPara([self["helperimage"].instance.size().width(),self["helperimage"].instance.size().height(),self.Scale[0],self.Scale[1],0,1,"#00000000"])
+        self.PicLoad.startDecode(imageUrl)
+
+    def DecodePicture(self, PicInfo = ""):
+        ptr = self.PicLoad.getData()
+        self["helperimage"].instance.setPixmap(ptr)
+
+    def ok(self):
+        cur = self["menuList"].getCurrent()
+        
+        if cur:
+            selectedKey = cur[0][1]
+            self.debug('def ok\ntry open: "' + selectedKey + '" Screen\n')
+            
+            if selectedKey == "MainSettings":
+                self.session.open(MainSettings)
+            elif selectedKey == "MenuPluginSettings":
+                self.session.open(MenuPluginSettings)
+            elif selectedKey == "InfobarSettings":
+                self.session.open(InfobarSettings)
+            elif selectedKey == "InfobarExtraSettings":
+                self.session.open(InfobarExtraSettings)
+    	    elif selectedKey == "ChannelSettings":
+                self.session.open(ChannelSettings)  
+            elif selectedKey == "SonstigeSettings":
+                self.session.open(SonstigeSettings)
+            elif selectedKey == "SystemOSDSettings":
+                self.session.open(Setup, "userinterface")
+            elif selectedKey == "SystemChannelSettings":
+                self.session.open(Setup, "channelselection")
+                            
+    def save(self):
+        if fileExists("/tmp/SevenHDweather.xml"):
+           remove('/tmp/SevenHDweather.xml')
+		
+        self.skin_lines = []        
+        try:
+                #global tag search and replace in all skin elements
+		self.skinSearchAndReplace = []
+                
+                self.Background = config.plugins.SevenHD.Background.value
+                self.skinSearchAndReplace.append(["Seven_Background", '%s%s' % (config.plugins.SevenHD.BackgroundColorTrans.value, self.Background[2:8])])
+                
+                self.BackgroundIB1 = config.plugins.SevenHD.BackgroundIB1.value
+                self.skinSearchAndReplace.append(["SevenBackground_IB1", '%s%s' % (config.plugins.SevenHD.BackgroundColorTrans.value, self.BackgroundIB1[2:8])])
+                
+                self.BackgroundIB2 = config.plugins.SevenHD.BackgroundIB2.value
+                self.skinSearchAndReplace.append(["SevenBackground_IB2", '%s%s' % (config.plugins.SevenHD.BackgroundColorTrans.value, self.BackgroundIB2[2:8])])
+                
+                self.ChannelBack1 = config.plugins.SevenHD.ChannelBack1.value
+                self.skinSearchAndReplace.append(["SevenBack_CS", '%s%s' % (config.plugins.SevenHD.BackgroundColorTrans.value, self.ChannelBack1[2:8])])
+                
+                self.ChannelBack2 = config.plugins.SevenHD.ChannelBack2.value
+                self.skinSearchAndReplace.append(["SevenBackRight_CS", '%s%s' % (config.plugins.SevenHD.BackgroundRightColorTrans.value, self.ChannelBack2[2:8])])
+                
+                self.ChannelBack3 = config.plugins.SevenHD.ChannelBack3.value
+                self.skinSearchAndReplace.append(["SevenBackMiddle_CS", '%s%s' % (config.plugins.SevenHD.BackgroundColorTrans.value, self.ChannelBack3[2:8])])
+                
+                self.BackgroundRight = config.plugins.SevenHD.BackgroundRight.value
+                self.skinSearchAndReplace.append(["SevenBackground_Right", '%s%s' % (config.plugins.SevenHD.BackgroundRightColorTrans.value, self.BackgroundRight[2:8])])
+
+
+
+		self.skinSearchAndReplace.append(["Seven_Selection", config.plugins.SevenHD.SelectionBackground.value])
+		self.skinSearchAndReplace.append(["SevenFont_1", config.plugins.SevenHD.Font1.value])
+		self.skinSearchAndReplace.append(["SevenFont_2", config.plugins.SevenHD.Font2.value])
+		self.skinSearchAndReplace.append(["SevenSel_Font", config.plugins.SevenHD.SelectionFont.value])
+		self.skinSearchAndReplace.append(["SevenButton_Text", config.plugins.SevenHD.ButtonText.value])
+		self.skinSearchAndReplace.append(["Seven_Border", config.plugins.SevenHD.Border.value])
+		self.skinSearchAndReplace.append(["Seven_Line", config.plugins.SevenHD.Line.value])
+
+
+		self.skinSearchAndReplace.append(["SevenBorder_IB", config.plugins.SevenHD.InfobarBorder.value])
+		self.skinSearchAndReplace.append(["SevenLine_IB", config.plugins.SevenHD.InfobarLine.value])
+		self.skinSearchAndReplace.append(["SevenNext_IB", config.plugins.SevenHD.NextEvent.value])
+		self.skinSearchAndReplace.append(["SevenNow_IB", config.plugins.SevenHD.NowEvent.value])
+		self.skinSearchAndReplace.append(["SevenSNR_IB", config.plugins.SevenHD.SNR.value])
+		self.skinSearchAndReplace.append(["SevenFont_CN", config.plugins.SevenHD.FontCN.value])
+
+
+		self.skinSearchAndReplace.append(["SevenClock_Date", config.plugins.SevenHD.ClockDate.value])
+		self.skinSearchAndReplace.append(["SevenClock_H", config.plugins.SevenHD.ClockTimeh.value])
+		self.skinSearchAndReplace.append(["SevenClock_M", config.plugins.SevenHD.ClockTimem.value])
+		self.skinSearchAndReplace.append(["SevenClock_S", config.plugins.SevenHD.ClockTimes.value])
+		self.skinSearchAndReplace.append(["SevenClock_Time", config.plugins.SevenHD.ClockTime.value])
+		self.skinSearchAndReplace.append(["SevenClock_Weather", config.plugins.SevenHD.ClockWeather.value])
+		self.skinSearchAndReplace.append(["SevenClock_Weekday", config.plugins.SevenHD.ClockWeek.value])
+
+
+		self.skinSearchAndReplace.append(["SevenLine_CS", config.plugins.SevenHD.ChannelLine.value])
+		self.skinSearchAndReplace.append(["SevenBorder_CS", config.plugins.SevenHD.ChannelBorder.value])
+		self.skinSearchAndReplace.append(["SevenButtons_CS", config.plugins.SevenHD.ChannelColorButton.value])
+		self.skinSearchAndReplace.append(["SevenBouquet_CS", config.plugins.SevenHD.ChannelColorBouquet.value])
+		self.skinSearchAndReplace.append(["SevenChannel_CS", config.plugins.SevenHD.ChannelColorChannel.value])
+		self.skinSearchAndReplace.append(["SevenNext_CS", config.plugins.SevenHD.ChannelColorNext.value])
+		self.skinSearchAndReplace.append(["SevenDestcriptionNext_CS", config.plugins.SevenHD.ChannelColorDesciptionNext.value])
+		self.skinSearchAndReplace.append(["SevenRuntime_CS", config.plugins.SevenHD.ChannelColorRuntime.value])
+		self.skinSearchAndReplace.append(["SevenProgram_CS", config.plugins.SevenHD.ChannelColorProgram.value])
+		self.skinSearchAndReplace.append(["SevenTime_CS", config.plugins.SevenHD.ChannelColorTimeCS.value])
+		self.skinSearchAndReplace.append(["SevenPrime_CS", config.plugins.SevenHD.ChannelColorPrimeTime.value])
+		self.skinSearchAndReplace.append(["SevenDestcription_CS", config.plugins.SevenHD.ChannelColorDesciption.value])
+		self.skinSearchAndReplace.append(["SevenName_List", config.plugins.SevenHD.ChannelColorChannelName.value])
+		self.skinSearchAndReplace.append(["SevenNumber_List", config.plugins.SevenHD.ChannelColorChannelNumber.value])
+		self.skinSearchAndReplace.append(["SevenProgram_List", config.plugins.SevenHD.ChannelColorEvent.value])
+                       
+                ### Progress
+                if config.plugins.SevenHD.Progress.value == "progress":
+                   self.skinSearchAndReplace.append(["SevenHD/progress/progress52.png","SevenHD/progress/progress52_1.png"])
+                   self.skinSearchAndReplace.append(["SevenHD/progress/progress170.png","SevenHD/progress/progress170_1.png"])
+                   self.skinSearchAndReplace.append(["SevenHD/progress/progress213.png","SevenHD/progress/progress213_1.png"])
+                   self.skinSearchAndReplace.append(["SevenHD/progress/progress213v.png","SevenHD/progress/progress213v_1.png"])
+                   self.skinSearchAndReplace.append(["SevenHD/progress/progress300.png","SevenHD/progress/progress300_1.png"])
+                   self.skinSearchAndReplace.append(["SevenHD/progress/progress362.png","SevenHD/progress/progress362_1.png"])
+                   self.skinSearchAndReplace.append(["SevenHD/progress/progress426.png","SevenHD/progress/progress426_1.png"])
+                   self.skinSearchAndReplace.append(["SevenHD/progress/progress535.png","SevenHD/progress/progress535_1.png"])
+                   self.skinSearchAndReplace.append(["SevenHD/progress/progress621.png","SevenHD/progress/progress621_1.png"])
+                   self.skinSearchAndReplace.append(["SevenHD/progress/progress793.png","SevenHD/progress/progress793_1.png"])
+                   self.skinSearchAndReplace.append(["SevenHD/progress/progress858.png","SevenHD/progress/progress858_1.png"])
+                   self.skinSearchAndReplace.append(["SevenHD/progress/progress990.png","SevenHD/progress/progress990_1.png"])
+                   self.skinSearchAndReplace.append(["SevenHD/progress/progress1280.png","SevenHD/progress/progress1280_1.png"])
+                else:
+                   self.skinSearchAndReplace.append(["00fffff1", config.plugins.SevenHD.Progress.value])
+                     
+		self.skinSearchAndReplace.append(["buttons_seven_white", config.plugins.SevenHD.ButtonStyle.value])
+		self.skinSearchAndReplace.append(["movetype=running", config.plugins.SevenHD.RunningText.value])
+			
+		self.selectionbordercolor = config.plugins.SevenHD.SelectionBorder.value
+		self.borset = ("borset_" + self.selectionbordercolor + ".png")
+		self.skinSearchAndReplace.append(["borset.png", self.borset])
+			
+		self.analogstylecolor = config.plugins.SevenHD.AnalogStyle.value
+		self.analog = ("analog_" + self.analogstylecolor + ".png")
+		self.skinSearchAndReplace.append(["analog.png", self.analog])
+		
+		### Header
+		self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.Header.value + XML)
+		self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.Header.value + XML)	
+                
+                ### Volume
+                self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.VolumeStyle.value + XML)
+		self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.VolumeStyle.value + XML)	
+                
+                ###ChannelSelection
+		self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.ChannelSelectionStyle.value + XML)
+                self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.ChannelSelectionStyle.value + XML)    
+                
+                ###Infobar_main
+		self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.InfobarStyle.value + "-main.xml")
+                self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.InfobarStyle.value + "-main.xml")       
+                
+                ###Channelname
+                if config.plugins.SevenHD.InfobarChannelName.value == "none":
+                   self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.InfobarChannelName.value + XML)
+                   self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.InfobarChannelName.value + XML) 
+                else:
+                   self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.InfobarStyle.value + "-ICN.xml")
+                   self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.InfobarStyle.value + "-ICN.xml")         
+		
+                ###ecm-info
+		self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.ECMInfo.value + XML)
+                self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.ECMInfo.value + XML)        
+                
+                ###clock-style xml
+		self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.ClockStyle.value + XML)
+                self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.ClockStyle.value + XML)               
+                
+                ###sat-info
+		self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.SatInfo.value + XML)
+                self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.SatInfo.value + XML)        
+                
+                ###sys-info
+		self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.SysInfo.value + XML)
+                self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.SysInfo.value + XML)        
+                
+                ###weather-style
+		self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.WeatherStyle.value + XML)
+                self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.WeatherStyle.value + XML)        
+                
+                ###Infobar_middle
+		self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.InfobarStyle.value + "-middle.xml")
+                self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.InfobarStyle.value + "-middle.xml")         
+                
+                ###Channelname
+                if config.plugins.SevenHD.InfobarChannelName.value == "none":
+                   self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.InfobarChannelName.value + XML)
+                   self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.InfobarChannelName.value + XML) 
+                else:
+                   self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.InfobarStyle.value + "-ICN.xml")
+                   self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.InfobarStyle.value + "-ICN.xml")         
+                
+                ###clock-style xml
+		self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.ClockStyle.value + XML)
+                self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.ClockStyle.value + XML)       
+                
+                ###Infobar_end
+		self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.InfobarStyle.value + config.plugins.SevenHD.SIB.value + XML)
+                self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.InfobarStyle.value + config.plugins.SevenHD.SIB.value + XML)       
+		
+                ###Main XML
+		self.appendSkinFile(MAIN_DATA_PATH + "main.xml")
+                self.debug(MAIN_DATA_PATH + "main.xml")       
+                
+                ###Plugins XML
+		self.appendSkinFile(MAIN_DATA_PATH + "plugins.xml")
+                self.debug(MAIN_DATA_PATH + "plugins.xml")        
+                
+                #EMCSTYLE
+		self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.EMCStyle.value + XML)
+                self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.EMCStyle.value + XML)        
+                
+                #NumberZapExtStyle
+		self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.NumberZapExt.value + XML)
+                self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.NumberZapExt.value + XML)       
+                
+                ###custom-main XML
+		self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.Image.value + XML)
+                self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.Image.value + XML)        
+                
+                ###cooltv XML
+		self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.CoolTVGuide.value + XML)
+                self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.CoolTVGuide.value + XML)      
+                
+                ###skin-user
+		try:
+		   self.appendSkinFile(MAIN_DATA_PATH + "skin-user.xml")
+		except:
+		   pass
+		
+                ###skin-end
+		self.appendSkinFile(MAIN_DATA_PATH + "skin-end.xml")
+                self.debug(MAIN_DATA_PATH + "skin-end.xml")       
+                
+                self.debug('try open: ' + TMPFILE + "\n")
+                xFile = open(TMPFILE, "w")
+                for xx in self.skin_lines:
+                    xFile.writelines(xx)
+                xFile.close()
+                self.debug('close: ' + TMPFILE + "\n")
+                move(TMPFILE, FILE)
+                self.debug('mv : ' + TMPFILE + ' to ' + FILE + "\n")
+		
+                self.debug('Console\n')	
+                console1 = eConsoleAppContainer()
+                console2 = eConsoleAppContainer()
+                console3 = eConsoleAppContainer()
+                console4 = eConsoleAppContainer()
+                console5 = eConsoleAppContainer()
+			
+                #buttons
+                console1.execute("rm -rf /usr/share/enigma2/SevenHD/buttons/*.*; rm -rf /usr/share/enigma2/SevenHD/buttons; wget -q http://www.gigablue-support.org/skins/SevenHD/%s.tar.gz -O /tmp/%s.tar.gz; tar xf /tmp/%s.tar.gz -C /usr/share/enigma2/SevenHD/" % (str(config.plugins.SevenHD.ButtonStyle.value), str(config.plugins.SevenHD.ButtonStyle.value), str(config.plugins.SevenHD.ButtonStyle.value)))
+                #weather
+                console2.execute("rm -rf /usr/share/enigma2/SevenHD/WetterIcons/*.*; rm -rf /usr/share/enigma2/SevenHD/WetterIcons; wget -q http://www.gigablue-support.org/skins/SevenHD/%s.tar.gz -O /tmp/%s.tar.gz; tar xf /tmp/%s.tar.gz -C /usr/share/enigma2/SevenHD/" % (str(config.plugins.SevenHD.WeatherStyle.value), str(config.plugins.SevenHD.WeatherStyle.value), str(config.plugins.SevenHD.WeatherStyle.value)))
+                #clock
+                console3.execute("rm -rf /usr/share/enigma2/SevenHD/clock/*.*; rm -rf /usr/share/enigma2/SevenHD/clock; wget -q http://www.gigablue-support.org/skins/SevenHD/%s.tar.gz -O /tmp/%s.tar.gz; tar xf /tmp/%s.tar.gz -C /usr/share/enigma2/SevenHD/" % (str(config.plugins.SevenHD.ClockStyle.value), str(config.plugins.SevenHD.ClockStyle.value), str(config.plugins.SevenHD.ClockStyle.value)))
+                #volume
+                console4.execute("rm -rf /usr/share/enigma2/SevenHD/volume/*.*; rm -rf /usr/share/enigma2/SevenHD/volume; wget -q http://www.gigablue-support.org/skins/SevenHD/%s.tar.gz -O /tmp/%s.tar.gz; tar xf /tmp/%s.tar.gz -C /usr/share/enigma2/SevenHD/" % (str(config.plugins.SevenHD.VolumeStyle.value), str(config.plugins.SevenHD.VolumeStyle.value), str(config.plugins.SevenHD.VolumeStyle.value)))
+                #progress
+                if config.plugins.SevenHD.Progress.value == "progress":
+                   console5.execute("rm -rf /usr/share/enigma2/SevenHD/progress/*.*; rm -rf /usr/share/enigma2/SevenHD/progress; wget -q http://www.gigablue-support.org/skins/SevenHD/%s.tar.gz -O /tmp/%s.tar.gz; tar xf /tmp/%s.tar.gz -C /usr/share/enigma2/SevenHD/" % (str(config.plugins.SevenHD.Progress.value), str(config.plugins.SevenHD.Progress.value), str(config.plugins.SevenHD.Progress.value)))
+		self.debug('download tgz complett\n')	
+        except:
+           self.debug('error on "def save()"\n')
+           self.session.open(MessageBox, _("Error creating Skin!"), MessageBox.TYPE_ERROR)
+
+        self.reboot("GUI needs a restart to download files and apply a new skin.\nDo you want to Restart the GUI now?")
+
+    def appendSkinFile(self, appendFileName, skinPartSearchAndReplace=None):
+        """
+        add skin file to main skin content
+
+        appendFileName:
+        xml skin-part to add
+
+        skinPartSearchAndReplace:
+        (optional) a list of search and replace arrays. first element, search, second for replace
+        """
+        
+        skFile = open(appendFileName, "r")
+        file_lines = skFile.readlines()
+        skFile.close()
+
+        tmpSearchAndReplace = []
+
+        if skinPartSearchAndReplace is not None:
+           tmpSearchAndReplace = self.skinSearchAndReplace + skinPartSearchAndReplace
+        else:
+           tmpSearchAndReplace = self.skinSearchAndReplace
+
+        for skinLine in file_lines:
+            for item in tmpSearchAndReplace:
+                skinLine = skinLine.replace(item[0], item[1])
+            self.skin_lines.append(skinLine)
+          
+    def showInfo(self):
+        options = []
+        options.extend(((_("Hier koennte ihre Werbung stehen ...."), boundFunction(self.send_to_msg_box, "Ehrlich jetzt?")),))
+        if config.plugins.SevenHD.debug.value:
+           options.extend(((_("Show Debug Log"), boundFunction(self.show_log)),))
+        
+        if not fileExists(PLUGIN_PATH + "/Extensions/EnhancedMovieCenter/plugin.pyo"):
+           options.extend(((_("Install EnhancedMovieCenter?"), boundFunction(self.Open_Setup, "enigma2-plugin-extensions-enhancedmoviecenter")),))
+        
+        if config.plugins.SevenHD.NumberZapExtImport.value:
+           if fileExists(PLUGIN_PATH + "/SystemPlugins/NumberZapExt/NumberZapExt.pyo"):
+              options.extend(((_("Open NumberZapExt Setup"), boundFunction(self.Open_NumberExt)),))
+           else:
+              options.extend(((_("Install NumberZapExt?"), boundFunction(self.Open_Setup, "enigma2-plugin-systemplugins-extnumberzap")),))
+        else:
+           options.extend(((_("Install NumberZapExt?"), boundFunction(self.Open_Setup, "enigma2-plugin-systemplugins-extnumberzap")),))
+        
+        if not fileExists(PLUGIN_PATH + "/Extensions/CoolTVGuide/plugin.pyo"):
+           options.extend(((_("Install CoolTVGuide?"), boundFunction(self.Open_Setup, "enigma2-plugin-extensions-cooltvguide")),))
+        
+        options.extend(((_("Share my Skin"), boundFunction(self.Share_Skin)),))
+        
+        options.extend(((_("Information"), boundFunction(self.send_to_msg_box, "Information")),))
+        self.session.openWithCallback(self.menuCallback, ChoiceBox,list = options)
+            
+    def menuCallback(self, ret):
+        ret and ret[1]()
+		
+    def send_to_msg_box(self, my_msg):
+        self.session.open(MessageBox,_('%s' % str(my_msg)), MessageBox.TYPE_INFO)
+    
+    def show_log(self):
+        if fileExists("/tmp/kraven_debug.txt"):
+           self.session.open(Console, _("Show Debug Log"), cmdlist=[("cat /tmp/kraven_debug.txt")])
+    
+    def Share_Skin(self):
+        answer = []
+        answer.extend(((_("Share my Skin Config"), boundFunction(self.Open_Skin_Config, "share")),))
+        answer.extend(((_("Load shared Skin Config"), boundFunction(self.Open_Skin_Config, "load")),))
+        self.session.openWithCallback(self.menuCallback, ChoiceBox,list = answer)
+    
+    def Open_Skin_Config(self, what):
+        do_skin = ShareSkinSettings()
+        if what == 'share':
+           answer = do_skin.share()
+        else:
+           answer = do_skin.load()
+        
+        self.debug(str(answer) + '\n')
+        
+        if what == 'share':
+           if answer:
+              self.session.open(MessageBox,_('Youre Skin Config is ready to share.\nLook in /tmp for youre Skin File.'), MessageBox.TYPE_INFO)
+           else:
+              self.session.open(MessageBox,_('Anything goes wrong.'), MessageBox.TYPE_INFO)
+        else:
+           if answer:
+              self.save()
+              self.session.open(MessageBox,_('New Skin Config is load.'), MessageBox.TYPE_INFO)
+           else:
+              self.session.open(MessageBox,_('Skin Config is wrong.'), MessageBox.TYPE_INFO)
+              
+    def Open_Setup(self, what):
+        self.reboot("GUI needs a restart after download Plugin.\nDo you want to Restart the GUI now?")
+        self.session.open(Console, _("Install Plugin") , cmdlist=[("opkg install %s" % what)])
+    
+    def Open_NumberExt(self): 
+        self.session.open(NumberZapExtSetupScreen, ACTIONLIST)
+    
+    def reboot(self, message = None):
+        self.debug('Reboot\n')
+        if message is None:
+           message = _("Do you really want to reboot now?")
+        
+        configfile.save()
+        restartbox = self.session.openWithCallback(self.restartGUI, MessageBox, message, MessageBox.TYPE_YESNO)
+        restartbox.setTitle(_("Restart GUI"))
+
+    def restartGUI(self, answer):
+        if answer is True:
+            config.skin.primary_skin.setValue("SevenHD/skin.xml")
+            config.skin.save()
+            self.session.open(TryQuitMainloop, 3)
+        else:
+            self.close()
+
+    def exit(self):
+        self["menuList"].onSelectionChanged.remove(self.__selectionChanged)
+        self.close()
+
+    def __selectionChanged(self):
+        self.ShowPicture()
+        
+    def debug(self, what):
+        if config.plugins.SevenHD.msgdebug.value:
+           try:
+              self.session.open(MessageBox, _('[PluginScreen]\n' + str(what)), MessageBox.TYPE_INFO)
+           except:
+              pass
+           
+        if config.plugins.SevenHD.debug.value:
+           f = open('/tmp/kraven_debug.txt', 'a+')
+           f.write('[PluginScreen]' + str(what) + '\n')
+           f.close()    
+################################################################################        
 def main(session, **kwargs):
-        session.open(SevenHD,"/usr/lib/enigma2/python/Plugins/Extensions/SevenHD/images/main-custom-openatv.jpg")
+        if fileExists("/tmp/kraven_debug.txt"):
+           remove('/tmp/kraven_debug.txt')
+        session.open(SevenHD)
 
 def Plugins(**kwargs):
 	screenwidth = getDesktop(0).size().width()

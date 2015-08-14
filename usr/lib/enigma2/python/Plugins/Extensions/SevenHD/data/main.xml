@@ -107,10 +107,10 @@
     <widget backgroundColor="SevenBackground" name="bouquets" position="70,560" zPosition="1" size="708,30" font="Regular2; 20" halign="left" valign="center" transparent="0" foregroundColor="SevenFont2" />
     <widget backgroundColor="SevenBackground" name="netservers" position="70,590" zPosition="1" size="708,30" font="Regular2; 20" halign="left" valign="center" transparent="0" foregroundColor="SevenFont2" />
     <widget backgroundColor="SevenBackground" name="config" itemHeight="32" font="Regular;20" foregroundColor="SevenFont1" position="70,80" size="708,320" alphatest="blend" transparent="0" />
-    <widget font="Regular; 20" halign="left" valign="center" name="btt_red" position="64,662" size="148,48" backgroundColor="SevenBackground" foregroundColor="SevenButtonText" transparent="0" zPosition="1" />
-    <widget font="Regular; 20" halign="left" valign="center" name="btt_green" position="264,662" size="148,48" backgroundColor="SevenBackground" foregroundColor="SevenButtonText" transparent="0" zPosition="1" />
-    <widget font="Regular; 20" halign="left" valign="center" name="btt_yellow" position="464,662" size="148,48" backgroundColor="SevenBackground" foregroundColor="SevenButtonText" transparent="0" zPosition="1" />
-    <widget font="Regular; 20" halign="left" valign="center" name="btt_blue" position="664,662" size="148,48" backgroundColor="SevenBackground" foregroundColor="SevenButtonText" transparent="0" zPosition="1" />
+    <widget font="Regular; 18" halign="left" valign="center" name="btt_red" position="64,662" size="148,48" backgroundColor="SevenBackground" foregroundColor="SevenButtonText" transparent="0" zPosition="1" />
+    <widget font="Regular; 18" halign="left" valign="center" name="btt_green" position="264,662" size="148,48" backgroundColor="SevenBackground" foregroundColor="SevenButtonText" transparent="0" zPosition="1" />
+    <widget font="Regular; 18" halign="left" valign="center" name="btt_yellow" position="464,662" size="148,48" backgroundColor="SevenBackground" foregroundColor="SevenButtonText" transparent="0" zPosition="1" />
+    <widget font="Regular; 18" halign="left" valign="center" name="btt_blue" position="664,662" size="148,48" backgroundColor="SevenBackground" foregroundColor="SevenButtonText" transparent="0" zPosition="1" />
     <panel name="template_menu_left_button" />
   </screen>
   <screen name="Swap" title="Swap" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
@@ -363,8 +363,6 @@
   <widget name="bouquetlist" position="8,99" size="1260,120" itemHeight="40" foregroundColor="SevenFont1" backgroundColor="SevenBackground" foregroundColorSelected="white" backgroundColorSelected="SevenBackground" scrollbarMode="showNever" zPosition="6" transparent="0" />
   <widget name="list" position="10,100" size="1260,120" backgroundColor="SevenBackground" scrollbarMode="showNever" zPosition="1" EntryFontWrap="no" transparent="0" />
   <widget name="timeline_now" position="10,100" zPosition="2" size="16,120" pixmap="SevenHD/epg/timeline-now_s.png" alphatest="blend" />
-
-
  <eLabel backgroundColor="SevenBorder" position="8,70" size="1266,2" zPosition="2" />
   <eLabel backgroundColor="SevenBorder" position="8,278" size="1266,2" zPosition="2" />
   <eLabel backgroundColor="SevenBorder" position="6,70" size="2,210" zPosition="2" />
@@ -374,10 +372,10 @@
   <ePixmap pixmap="SevenHD/buttons/key_green1.png" position="222,230" size="32,37" backgroundColor="SevenBackground" alphatest="blend" />
   <ePixmap pixmap="SevenHD/buttons/key_yellow1.png" position="422,230" size="32,37" backgroundColor="SevenBackground" alphatest="blend" />
   <ePixmap pixmap="SevenHD/buttons/key_blue1.png" position="622,230" size="32,37" backgroundColor="SevenBackground" alphatest="blend" />
-  <widget name="key_red" position="64,226" zPosition="1" size="148,48" font="Regular; 20" backgroundColor="SevenBackground" foregroundColor="SevenButtonText" transparent="0" valign="center" />
-  <widget name="key_green" position="264,226" zPosition="1" size="148,48" font="Regular; 20" backgroundColor="SevenBackground" foregroundColor="SevenButtonText" transparent="0" valign="center" />
-  <widget name="key_yellow" position="464,226" zPosition="1" size="148,48" font="Regular; 20" backgroundColor="SevenBackground" foregroundColor="SevenButtonText" transparent="0" valign="center" />
-  <widget name="key_blue" position="664,226" zPosition="1" size="148,48" font="Regular; 20" backgroundColor="SevenBackground" foregroundColor="SevenButtonText" transparent="0" valign="center" />
+  <widget name="key_red" position="64,226" zPosition="1" size="148,48" font="Regular; 18" backgroundColor="SevenBackground" foregroundColor="SevenButtonText" transparent="0" valign="center" />
+  <widget name="key_green" position="264,226" zPosition="1" size="148,48" font="Regular; 18" backgroundColor="SevenBackground" foregroundColor="SevenButtonText" transparent="0" valign="center" />
+  <widget name="key_yellow" position="464,226" zPosition="1" size="148,48" font="Regular; 18" backgroundColor="SevenBackground" foregroundColor="SevenButtonText" transparent="0" valign="center" />
+  <widget name="key_blue" position="664,226" zPosition="1" size="148,48" font="Regular; 18" backgroundColor="SevenBackground" foregroundColor="SevenButtonText" transparent="0" valign="center" />
 </screen>
   <!-- QuickEPG -->
 <screen name="QuickEPG" flags="wfNoBorder" position="0,435" size="1280,285" title="InfoBar" backgroundColor="SevenBackground">
@@ -401,7 +399,6 @@
   <widget source="Service" render="Picon" position="9,19" size="70,42" transparent="0" zPosition="2" alphatest="blend">
     <convert type="ServiceName">Reference</convert>
   </widget>
-
  <eLabel backgroundColor="SevenBorder" position="8,80" size="1266,2" zPosition="2" />
   <eLabel backgroundColor="SevenBorder" position="8,278" size="1266,2" zPosition="2" />
   <eLabel backgroundColor="SevenBorder" position="8,80" size="2,200" zPosition="2" />
@@ -411,11 +408,10 @@
   <ePixmap pixmap="SevenHD/buttons/key_green1.png" position="222,230" size="32,37" backgroundColor="SevenBackground" alphatest="blend" />
   <ePixmap pixmap="SevenHD/buttons/key_yellow1.png" position="422,230" size="32,37" backgroundColor="SevenBackground" alphatest="blend" />
   <ePixmap pixmap="SevenHD/buttons/key_blue1.png" position="622,230" size="32,37" backgroundColor="SevenBackground" alphatest="blend" />
-  <widget name="key_red" position="64,226" zPosition="1" size="148,48" font="Regular; 20" backgroundColor="SevenBackground" foregroundColor="SevenButtonText" transparent="0" valign="center" />
-  <widget name="key_green" position="264,226" zPosition="1" size="148,48" font="Regular; 20" backgroundColor="SevenBackground" foregroundColor="SevenButtonText" transparent="0" valign="center" />
-  <widget name="key_yellow" position="464,226" zPosition="1" size="148,48" font="Regular; 20" backgroundColor="SevenBackground" foregroundColor="SevenButtonText" transparent="0" valign="center" />
-  <widget name="key_blue" position="664,226" zPosition="1" size="148,48" font="Regular; 20" backgroundColor="SevenBackground" foregroundColor="SevenButtonText" transparent="0" valign="center" />
-
+  <widget name="key_red" position="64,226" zPosition="1" size="148,48" font="Regular; 18" backgroundColor="SevenBackground" foregroundColor="SevenButtonText" transparent="0" valign="center" />
+  <widget name="key_green" position="264,226" zPosition="1" size="148,48" font="Regular; 18" backgroundColor="SevenBackground" foregroundColor="SevenButtonText" transparent="0" valign="center" />
+  <widget name="key_yellow" position="464,226" zPosition="1" size="148,48" font="Regular; 18" backgroundColor="SevenBackground" foregroundColor="SevenButtonText" transparent="0" valign="center" />
+  <widget name="key_blue" position="664,226" zPosition="1" size="148,48" font="Regular; 18" backgroundColor="SevenBackground" foregroundColor="SevenButtonText" transparent="0" valign="center" />
 </screen>
   <!-- ********** Menu ********** -->
   <!-- Menu -->
@@ -1322,8 +1318,8 @@
   <screen backgroundColor="transparent" flags="wfNoBorder" name="TimerEntry" position="0,0" size="1280,720" title="Timer entry">
     <widget itemHeight="30" name="config" position="70,80" size="708,390" transparent="0" />
     <widget name="HelpWindow" position="156,479" size="532,170" flags="wfNoBorder" />
-    <eLabel font="Regular;20" halign="left" valign="center" text="Abbrechen" position="64,662" size="148,48" backgroundColor="SevenBackground" foregroundColor="SevenButtonText" transparent="0" zPosition="1" />
-    <eLabel font="Regular;20" halign="left" valign="center" text="OK" position="264,662" size="148,48" backgroundColor="SevenBackground" foregroundColor="SevenButtonText" transparent="0" zPosition="1" />
+    <eLabel font="Regular;18" halign="left" valign="center" text="Abbrechen" position="64,662" size="148,48" backgroundColor="SevenBackground" foregroundColor="SevenButtonText" transparent="0" zPosition="1" />
+    <eLabel font="Regular;18" halign="left" valign="center" text="OK" position="264,662" size="148,48" backgroundColor="SevenBackground" foregroundColor="SevenButtonText" transparent="0" zPosition="1" />
     <panel name="template_colorkey_text" />
     <panel name="template_menu_left_button" />
   </screen>
@@ -1343,10 +1339,10 @@
     <ePixmap pixmap="SevenHD/buttons/key_green.png" position="370,308" size="32,32" backgroundColor="SevenBackground" alphatest="blend" />
     <ePixmap pixmap="SevenHD/buttons/key_yellow.png" position="70,498" size="32,32" backgroundColor="SevenBackground" alphatest="blend" />
     <ePixmap pixmap="SevenHD/buttons/key_blue.png" position="370,498" size="32,32" backgroundColor="SevenBackground" alphatest="blend" />
-    <eLabel font="Regular;20" halign="left" valign="center" text="Bearbeiten" position="112,300" size="148,48" backgroundColor="SevenBackground" foregroundColor="SevenButtonText" transparent="0" zPosition="1" />
-    <widget font="Regular;20" halign="left" valign="center" name="key_green" position="412,300" size="148,48" backgroundColor="SevenBackground" foregroundColor="SevenButtonText" transparent="0" zPosition="1" />
-    <widget font="Regular;20" halign="left" valign="center" name="key_yellow" position="112,490" size="148,48" backgroundColor="SevenBackground" foregroundColor="SevenButtonText" transparent="0" zPosition="1" />
-    <widget font="Regular;20" halign="left" valign="center" name="key_blue" position="412,490" size="148,48" backgroundColor="SevenBackground" foregroundColor="SevenButtonText" transparent="0" zPosition="1" />
+    <eLabel font="Regular;18" halign="left" valign="center" text="Bearbeiten" position="112,300" size="148,48" backgroundColor="SevenBackground" foregroundColor="SevenButtonText" transparent="0" zPosition="1" />
+    <widget font="Regular;18" halign="left" valign="center" name="key_green" position="412,300" size="148,48" backgroundColor="SevenBackground" foregroundColor="SevenButtonText" transparent="0" zPosition="1" />
+    <widget font="Regular;18" halign="left" valign="center" name="key_yellow" position="112,490" size="148,48" backgroundColor="SevenBackground" foregroundColor="SevenButtonText" transparent="0" zPosition="1" />
+    <widget font="Regular;18" halign="left" valign="center" name="key_blue" position="412,490" size="148,48" backgroundColor="SevenBackground" foregroundColor="SevenButtonText" transparent="0" zPosition="1" />
     <panel name="template_menu_left" />
   </screen>
   <!-- TimerSelection -->
@@ -1449,8 +1445,6 @@
     <panel name="template_colorkey_text_source" />
   </screen>
   <!-- ********** Messages ********** -->
-  
-  
   <!-- SystemMessage -->
   <screen name="SystemMessage" position="150,200" backgroundColor="SevenBackground" size="450,200">
     <widget source="text" position="0,0" size="450,200" font="Regular;20" foregroundColor="SevenFont1" halign="center" valign="center" render="Label" />
@@ -1597,9 +1591,9 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,orgpos.y()))
   <!-- PluginBrowser -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="PluginBrowser" position="0,0" size="1280,720" title="Plugin browser">
     <widget backgroundColor="SevenBackground" enableWrapAround="1" name="list" position="70,80" size="708,550" transparent="0" />
-    <eLabel backgroundColor="SevenBackground" font="Regular;20" foregroundColor="SevenButtonText" halign="left" valign="center" text="Plugins entfernen" position="64,662" size="148,48" transparent="0" zPosition="1" />
-    <eLabel backgroundColor="SevenBackground" font="Regular;20" foregroundColor="SevenButtonText" halign="left" valign="center" text="Download Plugins" position="264,662" size="148,48" transparent="0" zPosition="1" />
-    <eLabel backgroundColor="SevenBackground" font="Regular;20" foregroundColor="SevenButtonText" halign="left" valign="center" text="Plugins sperren" position="664,662" size="148,48" transparent="0" zPosition="1" />
+    <eLabel backgroundColor="SevenBackground" font="Regular;18" foregroundColor="SevenButtonText" halign="left" valign="center" text="Plugins entfernen" position="64,662" size="148,48" transparent="0" zPosition="1" />
+    <eLabel backgroundColor="SevenBackground" font="Regular;18" foregroundColor="SevenButtonText" halign="left" valign="center" text="Download Plugins" position="264,662" size="148,48" transparent="0" zPosition="1" />
+    <eLabel backgroundColor="SevenBackground" font="Regular;18" foregroundColor="SevenButtonText" halign="left" valign="center" text="Plugins sperren" position="664,662" size="148,48" transparent="0" zPosition="1" />
     <panel name="template_menu_left_button" />
   </screen>
   <!-- PluginDownloadBrowser -->
@@ -1704,7 +1698,6 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,orgpos.y()))
     <widget backgroundColor="SevenBackground" font="Regular2; 26" noWrap="1" position="230,23" render="Label" size="240,28" source="session.CurrentService" transparent="0">
       <convert type="ServiceName">Provider</convert>
     </widget>
-    
     <widget backgroundColor="SevenBackground" font="LCD; 38" position="985,108" render="FixedLabel" size="100,40" source="RdsDecoder" text="Rass" transparent="0">
       <convert type="RdsInfo">RasInteractiveAvailable</convert>
       <convert type="ConditionalShowHide" />
@@ -1807,9 +1800,9 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,orgpos.y()))
 			</convert>
     </widget>
     <ePixmap pixmap="SevenHD/buttons/key_exit.png" position="339,387" size="32,32" zPosition="3" alphatest="blend" />
-    <eLabel text="Cancel" backgroundColor="Sevenbackground" font="Regular;20" foregroundColor="SevenButtonText" halign="left" position="378,393" size="220,30" transparent="0" zPosition="1" />
+    <eLabel text="Cancel" backgroundColor="Sevenbackground" font="Regular;18" foregroundColor="SevenButtonText" halign="left" position="378,393" size="220,30" transparent="0" zPosition="1" />
     <ePixmap pixmap="SevenHD/buttons/key_ok.png" alphatest="blend" position="35,387" size="32,32" zPosition="3" />
-    <eLabel text="Auswahl" backgroundColor="Sevenbackground" font="Regular;20" foregroundColor="SevenButtonText" halign="left" position="75,393" size="220,30" transparent="0" zPosition="3" />
+    <eLabel text="Auswahl" backgroundColor="Sevenbackground" font="Regular;18" foregroundColor="SevenButtonText" halign="left" position="75,393" size="220,30" transparent="0" zPosition="3" />
   </screen>
   <!-- Change_volume -->
   <screen name="Change_volume" position="0,0" size="1280,720" title="Change Volume offset" flags="wfNoBorder" backgroundColor="transparent">
@@ -1895,13 +1888,13 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,orgpos.y()))
     <widget backgroundColor="SevenBackground" source="job_progress" render="Label" position="285,238" size="280,32" font="Regular2;28" foregroundColor="SevenFont2" zPosition="2" halign="center" transparent="1">
       <convert type="ProgressToText" />
     </widget>
-    <widget source="cancelable" render="FixedLabel" text="Cancel" position="64,662" size="148,48" zPosition="1" font="Regular;20" halign="left" valign="center" backgroundColor="SevenBackground" foregroundColor="SevenButtonText" transparent="0">
+    <widget source="cancelable" render="FixedLabel" text="Cancel" position="64,662" size="148,48" zPosition="1" font="Regular;18" halign="left" valign="center" backgroundColor="SevenBackground" foregroundColor="SevenButtonText" transparent="0">
       <convert type="ConditionalShowHide" />
     </widget>
-    <widget source="finished" render="FixedLabel" text="OK" position="264,662" size="148,48" zPosition="1" font="Regular;20" halign="left" valign="center" foregroundColor="SevenButtonText" backgroundColor="SevenBackground" transparent="0">
+    <widget source="finished" render="FixedLabel" text="OK" position="264,662" size="148,48" zPosition="1" font="Regular;18" halign="left" valign="center" foregroundColor="SevenButtonText" backgroundColor="SevenBackground" transparent="0">
       <convert type="ConditionalShowHide" />
     </widget>
-    <widget source="backgroundable" render="FixedLabel" text="Continue in background" position="664,662" size="148,48" zPosition="1" font="Regular;20" halign="left" valign="center" foregroundColor="SevenButtonText" backgroundColor="SevenBackground" transparent="0">
+    <widget source="backgroundable" render="FixedLabel" text="Continue in background" position="664,662" size="148,48" zPosition="1" font="Regular;18" halign="left" valign="center" foregroundColor="SevenButtonText" backgroundColor="SevenBackground" transparent="0">
       <convert type="ConditionalShowHide" />
     </widget>
     <widget source="job_progress" render="Progress" position="70,238" size="708,36" borderWidth="2" foregroundColor="blue" backgroundColor="SevenBackground" transparent="1" />
@@ -2465,10 +2458,10 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,orgpos.y()))
       <convert type="SensorToText">
       </convert>
     </widget>
-    <widget font="Regular; 20" halign="left" valign="center" source="red" position="64,662" size="148,48" render="Label" backgroundColor="SevenBackground" foregroundColor="SevenButtonText" transparent="0" zPosition="1" />
-    <widget font="Regular; 20" halign="left" valign="center" source="green" position="264,662" size="148,48" render="Label" backgroundColor="SevenBackground" foregroundColor="SevenButtonText" transparent="0" zPosition="1" />
-    <widget font="Regular; 20" halign="left" valign="center" source="yellow" position="464,662" size="148,48" render="Label" backgroundColor="SevenBackground" foregroundColor="SevenButtonText" transparent="0" zPosition="1" />
-    <widget font="Regular; 20" halign="left" valign="center" source="blue" position="664,662" size="148,48" render="Label" backgroundColor="SevenBackground" foregroundColor="white" transparent="0" zPosition="1" />
+    <widget font="Regular; 18" halign="left" valign="center" source="red" position="64,662" size="148,48" render="Label" backgroundColor="SevenBackground" foregroundColor="SevenButtonText" transparent="0" zPosition="1" />
+    <widget font="Regular; 18" halign="left" valign="center" source="green" position="264,662" size="148,48" render="Label" backgroundColor="SevenBackground" foregroundColor="SevenButtonText" transparent="0" zPosition="1" />
+    <widget font="Regular; 18" halign="left" valign="center" source="yellow" position="464,662" size="148,48" render="Label" backgroundColor="SevenBackground" foregroundColor="SevenButtonText" transparent="0" zPosition="1" />
+    <widget font="Regular; 18" halign="left" valign="center" source="blue" position="664,662" size="148,48" render="Label" backgroundColor="SevenBackground" foregroundColor="white" transparent="0" zPosition="1" />
     <panel name="template_menu_left_button" />
   </screen>
   <!-- Main */ -->

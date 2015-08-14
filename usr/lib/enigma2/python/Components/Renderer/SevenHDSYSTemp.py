@@ -24,7 +24,7 @@ class SevenHDSYSTemp(Renderer, VariableText):
 					out_line = popen("cat /proc/stb/fp/temp_sensor_avs").readline()
 					systemp = out_line.replace('\n', '').strip()
                                 if not systemp == "-- " and len(systemp) > 2:
-					systemp = systemp[:2]
+					systemp = systemp[:3]
 			except:
 				pass
 			self.text = systemp + str('\xc2\xb0') + "C"

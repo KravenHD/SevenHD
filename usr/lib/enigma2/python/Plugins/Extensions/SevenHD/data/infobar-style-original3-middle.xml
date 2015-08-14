@@ -1,6 +1,5 @@
 </screen>
 <!-- /* InfoBar Original -->
-
 <!--/* SecondInfoBar Original -->
 <screen backgroundColor="transparent" flags="wfNoBorder" name="SecondInfoBar" position="0,0" size="1280,720" title="SecondInfoBar">
 
