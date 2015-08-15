@@ -63,10 +63,10 @@
     <panel name="template_menu_left" />
   </screen>
   <!-- QuickMenu -->
-  <screen name="QuickMenu" position="0,0" size="1280,720" backgroundColor="transparent" flags="wfNoBorder">
+ <screen name="QuickMenu" position="0,0" size="1280,720" backgroundColor="transparent" flags="wfNoBorder">
     <widget name="list" position="70,80" size="330,400" backgroundColor="SevenBackground" itemHeight="50" transparent="0" />
-    <widget name="description" position="70,525" size="708,110" zPosition="1" font="Regular2;22" foregroundColor="SevenFont2" halign="center" backgroundColor="SevenBackground" transparent="0" />
-    <widget name="sublist" position="448,80" size="330,400" backgroundColor="SevenBackground" itemHeight="50" transparent="0" />
+    <widget name="description" position="70,525" size="718,110" zPosition="1" font="Regular2;22" foregroundColor="SevenFont2" halign="center" backgroundColor="SevenBackground" transparent="0" />
+    <widget name="sublist" position="448,80" size="340,400" backgroundColor="SevenBackground" itemHeight="50" transparent="0" />
     <panel name="template_colorkey_text" />
     <panel name="template_menu_left_button" />
   </screen>
@@ -93,9 +93,9 @@
     <panel name="template_menu_left" />
   </screen>
   <!-- Softwarepanel -->
-  <screen name="SoftwarePanel" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
-    <widget source="list" render="Listbox" position="70,90" size="708,520" backgroundColor="SevenBackground" itemHeight="50" alphatest="blend" transparent="0">
-      <convert type="TemplatedMultiContent">
+<screen name="SoftwarePanel" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
+  <widget source="list" render="Listbox" position="70,90" size="708,520" backgroundColor="SevenBackground"  scrollbarMode="showNever" itemHeight="50" alphatest="blend" transparent="1">
+    <convert type="TemplatedMultiContent">
 			{"template": [
 					MultiContentEntryText(pos = (6, 2), size = (540, 28), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 0 is the name
 					MultiContentEntryText(pos = (6, 28), size = (540, 20), font=1, flags = RT_HALIGN_LEFT, text = 2), # index 2 is the description
@@ -106,19 +106,19 @@
 			"itemHeight": 52
 			}
 		</convert>
-    </widget>
-    <widget name="packagetext" position="918,391" size="250,30" zPosition="1" font="Regular2; 25" halign="right" transparent="0" backgroundColor="SevenBackgroundRight" foregroundColor="SevenFont2" />
-    <widget name="packagenr" position="1181,391" size="50,30" zPosition="1" font="Regular2; 25" halign="right" transparent="0" backgroundColor="SevenBackgroundRight" foregroundColor="SevenFont2" />
-    <widget name="feedstatusRED" position="997,557" size="200,30" zPosition="1" font="Regular;25" halign="left" backgroundColor="SevenBackgroundRight" foregroundColor="SevenFont1" transparent="0" />
-    <widget name="feedstatusYELLOW" position="997,587" size="200,30" zPosition="1" font="Regular;25" halign="left" backgroundColor="SevenBackgroundRight" foregroundColor="SevenFont1" transparent="0" />
-    <widget name="feedstatusGREEN" position="997,617" size="200,30" zPosition="1" font="Regular;25" halign="left" backgroundColor="SevenBackgroundRight" foregroundColor="SevenFont1" transparent="0" />
-    <widget name="a_off" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/Infopanel/icons/aoff.png" position="954,551" zPosition="1" size="36,97" alphatest="on" />
-    <widget name="a_red" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/Infopanel/icons/ared.png" position="954,551" zPosition="1" size="36,97" alphatest="on" />
-    <widget name="a_yellow" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/Infopanel/icons/ayellow.png" position="954,551" zPosition="1" size="36,97" alphatest="on" />
-    <widget name="a_green" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/Infopanel/icons/agreen.png" position="954,551" zPosition="1" size="36,97" alphatest="on" />
-    <panel name="template_colorkey_text" />
-    <panel name="template_menu_left_right_button" />
-  </screen>
+  </widget>
+  <widget name="packagetext" position="918,391" size="250,30" zPosition="1" font="Regular2; 25" halign="right" transparent="0" backgroundColor="SevenBackgroundRight" foregroundColor="SevenFont2" />
+  <widget name="packagenr" position="1181,391" size="50,30" zPosition="1" font="Regular2; 25" halign="right" transparent="0" backgroundColor="SevenBackgroundRight" foregroundColor="SevenFont2" />
+  <widget name="feedstatusRED" position="997,557" size="200,30" zPosition="1" font="Regular;25" halign="left" backgroundColor="SevenBackgroundRight" foregroundColor="SevenFont1" transparent="0" />
+  <widget name="feedstatusYELLOW" position="997,587" size="200,30" zPosition="1" font="Regular;25" halign="left" backgroundColor="SevenBackgroundRight" foregroundColor="SevenFont1" transparent="0" />
+  <widget name="feedstatusGREEN" position="997,617" size="200,30" zPosition="1" font="Regular;25" halign="left" backgroundColor="SevenBackgroundRight" foregroundColor="SevenFont1" transparent="0" />
+  <widget name="a_off" pixmap="/usr/share/enigma2/skin_default/icons/aoff.png" position="954,551" zPosition="1" size="36,97" alphatest="on" />
+  <widget name="a_red" pixmap="/usr/share/enigma2/skin_default/icons/ared.png" position="954,551" zPosition="1" size="36,97" alphatest="on" />
+  <widget name="a_yellow" pixmap="/usr/share/enigma2/skin_default/icons/ayellow.png" position="954,551" zPosition="1" size="36,97" alphatest="on" />
+  <widget name="a_green" pixmap="/usr/share/enigma2/skin_default/icons/agreen.png" position="954,551" zPosition="1" size="36,97" alphatest="on" />
+  <panel name="template_colorkey_text" />
+  <panel name="template_menu_left_right_button" />
+</screen>
   <!-- DevicePanelConf -->
   <screen name="DevicePanelConf" position="0,0" size="1280,720" title="DevicePanelConf" backgroundColor="transparent" flags="wfNoBorder">
     <widget name="config" position="70,120" size="700,371" enableWrapAround="1" backgroundColor="SevenBackground" transparent="0" />
@@ -241,7 +241,7 @@
   </screen>
   <!-- SwapManager -->
   <screen name="SwapOverviewScreen" position="0,0" size="1280,720" title="Swap Manager" backgroundColor="transparent" flags="wfNoBorder">
-    <widget name="config" position="70,109" size="710,497" scrollbarMode="showOnDemand" transparent="0" />
+    <widget name="config" position="70,109" size="710,497" scrollbarMode="showNever" transparent="0" />
     <widget name="swapstatus_label" position="70,612" size="250,30" foregroundColor="SevenFont1" font="Regular;20" transparent="0" />
     <widget name="swapstatus_status" position="320,612" size="250,30" halign="right" foregroundColor="SevenFont1" font="Regular;20" transparent="0" />
     <widget font="Regular; 22" halign="left" name="status" position="70,80" size="710,25" foregroundColor="SevenFont1" backgroundColor="SevenBackground" transparent="0" />
@@ -299,7 +299,7 @@
   </screen>
   <!-- DownloadOnLineImage-->
   <screen name="DownloadOnLineImage" title="NFR4XBoot - Download Image" position="0,0" size="1280,720" backgroundColor="transparent" flags="wfNoBorder">
-    <widget name="imageList" backgroundColor="SevenBackground" font="Regular;22" foregroundColor="SevenFont1" scrollbarMode="showOnDemand" position="70,80" size="708,540" transparent="0" />
+    <widget name="imageList" backgroundColor="SevenBackground" font="Regular;22" foregroundColor="SevenFont1" scrollbarMode="showNever" position="70,80" size="708,540" transparent="0" />
     <panel name="template_menu_left_button" />
     <panel name="template_colorkey_text" />
   </screen>
@@ -341,7 +341,7 @@
     <widget name="label1" position="65,320" size="715,22" zPosition="1" halign="center" font="Regular;18" backgroundColor="SevenBackground" transparent="0" foregroundColor="green" />
     <widget name="device_icon" position="65,98" size="80,80" alphatest="on" />
     <widget name="free_space_progressbar" position="163,132" size="615,13" borderWidth="1" zPosition="3" />
-    <widget name="config" position="65,370" size="715,268" scrollbarMode="showOnDemand" transparent="0" />
+    <widget name="config" position="65,370" size="715,268" scrollbarMode="showNever" transparent="0" />
     <panel name="template_menu_left_button" />
     <panel name="template_colorkey_text" />
   </screen>
@@ -349,7 +349,7 @@
   <screen name="NFR4XBootInstallation" title="NFR4XBoot - Installation" position="0,0" size="1280,720" backgroundColor="transparent" flags="wfNoBorder">
     <widget name="label1" position="70,98" size="715,30" zPosition="1" halign="center" font="Regular;25" foregroundColor="SevenFont1" backgroundColor="SevenBackground" transparent="0" />
     <widget name="label2" position="70,159" size="715,100" zPosition="1" halign="center" font="Regular;20" foregroundColor="SevenFont1" backgroundColor="SevenBackground" transparent="0" />
-    <widget name="config" position="70,260" size="715,280" scrollbarMode="showOnDemand" transparent="0" />
+    <widget name="config" position="70,260" size="715,280" scrollbarMode="showNever" transparent="0" />
     <panel name="template_menu_left_button" />
     <panel name="template_colorkey_text" />
   </screen>
@@ -371,6 +371,31 @@
   <widget position="70,80" name="Mlist" font="Regular;20" foregroundColor="SevenFont1" backgroundColor="SevenBackground" size="708,504" transparent="0" />
   <widget name="label1" position="70,599" size="708,40" font="Regular2;20" backgroundColor="SevenBackground" foregroundColor="SevenFont2" />
 <panel name="template_menu_left" />
+</screen>
+<!-- Sortable Menu-->
+<screen name="SortableMenu" backgroundColor="transparent" flags="wfNoBorder" position="0,0" size="1280,720" title="Sortable Menu">
+<widget backgroundColor="SevenBackground" foregroundColor="SevenFont1" name="menu" position="70,80" size="708,504" font="Regular; 20" halign="left" valign="top" transparent="0" />
+<panel name="template_menu_left" />
+</screen>
+<!-- Disk Speed-->
+<screen name="Disk_Speed" position="0,0" size="1280,720" backgroundColor="transparent" title="Disk Speed Test">
+  <widget name="label1" position="25,80" size="800,30" zPosition="1" halign="center" font="Regular;25" backgroundColor="SevenBackground" foregroundColor="SevenFont1" transparent="0" />
+  <widget name="label2" position="25,130" size="800,290" zPosition="1" halign="center" font="Regular;20" backgroundColor="SevenBackground" foregroundColor="SevenFont1" transparent="0" />
+  <widget name="config" position="25,440" size="800,200" scrollbarMode="showNever" backgroundColor="SevenBackground" foregroundColor="SevenFont1" enableWrapAround="1" transparent="0" />
+  <panel name="template_menu_left_button" />
+  <panel name="template_colorkey_text" />
+</screen>
+<!-- Disk Test-->
+<screen name="Disk_Test" position="0,0" size="1280,720" backgroundColor="transparent" title="Disk Speed Test">
+  <widget name="label1" position="25,80" size="800,40" zPosition="1" halign="center" font="Regular;25" backgroundColor="SevenBackground" foregroundColor="SevenFont1" transparent="0" />
+  <widget name="label2" position="25,131" size="800,120" zPosition="1" halign="center" font="Regular;20" backgroundColor="SevenBackground" foregroundColor="SevenFont1" transparent="0" />
+  <eLabel name="spaceused" text=" 1 SD" position="25,335" size="40,20" font="Regular; 14" halign="left" backgroundColor="SevenBackground" foregroundColor="SevenFont2" transparent="0" zPosition="5" />
+  <eLabel name="spaceused1" text=" 1 HD" position="71,335" size="40,20" font="Regular; 14" halign="left" backgroundColor="SevenBackground" foregroundColor="SevenFont2" transparent="0" zPosition="5" />
+  <eLabel name="spaceused2" text=" 2 HD" position="117,335" size="40,20" font="Regular; 14" halign="left" backgroundColor="SevenBackground" foregroundColor="SevenFont2" transparent="0" zPosition="5" />
+  <eLabel name="spaceused3" text=" More then 2 HD" position="396,335" size="120,20" font="Regular; 14" halign="left" backgroundColor="SevenBackground" foregroundColor="SevenFont2" transparent="0" zPosition="5" />
+  <widget name="spaceused" position="25,304" size="800,20" backgroundColor="SevenBackground" borderWidth="2" borderColor="SevenBorder" foregroundColor="SevenFont2" zPosition="3" transparent="0" />
+  <panel name="template_menu_left_button" />
+  <panel name="template_colorkey_text" />
 </screen>
   <!-- main-custom-nfr */ -->
   
