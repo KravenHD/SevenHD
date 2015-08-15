@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "POT-Creation-Date: 2015-08-12 13:30+0200\n"
-"PO-Revision-Date: 2015-08-13 18:34+0200\n"
+"PO-Revision-Date: 2015-08-15 18:29+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: de_DE\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.8.2\n"
+"X-Generator: Poedit 1.8.4\n"
 "X-Poedit-Basepath: ../../../../../../../../../../sevenhd_tbx1\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-SearchPath-0: .\n"
@@ -94,10 +94,6 @@ msgstr "Beschreibung aktuelles Programm"
 #: ChannelSettings.py:146
 msgid "program description next"
 msgstr "Beschreibung nächstes Programm"
-
-#: ChannelSettings.py:147 MainSettings.py:122
-msgid "buttons"
-msgstr "Textfarbe Buttons"
 
 #: ChannelSettings.py:148
 msgid "______________________________________________ color list ____________________________________________"
@@ -735,6 +731,10 @@ msgstr "________________________________________ Haupteinstellungen ____________
 msgid "image"
 msgstr "Image"
 
+#: MainSettings.py:122
+msgid "buttons"
+msgstr "Farbe Buttons"
+
 #: MainSettings.py:123
 msgid "running text"
 msgstr "Lauftext"
@@ -822,6 +822,9 @@ msgstr "Schrift 2"
 #: MenuPluginSettings.py:134
 msgid "button text"
 msgstr "Textfarbe Buttons"
+
+msgid "plugin icons"
+msgstr "Farbe Plugin Icons"
 
 #: MenuPluginSettings.py:247
 msgid "[MenuPluginSettings]\n"
