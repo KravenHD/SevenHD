@@ -1589,7 +1589,7 @@
   <eLabel backgroundColor="SevenBorder" position="878,714" size="398,2" zPosition="2" />
   <eLabel backgroundColor="SevenBorder" position="878,6" size="2,708" zPosition="2" />
   <eLabel backgroundColor="SevenBorder" position="1274,6" size="2,708" zPosition="2" />
-  <eLabel position="891,88" size="372,46" text="Version: 3.0.0" font="Regular; 35" valign="center" halign="center" transparent="0" backgroundColor="SevenBackgroundRight" foregroundColor="SevenFont2" name="," />
+  <eLabel position="891,88" size="372,46" text="Version: 3.0.1" font="Regular; 35" valign="center" halign="center" transparent="0" backgroundColor="SevenBackgroundRight" foregroundColor="SevenFont2" name="," />
 </screen>
 <screen name="MenuPluginSettings" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
   <eLabel font="Regular; 18" foregroundColor="SevenButtonText" backgroundColor="SevenBackground" halign="left" valign="center" position="64,662" size="148,48" text="Cancel" transparent="0" />
@@ -1620,7 +1620,7 @@
   <eLabel backgroundColor="SevenBorder" position="878,714" size="398,2" zPosition="2" />
   <eLabel backgroundColor="SevenBorder" position="878,6" size="2,708" zPosition="2" />
   <eLabel backgroundColor="SevenBorder" position="1274,6" size="2,708" zPosition="2" />
-  <eLabel position="891,88" size="372,46" text="Version: 3.0.0" font="Regular; 35" valign="center" halign="center" transparent="0" backgroundColor="SevenBackgroundRight" foregroundColor="SevenFont2" name="," />
+  <eLabel position="891,88" size="372,46" text="Version: 3.0.1" font="Regular; 35" valign="center" halign="center" transparent="0" backgroundColor="SevenBackgroundRight" foregroundColor="SevenFont2" name="," />
 </screen>
 <screen name="ChannelSettings" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
   <eLabel font="Regular; 18" foregroundColor="SevenButtonText" backgroundColor="SevenBackground" halign="left" valign="center" position="64,662" size="148,48" text="Cancel" transparent="0" />
@@ -1651,7 +1651,7 @@
   <eLabel backgroundColor="SevenBorder" position="878,714" size="398,2" zPosition="2" />
   <eLabel backgroundColor="SevenBorder" position="878,6" size="2,708" zPosition="2" />
   <eLabel backgroundColor="SevenBorder" position="1274,6" size="2,708" zPosition="2" />
-  <eLabel position="891,88" size="372,46" text="Version: 3.0.0" font="Regular; 35" valign="center" halign="center" transparent="0" backgroundColor="SevenBackgroundRight" foregroundColor="SevenFont2" name="," />
+  <eLabel position="891,88" size="372,46" text="Version: 3.0.1" font="Regular; 35" valign="center" halign="center" transparent="0" backgroundColor="SevenBackgroundRight" foregroundColor="SevenFont2" name="," />
 </screen>
 <screen name="InfobarExtraSettings" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
   <eLabel font="Regular; 18" foregroundColor="SevenButtonText" backgroundColor="SevenBackground" halign="left" valign="center" position="64,662" size="148,48" text="Cancel" transparent="0" />
@@ -1682,7 +1682,7 @@
   <eLabel backgroundColor="SevenBorder" position="878,714" size="398,2" zPosition="2" />
   <eLabel backgroundColor="SevenBorder" position="878,6" size="2,708" zPosition="2" />
   <eLabel backgroundColor="SevenBorder" position="1274,6" size="2,708" zPosition="2" />
-  <eLabel position="891,88" size="372,46" text="Version: 3.0.0" font="Regular; 35" valign="center" halign="center" transparent="0" backgroundColor="SevenBackgroundRight" foregroundColor="SevenFont2" name="," />
+  <eLabel position="891,88" size="372,46" text="Version: 3.0.1" font="Regular; 35" valign="center" halign="center" transparent="0" backgroundColor="SevenBackgroundRight" foregroundColor="SevenFont2" name="," />
 </screen>
 <screen name="InfobarSettings" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
   <eLabel font="Regular; 18" foregroundColor="SevenButtonText" backgroundColor="SevenBackground" halign="left" valign="center" position="64,662" size="148,48" text="Cancel" transparent="0" />
@@ -1713,7 +1713,7 @@
   <eLabel backgroundColor="SevenBorder" position="878,714" size="398,2" zPosition="2" />
   <eLabel backgroundColor="SevenBorder" position="878,6" size="2,708" zPosition="2" />
   <eLabel backgroundColor="SevenBorder" position="1274,6" size="2,708" zPosition="2" />
-  <eLabel position="891,88" size="372,46" text="Version: 3.0.0" font="Regular; 35" valign="center" halign="center" transparent="0" backgroundColor="SevenBackgroundRight" foregroundColor="SevenFont2" name="," />
+  <eLabel position="891,88" size="372,46" text="Version: 3.0.1" font="Regular; 35" valign="center" halign="center" transparent="0" backgroundColor="SevenBackgroundRight" foregroundColor="SevenFont2" name="," />
 </screen>
 <screen name="SecondInfobarSettings" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
   <eLabel font="Regular; 18" foregroundColor="SevenButtonText" backgroundColor="SevenBackground" halign="left" valign="center" position="64,662" size="148,48" text="Cancel" transparent="0" />
@@ -1744,7 +1744,7 @@
   <eLabel backgroundColor="SevenBorder" position="878,714" size="398,2" zPosition="2" />
   <eLabel backgroundColor="SevenBorder" position="878,6" size="2,708" zPosition="2" />
   <eLabel backgroundColor="SevenBorder" position="1274,6" size="2,708" zPosition="2" />
-  <eLabel position="891,88" size="372,46" text="Version: 3.0.0" font="Regular; 35" valign="center" halign="center" transparent="0" backgroundColor="SevenBackgroundRight" foregroundColor="SevenFont2" name="," />
+  <eLabel position="891,88" size="372,46" text="Version: 3.0.1" font="Regular; 35" valign="center" halign="center" transparent="0" backgroundColor="SevenBackgroundRight" foregroundColor="SevenFont2" name="," />
 </screen>
 <screen name="SonstigeSettings" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
   <eLabel font="Regular; 18" foregroundColor="SevenButtonText" backgroundColor="SevenBackground" halign="left" valign="center" position="64,662" size="148,48" text="Cancel" transparent="0" />
@@ -1775,7 +1775,7 @@
   <eLabel backgroundColor="SevenBorder" position="878,714" size="398,2" zPosition="2" />
   <eLabel backgroundColor="SevenBorder" position="878,6" size="2,708" zPosition="2" />
   <eLabel backgroundColor="SevenBorder" position="1274,6" size="2,708" zPosition="2" />
-  <eLabel position="891,88" size="372,46" text="Version: 3.0.0" font="Regular; 35" valign="center" halign="center" transparent="0" backgroundColor="SevenBackgroundRight" foregroundColor="SevenFont2" name="," />
+  <eLabel position="891,88" size="372,46" text="Version: 3.0.1" font="Regular; 35" valign="center" halign="center" transparent="0" backgroundColor="SevenBackgroundRight" foregroundColor="SevenFont2" name="," />
 </screen>
 <screen name="SevenHD" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
   <eLabel font="Regular; 18" foregroundColor="SevenButtonText" backgroundColor="SevenBackground" halign="left" valign="center" position="64,662" size="148,48" text="Cancel" transparent="0" />
@@ -1806,7 +1806,7 @@
   <eLabel backgroundColor="SevenBorder" position="878,714" size="398,2" zPosition="2" />
   <eLabel backgroundColor="SevenBorder" position="878,6" size="2,708" zPosition="2" />
   <eLabel backgroundColor="SevenBorder" position="1274,6" size="2,708" zPosition="2" />
-  <eLabel position="891,88" size="372,46" text="Version: 3.0.0" font="Regular; 35" valign="center" halign="center" transparent="0" backgroundColor="SevenBackgroundRight" foregroundColor="SevenFont2" name="," />
+  <eLabel position="891,88" size="372,46" text="Version: 3.0.1" font="Regular; 35" valign="center" halign="center" transparent="0" backgroundColor="SevenBackgroundRight" foregroundColor="SevenFont2" name="," />
 </screen>  
   <!-- Sky Select -->
 <screen name="skyselectscreen" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">

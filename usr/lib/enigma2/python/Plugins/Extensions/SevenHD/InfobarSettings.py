@@ -72,7 +72,7 @@ class InfobarSettings(ConfigListScreen, Screen):
                          <eLabel backgroundColor="#00ffffff" position="878,714" size="396,2" zPosition="2" />
                          <eLabel backgroundColor="#00ffffff" position="878,6" size="2,708" zPosition="2" />
                          <eLabel backgroundColor="#00ffffff" position="1274,6" size="2,708" zPosition="2" />
-                         <eLabel position="891,88" size="372,46" text="Version: 3.0.0" font="Regular; 35" valign="center" halign="center" transparent="1" backgroundColor="#00000000" foregroundColor="#00ffffff" name="," />
+                         <eLabel position="891,88" size="372,46" text="Version: 3.0.1" font="Regular; 35" valign="center" halign="center" transparent="1" backgroundColor="#00000000" foregroundColor="#00ffffff" name="," />
                   </screen>
                """
 
@@ -117,6 +117,8 @@ class InfobarSettings(ConfigListScreen, Screen):
 
     def getMenuItemList(self):
         list = []
+        list.append(getConfigListEntry(_('__________________________________________ MENU and PLUGINS __________________________________________'), ))
+        list.append(getConfigListEntry(_(' '), ))
         list.append(getConfigListEntry(_('_______________________________________________ style ________________________________________________'), ))
         list.append(getConfigListEntry(_("infobar"), config.plugins.SevenHD.InfobarStyle))
         list.append(getConfigListEntry(_("second infobar"), config.plugins.SevenHD.SIB))
