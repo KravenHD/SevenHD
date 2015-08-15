@@ -72,7 +72,7 @@ class MainSettings(ConfigListScreen, Screen):
                          <eLabel backgroundColor="#00ffffff" position="878,714" size="396,2" zPosition="2" />
                          <eLabel backgroundColor="#00ffffff" position="878,6" size="2,708" zPosition="2" />
                          <eLabel backgroundColor="#00ffffff" position="1274,6" size="2,708" zPosition="2" />
-                         <eLabel position="891,88" size="372,46" text="Version: 3.0.0" font="Regular; 35" valign="center" halign="center" transparent="1" backgroundColor="#00000000" foregroundColor="#00ffffff" name="," />
+                         <eLabel position="891,88" size="372,46" text="Version: 3.0.1" font="Regular; 35" valign="center" halign="center" transparent="1" backgroundColor="#00000000" foregroundColor="#00ffffff" name="," />
                   </screen>
                """
 
@@ -120,6 +120,7 @@ class MainSettings(ConfigListScreen, Screen):
         list.append(getConfigListEntry(_('_______________________________________ global system settings _______________________________________'), ))
         list.append(getConfigListEntry(_("image"), config.plugins.SevenHD.Image, 'IMAGE'))
         list.append(getConfigListEntry(_("buttons"), config.plugins.SevenHD.ButtonStyle, 'Button'))
+        list.append(getConfigListEntry(_("plugin icons"), config.plugins.SevenHD.IconStyle, 'Icons'))
         list.append(getConfigListEntry(_("running text"), config.plugins.SevenHD.RunningText, 'RunningText'))
         list.append(getConfigListEntry(_("volume style"), config.plugins.SevenHD.VolumeStyle))
         list.append(getConfigListEntry(_("progress-/volumebar"), config.plugins.SevenHD.Progress, 'Progress'))
@@ -224,6 +225,7 @@ class MainSettings(ConfigListScreen, Screen):
     def defaults(self):
         self.setInputToDefault(config.plugins.SevenHD.Image)
         self.setInputToDefault(config.plugins.SevenHD.ButtonStyle)
+        self.setInputToDefault(config.plugins.SevenHD.IconStyle)
         self.setInputToDefault(config.plugins.SevenHD.RunningText)
         self.setInputToDefault(config.plugins.SevenHD.Volume)
         self.setInputToDefault(config.plugins.SevenHD.NumberZapExt)

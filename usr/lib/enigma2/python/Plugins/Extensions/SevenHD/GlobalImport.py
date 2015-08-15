@@ -1,4 +1,4 @@
-version = '3.0.0'
+version = '3.0.1'
 import os
 import re
 import socket
@@ -146,6 +146,24 @@ config.plugins.SevenHD.ButtonStyle = ConfigSelection(default="buttons_seven_whit
 				("buttons_seven_black_yellow", _("black/yellow"))
 				])
                                 				
+config.plugins.SevenHD.IconStyle = ConfigSelection(default="icons_seven_white", choices = [
+				("icons_seven_amber", _("amber")),
+				("icons_seven_white", _("white")),
+				("icons_seven_black", _("black")),
+				("icons_seven_blue", _("blue")),
+				("icons_seven_brown", _("brown")),
+				("icons_seven_cobalt", _("cobalt")),
+				("icons_seven_cyan", _("cyan")),
+				("icons_seven_green", _("green")),
+				("icons_seven_grey", _("grey")),
+				("icons_seven_olive", _("olive")),
+				("icons_seven_orange", _("orange")),
+				("icons_seven_pink", _("pink")),
+				("icons_seven_red", _("red")),
+				("icons_seven_steel", _("steel")),
+				("icons_seven_violet", _("violet")),
+				("icons_seven_yellow", _("yellow"))
+				])
 config.plugins.SevenHD.RunningText = ConfigSelection(default="movetype=running", choices = [
 				("movetype=running", _("on")),
 				("movetype=none", _("off"))

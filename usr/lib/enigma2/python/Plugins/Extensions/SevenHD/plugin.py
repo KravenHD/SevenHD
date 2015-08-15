@@ -104,7 +104,7 @@ class SevenHD(Screen):
                          <eLabel backgroundColor="#00ffffff" position="878,714" size="396,2" zPosition="2" />
                          <eLabel backgroundColor="#00ffffff" position="878,6" size="2,708" zPosition="2" />
                          <eLabel backgroundColor="#00ffffff" position="1274,6" size="2,708" zPosition="2" />
-                         <eLabel position="891,88" size="372,46" text="Version: 3.0.0" font="Regular; 35" valign="center" halign="center" transparent="1" backgroundColor="#00000000" foregroundColor="#00ffffff" name="," />
+                         <eLabel position="891,88" size="372,46" text="Version: 3.0.1" font="Regular; 35" valign="center" halign="center" transparent="1" backgroundColor="#00000000" foregroundColor="#00ffffff" name="," />
                   </screen>
                """ 
     def __init__(self, session, args = None):
@@ -324,6 +324,7 @@ class SevenHD(Screen):
                    self.skinSearchAndReplace.append(["00fffff1", config.plugins.SevenHD.Progress.value])
                      
 		self.skinSearchAndReplace.append(["buttons_seven_white", config.plugins.SevenHD.ButtonStyle.value])
+		self.skinSearchAndReplace.append(["icons_seven_white", config.plugins.SevenHD.IconStyle.value])
 		self.skinSearchAndReplace.append(["movetype=running", config.plugins.SevenHD.RunningText.value])
 			
 		self.selectionbordercolor = config.plugins.SevenHD.SelectionBorder.value
@@ -447,6 +448,7 @@ class SevenHD(Screen):
                 console3 = eConsoleAppContainer()
                 console4 = eConsoleAppContainer()
                 console5 = eConsoleAppContainer()
+                console6 = eConsoleAppContainer()
 			
                 #buttons
                 console1.execute("rm -rf /usr/share/enigma2/SevenHD/buttons/*.*; rm -rf /usr/share/enigma2/SevenHD/buttons; wget -q http://www.gigablue-support.org/skins/SevenHD/%s.tar.gz -O /tmp/%s.tar.gz; tar xf /tmp/%s.tar.gz -C /usr/share/enigma2/SevenHD/" % (str(config.plugins.SevenHD.ButtonStyle.value), str(config.plugins.SevenHD.ButtonStyle.value), str(config.plugins.SevenHD.ButtonStyle.value)))
@@ -459,6 +461,8 @@ class SevenHD(Screen):
                 #progress
                 if config.plugins.SevenHD.Progress.value == "progress":
                    console5.execute("rm -rf /usr/share/enigma2/SevenHD/progress/*.*; rm -rf /usr/share/enigma2/SevenHD/progress; wget -q http://www.gigablue-support.org/skins/SevenHD/%s.tar.gz -O /tmp/%s.tar.gz; tar xf /tmp/%s.tar.gz -C /usr/share/enigma2/SevenHD/" % (str(config.plugins.SevenHD.Progress.value), str(config.plugins.SevenHD.Progress.value), str(config.plugins.SevenHD.Progress.value)))
+                #icons
+                console6.execute("rm -rf /usr/share/enigma2/SevenHD/icons/*.*; rm -rf /usr/share/enigma2/SevenHD/icons; wget -q http://www.gigablue-support.org/skins/SevenHD/%s.tar.gz -O /tmp/%s.tar.gz; tar xf /tmp/%s.tar.gz -C /usr/share/enigma2/SevenHD/" % (str(config.plugins.SevenHD.IconStyle.value), str(config.plugins.SevenHD.IconStyle.value), str(config.plugins.SevenHD.IconStyle.value)))
 		self.debug('download tgz complett\n')	
         except:
            self.debug('error on "def save()"\n')
