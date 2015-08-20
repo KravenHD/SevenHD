@@ -1,6 +1,7 @@
-version = '3.0.1'
+version = '3.1.0'
 import os
 import re
+import time
 import socket
 import gettext
 import urllib
@@ -14,7 +15,7 @@ from Screens.Standby import TryQuitMainloop
 from Screens.VirtualKeyBoard import VirtualKeyBoard
 from Components.ActionMap import ActionMap
 from Components.AVSwitch import AVSwitch
-from Components.config import config, configfile, ConfigYesNo, ConfigSubsection, getConfigListEntry, ConfigSelection, ConfigNumber, ConfigText, ConfigInteger
+from Components.config import config, configfile, ConfigYesNo, ConfigSubsection, getConfigListEntry, ConfigSelection, ConfigNumber, ConfigText, ConfigInteger, ConfigClock
 from Components.NimManager import nimmanager
 from Components.MenuList import MenuList
 from Components.MultiContent import MultiContentEntryText
@@ -116,6 +117,9 @@ TransList.append(("4a", _("medium")))
 TransList.append(("8a", _("high")))
 TransList.append(("ff", _("full")))
 
+BackList = ['redwood', 'brick', 'checkerplate', 'cubes', 'slate', 
+            'brownleather', 'scratchedmetal', 'stone', 'stonewall']
+
 ################################################################################################################################################################
 # GlobalScreen
 
@@ -187,15 +191,24 @@ config.plugins.SevenHD.NumberZapExt = ConfigSelection(default="numberzapext-none
 				("numberzapext-zzpicon", _("ZZPicons")),
 				("numberzapext-zzzpicon", _("ZZZPicons"))
 				])
-				
+
+config.plugins.SevenHD.PrimeTimeTime = ConfigClock(default=time.mktime((0, 0, 0, 20, 15, 0, 0, 0, 0)))
 ################################################################################################################################################################
 # MenuPluginScreen
 
-config.plugins.SevenHD.Background = ConfigSelection(default="00000000", choices = ColorList)
+BackgroundList = []
+for x in BackList:
+    BackgroundList.append(("back_%s_main" % x, _("%s" % x)))
+BackgroundList = ColorList + BackgroundList
+config.plugins.SevenHD.Background = ConfigSelection(default="00000000", choices = BackgroundList)
 
 config.plugins.SevenHD.BackgroundColorTrans = ConfigSelection(default="0a", choices = TransList)
 
-config.plugins.SevenHD.BackgroundRight = ConfigSelection(default="00000000", choices = ColorList)
+BackgroundRightList = []
+for x in BackList:
+    BackgroundRightList.append(("back_%s_right" % x, _("%s" % x)))                       
+BackgroundRightList = ColorList + BackgroundRightList
+config.plugins.SevenHD.BackgroundRight = ConfigSelection(default="00000000", choices = BackgroundRightList)
 				
 config.plugins.SevenHD.BackgroundRightColorTrans = ConfigSelection(default="0a", choices = TransList)
 
@@ -254,13 +267,21 @@ config.plugins.SevenHD.SIB = ConfigSelection(default="-top", choices = [
 				("-full", _("full"))
 				])				
 
-config.plugins.SevenHD.BackgroundIB1 = ConfigSelection(default="00000000", choices = ColorList)
+BackgroundIB1List = []
+for x in BackList:
+    BackgroundIB1List.append(("back_%s_ib1" % x, _("%s" % x)))                     
+BackgroundIB1List = ColorList + BackgroundIB1List
+config.plugins.SevenHD.BackgroundIB1 = ConfigSelection(default="00000000", choices = BackgroundIB1List)
 
 config.plugins.SevenHD.BackgroundIB1Trans = ConfigSelection(default="0a", choices = TransList)
 
 config.plugins.SevenHD.BackgroundIB2Trans = ConfigSelection(default="0a", choices = TransList)
 
-config.plugins.SevenHD.BackgroundIB2 = ConfigSelection(default="00000000", choices = ColorList)
+BackgroundIB2List = []
+for x in BackList:
+    BackgroundIB2List.append(("back_%s_ib2" % x, _("%s" % x)))
+BackgroundIB2List = ColorList + BackgroundIB2List
+config.plugins.SevenHD.BackgroundIB2 = ConfigSelection(default="00000000", choices = BackgroundIB2List)
 
 config.plugins.SevenHD.InfobarLine = ConfigSelection(default="00ffffff", choices = ColorList)
 
@@ -371,11 +392,25 @@ config.plugins.SevenHD.ChannelSelectionStyle = ConfigSelection(default="channels
 				("channelselection-pip", _("miniTV/PiP"))
 				])
 
-config.plugins.SevenHD.ChannelBack1 = ConfigSelection(default="00000000", choices = ColorList)
+ChannelBack1List = []
+for x in BackList:
+    ChannelBack1List.append(("back_%s_csleft" % x, _("%s" % x)))                    
+ChannelBack1List = ColorList + ChannelBack1List
+config.plugins.SevenHD.ChannelBack1 = ConfigSelection(default="00000000", choices = ChannelBack1List)
 
-config.plugins.SevenHD.ChannelBack2 = ConfigSelection(default="00000000", choices = ColorList)
 
-config.plugins.SevenHD.ChannelBack3 = ConfigSelection(default="00000000", choices = ColorList)
+ChannelBack2List = []
+for x in BackList:
+    ChannelBack2List.append(("back_%s_csright" % x, _("%s" % x)))                     
+ChannelBack2List = ColorList + ChannelBack2List
+config.plugins.SevenHD.ChannelBack2 = ConfigSelection(default="00000000", choices = ChannelBack2List)
+                   
+
+ChannelBack3List = []
+for x in BackList:
+    ChannelBack3List.append(("back_%s_csmiddle" % x, _("%s" % x)))                    
+ChannelBack3List = ColorList + ChannelBack3List
+config.plugins.SevenHD.ChannelBack3 = ConfigSelection(default="00000000", choices = ChannelBack3List)
 
 config.plugins.SevenHD.ChannelLine = ConfigSelection(default="00ffffff", choices = ColorList)
 

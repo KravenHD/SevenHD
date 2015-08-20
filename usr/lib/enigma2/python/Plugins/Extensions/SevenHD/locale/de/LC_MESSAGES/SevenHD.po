@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "POT-Creation-Date: 2015-08-12 13:30+0200\n"
-"PO-Revision-Date: 2015-08-15 18:29+0200\n"
+"PO-Revision-Date: 2015-08-20 23:33+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: de_DE\n"
@@ -1352,6 +1352,33 @@ msgstr ""
 "muss die Oberfläche neu gestartet werden.\n"
 "\n"
 "Wollen Sie jetzt neu starten?"
+
+msgid "redwood"
+msgstr "Rotes Holz"
+
+msgid "brick"
+msgstr "Ziegel"
+
+msgid "checkerplate"
+msgstr "Riffelblech"
+
+msgid "cubes"
+msgstr "Würfel"
+
+msgid "brownleather"
+msgstr "Braunes Leder"
+
+msgid "slate"
+msgstr "Schiefer"
+
+msgid "stonewall"
+msgstr "Steinwand"
+
+msgid "scratchedmetal"
+msgstr "Zerkratztes Metall"
+
+msgid "stone"
+msgstr "Stein"
 
 #~ msgid " infobar extras "
 #~ msgstr "Infobar Extras"

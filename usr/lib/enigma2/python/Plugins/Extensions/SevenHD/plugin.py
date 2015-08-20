@@ -21,7 +21,6 @@
 #
 #######################################################################
 from GlobalImport import *
-version = '3.0.0'
 from MainSettings import MainSettings
 from MenuPluginSettings import MenuPluginSettings
 from InfobarSettings import InfobarSettings
@@ -74,39 +73,38 @@ def translateBlock(block):
 	return block
 #############################################################
 class SevenHD(Screen):
-    skin = """
-                  <screen name="SevenHD-Setup" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
-                         <eLabel font="Regular; 20" foregroundColor="#00ffffff" backgroundColor="#00000000" halign="left" valign="center" position="64,662" size="148,48" text="Cancel" transparent="1" />
-                         <eLabel font="Regular; 20" foregroundColor="#00ffffff" backgroundColor="#00000000" halign="left" valign="center" position="264,662" size="148,48" text="Save" transparent="1" />
-                         <eLabel font="Regular; 20" foregroundColor="#00ffffff" backgroundColor="#00000000" halign="left" valign="center" position="464,662" size="148,48" text="Reboot" transparent="1" />
-                         <eLabel font="Regular; 20" foregroundColor="#00ffffff" backgroundColor="#00000000" halign="left" valign="center" position="664,662" size="148,48" text="Extras" transparent="1" />
-                         <widget name="menuList" position="18,72" size="816,575" backgroundColor="#00000000"  scrollbarMode="showOnDemand" transparent="1" />
-                         <eLabel position="70,12" size="708,46" text="SevenHD - Konfigurationstool" font="Regular; 35" valign="center" halign="center" transparent="1" backgroundColor="#00000000" foregroundColor="#00ffffff" name="," />
-                         <eLabel position="891,657" size="372,46" text="Thanks to http://www.gigablue-support.org/" font="Regular; 12" valign="center" halign="center" transparent="1" backgroundColor="#00000000" foregroundColor="#00ffffff" name="," />
-                         <widget name="helperimage" position="891,274" size="372,209" zPosition="1" backgroundColor="#00000000" />
-                         <widget backgroundColor="#00000000" font="Regular2; 34" foregroundColor="#00ffffff" position="70,12" render="Label" size="708,46" source="Title" transparent="1" halign="center" valign="center" noWrap="1" />
-                         <eLabel backgroundColor="#00000000" position="6,6" size="842,708" transparent="0" zPosition="-9" foregroundColor="#00ffffff" />
-                         <eLabel backgroundColor="#00ffffff" position="6,6" size="842,2" zPosition="2" />
-                         <eLabel backgroundColor="#00ffffff" position="6,714" size="842,2" zPosition="2" />
-                         <eLabel backgroundColor="#00ffffff" position="6,6" size="2,708" zPosition="2" />
-                         <eLabel backgroundColor="#00ffffff" position="848,6" size="2,708" zPosition="2" />
-                         <eLabel backgroundColor="#00ffffff" position="18,64" size="816,2" zPosition="2" />
-                         <eLabel backgroundColor="#00ffffff" position="18,656" size="816,2" zPosition="2" />
-                         <ePixmap pixmap="SevenHD/buttons/key_red1.png" position="22,670" size="32,32" backgroundColor="#00000000" alphatest="blend" />
-                         <ePixmap pixmap="SevenHD/buttons/key_green1.png" position="222,670" size="32,32" backgroundColor="#00000000" alphatest="blend" />
-                         <ePixmap pixmap="SevenHD/buttons/key_yellow1.png" position="422,670" size="32,32" backgroundColor="#00000000" alphatest="blend" />
-                         <ePixmap pixmap="SevenHD/buttons/key_blue1.png" position="622,670" size="32,32" backgroundColor="#00000000" alphatest="blend" />
-                         <widget source="global.CurrentTime" render="Label" position="1154,16" size="100,28" font="Regular;26" halign="right" backgroundColor="#00000000" transparent="1" valign="center" foregroundColor="#00ffffff">
-                                 <convert type="ClockToText">Default</convert>
-                         </widget>
-                         <eLabel backgroundColor="#00000000" position="878,6" size="396,708" transparent="0" zPosition="-9" />
-                         <eLabel backgroundColor="#00ffffff" position="878,6" size="396,2" zPosition="2" />
-                         <eLabel backgroundColor="#00ffffff" position="878,714" size="396,2" zPosition="2" />
-                         <eLabel backgroundColor="#00ffffff" position="878,6" size="2,708" zPosition="2" />
-                         <eLabel backgroundColor="#00ffffff" position="1274,6" size="2,708" zPosition="2" />
-                         <eLabel position="891,88" size="372,46" text="Version: 3.0.1" font="Regular; 35" valign="center" halign="center" transparent="1" backgroundColor="#00000000" foregroundColor="#00ffffff" name="," />
-                  </screen>
-               """ 
+    skin =  """<screen name="SevenHD-Setup" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent"> 
+                     <eLabel font="Regular; 20" foregroundColor="#00ffffff" backgroundColor="#00000000" halign="left" valign="center" position="64,662" size="148,48" text="Cancel" transparent="1" />
+                     <eLabel font="Regular; 20" foregroundColor="#00ffffff" backgroundColor="#00000000" halign="left" valign="center" position="264,662" size="148,48" text="Save" transparent="1" />
+                     <eLabel font="Regular; 20" foregroundColor="#00ffffff" backgroundColor="#00000000" halign="left" valign="center" position="464,662" size="148,48" text="Reboot" transparent="1" />
+                     <eLabel font="Regular; 20" foregroundColor="#00ffffff" backgroundColor="#00000000" halign="left" valign="center" position="664,662" size="148,48" text="Extras" transparent="1" />
+                     <widget name="menuList" position="18,72" size="816,575" backgroundColor="#00000000"  scrollbarMode="showOnDemand" transparent="1" />
+                     <eLabel position="70,12" size="708,46" text="SevenHD - Konfigurationstool" font="Regular; 35" valign="center" halign="center" transparent="1" backgroundColor="#00000000" foregroundColor="#00ffffff" name="," />
+                     <eLabel position="891,657" size="372,46" text="Thanks to http://www.gigablue-support.org/" font="Regular; 12" valign="center" halign="center" transparent="1" backgroundColor="#00000000" foregroundColor="#00ffffff" name="," />
+                     <widget name="helperimage" position="891,274" size="372,209" zPosition="1" backgroundColor="#00000000" />
+                     <widget backgroundColor="#00000000" font="Regular2; 34" foregroundColor="#00ffffff" position="70,12" render="Label" size="708,46" source="Title" transparent="1" halign="center" valign="center" noWrap="1" />
+                     <eLabel backgroundColor="#00000000" position="6,6" size="842,708" transparent="0" zPosition="-9" foregroundColor="#00ffffff" />
+                     <eLabel backgroundColor="#00ffffff" position="6,6" size="842,2" zPosition="2" />
+                     <eLabel backgroundColor="#00ffffff" position="6,714" size="842,2" zPosition="2" />
+                     <eLabel backgroundColor="#00ffffff" position="6,6" size="2,708" zPosition="2" />
+                     <eLabel backgroundColor="#00ffffff" position="848,6" size="2,708" zPosition="2" />
+                     <eLabel backgroundColor="#00ffffff" position="18,64" size="816,2" zPosition="2" />
+                     <eLabel backgroundColor="#00ffffff" position="18,656" size="816,2" zPosition="2" />
+                     <ePixmap pixmap="SevenHD/buttons/key_red1.png" position="22,670" size="32,32" backgroundColor="#00000000" alphatest="blend" />
+                     <ePixmap pixmap="SevenHD/buttons/key_green1.png" position="222,670" size="32,32" backgroundColor="#00000000" alphatest="blend" />
+                     <ePixmap pixmap="SevenHD/buttons/key_yellow1.png" position="422,670" size="32,32" backgroundColor="#00000000" alphatest="blend" />
+                     <ePixmap pixmap="SevenHD/buttons/key_blue1.png" position="622,670" size="32,32" backgroundColor="#00000000" alphatest="blend" />
+                     <widget source="global.CurrentTime" render="Label" position="1154,16" size="100,28" font="Regular;26" halign="right" backgroundColor="#00000000" transparent="1" valign="center" foregroundColor="#00ffffff">
+                             <convert type="ClockToText">Default</convert>
+                     </widget>
+                     <eLabel backgroundColor="#00000000" position="878,6" size="396,708" transparent="0" zPosition="-9" />
+                     <eLabel backgroundColor="#00ffffff" position="878,6" size="396,2" zPosition="2" />
+                     <eLabel backgroundColor="#00ffffff" position="878,714" size="396,2" zPosition="2" />
+                     <eLabel backgroundColor="#00ffffff" position="878,6" size="2,708" zPosition="2" />
+                     <eLabel backgroundColor="#00ffffff" position="1274,6" size="2,708" zPosition="2" />
+                     <eLabel position="891,88" size="415,46" text="Version: """ + str(version) + """" font="Regular; 35" valign="center" halign="center" transparent="1" backgroundColor="#00000000" foregroundColor="#00ffffff" name="," />
+               </screen>"""
+                  
     def __init__(self, session, args = None):
         self.session = session
         
@@ -241,28 +239,49 @@ class SevenHD(Screen):
 		self.skinSearchAndReplace = []
                 
                 self.Background = config.plugins.SevenHD.Background.value
-                self.skinSearchAndReplace.append(["Seven_Background", '%s%s' % (config.plugins.SevenHD.BackgroundColorTrans.value, self.Background[2:8])])
+                if self.Background.startswith('back'):
+                   self.skinSearchAndReplace.append(["SevenHD/back/menumain.png","SevenHD/back/menumain_1.png"])
+                else:  
+                   self.skinSearchAndReplace.append(['name="SevenBackground" value="#00000000"', 'name="SevenBackground" value="#%s%s"' % (config.plugins.SevenHD.BackgroundColorTrans.value, self.Background[2:8])])
                 
                 self.BackgroundIB1 = config.plugins.SevenHD.BackgroundIB1.value
-                self.skinSearchAndReplace.append(["SevenBackground_IB1", '%s%s' % (config.plugins.SevenHD.BackgroundColorTrans.value, self.BackgroundIB1[2:8])])
+                if self.BackgroundIB1.startswith('back'):
+                   self.skinSearchAndReplace.append(["SevenHD/back/ibone.png","SevenHD/back/ibone_1.png"])
+                else:
+                   self.skinSearchAndReplace.append(['name="SevenBackgroundIB1" value="#00000000"', 'name="SevenBackgroundIB1" value="#%s%s"' % (config.plugins.SevenHD.BackgroundColorTrans.value, self.BackgroundIB1[2:8])])
                 
                 self.BackgroundIB2 = config.plugins.SevenHD.BackgroundIB2.value
-                self.skinSearchAndReplace.append(["SevenBackground_IB2", '%s%s' % (config.plugins.SevenHD.BackgroundColorTrans.value, self.BackgroundIB2[2:8])])
+                if self.BackgroundIB2.startswith('back'):
+                   self.skinSearchAndReplace.append(["SevenHD/back/ibtwo.png","SevenHD/back/ibtwo_1.png"])
+                else:
+                   self.skinSearchAndReplace.append(['name="SevenBackgroundIB2" value="#00000000"', 'name="SevenBackgroundIB2" value="#%s%s"' % (config.plugins.SevenHD.BackgroundColorTrans.value, self.BackgroundIB2[2:8])])
                 
                 self.ChannelBack1 = config.plugins.SevenHD.ChannelBack1.value
-                self.skinSearchAndReplace.append(["SevenBack_CS", '%s%s' % (config.plugins.SevenHD.BackgroundColorTrans.value, self.ChannelBack1[2:8])])
+                if self.ChannelBack1.startswith('back'):
+                   self.skinSearchAndReplace.append(["SevenHD/back/csleft.png","SevenHD/back/csleft_1.png"])
+                else:
+                   self.skinSearchAndReplace.append(['name="SevenBackCS" value="#00000000"', 'name="SevenBackCS" value="#%s%s"' % (config.plugins.SevenHD.BackgroundColorTrans.value, self.ChannelBack1[2:8])])
                 
                 self.ChannelBack2 = config.plugins.SevenHD.ChannelBack2.value
-                self.skinSearchAndReplace.append(["SevenBackRight_CS", '%s%s' % (config.plugins.SevenHD.BackgroundRightColorTrans.value, self.ChannelBack2[2:8])])
+                if self.ChannelBack2.startswith('back'):
+                   self.skinSearchAndReplace.append(["SevenHD/back/csright.png","SevenHD/back/csright_1.png"])
+                else:
+                   self.skinSearchAndReplace.append(['name="SevenBackRightCS" value="#00000000"', 'name="SevenBackRightCS" value="#%s%s"' % (config.plugins.SevenHD.BackgroundRightColorTrans.value, self.ChannelBack2[2:8])])
                 
                 self.ChannelBack3 = config.plugins.SevenHD.ChannelBack3.value
-                self.skinSearchAndReplace.append(["SevenBackMiddle_CS", '%s%s' % (config.plugins.SevenHD.BackgroundColorTrans.value, self.ChannelBack3[2:8])])
+                if self.ChannelBack3.startswith('back'):
+                   self.skinSearchAndReplace.append(["SevenHD/back/csmiddle.png","SevenHD/back/csmiddle_1.png"])
+                else:
+                   self.skinSearchAndReplace.append(['name="SevenBackMiddleCS" value="#00000000"', 'name="SevenBackMiddleCS" value="#%s%s"' % (config.plugins.SevenHD.BackgroundColorTrans.value, self.ChannelBack3[2:8])])
                 
                 self.BackgroundRight = config.plugins.SevenHD.BackgroundRight.value
-                self.skinSearchAndReplace.append(["SevenBackground_Right", '%s%s' % (config.plugins.SevenHD.BackgroundRightColorTrans.value, self.BackgroundRight[2:8])])
-
-
-
+                if self.BackgroundRight.startswith('back'):
+                   self.skinSearchAndReplace.append(["SevenHD/back/menuright.png","SevenHD/back/menuright_1.png"])
+                else:
+                   self.skinSearchAndReplace.append(['name="SevenBackgroundRight" value="#00000000"', 'name="SevenBackgroundRight" value="#%s%s"' % (config.plugins.SevenHD.BackgroundRightColorTrans.value, self.BackgroundRight[2:8])])
+                
+                self.skinSearchAndReplace.append(["PluginVersionString", "Version: %s" % str(version)])
+                
 		self.skinSearchAndReplace.append(["Seven_Selection", config.plugins.SevenHD.SelectionBackground.value])
 		self.skinSearchAndReplace.append(["SevenFont_1", config.plugins.SevenHD.Font1.value])
 		self.skinSearchAndReplace.append(["SevenFont_2", config.plugins.SevenHD.Font2.value])
@@ -321,8 +340,8 @@ class SevenHD(Screen):
                    self.skinSearchAndReplace.append(["SevenHD/progress/progress990.png","SevenHD/progress/progress990_1.png"])
                    self.skinSearchAndReplace.append(["SevenHD/progress/progress1280.png","SevenHD/progress/progress1280_1.png"])
                 else:
-                   self.skinSearchAndReplace.append(["00fffff1", config.plugins.SevenHD.Progress.value])
-                     
+                   self.skinSearchAndReplace.append(["00fffff1", config.plugins.SevenHD.Progress.value])   
+
 		self.skinSearchAndReplace.append(["buttons_seven_white", config.plugins.SevenHD.ButtonStyle.value])
 		self.skinSearchAndReplace.append(["icons_seven_white", config.plugins.SevenHD.IconStyle.value])
 		self.skinSearchAndReplace.append(["movetype=running", config.plugins.SevenHD.RunningText.value])
@@ -335,7 +354,26 @@ class SevenHD(Screen):
 		self.analog = ("analog_" + self.analogstylecolor + ".png")
 		self.skinSearchAndReplace.append(["analog.png", self.analog])
 		
-		### Header
+		self.tuner_Count = self.getTunerCount()
+		self.debug("verbaute Tuner: " + str(self.tuner_Count))
+		
+                if str(self.tuner_Count) == str('1'):
+		   self.skinSearchAndReplace.append(['<ePixmap pixmap="SevenHD/buttons/b_off.png"', '<!-- ePixmap pixmap="SevenHD/buttons/b_off.png"'])
+		   self.skinSearchAndReplace.append(['<ePixmap pixmap="SevenHD/buttons/c_off.png"', '<!-- ePixmap pixmap="SevenHD/buttons/c_off.png"'])
+		   self.skinSearchAndReplace.append(['<ePixmap pixmap="SevenHD/buttons/d_off.png"', '<!-- ePixmap pixmap="SevenHD/buttons/d_off.png"'])
+		   self.skinSearchAndReplace.append(['size="32,32" zPosition="1" alphatest="blend" /> <!-- TunerB -->', 'size="32,32" zPosition="1" alphatest="blend" / --> <!-- TunerB -->'])
+		   self.skinSearchAndReplace.append(['size="32,32" zPosition="1" alphatest="blend" /> <!-- TunerC -->', 'size="32,32" zPosition="1" alphatest="blend" / --> <!-- TunerC -->'])
+		   self.skinSearchAndReplace.append(['size="32,32" zPosition="1" alphatest="blend" /> <!-- TunerD -->', 'size="32,32" zPosition="1" alphatest="blend" / --> <!-- TunerD -->'])
+		if str(self.tuner_Count) == str('2'):
+		   self.skinSearchAndReplace.append(['<ePixmap pixmap="SevenHD/buttons/c_off.png"', '<!-- ePixmap pixmap="SevenHD/buttons/c_off.png"'])
+		   self.skinSearchAndReplace.append(['<ePixmap pixmap="SevenHD/buttons/d_off.png"', '<!-- ePixmap pixmap="SevenHD/buttons/d_off.png"'])
+		   self.skinSearchAndReplace.append(['size="32,32" zPosition="1" alphatest="blend" /> <!-- TunerC -->', 'size="32,32" zPosition="1" alphatest="blend" / --> <!-- TunerC -->'])
+		   self.skinSearchAndReplace.append(['size="32,32" zPosition="1" alphatest="blend" /> <!-- TunerD -->', 'size="32,32" zPosition="1" alphatest="blend" / --> <!-- TunerD -->'])
+                if str(self.tuner_Count) == str('3'):
+		   self.skinSearchAndReplace.append(['<ePixmap pixmap="SevenHD/buttons/d_off.png"', '<!-- ePixmap pixmap="SevenHD/buttons/d_off.png"'])
+		   self.skinSearchAndReplace.append(['size="32,32" zPosition="1" alphatest="blend" /> <!-- TunerD -->', 'size="32,32" zPosition="1" alphatest="blend" / --> <!-- TunerD -->'])
+                
+                ### Header
 		self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.Header.value + XML)
 		self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.Header.value + XML)	
                 
@@ -449,21 +487,50 @@ class SevenHD(Screen):
                 console4 = eConsoleAppContainer()
                 console5 = eConsoleAppContainer()
                 console6 = eConsoleAppContainer()
-			
+                console7 = eConsoleAppContainer()
+                console8 = eConsoleAppContainer()
+                console9 = eConsoleAppContainer()
+                console10 = eConsoleAppContainer()
+                console11 = eConsoleAppContainer()
+                console12 = eConsoleAppContainer()
+		console13 = eConsoleAppContainer()
+		console14 = eConsoleAppContainer()
+		
+                #DOWNLOADS	
                 #buttons
-                console1.execute("rm -rf /usr/share/enigma2/SevenHD/buttons/*.*; rm -rf /usr/share/enigma2/SevenHD/buttons; wget -q http://www.gigablue-support.org/skins/SevenHD/%s.tar.gz -O /tmp/%s.tar.gz; tar xf /tmp/%s.tar.gz -C /usr/share/enigma2/SevenHD/" % (str(config.plugins.SevenHD.ButtonStyle.value), str(config.plugins.SevenHD.ButtonStyle.value), str(config.plugins.SevenHD.ButtonStyle.value)))
+                console1.execute("rm -rf /usr/share/enigma2/SevenHD/buttons/*.*; rm -rf /usr/share/enigma2/SevenHD/buttons; wget -q http://www.gigablue-support.org/skins/SevenHD/buttons/%s.tar.gz -O /tmp/%s.tar.gz; tar xf /tmp/%s.tar.gz -C /usr/share/enigma2/SevenHD/" % (str(config.plugins.SevenHD.ButtonStyle.value), str(config.plugins.SevenHD.ButtonStyle.value), str(config.plugins.SevenHD.ButtonStyle.value)))
                 #weather
-                console2.execute("rm -rf /usr/share/enigma2/SevenHD/WetterIcons/*.*; rm -rf /usr/share/enigma2/SevenHD/WetterIcons; wget -q http://www.gigablue-support.org/skins/SevenHD/%s.tar.gz -O /tmp/%s.tar.gz; tar xf /tmp/%s.tar.gz -C /usr/share/enigma2/SevenHD/" % (str(config.plugins.SevenHD.WeatherStyle.value), str(config.plugins.SevenHD.WeatherStyle.value), str(config.plugins.SevenHD.WeatherStyle.value)))
+                console2.execute("rm -rf /usr/share/enigma2/SevenHD/WetterIcons/*.*; rm -rf /usr/share/enigma2/SevenHD/WetterIcons; wget -q http://www.gigablue-support.org/skins/SevenHD/weather/%s.tar.gz -O /tmp/%s.tar.gz; tar xf /tmp/%s.tar.gz -C /usr/share/enigma2/SevenHD/" % (str(config.plugins.SevenHD.WeatherStyle.value), str(config.plugins.SevenHD.WeatherStyle.value), str(config.plugins.SevenHD.WeatherStyle.value)))
                 #clock
-                console3.execute("rm -rf /usr/share/enigma2/SevenHD/clock/*.*; rm -rf /usr/share/enigma2/SevenHD/clock; wget -q http://www.gigablue-support.org/skins/SevenHD/%s.tar.gz -O /tmp/%s.tar.gz; tar xf /tmp/%s.tar.gz -C /usr/share/enigma2/SevenHD/" % (str(config.plugins.SevenHD.ClockStyle.value), str(config.plugins.SevenHD.ClockStyle.value), str(config.plugins.SevenHD.ClockStyle.value)))
+                console3.execute("rm -rf /usr/share/enigma2/SevenHD/clock/*.*; rm -rf /usr/share/enigma2/SevenHD/clock; wget -q http://www.gigablue-support.org/skins/SevenHD/clock/%s.tar.gz -O /tmp/%s.tar.gz; tar xf /tmp/%s.tar.gz -C /usr/share/enigma2/SevenHD/" % (str(config.plugins.SevenHD.ClockStyle.value), str(config.plugins.SevenHD.ClockStyle.value), str(config.plugins.SevenHD.ClockStyle.value)))
                 #volume
-                console4.execute("rm -rf /usr/share/enigma2/SevenHD/volume/*.*; rm -rf /usr/share/enigma2/SevenHD/volume; wget -q http://www.gigablue-support.org/skins/SevenHD/%s.tar.gz -O /tmp/%s.tar.gz; tar xf /tmp/%s.tar.gz -C /usr/share/enigma2/SevenHD/" % (str(config.plugins.SevenHD.VolumeStyle.value), str(config.plugins.SevenHD.VolumeStyle.value), str(config.plugins.SevenHD.VolumeStyle.value)))
+                console4.execute("rm -rf /usr/share/enigma2/SevenHD/volume/*.*; rm -rf /usr/share/enigma2/SevenHD/volume; wget -q http://www.gigablue-support.org/skins/SevenHD/volume/%s.tar.gz -O /tmp/%s.tar.gz; tar xf /tmp/%s.tar.gz -C /usr/share/enigma2/SevenHD/" % (str(config.plugins.SevenHD.VolumeStyle.value), str(config.plugins.SevenHD.VolumeStyle.value), str(config.plugins.SevenHD.VolumeStyle.value)))
                 #progress
                 if config.plugins.SevenHD.Progress.value == "progress":
-                   console5.execute("rm -rf /usr/share/enigma2/SevenHD/progress/*.*; rm -rf /usr/share/enigma2/SevenHD/progress; wget -q http://www.gigablue-support.org/skins/SevenHD/%s.tar.gz -O /tmp/%s.tar.gz; tar xf /tmp/%s.tar.gz -C /usr/share/enigma2/SevenHD/" % (str(config.plugins.SevenHD.Progress.value), str(config.plugins.SevenHD.Progress.value), str(config.plugins.SevenHD.Progress.value)))
+                   console5.execute("rm -rf /usr/share/enigma2/SevenHD/progress/*.*; rm -rf /usr/share/enigma2/SevenHD/progress; wget -q http://www.gigablue-support.org/skins/SevenHD/progress/%s.tar.gz -O /tmp/%s.tar.gz; tar xf /tmp/%s.tar.gz -C /usr/share/enigma2/SevenHD/" % (str(config.plugins.SevenHD.Progress.value), str(config.plugins.SevenHD.Progress.value), str(config.plugins.SevenHD.Progress.value)))
                 #icons
-                console6.execute("rm -rf /usr/share/enigma2/SevenHD/icons/*.*; rm -rf /usr/share/enigma2/SevenHD/icons; wget -q http://www.gigablue-support.org/skins/SevenHD/%s.tar.gz -O /tmp/%s.tar.gz; tar xf /tmp/%s.tar.gz -C /usr/share/enigma2/SevenHD/" % (str(config.plugins.SevenHD.IconStyle.value), str(config.plugins.SevenHD.IconStyle.value), str(config.plugins.SevenHD.IconStyle.value)))
-		self.debug('download tgz complett\n')	
+                console6.execute("rm -rf /usr/share/enigma2/SevenHD/icons/*.*; rm -rf /usr/share/enigma2/SevenHD/icons; wget -q http://www.gigablue-support.org/skins/SevenHD/icons/%s.tar.gz -O /tmp/%s.tar.gz; tar xf /tmp/%s.tar.gz -C /usr/share/enigma2/SevenHD/" % (str(config.plugins.SevenHD.IconStyle.value), str(config.plugins.SevenHD.IconStyle.value), str(config.plugins.SevenHD.IconStyle.value)))
+		
+                #background
+		console7.execute("rm -rf /usr/share/enigma2/SevenHD/back/*.*; rm -rf /usr/share/enigma2/SevenHD/back")
+                
+                if self.Background.startswith('back'):
+		   console8.execute("wget -q http://www.gigablue-support.org/skins/SevenHD/back/%s.tar.gz -O /tmp/%s.tar.gz; tar xf /tmp/%s.tar.gz -C /usr/share/enigma2/SevenHD/" % (str(self.Background), str(self.Background), str(self.Background)))
+                if self.BackgroundRight.startswith('back'):
+                   console9.execute("wget -q http://www.gigablue-support.org/skins/SevenHD/back/%s.tar.gz -O /tmp/%s.tar.gz; tar xf /tmp/%s.tar.gz -C /usr/share/enigma2/SevenHD/" % (str(self.BackgroundRight), str(self.BackgroundRight), str(self.BackgroundRight)))
+		if self.BackgroundIB1.startswith('back'):
+		   console10.execute("wget -q http://www.gigablue-support.org/skins/SevenHD/back/%s.tar.gz -O /tmp/%s.tar.gz; tar xf /tmp/%s.tar.gz -C /usr/share/enigma2/SevenHD/" % (str(self.BackgroundIB1), str(self.BackgroundIB1), str(self.BackgroundIB1)))
+		if self.BackgroundIB2.startswith('back'):
+		   console11.execute("wget -q http://www.gigablue-support.org/skins/SevenHD/back/%s.tar.gz -O /tmp/%s.tar.gz; tar xf /tmp/%s.tar.gz -C /usr/share/enigma2/SevenHD/" % (str(self.BackgroundIB2), str(self.BackgroundIB2), str(self.BackgroundIB2)))
+		if self.ChannelBack1.startswith('back'):
+		   console12.execute("wget -q http://www.gigablue-support.org/skins/SevenHD/back/%s.tar.gz -O /tmp/%s.tar.gz; tar xf /tmp/%s.tar.gz -C /usr/share/enigma2/SevenHD/" % (str(self.ChannelBack1), str(self.ChannelBack1), str(self.ChannelBack1)))
+		if self.ChannelBack2.startswith('back'):
+		   console13.execute("wget -q http://www.gigablue-support.org/skins/SevenHD/back/%s.tar.gz -O /tmp/%s.tar.gz; tar xf /tmp/%s.tar.gz -C /usr/share/enigma2/SevenHD/" % (str(self.ChannelBack2), str(self.ChannelBack2), str(self.ChannelBack2)))
+		if self.ChannelBack3.startswith('back'):
+		   console14.execute("wget -q http://www.gigablue-support.org/skins/SevenHD/back/%s.tar.gz -O /tmp/%s.tar.gz; tar xf /tmp/%s.tar.gz -C /usr/share/enigma2/SevenHD/" % (str(self.ChannelBack3), str(self.ChannelBack3), str(self.ChannelBack3)))
+                
+                self.debug('download tgz complett\n')	
+        
         except:
            self.debug('error on "def save()"\n')
            self.session.open(MessageBox, _("Error creating Skin!"), MessageBox.TYPE_ERROR)
@@ -496,6 +563,18 @@ class SevenHD(Screen):
             for item in tmpSearchAndReplace:
                 skinLine = skinLine.replace(item[0], item[1])
             self.skin_lines.append(skinLine)
+    
+    def getTunerCount(self):
+        '''
+        get tuner count
+        :return:
+        '''
+        tunerCount = nimmanager.getSlotCount()
+
+        tunerCount = max(1, tunerCount)
+        tunerCount = min(6, tunerCount)
+
+        return tunerCount
           
     def showInfo(self):
         options = []

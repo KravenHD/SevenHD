@@ -72,7 +72,7 @@ class MainSettings(ConfigListScreen, Screen):
                          <eLabel backgroundColor="#00ffffff" position="878,714" size="396,2" zPosition="2" />
                          <eLabel backgroundColor="#00ffffff" position="878,6" size="2,708" zPosition="2" />
                          <eLabel backgroundColor="#00ffffff" position="1274,6" size="2,708" zPosition="2" />
-                         <eLabel position="891,88" size="372,46" text="Version: 3.0.1" font="Regular; 35" valign="center" halign="center" transparent="1" backgroundColor="#00000000" foregroundColor="#00ffffff" name="," />
+                         <eLabel position="891,88" size="415,46" text="Version: """ + str(version) + """" font="Regular; 35" valign="center" halign="center" transparent="1" backgroundColor="#00000000" foregroundColor="#00ffffff" name="," />
                   </screen>
                """
 
@@ -152,7 +152,8 @@ class MainSettings(ConfigListScreen, Screen):
     def GetPicturePath(self):
         try:
            returnValue = self["config"].getCurrent()[1].value
-			
+	   self.debug('\nRet_value[1]: ' + str(returnValue) + '\n')		
+           		
            if returnValue.endswith('-top'):
               path = MAIN_IMAGE_PATH + str("SIB1.jpg")
            elif returnValue.endswith('-left'):

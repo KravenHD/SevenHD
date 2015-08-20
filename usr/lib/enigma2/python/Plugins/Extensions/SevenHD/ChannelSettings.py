@@ -72,7 +72,7 @@ class ChannelSettings(ConfigListScreen, Screen):
                          <eLabel backgroundColor="#00ffffff" position="878,714" size="396,2" zPosition="2" />
                          <eLabel backgroundColor="#00ffffff" position="878,6" size="2,708" zPosition="2" />
                          <eLabel backgroundColor="#00ffffff" position="1274,6" size="2,708" zPosition="2" />
-                         <eLabel position="891,88" size="372,46" text="Version: 3.0.1" font="Regular; 35" valign="center" halign="center" transparent="1" backgroundColor="#00000000" foregroundColor="#00ffffff" name="," />
+                         <eLabel position="891,88" size="415,46" text="Version: """ + str(version) + """" font="Regular; 35" valign="center" halign="center" transparent="1" backgroundColor="#00000000" foregroundColor="#00ffffff" name="," />
                   </screen>
                """
 
@@ -118,9 +118,13 @@ class ChannelSettings(ConfigListScreen, Screen):
         list = []
         list.append(getConfigListEntry(_('__________________________________________ channelselection __________________________________________'), ))
         list.append(getConfigListEntry(_("style"), config.plugins.SevenHD.ChannelSelectionStyle))
+        ChannelSelectionStyle = config.plugins.SevenHD.ChannelSelectionStyle.value
+        if ChannelSelectionStyle.startswith('channelselection-threecolumns') or ChannelSelectionStyle.endswith('2') or ChannelSelectionStyle.endswith('3'):
+           pass
+        else:
+           list.append(getConfigListEntry(_("prime time"), config.plugins.SevenHD.PrimeTimeTime, 'primetimetime'))
         list.append(getConfigListEntry(_('_____________________________________________ background _____________________________________________'), ))
         list.append(getConfigListEntry(_("color left"), config.plugins.SevenHD.ChannelBack1, 'colorleftcs'))
-        ChannelSelectionStyle = config.plugins.SevenHD.ChannelSelectionStyle.value
         if ChannelSelectionStyle.startswith('channelselection-threecolumns'):
            list.append(getConfigListEntry(_("color middle"), config.plugins.SevenHD.ChannelBack3, 'colormiddlecs'))
         list.append(getConfigListEntry(_("color right"), config.plugins.SevenHD.ChannelBack2 ,'colorrightcs'))
@@ -155,7 +159,8 @@ class ChannelSettings(ConfigListScreen, Screen):
     def GetPicturePath(self):
         try:
            returnValue = self["config"].getCurrent()[1].value
-			
+	   #self.debug('\nRet_value[1]: ' + str(returnValue) + '\n')		
+           self.debug('\nvalue[1]: ' + str(int(config.plugins.SevenHD.PrimeTimeTime.value[0])) + '-' + str(int(config.plugins.SevenHD.PrimeTimeTime.value[1])) + '\n')
            if returnValue.endswith('-top'):
               path = MAIN_IMAGE_PATH + str("SIB1.jpg")
            elif returnValue.endswith('-left'):
@@ -220,6 +225,7 @@ class ChannelSettings(ConfigListScreen, Screen):
            
     def defaults(self):
         self.setInputToDefault(config.plugins.SevenHD.ChannelSelectionStyle)
+        self.setInputToDefault(config.plugins.SevenHD.PrimeTimeTime)
         self.setInputToDefault(config.plugins.SevenHD.ChannelBack1)
         self.setInputToDefault(config.plugins.SevenHD.ChannelBack2)
         self.setInputToDefault(config.plugins.SevenHD.ChannelBack3)
