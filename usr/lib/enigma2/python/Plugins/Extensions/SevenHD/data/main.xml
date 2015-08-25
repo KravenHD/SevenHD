@@ -308,7 +308,7 @@
     <widget source="Event" render="Progress" position="101,117" size="990,5" borderWidth="0" backgroundColor="SevenFontBackground" foregroundColor="SevenProgress" transparent="1" zPosition="1" pixmap="SevenHD/progress/progress990.png">
       <convert type="SevenHDEventTime">Progress</convert>
     </widget>
-    <widget backgroundColor="SevenFontBackground" font="Regular2; 21" position="25,141" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,wrap=1,always=0,repeat=2,oneshot=1" size="1230,108" source="Event" valign="top" zPosition="1" foregroundColor="SevenFont2">
+    <widget backgroundColor="SevenFontBackground" transparent="1" font="Regular2; 21" position="25,141" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,wrap=1,always=0,repeat=2,oneshot=1" size="1230,108" source="Event" valign="top" zPosition="1" foregroundColor="SevenFont2">
       <convert type="SevenHDEventName">ExtendedDescription</convert>
     </widget>
     <eLabel backgroundColor="SevenFont1" position="101,119" size="990,1" />
@@ -320,7 +320,7 @@
     <panel name="template_colorkey_text" />
   </screen>
   <!-- GraphicalEPGPIG -->
-  <screen name="GraphicalEPGPIG" position="0,0" size="1280,720" title="Electronic Program Guide" flags="wfNoBorder" backgroundColor="SevenBackground" transparent="1">
+  <screen name="GraphicalEPGPIG" position="0,0" size="1280,720" title="Electronic Program Guide" flags="wfNoBorder" backgroundColor="transparent">
     <widget source="Event" render="Label" position="25,70" size="700,39" font="Regular; 24" backgroundColor="SevenFontBackground" foregroundColor="SevenFont1" transparent="1">
       <convert type="SevenHDEventName">Name</convert>
     </widget>
@@ -335,7 +335,7 @@
     <widget source="Event" render="Progress" position="101,123" size="535,5" borderWidth="0" backgroundColor="SevenFontBackground" foregroundColor="SevenProgress" transparent="1" zPosition="1" pixmap="SevenHD/progress/progress535.png">
       <convert type="SevenHDEventTime">Progress</convert>
     </widget>
-    <widget source="Event" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,wrap=1,always=0,repeat=2,oneshot=1" position="25,145" size="880,104" font="Regular2; 19" backgroundColor="SevenFontBackground" foregroundColor="SevenFont1" valign="top" zPosition="0">
+    <widget source="Event" render="SevenHDRunningText" transparent="1" options="movetype=running,direction=top,startpoint=0,startdelay=5000,wrap=1,always=0,repeat=2,oneshot=1" position="25,145" size="880,104" font="Regular2; 19" backgroundColor="SevenFontBackground" foregroundColor="SevenFont1" valign="top" zPosition="0">
       <convert type="SevenHDEventName">ExtendedDescription</convert>
     </widget>
     <widget name="timeline_text" position="25,273" size="1230,25" selectionDisabled="1" transparent="1" backgroundColor="SevenFontBackground" />
