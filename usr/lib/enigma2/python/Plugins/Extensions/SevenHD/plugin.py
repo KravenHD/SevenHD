@@ -243,42 +243,49 @@ class SevenHD(Screen):
                    self.skinSearchAndReplace.append(["SevenHD/back/menumain.png","SevenHD/back/menumain_1.png"])
                 else:  
                    self.skinSearchAndReplace.append(['name="SevenBackground" value="#00000000"', 'name="SevenBackground" value="#%s%s"' % (config.plugins.SevenHD.BackgroundColorTrans.value, self.Background[2:8])])
+                   self.skinSearchAndReplace.append(['name="SevenFontBackground" value="#00000000"', 'name="SevenFontBackground" value="#%s"' % (self.Background[2:8])])
                 
                 self.BackgroundIB1 = config.plugins.SevenHD.BackgroundIB1.value
                 if self.BackgroundIB1.startswith('back'):
                    self.skinSearchAndReplace.append(["SevenHD/back/ibone.png","SevenHD/back/ibone_1.png"])
                 else:
                    self.skinSearchAndReplace.append(['name="SevenBackgroundIB1" value="#00000000"', 'name="SevenBackgroundIB1" value="#%s%s"' % (config.plugins.SevenHD.BackgroundColorTrans.value, self.BackgroundIB1[2:8])])
+                   self.skinSearchAndReplace.append(['name="SevenFontBackgroundIB1" value="#00000000"', 'name="SevenFontBackgroundIB1" value="#%s"' % (self.BackgroundIB1[2:8])])
                 
                 self.BackgroundIB2 = config.plugins.SevenHD.BackgroundIB2.value
                 if self.BackgroundIB2.startswith('back'):
                    self.skinSearchAndReplace.append(["SevenHD/back/ibtwo.png","SevenHD/back/ibtwo_1.png"])
                 else:
                    self.skinSearchAndReplace.append(['name="SevenBackgroundIB2" value="#00000000"', 'name="SevenBackgroundIB2" value="#%s%s"' % (config.plugins.SevenHD.BackgroundColorTrans.value, self.BackgroundIB2[2:8])])
+                   self.skinSearchAndReplace.append(['name="SevenFontBackgroundIB2" value="#00000000"', 'name="SevenFontBackgroundIB2" value="#%s"' % (self.BackgroundIB2[2:8])])
                 
                 self.ChannelBack1 = config.plugins.SevenHD.ChannelBack1.value
                 if self.ChannelBack1.startswith('back'):
                    self.skinSearchAndReplace.append(["SevenHD/back/csleft.png","SevenHD/back/csleft_1.png"])
                 else:
                    self.skinSearchAndReplace.append(['name="SevenBackCS" value="#00000000"', 'name="SevenBackCS" value="#%s%s"' % (config.plugins.SevenHD.BackgroundColorTrans.value, self.ChannelBack1[2:8])])
+                   self.skinSearchAndReplace.append(['name="SevenFontBackCS" value="#00000000"', 'name="SevenFontBackCS" value="#%s"' % (self.ChannelBack1[2:8])])
                 
                 self.ChannelBack2 = config.plugins.SevenHD.ChannelBack2.value
                 if self.ChannelBack2.startswith('back'):
                    self.skinSearchAndReplace.append(["SevenHD/back/csright.png","SevenHD/back/csright_1.png"])
                 else:
                    self.skinSearchAndReplace.append(['name="SevenBackRightCS" value="#00000000"', 'name="SevenBackRightCS" value="#%s%s"' % (config.plugins.SevenHD.BackgroundRightColorTrans.value, self.ChannelBack2[2:8])])
+                   self.skinSearchAndReplace.append(['name="SevenFontBackRightCS" value="#00000000"', 'name="SevenFontBackRightCS" value="#%s"' % (self.ChannelBack2[2:8])])
                 
                 self.ChannelBack3 = config.plugins.SevenHD.ChannelBack3.value
                 if self.ChannelBack3.startswith('back'):
                    self.skinSearchAndReplace.append(["SevenHD/back/csmiddle.png","SevenHD/back/csmiddle_1.png"])
                 else:
                    self.skinSearchAndReplace.append(['name="SevenBackMiddleCS" value="#00000000"', 'name="SevenBackMiddleCS" value="#%s%s"' % (config.plugins.SevenHD.BackgroundColorTrans.value, self.ChannelBack3[2:8])])
+                   self.skinSearchAndReplace.append(['name="SevenFontBackMiddleCS" value="#00000000"', 'name="SevenFontBackMiddleCS" value="#%s"' % (self.ChannelBack3[2:8])])
                 
                 self.BackgroundRight = config.plugins.SevenHD.BackgroundRight.value
                 if self.BackgroundRight.startswith('back'):
                    self.skinSearchAndReplace.append(["SevenHD/back/menuright.png","SevenHD/back/menuright_1.png"])
                 else:
                    self.skinSearchAndReplace.append(['name="SevenBackgroundRight" value="#00000000"', 'name="SevenBackgroundRight" value="#%s%s"' % (config.plugins.SevenHD.BackgroundRightColorTrans.value, self.BackgroundRight[2:8])])
+                   self.skinSearchAndReplace.append(['name="SevenFontBackgroundRight" value="#00000000"', 'name="SevenFontBackgroundRight" value="#%s"' % (self.BackgroundRight[2:8])])
                 
                 self.skinSearchAndReplace.append(["PluginVersionString", "Version: %s" % str(version)])
                 

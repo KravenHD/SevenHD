@@ -1,15 +1,15 @@
  
  <!-- Clock Weather */-->
-<widget alphatest="blend" render="SevenHDPiconUni" backgroundColor="black" position="1100,543" size="60,60" source="session.CurrentService" path="WetterIcons" transparent="1" zPosition="8">
+<widget alphatest="blend" render="SevenHDPiconUni" backgroundColor="SevenFontBackgroundIB1" position="1100,543" size="60,60" source="session.CurrentService" path="WetterIcons" transparent="1" zPosition="8">
   <convert type="SevenHDYWeather">picon</convert>
 </widget>
-<widget noWrap="1" backgroundColor="black" foregroundColor="SevenClockWeather" font="Regular; 22" render="Label" position="1160,544" size="80,34" source="session.CurrentService" transparent="1" zPosition="12" halign="left" >
+<widget noWrap="1" backgroundColor="SevenFontBackgroundIB1" foregroundColor="SevenClockWeather" font="Regular; 22" render="Label" position="1160,544" size="80,34" source="session.CurrentService" transparent="1" zPosition="12" halign="left" >
   <convert type="SevenHDYWeather">temp</convert>
 </widget>
-<widget source="global.CurrentTime" position="1089,607" size="148,45" font="Regular2; 40" render="Label" halign="center" zPosition="12" backgroundColor="black" foregroundColor="SevenClockTime" transparent="1">
+<widget source="global.CurrentTime" position="1089,607" size="148,45" font="Regular2; 40" render="Label" halign="center" zPosition="12" backgroundColor="SevenFontBackgroundIB1" foregroundColor="SevenClockTime" transparent="1">
     <convert type="SevenHDClockToText">Default</convert>
   </widget>
-  <widget source="global.CurrentTime" position="1089,657" size="148,25" font="Regular; 20" render="Label" halign="center" zPosition="12" backgroundColor="black" foregroundColor="SevenClockDate" transparent="1">
+  <widget source="global.CurrentTime" position="1089,657" size="148,25" font="Regular; 20" render="Label" halign="center" zPosition="12" backgroundColor="SevenFontBackgroundIB1" foregroundColor="SevenClockDate" transparent="1">
     <convert type="SevenHDClockToText">Format:%d.%m.%Y</convert>
   </widget>
   <!-- Clock Weather */-->

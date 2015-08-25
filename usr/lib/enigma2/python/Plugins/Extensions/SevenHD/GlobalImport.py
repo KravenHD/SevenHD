@@ -1,4 +1,4 @@
-version = '3.1.0'
+version = '3.2.0'
 import os
 import re
 import time
@@ -117,8 +117,8 @@ TransList.append(("4a", _("medium")))
 TransList.append(("8a", _("high")))
 TransList.append(("ff", _("full")))
 
-BackList = ['redwood', 'brick', 'checkerplate', 'cubes', 'slate', 
-            'brownleather', 'scratchedmetal', 'stone', 'stonewall']
+BackList = ['brownleather', 'blackleather', 'brick', 'carbon', 'checkerplate', 'colorexplosion', 'cubes', 'drop', 'flames', 'fire', 'fireflower', 'glas', 'iceflower', 'matrix', 'metal', 
+            'redwood', 'slate', 'scratchedmetal', 'stone', 'stonewall', 'string']
 
 ################################################################################################################################################################
 # GlobalScreen

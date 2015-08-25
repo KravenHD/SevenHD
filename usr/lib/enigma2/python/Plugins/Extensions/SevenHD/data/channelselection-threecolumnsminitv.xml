@@ -1,32 +1,32 @@
 <!-- /* ChannelSelection Three Columns MiniTV -->
 <screen backgroundColor="transparent" flags="wfNoBorder" name="ChannelSelection" position="0,0" size="1280,720" title="Channel Selection">
-  <widget source="global.CurrentTime" render="Label" position="814,19" size="80,30" font="Regular2; 23" foregroundColor="SevenDestcriptionCS" backgroundColor="black" transparent="1">
+  <widget source="global.CurrentTime" render="Label" position="814,19" size="80,30" font="Regular2; 23" foregroundColor="SevenDestcriptionCS" backgroundColor="SevenFontBackMiddleCS" transparent="1">
   <convert type="SevenHDClockToText">Default</convert>
 </widget>
-  <widget backgroundColor="black" foregroundColor="SevenNameList" scrollbarMode="showNever" picServiceEventProgressbar="SevenHD/progress/progress52.png" colorEventProgressbar="SevenProgress" colorEventProgressbarSelected="SevenProgress" foregroundColorMarkedSelected="green" colorEventProgressbarBorder="SevenBorderCS" colorEventProgressbarBorderSelected="SevenBorderCS" colorServiceDescription="SevenProgramList" colorServiceDescriptionSelected="SevenSelFont" colorServiceRecording="red" foregroundColorServiceNotAvail="yellow" name="list" position="18,309" serviceInfoFont="Regular;18" serviceItemHeight="28" serviceNameFont="Regular;18" serviceNumberFont="Regular;18" size="439,337" transparent="1" />
-  <widget source="ServiceEvent" render="Label" position="925,12" size="339,46" font="Regular2; 25" halign="center" foregroundColor="SevenChannelCS" backgroundColor="SevenBackgroundRight" transparent="1" noWrap="1">
+  <widget backgroundColor="SevenFontBackCS" foregroundColor="SevenNameList" scrollbarMode="showNever" picServiceEventProgressbar="SevenHD/progress/progress52.png" colorEventProgressbar="SevenProgress" colorEventProgressbarSelected="SevenProgress" foregroundColorMarkedSelected="green" colorEventProgressbarBorder="SevenBorderCS" colorEventProgressbarBorderSelected="SevenBorderCS" colorServiceDescription="SevenProgramList" colorServiceDescriptionSelected="SevenSelFont" colorServiceRecording="red" foregroundColorServiceNotAvail="yellow" name="list" position="18,309" serviceInfoFont="Regular;18" serviceItemHeight="28" serviceNameFont="Regular;18" serviceNumberFont="Regular;18" size="439,337" transparent="1" />
+  <widget source="ServiceEvent" render="Label" position="925,12" size="339,46" font="Regular2; 25" halign="center" foregroundColor="SevenChannelCS" backgroundColor="SevenFontBackRightCS" transparent="1" noWrap="1">
   <convert type="ServiceName">Name</convert>
 </widget>
-  <widget source="ServiceEvent" render="Label" position="488,76" size="408,24" font="Regular2; 20" halign="center" backgroundColor="black" transparent="1" foregroundColor="SevenDestcriptionCS">
+  <widget source="ServiceEvent" render="Label" position="488,76" size="408,24" font="Regular2; 20" halign="center" backgroundColor="SevenFontBackMiddleCS" transparent="1" foregroundColor="SevenDestcriptionCS">
   <convert type="SevenHDEventName">Name</convert>
 </widget>
   <eLabel backgroundColor="SevenLineCS" position="488,112" size="408,1" zPosition="1" />
-  <widget source="ServiceEvent" render="Progress" backgroundColor="black" foregroundColor="SevenProgress" position="488,111" size="408,3" transparent="1" zPosition="2" pixmap="SevenHD/progress/progress426.png">
+  <widget source="ServiceEvent" render="Progress" backgroundColor="SevenFontBackMiddleCS" foregroundColor="SevenProgress" position="488,111" size="408,3" transparent="1" zPosition="2" pixmap="SevenHD/progress/progress426.png">
   <convert type="SevenHDEventTime">Progress</convert>
 </widget>
-  <widget source="ServiceEvent" render="Label" position="488,124" size="408,229" font="Regular; 19" foregroundColor="SevenDestcriptionCS" backgroundColor="black" transparent="1">
+  <widget source="ServiceEvent" render="Label" position="488,124" size="408,229" font="Regular; 19" foregroundColor="SevenDestcriptionCS" backgroundColor="SevenFontBackMiddleCS" transparent="1">
     <convert type="SevenHDEventName">BothDescriptionsFiltered</convert>
   </widget>
-  <eLabel text="jetzt läuft:" position="488,19" size="180,30" font="Regular2; 23" halign="left" foregroundColor="SevenDestcriptionCS" backgroundColor="black" transparent="1" zPosition="2" />
-  <eLabel text="es folgt:" position="488,376" size="180,30" font="Regular2; 23" halign="left" foregroundColor="SevenDestcriptionNextCS" backgroundColor="black" transparent="1" zPosition="2" />
-  <widget source="ServiceEvent" render="SevenHDSingleEpgList" position="925,77" size="339,570" font="Regular;17" foregroundColor="SevenNextCS" backgroundColor="SevenBackgroundRight" noWrap="1" transparent="1" />
-  <widget source="ServiceEvent" render="Label" position="488,415" zPosition="1" size="408,25" font="Regular2; 20" halign="center" backgroundColor="black" transparent="1" foregroundColor="SevenDestcriptionNextCS">
+  <eLabel text="jetzt läuft:" position="488,19" size="180,30" font="Regular2; 23" halign="left" foregroundColor="SevenDestcriptionCS" backgroundColor="SevenFontBackMiddleCS" transparent="1" zPosition="2" />
+  <eLabel text="es folgt:" position="488,376" size="180,30" font="Regular2; 23" halign="left" foregroundColor="SevenDestcriptionNextCS" backgroundColor="SevenFontBackMiddleCS" transparent="1" zPosition="2" />
+  <widget source="ServiceEvent" render="SevenHDSingleEpgList" position="925,77" size="339,570" font="Regular;17" foregroundColor="SevenNextCS" backgroundColor="SevenFontBackRightCS" noWrap="1" transparent="1" />
+  <widget source="ServiceEvent" render="Label" position="488,415" zPosition="1" size="408,25" font="Regular2; 20" halign="center" backgroundColor="SevenFontBackMiddleCS" transparent="1" foregroundColor="SevenDestcriptionNextCS">
   <convert type="SevenHDServiceNameEventNobile">NextEvent</convert>
 </widget>
-  <widget source="ServiceEvent" render="Label" position="817,376" zPosition="1" size="80,30" font="Regular2; 23" halign="left" backgroundColor="black" transparent="1" foregroundColor="SevenDestcriptionNextCS">
+  <widget source="ServiceEvent" render="Label" position="817,376" zPosition="1" size="80,30" font="Regular2; 23" halign="left" backgroundColor="SevenFontBackMiddleCS" transparent="1" foregroundColor="SevenDestcriptionNextCS">
   <convert type="SevenHDServiceNameEventNobile">StartTime</convert>
 </widget>
-  <widget source="ServiceEvent" render="Label" position="488,453" zPosition="1" size="408,180" font="Regular; 19" backgroundColor="black" transparent="1" foregroundColor="SevenDestcriptionNextCS">
+  <widget source="ServiceEvent" render="Label" position="488,453" zPosition="1" size="408,180" font="Regular; 19" backgroundColor="SevenFontBackMiddleCS" transparent="1" foregroundColor="SevenDestcriptionNextCS">
     <convert type="SevenHDServiceNameEventNobile">ExtendedDescription</convert>
   </widget>
 <widget source="Service" render="Picon" position="674,13" size="70,42" transparent="1" zPosition="2" alphatest="blend">
