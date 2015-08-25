@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "POT-Creation-Date: 2015-08-12 13:30+0200\n"
-"PO-Revision-Date: 2015-08-20 23:33+0200\n"
+"PO-Revision-Date: 2015-08-25 16:47+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: de_DE\n"
@@ -1368,8 +1368,41 @@ msgstr "Würfel"
 msgid "brownleather"
 msgstr "Braunes Leder"
 
+msgid "blackleather"
+msgstr "Schwarzes Leder"
+
+msgid "carbon"
+msgstr "Carbon"
+
+msgid "drop"
+msgstr "Tropfen"
+
+msgid "flames"
+msgstr "Flammen"
+
+msgid "glass"
+msgstr "Glas"
+
+msgid "iceflowers"
+msgstr "Eisblumen"
+
+msgid "matrix"
+msgstr "Matrix"
+
+msgid "metal"
+msgstr "Metall"
+
+msgid "string"
+msgstr "String"
+
 msgid "slate"
 msgstr "Schiefer"
+
+msgid "fireflower"
+msgstr "Feuerblume"
+
+msgid "colorexplosion"
+msgstr "Farbexplosion"
 
 msgid "stonewall"
 msgstr "Steinwand"
