@@ -117,7 +117,7 @@ TransList.append(("4a", _("medium")))
 TransList.append(("8a", _("high")))
 TransList.append(("ff", _("full")))
 
-BackList = ['brownleather', 'blackleather', 'brick', 'carbon', 'checkerplate', 'colorexplosion', 'cubes', 'drop', 'flames', 'fire', 'fireflower', 'glas', 'iceflower', 'matrix', 'metal', 
+BackList = ['brownleather', 'blackleather', 'brick', 'carbon', 'checkerplate', 'colorexplosion', 'cubes', 'drop', 'flames', 'fire', 'fireflower', 'glass', 'iceflowers', 'lapis', 'matrix', 'metal', 
             'redwood', 'slate', 'scratchedmetal', 'stone', 'stonewall', 'string']
 
 ################################################################################################################################################################
