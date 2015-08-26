@@ -2,7 +2,7 @@
 <eLabel backgroundColor="SevenBackgroundIB1" position="969,383" size="295,59" transparent="0" zPosition="-9" />
 <ePixmap pixmap="SevenHD/back/ibone.png" position="969,383" size="295,59" alphatest="blend" zPosition="-8" />
 <widget source="session.CurrentService" position="974,387" size="285,50" font="Regular; 16" render="Label" halign="center" valign="center" backgroundColor="SevenFontBackgroundIB1" foregroundColor="SevenNowIB" transparent="1" zPosition="1">
-    <convert type="SevenHDMyCaidDisplay">Default</convert>
+    <convert type="SevenHDECMInfoLine">Format:CAID: %C - Reader: %R - HOPS: %H - ECM: %T ms</convert>
   </widget>	
 <eLabel backgroundColor="SevenBorderIB" position="969,382" size="2,60" zPosition="2" />
   <eLabel backgroundColor="SevenBorderIB" position="1262,382" size="2,60" zPosition="2" />
