@@ -170,7 +170,7 @@
   </screen>
   <!-- ********** BitrateViewer ********** -->
   <!-- BitrateViewer -->
-  <screen name="BitrateViewer" backgroundColor="SevenBackground" position="100,180" size="340,190" title="Bitrate viewer" zPosition="-9" flags="wfBorder">
+  <screen name="BitrateViewer" backgroundColor="SevenBackground" flags="wfNoBorder" position="100,180" size="340,190" title="Bitrate viewer" zPosition="-9">
     <ePixmap pixmap="SevenHD/back/menumain.png" position="-1,0" size="340,190" alphatest="blend" zPosition="-8" />
     <eLabel text="Video" position="10,10" zPosition="1" size="80,26" font="Regular; 20" transparent="1" foregroundColor="white" backgroundColor="SevenFontBackground" />
     <eLabel text="min" position="10,40" zPosition="1" size="80,26" font="Regular; 20" transparent="1" foregroundColor="white" backgroundColor="SevenFontBackground" />
@@ -1802,9 +1802,9 @@
 </screen>
   <screen name="SevenHD" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
   <eLabel font="Regular; 18" foregroundColor="SevenButtonText" backgroundColor="SevenFontBackground" halign="left" valign="center" position="64,662" size="148,48" text="Cancel" transparent="1" />
-  <eLabel font="Regular; 18" foregroundColor="SevenButtonText" backgroundColor="SevenFontBackground" halign="left" valign="center" position="264,662" size="148,48" text="Save" transparent="1" />
-  <eLabel font="Regular; 18" foregroundColor="SevenButtonText" backgroundColor="SevenFontBackground" halign="left" valign="center" position="464,662" size="148,48" text="Defaults" transparent="1" />
-  <widget name="blue" font="Regular; 18" foregroundColor="SevenButtonText" backgroundColor="SevenFontBackground" halign="left" valign="center" position="664,662" size="148,48" transparent="1" />
+    <eLabel font="Regular; 18" foregroundColor="SevenButtonText" backgroundColor="SevenFontBackground" halign="left" valign="center" position="264,662" size="148,48" text="Save" transparent="1" />
+    <eLabel font="Regular; 18" foregroundColor="SevenButtonText" backgroundColor="SevenFontBackground" halign="left" valign="center" position="464,662" size="148,48" text="Reboot" transparent="1" />
+    <eLabel font="Regular; 18" foregroundColor="SevenButtonText" backgroundColor="SevenFontBackground" halign="left" valign="center" position="664,662" size="148,48" text="Extras" transparent="1" />
   <widget name="menuList" position="18,72" size="816,575" backgroundColor="SevenFontBackground" enableWrapAround="1" transparent="1" />
   <eLabel position="70,12" size="708,46" text="SevenHD - Konfigurationstool" font="Regular; 35" valign="center" halign="center" transparent="1" backgroundColor="SevenFontBackground" />
   <eLabel position="891,657" size="372,46" text="Thanks to TBX and http://www.gigablue-support.org/" font="Regular; 12" valign="center" halign="center" transparent="1" backgroundColor="SevenFontBackgroundRight" foregroundColor="SevenFont2" name="," />
