@@ -1,17 +1,17 @@
 
  <!-- Clock Analog */-->
-<widget source="global.CurrentTime" position="1093,670" size="148,36" font="Regular2; 18" render="Label" halign="center" valign="top" zPosition="12" backgroundColor="SevenFontBackgroundIB1" foregroundColor="SevenClockDate" transparent="1">
-    <convert type="SevenHDClockToText">Format:%d.%m.%Y</convert>
+  <widget source="global.CurrentTime" position="1091,680" size="149,22" font="Regular2; 18" render="Label" halign="center" valign="top" zPosition="12" backgroundColor="SevenFontBackgroundIB1" foregroundColor="SevenClockDate" transparent="1">
+    <convert type="SevenHDClockToText">Format:%d.%m. %Y</convert>
   </widget>
-  <ePixmap alphatest="blend" pixmap="SevenHD/clock/analog.png" position="1091,544" size="149,125" zPosition="1" />
-<widget source="global.CurrentTime" render="SevenHDWatches" position="1143,581" foregroundColor="SevenClockH" zPosition="4" size="49,49" alphatest="blend">
-    <convert type="SevenHDExtraNumText">hourHand</convert>
+  <ePixmap alphatest="blend" pixmap="SevenHD/clock/analog.png" position="1091,536" size="149,149" zPosition="1" />
+  <widget source="global.CurrentTime" render="SevenHDEGclock" position="1130,575" borderColor="SevenClockH" zPosition="4" size="70,70" alphatest="blend" transparent="1">
+    <convert type="SevenHDEGAnalogic">Hours</convert>
   </widget>
-  <widget source="global.CurrentTime" render="SevenHDWatches" position="1130,568" foregroundColor="SevenClockM" zPosition="5" size="75,75" alphatest="blend">
-    <convert type="SevenHDExtraNumText">minHand</convert>
+  <widget source="global.CurrentTime" render="SevenHDEGclock" position="1120,565" borderColor="SevenClockM" zPosition="5" size="90,90" alphatest="blend" transparent="1">
+    <convert type="SevenHDEGAnalogic">Minutes</convert>
   </widget>
-  <widget source="global.CurrentTime" render="SevenHDWatches" position="1138,576" foregroundColor="SevenClockS" zPosition="6" size="59,59" alphatest="blend">
-    <convert type="SevenHDExtraNumText">secHand</convert>
+  <widget source="global.CurrentTime" render="SevenHDEGclock" position="1120,565" borderColor="SevenClockS" zPosition="6" size="90,90" alphatest="blend" transparent="1">
+    <convert type="SevenHDEGAnalogic">Seconds</convert>
   </widget>
  <!-- Clock Analog */-->
  
