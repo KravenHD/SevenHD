@@ -78,7 +78,7 @@ class SevenHDMyCaidDisplay(Poll, Converter, object):
 
 	@cached
 	def getText(self):
-		textvalue = ""
+		textvalue = "free to air"
 		service = self.source.service
 		if service:
 			info = service and service.info()
