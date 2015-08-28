@@ -170,8 +170,7 @@
   </screen>
   <!-- ********** BitrateViewer ********** -->
   <!-- BitrateViewer -->
-  <screen name="BitrateViewer" backgroundColor="SevenBackground" flags="wfNoBorder" position="100,180" size="340,190" title="Bitrate viewer" zPosition="-9">
-    <ePixmap pixmap="SevenHD/back/menumain.png" position="-1,0" size="340,190" alphatest="blend" zPosition="-8" />
+  <screen name="BitrateViewer" backgroundColor="SevenBackground" flags="wfBorder" position="100,180" size="340,190" title="Bitrate viewer">
     <eLabel text="Video" position="10,10" zPosition="1" size="80,26" font="Regular; 20" transparent="1" foregroundColor="white" backgroundColor="SevenFontBackground" />
     <eLabel text="min" position="10,40" zPosition="1" size="80,26" font="Regular; 20" transparent="1" foregroundColor="white" backgroundColor="SevenFontBackground" />
     <widget name="vmin" position="10,70" size="80,26" font="Regular; 20" transparent="1" backgroundColor="SevenFontBackground" />
