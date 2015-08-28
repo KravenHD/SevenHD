@@ -20,11 +20,11 @@
   <widget backgroundColor="SevenFontBackRightCS" font="Regular;22" foregroundColor="SevenPrimeCS" position="891,680" render="Label" size="362,30" source="ServiceEvent" transparent="1" zPosition="5" noWrap="1">
     <convert type="SevenHDNextEvents">PrimeTime,noDuration</convert>
   </widget>
-<widget source="ServiceEvent" render="Label" position="891,183" size="77,25" font="Regular; 20" backgroundColor="SevenFontBackgroundRightCS" transparent="1" foregroundColor="SevenRuntimeCS">
+<widget source="ServiceEvent" render="Label" position="891,183" size="77,25" font="Regular; 20" backgroundColor="SevenFontBackRightCS" transparent="1" foregroundColor="SevenRuntimeCS">
     <convert type="EventTime">StartTime</convert>
     <convert type="ClockToText">Format:%H:%M</convert>
   </widget>
-  <widget source="ServiceEvent" render="Label" position="1176,183" size="77,25" font="Regular; 20" backgroundColor="SevenFontBackgroundRightCS" transparent="1" foregroundColor="SevenRuntimeCS" halign="right">
+  <widget source="ServiceEvent" render="Label" position="1176,183" size="77,25" font="Regular; 20" backgroundColor="SevenFontBackRightCS" transparent="1" foregroundColor="SevenRuntimeCS" halign="right">
     <convert type="EventTime">EndTime</convert>
     <convert type="ClockToText">Format:%H:%M</convert>
   </widget>
