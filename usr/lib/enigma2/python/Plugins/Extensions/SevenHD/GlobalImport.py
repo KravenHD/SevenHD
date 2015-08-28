@@ -316,38 +316,7 @@ config.plugins.SevenHD.ClockStyle = ConfigSelection(default="clock-standard", ch
 				("clock-android", _("android"))
 				])
 
-config.plugins.SevenHD.AnalogStyle = ConfigSelection(default="00999999", choices = [
-				("00000000", _("black")),
-				("00ffffff", _("white")),
-				("00F0A30A", _("amber")),
-				("00B27708", _("amber dark")),
-				("001B1775", _("blue")),
-				("000E0C3F", _("blue dark")),
-				("007D5929", _("brown")),
-				("003F2D15", _("brown dark")),
-				("000050EF", _("cobalt")),
-				("00001F59", _("cobalt dark")),
-				("001BA1E2", _("cyan")),
-				("000F5B7F", _("cyan dark")),
-				("00999999", _("grey")),
-				("003F3F3F", _("grey dark")),
-				("0070AD11", _("green")),
-				("00213305", _("green dark")),
-				("006D8764", _("olive")),
-				("00313D2D", _("olive dark")),
-				("00C3461B", _("orange")),
-				("00892E13", _("orange dark")),
-				("00F472D0", _("pink")),
-				("00723562", _("pink dark")),
-				("00E51400", _("red")),
-				("00330400", _("red dark")),
-				("00647687", _("steel")),
-				("00262C33", _("steel dark")),
-				("006C0AAB", _("violet")),
-				("001F0333", _("violet dark")),
-				("00FFF006", _("yellow")),
-				("00FFBE00", _("yellow dark"))
-				])
+config.plugins.SevenHD.AnalogStyle = ConfigSelection(default="00ffffff", choices = ColorList)
 
 config.plugins.SevenHD.ClockDate = ConfigSelection(default="00ffffff", choices = ColorList)
 
