@@ -79,7 +79,7 @@
     <convert type="SevenHDYWeather">temp</convert>
   </widget>
 <eLabel text="Wind:" position="1000,32" size="60,22" zPosition="5" halign="left" font="Regular2; 18" backgroundColor="SevenFontBackgroundIB2" transparent="1" foregroundColor="SevenNextIB" />
-<widget Wrap="1" backgroundColor="SevenFontBackgroundIB1" font="Regular; 18" foregroundColor="SevenNowIB" render="Label" position="1120,32" size="120,22" source="session.CurrentService" zPosition="3" halign="right" transparent="1">
+<widget Wrap="1" backgroundColor="SevenFontBackgroundIB2" font="Regular; 18" foregroundColor="SevenNowIB" render="Label" position="1120,32" size="120,22" source="session.CurrentService" zPosition="3" halign="right" transparent="1">
   <convert type="SevenHDYWeather">speed</convert>
   </widget>
 
