@@ -167,6 +167,8 @@ class ChannelSettings(ConfigListScreen, Screen):
               path = MAIN_IMAGE_PATH + str("SIB2.jpg")
            elif returnValue.endswith('-full'):
               path = MAIN_IMAGE_PATH + str("SIB3.jpg")
+           elif returnValue.endswith('-minitv'):
+              path = MAIN_IMAGE_PATH + str("SIB4.jpg")
            else:
               path = MAIN_IMAGE_PATH + str(returnValue) + str(".jpg")
 	   		

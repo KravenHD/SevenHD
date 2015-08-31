@@ -1,4 +1,4 @@
-version = '3.3.2'
+version = '3.3.3'
 import os
 import re
 import time
@@ -265,7 +265,8 @@ config.plugins.SevenHD.InfobarStyle = ConfigSelection(default="infobar-style-ori
 config.plugins.SevenHD.SIB = ConfigSelection(default="-top", choices = [
 				("-top", _("top/bottom")),
 				("-left", _("left/right")),
-				("-full", _("full"))
+				("-full", _("full")),
+				("-minitv", _("miniTV"))
 				])				
 
 BackgroundIB1List = []
