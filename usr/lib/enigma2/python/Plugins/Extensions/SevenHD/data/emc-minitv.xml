@@ -34,7 +34,7 @@
     <convert type="EMCClockToText">InMinutes</convert>
   </widget>
 <widget source="session.VideoPicture" render="Pig" position="49,108" size="400,220" backgroundColor="transparent" zPosition="2" />
-  <widget name="Cover" position="730,108" size="100,151" zPosition="4" backgroundColor="SevenFontBackground" alphatest="on" transparent="1" />
+  <widget name="Cover" position="730,108" size="100,151" zPosition="4" backgroundColor="SevenBackground" alphatest="on" transparent="1" />
   <panel name="template_emc2" />
   <panel name="template_colorkey_text" />
 </screen>

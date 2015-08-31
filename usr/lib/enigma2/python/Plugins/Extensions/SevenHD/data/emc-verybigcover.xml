@@ -29,7 +29,7 @@
   <widget source="Service" render="Label" position="890,671" size="150,33" font="Regular2; 20" halign="center" backgroundColor="SevenFontBackgroundRight" foregroundColor="SevenFont2" transparent="1">
     <convert type="EMCMovieInfo">FileSize</convert>
   </widget>
-  <widget name="Cover" position="890,209" size="374,445" zPosition="4" backgroundColor="SevenFontBackgroundRight" alphatest="on" transparent="1" />
+  <widget name="Cover" position="890,209" size="374,445" zPosition="4" backgroundColor="SevenBackgroundRight" alphatest="on" transparent="1" />
   <widget source="Service" render="Label" position="1114,671" size="150,33" font="Regular2; 20" halign="center" backgroundColor="SevenFontBackgroundRight" transparent="1" foregroundColor="SevenFont2">
     <convert type="EMCServiceTime">Duration</convert>
     <convert type="EMCClockToText">InMinutes</convert>
