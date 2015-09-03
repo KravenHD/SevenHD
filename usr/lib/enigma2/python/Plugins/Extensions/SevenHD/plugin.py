@@ -21,6 +21,7 @@
 #
 #######################################################################
 from GlobalImport import *
+from OnlineUpdate import *
 from MainSettings import MainSettings
 from MenuPluginSettings import MenuPluginSettings
 from InfobarSettings import InfobarSettings
@@ -103,6 +104,9 @@ class SevenHD(Screen):
                      <eLabel backgroundColor="#00ffffff" position="878,6" size="2,708" zPosition="2" />
                      <eLabel backgroundColor="#00ffffff" position="1274,6" size="2,708" zPosition="2" />
                      <eLabel position="891,88" size="415,46" text="Version: """ + str(version) + """" font="Regular; 35" valign="center" halign="center" transparent="1" backgroundColor="#00000000" foregroundColor="#00ffffff" name="," />
+                     <widget source="session.CurrentService" render="Label" position="891,134" size="415,28" font="Regular;26" halign="left" backgroundColor="#00000000" transparent="1" valign="center" foregroundColor="#00B27708">
+                                 <convert type="SevenHDUpdate">Update</convert>
+                     </widget>
                </screen>"""
                   
     def __init__(self, session, args = None):
@@ -352,6 +356,7 @@ class SevenHD(Screen):
 		self.skinSearchAndReplace.append(["buttons_seven_white", config.plugins.SevenHD.ButtonStyle.value])
 		self.skinSearchAndReplace.append(["icons_seven_white", config.plugins.SevenHD.IconStyle.value])
 		self.skinSearchAndReplace.append(["movetype=running", config.plugins.SevenHD.RunningText.value])
+		self.skinSearchAndReplace.append(["startdelay=2000", config.plugins.SevenHD.Startdelay.value])
 			
 		self.selectionbordercolor = config.plugins.SevenHD.SelectionBorder.value
 		self.borset = ("borset_" + self.selectionbordercolor + ".png")
@@ -703,7 +708,13 @@ class SevenHD(Screen):
 def main(session, **kwargs):
         if fileExists("/tmp/kraven_debug.txt"):
            remove('/tmp/kraven_debug.txt')
+        
+        updateInstance = None
         session.open(SevenHD)
+        
+        global updateInstance
+        if updateInstance is None:
+           updateInstance = Update(session)
 
 def Plugins(**kwargs):
 	screenwidth = getDesktop(0).size().width()
