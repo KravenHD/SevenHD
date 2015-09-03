@@ -73,6 +73,9 @@ class MainSettings(ConfigListScreen, Screen):
                          <eLabel backgroundColor="#00ffffff" position="878,6" size="2,708" zPosition="2" />
                          <eLabel backgroundColor="#00ffffff" position="1274,6" size="2,708" zPosition="2" />
                          <eLabel position="891,88" size="415,46" text="Version: """ + str(version) + """" font="Regular; 35" valign="center" halign="center" transparent="1" backgroundColor="#00000000" foregroundColor="#00ffffff" name="," />
+                         <widget source="session.CurrentService" render="Label" position="891,134" size="415,28" font="Regular;26" halign="left" backgroundColor="#00000000" transparent="1" valign="center" foregroundColor="#00B27708">
+                                 <convert type="SevenHDUpdate">Update</convert>
+                         </widget>
                   </screen>
                """
 
@@ -122,11 +125,16 @@ class MainSettings(ConfigListScreen, Screen):
         list.append(getConfigListEntry(_("buttons"), config.plugins.SevenHD.ButtonStyle, 'Button'))
         list.append(getConfigListEntry(_("plugin icons"), config.plugins.SevenHD.IconStyle, 'Icons'))
         list.append(getConfigListEntry(_("running text"), config.plugins.SevenHD.RunningText, 'RunningText'))
+        if config.plugins.SevenHD.RunningText.value == 'movetype=running':
+           list.append(getConfigListEntry(_("startdelay"), config.plugins.SevenHD.Startdelay, 'Delay'))
         list.append(getConfigListEntry(_("volume style"), config.plugins.SevenHD.VolumeStyle))
         list.append(getConfigListEntry(_("progress-/volumebar"), config.plugins.SevenHD.Progress, 'Progress'))
-        list.append(getConfigListEntry(_('___________________________________________ transparency _____________________________________________'), ))
+        list.append(getConfigListEntry(_('_____________________________________________transparency ____________________________________________'), ))
         list.append(getConfigListEntry(_("main window"), config.plugins.SevenHD.BackgroundColorTrans))
         list.append(getConfigListEntry(_("right window"), config.plugins.SevenHD.BackgroundRightColorTrans))
+        list.append(getConfigListEntry(_('_____________________________________________ autoupdate _____________________________________________'), ))
+        list.append(getConfigListEntry(_("activate"), config.plugins.SevenHD.AutoUpdate))
+        list.append(getConfigListEntry(_("autoupdate infobar info"), config.plugins.SevenHD.AutoUpdateInfo))
         list.append(getConfigListEntry(_('______________________________________________ plugins _______________________________________________'), ))
         if not fileExists(PLUGIN_PATH + "/Extensions/EnhancedMovieCenter/plugin.pyo"):
            list.append(getConfigListEntry(_('{:<114}{:>1}'.format('EnhancedMovieCenter','not installed')), ))
@@ -168,7 +176,7 @@ class MainSettings(ConfigListScreen, Screen):
            if fileExists(path):
               return path
            else:
-           ## colors
+           ## update
               try:
                  returnValue = self["config"].getCurrent()[2]
                  path = MAIN_IMAGE_PATH + returnValue + str(".jpg")
@@ -182,11 +190,14 @@ class MainSettings(ConfigListScreen, Screen):
         except:
            returnValue = self["config"].getCurrent()[0]
            
-           if 'Lautst' in returnValue or returnValue == 'Volume':
-              if config.plugins.SevenHD.Volume.value == False: 
-                 return MAIN_IMAGE_PATH + str("none.jpg")
-              else:
-                 return MAIN_IMAGE_PATH + str("True.jpg")
+           if returnValue == 'activate' or returnValue == 'Aktivieren' and config.plugins.SevenHD.AutoUpdate.value == False:
+              return MAIN_IMAGE_PATH + str("none.jpg")
+           if returnValue == 'activate' or returnValue == 'Aktivieren' and config.plugins.SevenHD.AutoUpdate.value == True:
+              return MAIN_IMAGE_PATH + str("True.jpg")
+           if returnValue == 'autoupdate infobar info' or returnValue == 'Updateinformationen in Infobar anzeigen' and config.plugins.SevenHD.AutoUpdateInfo.value == False:
+              return MAIN_IMAGE_PATH + str("none.jpg")
+           if returnValue == 'autoupdate infobar info' or returnValue == 'Updateinformationen in Infobar anzeigen' and config.plugins.SevenHD.AutoUpdateInfo.value == True:
+              return MAIN_IMAGE_PATH + str("True.jpg") 
            
            self.debug('3: Missing Picture: ' + MAIN_IMAGE_PATH + str(returnValue) + '.jpg\n')
            ## weather
@@ -226,10 +237,13 @@ class MainSettings(ConfigListScreen, Screen):
            self.session.open(MessageBox, _('Debug Picture\n"kraven_debug.png" saved in /tmp\n'), MessageBox.TYPE_INFO)
            
     def defaults(self):
+        self.setInputToDefault(config.plugins.SevenHD.AutoUpdate)
+        self.setInputToDefault(config.plugins.SevenHD.AutoUpdateInfo)
         self.setInputToDefault(config.plugins.SevenHD.Image)
         self.setInputToDefault(config.plugins.SevenHD.ButtonStyle)
         self.setInputToDefault(config.plugins.SevenHD.IconStyle)
         self.setInputToDefault(config.plugins.SevenHD.RunningText)
+        self.setInputToDefault(config.plugins.SevenHD.Startdelay)
         self.setInputToDefault(config.plugins.SevenHD.Volume)
         self.setInputToDefault(config.plugins.SevenHD.NumberZapExt)
         self.setInputToDefault(config.plugins.SevenHD.EMCStyle)

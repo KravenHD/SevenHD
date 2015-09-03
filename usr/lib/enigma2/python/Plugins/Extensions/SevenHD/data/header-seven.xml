@@ -697,6 +697,10 @@
   <eLabel backgroundColor="SevenLineCS" position="805,623" size="453,2" zPosition="2" />
 </screen>
 <screen name="template_menu_ib1">
+<widget source="session.CurrentService" render="Pixmap" pixmap="SevenHD/update.png" position="1240,679" size="20,20" zPosition="3" alphatest="blend">
+      <convert type="SevenHDUpdate">Update</convert>
+      <convert type="ConditionalShowHide"/>
+    </widget>
   <eLabel backgroundColor="SevenBackgroundIB1" position="14,533" size="1250,168" zPosition="-9" />
   <eLabel backgroundColor="SevenBorderIB" position="1262,533" size="2,170" zPosition="2" />
   <eLabel backgroundColor="SevenBorderIB" position="14,533" size="2,170" zPosition="2" />
@@ -860,7 +864,7 @@
   <widget backgroundColor="SevenFontBackgroundIB1" font="Regular2; 30" halign="center" noWrap="1" position="37,80" foregroundColor="SevenNowIB" render="Label" size="1200,38" source="session.Event_Now" transparent="1" zPosition="1" valign="bottom">
     <convert type="SevenHDEventName">Name</convert>
   </widget>
-  <widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 20" foregroundColor="SevenNowIB" halign="center" position="37,123" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,wrap=1,always=0,repeat=2,oneshot=1" size="1200,130" source="session.Event_Now" zPosition="1" transparent="1">
+  <widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 20" foregroundColor="SevenNowIB" halign="center" position="37,123" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=2,oneshot=1" size="1200,130" source="session.Event_Now" zPosition="1" transparent="1">
     <convert type="SevenHDEventName">ExtendedDescription</convert>
   </widget>
   <widget backgroundColor="SevenFontBackgroundIB1" font="Regular2; 30" foregroundColor="SevenNextIB" halign="center" position="37,263" render="Label" size="1200,38" source="session.Event_Next" transparent="1" zPosition="1" valign="bottom">
@@ -900,7 +904,7 @@
     <convert type="SevenHDEventName">Name</convert>
   </widget>
   <eLabel backgroundColor="SevenFontBackgroundIB1" foregroundColor="SevenNextIB" font="Regular2;22" halign="center" noWrap="1" position="108,636" size="16,36" text="-" transparent="1" valign="center" zPosition="1" />
-  <widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 20" foregroundColor="SevenNextIB" halign="center" position="37,306" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,wrap=1,always=0,repeat=2,oneshot=1" size="1200,130" source="session.Event_Next" zPosition="1" transparent="1">
+  <widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 20" foregroundColor="SevenNextIB" halign="center" position="37,306" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=2,oneshot=1" size="1200,130" source="session.Event_Next" zPosition="1" transparent="1">
     <convert type="SevenHDEventName">ExtendedDescription</convert>
   </widget>
   <ePixmap pixmap="SevenHD/back/ibone.png" position="14,533" size="1250,168" alphatest="blend" zPosition="-8" />
@@ -1026,7 +1030,7 @@
   <widget backgroundColor="SevenFontBackgroundIB1" font="Regular2; 30" halign="center" noWrap="1" position="37,80" foregroundColor="SevenNowIB" render="Label" size="578,38" source="session.Event_Now" transparent="1" zPosition="1" valign="bottom">
     <convert type="SevenHDEventName">Name</convert>
   </widget>
-  <widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 20" foregroundColor="SevenNowIB" halign="center" position="37,123" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,wrap=1,always=0,repeat=2,oneshot=1" size="578,311" source="session.Event_Now" zPosition="1" transparent="1">
+  <widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 20" foregroundColor="SevenNowIB" halign="center" position="37,123" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=2,oneshot=1" size="578,311" source="session.Event_Now" zPosition="1" transparent="1">
     <convert type="SevenHDEventName">ExtendedDescription</convert>
   </widget>
   <widget backgroundColor="SevenFontBackgroundIB2" font="Regular2; 30" foregroundColor="SevenNextIB" halign="center" position="661,80" render="Label" size="578,38" source="session.Event_Next" transparent="1" zPosition="1" valign="bottom">
@@ -1066,7 +1070,7 @@
     <convert type="SevenHDEventTime">EndTime</convert>
     <convert type="SevenHDClockToText">Default</convert>
   </widget>
-  <widget backgroundColor="SevenFontBackgroundIB2" font="Regular; 20" foregroundColor="SevenNextIB" halign="center" position="661,123" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,wrap=1,always=0,repeat=2,oneshot=1" size="578,311" source="session.Event_Next" zPosition="1" transparent="1">
+  <widget backgroundColor="SevenFontBackgroundIB2" font="Regular; 20" foregroundColor="SevenNextIB" halign="center" position="661,123" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=2,oneshot=1" size="578,311" source="session.Event_Next" zPosition="1" transparent="1">
     <convert type="SevenHDEventName">ExtendedDescription</convert>
   </widget>
   <eLabel backgroundColor="SevenBorderIB" position="645,75" size="619,2" zPosition="2" />
@@ -1194,7 +1198,7 @@
   <widget backgroundColor="SevenFontBackgroundIB1" font="Regular2; 30" halign="center" noWrap="1" position="37,80" foregroundColor="SevenNowIB" render="Label" size="1202,38" source="session.Event_Now" transparent="1" zPosition="1" valign="bottom">
     <convert type="SevenHDEventName">Name</convert>
   </widget>
-  <widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 20" foregroundColor="SevenNowIB" halign="center" position="37,123" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,wrap=1,always=0,repeat=2,oneshot=1" size="1202,311" source="session.Event_Now" zPosition="1" transparent="1">
+  <widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 20" foregroundColor="SevenNowIB" halign="center" position="37,123" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=2,oneshot=1" size="1202,311" source="session.Event_Now" zPosition="1" transparent="1">
     <convert type="SevenHDEventName">ExtendedDescription</convert>
   </widget>
   <widget font="Regular2; 24" halign="right" position="1144,476" render="Label" size="120,36" source="session.Event_Now" transparent="1" valign="center" zPosition="1" foregroundColor="SevenSNRIB" alphatest="blend">
@@ -1344,13 +1348,13 @@
     <widget backgroundColor="SevenFontBackgroundIB1" font="Regular2; 30" halign="center" noWrap="1" position="546,80" foregroundColor="SevenNowIB" render="Label" size="691,38" source="session.Event_Now" transparent="1" zPosition="1" valign="bottom">
       <convert type="SevenHDEventName">Name</convert>
     </widget>
-    <widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 20" foregroundColor="SevenNowIB" halign="center" position="546,123" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,wrap=1,always=0,repeat=2,oneshot=1" size="691,130" source="session.Event_Now" zPosition="1" transparent="1">
+    <widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 20" foregroundColor="SevenNowIB" halign="center" position="546,123" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=2,oneshot=1" size="691,130" source="session.Event_Now" zPosition="1" transparent="1">
       <convert type="SevenHDEventName">ExtendedDescription</convert>
     </widget>
     <widget backgroundColor="SevenFontBackgroundIB1" font="Regular2; 30" foregroundColor="SevenNextIB" halign="center" position="546,263" render="Label" size="691,38" source="session.Event_Next" transparent="1" zPosition="1" valign="bottom">
       <convert type="SevenHDEventName">Name</convert>
     </widget>
-    <widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 20" foregroundColor="SevenNextIB" halign="center" position="546,306" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,wrap=1,always=0,repeat=2,oneshot=1" size="691,130" source="session.Event_Next" zPosition="1" transparent="1">
+    <widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 20" foregroundColor="SevenNextIB" halign="center" position="546,306" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=2,oneshot=1" size="691,130" source="session.Event_Next" zPosition="1" transparent="1">
       <convert type="SevenHDEventName">ExtendedDescription</convert>
     </widget>
 <widget source="session.VideoPicture" render="Pig" position="30,121" size="505,282" zPosition="3" backgroundColor="transparent" />
@@ -1402,6 +1406,10 @@
     <ePixmap pixmap="SevenHD/back/ibone.png" position="14,533" size="1250,168" alphatest="blend" zPosition="-8" />
   </screen>
   <screen name="template_menu_ib2">
+  <widget source="session.CurrentService" render="Pixmap" pixmap="SevenHD/update.png" position="1240,679" size="20,20" zPosition="3" alphatest="blend">
+      <convert type="SevenHDUpdate">Update</convert>
+      <convert type="ConditionalShowHide"/>
+    </widget>
   <eLabel backgroundColor="SevenBackgroundIB1" position="14,521" size="1250,181" zPosition="-9" />
   <eLabel backgroundColor="SevenBorderIB" position="1262,520" size="2,183" zPosition="2" />
   <eLabel backgroundColor="SevenBorderIB" position="14,520" size="2,183" zPosition="2" />
@@ -1565,7 +1573,7 @@
   <widget backgroundColor="SevenFontBackgroundIB1" font="Regular2; 30" halign="center" noWrap="1" position="37,80" foregroundColor="SevenNowIB" render="Label" size="1200,38" source="session.Event_Now" transparent="1" zPosition="1" valign="bottom">
     <convert type="SevenHDEventName">Name</convert>
   </widget>
-  <widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 20" foregroundColor="SevenNowIB" halign="center" position="37,123" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,wrap=1,always=0,repeat=2,oneshot=1" size="1200,130" source="session.Event_Now" zPosition="1" transparent="1">
+  <widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 20" foregroundColor="SevenNowIB" halign="center" position="37,123" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=2,oneshot=1" size="1200,130" source="session.Event_Now" zPosition="1" transparent="1">
     <convert type="SevenHDEventName">ExtendedDescription</convert>
   </widget>
   <widget backgroundColor="SevenFontBackgroundIB1" font="Regular2; 30" foregroundColor="SevenNextIB" halign="center" position="37,263" render="Label" size="1200,38" source="session.Event_Next" transparent="1" zPosition="1" valign="bottom">
@@ -1605,7 +1613,7 @@
   <widget alphatest="blend" position="20,526" render="SevenHDXPicon" size="400,170" source="session.CurrentService" transparent="1" zPosition="4">
     <convert type="ServiceName">Reference</convert>
   </widget>
-  <widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 20" foregroundColor="SevenNextIB" halign="center" position="37,306" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,wrap=1,always=0,repeat=2,oneshot=1" size="1200,130" source="session.Event_Next" zPosition="1" transparent="1">
+  <widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 20" foregroundColor="SevenNextIB" halign="center" position="37,306" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=2,oneshot=1" size="1200,130" source="session.Event_Next" zPosition="1" transparent="1">
     <convert type="SevenHDEventName">ExtendedDescription</convert>
   </widget>
 <ePixmap pixmap="SevenHD/back/ibone.png" position="14,521" size="1250,181" alphatest="blend" zPosition="-8" />
@@ -1764,13 +1772,13 @@
   <widget backgroundColor="SevenFontBackgroundIB1" font="Regular2; 30" halign="center" noWrap="1" position="37,80" foregroundColor="SevenNowIB" render="Label" size="578,38" source="session.Event_Now" transparent="1" zPosition="1" valign="bottom">
     <convert type="SevenHDEventName">Name</convert>
   </widget>
-  <widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 20" foregroundColor="SevenNowIB" halign="center" position="37,123" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,wrap=1,always=0,repeat=2,oneshot=1" size="578,311" source="session.Event_Now" zPosition="1" transparent="1">
+  <widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 20" foregroundColor="SevenNowIB" halign="center" position="37,123" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=2,oneshot=1" size="578,311" source="session.Event_Now" zPosition="1" transparent="1">
     <convert type="SevenHDEventName">ExtendedDescription</convert>
   </widget>
   <widget backgroundColor="SevenFontBackgroundIB2" font="Regular2; 30" foregroundColor="SevenNextIB" halign="center" position="661,80" render="Label" size="578,38" source="session.Event_Next" transparent="1" zPosition="1" valign="bottom">
     <convert type="SevenHDEventName">Name</convert>
   </widget>
-  <widget backgroundColor="SevenFontBackgroundIB2" font="Regular; 20" foregroundColor="SevenNextIB" halign="center" position="661,123" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,wrap=1,always=0,repeat=2,oneshot=1" size="578,311" source="session.Event_Next" zPosition="1" transparent="1">
+  <widget backgroundColor="SevenFontBackgroundIB2" font="Regular; 20" foregroundColor="SevenNextIB" halign="center" position="661,123" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=2,oneshot=1" size="578,311" source="session.Event_Next" zPosition="1" transparent="1">
     <convert type="SevenHDEventName">ExtendedDescription</convert>
   </widget>
   <eLabel backgroundColor="SevenBackgroundIB2" position="643,77" size="620,363" zPosition="-9" />
@@ -1932,7 +1940,7 @@
   <widget backgroundColor="SevenFontBackgroundIB1" font="Regular2; 30" halign="center" noWrap="1" position="37,80" foregroundColor="SevenNowIB" render="Label" size="1202,38" source="session.Event_Now" transparent="1" zPosition="1" valign="bottom">
     <convert type="SevenHDEventName">Name</convert>
   </widget>
-  <widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 20" foregroundColor="SevenNowIB" halign="center" position="37,123" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,wrap=1,always=0,repeat=2,oneshot=1" size="1202,311" source="session.Event_Now" zPosition="1" transparent="1">
+  <widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 20" foregroundColor="SevenNowIB" halign="center" position="37,123" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=2,oneshot=1" size="1202,311" source="session.Event_Now" zPosition="1" transparent="1">
     <convert type="SevenHDEventName">ExtendedDescription</convert>
   </widget>
   <eLabel backgroundColor="SevenBackgroundIB1" position="14,78" size="1250,363" zPosition="-9" />
@@ -2049,13 +2057,13 @@
     <widget backgroundColor="SevenFontBackgroundIB1" font="Regular2; 30" halign="center" noWrap="1" position="546,80" foregroundColor="SevenNowIB" render="Label" size="691,38" source="session.Event_Now" transparent="1" zPosition="1" valign="bottom">
       <convert type="SevenHDEventName">Name</convert>
     </widget>
-    <widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 20" foregroundColor="SevenNowIB" halign="center" position="546,123" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,wrap=1,always=0,repeat=2,oneshot=1" size="691,130" source="session.Event_Now" zPosition="1" transparent="1">
+    <widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 20" foregroundColor="SevenNowIB" halign="center" position="546,123" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=2,oneshot=1" size="691,130" source="session.Event_Now" zPosition="1" transparent="1">
       <convert type="SevenHDEventName">ExtendedDescription</convert>
     </widget>
     <widget backgroundColor="SevenFontBackgroundIB1" font="Regular2; 30" foregroundColor="SevenNextIB" halign="center" position="546,263" render="Label" size="691,38" source="session.Event_Next" transparent="1" zPosition="1" valign="bottom">
       <convert type="SevenHDEventName">Name</convert>
     </widget>
-    <widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 20" foregroundColor="SevenNextIB" halign="center" position="546,306" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,wrap=1,always=0,repeat=2,oneshot=1" size="691,130" source="session.Event_Next" zPosition="1" transparent="1">
+    <widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 20" foregroundColor="SevenNextIB" halign="center" position="546,306" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=2,oneshot=1" size="691,130" source="session.Event_Next" zPosition="1" transparent="1">
       <convert type="SevenHDEventName">ExtendedDescription</convert>
     </widget>
 <widget source="session.VideoPicture" render="Pig" position="30,121" size="505,282" zPosition="3" backgroundColor="transparent" />
@@ -2107,6 +2115,10 @@
     <ePixmap pixmap="SevenHD/back/ibone.png" position="14,521" size="1250,181" alphatest="blend" zPosition="-8" />
   </screen>
   <screen name="template_menu_ib3">
+  <widget source="session.CurrentService" render="Pixmap" pixmap="SevenHD/update.png" position="1240,679" size="20,20" zPosition="3" alphatest="blend">
+      <convert type="SevenHDUpdate">Update</convert>
+      <convert type="ConditionalShowHide"/>
+    </widget>
   <eLabel backgroundColor="SevenBackgroundIB1" position="14,447" size="1250,256" zPosition="-9" />
   <eLabel backgroundColor="SevenBorderIB" position="1262,447" size="2,256" zPosition="2" />
   <eLabel backgroundColor="SevenBorderIB" position="14,447" size="2,256" zPosition="2" />
@@ -2266,7 +2278,7 @@
   <widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 30" halign="center" noWrap="1" position="37,80" foregroundColor="SevenSNRIB" render="Label" size="1200,38" source="session.Event_Now" transparent="1" zPosition="1" valign="bottom">
     <convert type="SevenHDEventName">Name</convert>
   </widget>
-  <widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 20" foregroundColor="SevenNowIB" halign="center" position="37,123" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,wrap=1,always=0,repeat=2,oneshot=1" size="1200,130" source="session.Event_Now" zPosition="1" transparent="1">
+  <widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 20" foregroundColor="SevenNowIB" halign="center" position="37,123" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=2,oneshot=1" size="1200,130" source="session.Event_Now" zPosition="1" transparent="1">
     <convert type="SevenHDEventName">ExtendedDescription</convert>
   </widget>
   <widget backgroundColor="SevenFontBackgroundIB1" font="Regular2; 30" foregroundColor="SevenNextIB" halign="center" position="37,263" render="Label" size="1200,38" source="session.Event_Next" transparent="1" zPosition="1" valign="bottom">
@@ -2305,7 +2317,7 @@
   <widget alphatest="blend" position="23,455" render="SevenHDXPicon" size="400,240" source="session.CurrentService" transparent="1" zPosition="4">
     <convert type="ServiceName">Reference</convert>
   </widget>
-  <widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 20" foregroundColor="SevenNextIB" halign="center" position="37,306" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,wrap=1,always=0,repeat=2,oneshot=1" size="1200,130" source="session.Event_Next" zPosition="1" transparent="1">
+  <widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 20" foregroundColor="SevenNextIB" halign="center" position="37,306" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=2,oneshot=1" size="1200,130" source="session.Event_Next" zPosition="1" transparent="1">
     <convert type="SevenHDEventName">ExtendedDescription</convert>
   </widget>
   <widget position="428,531" backgroundColor="SevenFontBackgroundIB1" render="Progress" size="825,6" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgress" pixmap="SevenHD/progress/progress858.png">
@@ -2466,13 +2478,13 @@
   <widget backgroundColor="SevenFontBackgroundIB1" font="Regular2; 30" halign="center" noWrap="1" position="37,80" foregroundColor="SevenNowIB" render="Label" size="578,38" source="session.Event_Now" transparent="1" zPosition="1" valign="bottom">
     <convert type="SevenHDEventName">Name</convert>
   </widget>
-  <widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 20" foregroundColor="SevenNowIB" halign="center" position="37,123" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,wrap=1,always=0,repeat=2,oneshot=1" size="578,311" source="session.Event_Now" zPosition="1" transparent="1">
+  <widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 20" foregroundColor="SevenNowIB" halign="center" position="37,123" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=2,oneshot=1" size="578,311" source="session.Event_Now" zPosition="1" transparent="1">
     <convert type="SevenHDEventName">ExtendedDescription</convert>
   </widget>
   <widget backgroundColor="SevenFontBackgroundIB2" font="Regular2; 30" foregroundColor="SevenNextIB" halign="center" position="661,80" render="Label" size="578,38" source="session.Event_Next" transparent="1" zPosition="1" valign="bottom">
     <convert type="SevenHDEventName">Name</convert>
   </widget>
-  <widget backgroundColor="SevenFontBackgroundIB2" font="Regular; 20" foregroundColor="SevenNextIB" halign="center" position="661,123" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,wrap=1,always=0,repeat=2,oneshot=1" size="578,311" source="session.Event_Next" zPosition="1" transparent="1">
+  <widget backgroundColor="SevenFontBackgroundIB2" font="Regular; 20" foregroundColor="SevenNextIB" halign="center" position="661,123" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=2,oneshot=1" size="578,311" source="session.Event_Next" zPosition="1" transparent="1">
     <convert type="SevenHDEventName">ExtendedDescription</convert>
   </widget>
   <eLabel backgroundColor="SevenBackgroundIB2" position="643,77" size="620,363" zPosition="-9" />
@@ -2633,7 +2645,7 @@
   <widget backgroundColor="SevenFontBackgroundIB1" font="Regular2; 30" halign="center" noWrap="1" position="37,80" foregroundColor="SevenNowIB" render="Label" size="1202,38" source="session.Event_Now" transparent="1" zPosition="1" valign="bottom">
     <convert type="SevenHDEventName">Name</convert>
   </widget>
-  <widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 20" foregroundColor="SevenNowIB" halign="center" position="37,123" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,wrap=1,always=0,repeat=2,oneshot=1" size="1202,311" source="session.Event_Now" zPosition="1" transparent="1">
+  <widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 20" foregroundColor="SevenNowIB" halign="center" position="37,123" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=2,oneshot=1" size="1202,311" source="session.Event_Now" zPosition="1" transparent="1">
     <convert type="SevenHDEventName">ExtendedDescription</convert>
   </widget>
   <eLabel backgroundColor="SevenBackgroundIB1" position="14,78" size="1250,363" zPosition="-9" />
@@ -2750,13 +2762,13 @@
     <widget backgroundColor="SevenFontBackgroundIB1" font="Regular2; 30" halign="center" noWrap="1" position="546,80" foregroundColor="SevenNowIB" render="Label" size="691,38" source="session.Event_Now" transparent="1" zPosition="1" valign="bottom">
       <convert type="SevenHDEventName">Name</convert>
     </widget>
-    <widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 20" foregroundColor="SevenNowIB" halign="center" position="546,123" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,wrap=1,always=0,repeat=2,oneshot=1" size="691,130" source="session.Event_Now" zPosition="1" transparent="1">
+    <widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 20" foregroundColor="SevenNowIB" halign="center" position="546,123" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=2,oneshot=1" size="691,130" source="session.Event_Now" zPosition="1" transparent="1">
       <convert type="SevenHDEventName">ExtendedDescription</convert>
     </widget>
     <widget backgroundColor="SevenFontBackgroundIB1" font="Regular2; 30" foregroundColor="SevenNextIB" halign="center" position="546,263" render="Label" size="691,38" source="session.Event_Next" transparent="1" zPosition="1" valign="bottom">
       <convert type="SevenHDEventName">Name</convert>
     </widget>
-    <widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 20" foregroundColor="SevenNextIB" halign="center" position="546,306" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,wrap=1,always=0,repeat=2,oneshot=1" size="691,130" source="session.Event_Next" zPosition="1" transparent="1">
+    <widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 20" foregroundColor="SevenNextIB" halign="center" position="546,306" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=2,oneshot=1" size="691,130" source="session.Event_Next" zPosition="1" transparent="1">
       <convert type="SevenHDEventName">ExtendedDescription</convert>
     </widget>
 <widget source="session.VideoPicture" render="Pig" position="30,121" size="505,282" zPosition="3" backgroundColor="transparent" />
@@ -2807,6 +2819,10 @@
     <ePixmap pixmap="SevenHD/back/ibone.png" position="14,447" size="1250,256" alphatest="blend" zPosition="-8" />
   </screen>
   <screen name="template_menu_ib4">
+  <widget source="session.CurrentService" render="Pixmap" pixmap="SevenHD/update.png" position="1240,679" size="20,20" zPosition="3" alphatest="blend">
+      <convert type="SevenHDUpdate">Update</convert>
+      <convert type="ConditionalShowHide"/>
+    </widget>
   <eLabel backgroundColor="SevenBackgroundIB1" position="14,533" size="1250,168" zPosition="-9" />
   <eLabel backgroundColor="SevenBorderIB" position="1262,533" size="2,170" zPosition="2" />
   <eLabel backgroundColor="SevenBorderIB" position="14,533" size="2,170" zPosition="2" />
@@ -2970,7 +2986,7 @@
   <widget backgroundColor="SevenFontBackgroundIB1" font="Regular2; 30" halign="center" noWrap="1" position="37,80" foregroundColor="SevenNowIB" render="Label" size="1200,38" source="session.Event_Now" transparent="1" zPosition="1" valign="bottom">
     <convert type="SevenHDEventName">Name</convert>
   </widget>
-  <widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 20" foregroundColor="SevenNowIB" halign="center" position="37,123" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,wrap=1,always=0,repeat=2,oneshot=1" size="1200,130" source="session.Event_Now" zPosition="1" transparent="1">
+  <widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 20" foregroundColor="SevenNowIB" halign="center" position="37,123" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=2,oneshot=1" size="1200,130" source="session.Event_Now" zPosition="1" transparent="1">
     <convert type="SevenHDEventName">ExtendedDescription</convert>
   </widget>
   <widget backgroundColor="SevenFontBackgroundIB1" font="Regular2; 30" foregroundColor="SevenNextIB" halign="center" position="37,263" render="Label" size="1200,38" source="session.Event_Next" transparent="1" zPosition="1" valign="bottom">
@@ -3010,7 +3026,7 @@
   <widget alphatest="blend" position="26,552" render="SevenHDXPicon" size="220,132" source="session.CurrentService" transparent="1" zPosition="4">
     <convert type="ServiceName">Reference</convert>
   </widget>
-  <widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 20" foregroundColor="SevenNextIB" halign="center" position="37,306" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,wrap=1,always=0,repeat=2,oneshot=1" size="1200,130" source="session.Event_Next" zPosition="1" transparent="1">
+  <widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 20" foregroundColor="SevenNextIB" halign="center" position="37,306" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=2,oneshot=1" size="1200,130" source="session.Event_Next" zPosition="1" transparent="1">
     <convert type="SevenHDEventName">ExtendedDescription</convert>
   </widget>
 <ePixmap pixmap="SevenHD/back/ibone.png" position="14,533" size="1250,168" alphatest="blend" zPosition="-8" />
@@ -3169,13 +3185,13 @@
   <widget backgroundColor="SevenFontBackgroundIB1" font="Regular2; 30" halign="center" noWrap="1" position="37,80" foregroundColor="SevenNowIB" render="Label" size="578,38" source="session.Event_Now" transparent="1" zPosition="1" valign="bottom">
     <convert type="SevenHDEventName">Name</convert>
   </widget>
-  <widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 20" foregroundColor="SevenNowIB" halign="center" position="37,123" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,wrap=1,always=0,repeat=2,oneshot=1" size="578,311" source="session.Event_Now" zPosition="1" transparent="1">
+  <widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 20" foregroundColor="SevenNowIB" halign="center" position="37,123" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=2,oneshot=1" size="578,311" source="session.Event_Now" zPosition="1" transparent="1">
     <convert type="SevenHDEventName">ExtendedDescription</convert>
   </widget>
   <widget backgroundColor="SevenFontBackgroundIB2" font="Regular2; 30" foregroundColor="SevenNextIB" halign="center" position="661,80" render="Label" size="578,38" source="session.Event_Next" transparent="1" zPosition="1" valign="bottom">
     <convert type="SevenHDEventName">Name</convert>
   </widget>
-  <widget backgroundColor="SevenFontBackgroundIB2" font="Regular; 20" foregroundColor="SevenNextIB" halign="center" position="661,123" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,wrap=1,always=0,repeat=2,oneshot=1" size="578,311" source="session.Event_Next" zPosition="1" transparent="1">
+  <widget backgroundColor="SevenFontBackgroundIB2" font="Regular; 20" foregroundColor="SevenNextIB" halign="center" position="661,123" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=2,oneshot=1" size="578,311" source="session.Event_Next" zPosition="1" transparent="1">
     <convert type="SevenHDEventName">ExtendedDescription</convert>
   </widget>
   <eLabel backgroundColor="SevenBackgroundIB2" position="643,77" size="620,363" zPosition="-9" />
@@ -3337,7 +3353,7 @@
   <widget backgroundColor="SevenFontBackgroundIB1" font="Regular2; 30" halign="center" noWrap="1" position="37,80" foregroundColor="SevenNowIB" render="Label" size="1202,38" source="session.Event_Now" transparent="1" zPosition="1" valign="bottom">
     <convert type="SevenHDEventName">Name</convert>
   </widget>
-  <widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 20" foregroundColor="SevenNowIB" halign="center" position="37,123" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,wrap=1,always=0,repeat=2,oneshot=1" size="1202,311" source="session.Event_Now" zPosition="1" transparent="1">
+  <widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 20" foregroundColor="SevenNowIB" halign="center" position="37,123" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=2,oneshot=1" size="1202,311" source="session.Event_Now" zPosition="1" transparent="1">
     <convert type="SevenHDEventName">ExtendedDescription</convert>
   </widget>
   <eLabel backgroundColor="SevenBackgroundIB1" position="14,77" size="1250,363" zPosition="-9" />
@@ -3454,13 +3470,13 @@
     <widget backgroundColor="SevenFontBackgroundIB1" font="Regular2; 30" halign="center" noWrap="1" position="546,80" foregroundColor="SevenNowIB" render="Label" size="691,38" source="session.Event_Now" transparent="1" zPosition="1" valign="bottom">
       <convert type="SevenHDEventName">Name</convert>
     </widget>
-    <widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 20" foregroundColor="SevenNowIB" halign="center" position="546,123" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,wrap=1,always=0,repeat=2,oneshot=1" size="691,130" source="session.Event_Now" zPosition="1" transparent="1">
+    <widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 20" foregroundColor="SevenNowIB" halign="center" position="546,123" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=2,oneshot=1" size="691,130" source="session.Event_Now" zPosition="1" transparent="1">
       <convert type="SevenHDEventName">ExtendedDescription</convert>
     </widget>
     <widget backgroundColor="SevenFontBackgroundIB1" font="Regular2; 30" foregroundColor="SevenNextIB" halign="center" position="546,263" render="Label" size="691,38" source="session.Event_Next" transparent="1" zPosition="1" valign="bottom">
       <convert type="SevenHDEventName">Name</convert>
     </widget>
-    <widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 20" foregroundColor="SevenNextIB" halign="center" position="546,306" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,wrap=1,always=0,repeat=2,oneshot=1" size="691,130" source="session.Event_Next" zPosition="1" transparent="1">
+    <widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 20" foregroundColor="SevenNextIB" halign="center" position="546,306" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=2,oneshot=1" size="691,130" source="session.Event_Next" zPosition="1" transparent="1">
       <convert type="SevenHDEventName">ExtendedDescription</convert>
     </widget>
 <widget source="session.VideoPicture" render="Pig" position="30,121" size="505,282" zPosition="3" backgroundColor="transparent" />
@@ -3512,6 +3528,10 @@
     <ePixmap pixmap="SevenHD/back/ibone.png" position="14,533" size="1250,168" alphatest="blend" zPosition="-8" />
   </screen>
   <screen name="template_menu_ib5">
+  <widget source="session.CurrentService" render="Pixmap" pixmap="SevenHD/update.png" position="1240,679" size="20,20" zPosition="3" alphatest="blend">
+      <convert type="SevenHDUpdate">Update</convert>
+      <convert type="ConditionalShowHide"/>
+    </widget>
   <eLabel backgroundColor="SevenBackgroundIB1" position="14,533" size="1250,168" zPosition="-9" />
   <eLabel backgroundColor="SevenBorderIB" position="1262,533" size="2,170" zPosition="2" />
   <eLabel backgroundColor="SevenBorderIB" position="14,533" size="2,170" zPosition="2" />
@@ -3675,7 +3695,7 @@
   <widget backgroundColor="SevenFontBackgroundIB1" font="Regular2; 30" halign="center" noWrap="1" position="37,80" foregroundColor="SevenNowIB" render="Label" size="1200,38" source="session.Event_Now" transparent="1" zPosition="1" valign="bottom">
     <convert type="SevenHDEventName">Name</convert>
   </widget>
-  <widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 20" foregroundColor="SevenNowIB" halign="center" position="37,123" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,wrap=1,always=0,repeat=2,oneshot=1" size="1200,130" source="session.Event_Now" zPosition="1" transparent="1">
+  <widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 20" foregroundColor="SevenNowIB" halign="center" position="37,123" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=2,oneshot=1" size="1200,130" source="session.Event_Now" zPosition="1" transparent="1">
     <convert type="SevenHDEventName">ExtendedDescription</convert>
   </widget>
   <widget backgroundColor="SevenFontBackgroundIB1" font="Regular2; 30" foregroundColor="SevenNextIB" halign="center" position="37,263" render="Label" size="1200,38" source="session.Event_Next" transparent="1" zPosition="1" valign="bottom">
@@ -3715,7 +3735,7 @@
   <widget alphatest="blend" position="26,572" render="SevenHDXPicon" size="220,94" source="session.CurrentService" transparent="1" zPosition="4">
     <convert type="ServiceName">Reference</convert>
   </widget>
-  <widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 20" foregroundColor="SevenNextIB" halign="center" position="37,306" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,wrap=1,always=0,repeat=2,oneshot=1" size="1200,130" source="session.Event_Next" zPosition="1" transparent="1">
+  <widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 20" foregroundColor="SevenNextIB" halign="center" position="37,306" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=2,oneshot=1" size="1200,130" source="session.Event_Next" zPosition="1" transparent="1">
     <convert type="SevenHDEventName">ExtendedDescription</convert>
   </widget>
 <ePixmap pixmap="SevenHD/back/ibone.png" position="14,533" size="1250,168" alphatest="blend" zPosition="-8" />
@@ -3874,13 +3894,13 @@
   <widget backgroundColor="SevenFontBackgroundIB1" font="Regular2; 30" halign="center" noWrap="1" position="37,80" foregroundColor="SevenNowIB" render="Label" size="578,38" source="session.Event_Now" transparent="1" zPosition="1" valign="bottom">
     <convert type="SevenHDEventName">Name</convert>
   </widget>
-  <widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 20" foregroundColor="SevenNowIB" halign="center" position="37,123" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,wrap=1,always=0,repeat=2,oneshot=1" size="578,311" source="session.Event_Now" zPosition="1" transparent="1">
+  <widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 20" foregroundColor="SevenNowIB" halign="center" position="37,123" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=2,oneshot=1" size="578,311" source="session.Event_Now" zPosition="1" transparent="1">
     <convert type="SevenHDEventName">ExtendedDescription</convert>
   </widget>
   <widget backgroundColor="SevenFontBackgroundIB2" font="Regular2; 30" foregroundColor="SevenNextIB" halign="center" position="661,80" render="Label" size="578,38" source="session.Event_Next" transparent="1" zPosition="1" valign="bottom">
     <convert type="SevenHDEventName">Name</convert>
   </widget>
-  <widget backgroundColor="SevenFontBackgroundIB2" font="Regular; 20" foregroundColor="SevenNextIB" halign="center" position="661,123" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,wrap=1,always=0,repeat=2,oneshot=1" size="578,311" source="session.Event_Next" zPosition="1" transparent="1">
+  <widget backgroundColor="SevenFontBackgroundIB2" font="Regular; 20" foregroundColor="SevenNextIB" halign="center" position="661,123" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=2,oneshot=1" size="578,311" source="session.Event_Next" zPosition="1" transparent="1">
     <convert type="SevenHDEventName">ExtendedDescription</convert>
   </widget>
   <eLabel backgroundColor="SevenBackgroundIB2" position="643,77" size="620,363" zPosition="-9" />
@@ -4042,7 +4062,7 @@
   <widget backgroundColor="SevenFontBackgroundIB1" font="Regular2; 30" halign="center" noWrap="1" position="37,80" foregroundColor="SevenNowIB" render="Label" size="1202,38" source="session.Event_Now" transparent="1" zPosition="1" valign="bottom">
     <convert type="SevenHDEventName">Name</convert>
   </widget>
-  <widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 20" foregroundColor="SevenNowIB" halign="center" position="37,123" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,wrap=1,always=0,repeat=2,oneshot=1" size="1202,311" source="session.Event_Now" zPosition="1" transparent="1">
+  <widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 20" foregroundColor="SevenNowIB" halign="center" position="37,123" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=2,oneshot=1" size="1202,311" source="session.Event_Now" zPosition="1" transparent="1">
     <convert type="SevenHDEventName">ExtendedDescription</convert>
   </widget>
   <eLabel backgroundColor="SevenBackgroundIB1" position="14,78" size="1250,363" zPosition="-9" />
@@ -4159,13 +4179,13 @@
     <widget backgroundColor="SevenFontBackgroundIB1" font="Regular2; 30" halign="center" noWrap="1" position="546,80" foregroundColor="SevenNowIB" render="Label" size="691,38" source="session.Event_Now" transparent="1" zPosition="1" valign="bottom">
       <convert type="SevenHDEventName">Name</convert>
     </widget>
-    <widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 20" foregroundColor="SevenNowIB" halign="center" position="546,123" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,wrap=1,always=0,repeat=2,oneshot=1" size="691,130" source="session.Event_Now" zPosition="1" transparent="1">
+    <widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 20" foregroundColor="SevenNowIB" halign="center" position="546,123" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=2,oneshot=1" size="691,130" source="session.Event_Now" zPosition="1" transparent="1">
       <convert type="SevenHDEventName">ExtendedDescription</convert>
     </widget>
     <widget backgroundColor="SevenFontBackgroundIB1" font="Regular2; 30" foregroundColor="SevenNextIB" halign="center" position="546,263" render="Label" size="691,38" source="session.Event_Next" transparent="1" zPosition="1" valign="bottom">
       <convert type="SevenHDEventName">Name</convert>
     </widget>
-    <widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 20" foregroundColor="SevenNextIB" halign="center" position="546,306" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,wrap=1,always=0,repeat=2,oneshot=1" size="691,130" source="session.Event_Next" zPosition="1" transparent="1">
+    <widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 20" foregroundColor="SevenNextIB" halign="center" position="546,306" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=2,oneshot=1" size="691,130" source="session.Event_Next" zPosition="1" transparent="1">
       <convert type="SevenHDEventName">ExtendedDescription</convert>
     </widget>
 <widget source="session.VideoPicture" render="Pig" position="30,121" size="505,282" zPosition="3" backgroundColor="transparent" />
@@ -4217,6 +4237,10 @@
     <ePixmap pixmap="SevenHD/back/ibone.png" position="14,533" size="1250,168" alphatest="blend" zPosition="-8" />
   </screen>
   <screen name="template_menu_ibo1">
+  <widget source="session.CurrentService" render="Pixmap" pixmap="SevenHD/update.png" position="1240,679" size="20,20" zPosition="3" alphatest="blend">
+      <convert type="SevenHDUpdate">Update</convert>
+      <convert type="ConditionalShowHide"/>
+    </widget>
   <eLabel backgroundColor="SevenBackgroundIB1" position="14,533" size="1250,168" zPosition="-9" />
   <eLabel backgroundColor="SevenBorderIB" position="1262,533" size="2,170" zPosition="2" />
   <eLabel backgroundColor="SevenBorderIB" position="14,533" size="2,170" zPosition="2" />
@@ -4372,13 +4396,13 @@
   <widget backgroundColor="SevenFontBackgroundIB1" font="Regular2; 30" halign="center" noWrap="1" position="37,53" foregroundColor="SevenNowIB" render="Label" size="1200,38" source="session.Event_Now" transparent="1" zPosition="1" valign="bottom">
     <convert type="SevenHDEventName">Name</convert>
   </widget>
-  <widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 20" foregroundColor="SevenNowIB" halign="center" position="37,98" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,wrap=1,always=0,repeat=2,oneshot=1" size="1200,160" source="session.Event_Now" zPosition="1" transparent="1">
+  <widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 20" foregroundColor="SevenNowIB" halign="center" position="37,98" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=2,oneshot=1" size="1200,160" source="session.Event_Now" zPosition="1" transparent="1">
     <convert type="SevenHDEventName">ExtendedDescription</convert>
   </widget>
   <widget backgroundColor="SevenFontBackgroundIB1" font="Regular2; 30" foregroundColor="SevenNextIB" halign="center" position="37,271" render="Label" size="1200,38" source="session.Event_Next" transparent="1" zPosition="1" valign="bottom">
     <convert type="SevenHDEventName">Name</convert>
   </widget>
-  <widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 20" foregroundColor="SevenNextIB" halign="center" position="37,316" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,wrap=1,always=0,repeat=2,oneshot=1" size="1200,132" source="session.Event_Next" zPosition="1" transparent="1">
+  <widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 20" foregroundColor="SevenNextIB" halign="center" position="37,316" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=2,oneshot=1" size="1200,132" source="session.Event_Next" zPosition="1" transparent="1">
     <convert type="SevenHDEventName">ExtendedDescription</convert>
   </widget>
   <eLabel backgroundColor="SevenBackgroundIB1" position="14,533" size="1250,168" zPosition="-9" />
@@ -4519,7 +4543,7 @@
   <eLabel backgroundColor="SevenBorderIB" position="1262,45" size="2,420" zPosition="2" />
   <eLabel backgroundColor="SevenBorderIB" position="633,45" size="2,420" zPosition="2" />
   <eLabel backgroundColor="SevenBorderIB" position="643,45" size="2,420" zPosition="2" />
-  <widget backgroundColor="SevenFontBackgroundIB2" font="Regular; 20" foregroundColor="SevenNextIB" halign="center" position="666,93" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,wrap=1,always=0,repeat=2,oneshot=1" size="578,364" source="session.Event_Next" zPosition="1" transparent="1">
+  <widget backgroundColor="SevenFontBackgroundIB2" font="Regular; 20" foregroundColor="SevenNextIB" halign="center" position="666,93" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=2,oneshot=1" size="578,364" source="session.Event_Next" zPosition="1" transparent="1">
     <convert type="SevenHDEventName">ExtendedDescription</convert>
   </widget>
   <widget source="session.CurrentService" position="37,10" size="500,22" font="Regular2;12" render="Label" halign="left" valign="bottom" foregroundColor="SevenSNRIB" backgroundColor="SevenFontBackgroundIB2" transparent="1" zPosition="1">
@@ -4542,7 +4566,7 @@
   <widget backgroundColor="SevenFontBackgroundIB1" font="Regular2; 30" halign="center" noWrap="1" position="37,50" foregroundColor="SevenNowIB" render="Label" size="578,38" source="session.Event_Now" transparent="1" zPosition="1" valign="bottom">
     <convert type="SevenHDEventName">Name</convert>
   </widget>
-  <widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 20" foregroundColor="SevenNowIB" halign="center" position="37,93" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,wrap=1,always=0,repeat=2,oneshot=1" size="578,364" source="session.Event_Now" zPosition="1" transparent="1">
+  <widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 20" foregroundColor="SevenNowIB" halign="center" position="37,93" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=2,oneshot=1" size="578,364" source="session.Event_Now" zPosition="1" transparent="1">
     <convert type="SevenHDEventName">ExtendedDescription</convert>
   </widget>
   <widget backgroundColor="SevenFontBackgroundIB2" font="Regular2; 30" foregroundColor="SevenNextIB" halign="center" position="666,50" render="Label" size="578,38" source="session.Event_Next" transparent="1" zPosition="1" valign="bottom">
@@ -4708,7 +4732,7 @@
   <widget backgroundColor="SevenFontBackgroundIB1" font="Regular2; 30" halign="center" noWrap="1" position="37,50" foregroundColor="SevenNowIB" render="Label" size="1202,38" source="session.Event_Now" transparent="1" zPosition="1" valign="bottom">
     <convert type="SevenHDEventName">Name</convert>
   </widget>
-  <widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 20" foregroundColor="SevenNowIB" halign="center" position="37,93" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,wrap=1,always=0,repeat=2,oneshot=1" size="1202,364" source="session.Event_Now" zPosition="1" transparent="1">
+  <widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 20" foregroundColor="SevenNowIB" halign="center" position="37,93" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=2,oneshot=1" size="1202,364" source="session.Event_Now" zPosition="1" transparent="1">
     <convert type="SevenHDEventName">ExtendedDescription</convert>
   </widget>
   <eLabel backgroundColor="SevenBackgroundIB1" position="14,533" size="1250,168" zPosition="-9" />
@@ -4868,13 +4892,13 @@
     <widget backgroundColor="black" font="Regular2; 30" halign="center" noWrap="1" position="546,53" foregroundColor="SevenNowIB" render="Label" size="691,38" source="session.Event_Now" transparent="1" zPosition="1" valign="bottom">
       <convert type="SevenHDEventName">Name</convert>
     </widget>
-    <widget backgroundColor="black" font="Regular; 20" foregroundColor="SevenNowIB" halign="center" position="546,98" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,wrap=1,always=0,repeat=2,oneshot=1" size="691,160" source="session.Event_Now" zPosition="1" transparent="1">
+    <widget backgroundColor="black" font="Regular; 20" foregroundColor="SevenNowIB" halign="center" position="546,98" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=2,oneshot=1" size="691,160" source="session.Event_Now" zPosition="1" transparent="1">
       <convert type="SevenHDEventName">ExtendedDescription</convert>
     </widget>
     <widget backgroundColor="black" font="Regular2; 30" foregroundColor="SevenNextIB" halign="center" position="546,271" render="Label" size="691,38" source="session.Event_Next" transparent="1" zPosition="1" valign="bottom">
       <convert type="SevenHDEventName">Name</convert>
     </widget>
-    <widget backgroundColor="black" font="Regular; 20" foregroundColor="SevenNextIB" halign="center" position="546,316" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,wrap=1,always=0,repeat=2,oneshot=1" size="691,132" source="session.Event_Next" zPosition="1" transparent="1">
+    <widget backgroundColor="black" font="Regular; 20" foregroundColor="SevenNextIB" halign="center" position="546,316" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=2,oneshot=1" size="691,132" source="session.Event_Next" zPosition="1" transparent="1">
       <convert type="SevenHDEventName">ExtendedDescription</convert>
     </widget>
 <widget source="session.VideoPicture" render="Pig" position="30,108" size="505,282" zPosition="3" backgroundColor="transparent" />
@@ -5004,6 +5028,10 @@
     <ePixmap pixmap="SevenHD/back/ibone.png" position="14,533" size="1250,168" alphatest="blend" zPosition="-8" />
   </screen>
   <screen name="template_menu_ibzz1">
+  <widget source="session.CurrentService" render="Pixmap" pixmap="SevenHD/update.png" position="1240,679" size="20,20" zPosition="3" alphatest="blend">
+      <convert type="SevenHDUpdate">Update</convert>
+      <convert type="ConditionalShowHide"/>
+    </widget>
   <eLabel backgroundColor="SevenBackgroundIB1" position="14,522" size="1250,181" zPosition="-9" />
   <eLabel backgroundColor="SevenBorderIB" position="1262,520" size="2,183" zPosition="2" />
   <eLabel backgroundColor="SevenBorderIB" position="14,520" size="2,183" zPosition="2" />
@@ -5156,13 +5184,13 @@
   <widget backgroundColor="black" font="Regular2; 30" halign="center" noWrap="1" position="37,53" foregroundColor="SevenNowIB" render="Label" size="1200,38" source="session.Event_Now" transparent="1" zPosition="1" valign="bottom">
     <convert type="SevenHDEventName">Name</convert>
   </widget>
-  <widget backgroundColor="black" font="Regular; 20" foregroundColor="SevenNowIB" halign="center" position="37,98" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,wrap=1,always=0,repeat=2,oneshot=1" size="1200,160" source="session.Event_Now" zPosition="1" transparent="1">
+  <widget backgroundColor="black" font="Regular; 20" foregroundColor="SevenNowIB" halign="center" position="37,98" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=2,oneshot=1" size="1200,160" source="session.Event_Now" zPosition="1" transparent="1">
     <convert type="SevenHDEventName">ExtendedDescription</convert>
   </widget>
   <widget backgroundColor="black" font="Regular2; 30" foregroundColor="SevenNextIB" halign="center" position="37,271" render="Label" size="1200,38" source="session.Event_Next" transparent="1" zPosition="1" valign="bottom">
     <convert type="SevenHDEventName">Name</convert>
   </widget>
-  <widget backgroundColor="black" font="Regular; 20" foregroundColor="SevenNextIB" halign="center" position="38,316" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,wrap=1,always=0,repeat=2,oneshot=1" size="1200,134" source="session.Event_Next" zPosition="1" transparent="1">
+  <widget backgroundColor="black" font="Regular; 20" foregroundColor="SevenNextIB" halign="center" position="38,316" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=2,oneshot=1" size="1200,134" source="session.Event_Next" zPosition="1" transparent="1">
     <convert type="SevenHDEventName">ExtendedDescription</convert>
   </widget>
   <eLabel backgroundColor="SevenBackgroundIB1" position="14,522" size="1250,181" zPosition="-9" />
@@ -5320,13 +5348,13 @@
   <widget backgroundColor="SevenFontBackgroundIB1" font="Regular2; 30" halign="center" noWrap="1" position="37,50" foregroundColor="SevenNowIB" render="Label" size="578,38" source="session.Event_Now" transparent="1" zPosition="1" valign="bottom">
     <convert type="SevenHDEventName">Name</convert>
   </widget>
-  <widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 20" foregroundColor="SevenNowIB" halign="center" position="37,93" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,wrap=1,always=0,repeat=2,oneshot=1" size="578,364" source="session.Event_Now" zPosition="1" transparent="1">
+  <widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 20" foregroundColor="SevenNowIB" halign="center" position="37,93" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=2,oneshot=1" size="578,364" source="session.Event_Now" zPosition="1" transparent="1">
     <convert type="SevenHDEventName">ExtendedDescription</convert>
   </widget>
   <widget backgroundColor="SevenFontBackgroundIB2" font="Regular2; 30" foregroundColor="SevenNextIB" halign="center" position="666,50" render="Label" size="578,38" source="session.Event_Next" transparent="1" zPosition="1" valign="bottom">
     <convert type="SevenHDEventName">Name</convert>
   </widget>
-  <widget backgroundColor="SevenFontBackgroundIB2" font="Regular; 20" foregroundColor="SevenNextIB" halign="center" position="666,93" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,wrap=1,always=0,repeat=2,oneshot=1" size="578,364" source="session.Event_Next" zPosition="1" transparent="1">
+  <widget backgroundColor="SevenFontBackgroundIB2" font="Regular; 20" foregroundColor="SevenNextIB" halign="center" position="666,93" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=2,oneshot=1" size="578,364" source="session.Event_Next" zPosition="1" transparent="1">
     <convert type="SevenHDEventName">ExtendedDescription</convert>
   </widget>
   <eLabel backgroundColor="SevenBorderIB" position="643,45" size="621,2" zPosition="2" />
@@ -5486,7 +5514,7 @@
   <widget backgroundColor="SevenFontBackgroundIB1" font="Regular2; 30" halign="center" noWrap="1" position="37,50" foregroundColor="SevenNowIB" render="Label" size="1202,38" source="session.Event_Now" transparent="1" zPosition="1" valign="bottom">
     <convert type="SevenHDEventName">Name</convert>
   </widget>
-  <widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 20" foregroundColor="SevenNowIB" halign="center" position="37,93" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,wrap=1,always=0,repeat=2,oneshot=1" size="1202,364" source="session.Event_Now" zPosition="1" transparent="1">
+  <widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 20" foregroundColor="SevenNowIB" halign="center" position="37,93" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=2,oneshot=1" size="1202,364" source="session.Event_Now" zPosition="1" transparent="1">
     <convert type="SevenHDEventName">ExtendedDescription</convert>
   </widget>
   <eLabel backgroundColor="SevenBackgroundIB1" position="14,522" size="1250,181" zPosition="-9" />
@@ -5643,13 +5671,13 @@
     <widget backgroundColor="black" font="Regular2; 30" halign="center" noWrap="1" position="546,53" foregroundColor="SevenNowIB" render="Label" size="691,38" source="session.Event_Now" transparent="1" zPosition="1" valign="bottom">
       <convert type="SevenHDEventName">Name</convert>
     </widget>
-    <widget backgroundColor="black" font="Regular; 20" foregroundColor="SevenNowIB" halign="center" position="546,98" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,wrap=1,always=0,repeat=2,oneshot=1" size="691,160" source="session.Event_Now" zPosition="1" transparent="1">
+    <widget backgroundColor="black" font="Regular; 20" foregroundColor="SevenNowIB" halign="center" position="546,98" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=2,oneshot=1" size="691,160" source="session.Event_Now" zPosition="1" transparent="1">
       <convert type="SevenHDEventName">ExtendedDescription</convert>
     </widget>
     <widget backgroundColor="black" font="Regular2; 30" foregroundColor="SevenNextIB" halign="center" position="546,271" render="Label" size="691,38" source="session.Event_Next" transparent="1" zPosition="1" valign="bottom">
       <convert type="SevenHDEventName">Name</convert>
     </widget>
-    <widget backgroundColor="black" font="Regular; 20" foregroundColor="SevenNextIB" halign="center" position="546,316" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,wrap=1,always=0,repeat=2,oneshot=1" size="691,132" source="session.Event_Next" zPosition="1" transparent="1">
+    <widget backgroundColor="black" font="Regular; 20" foregroundColor="SevenNextIB" halign="center" position="546,316" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=2,oneshot=1" size="691,132" source="session.Event_Next" zPosition="1" transparent="1">
       <convert type="SevenHDEventName">ExtendedDescription</convert>
     </widget>
 <widget source="session.VideoPicture" render="Pig" position="30,108" size="505,282" zPosition="3" backgroundColor="transparent" />
@@ -5776,6 +5804,10 @@
     <ePixmap pixmap="SevenHD/back/ibone.png" position="14,522" size="1250,181" alphatest="blend" zPosition="-8" />
   </screen>
   <screen name="template_menu_ibzzz1">
+  <widget source="session.CurrentService" render="Pixmap" pixmap="SevenHD/update.png" position="1240,679" size="20,20" zPosition="3" alphatest="blend">
+      <convert type="SevenHDUpdate">Update</convert>
+      <convert type="ConditionalShowHide"/>
+    </widget>
   <eLabel backgroundColor="SevenBackgroundIB1" position="14,447" size="1250,256" zPosition="-9" />
   <eLabel backgroundColor="SevenBorderIB" position="1262,447" size="2,256" zPosition="2" />
   <eLabel backgroundColor="SevenBorderIB" position="14,447" size="2,256" zPosition="2" />
@@ -5930,13 +5962,13 @@
   <widget backgroundColor="SevenFontBackgroundIB1" font="Regular2; 30" halign="center" noWrap="1" position="37,53" foregroundColor="SevenNowIB" render="Label" size="1200,38" source="session.Event_Now" transparent="1" zPosition="1" valign="bottom">
     <convert type="SevenHDEventName">Name</convert>
   </widget>
-  <widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 20" foregroundColor="SevenNowIB" halign="center" position="37,98" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,wrap=1,always=0,repeat=2,oneshot=1" size="1200,160" source="session.Event_Now" zPosition="1" transparent="1">
+  <widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 20" foregroundColor="SevenNowIB" halign="center" position="37,98" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=2,oneshot=1" size="1200,160" source="session.Event_Now" zPosition="1" transparent="1">
     <convert type="SevenHDEventName">ExtendedDescription</convert>
   </widget>
   <widget backgroundColor="SevenFontBackgroundIB1" font="Regular2; 30" foregroundColor="SevenNextIB" halign="center" position="37,271" render="Label" size="1200,38" source="session.Event_Next" transparent="1" zPosition="1" valign="bottom">
     <convert type="SevenHDEventName">Name</convert>
   </widget>
-  <widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 20" foregroundColor="SevenNextIB" halign="center" position="37,316" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,wrap=1,always=0,repeat=2,oneshot=1" size="1200,108" source="session.Event_Next" zPosition="1" transparent="1">
+  <widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 20" foregroundColor="SevenNextIB" halign="center" position="37,316" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=2,oneshot=1" size="1200,108" source="session.Event_Next" zPosition="1" transparent="1">
     <convert type="SevenHDEventName">ExtendedDescription</convert>
   </widget>
   <eLabel backgroundColor="SevenBackgroundIB1" position="14,447" size="1250,256" zPosition="-9" />
@@ -6098,13 +6130,13 @@
   <widget backgroundColor="SevenFontBackgroundIB1" font="Regular2; 30" halign="center" noWrap="1" position="37,50" foregroundColor="SevenNowIB" render="Label" size="578,38" source="session.Event_Now" transparent="1" zPosition="1" valign="bottom">
     <convert type="SevenHDEventName">Name</convert>
   </widget>
-  <widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 20" foregroundColor="SevenNowIB" halign="center" position="37,93" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,wrap=1,always=0,repeat=2,oneshot=1" size="578,344" source="session.Event_Now" zPosition="1" transparent="1">
+  <widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 20" foregroundColor="SevenNowIB" halign="center" position="37,93" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=2,oneshot=1" size="578,344" source="session.Event_Now" zPosition="1" transparent="1">
     <convert type="SevenHDEventName">ExtendedDescription</convert>
   </widget>
   <widget backgroundColor="SevenFontBackgroundIB2" font="Regular2; 30" foregroundColor="SevenNextIB" halign="center" position="666,50" render="Label" size="578,38" source="session.Event_Next" transparent="1" zPosition="1" valign="bottom">
     <convert type="SevenHDEventName">Name</convert>
   </widget>
-  <widget backgroundColor="SevenFontBackgroundIB2" font="Regular; 20" foregroundColor="SevenNextIB" halign="center" position="666,93" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,wrap=1,always=0,repeat=2,oneshot=1" size="578,344" source="session.Event_Next" zPosition="1" transparent="1">
+  <widget backgroundColor="SevenFontBackgroundIB2" font="Regular; 20" foregroundColor="SevenNextIB" halign="center" position="666,93" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=2,oneshot=1" size="578,344" source="session.Event_Next" zPosition="1" transparent="1">
     <convert type="SevenHDEventName">ExtendedDescription</convert>
   </widget>
   <eLabel backgroundColor="SevenBorderIB" position="643,45" size="621,2" zPosition="2" />
@@ -6267,7 +6299,7 @@
   <widget backgroundColor="SevenFontBackgroundIB1" font="Regular2; 30" halign="center" noWrap="1" position="37,50" foregroundColor="SevenNowIB" render="Label" size="1202,38" source="session.Event_Now" transparent="1" zPosition="1" valign="bottom">
     <convert type="SevenHDEventName">Name</convert>
   </widget>
-  <widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 20" foregroundColor="SevenNowIB" halign="center" position="37,93" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,wrap=1,always=0,repeat=2,oneshot=1" size="1202,344" source="session.Event_Now" zPosition="1" transparent="1">
+  <widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 20" foregroundColor="SevenNowIB" halign="center" position="37,93" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=2,oneshot=1" size="1202,344" source="session.Event_Now" zPosition="1" transparent="1">
     <convert type="SevenHDEventName">ExtendedDescription</convert>
   </widget>
   <eLabel backgroundColor="SevenBackgroundIB1" position="14,447" size="1250,256" zPosition="-9" />
@@ -6426,13 +6458,13 @@
     <widget backgroundColor="black" font="Regular2; 30" halign="center" noWrap="1" position="546,53" foregroundColor="SevenNowIB" render="Label" size="691,38" source="session.Event_Now" transparent="1" zPosition="1" valign="bottom">
       <convert type="SevenHDEventName">Name</convert>
     </widget>
-    <widget backgroundColor="black" font="Regular; 20" foregroundColor="SevenNowIB" halign="center" position="546,98" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,wrap=1,always=0,repeat=2,oneshot=1" size="691,160" source="session.Event_Now" zPosition="1" transparent="1">
+    <widget backgroundColor="black" font="Regular; 20" foregroundColor="SevenNowIB" halign="center" position="546,98" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=2,oneshot=1" size="691,160" source="session.Event_Now" zPosition="1" transparent="1">
       <convert type="SevenHDEventName">ExtendedDescription</convert>
     </widget>
     <widget backgroundColor="black" font="Regular2; 30" foregroundColor="SevenNextIB" halign="center" position="546,271" render="Label" size="691,38" source="session.Event_Next" transparent="1" zPosition="1" valign="bottom">
       <convert type="SevenHDEventName">Name</convert>
     </widget>
-    <widget backgroundColor="black" font="Regular; 20" foregroundColor="SevenNextIB" halign="center" position="546,316" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,wrap=1,always=0,repeat=2,oneshot=1" size="691,108" source="session.Event_Next" zPosition="1" transparent="1">
+    <widget backgroundColor="black" font="Regular; 20" foregroundColor="SevenNextIB" halign="center" position="546,316" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=2,oneshot=1" size="691,108" source="session.Event_Next" zPosition="1" transparent="1">
       <convert type="SevenHDEventName">ExtendedDescription</convert>
     </widget>
     <eLabel backgroundColor="SevenBorderIB" position="14,442" size="1250,2" zPosition="2" />
@@ -6563,6 +6595,10 @@
     <ePixmap pixmap="SevenHD/back/ibone.png" position="14,447" size="1250,256" alphatest="blend" zPosition="-8" />
   </screen>
   <screen name="template_menu_ibx1">
+  <widget source="session.CurrentService" render="Pixmap" pixmap="SevenHD/update.png" position="1240,679" size="20,20" zPosition="3" alphatest="blend">
+      <convert type="SevenHDUpdate">Update</convert>
+      <convert type="ConditionalShowHide"/>
+    </widget>
   <eLabel backgroundColor="SevenBackgroundIB1" position="14,533" size="1250,168" zPosition="-9" />
   <eLabel backgroundColor="SevenBorderIB" position="1262,533" size="2,170" zPosition="2" />
   <eLabel backgroundColor="SevenBorderIB" position="14,533" size="2,170" zPosition="2" />
@@ -6721,13 +6757,13 @@
   <widget backgroundColor="SevenFontBackgroundIB1" font="Regular2; 30" halign="center" noWrap="1" position="37,53" foregroundColor="SevenNowIB" render="Label" size="1200,38" source="session.Event_Now" transparent="1" zPosition="1" valign="bottom">
     <convert type="SevenHDEventName">Name</convert>
   </widget>
-  <widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 20" foregroundColor="SevenNowIB" halign="center" position="37,98" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,wrap=1,always=0,repeat=2,oneshot=1" size="1200,160" source="session.Event_Now" zPosition="1" transparent="1">
+  <widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 20" foregroundColor="SevenNowIB" halign="center" position="37,98" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=2,oneshot=1" size="1200,160" source="session.Event_Now" zPosition="1" transparent="1">
     <convert type="SevenHDEventName">ExtendedDescription</convert>
   </widget>
   <widget backgroundColor="SevenFontBackgroundIB1" font="Regular2; 30" foregroundColor="SevenNextIB" halign="center" position="37,271" render="Label" size="1200,38" source="session.Event_Next" transparent="1" zPosition="1" valign="bottom">
     <convert type="SevenHDEventName">Name</convert>
   </widget>
-  <widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 20" foregroundColor="SevenNextIB" halign="center" position="37,316" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,wrap=1,always=0,repeat=2,oneshot=1" size="1200,134" source="session.Event_Next" zPosition="1" transparent="1">
+  <widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 20" foregroundColor="SevenNextIB" halign="center" position="37,316" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=2,oneshot=1" size="1200,134" source="session.Event_Next" zPosition="1" transparent="1">
     <convert type="SevenHDEventName">ExtendedDescription</convert>
   </widget>
   <eLabel backgroundColor="SevenBackgroundIB1" position="14,533" size="1250,168" zPosition="-9" />
@@ -6891,13 +6927,13 @@
   <widget backgroundColor="SevenFontBackgroundIB1" font="Regular2; 30" halign="center" noWrap="1" position="37,50" foregroundColor="SevenNowIB" render="Label" size="578,38" source="session.Event_Now" transparent="1" zPosition="1" valign="bottom">
     <convert type="SevenHDEventName">Name</convert>
   </widget>
-  <widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 20" foregroundColor="SevenNowIB" halign="center" position="37,93" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,wrap=1,always=0,repeat=2,oneshot=1" size="578,364" source="session.Event_Now" zPosition="1" transparent="1">
+  <widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 20" foregroundColor="SevenNowIB" halign="center" position="37,93" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=2,oneshot=1" size="578,364" source="session.Event_Now" zPosition="1" transparent="1">
     <convert type="SevenHDEventName">ExtendedDescription</convert>
   </widget>
   <widget backgroundColor="SevenFontBackgroundIB2" font="Regular2; 30" foregroundColor="SevenNextIB" halign="center" position="666,50" render="Label" size="578,38" source="session.Event_Next" transparent="1" zPosition="1" valign="bottom">
     <convert type="SevenHDEventName">Name</convert>
   </widget>
-  <widget backgroundColor="SevenFontBackgroundIB2" font="Regular; 20" foregroundColor="SevenNextIB" halign="center" position="665,93" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,wrap=1,always=0,repeat=2,oneshot=1" size="578,364" source="session.Event_Next" zPosition="1" transparent="1">
+  <widget backgroundColor="SevenFontBackgroundIB2" font="Regular; 20" foregroundColor="SevenNextIB" halign="center" position="665,93" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=2,oneshot=1" size="578,364" source="session.Event_Next" zPosition="1" transparent="1">
     <convert type="SevenHDEventName">ExtendedDescription</convert>
   </widget>
   <eLabel backgroundColor="SevenBorderIB" position="643,45" size="621,2" zPosition="2" />
@@ -7063,7 +7099,7 @@
   <widget backgroundColor="SevenFontBackgroundIB1" font="Regular2; 30" halign="center" noWrap="1" position="37,50" foregroundColor="SevenNowIB" render="Label" size="1202,38" source="session.Event_Now" transparent="1" zPosition="1" valign="bottom">
     <convert type="SevenHDEventName">Name</convert>
   </widget>
-  <widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 20" foregroundColor="SevenNowIB" halign="center" position="37,93" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,wrap=1,always=0,repeat=2,oneshot=1" size="1202,364" source="session.Event_Now" zPosition="1" transparent="1">
+  <widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 20" foregroundColor="SevenNowIB" halign="center" position="37,93" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=2,oneshot=1" size="1202,364" source="session.Event_Now" zPosition="1" transparent="1">
     <convert type="SevenHDEventName">ExtendedDescription</convert>
   </widget>
   <eLabel backgroundColor="SevenBackgroundIB1" position="14,533" size="1250,168" zPosition="-9" />
@@ -7226,13 +7262,13 @@
     <widget backgroundColor="black" font="Regular2; 30" halign="center" noWrap="1" position="546,53" foregroundColor="SevenNowIB" render="Label" size="691,38" source="session.Event_Now" transparent="1" zPosition="1" valign="bottom">
       <convert type="SevenHDEventName">Name</convert>
     </widget>
-    <widget backgroundColor="black" font="Regular; 20" foregroundColor="SevenNowIB" halign="center" position="546,98" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,wrap=1,always=0,repeat=2,oneshot=1" size="691,160" source="session.Event_Now" zPosition="1" transparent="1">
+    <widget backgroundColor="black" font="Regular; 20" foregroundColor="SevenNowIB" halign="center" position="546,98" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=2,oneshot=1" size="691,160" source="session.Event_Now" zPosition="1" transparent="1">
       <convert type="SevenHDEventName">ExtendedDescription</convert>
     </widget>
     <widget backgroundColor="black" font="Regular2; 30" foregroundColor="SevenNextIB" halign="center" position="546,271" render="Label" size="691,38" source="session.Event_Next" transparent="1" zPosition="1" valign="bottom">
       <convert type="SevenHDEventName">Name</convert>
     </widget>
-    <widget backgroundColor="black" font="Regular; 20" foregroundColor="SevenNextIB" halign="center" position="546,316" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,wrap=1,always=0,repeat=2,oneshot=1" size="691,132" source="session.Event_Next" zPosition="1" transparent="1">
+    <widget backgroundColor="black" font="Regular; 20" foregroundColor="SevenNextIB" halign="center" position="546,316" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=2,oneshot=1" size="691,132" source="session.Event_Next" zPosition="1" transparent="1">
       <convert type="SevenHDEventName">ExtendedDescription</convert>
     </widget>
 <widget source="session.VideoPicture" render="Pig" position="30,108" size="505,282" zPosition="3" backgroundColor="transparent" />
@@ -7365,6 +7401,10 @@
     <ePixmap pixmap="SevenHD/back/ibone.png" position="14,533" size="1250,168" alphatest="blend" zPosition="-8" />
   </screen>
   <screen name="template_menu_ibz1">
+  <widget source="session.CurrentService" render="Pixmap" pixmap="SevenHD/update.png" position="1240,679" size="20,20" zPosition="3" alphatest="blend">
+      <convert type="SevenHDUpdate">Update</convert>
+      <convert type="ConditionalShowHide"/>
+    </widget>
   <eLabel backgroundColor="SevenBackgroundIB1" position="14,533" size="1250,168" zPosition="-9" />
   <eLabel backgroundColor="SevenBorderIB" position="1262,533" size="2,170" zPosition="2" />
   <eLabel backgroundColor="SevenBorderIB" position="14,533" size="2,170" zPosition="2" />
@@ -7523,13 +7563,13 @@
   <widget backgroundColor="SevenFontBackgroundIB1" font="Regular2; 30" halign="center" noWrap="1" position="37,53" foregroundColor="SevenNowIB" render="Label" size="1200,38" source="session.Event_Now" transparent="1" zPosition="1" valign="bottom">
     <convert type="SevenHDEventName">Name</convert>
   </widget>
-  <widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 20" foregroundColor="SevenNowIB" halign="center" position="37,98" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,wrap=1,always=0,repeat=2,oneshot=1" size="1200,160" source="session.Event_Now" zPosition="1" transparent="1">
+  <widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 20" foregroundColor="SevenNowIB" halign="center" position="37,98" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=2,oneshot=1" size="1200,160" source="session.Event_Now" zPosition="1" transparent="1">
     <convert type="SevenHDEventName">ExtendedDescription</convert>
   </widget>
   <widget backgroundColor="SevenFontBackgroundIB1" font="Regular2; 30" foregroundColor="SevenNextIB" halign="center" position="37,271" render="Label" size="1200,38" source="session.Event_Next" transparent="1" zPosition="1" valign="bottom">
     <convert type="SevenHDEventName">Name</convert>
   </widget>
-  <widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 20" foregroundColor="SevenNextIB" halign="center" position="37,316" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,wrap=1,always=0,repeat=2,oneshot=1" size="1200,134" source="session.Event_Next" zPosition="1" transparent="1">
+  <widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 20" foregroundColor="SevenNextIB" halign="center" position="37,316" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=2,oneshot=1" size="1200,134" source="session.Event_Next" zPosition="1" transparent="1">
     <convert type="SevenHDEventName">ExtendedDescription</convert>
   </widget>
   <eLabel backgroundColor="SevenBackgroundIB1" position="14,533" size="1250,168" zPosition="-9" />
@@ -7692,13 +7732,13 @@
   <widget backgroundColor="SevenFontBackgroundIB1" font="Regular2; 30" halign="center" noWrap="1" position="37,50" foregroundColor="SevenNowIB" render="Label" size="578,38" source="session.Event_Now" transparent="1" zPosition="1" valign="bottom">
     <convert type="SevenHDEventName">Name</convert>
   </widget>
-  <widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 20" foregroundColor="SevenNowIB" halign="center" position="37,93" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,wrap=1,always=0,repeat=2,oneshot=1" size="578,364" source="session.Event_Now" zPosition="1" transparent="1">
+  <widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 20" foregroundColor="SevenNowIB" halign="center" position="37,93" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=2,oneshot=1" size="578,364" source="session.Event_Now" zPosition="1" transparent="1">
     <convert type="SevenHDEventName">ExtendedDescription</convert>
   </widget>
   <widget backgroundColor="SevenFontBackgroundIB2" font="Regular2; 30" foregroundColor="SevenNextIB" halign="center" position="666,50" render="Label" size="578,38" source="session.Event_Next" transparent="1" zPosition="1" valign="bottom">
     <convert type="SevenHDEventName">Name</convert>
   </widget>
-  <widget backgroundColor="SevenFontBackgroundIB2" font="Regular; 20" foregroundColor="SevenNextIB" halign="center" position="666,93" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,wrap=1,always=0,repeat=2,oneshot=1" size="578,364" source="session.Event_Next" zPosition="1" transparent="1">
+  <widget backgroundColor="SevenFontBackgroundIB2" font="Regular; 20" foregroundColor="SevenNextIB" halign="center" position="666,93" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=2,oneshot=1" size="578,364" source="session.Event_Next" zPosition="1" transparent="1">
     <convert type="SevenHDEventName">ExtendedDescription</convert>
   </widget>
   <eLabel backgroundColor="SevenBorderIB" position="643,45" size="621,2" zPosition="2" />
@@ -7865,7 +7905,7 @@
   <widget backgroundColor="SevenFontBackgroundIB1" font="Regular2; 30" halign="center" noWrap="1" position="37,50" foregroundColor="SevenNowIB" render="Label" size="1202,38" source="session.Event_Now" transparent="1" zPosition="1" valign="bottom">
     <convert type="SevenHDEventName">Name</convert>
   </widget>
-  <widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 20" foregroundColor="SevenNowIB" halign="center" position="37,93" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,wrap=1,always=0,repeat=2,oneshot=1" size="1202,364" source="session.Event_Now" zPosition="1" transparent="1">
+  <widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 20" foregroundColor="SevenNowIB" halign="center" position="37,93" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=2,oneshot=1" size="1202,364" source="session.Event_Now" zPosition="1" transparent="1">
     <convert type="SevenHDEventName">ExtendedDescription</convert>
   </widget>
   <eLabel backgroundColor="SevenBackgroundIB1" position="14,533" size="1250,168" zPosition="-9" />
@@ -8028,13 +8068,13 @@
     <widget backgroundColor="black" font="Regular2; 30" halign="center" noWrap="1" position="546,53" foregroundColor="SevenNowIB" render="Label" size="691,38" source="session.Event_Now" transparent="1" zPosition="1" valign="bottom">
       <convert type="SevenHDEventName">Name</convert>
     </widget>
-    <widget backgroundColor="black" font="Regular; 20" foregroundColor="SevenNowIB" halign="center" position="546,98" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,wrap=1,always=0,repeat=2,oneshot=1" size="691,160" source="session.Event_Now" zPosition="1" transparent="1">
+    <widget backgroundColor="black" font="Regular; 20" foregroundColor="SevenNowIB" halign="center" position="546,98" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=2,oneshot=1" size="691,160" source="session.Event_Now" zPosition="1" transparent="1">
       <convert type="SevenHDEventName">ExtendedDescription</convert>
     </widget>
     <widget backgroundColor="black" font="Regular2; 30" foregroundColor="SevenNextIB" halign="center" position="546,271" render="Label" size="691,38" source="session.Event_Next" transparent="1" zPosition="1" valign="bottom">
       <convert type="SevenHDEventName">Name</convert>
     </widget>
-    <widget backgroundColor="black" font="Regular; 20" foregroundColor="SevenNextIB" halign="center" position="546,316" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,wrap=1,always=0,repeat=2,oneshot=1" size="691,132" source="session.Event_Next" zPosition="1" transparent="1">
+    <widget backgroundColor="black" font="Regular; 20" foregroundColor="SevenNextIB" halign="center" position="546,316" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=2,oneshot=1" size="691,132" source="session.Event_Next" zPosition="1" transparent="1">
       <convert type="SevenHDEventName">ExtendedDescription</convert>
     </widget>
 <widget source="session.VideoPicture" render="Pig" position="30,108" size="505,282" zPosition="3" backgroundColor="transparent" />
@@ -8167,6 +8207,10 @@
     <ePixmap pixmap="SevenHD/back/ibone.png" position="14,533" size="1250,168" alphatest="blend" zPosition="-8" />
   </screen>
   <screen name="template_menu_ibo3">
+  <widget source="session.CurrentService" render="Pixmap" pixmap="SevenHD/update.png" position="1240,679" size="20,20" zPosition="3" alphatest="blend">
+      <convert type="SevenHDUpdate">Update</convert>
+      <convert type="ConditionalShowHide"/>
+    </widget>
   <eLabel backgroundColor="SevenBackgroundIB1" position="14,662" size="1062,40" zPosition="-9" />
   <eLabel backgroundColor="SevenBorderIB" position="1262,534" size="2,170" zPosition="2" />
   <eLabel backgroundColor="SevenBorderIB" position="14,534" size="2,170" zPosition="2" />
@@ -8452,13 +8496,13 @@
   <widget backgroundColor="SevenFontBackgroundIB1" font="Regular2; 30" halign="center" noWrap="1" position="37,53" foregroundColor="SevenNowIB" render="Label" size="1200,38" source="session.Event_Now" transparent="1" zPosition="1" valign="bottom">
     <convert type="SevenHDEventName">Name</convert>
   </widget>
-  <widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 20" foregroundColor="SevenNowIB" halign="center" position="37,98" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,wrap=1,always=0,repeat=2,oneshot=1" size="1200,160" source="session.Event_Now" zPosition="1" transparent="1">
+  <widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 20" foregroundColor="SevenNowIB" halign="center" position="37,98" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=2,oneshot=1" size="1200,160" source="session.Event_Now" zPosition="1" transparent="1">
     <convert type="SevenHDEventName">ExtendedDescription</convert>
   </widget>
   <widget backgroundColor="SevenFontBackgroundIB1" font="Regular2; 30" foregroundColor="SevenNextIB" halign="center" position="37,271" render="Label" size="1200,38" source="session.Event_Next" transparent="1" zPosition="1" valign="bottom">
     <convert type="SevenHDEventName">Name</convert>
   </widget>
-  <widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 20" foregroundColor="SevenNextIB" halign="center" position="37,316" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,wrap=1,always=0,repeat=2,oneshot=1" size="1200,132" source="session.Event_Next" zPosition="1" transparent="1">
+  <widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 20" foregroundColor="SevenNextIB" halign="center" position="37,316" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=2,oneshot=1" size="1200,132" source="session.Event_Next" zPosition="1" transparent="1">
     <convert type="SevenHDEventName">ExtendedDescription</convert>
   </widget>
 <ePixmap pixmap="SevenHD/back/ibone.png" position="14,533" size="1250,168" alphatest="blend" zPosition="-8" />
@@ -8624,13 +8668,13 @@
   <widget backgroundColor="SevenFontBackgroundIB1" font="Regular2; 30" halign="center" noWrap="1" position="37,50" foregroundColor="SevenNowIB" render="Label" size="578,38" source="session.Event_Now" transparent="1" zPosition="1" valign="bottom">
     <convert type="SevenHDEventName">Name</convert>
   </widget>
-  <widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 20" foregroundColor="SevenNowIB" halign="center" position="37,93" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,wrap=1,always=0,repeat=2,oneshot=1" size="578,364" source="session.Event_Now" zPosition="1" transparent="1">
+  <widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 20" foregroundColor="SevenNowIB" halign="center" position="37,93" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=2,oneshot=1" size="578,364" source="session.Event_Now" zPosition="1" transparent="1">
     <convert type="SevenHDEventName">ExtendedDescription</convert>
   </widget>
   <widget backgroundColor="SevenFontBackgroundIB2" font="Regular2; 30" foregroundColor="SevenNextIB" halign="center" position="666,50" render="Label" size="578,38" source="session.Event_Next" transparent="1" zPosition="1" valign="bottom">
     <convert type="SevenHDEventName">Name</convert>
   </widget>
-  <widget backgroundColor="SevenFontBackgroundIB2" font="Regular; 20" foregroundColor="SevenNextIB" halign="center" position="666,93" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,wrap=1,always=0,repeat=2,oneshot=1" size="578,364" source="session.Event_Next" zPosition="1" transparent="1">
+  <widget backgroundColor="SevenFontBackgroundIB2" font="Regular; 20" foregroundColor="SevenNextIB" halign="center" position="666,93" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=2,oneshot=1" size="578,364" source="session.Event_Next" zPosition="1" transparent="1">
     <convert type="SevenHDEventName">ExtendedDescription</convert>
   </widget>
   <eLabel backgroundColor="SevenBorderIB" position="643,45" size="621,2" zPosition="2" />
@@ -8798,7 +8842,7 @@
   <widget backgroundColor="SevenFontBackgroundIB1" font="Regular2; 30" halign="center" noWrap="1" position="37,50" foregroundColor="SevenNowIB" render="Label" size="1202,38" source="session.Event_Now" transparent="1" zPosition="1" valign="bottom">
     <convert type="SevenHDEventName">Name</convert>
   </widget>
-  <widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 20" foregroundColor="SevenNowIB" halign="center" position="37,93" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,wrap=1,always=0,repeat=2,oneshot=1" size="1202,364" source="session.Event_Now" zPosition="1" transparent="1">
+  <widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 20" foregroundColor="SevenNowIB" halign="center" position="37,93" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=2,oneshot=1" size="1202,364" source="session.Event_Now" zPosition="1" transparent="1">
     <convert type="SevenHDEventName">ExtendedDescription</convert>
   </widget>
 <ePixmap pixmap="SevenHD/back/ibone.png" position="14,533" size="1250,168" alphatest="blend" zPosition="-8" />
@@ -8838,13 +8882,13 @@
     <widget backgroundColor="black" font="Regular2; 30" halign="center" noWrap="1" position="546,53" foregroundColor="SevenNowIB" render="Label" size="691,38" source="session.Event_Now" transparent="1" zPosition="1" valign="bottom">
       <convert type="SevenHDEventName">Name</convert>
     </widget>
-    <widget backgroundColor="black" font="Regular; 20" foregroundColor="SevenNowIB" halign="center" position="546,98" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,wrap=1,always=0,repeat=2,oneshot=1" size="691,160" source="session.Event_Now" zPosition="1" transparent="1">
+    <widget backgroundColor="black" font="Regular; 20" foregroundColor="SevenNowIB" halign="center" position="546,98" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=2,oneshot=1" size="691,160" source="session.Event_Now" zPosition="1" transparent="1">
       <convert type="SevenHDEventName">ExtendedDescription</convert>
     </widget>
     <widget backgroundColor="black" font="Regular2; 30" foregroundColor="SevenNextIB" halign="center" position="546,271" render="Label" size="691,38" source="session.Event_Next" transparent="1" zPosition="1" valign="bottom">
       <convert type="SevenHDEventName">Name</convert>
     </widget>
-    <widget backgroundColor="black" font="Regular; 20" foregroundColor="SevenNextIB" halign="center" position="546,316" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,wrap=1,always=0,repeat=2,oneshot=1" size="691,132" source="session.Event_Next" zPosition="1" transparent="1">
+    <widget backgroundColor="black" font="Regular; 20" foregroundColor="SevenNextIB" halign="center" position="546,316" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=2,oneshot=1" size="691,132" source="session.Event_Next" zPosition="1" transparent="1">
       <convert type="SevenHDEventName">ExtendedDescription</convert>
     </widget>
 <widget source="session.VideoPicture" render="Pig" position="30,108" size="505,282" zPosition="3" backgroundColor="transparent" />
@@ -8979,6 +9023,10 @@
     <ePixmap pixmap="SevenHD/back/ibtwo.png" position="14,533" size="1062,127" alphatest="blend" zPosition="-7" />
   </screen>
   <screen name="template_menu_ibzz3">
+  <widget source="session.CurrentService" render="Pixmap" pixmap="SevenHD/update.png" position="1240,679" size="20,20" zPosition="3" alphatest="blend">
+      <convert type="SevenHDUpdate">Update</convert>
+      <convert type="ConditionalShowHide"/>
+    </widget>
   <eLabel backgroundColor="SevenBackgroundIB1" position="424,661" size="653,43" zPosition="-9" />
   <eLabel backgroundColor="SevenBorderIB" position="1262,520" size="2,183" zPosition="2" />
   <eLabel backgroundColor="SevenBorderIB" position="14,520" size="2,183" zPosition="2" />
@@ -9262,13 +9310,13 @@
   <widget backgroundColor="SevenFontBackgroundIB1" font="Regular2; 30" halign="center" noWrap="1" position="37,53" foregroundColor="SevenNowIB" render="Label" size="1200,38" source="session.Event_Now" transparent="1" zPosition="1" valign="bottom">
     <convert type="SevenHDEventName">Name</convert>
   </widget>
-  <widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 20" foregroundColor="SevenNowIB" halign="center" position="37,98" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,wrap=1,always=0,repeat=2,oneshot=1" size="1200,160" source="session.Event_Now" zPosition="1" transparent="1">
+  <widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 20" foregroundColor="SevenNowIB" halign="center" position="37,98" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=2,oneshot=1" size="1200,160" source="session.Event_Now" zPosition="1" transparent="1">
     <convert type="SevenHDEventName">ExtendedDescription</convert>
   </widget>
   <widget backgroundColor="SevenFontBackgroundIB1" font="Regular2; 30" foregroundColor="SevenNextIB" halign="center" position="37,271" render="Label" size="1200,38" source="session.Event_Next" transparent="1" zPosition="1" valign="bottom">
     <convert type="SevenHDEventName">Name</convert>
   </widget>
-  <widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 20" foregroundColor="SevenNextIB" halign="center" position="37,316" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,wrap=1,always=0,repeat=2,oneshot=1" size="1200,132" source="session.Event_Next" zPosition="1" transparent="1">
+  <widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 20" foregroundColor="SevenNextIB" halign="center" position="37,316" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=2,oneshot=1" size="1200,132" source="session.Event_Next" zPosition="1" transparent="1">
     <convert type="SevenHDEventName">ExtendedDescription</convert>
   </widget>
 <ePixmap pixmap="SevenHD/back/ibone.png" position="14,520" size="1250,183" alphatest="blend" zPosition="-8" />
@@ -9433,7 +9481,7 @@
   <widget backgroundColor="SevenFontBackgroundIB1" font="Regular2; 30" halign="center" noWrap="1" position="37,50" foregroundColor="SevenNowIB" render="Label" size="578,38" source="session.Event_Now" transparent="1" zPosition="1" valign="bottom">
     <convert type="SevenHDEventName">Name</convert>
   </widget>
-  <widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 20" foregroundColor="SevenNowIB" halign="center" position="37,93" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,wrap=1,always=0,repeat=2,oneshot=1" size="578,364" source="session.Event_Now" zPosition="1" transparent="1">
+  <widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 20" foregroundColor="SevenNowIB" halign="center" position="37,93" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=2,oneshot=1" size="578,364" source="session.Event_Now" zPosition="1" transparent="1">
     <convert type="SevenHDEventName">ExtendedDescription</convert>
   </widget>
   <widget backgroundColor="SevenFontBackgroundIB2" font="Regular2; 30" foregroundColor="SevenNextIB" halign="center" position="666,50" render="Label" size="578,38" source="session.Event_Next" transparent="1" zPosition="1" valign="bottom">
@@ -9442,7 +9490,7 @@
   <eLabel backgroundColor="SevenBorderIB" position="643,45" size="621,2" zPosition="2" />
   <eLabel backgroundColor="SevenBorderIB" position="643,465" size="621,2" zPosition="2" />
   <eLabel backgroundColor="SevenBackgroundIB2" position="643,47" size="620,420" zPosition="-9" />
-  <widget backgroundColor="SevenFontBackgroundIB2" font="Regular; 20" foregroundColor="SevenNextIB" halign="center" position="666,93" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,wrap=1,always=0,repeat=2,oneshot=1" size="578,364" source="session.Event_Next" zPosition="1" transparent="1">
+  <widget backgroundColor="SevenFontBackgroundIB2" font="Regular; 20" foregroundColor="SevenNextIB" halign="center" position="666,93" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=2,oneshot=1" size="578,364" source="session.Event_Next" zPosition="1" transparent="1">
     <convert type="SevenHDEventName">ExtendedDescription</convert>
   </widget>
 <ePixmap pixmap="SevenHD/back/ibone.png" position="14,520" size="1250,183" alphatest="blend" zPosition="-8" />
@@ -9606,7 +9654,7 @@
   <widget backgroundColor="SevenFontBackgroundIB1" font="Regular2; 30" halign="center" noWrap="1" position="37,50" foregroundColor="SevenNowIB" render="Label" size="1202,38" source="session.Event_Now" transparent="1" zPosition="1" valign="bottom">
     <convert type="SevenHDEventName">Name</convert>
   </widget>
-  <widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 20" foregroundColor="SevenNowIB" halign="center" position="37,93" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,wrap=1,always=0,repeat=2,oneshot=1" size="1202,364" source="session.Event_Now" zPosition="1" transparent="1">
+  <widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 20" foregroundColor="SevenNowIB" halign="center" position="37,93" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=2,oneshot=1" size="1202,364" source="session.Event_Now" zPosition="1" transparent="1">
     <convert type="SevenHDEventName">ExtendedDescription</convert>
   </widget>
 <ePixmap pixmap="SevenHD/back/ibone.png" position="14,520" size="1250,183" alphatest="blend" zPosition="-8" />
@@ -9646,13 +9694,13 @@
     <widget backgroundColor="black" font="Regular2; 30" halign="center" noWrap="1" position="546,53" foregroundColor="SevenNowIB" render="Label" size="691,38" source="session.Event_Now" transparent="1" zPosition="1" valign="bottom">
       <convert type="SevenHDEventName">Name</convert>
     </widget>
-    <widget backgroundColor="black" font="Regular; 20" foregroundColor="SevenNowIB" halign="center" position="546,98" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,wrap=1,always=0,repeat=2,oneshot=1" size="691,160" source="session.Event_Now" zPosition="1" transparent="1">
+    <widget backgroundColor="black" font="Regular; 20" foregroundColor="SevenNowIB" halign="center" position="546,98" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=2,oneshot=1" size="691,160" source="session.Event_Now" zPosition="1" transparent="1">
       <convert type="SevenHDEventName">ExtendedDescription</convert>
     </widget>
     <widget backgroundColor="black" font="Regular2; 30" foregroundColor="SevenNextIB" halign="center" position="546,271" render="Label" size="691,38" source="session.Event_Next" transparent="1" zPosition="1" valign="bottom">
       <convert type="SevenHDEventName">Name</convert>
     </widget>
-    <widget backgroundColor="black" font="Regular; 20" foregroundColor="SevenNextIB" halign="center" position="546,316" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,wrap=1,always=0,repeat=2,oneshot=1" size="691,132" source="session.Event_Next" zPosition="1" transparent="1">
+    <widget backgroundColor="black" font="Regular; 20" foregroundColor="SevenNextIB" halign="center" position="546,316" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=2,oneshot=1" size="691,132" source="session.Event_Next" zPosition="1" transparent="1">
       <convert type="SevenHDEventName">ExtendedDescription</convert>
     </widget>
 <widget source="session.VideoPicture" render="Pig" position="30,108" size="505,282" zPosition="3" backgroundColor="transparent" />
@@ -9786,6 +9834,10 @@
     <ePixmap pixmap="SevenHD/back/ibtwo.png" position="425,522" size="652,140" alphatest="blend" zPosition="-7" />
   </screen>
   <screen name="template_menu_ibzzz3">
+  <widget source="session.CurrentService" render="Pixmap" pixmap="SevenHD/update.png" position="1240,679" size="20,20" zPosition="3" alphatest="blend">
+      <convert type="SevenHDUpdate">Update</convert>
+      <convert type="ConditionalShowHide"/>
+    </widget>
   <eLabel backgroundColor="SevenBackgroundIB1" position="1078,533" size="185,170" zPosition="-9" />
   <eLabel backgroundColor="SevenBorderIB" position="1262,533" size="2,170" zPosition="2" />
   <eLabel backgroundColor="SevenBorderIB" position="424,447" size="2,256" zPosition="2" />
@@ -9946,13 +9998,13 @@
   <widget backgroundColor="SevenFontBackgroundIB1" font="Regular2; 30" halign="center" noWrap="1" position="37,53" foregroundColor="SevenNowIB" render="Label" size="1200,38" source="session.Event_Now" transparent="1" zPosition="1" valign="bottom">
     <convert type="SevenHDEventName">Name</convert>
   </widget>
-  <widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 20" foregroundColor="SevenNowIB" halign="center" position="37,98" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,wrap=1,always=0,repeat=2,oneshot=1" size="1200,160" source="session.Event_Now" zPosition="1" transparent="1">
+  <widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 20" foregroundColor="SevenNowIB" halign="center" position="37,98" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=2,oneshot=1" size="1200,160" source="session.Event_Now" zPosition="1" transparent="1">
     <convert type="SevenHDEventName">ExtendedDescription</convert>
   </widget>
   <widget backgroundColor="SevenFontBackgroundIB1" font="Regular2; 30" foregroundColor="SevenNextIB" halign="center" position="37,271" render="Label" size="1200,38" source="session.Event_Next" transparent="1" zPosition="1" valign="bottom">
     <convert type="SevenHDEventName">Name</convert>
   </widget>
-  <widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 20" foregroundColor="SevenNextIB" halign="center" position="37,316" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,wrap=1,always=0,repeat=2,oneshot=1" size="1200,108" source="session.Event_Next" zPosition="1" transparent="1">
+  <widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 20" foregroundColor="SevenNextIB" halign="center" position="37,316" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=2,oneshot=1" size="1200,108" source="session.Event_Next" zPosition="1" transparent="1">
     <convert type="SevenHDEventName">ExtendedDescription</convert>
   </widget>
   <eLabel backgroundColor="SevenBackgroundIB1" position="1078,533" size="185,170" zPosition="-9" />
@@ -10117,13 +10169,13 @@
   <widget backgroundColor="SevenFontBackgroundIB1" font="Regular2; 30" halign="center" noWrap="1" position="37,50" foregroundColor="SevenNowIB" render="Label" size="578,38" source="session.Event_Now" transparent="1" zPosition="1" valign="bottom">
     <convert type="SevenHDEventName">Name</convert>
   </widget>
-  <widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 20" foregroundColor="SevenNowIB" halign="center" position="37,93" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,wrap=1,always=0,repeat=2,oneshot=1" size="578,344" source="session.Event_Now" zPosition="1" transparent="1">
+  <widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 20" foregroundColor="SevenNowIB" halign="center" position="37,93" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=2,oneshot=1" size="578,344" source="session.Event_Now" zPosition="1" transparent="1">
     <convert type="SevenHDEventName">ExtendedDescription</convert>
   </widget>
   <widget backgroundColor="SevenFontBackgroundIB2" font="Regular2; 30" foregroundColor="SevenNextIB" halign="center" position="666,50" render="Label" size="578,38" source="session.Event_Next" transparent="1" zPosition="1" valign="bottom">
     <convert type="SevenHDEventName">Name</convert>
   </widget>
-  <widget backgroundColor="SevenFontBackgroundIB2" font="Regular; 20" foregroundColor="SevenNextIB" halign="center" position="666,93" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,wrap=1,always=0,repeat=2,oneshot=1" size="578,344" source="session.Event_Next" zPosition="1" transparent="1">
+  <widget backgroundColor="SevenFontBackgroundIB2" font="Regular; 20" foregroundColor="SevenNextIB" halign="center" position="666,93" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=2,oneshot=1" size="578,344" source="session.Event_Next" zPosition="1" transparent="1">
     <convert type="SevenHDEventName">ExtendedDescription</convert>
   </widget>
   <eLabel backgroundColor="SevenBorderIB" position="643,45" size="621,2" zPosition="2" />
@@ -10290,7 +10342,7 @@
   <widget backgroundColor="SevenFontBackgroundIB1" font="Regular2; 30" halign="center" noWrap="1" position="37,50" foregroundColor="SevenNowIB" render="Label" size="1202,38" source="session.Event_Now" transparent="1" zPosition="1" valign="bottom">
     <convert type="SevenHDEventName">Name</convert>
   </widget>
-  <widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 20" foregroundColor="SevenNowIB" halign="center" position="37,93" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,wrap=1,always=0,repeat=2,oneshot=1" size="1202,344" source="session.Event_Now" zPosition="1" transparent="1">
+  <widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 20" foregroundColor="SevenNowIB" halign="center" position="37,93" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=2,oneshot=1" size="1202,344" source="session.Event_Now" zPosition="1" transparent="1">
     <convert type="SevenHDEventName">ExtendedDescription</convert>
   </widget>
   <eLabel backgroundColor="SevenBackgroundIB1" position="1078,533" size="185,170" zPosition="-9" />
@@ -10453,13 +10505,13 @@
     <widget backgroundColor="black" font="Regular2; 30" halign="center" noWrap="1" position="546,53" foregroundColor="SevenNowIB" render="Label" size="691,38" source="session.Event_Now" transparent="1" zPosition="1" valign="bottom">
       <convert type="SevenHDEventName">Name</convert>
     </widget>
-    <widget backgroundColor="black" font="Regular; 20" foregroundColor="SevenNowIB" halign="center" position="546,98" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,wrap=1,always=0,repeat=2,oneshot=1" size="691,160" source="session.Event_Now" zPosition="1" transparent="1">
+    <widget backgroundColor="black" font="Regular; 20" foregroundColor="SevenNowIB" halign="center" position="546,98" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=2,oneshot=1" size="691,160" source="session.Event_Now" zPosition="1" transparent="1">
       <convert type="SevenHDEventName">ExtendedDescription</convert>
     </widget>
     <widget backgroundColor="black" font="Regular2; 30" foregroundColor="SevenNextIB" halign="center" position="546,271" render="Label" size="691,38" source="session.Event_Next" transparent="1" zPosition="1" valign="bottom">
       <convert type="SevenHDEventName">Name</convert>
     </widget>
-    <widget backgroundColor="black" font="Regular; 20" foregroundColor="SevenNextIB" halign="center" position="546,316" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,wrap=1,always=0,repeat=2,oneshot=1" size="691,108" source="session.Event_Next" zPosition="1" transparent="1">
+    <widget backgroundColor="black" font="Regular; 20" foregroundColor="SevenNextIB" halign="center" position="546,316" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=2,oneshot=1" size="691,108" source="session.Event_Next" zPosition="1" transparent="1">
       <convert type="SevenHDEventName">ExtendedDescription</convert>
     </widget>
     <eLabel backgroundColor="SevenBorderIB" position="14,442" size="1250,2" zPosition="2" />
@@ -10594,6 +10646,10 @@
 <ePixmap pixmap="SevenHD/back/ibtwo.png" position="425,533" size="654,170" alphatest="blend" zPosition="-7" />
   </screen>
   <screen name="template_menu_ibx3">
+  <widget source="session.CurrentService" render="Pixmap" pixmap="SevenHD/update.png" position="1240,679" size="20,20" zPosition="3" alphatest="blend">
+      <convert type="SevenHDUpdate">Update</convert>
+      <convert type="ConditionalShowHide"/>
+    </widget>
   <eLabel backgroundColor="SevenBackgroundIB1" position="1076,534" size="186,168" zPosition="-9" />
   <eLabel backgroundColor="SevenBorderIB" position="1075,533" size="2,129" zPosition="2" />
   <eLabel backgroundColor="SevenBorderIB" position="14,533" size="2,171" zPosition="2" />
@@ -10889,13 +10945,13 @@
   <widget backgroundColor="SevenFontBackgroundIB1" font="Regular2; 30" halign="center" noWrap="1" position="37,53" foregroundColor="SevenNowIB" render="Label" size="1200,38" source="session.Event_Now" transparent="1" zPosition="1" valign="bottom">
     <convert type="SevenHDEventName">Name</convert>
   </widget>
-  <widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 20" foregroundColor="SevenNowIB" halign="center" position="37,98" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,wrap=1,always=0,repeat=2,oneshot=1" size="1200,160" source="session.Event_Now" zPosition="1" transparent="1">
+  <widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 20" foregroundColor="SevenNowIB" halign="center" position="37,98" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=2,oneshot=1" size="1200,160" source="session.Event_Now" zPosition="1" transparent="1">
     <convert type="SevenHDEventName">ExtendedDescription</convert>
   </widget>
   <widget backgroundColor="SevenFontBackgroundIB1" font="Regular2; 30" foregroundColor="SevenNextIB" halign="center" position="37,271" render="Label" size="1200,38" source="session.Event_Next" transparent="1" zPosition="1" valign="bottom">
     <convert type="SevenHDEventName">Name</convert>
   </widget>
-  <widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 20" foregroundColor="SevenNextIB" halign="center" position="37,316" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,wrap=1,always=0,repeat=2,oneshot=1" size="1200,132" source="session.Event_Next" zPosition="1" transparent="1">
+  <widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 20" foregroundColor="SevenNextIB" halign="center" position="37,316" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=2,oneshot=1" size="1200,132" source="session.Event_Next" zPosition="1" transparent="1">
     <convert type="SevenHDEventName">ExtendedDescription</convert>
   </widget>
 <ePixmap pixmap="SevenHD/back/ibone.png" position="14,533" size="1250,168" alphatest="blend" zPosition="-8" />
@@ -11066,13 +11122,13 @@
   <widget backgroundColor="SevenFontBackgroundIB1" font="Regular2; 30" halign="center" noWrap="1" position="37,50" foregroundColor="SevenNowIB" render="Label" size="578,38" source="session.Event_Now" transparent="1" zPosition="1" valign="bottom">
     <convert type="SevenHDEventName">Name</convert>
   </widget>
-  <widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 20" foregroundColor="SevenNowIB" halign="center" position="37,93" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,wrap=1,always=0,repeat=2,oneshot=1" size="578,364" source="session.Event_Now" zPosition="1" transparent="1">
+  <widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 20" foregroundColor="SevenNowIB" halign="center" position="37,93" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=2,oneshot=1" size="578,364" source="session.Event_Now" zPosition="1" transparent="1">
     <convert type="SevenHDEventName">ExtendedDescription</convert>
   </widget>
   <widget backgroundColor="SevenFontBackgroundIB2" font="Regular2; 30" foregroundColor="SevenNextIB" halign="center" position="666,50" render="Label" size="578,38" source="session.Event_Next" transparent="1" zPosition="1" valign="bottom">
     <convert type="SevenHDEventName">Name</convert>
   </widget>
-  <widget backgroundColor="SevenFontBackgroundIB2" font="Regular; 20" foregroundColor="SevenNextIB" halign="center" position="666,93" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,wrap=1,always=0,repeat=2,oneshot=1" size="578,364" source="session.Event_Next" zPosition="1" transparent="1">
+  <widget backgroundColor="SevenFontBackgroundIB2" font="Regular; 20" foregroundColor="SevenNextIB" halign="center" position="666,93" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=2,oneshot=1" size="578,364" source="session.Event_Next" zPosition="1" transparent="1">
     <convert type="SevenHDEventName">ExtendedDescription</convert>
   </widget>
   <eLabel backgroundColor="SevenBorderIB" position="643,45" size="621,2" zPosition="2" />
@@ -11245,7 +11301,7 @@
   <widget backgroundColor="SevenFontBackgroundIB1" font="Regular2; 30" halign="center" noWrap="1" position="37,50" foregroundColor="SevenNowIB" render="Label" size="1202,38" source="session.Event_Now" transparent="1" zPosition="1" valign="bottom">
     <convert type="SevenHDEventName">Name</convert>
   </widget>
-  <widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 20" foregroundColor="SevenNowIB" halign="center" position="37,93" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,wrap=1,always=0,repeat=2,oneshot=1" size="1202,364" source="session.Event_Now" zPosition="1" transparent="1">
+  <widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 20" foregroundColor="SevenNowIB" halign="center" position="37,93" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=2,oneshot=1" size="1202,364" source="session.Event_Now" zPosition="1" transparent="1">
     <convert type="SevenHDEventName">ExtendedDescription</convert>
   </widget>
 <ePixmap pixmap="SevenHD/back/ibone.png" position="14,533" size="1250,168" alphatest="blend" zPosition="-8" />
@@ -11285,13 +11341,13 @@
     <widget backgroundColor="black" font="Regular2; 30" halign="center" noWrap="1" position="546,53" foregroundColor="SevenNowIB" render="Label" size="691,38" source="session.Event_Now" transparent="1" zPosition="1" valign="bottom">
       <convert type="SevenHDEventName">Name</convert>
     </widget>
-    <widget backgroundColor="black" font="Regular; 20" foregroundColor="SevenNowIB" halign="center" position="546,98" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,wrap=1,always=0,repeat=2,oneshot=1" size="691,160" source="session.Event_Now" zPosition="1" transparent="1">
+    <widget backgroundColor="black" font="Regular; 20" foregroundColor="SevenNowIB" halign="center" position="546,98" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=2,oneshot=1" size="691,160" source="session.Event_Now" zPosition="1" transparent="1">
       <convert type="SevenHDEventName">ExtendedDescription</convert>
     </widget>
     <widget backgroundColor="black" font="Regular2; 30" foregroundColor="SevenNextIB" halign="center" position="546,271" render="Label" size="691,38" source="session.Event_Next" transparent="1" zPosition="1" valign="bottom">
       <convert type="SevenHDEventName">Name</convert>
     </widget>
-    <widget backgroundColor="black" font="Regular; 20" foregroundColor="SevenNextIB" halign="center" position="546,316" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,wrap=1,always=0,repeat=2,oneshot=1" size="691,132" source="session.Event_Next" zPosition="1" transparent="1">
+    <widget backgroundColor="black" font="Regular; 20" foregroundColor="SevenNextIB" halign="center" position="546,316" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=2,oneshot=1" size="691,132" source="session.Event_Next" zPosition="1" transparent="1">
       <convert type="SevenHDEventName">ExtendedDescription</convert>
     </widget>
 <widget source="session.VideoPicture" render="Pig" position="30,108" size="505,282" zPosition="3" backgroundColor="transparent" />
@@ -11431,6 +11487,10 @@
     <ePixmap pixmap="SevenHD/back/ibtwo.png" position="250,533" size="825,129" alphatest="blend" zPosition="-7" />
   </screen>
   <screen name="template_menu_ibz3">
+  <widget source="session.CurrentService" render="Pixmap" pixmap="SevenHD/update.png" position="1240,679" size="20,20" zPosition="3" alphatest="blend">
+      <convert type="SevenHDUpdate">Update</convert>
+      <convert type="ConditionalShowHide"/>
+    </widget>
   <eLabel backgroundColor="SevenBackgroundIB1" position="1076,534" size="186,168" zPosition="-9" />
   <eLabel backgroundColor="SevenBorderIB" position="1075,533" size="2,129" zPosition="2" />
   <eLabel backgroundColor="SevenBorderIB" position="14,533" size="2,171" zPosition="2" />
@@ -11726,13 +11786,13 @@
   <widget backgroundColor="SevenFontBackgroundIB1" font="Regular2; 30" halign="center" noWrap="1" position="37,53" foregroundColor="SevenNowIB" render="Label" size="1200,38" source="session.Event_Now" transparent="1" zPosition="1" valign="bottom">
     <convert type="SevenHDEventName">Name</convert>
   </widget>
-  <widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 20" foregroundColor="SevenNowIB" halign="center" position="37,98" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,wrap=1,always=0,repeat=2,oneshot=1" size="1200,160" source="session.Event_Now" zPosition="1" transparent="1">
+  <widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 20" foregroundColor="SevenNowIB" halign="center" position="37,98" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=2,oneshot=1" size="1200,160" source="session.Event_Now" zPosition="1" transparent="1">
     <convert type="SevenHDEventName">ExtendedDescription</convert>
   </widget>
   <widget backgroundColor="SevenFontBackgroundIB1" font="Regular2; 30" foregroundColor="SevenNextIB" halign="center" position="37,271" render="Label" size="1200,38" source="session.Event_Next" transparent="1" zPosition="1" valign="bottom">
     <convert type="SevenHDEventName">Name</convert>
   </widget>
-  <widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 20" foregroundColor="SevenNextIB" halign="center" position="37,316" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,wrap=1,always=0,repeat=2,oneshot=1" size="1200,132" source="session.Event_Next" zPosition="1" transparent="1">
+  <widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 20" foregroundColor="SevenNextIB" halign="center" position="37,316" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=2,oneshot=1" size="1200,132" source="session.Event_Next" zPosition="1" transparent="1">
     <convert type="SevenHDEventName">ExtendedDescription</convert>
   </widget>
 <ePixmap pixmap="SevenHD/back/ibone.png" position="14,533" size="1250,168" alphatest="blend" zPosition="-8" />
@@ -11903,13 +11963,13 @@
   <widget backgroundColor="SevenFontBackgroundIB1" font="Regular2; 30" halign="center" noWrap="1" position="37,50" foregroundColor="SevenNowIB" render="Label" size="578,38" source="session.Event_Now" transparent="1" zPosition="1" valign="bottom">
     <convert type="SevenHDEventName">Name</convert>
   </widget>
-  <widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 20" foregroundColor="SevenNowIB" halign="center" position="37,93" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,wrap=1,always=0,repeat=2,oneshot=1" size="578,364" source="session.Event_Now" zPosition="1" transparent="1">
+  <widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 20" foregroundColor="SevenNowIB" halign="center" position="37,93" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=2,oneshot=1" size="578,364" source="session.Event_Now" zPosition="1" transparent="1">
     <convert type="SevenHDEventName">ExtendedDescription</convert>
   </widget>
   <widget backgroundColor="SevenFontBackgroundIB2" font="Regular2; 30" foregroundColor="SevenNextIB" halign="center" position="666,50" render="Label" size="578,38" source="session.Event_Next" transparent="1" zPosition="1" valign="bottom">
     <convert type="SevenHDEventName">Name</convert>
   </widget>
-  <widget backgroundColor="SevenFontBackgroundIB2" font="Regular; 20" foregroundColor="SevenNextIB" halign="center" position="666,93" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,wrap=1,always=0,repeat=2,oneshot=1" size="578,364" source="session.Event_Next" zPosition="1" transparent="1">
+  <widget backgroundColor="SevenFontBackgroundIB2" font="Regular; 20" foregroundColor="SevenNextIB" halign="center" position="666,93" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=2,oneshot=1" size="578,364" source="session.Event_Next" zPosition="1" transparent="1">
     <convert type="SevenHDEventName">ExtendedDescription</convert>
   </widget>
   <eLabel backgroundColor="SevenBorderIB" position="643,45" size="621,2" zPosition="2" />
@@ -12083,7 +12143,7 @@
   <widget backgroundColor="SevenFontBackgroundIB1" font="Regular2; 30" halign="center" noWrap="1" position="37,50" foregroundColor="SevenNowIB" render="Label" size="1202,38" source="session.Event_Now" transparent="1" zPosition="1" valign="bottom">
     <convert type="SevenHDEventName">Name</convert>
   </widget>
-  <widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 20" foregroundColor="SevenNowIB" halign="center" position="37,93" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,wrap=1,always=0,repeat=2,oneshot=1" size="1202,364" source="session.Event_Now" zPosition="1" transparent="1">
+  <widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 20" foregroundColor="SevenNowIB" halign="center" position="37,93" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=2,oneshot=1" size="1202,364" source="session.Event_Now" zPosition="1" transparent="1">
     <convert type="SevenHDEventName">ExtendedDescription</convert>
   </widget>
 <ePixmap pixmap="SevenHD/back/ibone.png" position="14,533" size="1250,168" alphatest="blend" zPosition="-8" />
@@ -12123,13 +12183,13 @@
     <widget backgroundColor="black" font="Regular2; 30" halign="center" noWrap="1" position="546,53" foregroundColor="SevenNowIB" render="Label" size="691,38" source="session.Event_Now" transparent="1" zPosition="1" valign="bottom">
       <convert type="SevenHDEventName">Name</convert>
     </widget>
-    <widget backgroundColor="black" font="Regular; 20" foregroundColor="SevenNowIB" halign="center" position="546,98" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,wrap=1,always=0,repeat=2,oneshot=1" size="691,160" source="session.Event_Now" zPosition="1" transparent="1">
+    <widget backgroundColor="black" font="Regular; 20" foregroundColor="SevenNowIB" halign="center" position="546,98" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=2,oneshot=1" size="691,160" source="session.Event_Now" zPosition="1" transparent="1">
       <convert type="SevenHDEventName">ExtendedDescription</convert>
     </widget>
     <widget backgroundColor="black" font="Regular2; 30" foregroundColor="SevenNextIB" halign="center" position="546,271" render="Label" size="691,38" source="session.Event_Next" transparent="1" zPosition="1" valign="bottom">
       <convert type="SevenHDEventName">Name</convert>
     </widget>
-    <widget backgroundColor="black" font="Regular; 20" foregroundColor="SevenNextIB" halign="center" position="546,316" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,wrap=1,always=0,repeat=2,oneshot=1" size="691,132" source="session.Event_Next" zPosition="1" transparent="1">
+    <widget backgroundColor="black" font="Regular; 20" foregroundColor="SevenNextIB" halign="center" position="546,316" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=2,oneshot=1" size="691,132" source="session.Event_Next" zPosition="1" transparent="1">
       <convert type="SevenHDEventName">ExtendedDescription</convert>
     </widget>
 <widget source="session.VideoPicture" render="Pig" position="30,108" size="505,282" zPosition="3" backgroundColor="transparent" />
@@ -12269,6 +12329,10 @@
     <ePixmap pixmap="SevenHD/back/ibtwo.png" position="250,533" size="825,129" alphatest="blend" zPosition="-7" />
   </screen>
   <screen name="template_menu_ibo4">
+  <widget source="session.CurrentService" render="Pixmap" pixmap="SevenHD/update.png" position="1240,679" size="20,20" zPosition="3" alphatest="blend">
+      <convert type="SevenHDUpdate">Update</convert>
+      <convert type="ConditionalShowHide"/>
+    </widget>
   <eLabel backgroundColor="SevenBackgroundIB1" position="15,662" size="1062,40" zPosition="-9" />
   <eLabel backgroundColor="SevenBorderIB" position="1262,534" size="2,170" zPosition="2" />
   <eLabel backgroundColor="SevenBorderIB" position="14,534" size="2,170" zPosition="2" />
@@ -12559,13 +12623,13 @@
   <widget backgroundColor="SevenFontBackgroundIB1" font="Regular2; 30" halign="center" noWrap="1" position="37,53" foregroundColor="SevenNowIB" render="Label" size="1200,38" source="session.Event_Now" transparent="1" zPosition="1" valign="bottom">
     <convert type="SevenHDEventName">Name</convert>
   </widget>
-  <widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 20" foregroundColor="SevenNowIB" halign="center" position="37,98" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,wrap=1,always=0,repeat=2,oneshot=1" size="1200,160" source="session.Event_Now" zPosition="1" transparent="1">
+  <widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 20" foregroundColor="SevenNowIB" halign="center" position="37,98" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=2,oneshot=1" size="1200,160" source="session.Event_Now" zPosition="1" transparent="1">
     <convert type="SevenHDEventName">ExtendedDescription</convert>
   </widget>
   <widget backgroundColor="SevenFontBackgroundIB1" font="Regular2; 30" foregroundColor="SevenNextIB" halign="center" position="37,271" render="Label" size="1200,38" source="session.Event_Next" transparent="1" zPosition="1" valign="bottom">
     <convert type="SevenHDEventName">Name</convert>
   </widget>
-  <widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 20" foregroundColor="SevenNextIB" halign="center" position="37,316" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,wrap=1,always=0,repeat=2,oneshot=1" size="1200,132" source="session.Event_Next" zPosition="1" transparent="1">
+  <widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 20" foregroundColor="SevenNextIB" halign="center" position="37,316" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=2,oneshot=1" size="1200,132" source="session.Event_Next" zPosition="1" transparent="1">
     <convert type="SevenHDEventName">ExtendedDescription</convert>
   </widget>
   <eLabel text="AGC" position="385,671" size="63,22" zPosition="3" font="Regular; 19" halign="left" backgroundColor="SevenFontBackgroundIB1" foregroundColor="SevenSNRIB" transparent="1" />
@@ -12742,13 +12806,13 @@
   <widget backgroundColor="SevenFontBackgroundIB1" font="Regular2; 30" halign="center" noWrap="1" position="37,50" foregroundColor="SevenNowIB" render="Label" size="578,38" source="session.Event_Now" transparent="1" zPosition="1" valign="bottom">
     <convert type="SevenHDEventName">Name</convert>
   </widget>
-  <widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 20" foregroundColor="SevenNowIB" halign="center" position="37,93" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,wrap=1,always=0,repeat=2,oneshot=1" size="578,364" source="session.Event_Now" zPosition="1" transparent="1">
+  <widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 20" foregroundColor="SevenNowIB" halign="center" position="37,93" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=2,oneshot=1" size="578,364" source="session.Event_Now" zPosition="1" transparent="1">
     <convert type="SevenHDEventName">ExtendedDescription</convert>
   </widget>
   <widget backgroundColor="SevenFontBackgroundIB2" font="Regular2; 30" foregroundColor="SevenNextIB" halign="center" position="666,50" render="Label" size="578,38" source="session.Event_Next" transparent="1" zPosition="1" valign="bottom">
     <convert type="SevenHDEventName">Name</convert>
   </widget>
-  <widget backgroundColor="SevenFontBackgroundIB2" font="Regular; 20" foregroundColor="SevenNextIB" halign="center" position="666,93" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,wrap=1,always=0,repeat=2,oneshot=1" size="578,364" source="session.Event_Next" zPosition="1" transparent="1">
+  <widget backgroundColor="SevenFontBackgroundIB2" font="Regular; 20" foregroundColor="SevenNextIB" halign="center" position="666,93" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=2,oneshot=1" size="578,364" source="session.Event_Next" zPosition="1" transparent="1">
     <convert type="SevenHDEventName">ExtendedDescription</convert>
   </widget>
   <eLabel backgroundColor="SevenBorderIB" position="643,45" size="621,2" zPosition="2" />
@@ -12927,7 +12991,7 @@
   <widget backgroundColor="SevenFontBackgroundIB1" font="Regular2; 30" halign="center" noWrap="1" position="37,50" foregroundColor="SevenNowIB" render="Label" size="1202,38" source="session.Event_Now" transparent="1" zPosition="1" valign="bottom">
     <convert type="SevenHDEventName">Name</convert>
   </widget>
-  <widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 20" foregroundColor="SevenNowIB" halign="center" position="37,93" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,wrap=1,always=0,repeat=2,oneshot=1" size="1202,364" source="session.Event_Now" zPosition="1" transparent="1">
+  <widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 20" foregroundColor="SevenNowIB" halign="center" position="37,93" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=2,oneshot=1" size="1202,364" source="session.Event_Now" zPosition="1" transparent="1">
     <convert type="SevenHDEventName">ExtendedDescription</convert>
   </widget>
   <eLabel text="AGC" position="385,671" size="63,22" zPosition="3" font="Regular; 19" halign="left" backgroundColor="SevenFontBackgroundIB1" foregroundColor="SevenSNRIB" transparent="1" />
@@ -12984,13 +13048,13 @@
     <widget backgroundColor="black" font="Regular2; 30" halign="center" noWrap="1" position="546,53" foregroundColor="SevenNowIB" render="Label" size="691,38" source="session.Event_Now" transparent="1" zPosition="1" valign="bottom">
       <convert type="SevenHDEventName">Name</convert>
     </widget>
-    <widget backgroundColor="black" font="Regular; 20" foregroundColor="SevenNowIB" halign="center" position="546,98" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,wrap=1,always=0,repeat=2,oneshot=1" size="691,160" source="session.Event_Now" zPosition="1" transparent="1">
+    <widget backgroundColor="black" font="Regular; 20" foregroundColor="SevenNowIB" halign="center" position="546,98" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=2,oneshot=1" size="691,160" source="session.Event_Now" zPosition="1" transparent="1">
       <convert type="SevenHDEventName">ExtendedDescription</convert>
     </widget>
     <widget backgroundColor="black" font="Regular2; 30" foregroundColor="SevenNextIB" halign="center" position="546,271" render="Label" size="691,38" source="session.Event_Next" transparent="1" zPosition="1" valign="bottom">
       <convert type="SevenHDEventName">Name</convert>
     </widget>
-    <widget backgroundColor="black" font="Regular; 20" foregroundColor="SevenNextIB" halign="center" position="546,316" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,wrap=1,always=0,repeat=2,oneshot=1" size="691,132" source="session.Event_Next" zPosition="1" transparent="1">
+    <widget backgroundColor="black" font="Regular; 20" foregroundColor="SevenNextIB" halign="center" position="546,316" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=2,oneshot=1" size="691,132" source="session.Event_Next" zPosition="1" transparent="1">
       <convert type="SevenHDEventName">ExtendedDescription</convert>
     </widget>
 <widget source="session.VideoPicture" render="Pig" position="30,108" size="505,282" zPosition="3" backgroundColor="transparent" />
@@ -13136,6 +13200,10 @@
     <ePixmap pixmap="SevenHD/back/ibtwo.png" position="14,533" size="1062,127" alphatest="blend" zPosition="-7" />
   </screen>
   <screen name="template_menu_ibzz4">
+  <widget source="session.CurrentService" render="Pixmap" pixmap="SevenHD/update.png" position="1240,679" size="20,20" zPosition="3" alphatest="blend">
+      <convert type="SevenHDUpdate">Update</convert>
+      <convert type="ConditionalShowHide"/>
+    </widget>
     <eLabel backgroundColor="SevenBackgroundIB1" position="425,661" size="652,43" zPosition="-9" />
     <eLabel backgroundColor="SevenBorderIB" position="1262,520" size="2,183" zPosition="2" />
     <eLabel backgroundColor="SevenBorderIB" position="14,475" size="2,229" zPosition="2" />
@@ -13306,13 +13374,13 @@
   <widget backgroundColor="SevenFontBackgroundIB1" font="Regular2; 30" halign="center" noWrap="1" position="37,53" foregroundColor="SevenNowIB" render="Label" size="1200,38" source="session.Event_Now" transparent="1" zPosition="1" valign="bottom">
     <convert type="SevenHDEventName">Name</convert>
   </widget>
-  <widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 20" foregroundColor="SevenNowIB" halign="center" position="37,98" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,wrap=1,always=0,repeat=2,oneshot=1" size="1200,160" source="session.Event_Now" zPosition="1" transparent="1">
+  <widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 20" foregroundColor="SevenNowIB" halign="center" position="37,98" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=2,oneshot=1" size="1200,160" source="session.Event_Now" zPosition="1" transparent="1">
     <convert type="SevenHDEventName">ExtendedDescription</convert>
   </widget>
   <widget backgroundColor="SevenFontBackgroundIB1" font="Regular2; 30" foregroundColor="SevenNextIB" halign="center" position="37,271" render="Label" size="1200,38" source="session.Event_Next" transparent="1" zPosition="1" valign="bottom">
     <convert type="SevenHDEventName">Name</convert>
   </widget>
-  <widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 20" foregroundColor="SevenNextIB" halign="center" position="37,316" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,wrap=1,always=0,repeat=2,oneshot=1" size="1200,132" source="session.Event_Next" zPosition="1" transparent="1">
+  <widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 20" foregroundColor="SevenNextIB" halign="center" position="37,316" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=2,oneshot=1" size="1200,132" source="session.Event_Next" zPosition="1" transparent="1">
     <convert type="SevenHDEventName">ExtendedDescription</convert>
   </widget>
   <eLabel backgroundColor="SevenBackgroundIB1" position="425,661" size="652,43" zPosition="-9" />
@@ -13488,13 +13556,13 @@
   <widget backgroundColor="black" font="Regular2; 30" halign="center" noWrap="1" position="37,50" foregroundColor="SevenNowIB" render="Label" size="578,38" source="session.Event_Now" transparent="1" zPosition="1" valign="bottom">
     <convert type="SevenHDEventName">Name</convert>
   </widget>
-  <widget backgroundColor="black" font="Regular; 20" foregroundColor="SevenNowIB" halign="center" position="37,93" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,wrap=1,always=0,repeat=2,oneshot=1" size="578,364" source="session.Event_Now" zPosition="1" transparent="1">
+  <widget backgroundColor="black" font="Regular; 20" foregroundColor="SevenNowIB" halign="center" position="37,93" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=2,oneshot=1" size="578,364" source="session.Event_Now" zPosition="1" transparent="1">
     <convert type="SevenHDEventName">ExtendedDescription</convert>
   </widget>
   <widget backgroundColor="black" font="Regular2; 30" foregroundColor="SevenNextIB" halign="center" position="666,50" render="Label" size="578,38" source="session.Event_Next" transparent="1" zPosition="1" valign="bottom">
     <convert type="SevenHDEventName">Name</convert>
   </widget>
-  <widget backgroundColor="black" font="Regular; 20" foregroundColor="SevenNextIB" halign="center" position="666,93" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,wrap=1,always=0,repeat=2,oneshot=1" size="578,364" source="session.Event_Next" zPosition="1" transparent="1">
+  <widget backgroundColor="black" font="Regular; 20" foregroundColor="SevenNextIB" halign="center" position="666,93" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=2,oneshot=1" size="578,364" source="session.Event_Next" zPosition="1" transparent="1">
     <convert type="SevenHDEventName">ExtendedDescription</convert>
   </widget>
   <eLabel backgroundColor="SevenBorderIB" position="643,45" size="621,2" zPosition="2" />
@@ -13797,7 +13865,7 @@
   <widget backgroundColor="SevenFontBackgroundIB1" font="Regular2; 30" halign="center" noWrap="1" position="37,50" foregroundColor="SevenNowIB" render="Label" size="1202,38" source="session.Event_Now" transparent="1" zPosition="1" valign="bottom">
     <convert type="SevenHDEventName">Name</convert>
   </widget>
-  <widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 20" foregroundColor="SevenNowIB" halign="center" position="37,93" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,wrap=1,always=0,repeat=2,oneshot=1" size="1202,364" source="session.Event_Now" zPosition="1" transparent="1">
+  <widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 20" foregroundColor="SevenNowIB" halign="center" position="37,93" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=2,oneshot=1" size="1202,364" source="session.Event_Now" zPosition="1" transparent="1">
     <convert type="SevenHDEventName">ExtendedDescription</convert>
   </widget>
   <eLabel backgroundColor="SevenBorderIB" position="424,661" size="653,2" zPosition="2" />
@@ -13848,13 +13916,13 @@
     <widget backgroundColor="black" font="Regular2; 30" halign="center" noWrap="1" position="546,53" foregroundColor="SevenNowIB" render="Label" size="691,38" source="session.Event_Now" transparent="1" zPosition="1" valign="bottom">
       <convert type="SevenHDEventName">Name</convert>
     </widget>
-    <widget backgroundColor="black" font="Regular; 20" foregroundColor="SevenNowIB" halign="center" position="546,98" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,wrap=1,always=0,repeat=2,oneshot=1" size="691,160" source="session.Event_Now" zPosition="1" transparent="1">
+    <widget backgroundColor="black" font="Regular; 20" foregroundColor="SevenNowIB" halign="center" position="546,98" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=2,oneshot=1" size="691,160" source="session.Event_Now" zPosition="1" transparent="1">
       <convert type="SevenHDEventName">ExtendedDescription</convert>
     </widget>
     <widget backgroundColor="black" font="Regular2; 30" foregroundColor="SevenNextIB" halign="center" position="546,271" render="Label" size="691,38" source="session.Event_Next" transparent="1" zPosition="1" valign="bottom">
       <convert type="SevenHDEventName">Name</convert>
     </widget>
-    <widget backgroundColor="black" font="Regular; 20" foregroundColor="SevenNextIB" halign="center" position="546,316" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,wrap=1,always=0,repeat=2,oneshot=1" size="691,132" source="session.Event_Next" zPosition="1" transparent="1">
+    <widget backgroundColor="black" font="Regular; 20" foregroundColor="SevenNextIB" halign="center" position="546,316" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=2,oneshot=1" size="691,132" source="session.Event_Next" zPosition="1" transparent="1">
       <convert type="SevenHDEventName">ExtendedDescription</convert>
     </widget>
 <widget source="session.VideoPicture" render="Pig" position="30,108" size="505,282" zPosition="3" backgroundColor="transparent" />
@@ -13999,6 +14067,10 @@
     <ePixmap pixmap="SevenHD/back/ibone.png" position="16,475" size="410,45" alphatest="blend" zPosition="-8" />
   </screen>
   <screen name="template_menu_ibzzz4">
+  <widget source="session.CurrentService" render="Pixmap" pixmap="SevenHD/update.png" position="1240,679" size="20,20" zPosition="3" alphatest="blend">
+      <convert type="SevenHDUpdate">Update</convert>
+      <convert type="ConditionalShowHide"/>
+    </widget>
   <eLabel backgroundColor="SevenBackgroundIB1" position="1078,447" size="185,256" zPosition="-9" />
   <eLabel backgroundColor="SevenBorderIB" position="1262,447" size="2,256" zPosition="2" />
   <eLabel backgroundColor="SevenBorderIB" position="424,447" size="2,256" zPosition="2" />
@@ -14177,13 +14249,13 @@
   <widget backgroundColor="SevenFontBackgroundIB1" font="Regular2; 30" halign="center" noWrap="1" position="37,53" foregroundColor="SevenNowIB" render="Label" size="1200,38" source="session.Event_Now" transparent="1" zPosition="1" valign="bottom">
     <convert type="SevenHDEventName">Name</convert>
   </widget>
-  <widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 20" foregroundColor="SevenNowIB" halign="center" position="37,98" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,wrap=1,always=0,repeat=2,oneshot=1" size="1200,160" source="session.Event_Now" zPosition="1" transparent="1">
+  <widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 20" foregroundColor="SevenNowIB" halign="center" position="37,98" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=2,oneshot=1" size="1200,160" source="session.Event_Now" zPosition="1" transparent="1">
     <convert type="SevenHDEventName">ExtendedDescription</convert>
   </widget>
   <widget backgroundColor="SevenFontBackgroundIB1" font="Regular2; 30" foregroundColor="SevenNextIB" halign="center" position="37,271" render="Label" size="1200,38" source="session.Event_Next" transparent="1" zPosition="1" valign="bottom">
     <convert type="SevenHDEventName">Name</convert>
   </widget>
-  <widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 20" foregroundColor="SevenNextIB" halign="center" position="37,316" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,wrap=1,always=0,repeat=2,oneshot=1" size="1200,108" source="session.Event_Next" zPosition="1" transparent="1">
+  <widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 20" foregroundColor="SevenNextIB" halign="center" position="37,316" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=2,oneshot=1" size="1200,108" source="session.Event_Next" zPosition="1" transparent="1">
     <convert type="SevenHDEventName">ExtendedDescription</convert>
   </widget>
   <eLabel backgroundColor="SevenBackgroundIB1" position="1078,447" size="185,256" zPosition="-9" />
@@ -14365,13 +14437,13 @@
   <widget backgroundColor="SevenFontBackgroundIB1" font="Regular2; 30" halign="center" noWrap="1" position="37,50" foregroundColor="SevenNowIB" render="Label" size="578,38" source="session.Event_Now" transparent="1" zPosition="1" valign="bottom">
     <convert type="SevenHDEventName">Name</convert>
   </widget>
-  <widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 20" foregroundColor="SevenNowIB" halign="center" position="37,93" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,wrap=1,always=0,repeat=2,oneshot=1" size="578,344" source="session.Event_Now" zPosition="1" transparent="1">
+  <widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 20" foregroundColor="SevenNowIB" halign="center" position="37,93" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=2,oneshot=1" size="578,344" source="session.Event_Now" zPosition="1" transparent="1">
     <convert type="SevenHDEventName">ExtendedDescription</convert>
   </widget>
   <widget backgroundColor="SevenFontBackgroundIB2" font="Regular2; 30" foregroundColor="SevenNextIB" halign="center" position="666,50" render="Label" size="578,38" source="session.Event_Next" transparent="1" zPosition="1" valign="bottom">
     <convert type="SevenHDEventName">Name</convert>
   </widget>
-  <widget backgroundColor="SevenFontBackgroundIB2" font="Regular; 20" foregroundColor="SevenNextIB" halign="center" position="666,93" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,wrap=1,always=0,repeat=2,oneshot=1" size="578,344" source="session.Event_Next" zPosition="1" transparent="1">
+  <widget backgroundColor="SevenFontBackgroundIB2" font="Regular; 20" foregroundColor="SevenNextIB" halign="center" position="666,93" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=2,oneshot=1" size="578,344" source="session.Event_Next" zPosition="1" transparent="1">
     <convert type="SevenHDEventName">ExtendedDescription</convert>
   </widget>
   <eLabel backgroundColor="SevenBorderIB" position="643,45" size="621,2" zPosition="2" />
@@ -14555,7 +14627,7 @@
   <widget backgroundColor="SevenFontBackgroundIB1" font="Regular2; 30" halign="center" noWrap="1" position="37,50" foregroundColor="SevenNowIB" render="Label" size="1202,38" source="session.Event_Now" transparent="1" zPosition="1" valign="bottom">
     <convert type="SevenHDEventName">Name</convert>
   </widget>
-  <widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 20" foregroundColor="SevenNowIB" halign="center" position="37,93" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,wrap=1,always=0,repeat=2,oneshot=1" size="1202,344" source="session.Event_Now" zPosition="1" transparent="1">
+  <widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 20" foregroundColor="SevenNowIB" halign="center" position="37,93" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=2,oneshot=1" size="1202,344" source="session.Event_Now" zPosition="1" transparent="1">
     <convert type="SevenHDEventName">ExtendedDescription</convert>
   </widget>
   <eLabel backgroundColor="SevenBackgroundIB1" position="1078,447" size="185,256" zPosition="-9" />
@@ -14735,13 +14807,13 @@
     <widget backgroundColor="black" font="Regular2; 30" halign="center" noWrap="1" position="546,53" foregroundColor="SevenNowIB" render="Label" size="691,38" source="session.Event_Now" transparent="1" zPosition="1" valign="bottom">
       <convert type="SevenHDEventName">Name</convert>
     </widget>
-    <widget backgroundColor="black" font="Regular; 20" foregroundColor="SevenNowIB" halign="center" position="546,98" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,wrap=1,always=0,repeat=2,oneshot=1" size="691,160" source="session.Event_Now" zPosition="1" transparent="1">
+    <widget backgroundColor="black" font="Regular; 20" foregroundColor="SevenNowIB" halign="center" position="546,98" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=2,oneshot=1" size="691,160" source="session.Event_Now" zPosition="1" transparent="1">
       <convert type="SevenHDEventName">ExtendedDescription</convert>
     </widget>
     <widget backgroundColor="black" font="Regular2; 30" foregroundColor="SevenNextIB" halign="center" position="546,271" render="Label" size="691,38" source="session.Event_Next" transparent="1" zPosition="1" valign="bottom">
       <convert type="SevenHDEventName">Name</convert>
     </widget>
-    <widget backgroundColor="black" font="Regular; 20" foregroundColor="SevenNextIB" halign="center" position="546,316" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,wrap=1,always=0,repeat=2,oneshot=1" size="691,108" source="session.Event_Next" zPosition="1" transparent="1">
+    <widget backgroundColor="black" font="Regular; 20" foregroundColor="SevenNextIB" halign="center" position="546,316" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=2,oneshot=1" size="691,108" source="session.Event_Next" zPosition="1" transparent="1">
       <convert type="SevenHDEventName">ExtendedDescription</convert>
     </widget>
     <eLabel backgroundColor="SevenBorderIB" position="14,442" size="1250,2" zPosition="2" />
@@ -14893,6 +14965,10 @@
     <ePixmap pixmap="SevenHD/back/ibone.png" position="14,447" size="410,256" alphatest="blend" zPosition="-8" />
   </screen>
  <screen name="template_menu_ibx4">
+ <widget source="session.CurrentService" render="Pixmap" pixmap="SevenHD/update.png" position="1240,679" size="20,20" zPosition="3" alphatest="blend">
+      <convert type="SevenHDUpdate">Update</convert>
+      <convert type="ConditionalShowHide"/>
+    </widget>
     <eLabel backgroundColor="SevenBackgroundIB1" position="1076,534" size="186,168" zPosition="-9" />
     <eLabel backgroundColor="SevenBorderIB" position="1075,533" size="2,129" zPosition="2" />
     <eLabel backgroundColor="SevenBorderIB" position="14,473" size="2,231" zPosition="2" />
@@ -15211,13 +15287,13 @@
     <widget backgroundColor="SevenFontBackgroundIB1" font="Regular2; 30" halign="center" noWrap="1" position="37,53" foregroundColor="SevenNowIB" render="Label" size="1200,38" source="session.Event_Now" transparent="1" zPosition="1" valign="bottom">
       <convert type="SevenHDEventName">Name</convert>
     </widget>
-    <widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 20" foregroundColor="SevenNowIB" halign="center" position="37,98" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,wrap=1,always=0,repeat=2,oneshot=1" size="1200,160" source="session.Event_Now" zPosition="1" transparent="1">
+    <widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 20" foregroundColor="SevenNowIB" halign="center" position="37,98" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=2,oneshot=1" size="1200,160" source="session.Event_Now" zPosition="1" transparent="1">
       <convert type="SevenHDEventName">ExtendedDescription</convert>
     </widget>
     <widget backgroundColor="SevenFontBackgroundIB1" font="Regular2; 30" foregroundColor="SevenNextIB" halign="center" position="37,271" render="Label" size="1200,38" source="session.Event_Next" transparent="1" zPosition="1" valign="bottom">
       <convert type="SevenHDEventName">Name</convert>
     </widget>
-    <widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 20" foregroundColor="SevenNextIB" halign="center" position="37,316" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,wrap=1,always=0,repeat=2,oneshot=1" size="1200,132" source="session.Event_Next" zPosition="1" transparent="1">
+    <widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 20" foregroundColor="SevenNextIB" halign="center" position="37,316" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=2,oneshot=1" size="1200,132" source="session.Event_Next" zPosition="1" transparent="1">
       <convert type="SevenHDEventName">ExtendedDescription</convert>
     </widget>
     <ePixmap pixmap="SevenHD/back/ibtwo.png" position="14,2" size="1250,40" alphatest="blend" zPosition="-8" />
@@ -15372,7 +15448,7 @@
     <widget backgroundColor="SevenFontBackgroundIB1" font="Regular2; 30" halign="center" noWrap="1" position="37,50" foregroundColor="SevenNowIB" render="Label" size="578,38" source="session.Event_Now" transparent="1" zPosition="1" valign="bottom">
       <convert type="SevenHDEventName">Name</convert>
     </widget>
-    <widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 20" foregroundColor="SevenNowIB" halign="center" position="37,93" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,wrap=1,always=0,repeat=2,oneshot=1" size="578,364" source="session.Event_Now" zPosition="1" transparent="1">
+    <widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 20" foregroundColor="SevenNowIB" halign="center" position="37,93" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=2,oneshot=1" size="578,364" source="session.Event_Now" zPosition="1" transparent="1">
       <convert type="SevenHDEventName">ExtendedDescription</convert>
     </widget>
     <widget backgroundColor="SevenFontBackgroundIB2" font="Regular2; 30" foregroundColor="SevenNextIB" halign="center" position="666,50" render="Label" size="578,38" source="session.Event_Next" transparent="1" zPosition="1" valign="bottom">
@@ -15395,7 +15471,7 @@
     <widget source="session.CurrentService" render="Label" position="886,10" size="350,22" font="Regular2;12" halign="right" valign="bottom" foregroundColor="SevenSNRIB" backgroundColor="SevenFontBackgroundIB2" noWrap="1" transparent="1" zPosition="7">
       <convert type="SevenHDLayoutInfo">HddInfo,Full</convert>
     </widget>
-    <widget backgroundColor="SevenFontBackgroundIB2" font="Regular; 20" foregroundColor="SevenNextIB" halign="center" position="666,93" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,wrap=1,always=0,repeat=2,oneshot=1" size="578,364" source="session.Event_Next" zPosition="1" transparent="1">
+    <widget backgroundColor="SevenFontBackgroundIB2" font="Regular; 20" foregroundColor="SevenNextIB" halign="center" position="666,93" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=2,oneshot=1" size="578,364" source="session.Event_Next" zPosition="1" transparent="1">
       <convert type="SevenHDEventName">ExtendedDescription</convert>
     </widget>
     <eLabel backgroundColor="SevenBorderIB" position="643,45" size="621,2" zPosition="2" />
@@ -15574,7 +15650,7 @@
     <widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 30" halign="center" noWrap="1" position="37,50" foregroundColor="SevenNowIB" render="Label" size="1202,38" source="session.Event_Now" transparent="1" zPosition="1" valign="bottom">
       <convert type="SevenHDEventName">Name</convert>
     </widget>
-    <widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 20" foregroundColor="SevenNowIB" halign="center" position="37,93" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,wrap=1,always=0,repeat=2,oneshot=1" size="1202,364" source="session.Event_Now" zPosition="1" transparent="1">
+    <widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 20" foregroundColor="SevenNowIB" halign="center" position="37,93" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=2,oneshot=1" size="1202,364" source="session.Event_Now" zPosition="1" transparent="1">
       <convert type="SevenHDEventName">ExtendedDescription</convert>
     </widget>
     <eLabel text="SysTemp:" position="400,10" size="70,22" font="Regular2;12" halign="left" valign="bottom" foregroundColor="SevenSNRIB" backgroundColor="SevenFontBackgroundIB2" noWrap="1" transparent="1" zPosition="2" />
@@ -15632,13 +15708,13 @@
     <widget backgroundColor="black" font="Regular2; 30" halign="center" noWrap="1" position="546,53" foregroundColor="SevenNowIB" render="Label" size="691,38" source="session.Event_Now" transparent="1" zPosition="1" valign="bottom">
       <convert type="SevenHDEventName">Name</convert>
     </widget>
-    <widget backgroundColor="black" font="Regular; 20" foregroundColor="SevenNowIB" halign="center" position="546,98" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,wrap=1,always=0,repeat=2,oneshot=1" size="691,160" source="session.Event_Now" zPosition="1" transparent="1">
+    <widget backgroundColor="black" font="Regular; 20" foregroundColor="SevenNowIB" halign="center" position="546,98" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=2,oneshot=1" size="691,160" source="session.Event_Now" zPosition="1" transparent="1">
       <convert type="SevenHDEventName">ExtendedDescription</convert>
     </widget>
     <widget backgroundColor="black" font="Regular2; 30" foregroundColor="SevenNextIB" halign="center" position="546,271" render="Label" size="691,38" source="session.Event_Next" transparent="1" zPosition="1" valign="bottom">
       <convert type="SevenHDEventName">Name</convert>
     </widget>
-    <widget backgroundColor="black" font="Regular; 20" foregroundColor="SevenNextIB" halign="center" position="546,316" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,wrap=1,always=0,repeat=2,oneshot=1" size="691,132" source="session.Event_Next" zPosition="1" transparent="1">
+    <widget backgroundColor="black" font="Regular; 20" foregroundColor="SevenNextIB" halign="center" position="546,316" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=2,oneshot=1" size="691,132" source="session.Event_Next" zPosition="1" transparent="1">
       <convert type="SevenHDEventName">ExtendedDescription</convert>
     </widget>
 <widget source="session.VideoPicture" render="Pig" position="30,108" size="505,282" zPosition="3" backgroundColor="transparent" />
@@ -15790,6 +15866,10 @@
     <ePixmap pixmap="SevenHD/back/ibone.png" position="16,474" size="272,59" alphatest="blend" zPosition="-8" />
   </screen>
   <screen name="template_menu_ibz4">
+  <widget source="session.CurrentService" render="Pixmap" pixmap="SevenHD/update.png" position="1240,679" size="20,20" zPosition="3" alphatest="blend">
+      <convert type="SevenHDUpdate">Update</convert>
+      <convert type="ConditionalShowHide"/>
+    </widget>
     <eLabel backgroundColor="SevenBackgroundIB1" position="1076,534" size="186,168" zPosition="-9" />
     <eLabel backgroundColor="SevenBorderIB" position="1075,533" size="2,129" zPosition="2" />
     <eLabel backgroundColor="SevenBorderIB" position="14,473" size="2,231" zPosition="2" />
@@ -16091,7 +16171,7 @@
   <widget backgroundColor="SevenFontBackgroundIB1" font="Regular2; 30" halign="center" noWrap="1" position="37,53" foregroundColor="SevenNowIB" render="Label" size="1200,38" source="session.Event_Now" transparent="1" zPosition="1" valign="bottom">
     <convert type="SevenHDEventName">Name</convert>
   </widget>
-  <widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 20" foregroundColor="SevenNowIB" halign="center" position="37,98" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,wrap=1,always=0,repeat=2,oneshot=1" size="1200,160" source="session.Event_Now" zPosition="1" transparent="1">
+  <widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 20" foregroundColor="SevenNowIB" halign="center" position="37,98" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=2,oneshot=1" size="1200,160" source="session.Event_Now" zPosition="1" transparent="1">
     <convert type="SevenHDEventName">ExtendedDescription</convert>
   </widget>
   <widget backgroundColor="SevenFontBackgroundIB1" font="Regular2; 30" foregroundColor="SevenNextIB" halign="center" position="37,271" render="Label" size="1200,38" source="session.Event_Next" transparent="1" zPosition="1" valign="bottom">
@@ -16114,7 +16194,7 @@
   <widget source="session.CurrentService" render="Label" position="886,10" size="350,22" font="Regular2;12" halign="right" valign="bottom" foregroundColor="SevenSNRIB" backgroundColor="SevenFontBackgroundIB2" noWrap="1" transparent="1" zPosition="7">
     <convert type="SevenHDLayoutInfo">HddInfo,Full</convert>
   </widget>
-  <widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 20" foregroundColor="SevenNextIB" halign="center" position="37,316" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,wrap=1,always=0,repeat=2,oneshot=1" size="1200,132" source="session.Event_Next" zPosition="1" transparent="1">
+  <widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 20" foregroundColor="SevenNextIB" halign="center" position="37,316" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=2,oneshot=1" size="1200,132" source="session.Event_Next" zPosition="1" transparent="1">
     <convert type="SevenHDEventName">ExtendedDescription</convert>
   </widget>
   <ePixmap pixmap="SevenHD/back/ibtwo.png" position="14,2" size="1250,40" alphatest="blend" zPosition="-8" />
@@ -16269,7 +16349,7 @@
     <widget backgroundColor="SevenFontBackgroundIB1" font="Regular2; 30" halign="center" noWrap="1" position="37,50" foregroundColor="SevenNowIB" render="Label" size="578,38" source="session.Event_Now" transparent="1" zPosition="1" valign="bottom">
       <convert type="SevenHDEventName">Name</convert>
     </widget>
-    <widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 20" foregroundColor="SevenNowIB" halign="center" position="37,93" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,wrap=1,always=0,repeat=2,oneshot=1" size="578,364" source="session.Event_Now" zPosition="1" transparent="1">
+    <widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 20" foregroundColor="SevenNowIB" halign="center" position="37,93" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=2,oneshot=1" size="578,364" source="session.Event_Now" zPosition="1" transparent="1">
       <convert type="SevenHDEventName">ExtendedDescription</convert>
     </widget>
     <widget backgroundColor="SevenFontBackgroundIB2" font="Regular2; 30" foregroundColor="SevenNextIB" halign="center" position="666,50" render="Label" size="578,38" source="session.Event_Next" transparent="1" zPosition="1" valign="bottom">
@@ -16292,7 +16372,7 @@
     <widget source="session.CurrentService" render="Label" position="886,10" size="350,22" font="Regular2;12" halign="right" valign="bottom" foregroundColor="SevenSNRIB" backgroundColor="SevenFontBackgroundIB2" noWrap="1" transparent="1" zPosition="7">
       <convert type="SevenHDLayoutInfo">HddInfo,Full</convert>
     </widget>
-    <widget backgroundColor="SevenFontBackgroundIB2" font="Regular; 20" foregroundColor="SevenNextIB" halign="center" position="666,93" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,wrap=1,always=0,repeat=2,oneshot=1" size="578,364" source="session.Event_Next" zPosition="1" transparent="1">
+    <widget backgroundColor="SevenFontBackgroundIB2" font="Regular; 20" foregroundColor="SevenNextIB" halign="center" position="666,93" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=2,oneshot=1" size="578,364" source="session.Event_Next" zPosition="1" transparent="1">
       <convert type="SevenHDEventName">ExtendedDescription</convert>
     </widget>
     <eLabel backgroundColor="SevenBorderIB" position="643,45" size="621,2" zPosition="2" />
@@ -16471,7 +16551,7 @@
     <widget backgroundColor="SevenFontBackgroundIB1" font="Regular2; 30" halign="center" noWrap="1" position="37,50" foregroundColor="SevenNowIB" render="Label" size="1202,38" source="session.Event_Now" transparent="1" zPosition="1" valign="bottom">
       <convert type="SevenHDEventName">Name</convert>
     </widget>
-    <widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 20" foregroundColor="SevenNowIB" halign="center" position="37,93" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,wrap=1,always=0,repeat=2,oneshot=1" size="1202,364" source="session.Event_Now" zPosition="1" transparent="1">
+    <widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 20" foregroundColor="SevenNowIB" halign="center" position="37,93" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=2,oneshot=1" size="1202,364" source="session.Event_Now" zPosition="1" transparent="1">
       <convert type="SevenHDEventName">ExtendedDescription</convert>
     </widget>
     <eLabel text="SysTemp:" position="400,10" size="70,22" font="Regular2;12" halign="left" valign="bottom" foregroundColor="SevenSNRIB" backgroundColor="SevenFontBackgroundIB2" noWrap="1" transparent="1" zPosition="2" />
@@ -16529,13 +16609,13 @@
     <widget backgroundColor="black" font="Regular2; 30" halign="center" noWrap="1" position="546,53" foregroundColor="SevenNowIB" render="Label" size="691,38" source="session.Event_Now" transparent="1" zPosition="1" valign="bottom">
       <convert type="SevenHDEventName">Name</convert>
     </widget>
-    <widget backgroundColor="black" font="Regular; 20" foregroundColor="SevenNowIB" halign="center" position="546,98" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,wrap=1,always=0,repeat=2,oneshot=1" size="691,160" source="session.Event_Now" zPosition="1" transparent="1">
+    <widget backgroundColor="black" font="Regular; 20" foregroundColor="SevenNowIB" halign="center" position="546,98" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=2,oneshot=1" size="691,160" source="session.Event_Now" zPosition="1" transparent="1">
       <convert type="SevenHDEventName">ExtendedDescription</convert>
     </widget>
     <widget backgroundColor="black" font="Regular2; 30" foregroundColor="SevenNextIB" halign="center" position="546,271" render="Label" size="691,38" source="session.Event_Next" transparent="1" zPosition="1" valign="bottom">
       <convert type="SevenHDEventName">Name</convert>
     </widget>
-    <widget backgroundColor="black" font="Regular; 20" foregroundColor="SevenNextIB" halign="center" position="546,316" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=5000,wrap=1,always=0,repeat=2,oneshot=1" size="691,132" source="session.Event_Next" zPosition="1" transparent="1">
+    <widget backgroundColor="black" font="Regular; 20" foregroundColor="SevenNextIB" halign="center" position="546,316" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=2,oneshot=1" size="691,132" source="session.Event_Next" zPosition="1" transparent="1">
       <convert type="SevenHDEventName">ExtendedDescription</convert>
     </widget>
 <widget source="session.VideoPicture" render="Pig" position="30,108" size="505,282" zPosition="3" backgroundColor="transparent" />

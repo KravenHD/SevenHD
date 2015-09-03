@@ -1,4 +1,4 @@
-version = '3.3.3'
+version = '3.3.6'
 import os
 import re
 import time
@@ -29,6 +29,7 @@ from shutil import move, copy, rmtree, copytree
 from skin import parseColor
 from urllib import urlencode
 from urllib2 import urlopen, URLError
+from twisted.web.client import downloadPage
 from enigma import ePicLoad, getDesktop, eConsoleAppContainer, eListboxPythonMultiContent, gFont
 from Tools.BoundFunction import boundFunction
 from Tools.Directories import fileExists, resolveFilename, SCOPE_LANGUAGE, SCOPE_PLUGINS
@@ -69,6 +70,9 @@ try:
 except ImportError:
    config.plugins.SevenHD.NumberZapExtImport.value = False
 
+config.plugins.SevenHD.version = ConfigText(default=version, fixed_size=False)
+config.plugins.SevenHD.AutoUpdate = ConfigYesNo(default = False)
+config.plugins.SevenHD.AutoUpdateInfo = ConfigYesNo(default = False)
 ###########################################
 config.plugins.SevenHD.FontStyle = ConfigSelection(default="noto", choices = [
 				("Noto", _("NotoSans-Regular"))
@@ -173,7 +177,13 @@ config.plugins.SevenHD.RunningText = ConfigSelection(default="movetype=running",
 				("movetype=running", _("on")),
 				("movetype=none", _("off"))
 				])
-
+config.plugins.SevenHD.Startdelay = ConfigSelection(default="startdelay=2000", choices = [
+				("startdelay=2000", _("2 sec")),
+				("startdelay=4000", _("4 sec")),
+				("startdelay=6000", _("6 sec")),
+				("startdelay=8000", _("8 sec")),
+				("startdelay=10000", _("10 sec"))
+				])
 config.plugins.SevenHD.VolumeStyle = ConfigSelection(default="volumestyle-original", choices = [
 				("volumestyle-original", _("original")),
 				("volumestyle-left-side", _("left")),
@@ -463,6 +473,7 @@ config.plugins.SevenHD.grabdebug = ConfigYesNo(default= False)
 myConfigList = [('config.plugins.SevenHD.Image.value = "' + str(config.plugins.SevenHD.Image.value) + '"'),
                 ('config.plugins.SevenHD.ButtonStyle.value = "' + str(config.plugins.SevenHD.ButtonStyle.value) + '"'),
                 ('config.plugins.SevenHD.RunningText.value = "' + str(config.plugins.SevenHD.RunningText.value) + '"'),
+                ('config.plugins.SevenHD.Startdelay.value = "' + str(config.plugins.SevenHD.Startdelay.value) + '"'),
                 ('config.plugins.SevenHD.VolumeStyle.value = "' + str(config.plugins.SevenHD.VolumeStyle.value) + '"'),
                 ('config.plugins.SevenHD.Volume.value = "' + str(config.plugins.SevenHD.Volume.value) + '"'),
                 ('config.plugins.SevenHD.NumberZapExt.value = "' + str(config.plugins.SevenHD.NumberZapExt.value) + '"'),

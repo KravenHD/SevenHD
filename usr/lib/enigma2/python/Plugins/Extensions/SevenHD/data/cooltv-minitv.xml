@@ -24,7 +24,7 @@
   <widget backgroundColor="SevenFontBackground" font="Regular;22" foregroundColor="SevenFont1" halign="center" position="24,418" render="Label" size="416,28" source="Event" transparent="1">
     <convert type="SevenHDEventName">Description</convert>
   </widget>
-  <widget backgroundColor="SevenFontBackground" font="Regular;24" foregroundColor="SevenFont1" position="24,458" render="SevenHDRunningText" options="movetype=running,startpoint=0,direction=top,steptime=125,repeat=5,startdelay=10000,wrap,always=0" size="1232,176" source="Event" transparent="1" valign="top" zPosition="1">
+  <widget backgroundColor="SevenFontBackground" font="Regular;24" foregroundColor="SevenFont1" position="24,458" render="SevenHDRunningText" options="movetype=running,startpoint=0,direction=top,steptime=125,repeat=5,startdelay=2000,wrap,always=0" size="1232,176" source="Event" transparent="1" valign="top" zPosition="1">
     <convert type="SevenHDEventName">ExtendedDescription</convert>
   </widget>
   <widget CoolBackColor="black" CoolDayColor="SevenFont1" CoolDayPos="0" CoolDaySize="50" CoolEventColor="SevenFont1" CoolEventFont="Regular;22" CoolEventPos="150" CoolFont="Regular;22" CoolRecAlarmCol="yellow" CoolRecColor="red" CoolTimeColor="SevenFont1" CoolTimePos="70" CoolTimeSize="70" backgroundColor="SevenFontBackground" foregroundColor="SevenFont1" itemHeight="30" name="list" position="435,80" size="820,330" transparent="1" zPosition="0" />
@@ -82,7 +82,7 @@
     <widget backgroundColor="SevenFontBackground" font="Regular2;24" foregroundColor="SevenFont2" halign="left" position="220,524" render="Label" size="1055,30" source="Event" transparent="1">
       <convert type="SevenHDEventName">Name</convert>
     </widget>
-    <widget backgroundColor="SevenFontBackground" font="Regular;24" foregroundColor="SevenFont1" position="40,560" render="SevenHDRunningText" options="movetype=running,startpoint=0,direction=top,steptime=125,repeat=5,startdelay=10000,wrap,always=0" size="1200,88" source="Event" transparent="1" zPosition="1">
+    <widget backgroundColor="SevenFontBackground" font="Regular;24" foregroundColor="SevenFont1" position="40,560" render="SevenHDRunningText" options="movetype=running,startpoint=0,direction=top,steptime=125,repeat=5,startdelay=2000,wrap,always=0" size="1200,88" source="Event" transparent="1" zPosition="1">
       <convert type="SevenHDEventName">BothDescriptionsFiltered</convert>
     </widget>
     <widget backgroundColor="SevenFontBackground" font="Regular2;24" foregroundColor="SevenFont2" halign="right" name="date" position="1060,670" size="180,30" transparent="1" />
@@ -102,7 +102,7 @@
     <widget backgroundColor="SevenFontBackground" font="Regular2;24" foregroundColor="SevenFont2" halign="left" position="636,66" render="Label" size="600,32" source="Event" transparent="1">
       <convert type="SevenHDEventName">Name</convert>
     </widget>
-    <widget backgroundColor="SevenFontBackground" font="Regular;24" foregroundColor="SevenFont1" position="450,98" render="SevenHDRunningText" options="movetype=running,startpoint=0,direction=top,steptime=125,repeat=5,startdelay=10000,wrap,always=0" size="790,176" source="Event" transparent="1" valign="top" zPosition="1">
+    <widget backgroundColor="SevenFontBackground" font="Regular;24" foregroundColor="SevenFont1" position="450,98" render="SevenHDRunningText" options="movetype=running,startpoint=0,direction=top,steptime=125,repeat=5,startdelay=2000,wrap,always=0" size="790,176" source="Event" transparent="1" valign="top" zPosition="1">
       <convert type="SevenHDEventName">BothDescriptionsFiltered</convert>
     </widget>
     <widget backgroundColor="SevenFontBackground" foregroundColor="white" name="timeline_text" position="5,285" size="1230,30" transparent="1" />
@@ -132,7 +132,7 @@
     <widget backgroundColor="SevenFontBackground" font="Regular2;24" foregroundColor="SevenFont2" halign="left" position="636,66" render="Label" size="600,32" source="Event" transparent="1">
       <convert type="SevenHDEventName">Name</convert>
     </widget>
-    <widget backgroundColor="SevenFontBackground" font="Regular;24" foregroundColor="SevenFont1" position="450,98" render="SevenHDRunningText" options="movetype=running,startpoint=0,direction=top,steptime=125,repeat=5,startdelay=10000,wrap,always=0" size="790,176" source="Event" transparent="1" valign="top" zPosition="1">
+    <widget backgroundColor="SevenFontBackground" font="Regular;24" foregroundColor="SevenFont1" position="450,98" render="SevenHDRunningText" options="movetype=running,startpoint=0,direction=top,steptime=125,repeat=5,startdelay=2000,wrap,always=0" size="790,176" source="Event" transparent="1" valign="top" zPosition="1">
       <convert type="SevenHDEventName">BothDescriptionsFiltered</convert>
     </widget>
     <widget CoolBackColor="black" CoolDateColor="white" CoolDateHPos="2" CoolDatePos="70" CoolDateSize="70" CoolDayColor="white" CoolDayHPos="2" CoolDayPos="0" CoolDaySize="50" CoolEventColor="white" CoolEventFont="Regular;24" CoolEventHPos="2" CoolEventPos="500" CoolEventSize="700" CoolFont="Regular;24" CoolRecAlarmCol="yellow" CoolRecColor="red" CoolRecEventBackColor="black" CoolServiceColor="white" CoolServiceFont="Regular;24" CoolServiceHPos="2" CoolServicePos="230" CoolServiceSize="280" CoolTimeColor="white" CoolTimeHPos="2" CoolTimePos="150" CoolTimeSize="70" backgroundColor="SevenFontBackground" itemHeight="30" name="list" position="45,300" size="1190,330" transparent="1" zPosition="3" />
@@ -153,7 +153,7 @@
     <widget backgroundColor="SevenFontBackground" font="Regular2;24" foregroundColor="SevenFont2" halign="left" position="636,66" render="Label" size="600,32" source="Event" transparent="1">
       <convert type="SevenHDEventName">Name</convert>
     </widget>
-    <widget backgroundColor="SevenFontBackground" font="Regular;24" foregroundColor="SevenFont1" position="450,98" render="SevenHDRunningText" options="movetype=running,startpoint=0,direction=top,steptime=125,repeat=5,startdelay=10000,wrap,always=0" size="790,176" source="Event" transparent="1" valign="top" zPosition="1">
+    <widget backgroundColor="SevenFontBackground" font="Regular;24" foregroundColor="SevenFont1" position="450,98" render="SevenHDRunningText" options="movetype=running,startpoint=0,direction=top,steptime=125,repeat=5,startdelay=2000,wrap,always=0" size="790,176" source="Event" transparent="1" valign="top" zPosition="1">
       <convert type="SevenHDEventName">BothDescriptionsFiltered</convert>
     </widget>
     <widget CoolCurrentCol="white" CoolBarColor="white" CoolBarHPos="7" CoolBarHigh="17" CoolBarPos="270" CoolBarSize="150" CoolDurationPos="1085" CoolDurationColor="white" CoolDurationSize="105" CoolEventColor="white" CoolEventFont="Regular;24" CoolEventHPos="0" CoolEventPos="440" CoolEventSize="625" CoolFont="Regular;24" CoolRecAlarmCol="yellow" CoolRecColor="red" CoolServiceColor="white" CoolServiceFont="Regular;24" CoolServiceHPos="0" CoolServicePos="5" CoolServiceSize="235" CoolTimeHPos="0" CoolTimePos="265" CoolTimeSize="150" backgroundColor="SevenFontBackground" foregroundColor="white" itemHeight="30" name="list" position="40,300" size="1200,330" transparent="1" zPosition="25" />
@@ -175,7 +175,7 @@
     <widget backgroundColor="SevenFontBackground" font="Regular2;24" foregroundColor="SevenFont2" halign="left" position="636,66" render="Label" size="600,32" source="Event" transparent="1">
       <convert type="SevenHDEventName">Name</convert>
     </widget>
-    <widget backgroundColor="SevenFontBackground" font="Regular;24" foregroundColor="SevenFont1" position="450,98" render="SevenHDRunningText" options="movetype=running,startpoint=0,direction=top,steptime=125,repeat=5,startdelay=10000,wrap,always=0" size="790,176" source="Event" transparent="1" valign="top" zPosition="1">
+    <widget backgroundColor="SevenFontBackground" font="Regular;24" foregroundColor="SevenFont1" position="450,98" render="SevenHDRunningText" options="movetype=running,startpoint=0,direction=top,steptime=125,repeat=5,startdelay=2000,wrap,always=0" size="790,176" source="Event" transparent="1" valign="top" zPosition="1">
       <convert type="SevenHDEventName">BothDescriptionsFiltered</convert>
     </widget>
     <widget backgroundColor="SevenFontBackground" name="timeline_text" position="5,282" size="1230,30" transparent="1" />
@@ -214,7 +214,7 @@
     <widget backgroundColor="SevenFontBackground" font="Regular2;24" foregroundColor="SevenFont2" halign="left" position="202,524" render="Label" size="1055,30" source="Event" transparent="1">
       <convert type="SevenHDEventName">Name</convert>
     </widget>
-    <widget backgroundColor="SevenFontBackground" font="Regular;24" foregroundColor="SevenFont1" position="20,564" render="SevenHDRunningText" options="movetype=running,startpoint=0,direction=top,steptime=125,repeat=5,startdelay=10000,wrap,always=0" size="1240,92" source="Event" transparent="1" zPosition="1">
+    <widget backgroundColor="SevenFontBackground" font="Regular;24" foregroundColor="SevenFont1" position="20,564" render="SevenHDRunningText" options="movetype=running,startpoint=0,direction=top,steptime=125,repeat=5,startdelay=2000,wrap,always=0" size="1240,92" source="Event" transparent="1" zPosition="1">
       <convert type="SevenHDEventName">BothDescriptionsFiltered</convert>
     </widget>
     <widget backgroundColor="SevenFontBackground" font="Regular2;24" foregroundColor="SevenFont2" halign="right" name="date" position="1060,670" size="180,30" transparent="1" />
@@ -237,7 +237,7 @@
     <widget backgroundColor="SevenFontBackground" font="Regular2;24" foregroundColor="SevenFont2" halign="center" position="50,309" render="Label" size="434,30" source="Event" transparent="1">
       <convert type="SevenHDEventName">Name</convert>
     </widget>
-    <widget backgroundColor="SevenFontBackground" font="Regular;20" foregroundColor="SevenFont1" halign="center" position="50,342" size="434,170" source="Event" render="SevenHDRunningText" options="movetype=running,startpoint=0,direction=top,steptime=125,repeat=5,startdelay=10000,wrap,always=0" transparent="1" zPosition="1">
+    <widget backgroundColor="SevenFontBackground" font="Regular;20" foregroundColor="SevenFont1" halign="center" position="50,342" size="434,170" source="Event" render="SevenHDRunningText" options="movetype=running,startpoint=0,direction=top,steptime=125,repeat=5,startdelay=2000,wrap,always=0" transparent="1" zPosition="1">
       <convert type="SevenHDEventName">BothDescriptionsFiltered</convert>
     </widget>
     <widget CoolBar="0" CoolBarColor="white" CoolCurrentCol="white" CoolDurationColor="white" CoolDurationPos="666" CoolDurationSize="70" CoolEventColor="white" CoolEventFont="Regular;22" CoolEventHPos="3" CoolEventPos="240" CoolEventSize="350" CoolFont="Regular;25" CoolMarkerHPos="1" CoolMarkerPicHPos="2" CoolMarkerPicPos="2" CoolMarkerPos="140" CoolPico="28" CoolPicoHPos="1" CoolRecAlarmCol="yellow" CoolRecColor="red" CoolServiceColor="white" CoolServiceFont="Regular;24" CoolServiceHPos="0" CoolServicePos="2" CoolServiceSize="210" CoolTime="1" CoolTimeHPos="3" CoolTimePos="580" CoolTimeSize="130" CoolTunerCol="white" backgroundColor="SevenBackground" foregroundColor="SevenFont1" itemHeight="32" selectionPixmap="SevenHD/selpic/1240x32.png" name="list" position="515,70" size="750,580" transparent="1" zPosition="25" />
