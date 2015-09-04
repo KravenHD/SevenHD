@@ -1,4 +1,4 @@
-version = '3.3.5'
+version = '3.3.62'
 import os
 import re
 import time
@@ -73,6 +73,7 @@ except ImportError:
 config.plugins.SevenHD.version = ConfigText(default=version, fixed_size=False)
 config.plugins.SevenHD.AutoUpdate = ConfigYesNo(default = False)
 config.plugins.SevenHD.AutoUpdateInfo = ConfigYesNo(default = False)
+config.plugins.SevenHD.AutoUpdatePluginStart = ConfigYesNo(default = False)
 ###########################################
 config.plugins.SevenHD.FontStyle = ConfigSelection(default="noto", choices = [
 				("Noto", _("NotoSans-Regular"))
@@ -183,6 +184,11 @@ config.plugins.SevenHD.Startdelay = ConfigSelection(default="startdelay=2000", c
 				("startdelay=6000", _("6 sec")),
 				("startdelay=8000", _("8 sec")),
 				("startdelay=10000", _("10 sec"))
+				])
+config.plugins.SevenHD.Steptime = ConfigSelection(default="steptime=90", choices = [
+				("steptime=150", _("low")),
+				("steptime=90", _("standard")),
+				("steptime=30", _("high"))
 				])
 config.plugins.SevenHD.VolumeStyle = ConfigSelection(default="volumestyle-original", choices = [
 				("volumestyle-original", _("original")),
@@ -453,12 +459,19 @@ config.plugins.SevenHD.CoolTVGuide = ConfigSelection(default="cooltv-minitv", ch
 				("cooltv-picon", _("picon"))
 				])
 				
-config.plugins.SevenHD.EMCStyle = ConfigSelection(default="emc-bigcover", choices = [
-				("emc-nocover", _("no cover")),
-				("emc-smallcover", _("small cover")),
-				("emc-bigcover", _("big cover")),
-				("emc-verybigcover", _("very big cover")),
-				("emc-minitv", _("miniTV"))
+config.plugins.SevenHD.EMCStyle = ConfigSelection(default="emcbigcover", choices = [
+				("emcnocover", _("no cover")),
+				("emcsmallcover", _("small cover")),
+				("emcbigcover", _("big cover")),
+				("emcverybigcover", _("very big cover")),
+				("emcminitv", _("miniTV"))
+				])
+				
+config.plugins.SevenHD.MovieSelectionStyle = ConfigSelection(default="movieselectionnocover", choices = [
+				("movieselectionnocover", _("no cover")),
+				("movieselectionsmallcover", _("small cover")),
+				("movieselectionbigcover", _("big cover")),
+				("movieselectionminitv", _("miniTV"))
 				])
 				
 config.plugins.SevenHD.debug = ConfigYesNo(default = False)
@@ -474,6 +487,7 @@ myConfigList = [('config.plugins.SevenHD.Image.value = "' + str(config.plugins.S
                 ('config.plugins.SevenHD.ButtonStyle.value = "' + str(config.plugins.SevenHD.ButtonStyle.value) + '"'),
                 ('config.plugins.SevenHD.RunningText.value = "' + str(config.plugins.SevenHD.RunningText.value) + '"'),
                 ('config.plugins.SevenHD.Startdelay.value = "' + str(config.plugins.SevenHD.Startdelay.value) + '"'),
+                ('config.plugins.SevenHD.Steptime.value = "' + str(config.plugins.SevenHD.Steptime.value) + '"'),
                 ('config.plugins.SevenHD.VolumeStyle.value = "' + str(config.plugins.SevenHD.VolumeStyle.value) + '"'),
                 ('config.plugins.SevenHD.Volume.value = "' + str(config.plugins.SevenHD.Volume.value) + '"'),
                 ('config.plugins.SevenHD.NumberZapExt.value = "' + str(config.plugins.SevenHD.NumberZapExt.value) + '"'),
@@ -537,4 +551,5 @@ myConfigList = [('config.plugins.SevenHD.Image.value = "' + str(config.plugins.S
                 ('config.plugins.SevenHD.ChannelColorChannelNumber.value = "' + str(config.plugins.SevenHD.ChannelColorChannelNumber.value) + '"'),
                 ('config.plugins.SevenHD.ChannelColorEvent.value = "' + str(config.plugins.SevenHD.ChannelColorEvent.value) + '"'),
                 ('config.plugins.SevenHD.CoolTVGuide.value = "' + str(config.plugins.SevenHD.CoolTVGuide.value) + '"'),
-                ('config.plugins.SevenHD.EMCStyle.value = "' + str(config.plugins.SevenHD.EMCStyle.value) + '"')]
+                ('config.plugins.SevenHD.EMCStyle.value = "' + str(config.plugins.SevenHD.EMCStyle.value) + '"'),
+                ('config.plugins.SevenHD.MovieSelectionStyle.value = "' + str(config.plugins.SevenHD.MovieSelectionStyle.value) + '"')]

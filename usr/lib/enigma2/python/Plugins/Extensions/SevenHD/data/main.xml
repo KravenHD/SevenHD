@@ -257,7 +257,7 @@
     <widget backgroundColor="SevenFontBackground" font="Regular; 22" halign="center" name="more_text" position="370,87" size="150,30" text="MORE" transparent="1" zPosition="10" />
     <widget font="Regular; 22" halign="right" name="date" backgroundColor="SevenFontBackground" position="960,87" size="250,30" transparent="1" valign="center" />
     <widget backgroundColor="SevenFontBackground" itemHeight="30" name="list" position="50,142" size="1180,360" transparent="1" />
-    <widget backgroundColor="SevenFontBackground" font="Regular2; 22" foregroundColor="SevenFont2" halign="left" position="50,528" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=2,oneshot=1" size="1180,110" source="Event" zPosition="-8">
+    <widget backgroundColor="SevenFontBackground" font="Regular2; 22" foregroundColor="SevenFont2" halign="left" position="50,528" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,steptime=90,wrap=1,always=0,repeat=2,oneshot=1" size="1180,110" source="Event" zPosition="-8">
       <convert type="SevenHDEventName">BothDescriptionsFiltered</convert>
     </widget>
     <panel name="template_menu_full_button" />
@@ -279,7 +279,7 @@
     <widget backgroundColor="SevenFont1" borderWidth="0" position="146,138" render="Progress" size="990,5" source="Event" transparent="1" zPosition="20" foregroundColor="SevenProgress" pixmap="SevenHD/progress/progress990.png">
       <convert type="SevenHDEventTime">Progress</convert>
     </widget>
-    <widget backgroundColor="SevenFontBackground" font="Regular2; 19" position="70,165" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=2,oneshot=1" size="1153,120" source="Event" valign="top" zPosition="0" foregroundColor="SevenFont2">
+    <widget backgroundColor="SevenFontBackground" font="Regular2; 19" position="70,165" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,steptime=90,wrap=1,always=0,repeat=2,oneshot=1" size="1153,120" source="Event" valign="top" zPosition="0" foregroundColor="SevenFont2">
       <convert type="SevenHDEventName">BothDescriptionsFiltered</convert>
     </widget>
     <eLabel backgroundColor="SevenLine" position="146,140" size="990,1" />
@@ -311,7 +311,7 @@
     <widget source="Event" render="Progress" position="101,117" size="990,5" borderWidth="0" backgroundColor="SevenFontBackground" foregroundColor="SevenProgress" transparent="1" zPosition="1" pixmap="SevenHD/progress/progress990.png">
       <convert type="SevenHDEventTime">Progress</convert>
     </widget>
-    <widget backgroundColor="SevenFontBackground" transparent="1" font="Regular2; 21" position="25,141" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=2,oneshot=1" size="1230,108" source="Event" valign="top" zPosition="1" foregroundColor="SevenFont2">
+    <widget backgroundColor="SevenFontBackground" transparent="1" font="Regular2; 21" position="25,141" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,steptime=90,wrap=1,always=0,repeat=2,oneshot=1" size="1230,108" source="Event" valign="top" zPosition="1" foregroundColor="SevenFont2">
       <convert type="SevenHDEventName">ExtendedDescription</convert>
     </widget>
     <eLabel backgroundColor="SevenFont1" position="101,119" size="990,1" />
@@ -338,7 +338,7 @@
     <widget source="Event" render="Progress" position="101,123" size="535,5" borderWidth="0" backgroundColor="SevenFontBackground" foregroundColor="SevenProgress" transparent="1" zPosition="1" pixmap="SevenHD/progress/progress535.png">
       <convert type="SevenHDEventTime">Progress</convert>
     </widget>
-    <widget source="Event" render="SevenHDRunningText" transparent="1" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=2,oneshot=1" position="25,145" size="880,104" font="Regular2; 19" backgroundColor="SevenFontBackground" foregroundColor="SevenFont1" valign="top" zPosition="0">
+    <widget source="Event" render="SevenHDRunningText" transparent="1" options="movetype=running,direction=top,startpoint=0,startdelay=2000,steptime=90,wrap=1,always=0,repeat=2,oneshot=1" position="25,145" size="880,104" font="Regular2; 19" backgroundColor="SevenFontBackground" foregroundColor="SevenFont1" valign="top" zPosition="0">
       <convert type="SevenHDEventName">ExtendedDescription</convert>
     </widget>
     <widget name="timeline_text" position="25,273" size="1230,25" selectionDisabled="1" transparent="1" backgroundColor="SevenFontBackground" />
@@ -386,7 +386,7 @@
   <!-- QuickEPG -->
   <screen name="QuickEPG" flags="wfNoBorder" position="0,435" size="1280,285" title="InfoBar" backgroundColor="SevenBackground">
     <ePixmap pixmap="SevenHD/back/menumain.png" position="0,0" size="1280,285" alphatest="blend" zPosition="-8" />
-    <widget source="Event" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,wrap=1,always=0,repeat=2,oneshot=1" position="761,95" size="498,109" font="Regular;21" backgroundColor="SevenFontBackground" foregroundColor="SevenFont1" transparent="1" valign="top" zPosition="1">
+    <widget source="Event" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,steptime=90,wrap=1,always=0,repeat=2,oneshot=1" position="761,95" size="498,109" font="Regular;21" backgroundColor="SevenFontBackground" foregroundColor="SevenFont1" transparent="1" valign="top" zPosition="1">
       <convert type="SevenHDEventName">ExtendedDescription</convert>
     </widget>
     <widget source="Service" render="Label" position="87,19" size="595,40" font="Regular; 32" valign="center" noWrap="1" backgroundColor="SevenFontBackground" transparent="1">

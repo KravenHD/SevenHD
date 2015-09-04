@@ -124,18 +124,22 @@ class MainSettings(ConfigListScreen, Screen):
         list.append(getConfigListEntry(_("image"), config.plugins.SevenHD.Image, 'IMAGE'))
         list.append(getConfigListEntry(_("buttons"), config.plugins.SevenHD.ButtonStyle, 'Button'))
         list.append(getConfigListEntry(_("plugin icons"), config.plugins.SevenHD.IconStyle, 'Icons'))
-        list.append(getConfigListEntry(_("running text"), config.plugins.SevenHD.RunningText, 'RunningText'))
-        if config.plugins.SevenHD.RunningText.value == 'movetype=running':
-           list.append(getConfigListEntry(_("startdelay"), config.plugins.SevenHD.Startdelay, 'Delay'))
         list.append(getConfigListEntry(_("volume style"), config.plugins.SevenHD.VolumeStyle))
         list.append(getConfigListEntry(_("progress-/volumebar"), config.plugins.SevenHD.Progress, 'Progress'))
+        list.append(getConfigListEntry(_('_____________________________________________running text ____________________________________________'), ))
+        list.append(getConfigListEntry(_("activate"), config.plugins.SevenHD.RunningText, 'RunningText'))
+        if config.plugins.SevenHD.RunningText.value == 'movetype=running':
+           list.append(getConfigListEntry(_("startdelay"), config.plugins.SevenHD.Startdelay, 'Delay'))
+           list.append(getConfigListEntry(_("steptime"), config.plugins.SevenHD.Steptime, 'Delay'))
         list.append(getConfigListEntry(_('_____________________________________________transparency ____________________________________________'), ))
         list.append(getConfigListEntry(_("main window"), config.plugins.SevenHD.BackgroundColorTrans))
         list.append(getConfigListEntry(_("right window"), config.plugins.SevenHD.BackgroundRightColorTrans))
         list.append(getConfigListEntry(_('_____________________________________________ autoupdate _____________________________________________'), ))
         list.append(getConfigListEntry(_("activate"), config.plugins.SevenHD.AutoUpdate))
         list.append(getConfigListEntry(_("autoupdate infobar info"), config.plugins.SevenHD.AutoUpdateInfo))
+        list.append(getConfigListEntry(_("autoupdate plugin startinfo"), config.plugins.SevenHD.AutoUpdatePluginStart))
         list.append(getConfigListEntry(_('______________________________________________ plugins _______________________________________________'), ))
+        list.append(getConfigListEntry(_("Movie Selection"), config.plugins.SevenHD.MovieSelectionStyle))
         if not fileExists(PLUGIN_PATH + "/Extensions/EnhancedMovieCenter/plugin.pyo"):
            list.append(getConfigListEntry(_('{:<114}{:>1}'.format('EnhancedMovieCenter','not installed')), ))
         else:   
@@ -194,11 +198,14 @@ class MainSettings(ConfigListScreen, Screen):
               return MAIN_IMAGE_PATH + str("none.jpg")
            if returnValue == 'activate' or returnValue == 'Aktivieren' and config.plugins.SevenHD.AutoUpdate.value == True:
               return MAIN_IMAGE_PATH + str("True.jpg")
-           if returnValue == 'autoupdate infobar info' or returnValue == 'Updateinformationen in Infobar anzeigen' and config.plugins.SevenHD.AutoUpdateInfo.value == False:
+           if returnValue == 'autoupdate infobar info' or returnValue == 'Updateinformationen in Infobar' and config.plugins.SevenHD.AutoUpdateInfo.value == False:
               return MAIN_IMAGE_PATH + str("none.jpg")
-           if returnValue == 'autoupdate infobar info' or returnValue == 'Updateinformationen in Infobar anzeigen' and config.plugins.SevenHD.AutoUpdateInfo.value == True:
+           if returnValue == 'autoupdate infobar info' or returnValue == 'Updateinformationen in Infobar' and config.plugins.SevenHD.AutoUpdateInfo.value == True:
               return MAIN_IMAGE_PATH + str("True.jpg") 
-           
+           if returnValue == 'autoupdate plugin startinfo' or returnValue == 'Updateinformationen beim Pluginstart' and config.plugins.SevenHD.AutoUpdatePluginStart.value == False:
+              return MAIN_IMAGE_PATH + str("none.jpg")
+           if returnValue == 'autoupdate plugin startinfo' or returnValue == 'Updateinformationen beim Pluginstart' and config.plugins.SevenHD.AutoUpdatePluginStart.value == True:
+              return MAIN_IMAGE_PATH + str("True.jpg")
            self.debug('3: Missing Picture: ' + MAIN_IMAGE_PATH + str(returnValue) + '.jpg\n')
            ## weather
            return MAIN_IMAGE_PATH + str("924938.jpg")
@@ -239,14 +246,17 @@ class MainSettings(ConfigListScreen, Screen):
     def defaults(self):
         self.setInputToDefault(config.plugins.SevenHD.AutoUpdate)
         self.setInputToDefault(config.plugins.SevenHD.AutoUpdateInfo)
+        self.setInputToDefault(config.plugins.SevenHD.AutoUpdatePluginStart)
         self.setInputToDefault(config.plugins.SevenHD.Image)
         self.setInputToDefault(config.plugins.SevenHD.ButtonStyle)
         self.setInputToDefault(config.plugins.SevenHD.IconStyle)
         self.setInputToDefault(config.plugins.SevenHD.RunningText)
         self.setInputToDefault(config.plugins.SevenHD.Startdelay)
+        self.setInputToDefault(config.plugins.SevenHD.Steptime)
         self.setInputToDefault(config.plugins.SevenHD.Volume)
         self.setInputToDefault(config.plugins.SevenHD.NumberZapExt)
         self.setInputToDefault(config.plugins.SevenHD.EMCStyle)
+        self.setInputToDefault(config.plugins.SevenHD.MovieSeletionStyle)
         self.setInputToDefault(config.plugins.SevenHD.CoolTVGuide)
         self.setInputToDefault(config.plugins.SevenHD.BackgroundColorTrans)
         self.setInputToDefault(config.plugins.SevenHD.BackgroundRightColorTrans)
