@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 #######################################################################
 #
 #    MyMetrix
@@ -473,6 +474,11 @@ class SevenHD(Screen):
 		self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.EMCStyle.value + XML)
                 self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.EMCStyle.value + XML)        
                 
+                
+                #MOVIESELECTIONSTYLE
+		self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.MovieSelectionStyle.value + XML)
+                self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.MovieSelectionStyle.value + XML)        
+                
                 #NumberZapExtStyle
 		self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.NumberZapExt.value + XML)
                 self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.NumberZapExt.value + XML)       
@@ -621,13 +627,18 @@ class SevenHD(Screen):
            options.extend(((_("Install CoolTVGuide?"), boundFunction(self.Open_Setup, "enigma2-plugin-extensions-cooltvguide")),))
         
         options.extend(((_("Share my Skin"), boundFunction(self.Share_Skin)),))
-        
-        options.extend(((_("Information"), boundFunction(self.send_to_msg_box, "Information")),))
+        options.extend(((_("ChangeLog"), boundFunction(self.ChangeLog)),))
+        options.extend(((_("Information"), boundFunction(self.send_to_msg_box, "Thanks to\n\xc3\xb6rlgrey, TBX, stony272 and Philipswalther")),))
         self.session.openWithCallback(self.menuCallback, ChoiceBox,list = options)
             
     def menuCallback(self, ret):
         ret and ret[1]()
-		
+    
+    def ChangeLog(self):
+	os.popen("wget 'http://www.gigablue-support.org/skins/SevenHD/update/SevenHDChangeLog.txt' -O /tmp/SevenHDChangeLog.txt")
+        if fileExists("/tmp/SevenHDChangeLog.txt"): 
+           self.session.open(Console, _("Show Debug Log"), cmdlist=[("cat /tmp/SevenHDChangeLog.txt")])
+	
     def send_to_msg_box(self, my_msg):
         self.session.open(MessageBox,_('%s' % str(my_msg)), MessageBox.TYPE_INFO)
     
@@ -712,9 +723,10 @@ def main(session, **kwargs):
         updateInstance = None
         session.open(SevenHD)
         
-        global updateInstance
-        if updateInstance is None:
-           updateInstance = Update(session)
+        if config.plugins.SevenHD.AutoUpdatePluginStart.value or config.plugins.SevenHD.AutoUpdate.value:
+           global updateInstance
+           if updateInstance is None:
+              updateInstance = Update(session)
 
 def Plugins(**kwargs):
 	screenwidth = getDesktop(0).size().width()
