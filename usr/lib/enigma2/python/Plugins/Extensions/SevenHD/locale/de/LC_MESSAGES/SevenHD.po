@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "POT-Creation-Date: 2015-08-12 13:30+0200\n"
-"PO-Revision-Date: 2015-09-03 00:11+0200\n"
+"PO-Revision-Date: 2015-09-03 23:30+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: de_DE\n"
@@ -735,6 +735,9 @@ msgstr "Image"
 msgid "buttons"
 msgstr "Farbe Buttons"
 
+msgid "_____________________________________________running text ____________________________________________"
+msgstr "________________________________________________ Lauftext ___________________________________________"
+
 #: MainSettings.py:123
 msgid "running text"
 msgstr "Lauftext"
@@ -784,7 +787,7 @@ msgid "activate"
 msgstr "Aktivieren"
 
 msgid "autoupdate infobar info"
-msgstr "Updateinformationen in Infobar anzeigen"
+msgstr "Updateinformationen in Infobar"
 
 #: MainSettings.py:129
 msgid "______________________________________________ plugins _______________________________________________"
@@ -1451,6 +1454,12 @@ msgstr "Zerkratztes Metall"
 
 msgid "stone"
 msgstr "Stein"
+
+msgid "steptime"
+msgstr "Geschwindigkeit"
+
+msgid "autoupdate plugin startinfo"
+msgstr "Updateinformationen beim Pluginstart"
 
 #~ msgid " infobar extras "
 #~ msgstr "Infobar Extras"
