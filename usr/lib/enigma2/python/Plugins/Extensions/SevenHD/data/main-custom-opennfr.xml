@@ -1,30 +1,8 @@
  
 <!-- /* main-custom-nfr -->
   <!-- About -->
-  <screen backgroundColor="transparent" flags="wfNoBorder" name="About" position="0,0" size="1280,720" title="About">
-    <widget backgroundColor="SevenFontBackground" font="Regular2; 26" position="70,71" render="Label" size="700,40" source="EnigmaVersion" transparent="1" />
-    <widget backgroundColor="SevenFontBackground" font="Regular2; 26" position="70,111" render="Label" size="700,40" source="ImageVersion" transparent="1" />
-    <widget backgroundColor="SevenFontBackground" font="Regular2; 26" position="70,151" render="Label" size="700,40" source="FPVersion" transparent="1" />
-    <widget backgroundColor="SevenFontBackground" font="Regular2; 26" position="70,191" render="Label" size="700,40" source="TunerHeader" transparent="1" />
-    <widget backgroundColor="SevenFontBackground" font="Regular2; 24" position="70,231" render="Label" size="700,40" source="Tuner0" transparent="1" />
-    <widget backgroundColor="SevenFontBackground" font="Regular2; 24" position="70,271" render="Label" size="700,40" source="Tuner1" transparent="1" />
-    <widget backgroundColor="SevenFontBackground" font="Regular2; 24" position="70,311" render="Label" size="700,40" source="Tuner2" transparent="1" />
-    <widget backgroundColor="SevenFontBackground" font="Regular2; 24" position="70,351" render="Label" size="700,40" source="Tuner3" transparent="1" />
-    <eLabel backgroundColor="SevenFontBackground" font="Regular2; 26" position="69,441" size="700,40" text="Support for Image: " transparent="1" />
-    <eLabel backgroundColor="SevenFontBackground" font="Regular2; 26" position="69,480" size="700,40" text="www.nachtfalke.biz" transparent="1" />
-    <widget backgroundColor="SevenFontBackground" font="Regular2; 26" position="70,520" render="Label" size="700,40" source="HDDHeader" transparent="1" />
-    <widget backgroundColor="SevenFontBackground" font="Regular2; 24" position="70,560" render="Label" size="700,65" source="hddA" transparent="1" />
-    <panel name="template_menu_left" />
-  </screen>
-  <!-- AboutOE -->
-  <screen name="AboutOE" position="0,0" size="1280,720" title="About" flags="wfNoBorder" backgroundColor="transparent">
-    <widget source="lab1" render="Label" position="70,123" size="369,35" font="Regular;30" backgroundColor="SevenFontBackground" transparent="1" zPosition="2" />
-    <widget source="lab2" render="Label" position="70,173" size="370,25" font="Regular;19" backgroundColor="SevenFontBackground" transparent="1" zPosition="2" />
-    <widget source="lab3" render="Label" position="70,213" size="369,25" font="Regular;19" backgroundColor="SevenFontBackground" transparent="1" zPosition="1" />
-    <eLabel text="OPEN SOURCE" position="470,450" size="353,28" font="Regular2; 22" backgroundColor="SevenFontBackground" transparent="1" zPosition="1" foregroundColor="SevenFont2" />
-    <eLabel text="https://github.com/carlo0815?tab=repositories" position="470,493" size="352,28" font="Regular2; 19" backgroundColor="SevenFontBackground" transparent="1" zPosition="1" foregroundColor="SevenFont2" />
-    <eLabel text="https://github.com/oe-alliance" position="470,536" size="354,28" font="Regular2; 19" transparent="1" backgroundColor="SevenFontBackground" zPosition="1" foregroundColor="SevenFont2" />
-    <widget name="AboutScrollLabel" position="70,253" size="369,310" font="Regular;20" transparent="1" backgroundColor="SevenFontBackground" zPosition="1" />
+  <screen name="About" position="0,0" size="1280,720" title="About" flags="wfNoBorder" backgroundColor="transparent">
+    <widget name="AboutScrollLabel" position="70,80" size="708,540" font="Regular;20" transparent="1" backgroundColor="SevenFontBackground" zPosition="1" />
     <panel name="template_menu_left" />
   </screen>
   <!-- Devices -->
