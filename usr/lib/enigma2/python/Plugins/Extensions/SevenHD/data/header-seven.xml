@@ -12188,7 +12188,7 @@
     <ePixmap pixmap="SevenHD/back/ibone.png" position="14,533" size="1250,168" alphatest="blend" zPosition="-8" />
     <ePixmap pixmap="SevenHD/back/ibtwo.png" position="250,533" size="825,129" alphatest="blend" zPosition="-7" />
   </screen>
-  <screen name="template_menu_ibo4">
+  <screen name="template_menu_ibzz4">
   <widget source="session.CurrentService" render="Pixmap" pixmap="SevenHD/update.png" position="1240,679" size="20,20" zPosition="3" alphatest="blend">
       <convert type="SevenHDUpdate">Update</convert>
       <convert type="ConditionalShowHide" />
@@ -12233,8 +12233,8 @@
   <widget font="Regular2;36" halign="center" valign="center" noWrap="1" position="215,609" render="SevenHDRunningText" options="movetype=running,startpoint=0,startdelay=2000,steptime=90,wrap=0,always=0,repeat=2,oneshot=1" size="730,48" source="session.Event_Next" backgroundColor="SevenFontBackgroundIB2" transparent="1" zPosition="1" foregroundColor="SevenNextIB">
     <convert type="SevenHDEventName">Name</convert>
   </widget>
-  <widget source="session.CurrentService" render="Label" zPosition="3" position="762,671" size="127,22" font="Regular; 19" halign="center" backgroundColor="SevenFontBackgroundIB1" foregroundColor="SevenSNRIB" transparent="1">
-  <convert type="SevenHDExtraInfo2">Resolution</convert>
+  <widget source="session.CurrentService" render="Label" zPosition="3" position="751,671" size="150,22" font="Regular; 19" halign="center" backgroundColor="SevenFontBackgroundIB1" foregroundColor="SevenSNRIB" transparent="1">
+  <convert type="SevenHDExtraInfo2">ResolutionString</convert>
 </widget>
   
   
@@ -12388,8 +12388,8 @@
   <widget font="Regular2;36" halign="center" valign="center" noWrap="1" position="215,609" render="SevenHDRunningText" options="movetype=running,startpoint=0,startdelay=2000,steptime=90,wrap=0,always=0,repeat=2,oneshot=1" size="730,48" source="session.Event_Next" backgroundColor="SevenFontBackgroundIB2" transparent="1" zPosition="1" foregroundColor="SevenNextIB">
     <convert type="SevenHDEventName">Name</convert>
   </widget>
-  <widget source="session.CurrentService" render="Label" zPosition="3" position="762,671" size="127,22" font="Regular; 19" halign="center" backgroundColor="SevenFontBackgroundIB1" foregroundColor="SevenSNRIB" transparent="1">
-  <convert type="SevenHDExtraInfo2">Resolution</convert>
+  <widget source="session.CurrentService" render="Label" zPosition="3" position="751,671" size="150,22" font="Regular; 19" halign="center" backgroundColor="SevenFontBackgroundIB1" foregroundColor="SevenSNRIB" transparent="1">
+  <convert type="SevenHDExtraInfo2">ResolutionString</convert>
 </widget>
   
   
@@ -12568,8 +12568,8 @@
   <widget font="Regular2;36" halign="center" valign="center" noWrap="1" position="215,609" render="SevenHDRunningText" options="movetype=running,startpoint=0,startdelay=2000,steptime=90,wrap=0,always=0,repeat=2,oneshot=1" size="730,48" source="session.Event_Next" backgroundColor="SevenFontBackgroundIB2" transparent="1" zPosition="1" foregroundColor="SevenNextIB">
     <convert type="SevenHDEventName">Name</convert>
   </widget>
-  <widget source="session.CurrentService" render="Label" zPosition="3" position="762,671" size="127,22" font="Regular; 19" halign="center" backgroundColor="SevenFontBackgroundIB1" foregroundColor="SevenSNRIB" transparent="1">
-  <convert type="SevenHDExtraInfo2">Resolution</convert>
+  <widget source="session.CurrentService" render="Label" zPosition="3" position="751,671" size="150,22" font="Regular; 19" halign="center" backgroundColor="SevenFontBackgroundIB1" foregroundColor="SevenSNRIB" transparent="1">
+  <convert type="SevenHDExtraInfo2">ResolutionString</convert>
 </widget>
   
   
@@ -12753,8 +12753,8 @@
   <widget font="Regular2;36" halign="center" valign="center" noWrap="1" position="215,609" render="SevenHDRunningText" options="movetype=running,startpoint=0,startdelay=2000,steptime=90,wrap=0,always=0,repeat=2,oneshot=1" size="730,48" source="session.Event_Next" backgroundColor="SevenFontBackgroundIB2" transparent="1" zPosition="1" foregroundColor="SevenNextIB">
     <convert type="SevenHDEventName">Name</convert>
   </widget>
-  <widget source="session.CurrentService" render="Label" zPosition="3" position="762,671" size="127,22" font="Regular; 19" halign="center" backgroundColor="SevenFontBackgroundIB1" foregroundColor="SevenSNRIB" transparent="1">
-  <convert type="SevenHDExtraInfo2">Resolution</convert>
+  <widget source="session.CurrentService" render="Label" zPosition="3" position="751,671" size="150,22" font="Regular; 19" halign="center" backgroundColor="SevenFontBackgroundIB1" foregroundColor="SevenSNRIB" transparent="1">
+  <convert type="SevenHDExtraInfo2">ResolutionString</convert>
 </widget>
   
   
@@ -12952,8 +12952,8 @@
     <widget font="Regular2;36" halign="center" valign="center" noWrap="1" position="215,609" render="SevenHDRunningText" options="movetype=running,startpoint=0,startdelay=2000,steptime=90,wrap=0,always=0,repeat=2,oneshot=1" size="730,48" source="session.Event_Next" backgroundColor="black" transparent="1" zPosition="1" foregroundColor="SevenNextIB">
       <convert type="SevenHDEventName">Name</convert>
     </widget>
-    <widget source="session.CurrentService" render="Label" zPosition="3" position="762,671" size="127,22" font="Regular; 19" halign="center" backgroundColor="SevenFontBackgroundIB1" foregroundColor="SevenSNRIB" transparent="1">
-  <convert type="SevenHDExtraInfo2">Resolution</convert>
+    <widget source="session.CurrentService" render="Label" zPosition="3" position="751,671" size="150,22" font="Regular; 19" halign="center" backgroundColor="SevenFontBackgroundIB1" foregroundColor="SevenSNRIB" transparent="1">
+  <convert type="SevenHDExtraInfo2">ResolutionString</convert>
 </widget>
     
     
@@ -13099,8 +13099,8 @@
     <widget alphatest="blend" position="20,482" render="SevenHDXPicon" size="400,170" source="session.CurrentService" transparent="1" zPosition="4">
       <convert type="ServiceName">Reference</convert>
     </widget>
-    <widget source="session.CurrentService" render="Label" zPosition="3" position="450,671" size="127,22" font="Regular; 19" halign="center" backgroundColor="SevenFontBackgroundIB1" foregroundColor="SevenSNRIB" transparent="1">
-  <convert type="SevenHDExtraInfo2">Resolution</convert>
+    <widget source="session.CurrentService" render="Label" zPosition="3" position="435,671" size="150,22" font="Regular; 19" halign="center" backgroundColor="SevenFontBackgroundIB1" foregroundColor="SevenSNRIB" transparent="1">
+  <convert type="SevenHDExtraInfo2">ResolutionString</convert>
 </widget>
     
     
@@ -13276,8 +13276,8 @@
   <widget alphatest="blend" position="20,482" render="SevenHDXPicon" size="400,170" source="session.CurrentService" transparent="1" zPosition="4">
     <convert type="ServiceName">Reference</convert>
   </widget>
-  <widget source="session.CurrentService" render="Label" zPosition="3" position="450,671" size="127,22" font="Regular; 19" halign="center" backgroundColor="SevenFontBackgroundIB1" foregroundColor="SevenSNRIB" transparent="1">
-  <convert type="SevenHDExtraInfo2">Resolution</convert>
+  <widget source="session.CurrentService" render="Label" zPosition="3" position="435,671" size="150,22" font="Regular; 19" halign="center" backgroundColor="SevenFontBackgroundIB1" foregroundColor="SevenSNRIB" transparent="1">
+  <convert type="SevenHDExtraInfo2">ResolutionString</convert>
 </widget>
   
   
@@ -13459,8 +13459,8 @@
   <widget alphatest="blend" position="20,482" render="SevenHDXPicon" size="400,170" source="session.CurrentService" transparent="1" zPosition="4">
     <convert type="ServiceName">Reference</convert>
   </widget>
-  <widget source="session.CurrentService" render="Label" zPosition="3" position="450,671" size="127,22" font="Regular; 19" halign="center" backgroundColor="SevenFontBackgroundIB1" foregroundColor="SevenSNRIB" transparent="1">
-  <convert type="SevenHDExtraInfo2">Resolution</convert>
+  <widget source="session.CurrentService" render="Label" zPosition="3" position="435,671" size="150,22" font="Regular; 19" halign="center" backgroundColor="SevenFontBackgroundIB1" foregroundColor="SevenSNRIB" transparent="1">
+  <convert type="SevenHDExtraInfo2">ResolutionString</convert>
 </widget>
   
   
@@ -13617,8 +13617,8 @@
   <widget alphatest="blend" position="20,482" render="SevenHDXPicon" size="400,170" source="session.CurrentService" transparent="1" zPosition="4">
     <convert type="ServiceName">Reference</convert>
   </widget>
-  <widget source="session.CurrentService" render="Label" zPosition="3" position="450,671" size="127,22" font="Regular; 19" halign="center" backgroundColor="SevenFontBackgroundIB1" foregroundColor="SevenSNRIB" transparent="1">
-  <convert type="SevenHDExtraInfo2">Resolution</convert>
+  <widget source="session.CurrentService" render="Label" zPosition="3" position="435,671" size="150,22" font="Regular; 19" halign="center" backgroundColor="SevenFontBackgroundIB1" foregroundColor="SevenSNRIB" transparent="1">
+  <convert type="SevenHDExtraInfo2">ResolutionString</convert>
 </widget>
   
   
@@ -13815,8 +13815,8 @@
     <widget alphatest="blend" position="20,482" render="SevenHDXPicon" size="400,170" source="session.CurrentService" transparent="1" zPosition="4">
       <convert type="ServiceName">Reference</convert>
     </widget>
-    <widget source="session.CurrentService" render="Label" zPosition="3" position="450,671" size="127,22" font="Regular; 19" halign="center" backgroundColor="SevenFontBackgroundIB1" foregroundColor="SevenSNRIB" transparent="1">
-  <convert type="SevenHDExtraInfo2">Resolution</convert>
+    <widget source="session.CurrentService" render="Label" zPosition="3" position="435,671" size="150,22" font="Regular; 19" halign="center" backgroundColor="SevenFontBackgroundIB1" foregroundColor="SevenSNRIB" transparent="1">
+  <convert type="SevenHDExtraInfo2">ResolutionString</convert>
 </widget>
     
     
@@ -13956,8 +13956,8 @@
   <widget alphatest="blend" position="20,456" render="SevenHDXPicon" size="400,240" source="session.CurrentService" transparent="1" zPosition="4">
     <convert type="ServiceName">Reference</convert>
   </widget>
-  <widget source="session.CurrentService" render="Label" zPosition="3" position="450,668" size="127,22" font="Regular; 19" halign="center" backgroundColor="SevenFontBackgroundIB2" foregroundColor="SevenSNRIB" transparent="1">
-  <convert type="SevenHDExtraInfo2">Resolution</convert>
+  <widget source="session.CurrentService" render="Label" zPosition="3" position="435,668" size="150,22" font="Regular; 19" halign="center" backgroundColor="SevenFontBackgroundIB2" foregroundColor="SevenSNRIB" transparent="1">
+  <convert type="SevenHDExtraInfo2">ResolutionString</convert>
 </widget>
   
   
@@ -14141,8 +14141,8 @@
   <widget alphatest="blend" position="20,456" render="SevenHDXPicon" size="400,240" source="session.CurrentService" transparent="1" zPosition="4">
     <convert type="ServiceName">Reference</convert>
   </widget>
-  <widget source="session.CurrentService" render="Label" zPosition="3" position="450,668" size="127,22" font="Regular; 19" halign="center" backgroundColor="SevenFontBackgroundIB2" foregroundColor="SevenSNRIB" transparent="1">
-  <convert type="SevenHDExtraInfo2">Resolution</convert>
+  <widget source="session.CurrentService" render="Label" zPosition="3" position="435,668" size="150,22" font="Regular; 19" halign="center" backgroundColor="SevenFontBackgroundIB2" foregroundColor="SevenSNRIB" transparent="1">
+  <convert type="SevenHDExtraInfo2">ResolutionString</convert>
 </widget>
   
   
@@ -14330,8 +14330,8 @@
   <widget alphatest="blend" position="20,456" render="SevenHDXPicon" size="400,240" source="session.CurrentService" transparent="1" zPosition="4">
     <convert type="ServiceName">Reference</convert>
   </widget>
-  <widget source="session.CurrentService" render="Label" zPosition="3" position="450,668" size="127,22" font="Regular; 19" halign="center" backgroundColor="SevenFontBackgroundIB2" foregroundColor="SevenSNRIB" transparent="1">
-  <convert type="SevenHDExtraInfo2">Resolution</convert>
+  <widget source="session.CurrentService" render="Label" zPosition="3" position="435,668" size="150,22" font="Regular; 19" halign="center" backgroundColor="SevenFontBackgroundIB2" foregroundColor="SevenSNRIB" transparent="1">
+  <convert type="SevenHDExtraInfo2">ResolutionString</convert>
 </widget>
   
   
@@ -14509,8 +14509,8 @@
   <widget alphatest="blend" position="20,456" render="SevenHDXPicon" size="400,240" source="session.CurrentService" transparent="1" zPosition="4">
     <convert type="ServiceName">Reference</convert>
   </widget>
-  <widget source="session.CurrentService" render="Label" zPosition="3" position="450,668" size="127,22" font="Regular; 19" halign="center" backgroundColor="SevenFontBackgroundIB2" foregroundColor="SevenSNRIB" transparent="1">
-  <convert type="SevenHDExtraInfo2">Resolution</convert>
+  <widget source="session.CurrentService" render="Label" zPosition="3" position="435,668" size="150,22" font="Regular; 19" halign="center" backgroundColor="SevenFontBackgroundIB2" foregroundColor="SevenSNRIB" transparent="1">
+  <convert type="SevenHDExtraInfo2">ResolutionString</convert>
 </widget>
   
   
@@ -14697,8 +14697,8 @@
     <widget alphatest="blend" position="20,456" render="SevenHDXPicon" size="400,240" source="session.CurrentService" transparent="1" zPosition="4">
       <convert type="ServiceName">Reference</convert>
     </widget>
-    <widget source="session.CurrentService" render="Label" zPosition="3" position="450,668" size="127,22" font="Regular; 19" halign="center" backgroundColor="SevenFontBackgroundIB2" foregroundColor="SevenSNRIB" transparent="1">
-  <convert type="SevenHDExtraInfo2">Resolution</convert>
+    <widget source="session.CurrentService" render="Label" zPosition="3" position="435,668" size="150,22" font="Regular; 19" halign="center" backgroundColor="SevenFontBackgroundIB2" foregroundColor="SevenSNRIB" transparent="1">
+  <convert type="SevenHDExtraInfo2">ResolutionString</convert>
 </widget>
     
     
@@ -14844,9 +14844,7 @@
     <widget alphatest="blend" position="21,484" render="SevenHDXPicon" size="220,132" source="session.CurrentService" transparent="1" zPosition="4">
       <convert type="ServiceName">Reference</convert>
     </widget>
-    <widget source="session.CurrentService" render="Label" zPosition="3" position="622,672" size="127,22" font="Regular; 19" halign="center" backgroundColor="SevenFontBackgroundIB1" foregroundColor="SevenSNRIB" transparent="1">
-  <convert type="SevenHDExtraInfo2">Resolution</convert>
-</widget>
+
     
     
     <widget alphatest="blend" pixmap="SevenHD/buttons/ico_format_on.png" position="340,666" render="Pixmap" size="32,32" source="session.CurrentService" zPosition="2">
@@ -14938,6 +14936,17 @@
     <widget source="session.FrontendStatus" render="Progress" position="21,686" size="259,10" zPosition="4" pixmap="SevenHD/snr.png" transparent="1">
       <convert type="FrontendInfo">AGC</convert>
     </widget>
+	
+<widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 19" halign="center" position="825,670" render="Label" size="75,25" source="session.CurrentService" transparent="1" foregroundColor="SevenSNRIB" valign="center" zPosition="3">
+<convert type="SevenHDExtraInfo2">VideoCodec</convert>
+</widget>
+<widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 19" halign="center" position="621,670" render="Label" size="200,25" source="session.CurrentService" text="Dolby Digital" foregroundColor="SevenSNRIB" transparent="1" valign="center" zPosition="3">
+<convert type="SevenHDExtraInfo2">AudioCodec</convert>
+</widget>
+<widget source="session.CurrentService" render="Label" zPosition="3" position="466,670" size="150,25" font="Regular; 19" halign="center" backgroundColor="SevenFontBackgroundIB1" foregroundColor="SevenSNRIB" transparent="1">
+    <convert type="SevenHDExtraInfo2">ResolutionString</convert>
+  </widget>
+  
 <ePixmap pixmap="SevenHD/back/ibone.png" position="16,534" size="1246,168" alphatest="blend" zPosition="-8" />
 <ePixmap pixmap="SevenHD/back/ibtwo.png" position="290,533" size="785,129" alphatest="blend" zPosition="-7" />
 <ePixmap pixmap="SevenHD/back/ibone.png" position="16,474" size="272,59" alphatest="blend" zPosition="-8" />
@@ -15005,9 +15014,15 @@
     <widget alphatest="blend" position="21,484" render="SevenHDXPicon" size="220,132" source="session.CurrentService" transparent="1" zPosition="4">
       <convert type="ServiceName">Reference</convert>
     </widget>
-    <widget source="session.CurrentService" render="Label" zPosition="3" position="622,672" size="127,22" font="Regular; 19" halign="center" backgroundColor="SevenFontBackgroundIB1" foregroundColor="SevenSNRIB" transparent="1">
-  <convert type="SevenHDExtraInfo2">Resolution</convert>
+<widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 19" halign="center" position="825,670" render="Label" size="75,25" source="session.CurrentService" transparent="1" foregroundColor="SevenSNRIB" valign="center" zPosition="3">
+<convert type="SevenHDExtraInfo2">VideoCodec</convert>
 </widget>
+<widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 19" halign="center" position="621,670" render="Label" size="200,25" source="session.CurrentService" text="Dolby Digital" foregroundColor="SevenSNRIB" transparent="1" valign="center" zPosition="3">
+<convert type="SevenHDExtraInfo2">AudioCodec</convert>
+</widget>
+<widget source="session.CurrentService" render="Label" zPosition="3" position="466,670" size="150,25" font="Regular; 19" halign="center" backgroundColor="SevenFontBackgroundIB1" foregroundColor="SevenSNRIB" transparent="1">
+    <convert type="SevenHDExtraInfo2">ResolutionString</convert>
+  </widget>
     
     
     <widget alphatest="blend" pixmap="SevenHD/buttons/ico_format_on.png" position="340,666" render="Pixmap" size="32,32" source="session.CurrentService" zPosition="2">
@@ -15174,9 +15189,15 @@
     <widget alphatest="blend" position="21,484" render="SevenHDXPicon" size="220,132" source="session.CurrentService" transparent="1" zPosition="4">
       <convert type="ServiceName">Reference</convert>
     </widget>
-    <widget source="session.CurrentService" render="Label" zPosition="3" position="622,672" size="127,22" font="Regular; 19" halign="center" backgroundColor="SevenFontBackgroundIB1" foregroundColor="SevenSNRIB" transparent="1">
-  <convert type="SevenHDExtraInfo2">Resolution</convert>
+<widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 19" halign="center" position="825,670" render="Label" size="75,25" source="session.CurrentService" transparent="1" foregroundColor="SevenSNRIB" valign="center" zPosition="3">
+<convert type="SevenHDExtraInfo2">VideoCodec</convert>
 </widget>
+<widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 19" halign="center" position="621,670" render="Label" size="200,25" source="session.CurrentService" text="Dolby Digital" foregroundColor="SevenSNRIB" transparent="1" valign="center" zPosition="3">
+<convert type="SevenHDExtraInfo2">AudioCodec</convert>
+</widget>
+<widget source="session.CurrentService" render="Label" zPosition="3" position="466,670" size="150,25" font="Regular; 19" halign="center" backgroundColor="SevenFontBackgroundIB1" foregroundColor="SevenSNRIB" transparent="1">
+    <convert type="SevenHDExtraInfo2">ResolutionString</convert>
+  </widget>
     
     
     <widget alphatest="blend" pixmap="SevenHD/buttons/ico_format_on.png" position="340,666" render="Pixmap" size="32,32" source="session.CurrentService" zPosition="2">
@@ -15365,9 +15386,15 @@
     <widget alphatest="blend" position="21,484" render="SevenHDXPicon" size="220,132" source="session.CurrentService" transparent="1" zPosition="4">
       <convert type="ServiceName">Reference</convert>
     </widget>
-    <widget source="session.CurrentService" render="Label" zPosition="3" position="622,672" size="127,22" font="Regular; 19" halign="center" backgroundColor="SevenFontBackgroundIB1" foregroundColor="SevenSNRIB" transparent="1">
-  <convert type="SevenHDExtraInfo2">Resolution</convert>
+<widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 19" halign="center" position="825,670" render="Label" size="75,25" source="session.CurrentService" transparent="1" foregroundColor="SevenSNRIB" valign="center" zPosition="3">
+<convert type="SevenHDExtraInfo2">VideoCodec</convert>
 </widget>
+<widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 19" halign="center" position="621,670" render="Label" size="200,25" source="session.CurrentService" text="Dolby Digital" foregroundColor="SevenSNRIB" transparent="1" valign="center" zPosition="3">
+<convert type="SevenHDExtraInfo2">AudioCodec</convert>
+</widget>
+<widget source="session.CurrentService" render="Label" zPosition="3" position="466,670" size="150,25" font="Regular; 19" halign="center" backgroundColor="SevenFontBackgroundIB1" foregroundColor="SevenSNRIB" transparent="1">
+    <convert type="SevenHDExtraInfo2">ResolutionString</convert>
+  </widget>
     
     
     <widget alphatest="blend" pixmap="SevenHD/buttons/ico_format_on.png" position="340,666" render="Pixmap" size="32,32" source="session.CurrentService" zPosition="2">
@@ -15587,9 +15614,15 @@
     <widget alphatest="blend" position="21,484" render="SevenHDXPicon" size="220,132" source="session.CurrentService" transparent="1" zPosition="4">
       <convert type="ServiceName">Reference</convert>
     </widget>
-    <widget source="session.CurrentService" render="Label" zPosition="3" position="622,672" size="127,22" font="Regular; 19" halign="center" backgroundColor="SevenFontBackgroundIB1" foregroundColor="SevenSNRIB" transparent="1">
-  <convert type="SevenHDExtraInfo2">Resolution</convert>
+<widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 19" halign="center" position="825,670" render="Label" size="75,25" source="session.CurrentService" transparent="1" foregroundColor="SevenSNRIB" valign="center" zPosition="3">
+<convert type="SevenHDExtraInfo2">VideoCodec</convert>
 </widget>
+<widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 19" halign="center" position="621,670" render="Label" size="200,25" source="session.CurrentService" text="Dolby Digital" foregroundColor="SevenSNRIB" transparent="1" valign="center" zPosition="3">
+<convert type="SevenHDExtraInfo2">AudioCodec</convert>
+</widget>
+<widget source="session.CurrentService" render="Label" zPosition="3" position="466,670" size="150,25" font="Regular; 19" halign="center" backgroundColor="SevenFontBackgroundIB1" foregroundColor="SevenSNRIB" transparent="1">
+    <convert type="SevenHDExtraInfo2">ResolutionString</convert>
+  </widget>
     
     
     <widget alphatest="blend" pixmap="SevenHD/buttons/ico_format_on.png" position="340,666" render="Pixmap" size="32,32" source="session.CurrentService" zPosition="2">
@@ -15735,9 +15768,15 @@
     <widget alphatest="blend" position="40,483" render="SevenHDXPicon" size="220,94" source="session.CurrentService" transparent="1" zPosition="4">
       <convert type="ServiceName">Reference</convert>
     </widget>
-    <widget source="session.CurrentService" render="Label" zPosition="3" position="622,672" size="127,22" font="Regular; 19" halign="center" backgroundColor="SevenFontBackgroundIB1" foregroundColor="SevenSNRIB" transparent="1">
-  <convert type="SevenHDExtraInfo2">Resolution</convert>
+<widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 19" halign="center" position="825,670" render="Label" size="75,25" source="session.CurrentService" transparent="1" foregroundColor="SevenSNRIB" valign="center" zPosition="3">
+<convert type="SevenHDExtraInfo2">VideoCodec</convert>
 </widget>
+<widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 19" halign="center" position="621,670" render="Label" size="200,25" source="session.CurrentService" text="Dolby Digital" foregroundColor="SevenSNRIB" transparent="1" valign="center" zPosition="3">
+<convert type="SevenHDExtraInfo2">AudioCodec</convert>
+</widget>
+<widget source="session.CurrentService" render="Label" zPosition="3" position="466,670" size="150,25" font="Regular; 19" halign="center" backgroundColor="SevenFontBackgroundIB1" foregroundColor="SevenSNRIB" transparent="1">
+    <convert type="SevenHDExtraInfo2">ResolutionString</convert>
+  </widget>
     
     
     <widget alphatest="blend" pixmap="SevenHD/buttons/ico_format_on.png" position="340,666" render="Pixmap" size="32,32" source="session.CurrentService" zPosition="2">
@@ -15879,9 +15918,15 @@
   <widget alphatest="blend" position="40,483" render="SevenHDXPicon" size="220,94" source="session.CurrentService" transparent="1" zPosition="4">
     <convert type="ServiceName">Reference</convert>
   </widget>
-  <widget source="session.CurrentService" render="Label" zPosition="3" position="622,672" size="127,22" font="Regular; 19" halign="center" backgroundColor="SevenFontBackgroundIB1" foregroundColor="SevenSNRIB" transparent="1">
-  <convert type="SevenHDExtraInfo2">Resolution</convert>
+<widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 19" halign="center" position="825,670" render="Label" size="75,25" source="session.CurrentService" transparent="1" foregroundColor="SevenSNRIB" valign="center" zPosition="3">
+<convert type="SevenHDExtraInfo2">VideoCodec</convert>
 </widget>
+<widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 19" halign="center" position="621,670" render="Label" size="200,25" source="session.CurrentService" text="Dolby Digital" foregroundColor="SevenSNRIB" transparent="1" valign="center" zPosition="3">
+<convert type="SevenHDExtraInfo2">AudioCodec</convert>
+</widget>
+<widget source="session.CurrentService" render="Label" zPosition="3" position="466,670" size="150,25" font="Regular; 19" halign="center" backgroundColor="SevenFontBackgroundIB1" foregroundColor="SevenSNRIB" transparent="1">
+    <convert type="SevenHDExtraInfo2">ResolutionString</convert>
+  </widget>
   
   
   <widget alphatest="blend" pixmap="SevenHD/buttons/ico_format_on.png" position="340,666" render="Pixmap" size="32,32" source="session.CurrentService" zPosition="2">
@@ -16065,9 +16110,15 @@
     <widget alphatest="blend" position="40,483" render="SevenHDXPicon" size="220,94" source="session.CurrentService" transparent="1" zPosition="4">
       <convert type="ServiceName">Reference</convert>
     </widget>
-    <widget source="session.CurrentService" render="Label" zPosition="3" position="622,672" size="127,22" font="Regular; 19" halign="center" backgroundColor="SevenFontBackgroundIB1" foregroundColor="SevenSNRIB" transparent="1">
-  <convert type="SevenHDExtraInfo2">Resolution</convert>
+<widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 19" halign="center" position="825,670" render="Label" size="75,25" source="session.CurrentService" transparent="1" foregroundColor="SevenSNRIB" valign="center" zPosition="3">
+<convert type="SevenHDExtraInfo2">VideoCodec</convert>
 </widget>
+<widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 19" halign="center" position="621,670" render="Label" size="200,25" source="session.CurrentService" text="Dolby Digital" foregroundColor="SevenSNRIB" transparent="1" valign="center" zPosition="3">
+<convert type="SevenHDExtraInfo2">AudioCodec</convert>
+</widget>
+<widget source="session.CurrentService" render="Label" zPosition="3" position="466,670" size="150,25" font="Regular; 19" halign="center" backgroundColor="SevenFontBackgroundIB1" foregroundColor="SevenSNRIB" transparent="1">
+    <convert type="SevenHDExtraInfo2">ResolutionString</convert>
+  </widget>
     
     
     <widget alphatest="blend" pixmap="SevenHD/buttons/ico_format_on.png" position="340,666" render="Pixmap" size="32,32" source="session.CurrentService" zPosition="2">
@@ -16256,9 +16307,15 @@
     <widget alphatest="blend" position="40,483" render="SevenHDXPicon" size="220,94" source="session.CurrentService" transparent="1" zPosition="4">
       <convert type="ServiceName">Reference</convert>
     </widget>
-    <widget source="session.CurrentService" render="Label" zPosition="3" position="622,672" size="127,22" font="Regular; 19" halign="center" backgroundColor="SevenFontBackgroundIB1" foregroundColor="SevenSNRIB" transparent="1">
-  <convert type="SevenHDExtraInfo2">Resolution</convert>
+<widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 19" halign="center" position="825,670" render="Label" size="75,25" source="session.CurrentService" transparent="1" foregroundColor="SevenSNRIB" valign="center" zPosition="3">
+<convert type="SevenHDExtraInfo2">VideoCodec</convert>
 </widget>
+<widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 19" halign="center" position="621,670" render="Label" size="200,25" source="session.CurrentService" text="Dolby Digital" foregroundColor="SevenSNRIB" transparent="1" valign="center" zPosition="3">
+<convert type="SevenHDExtraInfo2">AudioCodec</convert>
+</widget>
+<widget source="session.CurrentService" render="Label" zPosition="3" position="466,670" size="150,25" font="Regular; 19" halign="center" backgroundColor="SevenFontBackgroundIB1" foregroundColor="SevenSNRIB" transparent="1">
+    <convert type="SevenHDExtraInfo2">ResolutionString</convert>
+  </widget>
     
     
     <widget alphatest="blend" pixmap="SevenHD/buttons/ico_format_on.png" position="340,666" render="Pixmap" size="32,32" source="session.CurrentService" zPosition="2">
@@ -16478,9 +16535,15 @@
     <widget alphatest="blend" position="40,483" render="SevenHDXPicon" size="220,94" source="session.CurrentService" transparent="1" zPosition="4">
       <convert type="ServiceName">Reference</convert>
     </widget>
-    <widget source="session.CurrentService" render="Label" zPosition="3" position="622,672" size="127,22" font="Regular; 19" halign="center" backgroundColor="SevenFontBackgroundIB1" foregroundColor="SevenSNRIB" transparent="1">
-  <convert type="SevenHDExtraInfo2">Resolution</convert>
+<widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 19" halign="center" position="825,670" render="Label" size="75,25" source="session.CurrentService" transparent="1" foregroundColor="SevenSNRIB" valign="center" zPosition="3">
+<convert type="SevenHDExtraInfo2">VideoCodec</convert>
 </widget>
+<widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 19" halign="center" position="621,670" render="Label" size="200,25" source="session.CurrentService" text="Dolby Digital" foregroundColor="SevenSNRIB" transparent="1" valign="center" zPosition="3">
+<convert type="SevenHDExtraInfo2">AudioCodec</convert>
+</widget>
+<widget source="session.CurrentService" render="Label" zPosition="3" position="466,670" size="150,25" font="Regular; 19" halign="center" backgroundColor="SevenFontBackgroundIB1" foregroundColor="SevenSNRIB" transparent="1">
+    <convert type="SevenHDExtraInfo2">ResolutionString</convert>
+  </widget>
     
     
     <widget alphatest="blend" pixmap="SevenHD/buttons/ico_format_on.png" position="340,666" render="Pixmap" size="32,32" source="session.CurrentService" zPosition="2">
