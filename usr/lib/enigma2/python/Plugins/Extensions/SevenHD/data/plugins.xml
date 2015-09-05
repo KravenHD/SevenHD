@@ -347,7 +347,7 @@
     <widget source="global.CurrentTime" position="910,681" size="65,32" font="Regular; 20" render="Label" halign="right" zPosition="1" backgroundColor="SevenFontBackground" foregroundColor="SevenFont1" transparent="1">
       <convert type="SevenHDClockToText">Default</convert>
     </widget>
-    <widget backgroundColor="SevenFontBackground" font="Regular; 30" noWrap="1" position="210,620" render="Label" size="708,40" source="session.CurrentService" transparent="1" valign="center" zPosition="1">
+    <widget backgroundColor="SevenFontBackground" font="Regular; 30" noWrap="1" position="210,620" render="SevenHDRunningText" options="movetype=running,startpoint=0,startdelay=2000,steptime=90,wrap=0,always=0,repeat=2,oneshot=1" size="708,40" source="session.CurrentService" transparent="1" valign="center" zPosition="1">
       <convert type="ServiceName">Name</convert>
     </widget>
     <widget backgroundColor="SevenFontBackground" font="Regular; 18" halign="left" position="676,683" render="Label" size="80,25" source="session.CurrentService" transparent="1" valign="center" zPosition="1" foregroundColor="SevenFont1">
@@ -378,13 +378,9 @@
       <convert type="SevenHDServiceInfo">IsHD</convert>
       <convert type="ConditionalShowHide" />
     </widget>
-    <widget backgroundColor="SevenFontBackground" font="Regular; 18" halign="right" position="410,685" render="Label" size="55,25" source="session.CurrentService" transparent="1">
-      <convert type="SevenHDServiceInfo">VideoWidth</convert>
-    </widget>
-    <eLabel backgroundColor="SevenFontBackground" font="Regular; 18" halign="center" position="465,685" size="15,25" text="x" transparent="1" />
-    <widget backgroundColor="SevenFontBackground" font="Regular; 18" halign="left" position="480,685" render="Label" size="55,25" source="session.CurrentService" transparent="1">
-      <convert type="SevenHDServiceInfo">VideoHeight</convert>
-    </widget>
+    <widget source="session.CurrentService" render="Label" zPosition="3" position="404,685" size="127,22" font="Regular; 18" halign="center" backgroundColor="SevenFontBackground" foregroundColor="SevenFont1" transparent="1">
+  <convert type="SevenHDExtraInfo2">Resolution</convert>
+</widget>
     <widget position="210,666" render="PositionGauge" size="858,9" source="session.CurrentService" zPosition="2" transparent="1">
       <convert type="ServicePosition">Gauge</convert>
     </widget>
@@ -853,7 +849,7 @@
     <widget source="global.CurrentTime" position="910,681" size="65,32" font="Regular; 20" render="Label" halign="right" zPosition="1" backgroundColor="SevenFontBackground" foregroundColor="SevenFont1" transparent="1">
       <convert type="SevenHDClockToText">Default</convert>
     </widget>
-    <widget backgroundColor="SevenFontBackground" font="Regular; 30" noWrap="1" position="210,620" render="Label" size="708,40" source="session.CurrentService" transparent="1" valign="center" zPosition="1">
+    <widget backgroundColor="SevenFontBackground" font="Regular; 30" noWrap="1" position="210,620" render="SevenHDRunningText" options="movetype=running,startpoint=0,startdelay=2000,steptime=90,wrap=0,always=0,repeat=2,oneshot=1" size="708,40" source="session.CurrentService" transparent="1" valign="center" zPosition="1">
       <convert type="ServiceName">Name</convert>
     </widget>
     <widget backgroundColor="SevenFontBackground" font="Regular; 18" halign="left" position="676,683" render="Label" size="80,25" source="session.CurrentService" transparent="1" valign="center" zPosition="1" foregroundColor="SevenFont1">
@@ -884,13 +880,9 @@
       <convert type="SevenHDServiceInfo">IsHD</convert>
       <convert type="ConditionalShowHide" />
     </widget>
-    <widget backgroundColor="SevenFontBackground" font="Regular; 18" halign="right" position="410,685" render="Label" size="55,25" source="session.CurrentService" transparent="1">
-      <convert type="SevenHDServiceInfo">VideoWidth</convert>
-    </widget>
-    <eLabel backgroundColor="SevenFontBackground" font="Regular; 18" halign="center" position="465,685" size="15,25" text="x" transparent="1" />
-    <widget backgroundColor="SevenFontBackground" font="Regular; 18" halign="left" position="480,685" render="Label" size="55,25" source="session.CurrentService" transparent="1">
-      <convert type="SevenHDServiceInfo">VideoHeight</convert>
-    </widget>
+    <widget source="session.CurrentService" render="Label" zPosition="3" position="404,685" size="127,22" font="Regular; 18" halign="center" backgroundColor="SevenFontBackground" foregroundColor="SevenFont1" transparent="1">
+  <convert type="SevenHDExtraInfo2">Resolution</convert>
+</widget>
     <widget position="210,666" render="PositionGauge" size="858,9" source="session.CurrentService" zPosition="2" transparent="1">
       <convert type="ServicePosition">Gauge</convert>
     </widget>
@@ -903,7 +895,7 @@
       <convert type="SevenHDServiceEndTime">EndTime</convert>
     </widget>
     <eLabel backgroundColor="SevenFontBackground" font="Regular; 20" halign="center" position="978,677" size="40,35" text="---&gt;" transparent="1" valign="center" zPosition="1" foregroundColor="SevenFont1" />
-    <panel name="template_player" />
+<panel name="template_player" />
   </screen>
   <!-- MovieEpgSetup -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="MovieEpgSetup" position="0,0" size="1280,720" title="MovieEpg Setup">

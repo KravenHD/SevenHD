@@ -29,7 +29,7 @@
     </widget>
     <widget CoolBackColor="black" CoolDayColor="white" CoolDayPos="0" CoolDaySize="50" CoolEventColor="white" CoolEventFont="Regular;22" CoolEventPos="150" CoolFont="Regular;22" CoolRecAlarmCol="yellow" CoolRecColor="red" CoolTimeColor="white" CoolTimePos="70" CoolTimeSize="70" backgroundColor="Background1" foregroundColor="Foreground" itemHeight="30" name="list" position="435,80" size="820,330" transparent="1" zPosition="0" />
     <widget backgroundColor="SevenFontBackground" font="Regular2;24" foregroundColor="SevenFont2" halign="right" name="date" position="1060,670" size="180,30" transparent="1" />
-    <widget alphatest="blend" position="122,122" render="Picon" size="220,132" source="Service" transparent="1" zPosition="4">
+    <widget alphatest="blend" position="122,122" render="SevenHDXPicon" size="220,132" source="Service" transparent="1" zPosition="4">
       <convert type="ServiceName">Reference</convert>
     </widget>
     <panel name="template_cool" />
@@ -58,7 +58,7 @@
     <widget CoolBackColorSel="black" CoolDayColor="orange" CoolDayPos="0" CoolDaySize="60" CoolDurationColor="blue" CoolDurationPos="1060" CoolDurationSize="120" CoolEventColor="orange" CoolEventPos="260" CoolFont="Regular;26" CoolRecAlarmCol="yellow" CoolRecColor="red" CoolTimeColor="#3B98C9" CoolTimePos="60" CoolTimeSize="200" CoolTunerCol="#606060" backgroundColor="SevenFontBackground" itemHeight="32" name="CoolEvent" position="50,295" size="1200,35" transparent="1" zPosition="5" />
     <widget backgroundColor="SevenFontBackground" font="Regular;28" foregroundColor="SevenFont1" name="CoolDescription" position="50,340" size="1205,296" transparent="1" zPosition="5" />
     <widget backgroundColor="SevenFontBackground" font="Regular2;24" foregroundColor="SevenFont2" halign="right" name="date" position="1060,670" size="180,30" transparent="1" />
-    <widget alphatest="blend" position="122,122" render="Picon" size="220,132" source="Service" transparent="1" zPosition="4">
+    <widget alphatest="blend" position="122,122" render="SevenHDXPicon" size="220,132" source="Service" transparent="1" zPosition="4">
       <convert type="ServiceName">Reference</convert>
     </widget>
     <panel name="template_cool" />
@@ -119,7 +119,7 @@
     <widget name="timeline5" pixmap="SevenHD/epg/timeline.png" position="0,320" size="0,0" zPosition="1" />
     <widget alphatest="on" name="timeline_now" pixmap="SevenHD/epg/timelineCooltv.png" position="0,313" size="3,335" zPosition="2" />
     <widget backgroundColor="SevenFontBackground" font="Regular2;24" foregroundColor="SevenFont2" halign="right" name="date" position="1060,670" size="180,30" transparent="1" />
-    <widget alphatest="blend" position="122,122" render="Picon" size="220,132" source="Service" transparent="1" zPosition="4">
+    <widget alphatest="blend" position="122,122" render="SevenHDXPicon" size="220,132" source="Service" transparent="1" zPosition="4">
       <convert type="ServiceName">Reference</convert>
     </widget>
     <panel name="template_cool" />
@@ -142,7 +142,7 @@
       <convert type="SevenHDEventName">BothDescriptionsFiltered</convert>
     </widget>
     <widget CoolBackColor="black" CoolDateColor="white" CoolDateHPos="2" CoolDatePos="70" CoolDateSize="70" CoolDayColor="white" CoolDayHPos="2" CoolDayPos="0" CoolDaySize="50" CoolEventColor="white" CoolEventFont="Regular;24" CoolEventHPos="2" CoolEventPos="500" CoolEventSize="700" CoolFont="Regular;24" CoolRecAlarmCol="yellow" CoolRecColor="red" CoolRecEventBackColor="black" CoolServiceColor="white" CoolServiceFont="Regular;24" CoolServiceHPos="2" CoolServicePos="230" CoolServiceSize="280" CoolTimeColor="white" CoolTimeHPos="2" CoolTimePos="150" CoolTimeSize="70" backgroundColor="SevenFontBackground" itemHeight="30" name="list" position="45,300" size="1190,330" transparent="1" zPosition="3" />
-    <widget alphatest="blend" position="122,122" render="Picon" size="220,132" source="Service" transparent="1" zPosition="4">
+    <widget alphatest="blend" position="122,122" render="SevenHDXPicon" size="220,132" source="Service" transparent="1" zPosition="4">
       <convert type="ServiceName">Reference</convert>
     </widget>
     <panel name="template_cool" />
@@ -166,7 +166,7 @@
     </widget>
     <widget CoolCurrentCol="white" CoolBarColor="white" CoolBarHPos="7" CoolBarHigh="17" CoolBarPos="270" CoolBarSize="150" CoolDurationPos="1085" CoolDurationColor="white" CoolDurationSize="105" CoolEventColor="white" CoolEventFont="Regular;24" CoolEventHPos="0" CoolEventPos="440" CoolEventSize="625" CoolFont="Regular;24" CoolRecAlarmCol="yellow" CoolRecColor="red" CoolServiceColor="white" CoolServiceFont="Regular;24" CoolServiceHPos="0" CoolServicePos="5" CoolServiceSize="235" CoolTimeHPos="0" CoolTimePos="265" CoolTimeSize="150" backgroundColor="SevenFontBackground" foregroundColor="white" itemHeight="30" name="list" position="40,300" size="1200,330" transparent="1" zPosition="25" />
     <widget backgroundColor="SevenFontBackground" font="Regular2;24" foregroundColor="SevenFont2" halign="right" name="date" position="1060,670" size="180,30" transparent="1" />
-    <widget alphatest="blend" position="122,122" render="Picon" size="220,132" source="Service" transparent="1" zPosition="4">
+    <widget alphatest="blend" position="122,122" render="SevenHDXPicon" size="220,132" source="Service" transparent="1" zPosition="4">
       <convert type="ServiceName">Reference</convert>
     </widget>
     <panel name="template_cool" />
@@ -198,7 +198,7 @@
     <widget name="timeline5" pixmap="SevenHD/epg/timeline.png" position="0,320" size="0,0" zPosition="1" />
     <widget alphatest="on" name="timeline_now" pixmap="SevenHD/epg/timelineCooltv.png" position="0,311" size="3,337" zPosition="2" />
     <widget backgroundColor="SevenFontBackground" font="Regular2;24" foregroundColor="SevenFont2" halign="right" name="date" position="1060,670" size="180,30" transparent="1" />
-    <widget alphatest="blend" position="122,122" render="Picon" size="220,132" source="Service" transparent="1" zPosition="4">
+    <widget alphatest="blend" position="122,122" render="SevenHDXPicon" size="220,132" source="Service" transparent="1" zPosition="4">
       <convert type="ServiceName">Reference</convert>
     </widget>
     <panel name="template_cool" />
@@ -257,7 +257,7 @@
     <widget backgroundColor="SevenFontBackground" font="Regular;19" foregroundColor="SevenFont1" position="50,560" render="CoolNextEvent" size="480,90" source="Service" transparent="1">
     </widget>
     <widget backgroundColor="SevenFontBackground" font="Regular2;24" foregroundColor="SevenFont2" halign="right" name="date" position="1060,670" size="180,30" transparent="1" />
-    <widget alphatest="blend" position="158,122" render="Picon" size="220,132" source="Service" transparent="1" zPosition="4">
+    <widget alphatest="blend" position="158,122" render="SevenHDXPicon" size="220,132" source="Service" transparent="1" zPosition="4">
       <convert type="ServiceName">Reference</convert>
     </widget>
     <panel name="template_cool" />

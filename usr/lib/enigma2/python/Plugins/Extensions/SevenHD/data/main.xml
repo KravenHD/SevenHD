@@ -155,7 +155,7 @@
   <!-- EPGSelection -->
    <screen backgroundColor="transparent" flags="wfNoBorder" name="EPGSelection" position="0,0" size="1280,720" title="EPG Selection">
   <widget backgroundColor="SevenFontBackground" itemHeight="30" foregroundColor="SevenFont1" font="Regular; 22" name="list" enableWrapAround="1" scrollbarWidth="2" position="70,80" size="708,570" transparent="1" zPosition="3" />
-  <widget alphatest="blend" position="898,16" render="Picon" size="220,132" source="Service" transparent="1" zPosition="4">
+  <widget alphatest="blend" position="898,16" render="SevenHDXPicon" size="220,132" source="Service" transparent="1" zPosition="4">
     <convert type="ServiceName">Reference</convert>
   </widget>
   <widget backgroundColor="SevenFontBackgroundRight" font="Regular2; 22" foregroundColor="SevenFont2" position="898,162" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,steptime=90,wrap=1,always=0,repeat=2,oneshot=1" size="366,545" source="Event" valign="top" transparent="1" zPosition="0">
@@ -219,7 +219,7 @@
   <widget backgroundColor="SevenFontBackground" foregroundColor="SevenFont2" font="Regular2; 35" halign="left" name="channel" position="70,85" size="854,60" transparent="1" />
   <widget backgroundColor="SevenFontBackground" font="Regular; 28" halign="left" name="datetime" position="70,163" size="307,40" transparent="1" valign="center" />
   <widget backgroundColor="SevenFontBackground" font="Regular; 24" halign="right" name="duration" position="965,610" size="270,40" transparent="1" />
-  <widget alphatest="blend" position="1015,85" render="Picon" size="220,132" source="Service" transparent="1" zPosition="4">
+  <widget alphatest="blend" position="1015,85" render="SevenHDXPicon" size="220,132" source="Service" transparent="1" zPosition="4">
     <convert type="ServiceName">Reference</convert>
   </widget>
   <panel name="template_menu_full_button" />
@@ -358,7 +358,7 @@
     <widget source="Service" render="Label" position="95,18" size="600,42" font="Regular; 32" valign="center" noWrap="1" backgroundColor="SevenFontBackground" transparent="1">
       <convert type="ServiceName">Name</convert>
     </widget>
-    <widget source="Service" render="Picon" position="12,18" size="70,42" transparent="1" zPosition="2" alphatest="blend">
+    <widget source="Service" render="SevenHDXPicon" position="12,18" size="70,42" transparent="1" zPosition="2" alphatest="blend">
       <convert type="ServiceName">Reference</convert>
     </widget>
     <widget source="session.RecordState" render="Pixmap" pixmap="SevenHD/buttons/ico_rec_on.png" position="848,234" size="32,32" zPosition="2" alphatest="blend">
@@ -403,7 +403,7 @@
       <convert type="ConditionalShowHide">Blink</convert>
     </widget>
     <widget name="list" position="17,95" size="715,120" font="Regular; 24" foregroundColor="SevenFont1" backgroundColor="SevenFontBackground" transparent="1" />
-    <widget source="Service" render="Picon" position="9,19" size="70,42" transparent="1" zPosition="2" alphatest="blend">
+    <widget source="Service" render="SevenHDXPicon" position="9,19" size="70,42" transparent="1" zPosition="2" alphatest="blend">
       <convert type="ServiceName">Reference</convert>
     </widget>
     <eLabel backgroundColor="SevenBorder" position="8,80" size="1266,2" zPosition="2" />
@@ -531,7 +531,7 @@
   <!-- NumberZapWithName -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="NumberZapWithName" position="398,257" size="483,205" title="QuickZap">
     <widget backgroundColor="SevenFontBackground" font="Regular; 90" halign="center" name="servicenumber" position="10,10" size="220,132" transparent="1" valign="center" foregroundColor="SevenFont1" />
-    <widget alphatest="blend" position="253,10" render="Picon" size="220,132" source="Service">
+    <widget alphatest="blend" position="253,10" render="SevenHDXPicon" size="220,132" source="Service">
       <convert type="ServiceName">Reference</convert>
     </widget>
     <eLabel backgroundColor="SevenFontBackground" position="0,0" size="240,152" zPosition="-1" />
@@ -1317,7 +1317,7 @@
   </screen>
   <!-- TimerEditList -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="TimerEditList" position="0,0" size="1280,720" title="Timer Editor">
-    <widget name="timerlist" position="45,80" size="766,540" backgroundColor="SevenFontBackground" enableWrapAround="1" transparent="1" />
+    <widget name="timerlist" position="45,80" size="766,550" backgroundColor="SevenFontBackground" enableWrapAround="1" transparent="1" />
     <panel name="template_menu_left_button" />
     <panel name="template_colorkey_text" />
   </screen>
@@ -1378,7 +1378,6 @@
   </screen>
   <!-- RecordTimerQuestion -->
   <screen name="RecordTimerQuestion" position="center,center" backgroundColor="SevenBackground" size="380,70" zPosition="5" flags="wfNoBorder">
-<ePixmap pixmap="SevenHD/back/menumain.png" position="0,0" size="380,70" alphatest="blend" zPosition="6" />
     <widget name="text" position="0,0" size="0,0" font="Regular2;22" foregroundColor="SevenFont2" transparent="1" zPosition="5" />
     <widget name="list" position="10,10" size="360,50" enableWrapAround="1" transparent="1" zPosition="5" />
   </screen>
