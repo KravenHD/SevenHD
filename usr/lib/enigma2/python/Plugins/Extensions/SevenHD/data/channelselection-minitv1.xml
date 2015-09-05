@@ -15,7 +15,7 @@
     <widget source="ServiceEvent" render="Progress" position="30,91" size="426,5" borderWidth="0" backgroundColor="SevenFontBackCS" foregroundColor="SevenProgress" transparent="1" zPosition="1" pixmap="SevenHD/progress/progress426.png">
       <convert type="SevenHDEventTime">Progress</convert>
     </widget>
-    <widget source="ServiceEvent" render="SevenHDSingleEpgList" position="30,574" size="505,50" font="Regular2;19" backgroundColor="SevenFontBackCS" foregroundColor="SevenNextCS" transparent="1">
+    <widget source="ServiceEvent" render="SevenHDSingleEpgList" position="30,574" size="505,50" font="Regular2;19" backgroundColor="SevenFontBackCS" foregroundColor="SevenNextCS" transparent="1" noWrap="1">
     </widget>
 <panel name="template_menu_cs4_button" />
     <widget backgroundColor="SevenFontBackCS" font="Regular;22" foregroundColor="SevenPrimeCS" position="30,628" render="Label" size="505,30" source="ServiceEvent" transparent="1" zPosition="5" noWrap="1">

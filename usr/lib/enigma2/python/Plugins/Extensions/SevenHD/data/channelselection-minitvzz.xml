@@ -21,7 +21,7 @@
     <convert type="SevenHDEventTime">Progress</convert>
   </widget>
   <eLabel position="86,296" size="410,1" backgroundColor="SevenLineCS" />
-  <widget source="ServiceEvent" render="SevenHDSingleEpgList" halign="center" position="18,489" size="530,129" font="Regular;19" backgroundColor="SevenFontBackCS" foregroundColor="SevenNextCS" transparent="1">
+  <widget source="ServiceEvent" render="SevenHDSingleEpgList" halign="center" position="18,489" size="530,129" font="Regular;19" backgroundColor="SevenFontBackCS" foregroundColor="SevenNextCS" transparent="1" noWrap="1">
   </widget>
   <widget alphatest="blend" position="92,305" render="SevenHDXPicon" size="400,170" source="ServiceEvent" transparent="1" zPosition="4">
     <convert type="SevenHDRefString">ServicelistRef</convert>
