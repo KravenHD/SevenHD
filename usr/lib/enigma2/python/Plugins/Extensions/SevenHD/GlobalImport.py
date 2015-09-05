@@ -1,4 +1,4 @@
-version = '3.3.62'
+version = '3.3.64'
 import os
 import re
 import time
@@ -133,8 +133,7 @@ config.plugins.SevenHD.Image = ConfigSelection(default="main-custom-openatv", ch
 				("main-custom-openhdf", _("openHDF")),
 				("main-custom-openmips", _("openMIPS")),
 				("main-custom-opennfr", _("openNFR")),
-				("main-custom-atemio4you", _("Atemio4You")),
-				("main-custom-hdmu", _("HDMU"))
+				("main-custom-atemio4you", _("Atemio4You"))
 				])
 
 config.plugins.SevenHD.ButtonStyle = ConfigSelection(default="buttons_seven_white", choices = [
@@ -393,7 +392,7 @@ config.plugins.SevenHD.ChannelSelectionStyle = ConfigSelection(default="channels
 				("channelselection-minitvzz", _("ZZPicon/miniTV")),
 				("channelselection-zzzpicon", _("ZZZPicon")),
 				("channelselection-minitvzzz", _("ZZZPicon/miniTV")),
-				("channelselection-minitv", _("miniTV")),
+				("channelselection-minitv1", _("miniTV")),
 				("channelselection-pip", _("miniTV/PiP"))
 				])
 
