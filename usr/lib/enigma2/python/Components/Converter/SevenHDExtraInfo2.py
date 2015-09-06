@@ -5,6 +5,7 @@ from Components.Converter.Converter import Converter
 from Components.Element import cached
 from Components.config import config
 from Tools.Transponder import ConvertToHumanReadable
+from Tools.ISO639 import LanguageCodes
 from Poll import Poll
 
 def addspace(text):
@@ -53,24 +54,26 @@ class SevenHDExtraInfo2(Poll, Converter, object):
 		mode = ("i", "p", "")[info.getInfo(iServiceInformation.sProgressive)]
 		return str(xres) + "x" + str(yres) + mode
 
-	def createFrameRate(self,info):
-		fps  = str((info.getInfo(iServiceInformation.sFrameRate) + 500) / 1000)
-		return str(fps)
-
 	def createVideoCodec(self,info):
 		return ("MPEG2", "MPEG4", "MPEG1", "MPEG4-II", "VC1", "VC1-SM", "")[info.getInfo(iServiceInformation.sVideoType)]
 
 	def createAudioCodec(self,info):
 		service = self.source.service
 		audio = service.audioTracks()
-		ct = audio.getCurrentTrack()
-		i = audio.getTrackInfo(ct)
-		languages = i.getLanguage()
-		if "ger" in languages or "german" in languages or "deu" in languages:
-			languages = "Deutsch"
-		description = i.getDescription()
-		return description + " " + languages
-			
+		if audio:
+			try:
+				ct = audio.getCurrentTrack()
+				i = audio.getTrackInfo(ct)
+				languages = i.getLanguage()
+				if "ger" in languages or "german" in languages or "deu" in languages:
+					languages = "Deutsch"
+				elif "und" in languages:
+					languages = ""
+				description = i.getDescription();
+				return description + " " + languages
+			except:
+				return "unbekannt"
+
 	def createTransponderInfo(self,fedata,feraw):
 		return addspace(self.createTunerSystem(fedata)) + addspace(self.createFrequency(fedata)) + addspace(self.createPolarization(fedata))\
 			+ addspace(self.createSymbolRate(fedata)) + addspace(self.createFEC(fedata)) + addspace(self.createModulation(fedata))\
@@ -184,15 +187,6 @@ class SevenHDExtraInfo2(Poll, Converter, object):
 			return addspace(self.createProviderName(info)) + addspace(self.createTunerSystem(fedata)) + addspace(self.createFrequency(fedata)) + addspace(self.createPolarization(fedata))\
 			+ addspace(self.createSymbolRate(fedata)) + addspace(self.createFEC(fedata)) + addspace(self.createModulation(fedata)) + addspace(self.createOrbPos(feraw))\
 			+ addspace(self.createVideoCodec(info)) + self.createResolutionString(info)
-
-		if self.type == "TunerInfo":
-			return self.createTunerSystem(fedata) + ", " + self.createFrequency(fedata) + " MHz"
-			
-		if self.type == "SignalInfo":
-			return "SR " + self.createSymbolRate(fedata) + ", FEC " + self.createFEC(fedata) + ", " + self.createModulation(fedata)
-
-		if self.type == "VideoInfo":
-			return self.createVideoCodec(info) + ", " + self.createResolution(info) + ", " + self.createFrameRate(info) + " fps"
 
 		if self.type == "TransponderInfo":
 			return self.createTransponderInfo(fedata,feraw)
