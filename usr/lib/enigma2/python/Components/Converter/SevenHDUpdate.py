@@ -42,9 +42,13 @@ class SevenHDUpdate(Converter, object):
             box_version = config.plugins.SevenHD.version.value
 
             if not fileExists(TMP_FILE):
-               self.get() 
-            content = os.popen("cat %s" % TMP_FILE).read()
-
+               self.get()
+            
+            try:
+               content = os.popen("cat %s" % TMP_FILE).read()
+	    except IOError:
+	       content = box_version
+	       
             version = box_version
             new_version = content
 
