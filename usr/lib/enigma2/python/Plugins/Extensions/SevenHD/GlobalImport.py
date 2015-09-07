@@ -1,4 +1,4 @@
-version = '3.3.66'
+version = '3.3.68'
 import os
 import re
 import time
@@ -36,6 +36,7 @@ from Tools.Directories import fileExists, resolveFilename, SCOPE_LANGUAGE, SCOPE
 ################################################################################################################################################################
 MAIN_IMAGE_PATH = '/usr/lib/enigma2/python/Plugins/Extensions/SevenHD/images/'
 MAIN_DATA_PATH = "/usr/lib/enigma2/python/Plugins/Extensions/SevenHD/data/"
+MAIN_SKIN_PATH = "/usr/share/enigma2/SevenHD/"
 PLUGIN_PATH = "/usr/lib/enigma2/python/Plugins/"
 FILE = "/usr/share/enigma2/SevenHD/skin.xml"
 TMPFILE = FILE + ".tmp"

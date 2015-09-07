@@ -42,24 +42,22 @@ class SevenHDUpdate(Converter, object):
             box_version = config.plugins.SevenHD.version.value
 
             if not fileExists(TMP_FILE):
-               self.get() 
-            content = os.popen("cat %s" % TMP_FILE).read()
-
+               self.get()
+            
+            try:
+               content = os.popen("cat %s" % TMP_FILE).read()
+	    except IOError:
+	       content = box_version
+	       
             version = box_version
             new_version = content
 
             version = version.replace('.','')
             online_version = content.replace('.','')
-
-	    if str(len(version)) <= str('3'): 
-               version = version + str('0')
-               if str(len(version)) < str('4'): 
-                  version = version + str('0')
-            if str(len(online_version)) <= str('3'): 
-               online_version = online_version + str('0')
-               if str(len(online_version)) < str('4'): 
-                  online_version = online_version + str('0')
-
+                    
+	    version = self.change_to_int(version)
+	    online_version = self.change_to_int(online_version)
+	    
             if int(version) < int(online_version):
                 if str(what) == str('1'):   
                    self.update_available = 'Last Version on Server ' + str(new_version)
@@ -72,7 +70,14 @@ class SevenHDUpdate(Converter, object):
                    self.update_available = False
 
             return self.update_available
-
+        
+        def change_to_int(self, versionnumber):
+            if str(len(versionnumber)) <= str('3'): 
+                   versionnumber = versionnumber + str('0')
+                   if str(len(versionnumber)) < str('4'): 
+                      versionnumber = versionnumber + str('0')
+            return versionnumber
+        
         def error(self, error):
             box_version = config.plugins.SevenHD.version.value
             os.system('echo "' + box_version + '" > ' + TMP_FILE)

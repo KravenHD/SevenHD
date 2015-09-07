@@ -192,7 +192,9 @@ class ChannelSettings(ConfigListScreen, Screen):
         except:
            returnValue = self["config"].getCurrent()[0]
            self.debug('3: Missing Picture: ' + MAIN_IMAGE_PATH + str(returnValue) + '.jpg\n')
-           ## weather
+           if returnValue == 'prime time' or returnValue == 'Prime Time':
+              return MAIN_IMAGE_PATH + str("primetime.jpg")
+           
            return MAIN_IMAGE_PATH + str("924938.jpg")
 
     def UpdatePicture(self):
