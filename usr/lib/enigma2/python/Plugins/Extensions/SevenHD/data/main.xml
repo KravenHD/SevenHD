@@ -790,26 +790,7 @@
     <panel name="template_colorkey_text_source" />
   </screen>
   <!-- ********** Network ********** -->
-  <!-- AdapterSetup -->
-  <screen backgroundColor="transparent" flags="wfNoBorder" name="AdapterSetup" position="0,0" size="1280,720" title="Network Setup">
-    <widget backgroundColor="SevenFontBackground" font="Regular2;24" foregroundColor="SevenFont2" position="70,80" render="Label" size="495,30" source="Adapter" transparent="1" />
-    <widget backgroundColor="SevenFontBackground" enableWrapAround="1" itemHeight="30" name="config" position="70,130" size="708,200" transparent="1" />
-    <widget backgroundColor="SevenFontBackground" font="Regular2;24" foregroundColor="SevenFont2" halign="center" position="70,600" render="Label" size="708,30" source="introduction2" transparent="1" />
-    <eLabel backgroundColor="SevenLine" position="200,388" size="430,2" zPosition="2" />
-    <widget source="introduction" render="Label" position="200,350" size="430,32" font="Regular;24" halign="center" backgroundColor="SevenFontBackground" transparent="1" />
-    <widget source="IPtext" render="Label" position="200,400" size="210,24" font="Regular;20" halign="right" foregroundColor="SevenFont1" backgroundColor="SevenFontBackground" transparent="1" />
-    <widget source="Netmasktext" render="Label" position="200,430" size="210,24" font="Regular;20" halign="right" foregroundColor="SevenFont1" backgroundColor="SevenFontBackground" transparent="1" />
-    <widget source="Gatewaytext" render="Label" position="200,460" size="210,24" font="Regular;20" halign="right" foregroundColor="SevenFont1" backgroundColor="SevenFontBackground" transparent="1" />
-    <widget source="DNS1text" render="Label" position="200,490" size="210,24" font="Regular;20" halign="right" foregroundColor="SevenFont1" backgroundColor="SevenFontBackground" transparent="1" />
-    <widget source="DNS2text" render="Label" position="200,520" size="210,24" font="Regular;20" halign="right" foregroundColor="SevenFont1" backgroundColor="SevenFontBackground" transparent="1" />
-    <widget source="IP" render="Label" position="420,400" size="210,24" font="Regular;20" halign="left" backgroundColor="SevenFontBackground" transparent="1" />
-    <widget source="Mask" render="Label" position="420,430" size="210,24" font="Regular;20" halign="left" backgroundColor="SevenFontBackground" transparent="1" />
-    <widget source="Gateway" render="Label" position="420,460" size="210,24" font="Regular;20" halign="left" backgroundColor="SevenFontBackground" transparent="1" />
-    <widget source="DNS1" render="Label" position="420,490" size="210,24" font="Regular;20" halign="left" backgroundColor="SevenFontBackground" transparent="1" />
-    <widget source="DNS2" render="Label" position="420,520" size="210,24" font="Regular;20" halign="left" backgroundColor="SevenFontBackground" transparent="1" />
-    <panel name="template_menu_left_button" />
-    <panel name="template_colorkey_text_source" />
-  </screen>
+
   <!-- AdapterSetupConfiguration -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="AdapterSetupConfiguration" position="0,0" size="1280,720" title="Network Configuration...">
     <widget backgroundColor="SevenFontBackground" font="Regular2;24" foregroundColor="SevenFont2" position="70,80" render="Label" size="495,28" source="IF" transparent="1" />
@@ -817,8 +798,8 @@
     <widget alphatest="blend" name="statuspic" pixmaps="SevenHD/buttons/green.png,SevenHD/buttons/grey.png" position="742,82" size=" 24,24" transparent="1" />
     <widget backgroundColor="SevenFontBackground" enableWrapAround="1" itemHeight="35" name="menulist" position="70,130" size="708,280" transparent="1" />
     <widget backgroundColor="SevenFontBackground" font="Regular2;22" foregroundColor="SevenFont2" halign="center" position="70,485" render="Label" size="708,100" source="description" transparent="1" valign="center" />
-    <panel name="template_menu_left_button" />
-    <panel name="template_colorkey_text_source" />
+    <widget font="Regular; 18" halign="left" valign="center" source="key_red" position="64,662" size="148,48" render="Label" backgroundColor="SevenFontBackground" foregroundColor="SevenButtonText" transparent="1" zPosition="1" />
+	<panel name="template_menu_left_button" />
   </screen>
   <!-- NetworkAdapterSelection -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="NetworkAdapterSelection" position="0,0" size="1280,720" title="Select Network Adapter">
