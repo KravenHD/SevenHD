@@ -13,7 +13,7 @@ class Update():
 		self.msgBox = None                                                    
                 self.dir_list = ['buttons','WetterIcons','clock','volume','progress','icons','back']
                 self.do_update()   
-                
+
         
         def do_update(self):
                 self.version = config.plugins.SevenHD.version.value
