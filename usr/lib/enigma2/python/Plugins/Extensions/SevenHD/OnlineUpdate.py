@@ -11,8 +11,9 @@ class Update():
 		self.session = session
 		self.onClose = [ ]
 		self.msgBox = None                                                    
-                self.do_update()   
                 self.dir_list = ['buttons','WetterIcons','clock','volume','progress','icons','back']
+                self.do_update()   
+                
         
         def do_update(self):
                 self.version = config.plugins.SevenHD.version.value
