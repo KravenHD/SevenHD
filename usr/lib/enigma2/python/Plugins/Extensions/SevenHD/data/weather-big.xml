@@ -74,18 +74,18 @@
   <widget noWrap="1" backgroundColor="SevenFontBackgroundIB1" font="Regular; 18" foregroundColor="SevenNowIB" render="Label" position="876,35" size="60,25" source="session.CurrentService" zPosition="8" halign="center" transparent="1">
     <convert type="SevenHDYWeather">ftemp_low4</convert>
   </widget>
-<eLabel text="Aktuelle Temp:" position="1000,8" size="150,22" zPosition="5" halign="left" font="Regular2; 18" backgroundColor="SevenFontBackgroundIB2" transparent="1" foregroundColor="SevenNextIB" />
-<widget noWrap="1" backgroundColor="SevenFontBackgroundIB2" font="Regular; 18" foregroundColor="SevenNowIB" render="Label" position="1170,8" size="70,22" source="session.CurrentService" zPosition="3" halign="right" transparent="1">
-    <convert type="SevenHDYWeather">temp</convert>
+<eLabel text="Temp.:" position="1000,8" size="66,22" zPosition="5" halign="left" font="Regular2; 18" backgroundColor="SevenFontBackgroundIB2" transparent="1" foregroundColor="SevenNextIB" />
+<widget noWrap="1" backgroundColor="SevenFontBackgroundIB2" font="Regular; 18" foregroundColor="SevenNowIB" render="Label" position="1072,8" size="168,22" source="session.CurrentService" zPosition="3" halign="right" transparent="1">
+    <convert type="SevenHDYWeather">templang</convert>
   </widget>
 <eLabel text="Wind:" position="1000,32" size="60,22" zPosition="5" halign="left" font="Regular2; 18" backgroundColor="SevenFontBackgroundIB2" transparent="1" foregroundColor="SevenNextIB" />
-<widget Wrap="1" backgroundColor="SevenFontBackgroundIB2" font="Regular; 18" foregroundColor="SevenNowIB" render="Label" position="1120,32" size="120,22" source="session.CurrentService" zPosition="3" halign="right" transparent="1">
-  <convert type="SevenHDYWeather">speed</convert>
+<widget Wrap="1" backgroundColor="SevenFontBackgroundIB2" font="Regular; 18" foregroundColor="SevenNowIB" render="Label" position="1071,32" size="169,22" source="session.CurrentService" zPosition="3" halign="right" transparent="1">
+  <convert type="SevenHDYWeather">wind</convert>
   </widget>
 
- <eLabel text="Luftfeuchtigkeit:" position="1000,56" size="160,25" zPosition="5" halign="left" font="Regular2; 18" backgroundColor="SevenFontBackgroundIB2" transparent="1" foregroundColor="SevenNextIB" />
-  <widget noWrap="1" backgroundColor="SevenFontBackgroundIB2" font="Regular; 18" foregroundColor="SevenNowIB" render="Label" position="1180,56" size="60,22" source="session.CurrentService" zPosition="3" halign="right" transparent="1">
-    <convert type="SevenHDYWeather">humidity</convert>
+ <eLabel text="Klima:" position="1000,56" size="62,25" zPosition="5" halign="left" font="Regular2; 18" backgroundColor="SevenFontBackgroundIB2" transparent="1" foregroundColor="SevenNextIB" />
+  <widget noWrap="1" backgroundColor="SevenFontBackgroundIB2" font="Regular; 18" foregroundColor="SevenNowIB" render="Label" position="1067,56" size="173,22" source="session.CurrentService" zPosition="3" halign="right" transparent="1">
+    <convert type="SevenHDYWeather">klima</convert>
   </widget>
  <eLabel text="Ort:" position="1000,80" size="60,22" zPosition="5" halign="left" font="Regular2; 18" backgroundColor="SevenFontBackgroundIB2" transparent="1" foregroundColor="SevenNextIB" />
   <widget noWrap="1" backgroundColor="SevenFontBackgroundIB2" font="Regular; 18" foregroundColor="SevenNowIB" render="Label" position="1060,80" size="180,22" source="session.CurrentService" zPosition="3" halign="right" transparent="1">
