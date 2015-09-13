@@ -134,6 +134,14 @@ class ChannelSettings(ConfigListScreen, Screen):
         list.append(getConfigListEntry(_('_____________________________________________ color lines ____________________________________________'), ))
         list.append(getConfigListEntry(_("line"), config.plugins.SevenHD.ChannelLine, 'linecs'))
         list.append(getConfigListEntry(_("border"), config.plugins.SevenHD.ChannelBorder, 'bordercs'))
+        if ChannelSelectionStyle.endswith('2') or ChannelSelectionStyle.endswith('3'):
+           pass
+        else:
+           list.append(getConfigListEntry(_("progressbar"), config.plugins.SevenHD.ProgressCS, 'progresscs'))
+        if ChannelSelectionStyle.endswith('2') or ChannelSelectionStyle.endswith('3'):
+           pass
+        else:
+           list.append(getConfigListEntry(_("progressbar line"), config.plugins.SevenHD.ProgressLineCS, 'progresslinecs'))
         list.append(getConfigListEntry(_('__________________________________________ color description _________________________________________'), ))
         list.append(getConfigListEntry(_("bouquet name"), config.plugins.SevenHD.ChannelColorBouquet, 'bouquetname'))
         list.append(getConfigListEntry(_("program name"), config.plugins.SevenHD.ChannelColorProgram, 'programname'))
@@ -154,6 +162,8 @@ class ChannelSettings(ConfigListScreen, Screen):
         list.append(getConfigListEntry(_('______________________________________________ color list ____________________________________________'), ))
         list.append(getConfigListEntry(_("channel name and number"), config.plugins.SevenHD.ChannelColorChannelName, 'channelnamelist'))
         list.append(getConfigListEntry(_("program"), config.plugins.SevenHD.ChannelColorEvent, 'programlist'))
+        list.append(getConfigListEntry(_("progressbar"), config.plugins.SevenHD.ProgressListCS, 'progresslistcs'))
+        list.append(getConfigListEntry(_("progressbar border"), config.plugins.SevenHD.ProgressBorderCS, 'progressbordercs'))
         return list
 
     def __selectionChanged(self):
@@ -251,6 +261,10 @@ class ChannelSettings(ConfigListScreen, Screen):
         self.setInputToDefault(config.plugins.SevenHD.ChannelColorChannelName)
         self.setInputToDefault(config.plugins.SevenHD.ChannelColorChannelNumber)
         self.setInputToDefault(config.plugins.SevenHD.ChannelColorEvent)
+        self.setInputToDefault(config.plugins.SevenHD.ProgressBorderCS)
+        self.setInputToDefault(config.plugins.SevenHD.ProgressLineCS)
+        self.setInputToDefault(config.plugins.SevenHD.ProgressCS)
+        self.setInputToDefault(config.plugins.SevenHD.ProgressListCS)
         self.save()
 
     def setInputToDefault(self, configItem):

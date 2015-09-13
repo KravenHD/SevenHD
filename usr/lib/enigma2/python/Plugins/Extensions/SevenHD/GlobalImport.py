@@ -1,4 +1,4 @@
-version = '3.3.69'
+version = '3.3.71'
 import os
 import re
 import time
@@ -210,6 +210,11 @@ config.plugins.SevenHD.NumberZapExt = ConfigSelection(default="numberzapext-none
 				])
 
 config.plugins.SevenHD.PrimeTimeTime = ConfigClock(default=time.mktime((0, 0, 0, 20, 15, 0, 0, 0, 0)))
+
+ProgressVolList = [("progressvol", _("bunt"))]
+ProgressVolList = ColorList + ProgressVolList
+config.plugins.SevenHD.ProgressVol = ConfigSelection(default="00ffffff", choices = ProgressVolList)
+
 ################################################################################################################################################################
 # MenuPluginScreen
 
@@ -250,6 +255,8 @@ config.plugins.SevenHD.Font2 = ConfigSelection(default="00ffffff", choices = Col
 config.plugins.SevenHD.SelectionFont = ConfigSelection(default="00ffffff", choices = ColorList)
 
 config.plugins.SevenHD.ButtonText = ConfigSelection(default="00ffffff", choices = ColorList)
+
+config.plugins.SevenHD.ProgressLinePlug = ConfigSelection(default="00ffffff", choices = ColorList)
 
 
 ################################################################################################################################################################
@@ -320,6 +327,11 @@ config.plugins.SevenHD.NowEvent = ConfigSelection(default="00ffffff", choices = 
 
 config.plugins.SevenHD.SNR = ConfigSelection(default="00ffffff", choices = ColorList)
 
+config.plugins.SevenHD.ProgressLineIB = ConfigSelection(default="00ffffff", choices = ColorList)
+
+ProgressIBList = [("progressib", _("bunt"))]
+ProgressIBList = ColorList + ProgressIBList
+config.plugins.SevenHD.ProgressIB = ConfigSelection(default="00ffffff", choices = ProgressIBList)
 
 ################################################################################################################################################################
 # InfobarExtraScreen
@@ -451,6 +463,20 @@ config.plugins.SevenHD.ChannelColorChannelNumber = ConfigSelection(default="00ff
 
 config.plugins.SevenHD.ChannelColorEvent = ConfigSelection(default="00ffffff", choices = ColorList)
 
+ProgressBorderCSList = [("ff000000", _("off"))]
+ProgressBorderCSList = ColorList + ProgressBorderCSList
+config.plugins.SevenHD.ProgressBorderCS = ConfigSelection(default="00ffffff", choices = ProgressBorderCSList)
+
+config.plugins.SevenHD.ProgressLineCS = ConfigSelection(default="00ffffff", choices = ColorList)
+
+ProgressCSList = [("progresscs", _("bunt"))]
+ProgressCSList = ColorList + ProgressCSList
+config.plugins.SevenHD.ProgressCS = ConfigSelection(default="00ffffff", choices = ProgressCSList)
+
+ProgressListCSList = [("progresslistcs", _("bunt"))]
+ProgressListCSList = ColorList + ProgressListCSList
+config.plugins.SevenHD.ProgressListCS = ConfigSelection(default="00ffffff", choices = ProgressListCSList)
+
 ################################################################################################################################################################
 # SonstigesScreen
 
@@ -500,6 +526,10 @@ myConfigList = [('config.plugins.SevenHD.Image.value = "' + str(config.plugins.S
                 ('config.plugins.SevenHD.SelectionBackground.value = "' + str(config.plugins.SevenHD.SelectionBackground.value) + '"'),
                 ('config.plugins.SevenHD.SelectionBorder.value = "' + str(config.plugins.SevenHD.SelectionBorder.value) + '"'),
                 ('config.plugins.SevenHD.Progress.value = "' + str(config.plugins.SevenHD.Progress.value) + '"'),
+                ('config.plugins.SevenHD.ProgressVol.value = "' + str(config.plugins.SevenHD.ProgressVol.value) + '"'),
+                ('config.plugins.SevenHD.ProgressIB.value = "' + str(config.plugins.SevenHD.ProgressIB.value) + '"'),
+                ('config.plugins.SevenHD.ProgressCS.value = "' + str(config.plugins.SevenHD.ProgressCS.value) + '"'),
+                ('config.plugins.SevenHD.ProgressListCS.value = "' + str(config.plugins.SevenHD.ProgressListCS.value) + '"'),
                 ('config.plugins.SevenHD.Font1.value = "' + str(config.plugins.SevenHD.Font1.value) + '"'),
                 ('config.plugins.SevenHD.Font2.value = "' + str(config.plugins.SevenHD.Font2.value) + '"'),
                 ('config.plugins.SevenHD.SelectionFont.value = "' + str(config.plugins.SevenHD.SelectionFont.value) + '"'),
@@ -552,4 +582,8 @@ myConfigList = [('config.plugins.SevenHD.Image.value = "' + str(config.plugins.S
                 ('config.plugins.SevenHD.ChannelColorEvent.value = "' + str(config.plugins.SevenHD.ChannelColorEvent.value) + '"'),
                 ('config.plugins.SevenHD.CoolTVGuide.value = "' + str(config.plugins.SevenHD.CoolTVGuide.value) + '"'),
                 ('config.plugins.SevenHD.EMCStyle.value = "' + str(config.plugins.SevenHD.EMCStyle.value) + '"'),
-                ('config.plugins.SevenHD.MovieSelectionStyle.value = "' + str(config.plugins.SevenHD.MovieSelectionStyle.value) + '"')]
+                ('config.plugins.SevenHD.MovieSelectionStyle.value = "' + str(config.plugins.SevenHD.MovieSelectionStyle.value) + '"'),
+                ('config.plugins.SevenHD.ProgressLinePlug.value = "' + str(config.plugins.SevenHD.ProgressLinePlug.value) + '"'),
+                ('config.plugins.SevenHD.ProgressLineIB.value = "' + str(config.plugins.SevenHD.ProgressLineIB.value) + '"'),
+                ('config.plugins.SevenHD.ProgressLineCS.value = "' + str(config.plugins.SevenHD.ProgressLineCS.value) + '"'),
+                ('config.plugins.SevenHD.ProgressBorderCS.value = "' + str(config.plugins.SevenHD.ProgressBorderCS.value) + '"')]

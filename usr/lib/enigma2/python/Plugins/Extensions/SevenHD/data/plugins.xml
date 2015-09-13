@@ -2,7 +2,7 @@
   <!-- ********** AutoBouquetsMaker ********** -->
   <!-- AutoBouquetsMaker -->
   <screen name="AutoBouquetsMaker" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
-    <widget name="status" halign="left" valign="center" position="70,251" size="720,20" font="Regular;18" backgroundColor="SevenFontBackground" transparent="1" foregroundColor="white" />
+    <widget name="status" halign="left" valign="center" position="70,251" size="720,20" font="Regular;18" backgroundColor="SevenFontBackground" transparent="1" foregroundColor="SevenFont1" />
     <widget name="progress" position="70,277" size="720,5" borderWidth="1" backgroundColor="SevenFontBackground" transparent="1" />
     <widget name="action" halign="left" valign="center" position="70,226" size="720,20" font="Regular;18" backgroundColor="SevenFontBackground" transparent="1" />
     <panel name="template_menu_left" />
@@ -1846,6 +1846,20 @@
     <widget source="changeLogText" render="Label" position="888,132" size="378,577" font="Regular2;20" foregroundColor="SevenFont2" backgroundColor="SevenFontBackgroundRight" halign="center" transparent="1" />
     <panel name="template_menu_left_right_button" />
     <panel name="template_colorkey_text_source" />
+  </screen>
+  <!-- BurningSeries -->
+  <screen name="burns_setup" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent" title="Setup">
+  <widget name="config" position="70,80" size="708,540" backgroundColor="SevenFontBackground" font="Regular;16" transparent="1" />
+  <panel name="template_menu_left" />
+  </screen>
+  <screen name="burns" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent" title="Burning-seri.es Streamer v0.6">
+  <widget name="myTVmenulist" position="70,80" size="708,530" backgroundColor="SevenFontBackground" font="Regular;16" transparent="1" />
+  <widget name="info" halign="left" valign="center" position="70,618" size="708,30" font="Regular2; 18" backgroundColor="SevenFontBackground" transparent="1" foregroundColor="SevenFont2" />
+  <widget font="Regular; 18" halign="left" valign="center" name="TextRed" position="64,662" size="148,48" backgroundColor="SevenFontBackground" foregroundColor="SevenButtonText" transparent="1" zPosition="1" />
+  <widget font="Regular; 18" halign="left" valign="center" name="TextGreen" position="264,662" size="148,48" backgroundColor="SevenFontBackground" foregroundColor="SevenButtonText" transparent="1" zPosition="1" />
+  <widget font="Regular; 18" halign="left" valign="center" name="TextYellow" position="464,662" size="148,48" backgroundColor="SevenFontBackground" foregroundColor="SevenButtonText" transparent="1" zPosition="1" />
+  <widget font="Regular; 18" halign="left" valign="center" name="TextBlue" position="664,662" size="148,48" backgroundColor="SevenFontBackground" foregroundColor="SevenButtonText" transparent="1" zPosition="1" />
+  <panel name="template_menu_left_button" />
   </screen>
   <!-- plugins -->
   

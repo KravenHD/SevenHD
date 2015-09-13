@@ -303,6 +303,18 @@ class SevenHD(Screen):
 		self.skinSearchAndReplace.append(["Seven_Line", config.plugins.SevenHD.Line.value])
 
 
+		self.skinSearchAndReplace.append(["SevenProgress_BorderCS", config.plugins.SevenHD.ProgressBorderCS.value])
+		self.skinSearchAndReplace.append(["SevenProgress_LineCS", config.plugins.SevenHD.ProgressLineCS.value])
+		self.skinSearchAndReplace.append(["SevenProgress_LineIB", config.plugins.SevenHD.ProgressLineIB.value])
+		self.skinSearchAndReplace.append(["SevenProgress_LinePlug", config.plugins.SevenHD.ProgressLinePlug.value])
+
+
+		self.skinSearchAndReplace.append(["SevenProgress_IB", config.plugins.SevenHD.ProgressIB.value])
+		self.skinSearchAndReplace.append(["SevenProgress_Vol", config.plugins.SevenHD.ProgressVol.value])
+		self.skinSearchAndReplace.append(["SevenProgress_CS", config.plugins.SevenHD.ProgressCS.value])
+		self.skinSearchAndReplace.append(["SevenProgress_ListCS", config.plugins.SevenHD.ProgressListCS.value])
+
+
 		self.skinSearchAndReplace.append(["SevenBorder_IB", config.plugins.SevenHD.InfobarBorder.value])
 		self.skinSearchAndReplace.append(["SevenLine_IB", config.plugins.SevenHD.InfobarLine.value])
 		self.skinSearchAndReplace.append(["SevenNext_IB", config.plugins.SevenHD.NextEvent.value])
@@ -339,20 +351,46 @@ class SevenHD(Screen):
                 ### Progress
                 if config.plugins.SevenHD.Progress.value == "progress":
                    self.skinSearchAndReplace.append(["SevenHD/progress/progress52.png","SevenHD/progress/progress52_1.png"])
-                   self.skinSearchAndReplace.append(["SevenHD/progress/progress170.png","SevenHD/progress/progress170_1.png"])
-                   self.skinSearchAndReplace.append(["SevenHD/progress/progress213.png","SevenHD/progress/progress213_1.png"])
-                   self.skinSearchAndReplace.append(["SevenHD/progress/progress213v.png","SevenHD/progress/progress213v_1.png"])
                    self.skinSearchAndReplace.append(["SevenHD/progress/progress300.png","SevenHD/progress/progress300_1.png"])
                    self.skinSearchAndReplace.append(["SevenHD/progress/progress362.png","SevenHD/progress/progress362_1.png"])
-                   self.skinSearchAndReplace.append(["SevenHD/progress/progress426.png","SevenHD/progress/progress426_1.png"])
                    self.skinSearchAndReplace.append(["SevenHD/progress/progress535.png","SevenHD/progress/progress535_1.png"])
-                   self.skinSearchAndReplace.append(["SevenHD/progress/progress621.png","SevenHD/progress/progress621_1.png"])
                    self.skinSearchAndReplace.append(["SevenHD/progress/progress793.png","SevenHD/progress/progress793_1.png"])
                    self.skinSearchAndReplace.append(["SevenHD/progress/progress858.png","SevenHD/progress/progress858_1.png"])
                    self.skinSearchAndReplace.append(["SevenHD/progress/progress990.png","SevenHD/progress/progress990_1.png"])
                    self.skinSearchAndReplace.append(["SevenHD/progress/progress1280.png","SevenHD/progress/progress1280_1.png"])
                 else:
                    self.skinSearchAndReplace.append(["00fffff1", config.plugins.SevenHD.Progress.value])   
+                       
+                ### ProgressIB
+                if config.plugins.SevenHD.ProgressIB.value == "progressib":
+                   self.skinSearchAndReplace.append(["SevenHD/progressib/progressib621.png","SevenHD/progressib/progressib621_1.png"])
+                   self.skinSearchAndReplace.append(["SevenHD/progressib/progressib793.png","SevenHD/progressib/progressib793_1.png"])
+                   self.skinSearchAndReplace.append(["SevenHD/progressib/progressib858.png","SevenHD/progressib/progressib858_1.png"])
+                   self.skinSearchAndReplace.append(["SevenHD/progressib/progressib1280.png","SevenHD/progressib/progressib1280_1.png"])
+                else:
+                   self.skinSearchAndReplace.append(["00fffff2", config.plugins.SevenHD.ProgressIB.value])   
+                       
+                ### ProgressVol
+                if config.plugins.SevenHD.ProgressVol.value == "progressvol":
+                   self.skinSearchAndReplace.append(["SevenHD/progressvol/progressvol170.png","SevenHD/progressvol/progressvol170_1.png"])
+                   self.skinSearchAndReplace.append(["SevenHD/progressvol/progressvol213.png","SevenHD/progressvol/progressvol213_1.png"])
+                   self.skinSearchAndReplace.append(["SevenHD/progressvol/progressvol213v.png","SevenHD/progressvol/progressvol213vv_1.png"])
+                else:
+                   self.skinSearchAndReplace.append(["00fffff3", config.plugins.SevenHD.ProgressVol.value])   
+                       
+                ### ProgressCS
+                if config.plugins.SevenHD.ProgressCS.value == "progresscs":
+                   self.skinSearchAndReplace.append(["SevenHD/progresscs/progresscs52.png","SevenHD/progresscs/progresscs52_1.png"])
+                   self.skinSearchAndReplace.append(["SevenHD/progresscs/progresscs362.png","SevenHD/progresscs/progresscs362_1.png"])
+                   self.skinSearchAndReplace.append(["SevenHD/progresscs/progresscs426.png","SevenHD/progresscs/progresscs426_1.png"])
+                else:
+                   self.skinSearchAndReplace.append(["00fffff4", config.plugins.SevenHD.ProgressCS.value])   
+                       
+                ### ProgressListCS
+                if config.plugins.SevenHD.ProgressListCS.value == "progresslistcs":
+                   self.skinSearchAndReplace.append(["SevenHD/progresslistcs/progresslistcs52.png","SevenHD/progresslistcs/progresslistcs52_1.png"])
+                else:
+                   self.skinSearchAndReplace.append(["00fffff5", config.plugins.SevenHD.ProgressListCS.value])   
 
 		self.skinSearchAndReplace.append(["buttons_seven_white", config.plugins.SevenHD.ButtonStyle.value])
 		self.skinSearchAndReplace.append(["icons_seven_white", config.plugins.SevenHD.IconStyle.value])
@@ -525,6 +563,10 @@ class SevenHD(Screen):
                 console12 = eConsoleAppContainer()
 		console13 = eConsoleAppContainer()
 		console14 = eConsoleAppContainer()
+		console15 = eConsoleAppContainer()
+		console16 = eConsoleAppContainer()
+		console17 = eConsoleAppContainer()
+		console18 = eConsoleAppContainer()
 		
                 #DOWNLOADS	
                 #buttons
@@ -537,27 +579,39 @@ class SevenHD(Screen):
                 console4.execute("rm -rf /usr/share/enigma2/SevenHD/volume/*.*; rm -rf /usr/share/enigma2/SevenHD/volume; wget -q http://www.gigablue-support.org/skins/SevenHD/volume/%s.tar.gz -O /tmp/%s.tar.gz; tar xf /tmp/%s.tar.gz -C /usr/share/enigma2/SevenHD/" % (str(config.plugins.SevenHD.VolumeStyle.value), str(config.plugins.SevenHD.VolumeStyle.value), str(config.plugins.SevenHD.VolumeStyle.value)))
                 #progress
                 if config.plugins.SevenHD.Progress.value == "progress":
-                   console5.execute("rm -rf /usr/share/enigma2/SevenHD/progress/*.*; rm -rf /usr/share/enigma2/SevenHD/progress; wget -q http://www.gigablue-support.org/skins/SevenHD/progress/%s.tar.gz -O /tmp/%s.tar.gz; tar xf /tmp/%s.tar.gz -C /usr/share/enigma2/SevenHD/" % (str(config.plugins.SevenHD.Progress.value), str(config.plugins.SevenHD.Progress.value), str(config.plugins.SevenHD.Progress.value)))
+                   console5.execute("rm -rf /usr/share/enigma2/SevenHD/progress/*.*; rm -rf /usr/share/enigma2/SevenHD/progress/progress; wget -q http://www.gigablue-support.org/skins/SevenHD/progress/%s.tar.gz -O /tmp/%s.tar.gz; tar xf /tmp/%s.tar.gz -C /usr/share/enigma2/SevenHD/" % (str(config.plugins.SevenHD.Progress.value), str(config.plugins.SevenHD.Progress.value), str(config.plugins.SevenHD.Progress.value)))
+                #progressVol
+                if config.plugins.SevenHD.ProgressVol.value == "progressvol":
+                   console6.execute("rm -rf /usr/share/enigma2/SevenHD/progressvol/*.*; rm -rf /usr/share/enigma2/SevenHD/progressvol; wget -q http://www.gigablue-support.org/skins/SevenHD/progress/%s.tar.gz -O /tmp/%s.tar.gz; tar xf /tmp/%s.tar.gz -C /usr/share/enigma2/SevenHD/" % (str(config.plugins.SevenHD.ProgressVol.value), str(config.plugins.SevenHD.ProgressVol.value), str(config.plugins.SevenHD.ProgressVol.value)))
+                #progressIB
+                if config.plugins.SevenHD.ProgressIB.value == "progressib":
+                   console7.execute("rm -rf /usr/share/enigma2/SevenHD/progressib/*.*; rm -rf /usr/share/enigma2/SevenHD/progressib; wget -q http://www.gigablue-support.org/skins/SevenHD/progress/%s.tar.gz -O /tmp/%s.tar.gz; tar xf /tmp/%s.tar.gz -C /usr/share/enigma2/SevenHD/" % (str(config.plugins.SevenHD.ProgressIB.value), str(config.plugins.SevenHD.ProgressIB.value), str(config.plugins.SevenHD.ProgressIB.value)))
+                #progressCS
+                if config.plugins.SevenHD.ProgressCS.value == "progresscs":
+                   console8.execute("rm -rf /usr/share/enigma2/SevenHD/progresscs/*.*; rm -rf /usr/share/enigma2/SevenHD/progresscs; wget -q http://www.gigablue-support.org/skins/SevenHD/progress/%s.tar.gz -O /tmp/%s.tar.gz; tar xf /tmp/%s.tar.gz -C /usr/share/enigma2/SevenHD/" % (str(config.plugins.SevenHD.ProgressCS.value), str(config.plugins.SevenHD.ProgressCS.value), str(config.plugins.SevenHD.ProgressCS.value)))
+                #progressListCS
+                if config.plugins.SevenHD.ProgressListCS.value == "progresslistcs":
+                   console9.execute("rm -rf /usr/share/enigma2/SevenHD/progresslistcs/*.*; rm -rf /usr/share/enigma2/SevenHD/progresslistcs; wget -q http://www.gigablue-support.org/skins/SevenHD/progress/%s.tar.gz -O /tmp/%s.tar.gz; tar xf /tmp/%s.tar.gz -C /usr/share/enigma2/SevenHD/" % (str(config.plugins.SevenHD.ProgressListCS.value), str(config.plugins.SevenHD.ProgressListCS.value), str(config.plugins.SevenHD.ProgressListCS.value)))
                 #icons
-                console6.execute("rm -rf /usr/share/enigma2/SevenHD/icons/*.*; rm -rf /usr/share/enigma2/SevenHD/icons; wget -q http://www.gigablue-support.org/skins/SevenHD/icons/%s.tar.gz -O /tmp/%s.tar.gz; tar xf /tmp/%s.tar.gz -C /usr/share/enigma2/SevenHD/" % (str(config.plugins.SevenHD.IconStyle.value), str(config.plugins.SevenHD.IconStyle.value), str(config.plugins.SevenHD.IconStyle.value)))
+                console10.execute("rm -rf /usr/share/enigma2/SevenHD/icons/*.*; rm -rf /usr/share/enigma2/SevenHD/icons; wget -q http://www.gigablue-support.org/skins/SevenHD/icons/%s.tar.gz -O /tmp/%s.tar.gz; tar xf /tmp/%s.tar.gz -C /usr/share/enigma2/SevenHD/" % (str(config.plugins.SevenHD.IconStyle.value), str(config.plugins.SevenHD.IconStyle.value), str(config.plugins.SevenHD.IconStyle.value)))
 		
                 #background
-		console7.execute("rm -rf /usr/share/enigma2/SevenHD/back/*.*; rm -rf /usr/share/enigma2/SevenHD/back")
+		console11.execute("rm -rf /usr/share/enigma2/SevenHD/back/*.*; rm -rf /usr/share/enigma2/SevenHD/back")
                 
                 if self.Background.startswith('back'):
-		   console8.execute("wget -q http://www.gigablue-support.org/skins/SevenHD/back/%s.tar.gz -O /tmp/%s.tar.gz; tar xf /tmp/%s.tar.gz -C /usr/share/enigma2/SevenHD/" % (str(self.Background), str(self.Background), str(self.Background)))
+		   console12.execute("wget -q http://www.gigablue-support.org/skins/SevenHD/back/%s.tar.gz -O /tmp/%s.tar.gz; tar xf /tmp/%s.tar.gz -C /usr/share/enigma2/SevenHD/" % (str(self.Background), str(self.Background), str(self.Background)))
                 if self.BackgroundRight.startswith('back'):
-                   console9.execute("wget -q http://www.gigablue-support.org/skins/SevenHD/back/%s.tar.gz -O /tmp/%s.tar.gz; tar xf /tmp/%s.tar.gz -C /usr/share/enigma2/SevenHD/" % (str(self.BackgroundRight), str(self.BackgroundRight), str(self.BackgroundRight)))
+                   console13.execute("wget -q http://www.gigablue-support.org/skins/SevenHD/back/%s.tar.gz -O /tmp/%s.tar.gz; tar xf /tmp/%s.tar.gz -C /usr/share/enigma2/SevenHD/" % (str(self.BackgroundRight), str(self.BackgroundRight), str(self.BackgroundRight)))
 		if self.BackgroundIB1.startswith('back'):
-		   console10.execute("wget -q http://www.gigablue-support.org/skins/SevenHD/back/%s.tar.gz -O /tmp/%s.tar.gz; tar xf /tmp/%s.tar.gz -C /usr/share/enigma2/SevenHD/" % (str(self.BackgroundIB1), str(self.BackgroundIB1), str(self.BackgroundIB1)))
+		   console14.execute("wget -q http://www.gigablue-support.org/skins/SevenHD/back/%s.tar.gz -O /tmp/%s.tar.gz; tar xf /tmp/%s.tar.gz -C /usr/share/enigma2/SevenHD/" % (str(self.BackgroundIB1), str(self.BackgroundIB1), str(self.BackgroundIB1)))
 		if self.BackgroundIB2.startswith('back'):
-		   console11.execute("wget -q http://www.gigablue-support.org/skins/SevenHD/back/%s.tar.gz -O /tmp/%s.tar.gz; tar xf /tmp/%s.tar.gz -C /usr/share/enigma2/SevenHD/" % (str(self.BackgroundIB2), str(self.BackgroundIB2), str(self.BackgroundIB2)))
+		   console15.execute("wget -q http://www.gigablue-support.org/skins/SevenHD/back/%s.tar.gz -O /tmp/%s.tar.gz; tar xf /tmp/%s.tar.gz -C /usr/share/enigma2/SevenHD/" % (str(self.BackgroundIB2), str(self.BackgroundIB2), str(self.BackgroundIB2)))
 		if self.ChannelBack1.startswith('back'):
-		   console12.execute("wget -q http://www.gigablue-support.org/skins/SevenHD/back/%s.tar.gz -O /tmp/%s.tar.gz; tar xf /tmp/%s.tar.gz -C /usr/share/enigma2/SevenHD/" % (str(self.ChannelBack1), str(self.ChannelBack1), str(self.ChannelBack1)))
+		   console16.execute("wget -q http://www.gigablue-support.org/skins/SevenHD/back/%s.tar.gz -O /tmp/%s.tar.gz; tar xf /tmp/%s.tar.gz -C /usr/share/enigma2/SevenHD/" % (str(self.ChannelBack1), str(self.ChannelBack1), str(self.ChannelBack1)))
 		if self.ChannelBack2.startswith('back'):
-		   console13.execute("wget -q http://www.gigablue-support.org/skins/SevenHD/back/%s.tar.gz -O /tmp/%s.tar.gz; tar xf /tmp/%s.tar.gz -C /usr/share/enigma2/SevenHD/" % (str(self.ChannelBack2), str(self.ChannelBack2), str(self.ChannelBack2)))
+		   console17.execute("wget -q http://www.gigablue-support.org/skins/SevenHD/back/%s.tar.gz -O /tmp/%s.tar.gz; tar xf /tmp/%s.tar.gz -C /usr/share/enigma2/SevenHD/" % (str(self.ChannelBack2), str(self.ChannelBack2), str(self.ChannelBack2)))
 		if self.ChannelBack3.startswith('back'):
-		   console14.execute("wget -q http://www.gigablue-support.org/skins/SevenHD/back/%s.tar.gz -O /tmp/%s.tar.gz; tar xf /tmp/%s.tar.gz -C /usr/share/enigma2/SevenHD/" % (str(self.ChannelBack3), str(self.ChannelBack3), str(self.ChannelBack3)))
+		   console18.execute("wget -q http://www.gigablue-support.org/skins/SevenHD/back/%s.tar.gz -O /tmp/%s.tar.gz; tar xf /tmp/%s.tar.gz -C /usr/share/enigma2/SevenHD/" % (str(self.ChannelBack3), str(self.ChannelBack3), str(self.ChannelBack3)))
                 
                 self.debug('download tgz complett\n')	
         

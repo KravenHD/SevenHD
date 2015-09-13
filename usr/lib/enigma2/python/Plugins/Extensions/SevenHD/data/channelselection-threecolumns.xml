@@ -4,15 +4,15 @@
   <widget source="global.CurrentTime" render="Label" position="814,19" size="80,30" font="Regular2; 23" foregroundColor="SevenDestcriptionCS" backgroundColor="SevenFontBackMiddleCS" transparent="1">
   <convert type="SevenHDClockToText">Default</convert>
 </widget>
-  <widget backgroundColor="SevenFontBackCS" scrollbarMode="showNever" picServiceEventProgressbar="SevenHD/progress/progress52.png" foregroundColor="SevenNameList" colorEventProgressbar="SevenProgress" colorEventProgressbarSelected="SevenProgress" foregroundColorMarkedSelected="green" colorEventProgressbarBorder="SevenBorderCS" colorEventProgressbarBorderSelected="SevenBorderCS" colorServiceDescription="SevenProgramList" colorServiceDescriptionSelected="SevenSelFont" colorServiceRecording="red" foregroundColorServiceNotAvail="yellow" name="list" position="18,76" serviceInfoFont="Regular;18" serviceItemHeight="28" serviceNameFont="Regular;18" serviceNumberFont="Regular;18" size="439,562" transparent="1" />
+  <widget backgroundColor="SevenFontBackCS" scrollbarMode="showNever" picServiceEventProgressbar="SevenHD/progresslistcs/progresslistcs52.png" foregroundColor="SevenNameList" colorEventProgressbar="SevenProgressListCS" colorEventProgressbarSelected="SevenProgressListCS" foregroundColorMarkedSelected="green" colorEventProgressbarBorder="SevenProgressBorderCS" colorEventProgressbarBorderSelected="SevenProgressBorderCS" colorServiceDescription="SevenProgramList" colorServiceDescriptionSelected="SevenSelFont" colorServiceRecording="red" foregroundColorServiceNotAvail="yellow" name="list" position="18,76" serviceInfoFont="Regular;18" serviceItemHeight="28" serviceNameFont="Regular;18" serviceNumberFont="Regular;18" size="439,562" transparent="1" />
   <widget source="ServiceEvent" render="Label" position="925,12" size="339,46" font="Regular2; 25" halign="center" foregroundColor="SevenChannelCS" backgroundColor="SevenFontBackRightCS" transparent="1" noWrap="1">
   <convert type="ServiceName">Name</convert>
 </widget>
   <widget source="ServiceEvent" render="SevenHDRunningText" options="movetype=running,startpoint=0,startdelay=2000,steptime=90,wrap=0,always=0,repeat=2,oneshot=1" position="488,76" size="408,24" font="Regular2; 20" halign="center" backgroundColor="SevenFontBackMiddleCS" transparent="1" foregroundColor="SevenDestcriptionCS">
   <convert type="SevenHDEventName">Name</convert>
 </widget>
-  <eLabel backgroundColor="SevenLineCS" position="488,112" size="408,1" zPosition="1" />
-  <widget source="ServiceEvent" render="Progress" backgroundColor="SevenFontBackMiddleCS" foregroundColor="SevenProgress" position="488,111" size="408,3" transparent="1" zPosition="2" pixmap="SevenHD/progress/progress426.png">
+  <eLabel backgroundColor="SevenProgressLineCS" position="488,112" size="408,1" zPosition="1" />
+  <widget source="ServiceEvent" render="Progress" backgroundColor="SevenFontBackMiddleCS" foregroundColor="SevenProgressCS" position="488,111" size="408,3" transparent="1" zPosition="2" pixmap="SevenHD/progresscs/progresscs426.png">
   <convert type="SevenHDEventTime">Progress</convert>
 </widget>
   <widget source="ServiceEvent" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,steptime=90,wrap=1,always=0,repeat=2,oneshot=1" position="488,124" size="408,229" font="Regular; 19" foregroundColor="SevenDestcriptionCS" backgroundColor="SevenFontBackMiddleCS" transparent="1">

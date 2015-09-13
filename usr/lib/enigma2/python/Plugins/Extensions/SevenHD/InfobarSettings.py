@@ -132,6 +132,8 @@ class InfobarSettings(ConfigListScreen, Screen):
         list.append(getConfigListEntry(_('_____________________________________________ color lines ____________________________________________'), ))
         list.append(getConfigListEntry(_("line"), config.plugins.SevenHD.InfobarLine, 'InfobarLine'))
         list.append(getConfigListEntry(_("border"), config.plugins.SevenHD.InfobarBorder, 'InfobarBorder'))
+        list.append(getConfigListEntry(_("progressbar"), config.plugins.SevenHD.ProgressIB, 'progressib'))
+        list.append(getConfigListEntry(_("progressbar line"), config.plugins.SevenHD.ProgressLineIB, 'progresslineib'))
         list.append(getConfigListEntry(_('______________________________________________ color font ____________________________________________'), ))
         list.append(getConfigListEntry(_("channelname"), config.plugins.SevenHD.InfobarChannelName, 'channelname'))
         if config.plugins.SevenHD.InfobarChannelName.value != 'none':
@@ -256,6 +258,8 @@ class InfobarSettings(ConfigListScreen, Screen):
         self.setInputToDefault(config.plugins.SevenHD.ClockTime)
         self.setInputToDefault(config.plugins.SevenHD.ClockWeek)
         self.setInputToDefault(config.plugins.SevenHD.ClockWeather)
+        self.setInputToDefault(config.plugins.SevenHD.ProgressLineIB)
+        self.setInputToDefault(config.plugins.SevenHD.ProgressIB)
         self.save()
 
     def setInputToDefault(self, configItem):

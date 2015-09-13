@@ -11,7 +11,7 @@ class Update():
 		self.session = session
 		self.onClose = [ ]
 		self.msgBox = None                                                    
-                self.dir_list = ['buttons','WetterIcons','clock','volume','progress','icons','back']
+                self.dir_list = ['buttons','WetterIcons','clock','volume','progress','progressib','progresscs','progressvol','progresslistcs','icons','back']
                 self.do_update()   
 
         

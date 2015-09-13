@@ -128,6 +128,7 @@ class MenuPluginSettings(ConfigListScreen, Screen):
         list.append(getConfigListEntry(_('_____________________________________________ color lines ____________________________________________'), ))
         list.append(getConfigListEntry(_("line"), config.plugins.SevenHD.Line, 'Line'))
         list.append(getConfigListEntry(_("border"), config.plugins.SevenHD.Border, 'Border'))
+        list.append(getConfigListEntry(_("progressbar"), config.plugins.SevenHD.Progress, 'Progress'))
         list.append(getConfigListEntry(_('____________________________________________ listselection ___________________________________________'), ))
         list.append(getConfigListEntry(_("color"), config.plugins.SevenHD.SelectionBackground, 'Listselection'))
         list.append(getConfigListEntry(_("border"), config.plugins.SevenHD.SelectionBorder, 'Listborder'))
@@ -221,6 +222,8 @@ class MenuPluginSettings(ConfigListScreen, Screen):
         self.setInputToDefault(config.plugins.SevenHD.Font2)
         self.setInputToDefault(config.plugins.SevenHD.SelectionFont)
         self.setInputToDefault(config.plugins.SevenHD.ButtonText)
+        self.setInputToDefault(config.plugins.SevenHD.ProgressLinePlug)
+        self.setInputToDefault(config.plugins.SevenHD.Progress)
         self.save()
 
     def setInputToDefault(self, configItem):
