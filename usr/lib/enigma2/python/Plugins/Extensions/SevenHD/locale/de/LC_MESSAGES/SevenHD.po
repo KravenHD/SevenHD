@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "POT-Creation-Date: 2015-08-12 13:30+0200\n"
-"PO-Revision-Date: 2015-09-03 23:30+0200\n"
+"PO-Revision-Date: 2015-09-13 21:04+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: de_DE\n"
@@ -1461,6 +1461,30 @@ msgstr "Geschwindigkeit"
 msgid "autoupdate plugin startinfo"
 msgstr "Updateinformationen beim Pluginstart"
 
+#: SevenHDYWeather.py
+msgid " from "
+msgstr " aus "
+
+#: SevenHDYWeather.py
+msgid "% humidity"
+msgstr "% Luftfeuchtigkeit"
+
+#: SevenHDYWeather.py
+msgid ", feels "
+msgstr ", gefühlt "
+
+msgid "progressbar"
+msgstr "Fortschrittsbalken"
+
+msgid "volumebar"
+msgstr "Lautstärkebalken"
+
+msgid "progressbar line"
+msgstr "Fortschrittsbalken Linie"
+
+msgid "progressbar border"
+msgstr "Fortschrittsbalken Rahmen"
+
 #~ msgid " infobar extras "
 #~ msgstr "Infobar Extras"
 
@@ -1524,3 +1548,6 @@ msgstr "Updateinformationen beim Pluginstart"
 
 #~ msgid "Last Version on Server"
 #~ msgstr "Lestzte Version auf dem Server"
+
+#~ msgid "__________________________________________ infobar and second infobar __________________________________________"
+#~ msgstr "__________________________________________ Infobar und Zweite Infobar __________________________________________"
