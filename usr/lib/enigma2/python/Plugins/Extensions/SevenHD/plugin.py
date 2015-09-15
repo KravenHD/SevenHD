@@ -379,7 +379,7 @@ class SevenHD(Screen):
                 if config.plugins.SevenHD.ProgressVol.value == "progressvol":
                    self.skinSearchAndReplace.append(["SevenHD/progressvol/progressvol170.png","SevenHD/progressvol/progressvol170_1.png"])
                    self.skinSearchAndReplace.append(["SevenHD/progressvol/progressvol213.png","SevenHD/progressvol/progressvol213_1.png"])
-                   self.skinSearchAndReplace.append(["SevenHD/progressvol/progressvol213v.png","SevenHD/progressvol/progressvol213vv_1.png"])
+                   self.skinSearchAndReplace.append(["SevenHD/progressvol/progress213vvol.png","SevenHD/progressvol/progress213vvol_1.png"])
                 else:
                    self.skinSearchAndReplace.append(["00fffff3", config.plugins.SevenHD.ProgressVol.value])   
                        
