@@ -1,4 +1,4 @@
-version = '3.3.71'
+version = '3.4.00'
 import os
 import re
 import time
@@ -267,22 +267,32 @@ config.plugins.SevenHD.InfobarStyle = ConfigSelection(default="infobar-style-ori
 				("infobar-style-original2", _("Original 2")),
 				("infobar-style-original3", _("Original 3")),
 				("infobar-style-original4", _("Original 4")),
+				("infobar-style-original5", _("Original 5")),
+				("infobar-style-original6", _("Original 6")),
 				("infobar-style-zpicon", _("ZPicon 1")),
 				("infobar-style-zpicon2", _("ZPicon 2")),
 				("infobar-style-zpicon3", _("ZPicon 3")),
 				("infobar-style-zpicon4", _("ZPicon 4")),
+				("infobar-style-zpicon5", _("ZPicon 5")),
+				("infobar-style-zpicon6", _("ZPicon 6")),
 				("infobar-style-xpicon", _("XPicon 1")),
 				("infobar-style-xpicon2", _("XPicon 2")),
 				("infobar-style-xpicon3", _("XPicon 3")),
 				("infobar-style-xpicon4", _("XPicon 4")),
+				("infobar-style-xpicon5", _("XPicon 5")),
+				("infobar-style-xpicon6", _("XPicon 6")),
 				("infobar-style-zzpicon", _("ZZPicon 1")),
 				("infobar-style-zzpicon2", _("ZZPicon 2")),
 				("infobar-style-zzpicon3", _("ZZPicon 3")),
 				("infobar-style-zzpicon4", _("ZZPicon 4")),
+				("infobar-style-zzpicon5", _("ZZPicon 5")),
+				("infobar-style-zzpicon6", _("ZZPicon 6")),
 				("infobar-style-zzzpicon", _("ZZZPicon 1")),
 				("infobar-style-zzzpicon2", _("ZZZPicon 2")),
 				("infobar-style-zzzpicon3", _("ZZZPicon 3")),
-				("infobar-style-zzzpicon4", _("ZZZPicon 4"))
+				("infobar-style-zzzpicon4", _("ZZZPicon 4")),
+				("infobar-style-zzzpicon5", _("ZZZPicon 5")),
+				("infobar-style-zzzpicon6", _("ZZZPicon 6"))
 				])
 				
 config.plugins.SevenHD.SIB = ConfigSelection(default="-top", choices = [

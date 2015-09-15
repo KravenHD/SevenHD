@@ -364,8 +364,13 @@ class SevenHD(Screen):
                 ### ProgressIB
                 if config.plugins.SevenHD.ProgressIB.value == "progressib":
                    self.skinSearchAndReplace.append(["SevenHD/progressib/progressib621.png","SevenHD/progressib/progressib621_1.png"])
+                   self.skinSearchAndReplace.append(["SevenHD/progressib/progressib638.png","SevenHD/progressib/progressib638_1.png"])
+                   self.skinSearchAndReplace.append(["SevenHD/progressib/progressib770.png","SevenHD/progressib/progressib770_1.png"])
                    self.skinSearchAndReplace.append(["SevenHD/progressib/progressib793.png","SevenHD/progressib/progressib793_1.png"])
+                   self.skinSearchAndReplace.append(["SevenHD/progressib/progressib812.png","SevenHD/progressib/progressib812_1.png"])
                    self.skinSearchAndReplace.append(["SevenHD/progressib/progressib858.png","SevenHD/progressib/progressib858_1.png"])
+                   self.skinSearchAndReplace.append(["SevenHD/progressib/progressib1022.png","SevenHD/progressib/progressib1022_1.png"])
+                   self.skinSearchAndReplace.append(["SevenHD/progressib/progressib1045.png","SevenHD/progressib/progressib1045_1.png"])
                    self.skinSearchAndReplace.append(["SevenHD/progressib/progressib1280.png","SevenHD/progressib/progressib1280_1.png"])
                 else:
                    self.skinSearchAndReplace.append(["00fffff2", config.plugins.SevenHD.ProgressIB.value])   

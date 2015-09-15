@@ -1623,7 +1623,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,orgpos.y()))
     <panel name="template_colorkey_text" />
   </screen>
   <!-- SimpleChannelSelection -->
-  <screen backgroundColor="transparent" flags="wfNoBorder" name="SimpleChannelSelection" position="0,0" size="1280,720" title="Channel Selection">
+  <screen backgroundColor="transparent" flags="wfNoBorder" name="SimpleChannelSelection" position="0,0" size="1280,720" title="Channel selection">
     <widget colorEventProgressbarBorder="SevenFont1" backgroundColor="SevenFontBackground" colorEventProgressbarBorderSelected="SevenFont1" colorServiceDescription="SevenFont1" colorServiceDescriptionSelected="SevenSelFont" foregroundColorServiceNotAvail="yellow" name="list" position="70,80" serviceInfoFont="Regular2;21" serviceItemHeight="30" serviceNameFont="Regular;22" serviceNumberFont="Regular;22" size="708,540" transparent="1" />
     <panel name="template_menu_left_button" />
     <panel name="template_colorkey_text" />

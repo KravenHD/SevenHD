@@ -120,8 +120,6 @@ class InfobarSettings(ConfigListScreen, Screen):
 
     def getMenuItemList(self):
         list = []
-        list.append(getConfigListEntry(_('__________________________________________ infobar and second infobar __________________________________________'), ))
-        list.append(getConfigListEntry(_(' '), ))
         list.append(getConfigListEntry(_('_______________________________________________ style ________________________________________________'), ))
         list.append(getConfigListEntry(_("infobar"), config.plugins.SevenHD.InfobarStyle))
         list.append(getConfigListEntry(_("second infobar"), config.plugins.SevenHD.SIB))
