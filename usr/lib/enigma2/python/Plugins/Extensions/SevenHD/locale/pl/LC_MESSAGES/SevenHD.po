@@ -1,0 +1,1158 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: OpenATV-7HD\n"
+"POT-Creation-Date: 2015-08-12 13:30+0200\n"
+"PO-Revision-Date: 2015-09-16 20:38+0200\n"
+"Last-Translator: Mariusz1970 <Mariusz1970@onet.eu>\n"
+"Language-Team: Mariusz1970@onet.eu\n"
+"Language: pl_PL\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.4\n"
+"X-Poedit-Basepath: ../../../../../../../../../../sevenhd_tbx1\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: .\n"
+
+msgid "__________________________________________ channelselection __________________________________________"
+msgstr "____________________________________________ Wybór Kanału ___________________________________________"
+
+msgid "style"
+msgstr "Styl"
+
+msgid "_____________________________________________ background _____________________________________________"
+msgstr "_____________________________________________ Tło _____________________________________________"
+
+msgid "color right"
+msgstr "Prawy kolor"
+
+msgid "color middle"
+msgstr "Środkowy kolor"
+
+msgid "color left"
+msgstr "Lewy kolor"
+
+msgid "_____________________________________________ color lines ____________________________________________"
+msgstr "_____________________________________________ Kolor Linii ____________________________________________"
+
+msgid "line"
+msgstr "Linia"
+
+msgid "border"
+msgstr "Rama"
+
+msgid "__________________________________________ color description _________________________________________"
+msgstr "______________________________________ Kolor Opisu _______________________________________"
+
+msgid "bouquet name"
+msgstr "Nazwa bukietu"
+
+msgid "program name"
+msgstr "Nazwa programu"
+
+msgid "next events"
+msgstr "Następne wydarzenie"
+
+msgid "runtime"
+msgstr "Czas pracy"
+
+msgid "channel name"
+msgstr "Nazwa kanału"
+
+msgid "time"
+msgstr "Czas"
+
+msgid "prime time"
+msgstr "najlepszy czas antenowy"
+
+msgid "program description now"
+msgstr "Aktualny opis programu"
+
+msgid "program description next"
+msgstr "Następny opis programu"
+
+msgid "______________________________________________ color list ____________________________________________"
+msgstr "____________________________________________ Kolor Listy ___________________________________________"
+
+msgid "channel name and number"
+msgstr "Nazwa kanału i numer"
+
+msgid "program"
+msgstr "Program"
+
+msgid ""
+"Debug Picture\n"
+"\"kraven_debug.png\" saved in /tmp\n"
+msgstr ""
+"Debug zdjęcia\n"
+"\"kraven_debug.png\" przechowywane w /tmp\n"
+
+msgid "Information"
+msgstr "Informacja"
+
+msgid "[ChannelSettings]\n"
+msgstr "[Ustawienia Kanału]\n"
+
+msgid "NotoSans-Regular"
+msgstr "NotoSans-Regularne"
+
+msgid "SevenHD"
+msgstr "SiedemHD"
+
+msgid "black"
+msgstr "Czarny/e"
+
+msgid "white"
+msgstr "Biały/e"
+
+msgid "amber"
+msgstr "Bursztynowy/e"
+
+msgid "amber dark"
+msgstr "Ciemno bursztynowy/e"
+
+msgid "blue"
+msgstr "Niebieski/e"
+
+msgid "blue dark"
+msgstr "Ciemno niebieski/e"
+
+msgid "brown"
+msgstr "Brązowy/e"
+
+msgid "brown dark"
+msgstr "Ciemno brązowy/e"
+
+msgid "cobalt"
+msgstr "Kobalt"
+
+msgid "cobalt dark"
+msgstr "Ciemny Kobalt"
+
+msgid "cyan"
+msgstr "Niebiesko zielony/e"
+
+msgid "cyan dark"
+msgstr "Ciemny niebieskozielony/e"
+
+msgid "grey"
+msgstr "Szary/e"
+
+msgid "grey dark"
+msgstr "Ciemnoszary/e"
+
+msgid "green"
+msgstr "Zielony/e"
+
+msgid "green dark"
+msgstr "Ciemnozielona/e"
+
+msgid "olive"
+msgstr "Oliwkowy/e"
+
+msgid "olive dark"
+msgstr "Ciemnooliwkowy/e"
+
+msgid "orange"
+msgstr "Pomarańczowy/e"
+
+msgid "orange dark"
+msgstr "Ciemno pomarańczowy/e"
+
+msgid "pink"
+msgstr "Różowy/e"
+
+msgid "pink dark"
+msgstr "Ciemnoróżowy/e"
+
+msgid "red"
+msgstr "Czerwony/e"
+
+msgid "red dark"
+msgstr "Ciemnoczerwona/e"
+
+msgid "steel"
+msgstr "Stalowy/e"
+
+msgid "steel dark"
+msgstr "Ciemnostalowy/e"
+
+msgid "violet"
+msgstr "Fioletowy/e"
+
+msgid "violet dark"
+msgstr "Ciemnofioletowy/e"
+
+msgid "yellow dark"
+msgstr "Ciemnożółty/e"
+
+msgid "yellow"
+msgstr "Żółty/e"
+
+msgid "off"
+msgstr "Wył."
+
+msgid "low"
+msgstr "Niska"
+
+msgid "medium"
+msgstr "Średnia"
+
+msgid "high"
+msgstr "Wysoka"
+
+msgid "full"
+msgstr "Pełna"
+
+msgid "black/blue"
+msgstr "Czarno/Niebieski"
+
+msgid "black/green"
+msgstr "Czarno/Zielony"
+
+msgid "black/orange"
+msgstr "Czarno/Pomarańczowy"
+
+msgid "black/red"
+msgstr "Czarno/Czerwony"
+
+msgid "black/silver"
+msgstr "Czarno/Srebrny"
+
+msgid "black/violet"
+msgstr "Czarno/Fioletowy"
+
+msgid "black/yellow"
+msgstr "Czarno/Żółty"
+
+msgid "on"
+msgstr "Wł."
+
+msgid "original"
+msgstr "Originalny"
+
+msgid "left"
+msgstr "W lewo"
+
+msgid "right"
+msgstr "W prawo"
+
+msgid "top"
+msgstr "Powyżej"
+
+msgid "number"
+msgstr "Numer"
+
+msgid "center"
+msgstr "Centralnie"
+
+msgid "bunt"
+msgstr "Kolorowy"
+
+msgid "Original 1"
+msgstr "Orginalny 1"
+
+msgid "Original 2"
+msgstr "Orginalny 2"
+
+msgid "Original 3"
+msgstr "Orginalny 3"
+
+msgid "Original 4"
+msgstr "Orginalny 4"
+
+msgid "top/bottom"
+msgstr "Góra/Dół"
+
+msgid "left/right"
+msgstr "Lewy/Prawy"
+
+msgid "standard"
+msgstr "Standardowy/e/a"
+
+msgid "with seconds"
+msgstr "z sekundami"
+
+msgid "with weekday"
+msgstr "z dniami"
+
+msgid "analog"
+msgstr "Analogowy"
+
+msgid "weather"
+msgstr "Pogoda"
+
+msgid "android"
+msgstr "Android"
+
+msgid "big"
+msgstr "Duże/a"
+
+msgid "small"
+msgstr "Małe/a"
+
+msgid "two columns 1"
+msgstr "Dwie kolumny (1)"
+
+msgid "two columns 2"
+msgstr "Dwie kolumny (2)"
+
+msgid "two columns 3"
+msgstr "Dwie kolumny (3)"
+
+msgid "three columns"
+msgstr "Trzy kolumny"
+
+msgid "three columns miniTV"
+msgstr "Trzy kolumny MiniTV"
+
+msgid "picon"
+msgstr "Pikony"
+
+msgid "no cover"
+msgstr "Bez okładki"
+
+msgid "small cover"
+msgstr "Mała okładka"
+
+msgid "big cover"
+msgstr "Duża okładka"
+
+msgid "very big cover"
+msgstr "B.duża okładka"
+
+msgid "Movie Selection"
+msgstr "Wybór filmów"
+
+msgid "___________________________________________ infobar extras ___________________________________________"
+msgstr "___________________________________________ Dodatki paska info. ___________________________________________"
+
+msgid "satellite information"
+msgstr "Informacje satelitarne"
+
+msgid "system information"
+msgstr "Informacje systemowe"
+
+msgid "ECM information"
+msgstr "Informacje ECM"
+
+msgid "______________________________________________ weather _______________________________________________"
+msgstr "_______________________________________________ Pogoda ________________________________________________"
+
+msgid "auto weather ID"
+msgstr "Automatyczny ID pogody"
+
+msgid "weather ID"
+msgstr "ID pogody"
+
+msgid ""
+" is detected and set as your Location.\n"
+"If that should not be right then set\n"
+"Auto Weather ID Function to \"OFF\"."
+msgstr ""
+" jest wykrywany,ustaw jako swoją lokalizację\n"
+"Jeśli nie jest prawidłowy,ustaw\n"
+"funkcję auto.ID pogody na \"Wył.\"."
+
+msgid ""
+"Is this detected WOEID wrong,\n"
+"choose another and set as your Location.\n"
+"\n"
+"If not the right one in the List set\n"
+"Auto Weather ID Function to \"OFF\"."
+msgstr ""
+"Czy to wykryte ID jest złe,\n"
+"\n"
+"jeśli nie jest dobre w ustawieniach\n"
+"auto.ID pogody ustaw na \"Wył.\"."
+
+msgid "[InfobarExtraSettings]\n"
+msgstr "[Dodatkowe Ustawienia Paska info.]\n"
+
+msgid "_______________________________________________ style ________________________________________________"
+msgstr "________________________________________________ Style ________________________________________________"
+
+msgid "infobar"
+msgstr "Pasek informacyjny"
+
+msgid "second infobar"
+msgstr "Drugi pasek informacyjny"
+
+msgid "color 1"
+msgstr "Kolor 1"
+
+msgid "color 2"
+msgstr "Kolor 2"
+
+msgid "______________________________________________ color font ____________________________________________"
+msgstr "_____________________________________________ Kolor czcionki ___________________________________________"
+
+msgid "channelname"
+msgstr "Nazwa nadawcy"
+
+msgid "color channelname"
+msgstr "Kolor nazwy nadawcy"
+
+msgid "now event"
+msgstr "Nowe wydarzenie"
+
+msgid "next event"
+msgstr "Następne wydarzenie"
+
+msgid "indicate"
+msgstr "Kolumna informacji"
+
+msgid "________________________________________________ clock _______________________________________________"
+msgstr "_________________________________________________ Zegar ________________________________________________"
+
+msgid "color clock"
+msgstr "Kolor zegara"
+
+msgid "color date"
+msgstr "Kolor daty"
+
+msgid "color pointer hour"
+msgstr "Kolor wskaźnika godziny"
+
+msgid "color pointer minute"
+msgstr "Kolor wskaźnika minuty"
+
+msgid "color pointer second"
+msgstr "Kolor wskaźnika sek."
+
+msgid "color time"
+msgstr "Kolor godziny"
+
+msgid "color weekday"
+msgstr "Kolor dnia"
+
+msgid "color weather"
+msgstr "Kolor pogody"
+
+msgid "[InfobarSettings]\n"
+msgstr "[Ustawienia Paska informacyjnego]\n"
+
+msgid "_______________________________________ global system settings _______________________________________"
+msgstr "________________________________________ Główne Systemowe Ustawienia _________________________________________"
+
+msgid "image"
+msgstr "Obraz"
+
+msgid "buttons"
+msgstr "Kolor przycisków"
+
+msgid "running text"
+msgstr "Przewijany tekst"
+
+msgid "volume style"
+msgstr "Styl głośności"
+
+msgid "progress-/volumebar"
+msgstr "Postęp/pasek głośności"
+
+msgid "progress"
+msgstr "Postęp"
+
+msgid "___________________________________________ transparency _____________________________________________"
+msgstr "___________________________________________ Przezroczystość _____________________________________________"
+
+msgid "main window"
+msgstr "Główne okno"
+
+msgid "right window"
+msgstr "Główne okno prawe"
+
+msgid "______________________________________________ plugins _______________________________________________"
+msgstr "______________________________________________ Wtyczki _______________________________________________"
+
+msgid "[MainSettingsScreen]\n"
+msgstr "[Ustawienia głównego ekranu]\n"
+
+msgid "MainSettings"
+msgstr "Główne Ustawienia"
+
+msgid "__________________________________________ MENU and PLUGINS __________________________________________"
+msgstr "________________________________________ Menu i Wtyczki ____________________________________________"
+
+msgid "__________________________________________ MENU und PLUGINS __________________________________________"
+msgstr "________________________________________ Menu i Wtyczki ____________________________________________"
+
+msgid "main"
+msgstr "Główne okno"
+
+msgid "____________________________________________ listselection ___________________________________________"
+msgstr "____________________________________________ Wybór listy ___________________________________________"
+
+msgid "color"
+msgstr "Kolor"
+
+msgid "selection font"
+msgstr "Wybór czcionki"
+
+msgid "font 1"
+msgstr "Czcionka 1"
+
+msgid "font 2"
+msgstr "Czcionka 2"
+
+msgid "button text"
+msgstr "Kolor przycisku tekstu"
+
+msgid "plugin icons"
+msgstr "Kolor ikony wtyczki"
+
+msgid "[MenuPluginSettings]\n"
+msgstr "[Ustawienia Menu Wtyczki]\n"
+
+msgid "_______________________________________________ debug ________________________________________________"
+msgstr "_______________________________________________ Usuwania Błędów ________________________________________________"
+
+msgid "Debug Mode (only for skinning)"
+msgstr "Tryb usuwania błędów(tylko dla skórek)"
+
+msgid "MSG Box Debug Mode (only for skinning)"
+msgstr "Tryb wiadomości usuwania błędów(tylko dla skórek)"
+
+msgid "Grab png Debug Mode (only for skinning)"
+msgstr "Zrzut png.Trybu usuwania błędów(tylko dla skórek)"
+
+msgid "[SonstigeSettings]\n"
+msgstr "[Inne ustawienia]\n"
+
+msgid "main setting"
+msgstr "Główne ustawienia"
+
+msgid "menu and plugins"
+msgstr "Menu i wtyczki"
+
+msgid "infobar and second infobar"
+msgstr "Pasek info. i drugi pasek info."
+
+msgid "__________________________________________ infobar and second infobar __________________________________________"
+msgstr "__________________________________________ Pasek info. i drugi pasek info. __________________________________________"
+
+msgid "infobar extras"
+msgstr "Dodatki paska informacyjnego"
+
+msgid "channel selection"
+msgstr "Wybór kanału"
+
+msgid "other settings"
+msgstr "Inne ustawienia"
+
+msgid "system osd settings"
+msgstr "Ustawienia systemowe OSD"
+
+msgid "system channel settings"
+msgstr "Ustawienia systemowe wybóru kanału"
+
+msgid "Error creating Skin!"
+msgstr "Błąd podczas tworzenia skóry!"
+
+msgid "Hier koennte ihre Werbung stehen ...."
+msgstr "Twoje reklamy mogą być tutaj..."
+
+msgid "Show Debug Log"
+msgstr "Dziennik usuwania błędów"
+
+msgid "Open NumberZapExt Setup"
+msgstr "Otwórz Konfiguracje NumberZapExt"
+
+msgid "Install NumberZapExt?"
+msgstr "Zainstalować NumberZapExt?"
+
+msgid "Install CoolTVGuide?"
+msgstr "Zainstalować CoolTVGuide?"
+
+msgid "Share my Skin"
+msgstr "Udostępnij moją skórę"
+
+msgid "Share my Skin Config"
+msgstr "Udostępnij moja konfi. skóry"
+
+msgid "Load shared Skin Config"
+msgstr "Załaduj wspólne konfi. skóry"
+
+msgid "Install Plugin"
+msgstr "Instalacja wtyczki"
+
+msgid "opkg install %s"
+msgstr "Instalacja opkg %s"
+
+msgid "Restart GUI"
+msgstr "Ponowne uruchamianie GUI"
+
+msgid "[PluginScreen]\n"
+msgstr "[Ekran wtyczki]\n"
+
+msgid "Configuration tool for SevenHD"
+msgstr "Narzędzie konfiguracyjne dla 7HD"
+
+msgid "N"
+msgstr "Pn."
+
+msgid "N-NE"
+msgstr "Pn./Pn.Wsch."
+
+msgid "NE"
+msgstr "Pn.Wsch."
+
+msgid "E-NE"
+msgstr "Wsch./Pn.Wsch."
+
+msgid "E"
+msgstr "Wsch."
+
+msgid "E-SE"
+msgstr "Wsch./Pd.Wsch."
+
+msgid "SE"
+msgstr "Pd.Wsch."
+
+msgid "S-SE"
+msgstr "Pd./Pd.Wsch."
+
+msgid "S"
+msgstr "Pd."
+
+msgid "S-SW"
+msgstr "Pd./Pd.Zach."
+
+msgid "SW"
+msgstr "Pd.Zach."
+
+msgid "W-SW"
+msgstr "Zach./Pd.Zach."
+
+msgid "W"
+msgstr "Zach."
+
+msgid "W-NW"
+msgstr "Zach./Pn.Zach."
+
+msgid "NW"
+msgstr "Pn.Zach."
+
+msgid "N-NW"
+msgstr "Pn./Pn.Zach."
+
+msgid "N/A"
+msgstr "Nieznane"
+
+msgid "Mon"
+msgstr "Pn."
+
+msgid "Tue"
+msgstr "Wt."
+
+msgid "Wed"
+msgstr "Śr."
+
+msgid "Thu"
+msgstr "Czw."
+
+msgid "Fri"
+msgstr "Pt."
+
+msgid "Sat"
+msgstr "Sob."
+
+msgid "Sun"
+msgstr "Niedz."
+
+msgid ""
+"Tropical\n"
+" storm"
+msgstr ""
+"Tropikalna\n"
+"burza"
+
+msgid "Hurricane"
+msgstr "Huragan"
+
+msgid ""
+"Severe\n"
+" thunderstorms"
+msgstr ""
+"Ciężka\n"
+"burza z piorunami"
+
+msgid "Thunderstorms"
+msgstr "Burza z piorunami"
+
+msgid ""
+"Mixed rain\n"
+" and snow"
+msgstr ""
+"Miesz.deszczu\n"
+"i śniegu"
+
+msgid ""
+"Mixed rain\n"
+" and sleet"
+msgstr ""
+"Miesz.deszczu\n"
+"i deszcz ze śniegiem"
+
+msgid ""
+"Mixed snow\n"
+" and sleet"
+msgstr ""
+"Miesz.śniegu\n"
+"i deszcz ze śniegiem"
+
+msgid ""
+"Freezing\n"
+" drizzle"
+msgstr ""
+"Lodowata\n"
+"mżawka"
+
+msgid "Drizzle"
+msgstr "Mżawka"
+
+msgid ""
+"Freezing\n"
+" rain"
+msgstr ""
+"Lodowaty\n"
+"deszcz"
+
+msgid "Showers"
+msgstr "Opady"
+
+msgid "Rain"
+msgstr "Deszcz"
+
+msgid ""
+"Snow\n"
+" flurries"
+msgstr ""
+"Śnieg\n"
+"Przelotne opady deszczu"
+
+msgid ""
+"Light\n"
+" snow showers"
+msgstr ""
+"Lekkie\n"
+"Przelotne opady śniegu"
+
+msgid ""
+"Blowing\n"
+" snow"
+msgstr ""
+"Wiatr\n"
+"ze śniegiem"
+
+msgid "Snow"
+msgstr "Śnieg"
+
+msgid "Hail"
+msgstr "Grad"
+
+msgid "Sleet"
+msgstr "Deszcz ze śniegiem"
+
+msgid "Dust"
+msgstr "Kurz"
+
+msgid "Foggy"
+msgstr "Mgliście"
+
+msgid "Haze"
+msgstr "Mgiełka"
+
+msgid "Smoky"
+msgstr "Zadymienie"
+
+msgid "Blustery"
+msgstr "Burzowo"
+
+msgid "Windy"
+msgstr "Wietrznie"
+
+msgid "Cold"
+msgstr "Zimno"
+
+msgid "Cloudy"
+msgstr "Pochmurnie"
+
+msgid ""
+"Mostly\n"
+" cloudy"
+msgstr ""
+"Przeważnie\n"
+"pochmurnie"
+
+msgid ""
+"Partly\n"
+" cloudy"
+msgstr ""
+"Częściowo\n"
+"pochmurnie"
+
+msgid "Clear"
+msgstr "Przejrzyście"
+
+msgid "Sunny"
+msgstr "Słonecznie"
+
+msgid "Fair"
+msgstr "Pogodnie"
+
+msgid ""
+"Mixed rain\n"
+" and hail"
+msgstr ""
+"Deszcz\n"
+"i grad"
+
+msgid "Hot"
+msgstr "Gorąco"
+
+msgid ""
+"Isolated\n"
+" thunderstorms"
+msgstr ""
+"Izolowane\n"
+"burze z piorunami"
+
+msgid ""
+"Scattered\n"
+" thunderstorms"
+msgstr ""
+"Czę.burze\n"
+"z piorunami"
+
+msgid ""
+"Scattered\n"
+" showers"
+msgstr ""
+"Częściowe\n"
+"opady deszczu"
+
+msgid "Heavy snow"
+msgstr ""
+"Silne\n"
+"opady śniegu"
+
+msgid ""
+"Scattered\n"
+" snow showers"
+msgstr ""
+"Częściowo\n"
+"Przelotne opady śniegu"
+
+msgid "Thundershowers"
+msgstr "Burza z piorunami"
+
+msgid "Snow showers"
+msgstr "Przelotne opady śniegu"
+
+msgid ""
+"Isolated\n"
+" thundershowers"
+msgstr ""
+"Izolowana\n"
+"burza z piorunami"
+
+msgid ""
+"Not\n"
+" available"
+msgstr ""
+"Nie\n"
+"dostępny"
+
+msgid "Do you really want to reboot now?"
+msgstr "Czy na pewno chcesz ponownie uruchomić teraz?"
+
+msgid ""
+"GUI needs a restart to download files and apply a new skin.\n"
+"Do you want to Restart the GUI now?"
+msgstr ""
+"Wymagane jest ponowne uruchomienie odbiornika w celu pobrania plików i zastosowania nowej skóry.\n"
+"Czy chcesz teraz ponownie uruchomić GUI?"
+
+msgid "redwood"
+msgstr "Czerwone drewno"
+
+msgid "brick"
+msgstr "Ceglate"
+
+msgid "checkerplate"
+msgstr "Płyta bieżnika"
+
+msgid "cubes"
+msgstr "Kostki"
+
+msgid "brownleather"
+msgstr "Brązowy skórzany"
+
+msgid "slate"
+msgstr "Pokrywa"
+
+msgid "stonewall"
+msgstr "Kamienna ściana"
+
+msgid "scratchedmetal"
+msgstr "Porysowany metal"
+
+msgid "stone"
+msgstr "Skala"
+
+msgid " infobar extras "
+msgstr " Dodatki Paska Informacyjnego "
+
+msgid " weather "
+msgstr " Pogoda "
+
+msgid "clock"
+msgstr "Zegar"
+
+msgid "transparency"
+msgstr "Przezroczystość"
+
+msgid "plugins"
+msgstr "Wtyczki"
+
+msgid "background"
+msgstr "Tło"
+
+msgid "MENU und PLUGINS"
+msgstr "Menu i Wtyczki"
+
+msgid "color font"
+msgstr "Kolor Czcionki"
+
+msgid "color lines"
+msgstr "Kolor Linii"
+
+msgid "listselection"
+msgstr "Lista Wyboru"
+
+msgid "debug"
+msgstr "usuwanie błędów"
+
+msgid "grab Picture"
+msgstr "zrzut obrazu"
+
+msgid ""
+"Youre Skin Config is ready to share.\n"
+"Look in /tmp for youre Skin File."
+msgstr ""
+"Konfiguracja skóry jest gotowa do działania.\n"
+"Zajrzyj do/tmp do pliku skóry."
+
+msgid "Anything goes wrong"
+msgstr "Coś jest nie tak"
+
+msgid "Entrie: "
+msgstr "Całość: "
+
+msgid ""
+"\n"
+"Error by: "
+msgstr ""
+"\n"
+"Błąd przez: "
+
+msgid "Anything goes wrong."
+msgstr "Coś jest nie tak."
+
+msgid "Anything goes wrong \n"
+msgstr "Coś jest nie tak \n"
+
+msgid "New Skin Config is saved."
+msgstr "Nowa konfiguracja skóry została zapisana."
+
+msgid "Skin Config is wrong"
+msgstr "Konfiguracja skóry jest nieprawidłowa"
+
+msgid "Skin Config is wrong."
+msgstr "Konfiguracja skóry jest nieprawidłowa."
+
+msgid "New Skin Config is load."
+msgstr "Nowa konfiguracja skóry została załadowana."
+
+msgid "Only Numbers allowed!"
+msgstr "Tylko dozwolone numery!"
+
+msgid "Only Numbers allowed!\n"
+msgstr "Tylko dozwolone numery!\n"
+
+msgid "SevenHD - Konfigurationstool"
+msgstr "SevenHD - Konfiguracja"
+
+msgid "not installed\t"
+msgstr "nie zainstalowany\t"
+
+msgid "Version:%s"
+msgstr "Wersja:%s"
+
+msgid "Screenshot"
+msgstr "Zrzut ekranu"
+
+msgid "Ehrlich jetzt?"
+msgstr "teraz uczciwie"
+
+msgid "extras"
+msgstr "Dodatki"
+
+msgid "Enter youre WOEID"
+msgstr "Wprowadź swój ID"
+
+msgid "Founded City: "
+msgstr "Znalezione miasto: "
+
+msgid "Found "
+msgstr "Znalezione "
+
+msgid "Search for WoeID in xml\n"
+msgstr "Szukaj ID w xml\n"
+
+msgid " WoeID in xml\n"
+msgstr " ID w xml\n"
+
+msgid "Founded WoeID: "
+msgstr "Znalezione ID: "
+
+msgid "Choose youre right ID"
+msgstr "Wybierz odpowiednie ID"
+
+msgid "Console\n"
+msgstr "Konsola\n"
+
+msgid "download tgz complett\n"
+msgstr "pobieranie tgz kompletne\n"
+
+msgid "Install EnhancedMovieCenter?"
+msgstr "Zainstalować EnhancedMovieCenter?"
+
+msgid "Reboot\n"
+msgstr "Ponowne uruchamianie\n"
+
+msgid "Youre Share Skin Config is saved. ;-)"
+msgstr "Twoja konfiguracja skóry jest zapisywana. ;-)"
+
+msgid ""
+"GUI needs a restart after download Plugin.\n"
+"Do you want to Restart the GUI now?"
+msgstr ""
+"Wymagane jest ponowne uruchomienie odbiornika po pobraniu wtyczki.\n"
+"Czy chcesz ponownie uruchomić GUI teraz?"
+
+msgid "GUI needs a restart after download Plugin.\n"
+msgstr "Wymagane jest ponowne uruchomienie odbiornika po pobraniu wtyczki.\n"
+
+msgid "_____________________________________________running text ____________________________________________"
+msgstr "________________________________________________ Kolejny tekst ___________________________________________"
+
+msgid "startdelay"
+msgstr "Opóźnienie uruchomienia"
+
+msgid "_____________________________________________transparency ____________________________________________"
+msgstr "_____________________________________________ Przezroczystość ___________________________________________"
+
+msgid "_____________________________________________ autoupdate _____________________________________________"
+msgstr "________________________________________ Automatyczna aktualizacja ________________________________________"
+
+msgid "activate"
+msgstr "Aktywacja"
+
+msgid "autoupdate infobar info"
+msgstr "Auto.aktualizacja paska informacyjnego"
+
+msgid "name"
+msgstr "Nazwa"
+
+msgid "number and name"
+msgstr "Numer i nazwa"
+
+msgid "blackleather"
+msgstr "czarna skóra"
+
+msgid "carbon"
+msgstr "węgiel"
+
+msgid "drop"
+msgstr "padanie"
+
+msgid "flames"
+msgstr "płomienie"
+
+msgid "glass"
+msgstr "szkło"
+
+msgid "iceflowers"
+msgstr "lodowe kwiaty"
+
+msgid "fireflower"
+msgstr "kwiat ognia"
+
+msgid "fire"
+msgstr "ogień"
+
+msgid "colorexplosion"
+msgstr "eksplozja kolorów"
+
+msgid "steptime"
+msgstr "Prędkość"
+
+msgid "autoupdate plugin startinfo"
+msgstr "Auto.aktualizacja wtyczki startinfo"
+
+msgid "enabled"
+msgstr "włączona"
+
+msgid "ChangeLog"
+msgstr "Dziennik zmian"
+
+msgid "Thanks to\n"
+msgstr "Podziękowania dla:\n"
+
+msgid "Plugins entfernen"
+msgstr "Usuwanie Wtyczek"
+
+msgid "Plugins sperren"
+msgstr "Blokada Wtyczki"
+
+msgid "2 sec"
+msgstr "2 Sek."
+
+msgid "4 sec"
+msgstr "4 Sek."
+
+msgid "6 sec"
+msgstr "6 Sek."
+
+msgid "8 sec"
+msgstr "8 Sek."
+
+msgid "10 sec"
+msgstr "10 Sek."
+
+msgid "Last Version on Server"
+msgstr "Najnowsza wersja na serwerze"
+
+msgid "Klima:"
+msgstr "Wil.:"
+
+msgid " from "
+msgstr " z "
+
+msgid ", feels "
+msgstr " Odczuw."
+
+msgid "% humidity"
+msgstr "% Wilgotności"
+
+msgid "volumebar"
+msgstr "Pasek głośności"
+
+msgid "progressbar"
+msgstr "Pasek postępu"
+
+msgid "progressbar line"
+msgstr "Linia paska postępu"
