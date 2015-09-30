@@ -1,4 +1,5 @@
-version = '3.4.00'
+version = '3.5.00'
+version = '3.5.00'
 import os
 import re
 import time
@@ -23,6 +24,7 @@ from Components.ConfigList import ConfigListScreen
 from Components.Sources.StaticText import StaticText
 from Components.Label import Label
 from Components.Pixmap import Pixmap
+from Components.Console import Console as eConsole
 from Components.Language import language
 from os import environ, listdir, remove, rename, system, popen
 from shutil import move, copy, rmtree, copytree
@@ -174,9 +176,10 @@ config.plugins.SevenHD.IconStyle = ConfigSelection(default="icons_seven_white", 
 				("icons_seven_violet", _("violet")),
 				("icons_seven_yellow", _("yellow"))
 				])
-config.plugins.SevenHD.RunningText = ConfigSelection(default="movetype=running", choices = [
-				("movetype=running", _("on")),
-				("movetype=none", _("off"))
+config.plugins.SevenHD.RunningText = ConfigSelection(default="running", choices = [
+				("running", _("running")),
+				("writing", _("writing")),
+				("none", _("off"))
 				])
 config.plugins.SevenHD.Startdelay = ConfigSelection(default="startdelay=2000", choices = [
 				("startdelay=2000", _("2 sec")),
@@ -376,11 +379,21 @@ config.plugins.SevenHD.WeatherStyle = ConfigSelection(default="none", choices = 
 				("weather-small", _("small"))
 				])
 				
+config.plugins.SevenHD.refreshInterval = ConfigNumber(default="10")
+
 config.plugins.SevenHD.AutoWoeID = ConfigYesNo(default= True)
 
 config.plugins.SevenHD.ClockWeather = ConfigSelection(default="00ffffff", choices = ColorList)
 
 config.plugins.SevenHD.weather_city = ConfigNumber(default="924938")
+
+config.plugins.SevenHD.WeatherView = ConfigSelection(default="icon", choices = [
+				("icon", _("Icon")),
+				("meteo", _("Meteo"))
+				])
+				
+
+config.plugins.SevenHD.MeteoColor = ConfigSelection(default="00ffffff", choices = ColorList)
 
 config.plugins.SevenHD.SatInfo = ConfigSelection(default="none", choices = [
 				("none", _("off")),
@@ -405,6 +418,7 @@ config.plugins.SevenHD.ChannelSelectionStyle = ConfigSelection(default="channels
 				("channelselection-twocolumns", _("two columns 1")),
 				("channelselection-twocolumns2", _("two columns 2")),
 				("channelselection-twocolumns3", _("two columns 3")),
+				("channelselection-twocolumns4", _("two columns 4")),
 				("channelselection-threecolumns", _("three columns")),
 				("channelselection-threecolumnsminitv", _("three columns miniTV")),
 				("channelselection-zpicon", _("ZPicon")),
@@ -460,6 +474,8 @@ config.plugins.SevenHD.ChannelColorPrimeTime = ConfigSelection(default="00ffffff
 config.plugins.SevenHD.ChannelColorDesciption = ConfigSelection(default="00ffffff", choices = ColorList)
 
 config.plugins.SevenHD.ChannelColorDesciptionNext = ConfigSelection(default="00ffffff", choices = ColorList)
+
+config.plugins.SevenHD.ChannelColorDesciptionLater = ConfigSelection(default="00ffffff", choices = ColorList)
 
 config.plugins.SevenHD.ChannelColorRuntime = ConfigSelection(default="00ffffff", choices = ColorList)
 
@@ -566,6 +582,8 @@ myConfigList = [('config.plugins.SevenHD.Image.value = "' + str(config.plugins.S
                 ('config.plugins.SevenHD.ClockTime.value = "' + str(config.plugins.SevenHD.ClockTime.value) + '"'),
                 ('config.plugins.SevenHD.ClockWeek.value = "' + str(config.plugins.SevenHD.ClockWeek.value) + '"'),
                 ('config.plugins.SevenHD.WeatherStyle.value = "' + str(config.plugins.SevenHD.WeatherStyle.value) + '"'),
+                ('config.plugins.SevenHD.WeatherView.value = "' + str(config.plugins.SevenHD.WeatherView.value) + '"'),
+                ('config.plugins.SevenHD.MeteoColor.value = "' + str(config.plugins.SevenHD.MeteoColor.value) + '"'),
                 ('config.plugins.SevenHD.ClockWeather.value = "' + str(config.plugins.SevenHD.ClockWeather.value) + '"'),
                 ('config.plugins.SevenHD.SatInfo.value = "' + str(config.plugins.SevenHD.SatInfo.value) + '"'),
                 ('config.plugins.SevenHD.SysInfo.value = "' + str(config.plugins.SevenHD.SysInfo.value) + '"'),
@@ -584,6 +602,7 @@ myConfigList = [('config.plugins.SevenHD.Image.value = "' + str(config.plugins.S
                 ('config.plugins.SevenHD.ChannelColorPrimeTime.value = "' + str(config.plugins.SevenHD.ChannelColorPrimeTime.value) + '"'),
                 ('config.plugins.SevenHD.ChannelColorDesciption.value = "' + str(config.plugins.SevenHD.ChannelColorDesciption.value) + '"'),
                 ('config.plugins.SevenHD.ChannelColorDesciptionNext.value = "' + str(config.plugins.SevenHD.ChannelColorDesciptionNext.value) + '"'),
+                ('config.plugins.SevenHD.ChannelColorDesciptionLater.value = "' + str(config.plugins.SevenHD.ChannelColorDesciptionLater.value) + '"'),
                 ('config.plugins.SevenHD.ChannelColorRuntime.value = "' + str(config.plugins.SevenHD.ChannelColorRuntime.value) + '"'),
                 ('config.plugins.SevenHD.ChannelColorProgram.value = "' + str(config.plugins.SevenHD.ChannelColorProgram.value) + '"'),
                 ('config.plugins.SevenHD.ChannelColorTimeCS.value = "' + str(config.plugins.SevenHD.ChannelColorTimeCS.value) + '"'),

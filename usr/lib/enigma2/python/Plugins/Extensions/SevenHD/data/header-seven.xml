@@ -71,6 +71,7 @@
   <color name="SevenRuntimeCS" value="#SevenRuntime_CS" />
   <color name="SevenDestcriptionCS" value="#SevenDestcription_CS" />
   <color name="SevenDestcriptionNextCS" value="#SevenDestcriptionNext_CS" />
+  <color name="SevenDestcriptionLaterCS" value="#SevenDestcriptionLater_CS" />
   <color name="SevenNameList" value="#SevenName_List" />
   <color name="SevenProgramList" value="#SevenProgram_List" />
   <color name="SevenProgressBorderCS" value="#SevenProgress_BorderCS" />
@@ -80,6 +81,7 @@
   <color name="SevenProgressCS" value="#00fffff4" />
   <color name="SevenProgressListCS" value="#00fffff5" />
   <color name="SevenProgressIB" value="#00fffff2" />
+  <color name="SevenMeteoFont" value="#SevenMeteo_Font" />
 </colors>
   <fonts>
     <font filename="lcd.ttf" name="LCD" scale="100" />
@@ -88,6 +90,7 @@
     <font filename="SevenHD/fonts/nmsbd2.ttf" name="Arial" scale="100" />
     <font filename="SevenHD/fonts/NotoSans-Regular.ttf" name="Regular" scale="95" />
     <font filename="SevenHD/fonts/NotoSans-Bold.ttf" name="Regular2" scale="95" />
+    <font filename="SevenHD/fonts/meteocons.ttf" name="Meteo" scale="100" />
   </fonts>
   <subtitles>
     <sub font="Regular;30" name="Subtitle_TTX" shadowColor="#shadow" shadowOffset="3,3" />

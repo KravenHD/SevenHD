@@ -128,7 +128,7 @@ class MainSettings(ConfigListScreen, Screen):
         list.append(getConfigListEntry(_("volumebar"), config.plugins.SevenHD.ProgressVol, 'progressvol'))
         list.append(getConfigListEntry(_('_____________________________________________running text ____________________________________________'), ))
         list.append(getConfigListEntry(_("activate"), config.plugins.SevenHD.RunningText, 'RunningText'))
-        if config.plugins.SevenHD.RunningText.value == 'movetype=running':
+        if config.plugins.SevenHD.RunningText.value == 'running':
            list.append(getConfigListEntry(_("startdelay"), config.plugins.SevenHD.Startdelay, 'Delay'))
            list.append(getConfigListEntry(_("steptime"), config.plugins.SevenHD.Steptime, 'Delay'))
         list.append(getConfigListEntry(_('_____________________________________________transparency ____________________________________________'), ))

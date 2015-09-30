@@ -128,6 +128,12 @@ class InfobarExtraSettings(ConfigListScreen, Screen):
         list.append(getConfigListEntry(_('______________________________________________ weather _______________________________________________'), ))
         list.append(getConfigListEntry(_("weather"), config.plugins.SevenHD.WeatherStyle))
         if config.plugins.SevenHD.WeatherStyle.value != 'none' or config.plugins.SevenHD.ClockStyle.value == "clock-android" or config.plugins.SevenHD.ClockStyle.value == "clock-weather":
+           list.append(getConfigListEntry(_("Weather Style"), config.plugins.SevenHD.WeatherView))
+        if config.plugins.SevenHD.WeatherView.value == 'meteo':
+           list.append(getConfigListEntry(_("Meteo Color"), config.plugins.SevenHD.MeteoColor, 'MeteoColor'))
+        if config.plugins.SevenHD.WeatherStyle.value != 'none' or config.plugins.SevenHD.ClockStyle.value == "clock-android" or config.plugins.SevenHD.ClockStyle.value == "clock-weather":
+           list.append(getConfigListEntry(_("Refresh interval (in minutes)"), config.plugins.SevenHD.refreshInterval))
+        if config.plugins.SevenHD.WeatherStyle.value != 'none' or config.plugins.SevenHD.ClockStyle.value == "clock-android" or config.plugins.SevenHD.ClockStyle.value == "clock-weather":
            list.append(getConfigListEntry(_("auto weather ID"), config.plugins.SevenHD.AutoWoeID, 'AutomatischeWOEID'))
            if config.plugins.SevenHD.AutoWoeID.value == False:
               list.append(getConfigListEntry(_("weather ID"), config.plugins.SevenHD.weather_city, 'WOEID'))
@@ -235,6 +241,8 @@ class InfobarExtraSettings(ConfigListScreen, Screen):
         self.setInputToDefault(config.plugins.SevenHD.WeatherStyle)
         self.setInputToDefault(config.plugins.SevenHD.AutoWoeID)
         self.setInputToDefault(config.plugins.SevenHD.weather_city)
+        self.setInputToDefault(config.plugins.SevenHD.WeatherView)
+        self.setInputToDefault(config.plugins.SevenHD.MeteoColor)
         self.setInputToDefault(config.plugins.SevenHD.SatInfo)
         self.setInputToDefault(config.plugins.SevenHD.SysInfo)
         self.setInputToDefault(config.plugins.SevenHD.ECMInfo)

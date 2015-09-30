@@ -144,8 +144,10 @@ class ChannelSettings(ConfigListScreen, Screen):
            list.append(getConfigListEntry(_("progressbar line"), config.plugins.SevenHD.ProgressLineCS, 'progresslinecs'))
         list.append(getConfigListEntry(_('__________________________________________ color description _________________________________________'), ))
         list.append(getConfigListEntry(_("bouquet name"), config.plugins.SevenHD.ChannelColorBouquet, 'bouquetname'))
-        list.append(getConfigListEntry(_("program name"), config.plugins.SevenHD.ChannelColorProgram, 'programname'))
-        list.append(getConfigListEntry(_("next events"), config.plugins.SevenHD.ChannelColorNext, 'nextevents'))
+        if not ChannelSelectionStyle.startswith('channelselection-twocolumns4'):
+           list.append(getConfigListEntry(_("program name"), config.plugins.SevenHD.ChannelColorProgram, 'programname'))
+        if not ChannelSelectionStyle.startswith('channelselection-twocolumns4'):
+           list.append(getConfigListEntry(_("next events"), config.plugins.SevenHD.ChannelColorNext, 'nextevents'))
         list.append(getConfigListEntry(_("runtime"), config.plugins.SevenHD.ChannelColorRuntime, 'runtime'))
         if ChannelSelectionStyle.startswith('channelselection-threecolumns') or ChannelSelectionStyle.endswith('2') or ChannelSelectionStyle.endswith('3'):
            list.append(getConfigListEntry(_("channel name"), config.plugins.SevenHD.ChannelColorChannel, 'channelnamecs'))
@@ -156,8 +158,10 @@ class ChannelSettings(ConfigListScreen, Screen):
         else:
            list.append(getConfigListEntry(_("prime time"), config.plugins.SevenHD.ChannelColorPrimeTime, 'primetime'))
         list.append(getConfigListEntry(_("program description now"), config.plugins.SevenHD.ChannelColorDesciption, 'descriptionnow'))
-        if ChannelSelectionStyle.startswith('channelselection-threecolumns'):
+        if ChannelSelectionStyle.startswith('channelselection-threecolumns') or ChannelSelectionStyle.startswith('channelselection-twocolumns4'):
            list.append(getConfigListEntry(_("program description next"), config.plugins.SevenHD.ChannelColorDesciptionNext, 'descriptionnext'))
+        if ChannelSelectionStyle.startswith('channelselection-twocolumns4'):
+           list.append(getConfigListEntry(_("program description later"), config.plugins.SevenHD.ChannelColorDesciptionLater, 'descriptionlater'))
         list.append(getConfigListEntry(_("buttons"), config.plugins.SevenHD.ChannelColorButton, 'textbuttons'))
         list.append(getConfigListEntry(_('______________________________________________ color list ____________________________________________'), ))
         list.append(getConfigListEntry(_("channel name and number"), config.plugins.SevenHD.ChannelColorChannelName, 'channelnamelist'))
@@ -252,6 +256,7 @@ class ChannelSettings(ConfigListScreen, Screen):
         self.setInputToDefault(config.plugins.SevenHD.ChannelColorBouquet)
         self.setInputToDefault(config.plugins.SevenHD.ChannelColorChannel)
         self.setInputToDefault(config.plugins.SevenHD.ChannelColorNext)
+        self.setInputToDefault(config.plugins.SevenHD.ChannelColorDesciptionNext)
         self.setInputToDefault(config.plugins.SevenHD.ChannelColorDesciptionNext)
         self.setInputToDefault(config.plugins.SevenHD.ChannelColorRuntime)
         self.setInputToDefault(config.plugins.SevenHD.ChannelColorProgram)
