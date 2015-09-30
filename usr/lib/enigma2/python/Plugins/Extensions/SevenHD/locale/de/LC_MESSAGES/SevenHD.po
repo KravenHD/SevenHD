@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "POT-Creation-Date: 2015-08-12 13:30+0200\n"
-"PO-Revision-Date: 2015-09-13 21:04+0200\n"
+"PO-Revision-Date: 2015-09-30 20:05+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: de_DE\n"
@@ -94,6 +94,9 @@ msgstr "Beschreibung aktuelles Programm"
 #: ChannelSettings.py:146
 msgid "program description next"
 msgstr "Beschreibung nächstes Programm"
+
+msgid "program description later"
+msgstr "Beschreibung übernächstes Programm"
 
 #: ChannelSettings.py:148
 msgid "______________________________________________ color list ____________________________________________"
@@ -509,6 +512,9 @@ msgstr "zwei Spalten (2)"
 #: GlobalImport.py:341
 msgid "two columns 3"
 msgstr "zwei Spalten (3)"
+
+msgid "two columns 4"
+msgstr "zwei Spalten (4)"
 
 #: GlobalImport.py:342
 msgid "three columns"
@@ -1465,6 +1471,12 @@ msgstr "Updateinformationen beim Pluginstart"
 msgid " from "
 msgstr " aus "
 
+msgid "running"
+msgstr "laufend"
+
+msgid "writing"
+msgstr "schreibend"
+
 #: SevenHDYWeather.py
 msgid "% humidity"
 msgstr "% Luftfeuchtigkeit"
@@ -1484,6 +1496,15 @@ msgstr "Fortschrittsbalken Linie"
 
 msgid "progressbar border"
 msgstr "Fortschrittsbalken Rahmen"
+
+msgid "Weather Style"
+msgstr "Wetter Stil"
+
+msgid "Meteo Color"
+msgstr "Meteo Farbe"
+
+msgid "Refresh interval (in minutes)"
+msgstr "Aktualisierungsintervall (in Minuten)"
 
 #~ msgid " infobar extras "
 #~ msgstr "Infobar Extras"
