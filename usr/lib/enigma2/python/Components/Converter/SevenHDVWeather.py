@@ -1,19 +1,19 @@
-# -*- coding: utf-8 -*-
-
-#This plugin is free software, you are allowed to
-#modify it (if you keep the license),
-#but you are not allowed to distribute/publish
-#it without source code (this version and your modifications).
-#This means you also have to distribute
-#source code of your modifications.
 #
+#  YAHOO Weather Info
 #
-#######################################################################
-#    AtileHD Weather for VU+
-#    Support: www.vuplus-support.org
-#    THX to iMaxxx (c) 2013 for base idea
-#######################################################################
-
+#  Coded by tomele for Kraven Skins
+#  Thankfully inspired by Dr.Best & weazle
+#
+#  This plugin is licensed under the Creative Commons 
+#  Attribution-NonCommercial-ShareAlike 3.0 Unported 
+#  License. To view a copy of this license, visit
+#  http://creativecommons.org/licenses/by-nc-sa/3.0/ or send a letter to Creative
+#  Commons, 559 Nathan Abbott Way, Stanford, California 94305, USA.
+#
+#  This plugin is NOT free software. It is open source, you are allowed to
+#  modify it (if you keep the license), but it may not be commercially 
+#  distributed other than under the conditions noted above.
+#
 
 from Components.Converter.Converter import Converter
 from Components.Element import cached
