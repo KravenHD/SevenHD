@@ -284,4 +284,11 @@
     <panel name="template_menu_left_button" />
     <panel name="template_colorkey_text_source" />
   </screen>
+  <!-- SleepTimer -->
+<screen backgroundColor="transparent" flags="wfNoBorder" name="SleepTimerEdit" position="0,0" size="1280,720" title="Sleep Timer">
+<widget backgroundColor="SevenFontBackground" name="config" itemHeight="30" font="Regular;22" foregroundColor="SevenFont1" position="70,80" size="708,60" transparent="1" />
+<widget backgroundColor="SevenFontBackground" name="description" itemHeight="30" font="Regular;22" halign="center" foregroundColor="SevenFont1" position="70,578" size="708,60" transparent="1" />
+    <panel name="template_menu_left_button" />
+    <panel name="template_colorkey_text_source" />
+</screen>
 <!-- main-custom-openatv */ -->
