@@ -1617,8 +1617,6 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,orgpos.y()))
     <widget font="Regular2; 30" foregroundColor="SevenFont2" position="891,62" halign="center" render="Label" size="362,40" source="ServiceEvent" backgroundColor="SevenFontBackgroundRight" zPosition="1" valign="center" transparent="1">
       <convert type="SevenHDEventName">Name</convert>
     </widget>
-    <widget source="PrimeTime" render="SevenHDNextEvents" position="891,680" size="362,30" noWrap="1" font="Regular2;22" foregroundColor="SevenFont2" backgroundColor="SevenFontBackgroundRight" transparent="1">
-    </widget>
     <panel name="template_menu_cs_button" />
     <panel name="template_colorkey_text" />
   </screen>
