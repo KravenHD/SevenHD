@@ -259,8 +259,8 @@
   <panel name="template_colorkey_text" />
 </screen>
  <!-- GigaBlue IPBox Client -->
-<screen name="GBIpboxMenu" position="0, 0" flags="wfNoBorder" title="GigaBlue IPBox Client" transparent="1" backgroundColor="transparent" size="1280, 720">
-<widget name="config" position="21,80" size="806,540" backgroundColor="SevenFontBackground" transparent="1" />
+<screen backgroundColor="transparent" name="GBIpboxMenu" position="0,0" flags="wfNoBorder" title="GigaBlue IPBox Client" size="1280,720">
+<widget name="config" position="70,80" size="708,540" backgroundColor="SevenFontBackground" transparent="1" />
 <panel name="template_menu_left_button" />
 <panel name="template_colorkey_text" />
 </screen>
