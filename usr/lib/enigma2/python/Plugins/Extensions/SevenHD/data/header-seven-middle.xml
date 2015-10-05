@@ -1,0 +1,6 @@
+    <borderset name="bsListboxEntry">
+      <pixmap filename="SevenHD/bordersets/borset.png" pos="bpTop" />
+      <pixmap filename="SevenHD/bordersets/borset.png" pos="bpBottom" />
+      <pixmap filename="SevenHD/bordersets/borset.png" pos="bpLeft" />
+      <pixmap filename="SevenHD/bordersets/borset.png" pos="bpRight" />
+    </borderset>

@@ -1,5 +1,5 @@
-version = '3.5.00'
-version = '3.5.00'
+version = '3.5.10'
+version = '3.5.10'
 import os
 import re
 import time
@@ -244,8 +244,10 @@ BorderList = ColorList + BorderList
 config.plugins.SevenHD.Border = ConfigSelection(default="00ffffff", choices = BorderList)
 
 config.plugins.SevenHD.SelectionBackground = ConfigSelection(default="000050EF", choices = ColorList)
-
-config.plugins.SevenHD.SelectionBorder = ConfigSelection(default="00ffffff", choices = ColorList)
+				
+SelectionBorderList = [("none", _("off"))]
+SelectionBorderList = ColorList + SelectionBorderList
+config.plugins.SevenHD.SelectionBorder = ConfigSelection(default="00ffffff", choices = SelectionBorderList)
 
 ProgressList = [("progress", _("bunt"))]
 ProgressList = ColorList + ProgressList
