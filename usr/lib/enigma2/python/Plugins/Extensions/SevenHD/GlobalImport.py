@@ -1,5 +1,5 @@
-version = '3.5.11'
-version = '3.5.11'
+version = '3.5.20'
+version = '3.5.20'
 import os
 import re
 import time
@@ -409,7 +409,8 @@ config.plugins.SevenHD.SysInfo = ConfigSelection(default="none", choices = [
 				
 config.plugins.SevenHD.ECMInfo = ConfigSelection(default="none", choices = [
 				("none", _("off")),
-				("ecminfo-on", _("on"))
+				("ecminfo2-on", _("on")),
+				("ecminfo-on", _("infobar"))
 				])
 
 
