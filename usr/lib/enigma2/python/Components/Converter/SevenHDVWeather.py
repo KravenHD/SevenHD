@@ -1,4 +1,5 @@
-#
+# -*- coding: utf-8 -*-
+
 #  YAHOO Weather Info
 #
 #  Coded by tomele for Kraven Skins
