@@ -1,5 +1,5 @@
-version = '3.5.20'
-version = '3.5.20'
+version = '3.5.30'
+version = '3.5.30'
 import os
 import re
 import time
@@ -412,7 +412,10 @@ config.plugins.SevenHD.ECMInfo = ConfigSelection(default="none", choices = [
 				("ecminfo2-on", _("on")),
 				("ecminfo-on", _("infobar"))
 				])
-
+config.plugins.SevenHD.FrontInfo = ConfigSelection(default="snr", choices = [
+				("snr", _("SNR")),
+				("db", _("dB"))
+				])
 
 ################################################################################################################################################################
 # ChannelScreen
@@ -590,6 +593,7 @@ myConfigList = [('config.plugins.SevenHD.Image.value = "' + str(config.plugins.S
                 ('config.plugins.SevenHD.SatInfo.value = "' + str(config.plugins.SevenHD.SatInfo.value) + '"'),
                 ('config.plugins.SevenHD.SysInfo.value = "' + str(config.plugins.SevenHD.SysInfo.value) + '"'),
                 ('config.plugins.SevenHD.ECMInfo.value = "' + str(config.plugins.SevenHD.ECMInfo.value) + '"'),
+                ('config.plugins.SevenHD.FrontInfo.value = "' + str(config.plugins.SevenHD.FrontInfo.value) + '"'),
                 ('config.plugins.SevenHD.ChannelSelectionStyle.value = "' + str(config.plugins.SevenHD.ChannelSelectionStyle.value) + '"'),
                 ('config.plugins.SevenHD.ChannelBack1.value = "' + str(config.plugins.SevenHD.ChannelBack1.value) + '"'),
                 ('config.plugins.SevenHD.ChannelBack2.value = "' + str(config.plugins.SevenHD.ChannelBack2.value) + '"'),

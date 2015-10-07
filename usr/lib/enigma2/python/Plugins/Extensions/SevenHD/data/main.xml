@@ -1951,29 +1951,29 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,orgpos.y()))
   <!-- Satfinder -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="Satfinder" position="0,0" size="1280,720" title="Satfinder">
     <widget backgroundColor="SevenFontBackground" font="Regular2;21" foregroundColor="SevenFont2" halign="center" position="120,80" render="Label" size="600,22" source="Frontend" transparent="1" zPosition="2">
-      <convert type="FrontendInfo">SNRdB</convert>
+      <convert type="SevenHDFrontendInfo">SNRdB</convert>
     </widget>
     <eLabel backgroundColor="SevenFontBackground" font="Regular2;21" foregroundColor="SevenFont2" halign="right" name="snr" position="120,110" size="80,25" text="SNR:" transparent="1" />
     <widget borderColor="SevenBorder" borderWidth="1" position="210,112" render="Progress" size="420,20" source="Frontend" transparent="1">
-      <convert type="FrontendInfo">SNR</convert>
+      <convert type="SevenHDFrontendInfo">SNR</convert>
     </widget>
     <widget backgroundColor="SevenFontBackground" font="Regular2;21" foregroundColor="SevenFont2" position="640,110" render="Label" size="80,25" source="Frontend" transparent="1">
-      <convert type="FrontendInfo">SNR</convert>
+      <convert type="SevenHDFrontendInfo">SNR</convert>
     </widget>
     <eLabel backgroundColor="SevenFontBackground" font="Regular2;21" foregroundColor="SevenFont2" halign="right" name="ber" position="120,145" size="80,25" text="BER:" transparent="1" />
     <widget borderColor="SevenBorder" borderWidth="1" position="210,147" render="Progress" size="420,20" source="Frontend" transparent="1">
-      <convert type="FrontendInfo">BER</convert>
+      <convert type="SevenHDFrontendInfo">BER</convert>
     </widget>
     <widget backgroundColor="SevenFontBackground" font="Regular2;21" foregroundColor="SevenFont2" position="640,145" render="Label" size="80,25" source="Frontend" transparent="1">
-      <convert type="FrontendInfo">BER</convert>
+      <convert type="SevenHDFrontendInfo">BER</convert>
     </widget>
     <eLabel backgroundColor="SevenFontBackground" font="Regular2;21" foregroundColor="SevenFont2" halign="right" name="lock" position="120,185" size="80,25" text="Lock:" transparent="1" />
     <widget alphatest="blend" pixmap="skin_default/icons/lock_on.png" position="210,183" render="Pixmap" size="38,31" source="Frontend" zPosition="1" transparent="1">
-      <convert type="FrontendInfo">LOCK</convert>
+      <convert type="SevenHDFrontendInfo">LOCK</convert>
       <convert type="ConditionalShowHide" />
     </widget>
     <widget alphatest="blend" pixmap="skin_default/icons/lock_off.png" position="210,183" render="Pixmap" size="8,31" source="Frontend" zPosition="1" transparent="1">
-      <convert type="FrontendInfo">LOCK</convert>
+      <convert type="SevenHDFrontendInfo">LOCK</convert>
       <convert type="ConditionalShowHide">Invert</convert>
     </widget>
     <widget itemHeight="30" name="config" position="120,249" size="600,330" transparent="1" backgroundColor="SevenFontBackground" foregroundColor="SevenFont1" />
@@ -1995,18 +1995,18 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,orgpos.y()))
   </screen>
   <!-- ServiceScan -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="ServiceScan" position="0,0" size="1280,720" title="Service Scan">
-    <widget alphatest="blend" pixmap="skin_default/icons/scan-s.png" position="707,120" render="Pixmap" size="64,64" source="FrontendInfo" transparent="1">
-      <convert type="FrontendInfo">TYPE</convert>
+    <widget alphatest="blend" pixmap="skin_default/icons/scan-s.png" position="707,120" render="Pixmap" size="64,64" source="SevenHDFrontendInfo" transparent="1">
+      <convert type="SevenHDFrontendInfo">TYPE</convert>
       <convert type="SevenHDValueRange">0,0</convert>
       <convert type="ConditionalShowHide" />
     </widget>
-    <widget alphatest="blend" pixmap="skin_default/icons/scan-c.png" position="707,120" render="Pixmap" size="64,64" source="FrontendInfo" transparent="1">
-      <convert type="FrontendInfo">TYPE</convert>
+    <widget alphatest="blend" pixmap="skin_default/icons/scan-c.png" position="707,120" render="Pixmap" size="64,64" source="SevenHDFrontendInfo" transparent="1">
+      <convert type="SevenHDFrontendInfo">TYPE</convert>
       <convert type="SevenHDValueRange">1,1</convert>
       <convert type="ConditionalShowHide" />
     </widget>
-    <widget alphatest="blend" pixmap="skin_default/icons/scan-t.png" position="707,120" render="Pixmap" size="64,64" source="FrontendInfo" transparent="1">
-      <convert type="FrontendInfo">TYPE</convert>
+    <widget alphatest="blend" pixmap="skin_default/icons/scan-t.png" position="707,120" render="Pixmap" size="64,64" source="SevenHDFrontendInfo" transparent="1">
+      <convert type="SevenHDFrontendInfo">TYPE</convert>
       <convert type="SevenHDValueRange">2,2</convert>
       <convert type="ConditionalShowHide" />
     </widget>

@@ -134,6 +134,8 @@ class InfobarExtraSettings(ConfigListScreen, Screen):
            list.append(getConfigListEntry(_("auto weather ID"), config.plugins.SevenHD.AutoWoeID, 'AutomatischeWOEID'))
            if config.plugins.SevenHD.AutoWoeID.value == False:
               list.append(getConfigListEntry(_("weather ID"), config.plugins.SevenHD.weather_city, 'WOEID'))
+        list.append(getConfigListEntry(_('______________________________________________ signal strengh _______________________________________________'), ))
+        list.append(getConfigListEntry(_("style"), config.plugins.SevenHD.FrontInfo))
         return list
 
     def __selectionChanged(self):
@@ -243,6 +245,7 @@ class InfobarExtraSettings(ConfigListScreen, Screen):
         self.setInputToDefault(config.plugins.SevenHD.SatInfo)
         self.setInputToDefault(config.plugins.SevenHD.SysInfo)
         self.setInputToDefault(config.plugins.SevenHD.ECMInfo)
+        self.setInputToDefault(config.plugins.SevenHD.FrontInfo)
         self.save()
 
     def setInputToDefault(self, configItem):

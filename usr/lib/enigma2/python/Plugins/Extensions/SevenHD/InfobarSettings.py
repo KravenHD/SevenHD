@@ -135,7 +135,7 @@ class InfobarSettings(ConfigListScreen, Screen):
            list.append(getConfigListEntry(_("color channelname"), config.plugins.SevenHD.FontCN, 'ColorCN'))
         list.append(getConfigListEntry(_("now event"), config.plugins.SevenHD.NowEvent, 'NowEvent'))
         list.append(getConfigListEntry(_("next event"), config.plugins.SevenHD.NextEvent, 'NextEvent'))
-        list.append(getConfigListEntry(_("indicate"), config.plugins.SevenHD.SNR, 'SNR'))
+        list.append(getConfigListEntry(_("indicate"), config.plugins.SevenHD.SNR, 'SNRColor'))
         list.append(getConfigListEntry(_('________________________________________________ clock _______________________________________________'), ))
         list.append(getConfigListEntry(_("style"), config.plugins.SevenHD.ClockStyle))
         if config.plugins.SevenHD.ClockStyle.value == "clock-analog":

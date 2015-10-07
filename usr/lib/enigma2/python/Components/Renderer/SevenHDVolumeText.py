@@ -1,11 +1,22 @@
-#  Contributed by FromHell555
-#  CC BY-NC-SA
+#
+#  VOLUME TO TEXT Converter
+#
+#  Coded by tomele for Kraven Skins
+#  Thankfully inspired by fromhell555
+#
+#  This code is licensed under the Creative Commons 
+#  Attribution-NonCommercial-ShareAlike 3.0 Unported 
+#  License. To view a copy of this license, visit
+#  http://creativecommons.org/licenses/by-nc-sa/3.0/ 
+#  or send a letter to Creative Commons, 559 Nathan 
+#  Abbott Way, Stanford, California 94305, USA.
+#
 
 from Renderer import Renderer
 from Components.VariableText import VariableText
 from enigma import eLabel, eDVBVolumecontrol, eTimer
 
-class SevenHDVVolumeText(Renderer, VariableText):
+class SevenHDVolumeText(Renderer, VariableText):
 	def __init__(self):
 		Renderer.__init__(self)
 		VariableText.__init__(self)
@@ -27,3 +38,4 @@ class SevenHDVVolumeText(Renderer, VariableText):
 	def changed(self, what):
 		if not self.suspended:
 			self.text = str(eDVBVolumecontrol.getInstance().getVolume())
+

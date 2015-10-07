@@ -1,6 +1,6 @@
 <!--/* Volume -->
 <screen name="Volume" position="10,11" size="98,80" title="Volume" flags="wfNoBorder" backgroundColor="transparent" zPosition="99">
-  <widget font="Regular;40" foregroundColor="SevenFont1" backgroundColor="SevenBackground" halign="center" valign="center" render="SevenHDVVolumeText" source="global.CurrentTime" position="7,9" size="85,60" zPosition="20" transparent="0" />
+  <widget font="Regular;40" foregroundColor="SevenFont1" backgroundColor="SevenBackground" halign="center" valign="center" render="SevenHDVolumeText" source="global.CurrentTime" position="7,9" size="85,60" zPosition="20" transparent="0" />
   <eLabel position="2,1" size="94,77" backgroundColor="SevenBackground" zPosition="-2" transparent="0" />
   <eLabel backgroundColor="SevenBorder" position="1,0" size="97,2" zPosition="2" />
   <eLabel backgroundColor="SevenBorder" position="1,77" size="97,2" zPosition="2" />

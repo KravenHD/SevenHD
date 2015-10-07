@@ -295,6 +295,7 @@ class SevenHD(Screen):
                 
                 self.skinSearchAndReplace.append(["PluginVersionString", "Version: %s" % str(version)])
                 
+
 		self.skinSearchAndReplace.append(["Seven_Selection", config.plugins.SevenHD.SelectionBackground.value])
 		self.skinSearchAndReplace.append(["SevenFont_1", config.plugins.SevenHD.Font1.value])
 		self.skinSearchAndReplace.append(["SevenFont_2", config.plugins.SevenHD.Font2.value])
@@ -357,11 +358,11 @@ class SevenHD(Screen):
                 if config.plugins.SevenHD.WeatherView.value == "meteo":
                    self.skinSearchAndReplace.append(['size="50,50" path="WetterIcons" render="SevenHDPiconUni" alphatest="blend"', 'size="50,50" render="Label" font="Meteo; 45" halign="center" valign="center" foregroundColor="SevenMeteoFont" backgroundColor="SevenFontBackgroundIB1" noWrap="1"'])
                    self.skinSearchAndReplace.append(['size="70,70" render="SevenHDPiconUni" alphatest="blend" path="WetterIcons"', 'size="70,70" render="Label" font="Meteo; 70" halign="center" valign="center" foregroundColor="SevenMeteoFont" backgroundColor="SevenFontBackgroundIB1" noWrap="1"'])
-                   self.skinSearchAndReplace.append(['convert  type="SevenHDVWeather">currentWeatherPicon', 'convert  type="SevenHDVWeather">currentWeatherCode'])
-                   self.skinSearchAndReplace.append(['convert  type="SevenHDVWeather">forecastTomorrowPicon', 'convert  type="SevenHDVWeather">forecastTomorrowCode'])
-                   self.skinSearchAndReplace.append(['convert  type="SevenHDVWeather">forecastTomorrow1Picon', 'convert  type="SevenHDVWeather">forecastTomorrow1Code'])
-                   self.skinSearchAndReplace.append(['convert  type="SevenHDVWeather">forecastTomorrow2Picon', 'convert  type="SevenHDVWeather">forecastTomorrow2Code'])
-                   self.skinSearchAndReplace.append(['convert  type="SevenHDVWeather">forecastTomorrow3Picon', 'convert  type="SevenHDVWeather">forecastTomorrow3Code'])
+                   self.skinSearchAndReplace.append(['convert  type="SevenHDWeather">currentWeatherPicon', 'convert  type="SevenHDWeather">currentWeatherCode'])
+                   self.skinSearchAndReplace.append(['convert  type="SevenHDWeather">forecastTomorrowPicon', 'convert  type="SevenHDWeather">forecastTomorrowCode'])
+                   self.skinSearchAndReplace.append(['convert  type="SevenHDWeather">forecastTomorrow1Picon', 'convert  type="SevenHDWeather">forecastTomorrow1Code'])
+                   self.skinSearchAndReplace.append(['convert  type="SevenHDWeather">forecastTomorrow2Picon', 'convert  type="SevenHDWeather">forecastTomorrow2Code'])
+                   self.skinSearchAndReplace.append(['convert  type="SevenHDWeather">forecastTomorrow3Picon', 'convert  type="SevenHDWeather">forecastTomorrow3Code'])
                 
                        
                 ### Progress
@@ -440,6 +441,10 @@ class SevenHD(Screen):
 		self.skinSearchAndReplace.append(["buttons_seven_white", config.plugins.SevenHD.ButtonStyle.value])
 		self.skinSearchAndReplace.append(["icons_seven_white", config.plugins.SevenHD.IconStyle.value])
 		
+		### FrontInfo
+		if config.plugins.SevenHD.FrontInfo.value == "db":
+			self.skinSearchAndReplace.append(['convert type="SevenHDFrontendInfo">SNR' , 'convert type="SevenHDFrontendInfo">SNRdB'])
+
 		### Text (running, writing, none)
 		if config.plugins.SevenHD.RunningText.value == "writing":
 			self.skinSearchAndReplace.append(['render="SevenHDRunningText" options="movetype=running,startpoint=0,startdelay=2000,steptime=90,wrap=1,always=0,repeat=2,oneshot=1"', 'render="SevenHDEmptyEpg"'])
