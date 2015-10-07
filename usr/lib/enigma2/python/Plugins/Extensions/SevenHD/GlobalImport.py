@@ -432,8 +432,7 @@ config.plugins.SevenHD.ChannelSelectionStyle = ConfigSelection(default="channels
 				("channelselection-minitvzz", _("ZZPicon/miniTV")),
 				("channelselection-zzzpicon", _("ZZZPicon")),
 				("channelselection-minitvzzz", _("ZZZPicon/miniTV")),
-				("channelselection-minitv1", _("miniTV")),
-				("channelselection-pip", _("miniTV/PiP"))
+				("channelselection-minitv1", _("miniTV"))
 				])
 
 ChannelBack1List = []
