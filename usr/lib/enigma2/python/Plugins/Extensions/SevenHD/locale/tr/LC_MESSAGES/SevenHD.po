@@ -1,0 +1,1470 @@
+# Hasan Kiran <sunder67@hotmail.com>, 2015.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: 2015-08-12 13:30+0200\n"
+"PO-Revision-Date: 2015-10-25 04:25+0300\n"
+"Last-Translator: Hasan Kiran <Sunder67@hotmail.com>\n"
+"Language-Team: Turkish <sunder67@hotmail.com>\n"
+"Language: tr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.4\n"
+"X-Poedit-Basepath: ../../../../../../../../../../sevenhd_tbx1\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: ChannelSettings.py:119 InfobarSettings.py:130
+msgid "{:_^102}"
+msgstr ""
+
+#: ChannelSettings.py:120
+msgid "__________________________________________ channelselection __________________________________________"
+msgstr ""
+
+#: ChannelSettings.py:121 InfobarSettings.py:138
+msgid "style"
+msgstr ""
+
+#: ChannelSettings.py:122 InfobarSettings.py:123 MenuPluginSettings.py:121
+msgid "_____________________________________________ background _____________________________________________"
+msgstr ""
+
+#: ChannelSettings.py:123
+msgid "color right"
+msgstr ""
+
+#: ChannelSettings.py:126
+msgid "color middle"
+msgstr ""
+
+#: ChannelSettings.py:127
+msgid "color left"
+msgstr ""
+
+#: ChannelSettings.py:128 InfobarSettings.py:126 MenuPluginSettings.py:124
+msgid "_____________________________________________ color lines ____________________________________________"
+msgstr ""
+
+#: ChannelSettings.py:129 InfobarSettings.py:127 MenuPluginSettings.py:125
+msgid "line"
+msgstr ""
+
+#: ChannelSettings.py:130 InfobarSettings.py:128 MenuPluginSettings.py:126 MenuPluginSettings.py:129
+msgid "border"
+msgstr ""
+
+#: ChannelSettings.py:131
+msgid "__________________________________________ color description _________________________________________"
+msgstr ""
+
+#: ChannelSettings.py:132
+msgid "bouquet name"
+msgstr ""
+
+#: ChannelSettings.py:133
+msgid "program name"
+msgstr ""
+
+#: ChannelSettings.py:134
+msgid "next events"
+msgstr ""
+
+#: ChannelSettings.py:135
+msgid "runtime"
+msgstr ""
+
+#: ChannelSettings.py:137
+msgid "channel name"
+msgstr ""
+
+#: ChannelSettings.py:139
+msgid "time"
+msgstr ""
+
+#: ChannelSettings.py:143
+msgid "prime time"
+msgstr ""
+
+#: ChannelSettings.py:144
+msgid "program description now"
+msgstr ""
+
+#: ChannelSettings.py:146
+msgid "program description next"
+msgstr ""
+
+msgid "program description later"
+msgstr ""
+
+#: ChannelSettings.py:148
+msgid "______________________________________________ color list ____________________________________________"
+msgstr ""
+
+#: ChannelSettings.py:149
+msgid "channel name and number"
+msgstr ""
+
+#: ChannelSettings.py:150
+msgid "program"
+msgstr ""
+
+#: ChannelSettings.py:222 InfobarExtraSettings.py:206 InfobarSettings.py:230 MainSettings.py:221 MenuPluginSettings.py:206
+#: SonstigeSettings.py:202
+msgid ""
+"Debug Picture\n"
+"\"kraven_debug.png\" saved in /tmp\n"
+msgstr ""
+
+#: ChannelSettings.py:250 InfobarExtraSettings.py:221 InfobarSettings.py:259 MainSettings.py:242 MenuPluginSettings.py:225
+#: SonstigeSettings.py:214 plugin.py:503
+msgid "Information"
+msgstr ""
+
+#: ChannelSettings.py:272
+msgid "[ChannelSettings]\n"
+msgstr ""
+
+#: GlobalImport.py:72
+msgid "NotoSans-Regular"
+msgstr ""
+
+#: GlobalImport.py:76
+msgid "SevenHD"
+msgstr "SevenHD"
+
+#: GlobalImport.py:80 GlobalImport.py:132 GlobalImport.py:279
+msgid "black"
+msgstr "siyah"
+
+#: GlobalImport.py:81 GlobalImport.py:131 GlobalImport.py:291
+msgid "white"
+msgstr "beyaz"
+
+#: GlobalImport.py:82 GlobalImport.py:278
+msgid "amber"
+msgstr ""
+
+#: GlobalImport.py:83
+msgid "amber dark"
+msgstr ""
+
+#: GlobalImport.py:84 GlobalImport.py:133 GlobalImport.py:280
+msgid "blue"
+msgstr "mavi"
+
+#: GlobalImport.py:85
+msgid "blue dark"
+msgstr ""
+
+#: GlobalImport.py:86 GlobalImport.py:281
+msgid "brown"
+msgstr "kahverengi"
+
+#: GlobalImport.py:87
+msgid "brown dark"
+msgstr ""
+
+#: GlobalImport.py:88 GlobalImport.py:282
+msgid "cobalt"
+msgstr "kobalt"
+
+#: GlobalImport.py:89
+msgid "cobalt dark"
+msgstr ""
+
+#: GlobalImport.py:90 GlobalImport.py:283
+msgid "cyan"
+msgstr "camgöbeği"
+
+#: GlobalImport.py:91
+msgid "cyan dark"
+msgstr ""
+
+#: GlobalImport.py:92 GlobalImport.py:135 GlobalImport.py:284
+msgid "grey"
+msgstr "gri"
+
+#: GlobalImport.py:93
+msgid "grey dark"
+msgstr ""
+
+#: GlobalImport.py:94 GlobalImport.py:134 GlobalImport.py:285
+msgid "green"
+msgstr "yeşil"
+
+#: GlobalImport.py:95
+msgid "green dark"
+msgstr ""
+
+#: GlobalImport.py:96
+msgid "olive"
+msgstr ""
+
+#: GlobalImport.py:97
+msgid "olive dark"
+msgstr ""
+
+#: GlobalImport.py:98 GlobalImport.py:136 GlobalImport.py:286
+msgid "orange"
+msgstr "turuncu"
+
+#: GlobalImport.py:99
+msgid "orange dark"
+msgstr ""
+
+#: GlobalImport.py:100 GlobalImport.py:287
+msgid "pink"
+msgstr "pembe"
+
+#: GlobalImport.py:101
+msgid "pink dark"
+msgstr ""
+
+#: GlobalImport.py:102 GlobalImport.py:137 GlobalImport.py:288
+msgid "red"
+msgstr "kırmızı"
+
+#: GlobalImport.py:103
+msgid "red dark"
+msgstr ""
+
+#: GlobalImport.py:104 GlobalImport.py:289
+msgid "steel"
+msgstr ""
+
+#: GlobalImport.py:105
+msgid "steel dark"
+msgstr ""
+
+#: GlobalImport.py:106 GlobalImport.py:138 GlobalImport.py:290
+msgid "violet"
+msgstr ""
+
+#: GlobalImport.py:107
+msgid "violet dark"
+msgstr ""
+
+#: GlobalImport.py:108
+msgid "yellow dark"
+msgstr ""
+
+#: GlobalImport.py:109 GlobalImport.py:139
+msgid "yellow"
+msgstr "sarı"
+
+#: GlobalImport.py:112 GlobalImport.py:151 GlobalImport.py:166 GlobalImport.py:186 GlobalImport.py:252 GlobalImport.py:307
+#: GlobalImport.py:320 GlobalImport.py:325 GlobalImport.py:330 GlobalImport.py:364
+msgid "off"
+msgstr "kapalı"
+
+#: GlobalImport.py:113
+msgid "low"
+msgstr "düşük"
+
+#: GlobalImport.py:114
+msgid "medium"
+msgstr "orta"
+
+#: GlobalImport.py:115
+msgid "high"
+msgstr "yüksek"
+
+#: GlobalImport.py:116 GlobalImport.py:236
+msgid "full"
+msgstr "tam"
+
+#: GlobalImport.py:122
+msgid "Atemio4You"
+msgstr ""
+
+#: GlobalImport.py:123
+msgid "HDMU"
+msgstr ""
+
+#: GlobalImport.py:124
+msgid "openATV"
+msgstr "openATV"
+
+#: GlobalImport.py:125
+msgid "openHDF"
+msgstr "openHDF"
+
+#: GlobalImport.py:126
+msgid "openMIPS"
+msgstr "openMIPS"
+
+#: GlobalImport.py:127
+msgid "openNFR"
+msgstr "openNFR"
+
+#: GlobalImport.py:140
+msgid "black/blue"
+msgstr ""
+
+#: GlobalImport.py:141
+msgid "black/green"
+msgstr ""
+
+#: GlobalImport.py:142
+msgid "black/orange"
+msgstr ""
+
+#: GlobalImport.py:143
+msgid "black/red"
+msgstr ""
+
+#: GlobalImport.py:144
+msgid "black/silver"
+msgstr ""
+
+#: GlobalImport.py:145
+msgid "black/violet"
+msgstr ""
+
+#: GlobalImport.py:146
+msgid "black/yellow"
+msgstr ""
+
+#: GlobalImport.py:150 GlobalImport.py:253 GlobalImport.py:321 GlobalImport.py:326 GlobalImport.py:331
+msgid "on"
+msgstr ""
+
+#: GlobalImport.py:155
+msgid "original"
+msgstr "orjinal"
+
+#: GlobalImport.py:156 GlobalImport.py:309
+msgid "left"
+msgstr ""
+
+#: GlobalImport.py:157 MenuPluginSettings.py:123
+msgid "right"
+msgstr ""
+
+#: GlobalImport.py:158
+msgid "top"
+msgstr ""
+
+#: GlobalImport.py:159
+msgid "number"
+msgstr ""
+
+#: GlobalImport.py:160
+msgid "center"
+msgstr ""
+
+#: GlobalImport.py:167
+msgid "ZPicons"
+msgstr ""
+
+#: GlobalImport.py:168
+msgid "XPicons"
+msgstr ""
+
+#: GlobalImport.py:169
+msgid "ZZPicons"
+msgstr ""
+
+#: GlobalImport.py:170
+msgid "ZZZPicons"
+msgstr ""
+
+#: GlobalImport.py:194
+msgid "bunt"
+msgstr ""
+
+#: GlobalImport.py:211
+msgid "Original 1"
+msgstr ""
+
+#: GlobalImport.py:212
+msgid "Original 2"
+msgstr ""
+
+#: GlobalImport.py:213
+msgid "Original 3"
+msgstr ""
+
+#: GlobalImport.py:214
+msgid "Original 4"
+msgstr ""
+
+#: GlobalImport.py:215
+msgid "ZPicon 1"
+msgstr ""
+
+#: GlobalImport.py:216
+msgid "ZPicon 2"
+msgstr ""
+
+#: GlobalImport.py:217
+msgid "ZPicon 3"
+msgstr ""
+
+#: GlobalImport.py:218
+msgid "ZPicon 4"
+msgstr ""
+
+#: GlobalImport.py:219
+msgid "XPicon 1"
+msgstr ""
+
+#: GlobalImport.py:220
+msgid "XPicon 2"
+msgstr ""
+
+#: GlobalImport.py:221
+msgid "XPicon 3"
+msgstr ""
+
+#: GlobalImport.py:222
+msgid "XPicon 4"
+msgstr ""
+
+#: GlobalImport.py:223
+msgid "ZZPicon 1"
+msgstr ""
+
+#: GlobalImport.py:224
+msgid "ZZPicon 2"
+msgstr ""
+
+#: GlobalImport.py:225
+msgid "ZZPicon 3"
+msgstr ""
+
+#: GlobalImport.py:226
+msgid "ZZPicon 4"
+msgstr ""
+
+#: GlobalImport.py:227
+msgid "ZZZPicon 1"
+msgstr ""
+
+#: GlobalImport.py:228
+msgid "ZZZPicon 2"
+msgstr ""
+
+#: GlobalImport.py:229
+msgid "ZZZPicon 3"
+msgstr ""
+
+#: GlobalImport.py:230
+msgid "ZZZPicon 4"
+msgstr ""
+
+#: GlobalImport.py:234
+msgid "top/bottom"
+msgstr ""
+
+#: GlobalImport.py:235
+msgid "left/right"
+msgstr ""
+
+#: GlobalImport.py:269
+msgid "standard"
+msgstr "standart"
+
+#: GlobalImport.py:270
+msgid "with seconds"
+msgstr ""
+
+#: GlobalImport.py:271
+msgid "with weekday"
+msgstr ""
+
+#: GlobalImport.py:272
+msgid "analog"
+msgstr "analog"
+
+#: GlobalImport.py:273 InfobarExtraSettings.py:124
+msgid "weather"
+msgstr ""
+
+#: GlobalImport.py:274
+msgid "android"
+msgstr "android"
+
+#: GlobalImport.py:308
+msgid "big"
+msgstr "büyük"
+
+#: GlobalImport.py:310
+msgid "small"
+msgstr ""
+
+#: GlobalImport.py:339
+msgid "two columns 1"
+msgstr ""
+
+#: GlobalImport.py:340
+msgid "two columns 2"
+msgstr ""
+
+#: GlobalImport.py:341
+msgid "two columns 3"
+msgstr ""
+
+msgid "two columns 4"
+msgstr ""
+
+#: GlobalImport.py:342
+msgid "three columns"
+msgstr ""
+
+#: GlobalImport.py:343
+msgid "three columns miniTV"
+msgstr ""
+
+#: GlobalImport.py:344
+msgid "ZPicon"
+msgstr ""
+
+#: GlobalImport.py:345
+msgid "ZPicon/miniTV"
+msgstr ""
+
+#: GlobalImport.py:346
+msgid "XPicon"
+msgstr ""
+
+#: GlobalImport.py:347
+msgid "XPicon/miniTV"
+msgstr ""
+
+#: GlobalImport.py:348
+msgid "ZZPicon"
+msgstr ""
+
+#: GlobalImport.py:349
+msgid "ZZPicon/miniTV"
+msgstr ""
+
+#: GlobalImport.py:350
+msgid "ZZZPicon"
+msgstr ""
+
+#: GlobalImport.py:351
+msgid "ZZZPicon/miniTV"
+msgstr ""
+
+#: GlobalImport.py:352 GlobalImport.py:400
+msgid "miniTV"
+msgstr ""
+
+#: GlobalImport.py:353
+msgid "miniTV/PiP"
+msgstr ""
+
+#: GlobalImport.py:401
+msgid "picon"
+msgstr ""
+
+#: GlobalImport.py:405
+msgid "no cover"
+msgstr ""
+
+#: GlobalImport.py:406
+msgid "small cover"
+msgstr ""
+
+#: GlobalImport.py:407
+msgid "big cover"
+msgstr ""
+
+#: GlobalImport.py:408
+msgid "very big cover"
+msgstr ""
+
+#: InfobarExtraSettings.py:119
+msgid "___________________________________________ infobar extras ___________________________________________"
+msgstr ""
+
+#: InfobarExtraSettings.py:120
+msgid "satellite information"
+msgstr ""
+
+#: InfobarExtraSettings.py:121
+msgid "system information"
+msgstr ""
+
+#: InfobarExtraSettings.py:122
+msgid "ECM information"
+msgstr ""
+
+#: InfobarExtraSettings.py:123
+msgid "______________________________________________ weather _______________________________________________"
+msgstr ""
+
+#: InfobarExtraSettings.py:126
+msgid "auto weather ID"
+msgstr ""
+
+#: InfobarExtraSettings.py:128
+msgid "weather ID"
+msgstr ""
+
+#: InfobarExtraSettings.py:290
+msgid ""
+" is detected and set as your Location.\n"
+"If that should not be right then set\n"
+"Auto Weather ID Function to \"OFF\"."
+msgstr ""
+
+#: InfobarExtraSettings.py:296 plugin.py:510
+#, python-format
+msgid "%s"
+msgstr "%s"
+
+#: InfobarExtraSettings.py:299
+msgid ""
+"Is this detected WOEID wrong,\n"
+"choose another and set as your Location.\n"
+"\n"
+"If not the right one in the List set\n"
+"Auto Weather ID Function to \"OFF\"."
+msgstr ""
+
+#: InfobarExtraSettings.py:318
+msgid "[InfobarExtraSettings]\n"
+msgstr ""
+
+#: InfobarSettings.py:119
+msgid "_______________________________________________ style ________________________________________________"
+msgstr ""
+
+#: InfobarSettings.py:120
+msgid "infobar"
+msgstr "bilgi çubuğu"
+
+#: InfobarSettings.py:121
+msgid "second infobar"
+msgstr ""
+
+#: InfobarSettings.py:124
+msgid "color 1"
+msgstr ""
+
+#: InfobarSettings.py:125
+msgid "color 2"
+msgstr ""
+
+#: InfobarSettings.py:129 MenuPluginSettings.py:131
+msgid "______________________________________________ color font ____________________________________________"
+msgstr ""
+
+#: InfobarSettings.py:131
+msgid "channelname"
+msgstr ""
+
+#: InfobarSettings.py:133
+msgid "color channelname"
+msgstr ""
+
+#: InfobarSettings.py:134
+msgid "now event"
+msgstr ""
+
+#: InfobarSettings.py:135
+msgid "next event"
+msgstr ""
+
+#: InfobarSettings.py:136
+msgid "indicate"
+msgstr ""
+
+#: InfobarSettings.py:137
+msgid "________________________________________________ clock _______________________________________________"
+msgstr ""
+
+#: InfobarSettings.py:140
+msgid "color clock"
+msgstr ""
+
+#: InfobarSettings.py:141 InfobarSettings.py:147 InfobarSettings.py:150 InfobarSettings.py:154 InfobarSettings.py:157
+msgid "color date"
+msgstr ""
+
+#: InfobarSettings.py:142
+msgid "color pointer hour"
+msgstr ""
+
+#: InfobarSettings.py:143
+msgid "color pointer minute"
+msgstr ""
+
+#: InfobarSettings.py:144
+msgid "color pointer second"
+msgstr ""
+
+#: InfobarSettings.py:146 InfobarSettings.py:149 InfobarSettings.py:153
+msgid "color time"
+msgstr ""
+
+#: InfobarSettings.py:151
+msgid "color weekday"
+msgstr ""
+
+#: InfobarSettings.py:155
+msgid "color weather"
+msgstr ""
+
+#: InfobarSettings.py:281
+msgid "[InfobarSettings]\n"
+msgstr ""
+
+#: MainSettings.py:120
+msgid "_______________________________________ global system settings _______________________________________"
+msgstr ""
+
+#: MainSettings.py:121
+msgid "image"
+msgstr ""
+
+#: MainSettings.py:122
+msgid "buttons"
+msgstr ""
+
+msgid "_____________________________________________running text ____________________________________________"
+msgstr ""
+
+#: MainSettings.py:123
+msgid "running text"
+msgstr ""
+
+msgid "startdelay"
+msgstr ""
+
+msgid "2 sec"
+msgstr "2 sn"
+
+msgid "4 sec"
+msgstr "4 sn"
+
+msgid "6 sec"
+msgstr "6 sn"
+
+msgid "8 sec"
+msgstr "8 sn"
+
+msgid "10 sec"
+msgstr "10 sn"
+
+#: MainSettings.py:124
+msgid "volume style"
+msgstr ""
+
+#: MainSettings.py:125
+msgid "progress-/volumebar"
+msgstr ""
+
+#: MainSettings.py:126
+msgid "_____________________________________________transparency ____________________________________________"
+msgstr ""
+
+#: MainSettings.py:127
+msgid "main window"
+msgstr "ana pencere"
+
+#: MainSettings.py:128
+msgid "right window"
+msgstr ""
+
+msgid "_____________________________________________ autoupdate _____________________________________________"
+msgstr ""
+
+msgid "activate"
+msgstr ""
+
+msgid "autoupdate infobar info"
+msgstr ""
+
+#: MainSettings.py:129
+msgid "______________________________________________ plugins _______________________________________________"
+msgstr ""
+
+#: MainSettings.py:130
+msgid "EMC"
+msgstr ""
+
+#: MainSettings.py:133
+msgid "ExtNumberZap"
+msgstr ""
+
+#: MainSettings.py:135 MainSettings.py:137
+msgid "{:<121}{:>1}"
+msgstr ""
+
+#: MainSettings.py:140
+msgid "{:<124}{:>1}"
+msgstr ""
+
+#: MainSettings.py:142
+msgid "CoolTVGuide"
+msgstr ""
+
+#: MainSettings.py:264
+msgid "[MainSettingsScreen]\n"
+msgstr ""
+
+#: MenuPluginSettings.py:119
+msgid "__________________________________________ MENU und PLUGINS __________________________________________"
+msgstr ""
+
+#: MenuPluginSettings.py:120
+msgid " "
+msgstr ""
+
+#: MenuPluginSettings.py:122
+msgid "main"
+msgstr ""
+
+#: MenuPluginSettings.py:127
+msgid "____________________________________________ listselection ___________________________________________"
+msgstr ""
+
+#: MenuPluginSettings.py:128
+msgid "color"
+msgstr "renk"
+
+#: MenuPluginSettings.py:130
+msgid "selection font"
+msgstr ""
+
+#: MenuPluginSettings.py:132
+msgid "font 1"
+msgstr ""
+
+#: MenuPluginSettings.py:133
+msgid "font 2"
+msgstr ""
+
+#: MenuPluginSettings.py:134
+msgid "button text"
+msgstr ""
+
+msgid "plugin icons"
+msgstr ""
+
+#: MenuPluginSettings.py:247
+msgid "[MenuPluginSettings]\n"
+msgstr ""
+
+#: SonstigeSettings.py:119
+msgid "_______________________________________________ debug ________________________________________________"
+msgstr ""
+
+#: SonstigeSettings.py:120
+msgid "Debug Mode (only for skinning)"
+msgstr ""
+
+#: SonstigeSettings.py:121
+msgid "MSG Box Debug Mode (only for skinning)"
+msgstr ""
+
+#: SonstigeSettings.py:123
+msgid "Grab png Debug Mode (only for skinning)"
+msgstr ""
+
+#: SonstigeSettings.py:236
+msgid "[SonstigeSettings]\n"
+msgstr ""
+
+#: plugin.py:137
+msgid "main setting"
+msgstr ""
+
+#: plugin.py:138
+msgid "menu and plugins"
+msgstr ""
+
+#: plugin.py:139
+msgid "infobar and second infobar"
+msgstr ""
+
+#: plugin.py:140
+msgid "infobar extras"
+msgstr ""
+
+#: plugin.py:141
+msgid "channel selection"
+msgstr ""
+
+#: plugin.py:142
+msgid "other settings"
+msgstr ""
+
+#: plugin.py:143
+msgid "system osd settings"
+msgstr ""
+
+#: plugin.py:144
+msgid "system channel settings"
+msgstr ""
+
+#: plugin.py:451
+msgid "Error creating Skin!"
+msgstr ""
+
+#: plugin.py:486
+msgid "Hier koennte ihre Werbung stehen ...."
+msgstr ""
+
+#: plugin.py:488 plugin.py:514
+msgid "Show Debug Log"
+msgstr ""
+
+#: plugin.py:492
+msgid "Open NumberZapExt Setup"
+msgstr ""
+
+#: plugin.py:494 plugin.py:496
+msgid "Install NumberZapExt?"
+msgstr ""
+
+#: plugin.py:499
+msgid "Install CoolTVGuide?"
+msgstr ""
+
+#: plugin.py:501
+msgid "Share my Skin"
+msgstr ""
+
+#: plugin.py:518
+msgid "Share my Skin Config"
+msgstr ""
+
+#: plugin.py:519
+msgid "Load shared Skin Config"
+msgstr ""
+
+#: plugin.py:527
+msgid "Install Plugin"
+msgstr ""
+
+#: plugin.py:539
+msgid "Restart GUI"
+msgstr ""
+
+#: plugin.py:558
+msgid "[PluginScreen]\n"
+msgstr ""
+
+#: plugin.py:572 plugin.py:574
+msgid "Configuration tool for SevenHD"
+msgstr ""
+
+#: SevenHDYWeather.py:198 SevenHDYWeather.py:230
+msgid "N"
+msgstr "K"
+
+#: SevenHDYWeather.py:200
+msgid "N-NE"
+msgstr ""
+
+#: SevenHDYWeather.py:202
+msgid "NE"
+msgstr "KD"
+
+#: SevenHDYWeather.py:204
+msgid "E-NE"
+msgstr ""
+
+#: SevenHDYWeather.py:206
+msgid "E"
+msgstr "D"
+
+#: SevenHDYWeather.py:208
+msgid "E-SE"
+msgstr ""
+
+#: SevenHDYWeather.py:210
+msgid "SE"
+msgstr "GD"
+
+#: SevenHDYWeather.py:212
+msgid "S-SE"
+msgstr ""
+
+#: SevenHDYWeather.py:214
+msgid "S"
+msgstr "G"
+
+#: SevenHDYWeather.py:216
+msgid "S-SW"
+msgstr ""
+
+#: SevenHDYWeather.py:218
+msgid "SW"
+msgstr "GB"
+
+#: SevenHDYWeather.py:220
+msgid "W-SW"
+msgstr ""
+
+#: SevenHDYWeather.py:222
+msgid "W"
+msgstr "B"
+
+#: SevenHDYWeather.py:224
+msgid "W-NW"
+msgstr ""
+
+#: SevenHDYWeather.py:226
+msgid "NW"
+msgstr "KB"
+
+#: SevenHDYWeather.py:228
+msgid "N-NW"
+msgstr ""
+
+#: SevenHDYWeather.py:232
+msgid "N/A"
+msgstr "Mevcut değil"
+
+#: SevenHDYWeather.py:234
+msgid " km/h"
+msgstr " km/s"
+
+#: SevenHDYWeather.py:251 SevenHDYWeather.py:271 SevenHDYWeather.py:291 SevenHDYWeather.py:311 SevenHDYWeather.py:331
+msgid "Mon"
+msgstr "Pts"
+
+#: SevenHDYWeather.py:253 SevenHDYWeather.py:273 SevenHDYWeather.py:293 SevenHDYWeather.py:313 SevenHDYWeather.py:333
+msgid "Tue"
+msgstr "Sal"
+
+#: SevenHDYWeather.py:255 SevenHDYWeather.py:275 SevenHDYWeather.py:295 SevenHDYWeather.py:315 SevenHDYWeather.py:335
+msgid "Wed"
+msgstr "Çar"
+
+#: SevenHDYWeather.py:257 SevenHDYWeather.py:277 SevenHDYWeather.py:297 SevenHDYWeather.py:317 SevenHDYWeather.py:337
+msgid "Thu"
+msgstr "Per"
+
+#: SevenHDYWeather.py:259 SevenHDYWeather.py:279 SevenHDYWeather.py:299 SevenHDYWeather.py:319 SevenHDYWeather.py:339
+msgid "Fri"
+msgstr "Cum"
+
+#: SevenHDYWeather.py:261 SevenHDYWeather.py:281 SevenHDYWeather.py:301 SevenHDYWeather.py:321 SevenHDYWeather.py:341
+msgid "Sat"
+msgstr "Cts"
+
+#: SevenHDYWeather.py:263 SevenHDYWeather.py:283 SevenHDYWeather.py:303 SevenHDYWeather.py:323 SevenHDYWeather.py:343
+msgid "Sun"
+msgstr "Paz"
+
+#: SevenHDYWeather.py:426 SevenHDYWeather.py:530 SevenHDYWeather.py:634 SevenHDYWeather.py:738 SevenHDYWeather.py:842
+msgid "Tornado"
+msgstr ""
+
+#: SevenHDYWeather.py:428 SevenHDYWeather.py:532 SevenHDYWeather.py:636 SevenHDYWeather.py:740 SevenHDYWeather.py:844
+msgid ""
+"Tropical\n"
+" storm"
+msgstr ""
+
+#: SevenHDYWeather.py:430 SevenHDYWeather.py:534 SevenHDYWeather.py:638 SevenHDYWeather.py:742 SevenHDYWeather.py:846
+msgid "Hurricane"
+msgstr "Kasırga"
+
+#: SevenHDYWeather.py:432 SevenHDYWeather.py:536 SevenHDYWeather.py:640 SevenHDYWeather.py:744 SevenHDYWeather.py:848
+msgid ""
+"Severe\n"
+" thunderstorms"
+msgstr ""
+
+#: SevenHDYWeather.py:434 SevenHDYWeather.py:538 SevenHDYWeather.py:642 SevenHDYWeather.py:746 SevenHDYWeather.py:850
+msgid "Thunderstorms"
+msgstr "Gök gürültülü fırtına"
+
+#: SevenHDYWeather.py:436 SevenHDYWeather.py:540 SevenHDYWeather.py:644 SevenHDYWeather.py:748 SevenHDYWeather.py:852
+msgid ""
+"Mixed rain\n"
+" and snow"
+msgstr ""
+
+#: SevenHDYWeather.py:438 SevenHDYWeather.py:542 SevenHDYWeather.py:646 SevenHDYWeather.py:750 SevenHDYWeather.py:854
+msgid ""
+"Mixed rain\n"
+" and sleet"
+msgstr ""
+
+#: SevenHDYWeather.py:440 SevenHDYWeather.py:544 SevenHDYWeather.py:648 SevenHDYWeather.py:752 SevenHDYWeather.py:856
+msgid ""
+"Mixed snow\n"
+" and sleet"
+msgstr ""
+
+#: SevenHDYWeather.py:442 SevenHDYWeather.py:546 SevenHDYWeather.py:650 SevenHDYWeather.py:754 SevenHDYWeather.py:858
+msgid ""
+"Freezing\n"
+" drizzle"
+msgstr ""
+
+#: SevenHDYWeather.py:444 SevenHDYWeather.py:548 SevenHDYWeather.py:652 SevenHDYWeather.py:756 SevenHDYWeather.py:860
+msgid "Drizzle"
+msgstr "Çiseleme"
+
+#: SevenHDYWeather.py:446 SevenHDYWeather.py:550 SevenHDYWeather.py:654 SevenHDYWeather.py:758 SevenHDYWeather.py:862
+msgid ""
+"Freezing\n"
+" rain"
+msgstr ""
+
+#: SevenHDYWeather.py:448 SevenHDYWeather.py:552 SevenHDYWeather.py:656 SevenHDYWeather.py:760 SevenHDYWeather.py:864
+msgid "Showers"
+msgstr "Sağanak"
+
+#: SevenHDYWeather.py:450 SevenHDYWeather.py:554 SevenHDYWeather.py:658 SevenHDYWeather.py:762 SevenHDYWeather.py:866
+msgid "Rain"
+msgstr "Yağmur"
+
+#: SevenHDYWeather.py:452 SevenHDYWeather.py:556 SevenHDYWeather.py:660 SevenHDYWeather.py:764 SevenHDYWeather.py:868
+msgid ""
+"Snow\n"
+" flurries"
+msgstr ""
+
+#: SevenHDYWeather.py:454 SevenHDYWeather.py:558 SevenHDYWeather.py:662 SevenHDYWeather.py:766 SevenHDYWeather.py:870
+msgid ""
+"Light\n"
+" snow showers"
+msgstr ""
+
+#: SevenHDYWeather.py:456 SevenHDYWeather.py:560 SevenHDYWeather.py:664 SevenHDYWeather.py:768 SevenHDYWeather.py:872
+msgid ""
+"Blowing\n"
+" snow"
+msgstr ""
+
+#: SevenHDYWeather.py:458 SevenHDYWeather.py:562 SevenHDYWeather.py:666 SevenHDYWeather.py:770 SevenHDYWeather.py:874
+msgid "Snow"
+msgstr "Kar"
+
+#: SevenHDYWeather.py:460 SevenHDYWeather.py:564 SevenHDYWeather.py:668 SevenHDYWeather.py:772 SevenHDYWeather.py:876
+msgid "Hail"
+msgstr "Dolu"
+
+#: SevenHDYWeather.py:462 SevenHDYWeather.py:566 SevenHDYWeather.py:670 SevenHDYWeather.py:774 SevenHDYWeather.py:878
+msgid "Sleet"
+msgstr ""
+
+#: SevenHDYWeather.py:464 SevenHDYWeather.py:568 SevenHDYWeather.py:672 SevenHDYWeather.py:776 SevenHDYWeather.py:880
+msgid "Dust"
+msgstr "Toz"
+
+#: SevenHDYWeather.py:466 SevenHDYWeather.py:570 SevenHDYWeather.py:674 SevenHDYWeather.py:778 SevenHDYWeather.py:882
+msgid "Foggy"
+msgstr "Sisli"
+
+#: SevenHDYWeather.py:468 SevenHDYWeather.py:572 SevenHDYWeather.py:676 SevenHDYWeather.py:780 SevenHDYWeather.py:884
+msgid "Haze"
+msgstr "Puslu"
+
+#: SevenHDYWeather.py:470 SevenHDYWeather.py:574 SevenHDYWeather.py:678 SevenHDYWeather.py:782 SevenHDYWeather.py:886
+msgid "Smoky"
+msgstr ""
+
+#: SevenHDYWeather.py:472 SevenHDYWeather.py:576 SevenHDYWeather.py:680 SevenHDYWeather.py:784 SevenHDYWeather.py:888
+msgid "Blustery"
+msgstr ""
+
+#: SevenHDYWeather.py:474 SevenHDYWeather.py:578 SevenHDYWeather.py:682 SevenHDYWeather.py:786 SevenHDYWeather.py:890
+msgid "Windy"
+msgstr ""
+
+#: SevenHDYWeather.py:476 SevenHDYWeather.py:580 SevenHDYWeather.py:684 SevenHDYWeather.py:788 SevenHDYWeather.py:892
+msgid "Cold"
+msgstr "Soğuk"
+
+#: SevenHDYWeather.py:478 SevenHDYWeather.py:582 SevenHDYWeather.py:686 SevenHDYWeather.py:790 SevenHDYWeather.py:894
+msgid "Cloudy"
+msgstr "Bulutlu"
+
+#: SevenHDYWeather.py:480 SevenHDYWeather.py:482 SevenHDYWeather.py:584 SevenHDYWeather.py:586 SevenHDYWeather.py:688
+#: SevenHDYWeather.py:690 SevenHDYWeather.py:792 SevenHDYWeather.py:794 SevenHDYWeather.py:896 SevenHDYWeather.py:898
+msgid ""
+"Mostly\n"
+" cloudy"
+msgstr ""
+
+#: SevenHDYWeather.py:484 SevenHDYWeather.py:486 SevenHDYWeather.py:514 SevenHDYWeather.py:588 SevenHDYWeather.py:590
+#: SevenHDYWeather.py:618 SevenHDYWeather.py:692 SevenHDYWeather.py:694 SevenHDYWeather.py:722 SevenHDYWeather.py:796
+#: SevenHDYWeather.py:798 SevenHDYWeather.py:826 SevenHDYWeather.py:900 SevenHDYWeather.py:902 SevenHDYWeather.py:930
+msgid ""
+"Partly\n"
+" cloudy"
+msgstr ""
+
+#: SevenHDYWeather.py:488 SevenHDYWeather.py:592 SevenHDYWeather.py:696 SevenHDYWeather.py:800 SevenHDYWeather.py:904
+msgid "Clear"
+msgstr "Açık"
+
+#: SevenHDYWeather.py:490 SevenHDYWeather.py:594 SevenHDYWeather.py:698 SevenHDYWeather.py:802 SevenHDYWeather.py:906
+msgid "Sunny"
+msgstr "Güneşli"
+
+#: SevenHDYWeather.py:492 SevenHDYWeather.py:494 SevenHDYWeather.py:596 SevenHDYWeather.py:598 SevenHDYWeather.py:700
+#: SevenHDYWeather.py:702 SevenHDYWeather.py:804 SevenHDYWeather.py:806 SevenHDYWeather.py:908 SevenHDYWeather.py:910
+msgid "Fair"
+msgstr "Güzel"
+
+#: SevenHDYWeather.py:496 SevenHDYWeather.py:600 SevenHDYWeather.py:704 SevenHDYWeather.py:808 SevenHDYWeather.py:912
+msgid ""
+"Mixed rain\n"
+" and hail"
+msgstr ""
+
+#: SevenHDYWeather.py:498 SevenHDYWeather.py:602 SevenHDYWeather.py:706 SevenHDYWeather.py:810 SevenHDYWeather.py:914
+msgid "Hot"
+msgstr ""
+
+#: SevenHDYWeather.py:500 SevenHDYWeather.py:604 SevenHDYWeather.py:708 SevenHDYWeather.py:812 SevenHDYWeather.py:916
+msgid ""
+"Isolated\n"
+" thunderstorms"
+msgstr ""
+
+#: SevenHDYWeather.py:502 SevenHDYWeather.py:504 SevenHDYWeather.py:606 SevenHDYWeather.py:608 SevenHDYWeather.py:710
+#: SevenHDYWeather.py:712 SevenHDYWeather.py:814 SevenHDYWeather.py:816 SevenHDYWeather.py:918 SevenHDYWeather.py:920
+msgid ""
+"Scattered\n"
+" thunderstorms"
+msgstr ""
+
+#: SevenHDYWeather.py:506 SevenHDYWeather.py:610 SevenHDYWeather.py:714 SevenHDYWeather.py:818 SevenHDYWeather.py:922
+msgid ""
+"Scattered\n"
+" showers"
+msgstr ""
+
+#: SevenHDYWeather.py:508 SevenHDYWeather.py:512 SevenHDYWeather.py:612 SevenHDYWeather.py:616 SevenHDYWeather.py:716
+#: SevenHDYWeather.py:720 SevenHDYWeather.py:820 SevenHDYWeather.py:824 SevenHDYWeather.py:924 SevenHDYWeather.py:928
+msgid "Heavy snow"
+msgstr "Şiddetli kar"
+
+#: SevenHDYWeather.py:510 SevenHDYWeather.py:614 SevenHDYWeather.py:718 SevenHDYWeather.py:822 SevenHDYWeather.py:926
+msgid ""
+"Scattered\n"
+" snow showers"
+msgstr ""
+
+#: SevenHDYWeather.py:516 SevenHDYWeather.py:620 SevenHDYWeather.py:724 SevenHDYWeather.py:828 SevenHDYWeather.py:932
+msgid "Thundershowers"
+msgstr ""
+
+#: SevenHDYWeather.py:518 SevenHDYWeather.py:622 SevenHDYWeather.py:726 SevenHDYWeather.py:830 SevenHDYWeather.py:934
+msgid "Snow showers"
+msgstr ""
+
+#: SevenHDYWeather.py:520 SevenHDYWeather.py:624 SevenHDYWeather.py:728 SevenHDYWeather.py:832 SevenHDYWeather.py:936
+msgid ""
+"Isolated\n"
+" thundershowers"
+msgstr ""
+
+#: SevenHDYWeather.py:522 SevenHDYWeather.py:626 SevenHDYWeather.py:730 SevenHDYWeather.py:834 SevenHDYWeather.py:938
+msgid ""
+"Not\n"
+" available"
+msgstr ""
+
+#: plugin.py:759
+msgid "Do you really want to reboot now?"
+msgstr ""
+
+#: plugin.py:921
+msgid ""
+"GUI needs a restart to download files and apply a new skin.\n"
+"Do you want to Restart the GUI now?"
+msgstr ""
+
+msgid "redwood"
+msgstr ""
+
+msgid "brick"
+msgstr ""
+
+msgid "checkerplate"
+msgstr ""
+
+msgid "name"
+msgstr "isim"
+
+msgid "number and name"
+msgstr ""
+
+msgid "cubes"
+msgstr ""
+
+msgid "brownleather"
+msgstr ""
+
+msgid "blackleather"
+msgstr ""
+
+msgid "carbon"
+msgstr ""
+
+msgid "drop"
+msgstr ""
+
+msgid "flames"
+msgstr ""
+
+msgid "glass"
+msgstr ""
+
+msgid "iceflowers"
+msgstr ""
+
+msgid "matrix"
+msgstr "matris"
+
+msgid "metal"
+msgstr ""
+
+msgid "string"
+msgstr ""
+
+msgid "slate"
+msgstr ""
+
+msgid "fireflower"
+msgstr ""
+
+msgid "lapis"
+msgstr ""
+
+msgid "fire"
+msgstr ""
+
+msgid "colorexplosion"
+msgstr ""
+
+msgid "stonewall"
+msgstr ""
+
+msgid "scratchedmetal"
+msgstr ""
+
+msgid "stone"
+msgstr ""
+
+msgid "steptime"
+msgstr ""
+
+msgid "autoupdate plugin startinfo"
+msgstr ""
+
+#: SevenHDYWeather.py
+msgid " from "
+msgstr ""
+
+msgid "running"
+msgstr ""
+
+msgid "writing"
+msgstr ""
+
+#: SevenHDYWeather.py
+msgid "% humidity"
+msgstr ""
+
+#: SevenHDYWeather.py
+msgid ", feels "
+msgstr ""
+
+msgid "progressbar"
+msgstr "ilerleme çubuğu"
+
+msgid "volumebar"
+msgstr ""
+
+msgid "progressbar line"
+msgstr ""
+
+msgid "progressbar border"
+msgstr ""
+
+msgid "Weather Style"
+msgstr ""
+
+msgid "Meteo Color"
+msgstr ""
+
+msgid "Refresh interval (in minutes)"
+msgstr ""
+
+msgid "______________________________________________ signal strengh _______________________________________________"
+msgstr ""
+
+#~ msgid " infobar extras "
+#~ msgstr "Infobar Extras"
+
+#~ msgid " weather "
+#~ msgstr "Wetter"
+
+#~ msgid "clock"
+#~ msgstr "Uhr"
+
+#~ msgid "transparency"
+#~ msgstr "Transparenz"
+
+#~ msgid "plugins"
+#~ msgstr "Plugins"
+
+#~ msgid "not installed"
+#~ msgstr "nicht installiert"
+
+#~ msgid "background"
+#~ msgstr "Hintergrund"
+
+#~ msgid "MENU und PLUGINS"
+#~ msgstr "Menü und Plugins"
+
+#~ msgid "color font"
+#~ msgstr "Farbe Schrift"
+
+#~ msgid "color lines"
+#~ msgstr "Farbe Linie"
+
+#~ msgid "listselection"
+#~ msgstr "List Einstellungen"
+
+#~ msgid "debug"
+#~ msgstr "Debug"
+
+#~ msgid "grab Picture"
+#~ msgstr "mache Bild"
+
+#~ msgid ""
+#~ "Youre Skin Config is ready to share.\n"
+#~ "Look in /tmp for youre Skin File."
+#~ msgstr ""
+#~ "Deine Skin Konfiguration ist bereit zum teilen.\n"
+#~ "Schau unter /tmp für Dein Skin File."
+
+#~ msgid "Anything goes wrong"
+#~ msgstr "Irgendetwas läuft falsch"
+
+#~ msgid "New Skin Config is saved."
+#~ msgstr "Neue Skin Konfiguration wurde gespeichert."
+
+#~ msgid "Skin Config is wrong"
+#~ msgstr "Skin Konfiguration ist falsch"
+
+#~ msgid "New Skin Config is load."
+#~ msgstr "Neue Skin Konfiguration wurde geladen."
+
+#~ msgid "Only Numbers allowed!"
+#~ msgstr "NEs sind nur Ziffern zulässig!"
+
+#~ msgid "Last Version on Server"
+#~ msgstr "Lestzte Version auf dem Server"
+
+#~ msgid "__________________________________________ infobar and second infobar __________________________________________"
+#~ msgstr "__________________________________________ Infobar und Zweite Infobar __________________________________________"
