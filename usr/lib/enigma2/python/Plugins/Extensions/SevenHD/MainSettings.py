@@ -274,6 +274,13 @@ class MainSettings(ConfigListScreen, Screen):
         self.session.open(MessageBox, _("Information"), MessageBox.TYPE_INFO)
 
     def save(self):
+        
+        if config.plugins.SevenHD.skin_mode.value >= '2':
+           config.epgselection.multi_itemsperpage.value = '10'
+        else:
+           self.setInputToDefault(config.epgselection.multi_itemsperpage)
+        config.epgselection.multi_itemsperpage.save()
+        
         if config.plugins.SevenHD.skin_mode.value >= '3':
            if config.plugins.SevenHD.skin_mode.value == '3': 
               msg_text = '3840x2160 for UHD'

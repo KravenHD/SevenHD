@@ -203,7 +203,7 @@ class SevenHD(Screen):
             elif selectedKey == "SystemChannelSettings":
                imageUrl = MAIN_IMAGE_PATH + str("SCS.jpg")
             elif selectedKey == "OSDPositionSetup":
-               imageUrl = MAIN_IMAGE_PATH + str("osd.jpg")
+               imageUrl = MAIN_IMAGE_PATH + str("OSDPositionSetup.jpg")
                            
         self.PicLoad.setPara([self["helperimage"].instance.size().width(),self["helperimage"].instance.size().height(),self.Scale[0],self.Scale[1],0,1,"#00000000"])
         self.PicLoad.startDecode(imageUrl)

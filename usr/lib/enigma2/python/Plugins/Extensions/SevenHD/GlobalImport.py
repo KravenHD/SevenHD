@@ -1,10 +1,13 @@
-version = '3.6.00'
+#version = '3.6.00'
 import os
+box_version = os.popen("opkg info enigma2-plugin-skins-sevenhd | grep -e 'Version' | cut -d '+' -f1 | cut -d ' ' -f2").read()
+version = box_version.rstrip()
 import re
 import time
+import urllib
 import socket
 import gettext
-import urllib
+import requests
 import subprocess
 from Plugins.Plugin import PluginDescriptor
 try:
@@ -461,6 +464,10 @@ config.plugins.SevenHD.AutoWoeID = ConfigYesNo(default= True)
 config.plugins.SevenHD.ClockWeather = ConfigSelection(default="00ffffff", choices = ColorList)
 
 config.plugins.SevenHD.weather_city = ConfigNumber(default="671072")
+config.plugins.SevenHD.AutoWoeIDServer = ConfigSelection(default="1", choices = [
+				("1", _("Server 1")),
+				("2", _("Server 2"))
+				])
 
 config.plugins.SevenHD.WeatherView = ConfigSelection(default="icon", choices = [
 				("icon", _("Icon")),

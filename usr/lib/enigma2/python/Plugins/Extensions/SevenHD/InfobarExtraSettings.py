@@ -128,6 +128,7 @@ class InfobarExtraSettings(ConfigListScreen, Screen):
            list.append(getConfigListEntry(_("Refresh interval (in minutes)"), config.plugins.SevenHD.refreshInterval))
         if config.plugins.SevenHD.WeatherStyle.value != 'none' or config.plugins.SevenHD.ClockStyle.value == "clock-android" or config.plugins.SevenHD.ClockStyle.value == "clock-weather":
            list.append(getConfigListEntry(_("auto weather ID"), config.plugins.SevenHD.AutoWoeID, 'AutomatischeWOEID'))
+           list.append(getConfigListEntry(_("Server"), config.plugins.SevenHD.AutoWoeIDServer, 'AutoWoeIDServer'))
            if config.plugins.SevenHD.AutoWoeID.value == False:
               list.append(getConfigListEntry(_("weather ID"), config.plugins.SevenHD.weather_city, 'WOEID'))
         return list
@@ -277,10 +278,11 @@ class InfobarExtraSettings(ConfigListScreen, Screen):
        	WOEID_QUERY_STRING   = 'select woeid from geo.placefinder where text="%s"'
                 
         try:
+            if config.plugins.SevenHD.AutoWoeIDServer.value == '1':
                         res = urllib.urlopen('http://mxtoolbox.com/WhatIsMyIP/')
                         data = res.read()
                         city = re.search('<h1 class="GeoTableHeader">City</h1>(.*?)</td>', data, re.S).group(1)
-                        
+                        self.debug('WoeID Server: 1')
                         self.debug('Founded City: ' + str(city.strip()) + '\n')
                         params = {'q': WOEID_QUERY_STRING % city.strip(), 'format': 'xml'}
                         url = '?'.join((WOEID_SEARCH_URL, urlencode(params)))  
@@ -324,7 +326,20 @@ class InfobarExtraSettings(ConfigListScreen, Screen):
                            
                            self.session.openWithCallback(self.menuCallback, ChoiceBox, list = woeid_list, title = "Choose youre right ID")
                            self.session.open(MessageBox, _('Is this detected WOEID wrong,\nchoose another and set as your Location.\n\nIf not the right one in the List set\nAuto Weather ID Function to "OFF".'), MessageBox.TYPE_INFO)   
-                           
+            else:
+                        res = requests.request('get', 'https://de.yahoo.com')
+                        d = re.search('currentLoc":{"woeid":"(.+?)","city":"(.+?)"', str(res.text)).groups(1)
+                        
+                        city = str(d[1])
+                        woeid = d[0]
+                        self.debug('WoeID Server: 2')
+                        self.debug('Founded WoeID: ' + str(woeid))
+                        self.debug('Founded City: ' + str(city) + '\n')
+                        
+                        config.plugins.SevenHD.weather_city.value = woeid
+                        config.plugins.SevenHD.weather_city.save()
+                        self.session.open(MessageBox, _(str(city) + ' is detected and set as your Location.\nIf that should not be right then set\nAuto Weather ID Function to "OFF".'), MessageBox.TYPE_INFO)
+      
         except:
                     self.debug('Anything goes wrong \n')
                     self.an_error()
