@@ -598,7 +598,7 @@ config.plugins.SevenHD.ProgressListCS = ConfigSelection(default="00ffffff", choi
 ################################################################################################################################################################
 # SonstigesScreen
 				
-config.plugins.SevenHD.debug = ConfigYesNo(default = False)
+config.plugins.SevenHD.debug = ConfigYesNo(default = True)
 
 config.plugins.SevenHD.debug_screen_names = ConfigYesNo(default = False)
 

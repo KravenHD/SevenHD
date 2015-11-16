@@ -1,24 +1,16 @@
 # -*- coding: utf-8 -*-
 #######################################################################
 #
-#    MyMetrix
-#    Coded by iMaxxx (c) 2013
-#    SevenHD by Kraven
+# SevenHD by Team Kraven
+# 
+# Thankfully inspired by:
+# MyMetrix
+# Coded by iMaxxx (c) 2013
 #
-#
-#  This plugin is licensed under the Creative Commons
-#  Attribution-NonCommercial-ShareAlike 3.0 Unported License.
-#  To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-sa/3.0/
-#  or send a letter to Creative Commons, 559 Nathan Abbott Way, Stanford, California 94305, USA.
-#
-#  Alternatively, this plugin may be distributed and executed on hardware which
-#  is licensed by Dream Multimedia GmbH.
-#
-#
-#  This plugin is NOT free software. It is open source, you are allowed to
-#  modify it (if you keep the license), but it may not be commercially
-#  distributed other than under the conditions noted above.
-#
+# This plugin is licensed under the Creative Commons
+# Attribution-NonCommercial-ShareAlike 3.0 Unported License.
+# To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-sa/3.0/
+# or send a letter to Creative Commons, 559 Nathan Abbott Way, Stanford, California 94305, USA.
 #
 #######################################################################
 from GlobalImport import *
@@ -945,7 +937,8 @@ class SevenHD(Screen):
 def main(session, **kwargs):
         if fileExists("/tmp/kraven_debug.txt"):
            remove('/tmp/kraven_debug.txt')
-        
+
+
         updateInstance = None
         session.open(SevenHD)
         

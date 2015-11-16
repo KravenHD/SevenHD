@@ -17,6 +17,7 @@ class Update():
         
         def do_update(self):
                 self.version = config.plugins.SevenHD.version.value
+                self.debug(self.version)
 
                 try:
                    self.new_version = urlopen('http://www.gigablue-support.org/skins/SevenHD/update/version.txt').read()
@@ -35,7 +36,7 @@ class Update():
 
                 self.debug('%s - %s' % (str(len(self.version)), str(len(self.new_version))))
 
-                self.version = self.change_to_int(self.version)
+                self.version = self.change_to_int(self.version.rstrip())
                 self.new_version = self.change_to_int(self.new_version)
                 
                 self.debug('%s - %s' % (str(self.version), str(self.new_version)))

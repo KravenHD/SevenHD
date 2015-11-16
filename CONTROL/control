@@ -3,7 +3,7 @@ Version: 3.6.00
 Section: misc
 Priority: optional
 Architecture: all
-Depends:
+Depends: python-requests, python-subprocess
 Maintainer: Team Kraven
 Description: Skin for Enigma2
 Source:
