@@ -1,16 +1,19 @@
 # -*- coding: utf-8 -*-
 #######################################################################
 #
-#    SevenHD by Kraven, TBX & örlgrey
-#    based on
 #    MyMetrix
 #    Coded by iMaxxx (c) 2013
+#    SevenHD by Kraven
 #
 #
 #  This plugin is licensed under the Creative Commons
 #  Attribution-NonCommercial-ShareAlike 3.0 Unported License.
 #  To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-sa/3.0/
 #  or send a letter to Creative Commons, 559 Nathan Abbott Way, Stanford, California 94305, USA.
+#
+#  Alternatively, this plugin may be distributed and executed on hardware which
+#  is licensed by Dream Multimedia GmbH.
+#
 #
 #  This plugin is NOT free software. It is open source, you are allowed to
 #  modify it (if you keep the license), but it may not be commercially
@@ -20,6 +23,7 @@
 #######################################################################
 from GlobalImport import *
 from OnlineUpdate import *
+from ChangeSkin import *
 from MainSettings import MainSettings
 from MenuPluginSettings import MenuPluginSettings
 from InfobarSettings import InfobarSettings
@@ -72,40 +76,38 @@ def translateBlock(block):
 	return block
 #############################################################
 class SevenHD(Screen):
-    skin =  """<screen name="SevenHD-Setup" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent"> 
-                     <eLabel font="Regular; 20" foregroundColor="#00ffffff" backgroundColor="#00000000" halign="left" valign="center" position="64,662" size="148,48" text="Cancel" transparent="1" />
-                     <eLabel font="Regular; 20" foregroundColor="#00ffffff" backgroundColor="#00000000" halign="left" valign="center" position="264,662" size="148,48" text="Save" transparent="1" />
-                     <eLabel font="Regular; 20" foregroundColor="#00ffffff" backgroundColor="#00000000" halign="left" valign="center" position="464,662" size="148,48" text="Reboot" transparent="1" />
-                     <eLabel font="Regular; 20" foregroundColor="#00ffffff" backgroundColor="#00000000" halign="left" valign="center" position="664,662" size="148,48" text="Extras" transparent="1" />
-                     <widget name="menuList" position="18,72" size="816,575" backgroundColor="#00000000"  scrollbarMode="showOnDemand" transparent="1" />
-                     <eLabel position="70,12" size="708,46" text="SevenHD" font="Regular; 35" valign="center" halign="center" transparent="1" backgroundColor="#00000000" foregroundColor="#00ffffff" name="," />
-                     <eLabel position="891,657" size="372,46" text="Thanks to http://www.gigablue-support.org/" font="Regular; 12" valign="center" halign="center" transparent="1" backgroundColor="#00000000" foregroundColor="#00ffffff" name="," />
-                     <widget name="helperimage" position="891,274" size="372,209" zPosition="1" backgroundColor="#00000000" />
-                     <widget backgroundColor="#00000000" font="Regular2; 34" foregroundColor="#00ffffff" position="70,12" render="Label" size="708,46" source="Title" transparent="1" halign="center" valign="center" noWrap="1" />
-                     <eLabel backgroundColor="#00000000" position="6,6" size="842,708" transparent="0" zPosition="-9" foregroundColor="#00ffffff" />
-                     <eLabel backgroundColor="#00ffffff" position="6,6" size="842,2" zPosition="2" />
-                     <eLabel backgroundColor="#00ffffff" position="6,714" size="842,2" zPosition="2" />
-                     <eLabel backgroundColor="#00ffffff" position="6,6" size="2,708" zPosition="2" />
-                     <eLabel backgroundColor="#00ffffff" position="848,6" size="2,708" zPosition="2" />
-                     <eLabel backgroundColor="#00ffffff" position="18,64" size="816,2" zPosition="2" />
-                     <eLabel backgroundColor="#00ffffff" position="18,656" size="816,2" zPosition="2" />
-                     <ePixmap pixmap="SevenHD/buttons/key_red1.png" position="22,670" size="32,32" backgroundColor="#00000000" alphatest="blend" />
-                     <ePixmap pixmap="SevenHD/buttons/key_green1.png" position="222,670" size="32,32" backgroundColor="#00000000" alphatest="blend" />
-                     <ePixmap pixmap="SevenHD/buttons/key_yellow1.png" position="422,670" size="32,32" backgroundColor="#00000000" alphatest="blend" />
-                     <ePixmap pixmap="SevenHD/buttons/key_blue1.png" position="622,670" size="32,32" backgroundColor="#00000000" alphatest="blend" />
-                     <widget source="global.CurrentTime" render="Label" position="1154,16" size="100,28" font="Regular;26" halign="right" backgroundColor="#00000000" transparent="1" valign="center" foregroundColor="#00ffffff">
-                             <convert type="ClockToText">Default</convert>
-                     </widget>
-                     <eLabel backgroundColor="#00000000" position="878,6" size="396,708" transparent="0" zPosition="-9" />
-                     <eLabel backgroundColor="#00ffffff" position="878,6" size="396,2" zPosition="2" />
-                     <eLabel backgroundColor="#00ffffff" position="878,714" size="396,2" zPosition="2" />
-                     <eLabel backgroundColor="#00ffffff" position="878,6" size="2,708" zPosition="2" />
-                     <eLabel backgroundColor="#00ffffff" position="1274,6" size="2,708" zPosition="2" />
-                     <eLabel position="891,88" size="415,46" text="Version: """ + str(version) + """" font="Regular; 35" valign="center" halign="center" transparent="1" backgroundColor="#00000000" foregroundColor="#00ffffff" name="," />
-                     <widget source="session.CurrentService" render="Label" position="891,134" size="415,28" font="Regular;26" halign="left" backgroundColor="#00000000" transparent="1" valign="center" foregroundColor="#00B27708">
+    skin =  """
+                  <screen name="SevenHD-Setup" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
+                         <eLabel font="Regular; 20" foregroundColor="#00f23d21" backgroundColor="#00000000" halign="left" valign="center" position="64,662" size="148,48" text="Cancel" transparent="1" />
+                         <eLabel font="Regular; 20" foregroundColor="#00389416" backgroundColor="#00000000" halign="left" valign="center" position="264,662" size="148,48" text="Save" transparent="1" />
+                         <eLabel font="Regular; 20" foregroundColor="#00e5b243" backgroundColor="#00000000" halign="left" valign="center" position="464,662" size="148,48" text="Defaults" transparent="1" />
+                         <widget name="blue" font="Regular; 20" foregroundColor="#000064c7" backgroundColor="#00000000" halign="left" valign="center" position="664,662" size="148,48" transparent="1" />
+                         <widget name="menuList" position="18,72" size="816,575" scrollbarMode="showOnDemand" transparent="1" zPosition="1" backgroundColor="#00000000" />
+                         <eLabel position="70,12" size="708,46" text="SevenHD" font="Regular; 35" valign="center" halign="center" transparent="1" backgroundColor="#00000000" foregroundColor="#00ffffff" name="," />
+                         <eLabel position="891,657" size="372,46" text="Thanks to http://www.gigablue-support.org/" font="Regular; 12" valign="center" halign="center" transparent="1" backgroundColor="#00000000" foregroundColor="#00ffffff" name="," />
+                         <widget name="helperimage" position="891,274" size="372,209" zPosition="1" backgroundColor="#00000000" />
+                         <widget backgroundColor="#00000000" font="Regular2; 34" foregroundColor="#00ffffff" position="70,12" render="Label" size="708,46" source="Title" transparent="1" halign="center" valign="center" noWrap="1" />
+                         <eLabel backgroundColor="#00000000" position="6,6" size="842,708" transparent="0" zPosition="-9" foregroundColor="#00ffffff" />
+                         <eLabel backgroundColor="#00ffffff" position="6,6" size="842,2" zPosition="2" />
+                         <eLabel backgroundColor="#00ffffff" position="6,714" size="844,2" zPosition="2" />
+                         <eLabel backgroundColor="#00ffffff" position="6,6" size="2,708" zPosition="2" />
+                         <eLabel backgroundColor="#00ffffff" position="848,6" size="2,708" zPosition="2" />
+                         <eLabel backgroundColor="#00ffffff" position="18,64" size="816,2" zPosition="2" />
+                         <eLabel backgroundColor="#00ffffff" position="18,656" size="816,2" zPosition="2" />
+                         <widget source="global.CurrentTime" render="Label" position="1154,16" size="100,28" font="Regular;26" halign="right" backgroundColor="#00000000" transparent="1" valign="center" foregroundColor="#00ffffff">
+                                 <convert type="ClockToText">Default</convert>
+                         </widget>
+                         <eLabel backgroundColor="#00000000" position="878,6" size="396,708" transparent="0" zPosition="-9" />
+                         <eLabel backgroundColor="#00ffffff" position="878,6" size="396,2" zPosition="2" />
+                         <eLabel backgroundColor="#00ffffff" position="878,714" size="398,2" zPosition="2" />
+                         <eLabel backgroundColor="#00ffffff" position="878,6" size="2,708" zPosition="2" />
+                         <eLabel backgroundColor="#00ffffff" position="1274,6" size="2,708" zPosition="2" />
+                         <eLabel position="891,88" size="372,46" text="Version: """ + str(version) + """" font="Regular; 35" valign="center" halign="center" transparent="1" backgroundColor="#00000000" foregroundColor="#00ffffff" name="," />
+                         <widget source="session.CurrentService" render="Label" position="891,134" size="372,28" font="Regular;26" halign="center" backgroundColor="#00000000" transparent="1" valign="center" foregroundColor="#00B27708">
                                  <convert type="SevenHDUpdate">Update</convert>
-                     </widget>
-               </screen>"""
+                         </widget>
+                  </screen>
+               """
                   
     def __init__(self, session, args = None):
         self.session = session
@@ -127,7 +129,7 @@ class SevenHD(Screen):
                 "ok": self.ok,
                 "cancel": self.exit,
                 "red": self.exit,
-                "green": self.save,
+                "green": self.ask_for_save,
                 "yellow": self.reboot,
                 "blue": self.showInfo
                 
@@ -156,7 +158,8 @@ class SevenHD(Screen):
         list.append(MenuEntryItem(_("system osd settings"), "SystemOSDSettings"))
         if creator != 'OpenMips':
            list.append(MenuEntryItem(_("system channel settings"), "SystemChannelSettings"))
-        
+        list.append(MenuEntryItem(_("system osd position setup"), "OSDPositionSetup"))
+           
         self["menuList"] = MainMenuList([], font0=24, font1=16, itemHeight=50)
         self["menuList"].l.setList(list)
 
@@ -199,7 +202,9 @@ class SevenHD(Screen):
                imageUrl = MAIN_IMAGE_PATH + str("OSD.jpg")
             elif selectedKey == "SystemChannelSettings":
                imageUrl = MAIN_IMAGE_PATH + str("SCS.jpg")
-                        
+            elif selectedKey == "OSDPositionSetup":
+               imageUrl = MAIN_IMAGE_PATH + str("osd.jpg")
+                           
         self.PicLoad.setPara([self["helperimage"].instance.size().width(),self["helperimage"].instance.size().height(),self.Scale[0],self.Scale[1],0,1,"#00000000"])
         self.PicLoad.startDecode(imageUrl)
 
@@ -230,7 +235,55 @@ class SevenHD(Screen):
                 self.session.open(Setup, "userinterface")
             elif selectedKey == "SystemChannelSettings":
                 self.session.open(Setup, "channelselection")
-                            
+            elif selectedKey == "OSDPositionSetup":
+                if OSDScreenPosition_plugin:
+                   self.session.open(OSDScreenPosition)
+                else:
+                   self.session.open(UserInterfacePositioner)
+                                   
+    def ask_for_save(self):
+        if config.plugins.SevenHD.skin_mode.value == '1':
+           self.server_dir = 'SevenHD'
+        if config.plugins.SevenHD.skin_mode.value == '2':
+           self.server_dir = 'SevenFHD'
+        if config.plugins.SevenHD.skin_mode.value >= '3':
+           if config.plugins.SevenHD.skin_mode.value == '3': 
+              msg_text = '3840x2160 for UHD'
+              self.server_dir = 'SevenUHD'
+           if config.plugins.SevenHD.skin_mode.value == '4':
+              msg_text = '4096x2160 for 4k'
+              self.server_dir = 'Seven4k'
+           if config.plugins.SevenHD.skin_mode.value == '5':
+              msg_text = '7680x4320 for FUHD'
+              self.server_dir = 'SevenFUHD'
+           if config.plugins.SevenHD.skin_mode.value == '6':
+              msg_text = '8192x4320 for 8k'
+              self.server_dir = 'Seven8k'     
+           if config.plugins.SevenHD.skin_mode.value == '7':
+              msg_text = '%sx%s' % (str(int(config.plugins.SevenHD.skin_mode_x.value)), str(int(config.plugins.SevenHD.skin_mode_y.value)))
+              if str(config.plugins.SevenHD.skin_mode_x.value) >= '1280':
+                 self.server_dir = 'SevenHD'
+              if str(config.plugins.SevenHD.skin_mode_x.value) >= '1920':
+                 self.server_dir = 'SevenFHD'
+              if str(config.plugins.SevenHD.skin_mode_x.value) >= '3840':
+                 self.server_dir = 'SevenUHD'
+              if str(config.plugins.SevenHD.skin_mode_x.value) >= '4096':
+                 self.server_dir = 'Seven4k'
+              if str(config.plugins.SevenHD.skin_mode_x.value) >= '7680':
+                 self.server_dir = 'SevenFUHD'
+              if str(config.plugins.SevenHD.skin_mode_x.value) >= '8192':
+                 self.server_dir = 'Seven8k'
+                 
+           self.session.openWithCallback(self.answer, MessageBox, _('Sure that your Box support\nyour Resolution %s?\n' % str(msg_text)), MessageBox.TYPE_YESNO, default = False)   
+        else:
+           self.save()
+    
+    def answer(self, what):
+        if what is True:
+           self.save()
+        else:
+           self.exit()
+           
     def save(self):
         self.skin_lines = []        
         try:
@@ -295,7 +348,6 @@ class SevenHD(Screen):
                 
                 self.skinSearchAndReplace.append(["PluginVersionString", "Version: %s" % str(version)])
                 
-
 		self.skinSearchAndReplace.append(["Seven_Selection", config.plugins.SevenHD.SelectionBackground.value])
 		self.skinSearchAndReplace.append(["SevenFont_1", config.plugins.SevenHD.Font1.value])
 		self.skinSearchAndReplace.append(["SevenFont_2", config.plugins.SevenHD.Font2.value])
@@ -441,10 +493,6 @@ class SevenHD(Screen):
 		self.skinSearchAndReplace.append(["buttons_seven_white", config.plugins.SevenHD.ButtonStyle.value])
 		self.skinSearchAndReplace.append(["icons_seven_white", config.plugins.SevenHD.IconStyle.value])
 		
-		### FrontInfo
-		if config.plugins.SevenHD.FrontInfo.value == "db":
-			self.skinSearchAndReplace.append(['convert type="SevenHDFrontendInfo">SNR' , 'convert type="SevenHDFrontendInfo">SNRdB'])
-
 		### Text (running, writing, none)
 		if config.plugins.SevenHD.RunningText.value == "writing":
 			self.skinSearchAndReplace.append(['render="SevenHDRunningText" options="movetype=running,startpoint=0,startdelay=2000,steptime=90,wrap=1,always=0,repeat=2,oneshot=1"', 'render="SevenHDEmptyEpg"'])
@@ -484,7 +532,12 @@ class SevenHD(Screen):
                 if str(self.tuner_Count) == str('3'):
 		   self.skinSearchAndReplace.append(['<ePixmap pixmap="SevenHD/buttons/d_off.png"', '<!-- ePixmap pixmap="SevenHD/buttons/d_off.png"'])
 		   self.skinSearchAndReplace.append(['size="32,32" zPosition="1" alphatest="blend" /> <!-- TunerD -->', 'size="32,32" zPosition="1" alphatest="blend" / --> <!-- TunerD -->'])
-			
+		
+		#Debug Screen Names in Skins
+                if config.plugins.SevenHD.debug_screen_names.value:
+                   self.skinSearchAndReplace.append(['<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red"', '<eLabel backgroundColor="SevenFontBackground" font="Regular;15" foregroundColor="red"'])
+		   self.skinSearchAndReplace.append(['position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->', 'position="50,13" size="500,19" halign="left" valign="top" transparent="1" />'])
+				
                 ### Header
 		self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.Header.value + "-begin" + XML)
 		if not config.plugins.SevenHD.SelectionBorder.value == "none":
@@ -602,70 +655,120 @@ class SevenHD(Screen):
 		self.appendSkinFile(MAIN_DATA_PATH + "skin-end.xml")
                 self.debug(MAIN_DATA_PATH + "skin-end.xml")       
                 
-                self.debug('try open: ' + TMPFILE + "\n")
+                try:
+                   with open(FILE, 'r') as oldFile:
+                        old_skin = oldFile.readlines()
+                   for old_res in old_skin:
+                       if 'resolution bpp="32" xres="' in old_res:
+                          old_skin_resolution = re.search('resolution bpp="32" xres="(.+?)" yres="(.+?)"', str(old_res)).groups(1)
+                          break
+                   old_resolution = old_skin_resolution[0]
+                except:
+                   old_resolution = '1280'
+                
+                self.debug('old Skin xRes: ' + str(old_resolution))
+                
+                if str(old_resolution) == str('1280'):
+                   config.plugins.SevenHD.old_skin_mode.value = '1'
+                elif str(old_resolution) == str('1920'):
+                   config.plugins.SevenHD.old_skin_mode.value = '2'
+                elif str(old_resolution) == str('3840'):
+                   config.plugins.SevenHD.old_skin_mode.value = '3'
+                elif str(old_resolution) == str('4096'):
+                   config.plugins.SevenHD.old_skin_mode.value = '4'
+                elif str(old_resolution) == str('7680'):
+                   config.plugins.SevenHD.old_skin_mode.value = '5'
+                elif str(old_resolution) == str('8192'):
+                   config.plugins.SevenHD.old_skin_mode.value = '6'
+                else: #unknow UserResolution
+                   config.plugins.SevenHD.old_skin_mode.value = '7'
+                config.plugins.SevenHD.old_skin_mode.save()
+                
+                #skin/root
+                self.debug('Old Skin Resolution: ' + str(config.plugins.SevenHD.old_skin_mode.value) + ' New Skin Resolution: ' + str(config.plugins.SevenHD.skin_mode.value))
+                self.debug('DownLoad Path: ' + str(self.server_dir))
+                
+                if str(config.plugins.SevenHD.skin_mode.value) != str(config.plugins.SevenHD.old_skin_mode.value):
+                   self.debug('Remove SevenHD Root')
+                   sub = subprocess.Popen("rm -rf /usr/share/enigma2/SevenHD/*; rm -rf /usr/share/enigma2/SevenHD; wget -q http://www.gigablue-support.org/skins/%s/SevenHD.tar.gz -O /tmp/SevenHD.tar.gz; tar xf /tmp/SevenHD.tar.gz -C /usr/share/enigma2/" % str(self.server_dir), shell=True)
+                   sub.wait()
+                   
+                self.debug('try open: ' + TMPFILE)
                 xFile = open(TMPFILE, "w")
                 for xx in self.skin_lines:
                     xFile.writelines(xx)
                 xFile.close()
-                self.debug('close: ' + TMPFILE + "\n")
-                move(TMPFILE, FILE)
-                self.debug('mv : ' + TMPFILE + ' to ' + FILE + "\n")
+                self.debug('close: ' + TMPFILE)
+
+                Instance = ChangeSkin(self.session)
+                
+                if fileExists(TMPFILE):
+                   if fileExists(FILE):
+                      move(TMPFILE, FILE)
+                      self.debug('mv : ' + TMPFILE + ' to ' + FILE + "\n")
+                   else:
+                      rename(TMPFILE, FILE)
+                      self.debug('rename : ' + TMPFILE + ' to ' + FILE + "\n")
 		
-                self.debug('Console\n')	
+                
+                self.debug('Console')	
 		
                 #DOWNLOADS	
                 #buttons
-                eConsole().ePopen("rm -rf /usr/share/enigma2/SevenHD/buttons/*.*; rm -rf /usr/share/enigma2/SevenHD/buttons; wget -q http://www.gigablue-support.org/skins/SevenHD/buttons/%s.tar.gz -O /tmp/%s.tar.gz; tar xf /tmp/%s.tar.gz -C /usr/share/enigma2/SevenHD/" % (str(config.plugins.SevenHD.ButtonStyle.value), str(config.plugins.SevenHD.ButtonStyle.value), str(config.plugins.SevenHD.ButtonStyle.value)))
-                
+                eConsole().ePopen("rm -rf /usr/share/enigma2/SevenHD/buttons/*.*; rm -rf /usr/share/enigma2/SevenHD/buttons; wget -q http://www.gigablue-support.org/skins/%s/buttons/%s.tar.gz -O /tmp/%s.tar.gz; tar xf /tmp/%s.tar.gz -C /usr/share/enigma2/SevenHD/" % (str(self.server_dir), str(config.plugins.SevenHD.ButtonStyle.value), str(config.plugins.SevenHD.ButtonStyle.value), str(config.plugins.SevenHD.ButtonStyle.value)))
+                #buttons/vkey
+                eConsole().ePopen("rm -rf /usr/share/enigma2/SevenHD/buttons/vkey*; wget -q http://www.gigablue-support.org/skins/%s/buttons/vkeys.tar.gz -O /tmp/vkeys.tar.gz; tar xf /tmp/vkeys.tar.gz -C /usr/share/enigma2/SevenHD/" % (str(self.server_dir)))
                 #weather
-                eConsole().ePopen("rm -rf /usr/share/enigma2/SevenHD/WetterIcons/*.*; rm -rf /usr/share/enigma2/SevenHD/WetterIcons; wget -q http://www.gigablue-support.org/skins/SevenHD/weather/%s.tar.gz -O /tmp/%s.tar.gz; tar xf /tmp/%s.tar.gz -C /usr/share/enigma2/SevenHD/" % (str(config.plugins.SevenHD.WeatherStyle.value), str(config.plugins.SevenHD.WeatherStyle.value), str(config.plugins.SevenHD.WeatherStyle.value)))
+                eConsole().ePopen("rm -rf /usr/share/enigma2/SevenHD/WetterIcons/*.*; rm -rf /usr/share/enigma2/SevenHD/WetterIcons; wget -q http://www.gigablue-support.org/skins/%s/weather/%s.tar.gz -O /tmp/%s.tar.gz; tar xf /tmp/%s.tar.gz -C /usr/share/enigma2/SevenHD/" % (str(self.server_dir), str(config.plugins.SevenHD.WeatherStyle.value), str(config.plugins.SevenHD.WeatherStyle.value), str(config.plugins.SevenHD.WeatherStyle.value)))
                 #clock
-                eConsole().ePopen("rm -rf /usr/share/enigma2/SevenHD/clock/*.*; rm -rf /usr/share/enigma2/SevenHD/clock; wget -q http://www.gigablue-support.org/skins/SevenHD/clock/%s.tar.gz -O /tmp/%s.tar.gz; tar xf /tmp/%s.tar.gz -C /usr/share/enigma2/SevenHD/" % (str(config.plugins.SevenHD.ClockStyle.value), str(config.plugins.SevenHD.ClockStyle.value), str(config.plugins.SevenHD.ClockStyle.value)))
+                eConsole().ePopen("rm -rf /usr/share/enigma2/SevenHD/clock/*.*; rm -rf /usr/share/enigma2/SevenHD/clock; wget -q http://www.gigablue-support.org/skins/%s/clock/%s.tar.gz -O /tmp/%s.tar.gz; tar xf /tmp/%s.tar.gz -C /usr/share/enigma2/SevenHD/" % (str(self.server_dir), str(config.plugins.SevenHD.ClockStyle.value), str(config.plugins.SevenHD.ClockStyle.value), str(config.plugins.SevenHD.ClockStyle.value)))
                 #volume
-                eConsole().ePopen("rm -rf /usr/share/enigma2/SevenHD/volume/*.*; rm -rf /usr/share/enigma2/SevenHD/volume; wget -q http://www.gigablue-support.org/skins/SevenHD/volume/%s.tar.gz -O /tmp/%s.tar.gz; tar xf /tmp/%s.tar.gz -C /usr/share/enigma2/SevenHD/" % (str(config.plugins.SevenHD.VolumeStyle.value), str(config.plugins.SevenHD.VolumeStyle.value), str(config.plugins.SevenHD.VolumeStyle.value)))
+                eConsole().ePopen("rm -rf /usr/share/enigma2/SevenHD/volume/*.*; rm -rf /usr/share/enigma2/SevenHD/volume; wget -q http://www.gigablue-support.org/skins/%s/volume/%s.tar.gz -O /tmp/%s.tar.gz; tar xf /tmp/%s.tar.gz -C /usr/share/enigma2/SevenHD/" % (str(self.server_dir), str(config.plugins.SevenHD.VolumeStyle.value), str(config.plugins.SevenHD.VolumeStyle.value), str(config.plugins.SevenHD.VolumeStyle.value)))
                 #progress
                 if config.plugins.SevenHD.Progress.value == "progress":
-                   eConsole().ePopen("rm -rf /usr/share/enigma2/SevenHD/progress/*.*; rm -rf /usr/share/enigma2/SevenHD/progress/progress; wget -q http://www.gigablue-support.org/skins/SevenHD/progress/%s.tar.gz -O /tmp/%s.tar.gz; tar xf /tmp/%s.tar.gz -C /usr/share/enigma2/SevenHD/" % (str(config.plugins.SevenHD.Progress.value), str(config.plugins.SevenHD.Progress.value), str(config.plugins.SevenHD.Progress.value)))
+                   eConsole().ePopen("rm -rf /usr/share/enigma2/SevenHD/progress/*.*; rm -rf /usr/share/enigma2/SevenHD/progress/progress; wget -q http://www.gigablue-support.org/skins/%s/progress/%s.tar.gz -O /tmp/%s.tar.gz; tar xf /tmp/%s.tar.gz -C /usr/share/enigma2/SevenHD/" % (str(self.server_dir), str(config.plugins.SevenHD.Progress.value), str(config.plugins.SevenHD.Progress.value), str(config.plugins.SevenHD.Progress.value)))
                 #progressVol
                 if config.plugins.SevenHD.ProgressVol.value == "progressvol":
-                   eConsole().ePopen("rm -rf /usr/share/enigma2/SevenHD/progressvol/*.*; rm -rf /usr/share/enigma2/SevenHD/progressvol; wget -q http://www.gigablue-support.org/skins/SevenHD/progress/%s.tar.gz -O /tmp/%s.tar.gz; tar xf /tmp/%s.tar.gz -C /usr/share/enigma2/SevenHD/" % (str(config.plugins.SevenHD.ProgressVol.value), str(config.plugins.SevenHD.ProgressVol.value), str(config.plugins.SevenHD.ProgressVol.value)))
+                   eConsole().ePopen("rm -rf /usr/share/enigma2/SevenHD/progressvol/*.*; rm -rf /usr/share/enigma2/SevenHD/progressvol; wget -q http://www.gigablue-support.org/skins/%s/progress/%s.tar.gz -O /tmp/%s.tar.gz; tar xf /tmp/%s.tar.gz -C /usr/share/enigma2/SevenHD/" % (str(self.server_dir), str(config.plugins.SevenHD.ProgressVol.value), str(config.plugins.SevenHD.ProgressVol.value), str(config.plugins.SevenHD.ProgressVol.value)))
                 #progressIB
                 if config.plugins.SevenHD.ProgressIB.value == "progressib":
-                   eConsole().ePopen("rm -rf /usr/share/enigma2/SevenHD/progressib/*.*; rm -rf /usr/share/enigma2/SevenHD/progressib; wget -q http://www.gigablue-support.org/skins/SevenHD/progress/%s.tar.gz -O /tmp/%s.tar.gz; tar xf /tmp/%s.tar.gz -C /usr/share/enigma2/SevenHD/" % (str(config.plugins.SevenHD.ProgressIB.value), str(config.plugins.SevenHD.ProgressIB.value), str(config.plugins.SevenHD.ProgressIB.value)))
+                   eConsole().ePopen("rm -rf /usr/share/enigma2/SevenHD/progressib/*.*; rm -rf /usr/share/enigma2/SevenHD/progressib; wget -q http://www.gigablue-support.org/skins/%s/progress/%s.tar.gz -O /tmp/%s.tar.gz; tar xf /tmp/%s.tar.gz -C /usr/share/enigma2/SevenHD/" % (str(self.server_dir), str(config.plugins.SevenHD.ProgressIB.value), str(config.plugins.SevenHD.ProgressIB.value), str(config.plugins.SevenHD.ProgressIB.value)))
                 #progressCS
                 if config.plugins.SevenHD.ProgressCS.value == "progresscs":
-                   eConsole().ePopen("rm -rf /usr/share/enigma2/SevenHD/progresscs/*.*; rm -rf /usr/share/enigma2/SevenHD/progresscs; wget -q http://www.gigablue-support.org/skins/SevenHD/progress/%s.tar.gz -O /tmp/%s.tar.gz; tar xf /tmp/%s.tar.gz -C /usr/share/enigma2/SevenHD/" % (str(config.plugins.SevenHD.ProgressCS.value), str(config.plugins.SevenHD.ProgressCS.value), str(config.plugins.SevenHD.ProgressCS.value)))
+                   eConsole().ePopen("rm -rf /usr/share/enigma2/SevenHD/progresscs/*.*; rm -rf /usr/share/enigma2/SevenHD/progresscs; wget -q http://www.gigablue-support.org/skins/%s/progress/%s.tar.gz -O /tmp/%s.tar.gz; tar xf /tmp/%s.tar.gz -C /usr/share/enigma2/SevenHD/" % (str(self.server_dir), str(config.plugins.SevenHD.ProgressCS.value), str(config.plugins.SevenHD.ProgressCS.value), str(config.plugins.SevenHD.ProgressCS.value)))
                 #progressListCS
                 if config.plugins.SevenHD.ProgressListCS.value == "progresslistcs":
-                   eConsole().ePopen("rm -rf /usr/share/enigma2/SevenHD/progresslistcs/*.*; rm -rf /usr/share/enigma2/SevenHD/progresslistcs; wget -q http://www.gigablue-support.org/skins/SevenHD/progress/%s.tar.gz -O /tmp/%s.tar.gz; tar xf /tmp/%s.tar.gz -C /usr/share/enigma2/SevenHD/" % (str(config.plugins.SevenHD.ProgressListCS.value), str(config.plugins.SevenHD.ProgressListCS.value), str(config.plugins.SevenHD.ProgressListCS.value)))
+                   eConsole().ePopen("rm -rf /usr/share/enigma2/SevenHD/progresslistcs/*.*; rm -rf /usr/share/enigma2/SevenHD/progresslistcs; wget -q http://www.gigablue-support.org/skins/%s/progress/%s.tar.gz -O /tmp/%s.tar.gz; tar xf /tmp/%s.tar.gz -C /usr/share/enigma2/SevenHD/" % (str(self.server_dir), str(config.plugins.SevenHD.ProgressListCS.value), str(config.plugins.SevenHD.ProgressListCS.value), str(config.plugins.SevenHD.ProgressListCS.value)))
                 #icons
-                eConsole().ePopen("rm -rf /usr/share/enigma2/SevenHD/icons/*.*; rm -rf /usr/share/enigma2/SevenHD/icons; wget -q http://www.gigablue-support.org/skins/SevenHD/icons/%s.tar.gz -O /tmp/%s.tar.gz; tar xf /tmp/%s.tar.gz -C /usr/share/enigma2/SevenHD/" % (str(config.plugins.SevenHD.IconStyle.value), str(config.plugins.SevenHD.IconStyle.value), str(config.plugins.SevenHD.IconStyle.value)))
+                eConsole().ePopen("rm -rf /usr/share/enigma2/SevenHD/icons/*.*; rm -rf /usr/share/enigma2/SevenHD/icons; wget -q http://www.gigablue-support.org/skins/%s/icons/%s.tar.gz -O /tmp/%s.tar.gz; tar xf /tmp/%s.tar.gz -C /usr/share/enigma2/SevenHD/" % (str(self.server_dir), str(config.plugins.SevenHD.IconStyle.value), str(config.plugins.SevenHD.IconStyle.value), str(config.plugins.SevenHD.IconStyle.value)))
 		
-                #background
-		eConsole().ePopen("rm -rf /usr/share/enigma2/SevenHD/back/*.*; rm -rf /usr/share/enigma2/SevenHD/back")
                 
-                if self.Background.startswith('back'):
-		   eConsole().ePopen("wget -q http://www.gigablue-support.org/skins/SevenHD/back/%s.tar.gz -O /tmp/%s.tar.gz; tar xf /tmp/%s.tar.gz -C /usr/share/enigma2/SevenHD/" % (str(self.Background), str(self.Background), str(self.Background)))
-                if self.BackgroundRight.startswith('back'):
-                   eConsole().ePopen("wget -q http://www.gigablue-support.org/skins/SevenHD/back/%s.tar.gz -O /tmp/%s.tar.gz; tar xf /tmp/%s.tar.gz -C /usr/share/enigma2/SevenHD/" % (str(self.BackgroundRight), str(self.BackgroundRight), str(self.BackgroundRight)))
-		if self.BackgroundIB1.startswith('back'):
-		   eConsole().ePopen("wget -q http://www.gigablue-support.org/skins/SevenHD/back/%s.tar.gz -O /tmp/%s.tar.gz; tar xf /tmp/%s.tar.gz -C /usr/share/enigma2/SevenHD/" % (str(self.BackgroundIB1), str(self.BackgroundIB1), str(self.BackgroundIB1)))
-		if self.BackgroundIB2.startswith('back'):
-		   eConsole().ePopen("wget -q http://www.gigablue-support.org/skins/SevenHD/back/%s.tar.gz -O /tmp/%s.tar.gz; tar xf /tmp/%s.tar.gz -C /usr/share/enigma2/SevenHD/" % (str(self.BackgroundIB2), str(self.BackgroundIB2), str(self.BackgroundIB2)))
-		if self.ChannelBack1.startswith('back'):
-		   eConsole().ePopen("wget -q http://www.gigablue-support.org/skins/SevenHD/back/%s.tar.gz -O /tmp/%s.tar.gz; tar xf /tmp/%s.tar.gz -C /usr/share/enigma2/SevenHD/" % (str(self.ChannelBack1), str(self.ChannelBack1), str(self.ChannelBack1)))
-		if self.ChannelBack2.startswith('back'):
-		   eConsole().ePopen("wget -q http://www.gigablue-support.org/skins/SevenHD/back/%s.tar.gz -O /tmp/%s.tar.gz; tar xf /tmp/%s.tar.gz -C /usr/share/enigma2/SevenHD/" % (str(self.ChannelBack2), str(self.ChannelBack2), str(self.ChannelBack2)))
-		if self.ChannelBack3.startswith('back'):
-		   eConsole().ePopen("wget -q http://www.gigablue-support.org/skins/SevenHD/back/%s.tar.gz -O /tmp/%s.tar.gz; tar xf /tmp/%s.tar.gz -C /usr/share/enigma2/SevenHD/" % (str(self.ChannelBack3), str(self.ChannelBack3), str(self.ChannelBack3)))
+                if config.plugins.SevenHD.skin_mode.value == '1':
+                   #background only in HD Mode
+		   eConsole().ePopen("rm -rf /usr/share/enigma2/SevenHD/back/*.*; rm -rf /usr/share/enigma2/SevenHD/back")
                 
-                self.debug('download tgz complett\n')	
+                   if self.Background.startswith('back'):
+		      eConsole().ePopen("wget -q http://www.gigablue-support.org/skins/SevenHD/back/%s.tar.gz -O /tmp/%s.tar.gz; tar xf /tmp/%s.tar.gz -C /usr/share/enigma2/SevenHD/" % (str(self.Background), str(self.Background), str(self.Background)))
+                   if self.BackgroundRight.startswith('back'):
+                      eConsole().ePopen("wget -q http://www.gigablue-support.org/skins/SevenHD/back/%s.tar.gz -O /tmp/%s.tar.gz; tar xf /tmp/%s.tar.gz -C /usr/share/enigma2/SevenHD/" % (str(self.BackgroundRight), str(self.BackgroundRight), str(self.BackgroundRight)))
+		   if self.BackgroundIB1.startswith('back'):
+		      eConsole().ePopen("wget -q http://www.gigablue-support.org/skins/SevenHD/back/%s.tar.gz -O /tmp/%s.tar.gz; tar xf /tmp/%s.tar.gz -C /usr/share/enigma2/SevenHD/" % (str(self.BackgroundIB1), str(self.BackgroundIB1), str(self.BackgroundIB1)))
+		   if self.BackgroundIB2.startswith('back'):
+		      eConsole().ePopen("wget -q http://www.gigablue-support.org/skins/SevenHD/back/%s.tar.gz -O /tmp/%s.tar.gz; tar xf /tmp/%s.tar.gz -C /usr/share/enigma2/SevenHD/" % (str(self.BackgroundIB2), str(self.BackgroundIB2), str(self.BackgroundIB2)))
+		   if self.ChannelBack1.startswith('back'):
+		      eConsole().ePopen("wget -q http://www.gigablue-support.org/skins/SevenHD/back/%s.tar.gz -O /tmp/%s.tar.gz; tar xf /tmp/%s.tar.gz -C /usr/share/enigma2/SevenHD/" % (str(self.ChannelBack1), str(self.ChannelBack1), str(self.ChannelBack1)))
+		   if self.ChannelBack2.startswith('back'):
+		      eConsole().ePopen("wget -q http://www.gigablue-support.org/skins/SevenHD/back/%s.tar.gz -O /tmp/%s.tar.gz; tar xf /tmp/%s.tar.gz -C /usr/share/enigma2/SevenHD/" % (str(self.ChannelBack2), str(self.ChannelBack2), str(self.ChannelBack2)))
+		   if self.ChannelBack3.startswith('back'):
+		      eConsole().ePopen("wget -q http://www.gigablue-support.org/skins/SevenHD/back/%s.tar.gz -O /tmp/%s.tar.gz; tar xf /tmp/%s.tar.gz -C /usr/share/enigma2/SevenHD/" % (str(self.ChannelBack3), str(self.ChannelBack3), str(self.ChannelBack3)))
+                
+                self.debug('download tgz complett')	
         
         except:
            self.debug('error on "def save()"\n')
            self.session.open(MessageBox, _("Error creating Skin!"), MessageBox.TYPE_ERROR)
 
-        self.reboot("GUI needs a restart to download files and apply a new skin.\nDo you want to Restart the GUI now?")
+        self.reboot(_("GUI needs a restart to download files and apply a new skin.\nDo you want to Restart the GUI now?"))
 
     def appendSkinFile(self, appendFileName, skinPartSearchAndReplace=None):
         """
@@ -728,11 +831,34 @@ class SevenHD(Screen):
         
         options.extend(((_("Share my Skin"), boundFunction(self.Share_Skin)),))
         options.extend(((_("ChangeLog"), boundFunction(self.ChangeLog)),))
-        options.extend(((_("Information"), boundFunction(self.send_to_msg_box, "Thanks to\n\xc3\xb6rlgrey, TBX, stony272 and Philipswalther")),))
+        options.extend(((_("Information"), boundFunction(self.send_to_msg_box, "Team Kraven\n\xc3\xb6rlgrey, TBX, stony272, thomele, Philipswalther and Kraven")),))
+        if fileExists(FILE):
+           options.extend(((_("About Skin"), boundFunction(self.About)),))
         self.session.openWithCallback(self.menuCallback, ChoiceBox,list = options)
             
     def menuCallback(self, ret):
         ret and ret[1]()
+    
+    def About(self):
+        with open(FILE, 'r') as xFile:
+             self.lines = xFile.readlines()
+             resolution = re.search('resolution bpp="32" xres="(.+?)" yres="(.+?)"', str(self.lines)).groups(1)
+        
+        screen_count = 0
+        font_count = 0
+        if fileExists("/tmp/about_skin.txt"):
+           remove('/tmp/about_skin.txt')
+        f = open('/tmp/about_skin.txt', 'a+')
+        for screens in self.lines:
+            if '<screen' in screens and 'name="' in screens and not 'template' in screens:
+               screen_count += 1
+               name = re.search('screen.*name="(.*?)"', str(screens)).groups(1)
+               f.write(str(name[0]) + '\n')
+            if '<font ' in screens:
+               font_count += 1
+        f.write('\nScreens are skinned:\t' + str(screen_count) + '\nResolution is:\t' + resolution[0]+ 'x' + resolution[1] + '\nUsed Fonts:\t\t' + str(font_count) + '\n')
+        f.close()
+        self.session.open(Console, _("About Skin"), cmdlist=[("cat /tmp/about_skin.txt")])
     
     def ChangeLog(self):
 	os.popen("wget 'http://www.gigablue-support.org/skins/SevenHD/update/SevenHDChangeLog.txt' -O /tmp/SevenHDChangeLog.txt")

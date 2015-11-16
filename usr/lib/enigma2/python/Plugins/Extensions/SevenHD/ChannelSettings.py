@@ -1,7 +1,7 @@
 # -*- coding: UTF-8 -*-
 #######################################################################
 #
-#    SevenHD by Kraven, TBX & örlgrey
+#    SevenHD by Team Kraven
 #    based on
 #    MyMetrix
 #    Coded by iMaxxx (c) 2013
@@ -41,10 +41,10 @@ def translateBlock(block):
 class ChannelSettings(ConfigListScreen, Screen):
     skin = """
                   <screen name="SevenHD" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
-                         <eLabel font="Regular; 20" foregroundColor="#00ffffff" backgroundColor="#00000000" halign="left" valign="center" position="64,662" size="148,48" text="Cancel" transparent="1" />
-                         <eLabel font="Regular; 20" foregroundColor="#00ffffff" backgroundColor="#00000000" halign="left" valign="center" position="264,662" size="148,48" text="Save" transparent="1" />
-                         <eLabel font="Regular; 20" foregroundColor="#00ffffff" backgroundColor="#00000000" halign="left" valign="center" position="464,662" size="148,48" text="Defaults" transparent="1" />
-                         <widget name="blue" font="Regular; 20" foregroundColor="#00ffffff" backgroundColor="#00000000" halign="left" valign="center" position="664,662" size="148,48" transparent="1" />
+                         <eLabel font="Regular; 20" foregroundColor="#00f23d21" backgroundColor="#00000000" halign="left" valign="center" position="64,662" size="148,48" text="Cancel" transparent="1" />
+                         <eLabel font="Regular; 20" foregroundColor="#00389416" backgroundColor="#00000000" halign="left" valign="center" position="264,662" size="148,48" text="Save" transparent="1" />
+                         <eLabel font="Regular; 20" foregroundColor="#00e5b243" backgroundColor="#00000000" halign="left" valign="center" position="464,662" size="148,48" text="Defaults" transparent="1" />
+                         <widget name="blue" font="Regular; 20" foregroundColor="#000064c7" backgroundColor="#00000000" halign="left" valign="center" position="664,662" size="148,48" transparent="1" />
                          <widget name="config" position="18,72" size="816,575" scrollbarMode="showOnDemand" transparent="1" zPosition="1" backgroundColor="#00000000" />
                          <eLabel position="70,12" size="708,46" text="SevenHD" font="Regular; 35" valign="center" halign="center" transparent="1" backgroundColor="#00000000" foregroundColor="#00ffffff" name="," />
                          <eLabel position="891,657" size="372,46" text="Thanks to http://www.gigablue-support.org/" font="Regular; 12" valign="center" halign="center" transparent="1" backgroundColor="#00000000" foregroundColor="#00ffffff" name="," />
@@ -52,21 +52,17 @@ class ChannelSettings(ConfigListScreen, Screen):
                          <widget backgroundColor="#00000000" font="Regular2; 34" foregroundColor="#00ffffff" position="70,12" render="Label" size="708,46" source="Title" transparent="1" halign="center" valign="center" noWrap="1" />
                          <eLabel backgroundColor="#00000000" position="6,6" size="842,708" transparent="0" zPosition="-9" foregroundColor="#00ffffff" />
                          <eLabel backgroundColor="#00ffffff" position="6,6" size="842,2" zPosition="2" />
-                         <eLabel backgroundColor="#00ffffff" position="6,714" size="842,2" zPosition="2" />
+                         <eLabel backgroundColor="#00ffffff" position="6,714" size="844,2" zPosition="2" />
                          <eLabel backgroundColor="#00ffffff" position="6,6" size="2,708" zPosition="2" />
                          <eLabel backgroundColor="#00ffffff" position="848,6" size="2,708" zPosition="2" />
                          <eLabel backgroundColor="#00ffffff" position="18,64" size="816,2" zPosition="2" />
                          <eLabel backgroundColor="#00ffffff" position="18,656" size="816,2" zPosition="2" />
-                         <ePixmap pixmap="SevenHD/buttons/key_red1.png" position="22,670" size="32,32" backgroundColor="#00000000" alphatest="blend" />
-                         <ePixmap pixmap="SevenHD/buttons/key_green1.png" position="222,670" size="32,32" backgroundColor="#00000000" alphatest="blend" />
-                         <ePixmap pixmap="SevenHD/buttons/key_yellow1.png" position="422,670" size="32,32" backgroundColor="#00000000" alphatest="blend" />
-                         <ePixmap pixmap="SevenHD/buttons/key_blue1.png" position="622,670" size="32,32" backgroundColor="#00000000" alphatest="blend" />
                          <widget source="global.CurrentTime" render="Label" position="1154,16" size="100,28" font="Regular;26" halign="right" backgroundColor="#00000000" transparent="1" valign="center" foregroundColor="#00ffffff">
                                  <convert type="ClockToText">Default</convert>
                          </widget>
                          <eLabel backgroundColor="#00000000" position="878,6" size="396,708" transparent="0" zPosition="-9" />
                          <eLabel backgroundColor="#00ffffff" position="878,6" size="396,2" zPosition="2" />
-                         <eLabel backgroundColor="#00ffffff" position="878,714" size="396,2" zPosition="2" />
+                         <eLabel backgroundColor="#00ffffff" position="878,714" size="398,2" zPosition="2" />
                          <eLabel backgroundColor="#00ffffff" position="878,6" size="2,708" zPosition="2" />
                          <eLabel backgroundColor="#00ffffff" position="1274,6" size="2,708" zPosition="2" />
                          <eLabel position="891,88" size="372,46" text="Version: """ + str(version) + """" font="Regular; 35" valign="center" halign="center" transparent="1" backgroundColor="#00000000" foregroundColor="#00ffffff" name="," />
@@ -276,6 +272,20 @@ class ChannelSettings(ConfigListScreen, Screen):
         self.session.open(MessageBox, _("Information"), MessageBox.TYPE_INFO)
 
     def save(self):
+        if config.plugins.SevenHD.skin_mode.value > '1':
+           if 'back' in config.plugins.SevenHD.ChannelBack1.value:
+              self.setInputToDefault(config.plugins.SevenHD.ChannelBack1)
+              self.session.open(MessageBox, _('Sorry, only Colors allowed.'), MessageBox.TYPE_INFO)
+           if 'back' in config.plugins.SevenHD.ChannelBack2.value:
+              self.setInputToDefault(config.plugins.SevenHD.ChannelBack2)
+              self.session.open(MessageBox, _('Sorry, only Colors allowed.'), MessageBox.TYPE_INFO)
+           if 'back' in config.plugins.SevenHD.ChannelBack3.value:
+              if 'channelselection-threecolumns' in config.plugins.SevenHD.ChannelSelectionStyle.value:
+                 self.setInputToDefault(config.plugins.SevenHD.ChannelBack3)
+                 self.session.open(MessageBox, _('Sorry, only Colors allowed.'), MessageBox.TYPE_INFO)
+              else:
+                 self.setInputToDefault(config.plugins.SevenHD.ChannelBack3)
+                 
         for x in self["config"].list:
             if len(x) > 1:
                 x[1].save()

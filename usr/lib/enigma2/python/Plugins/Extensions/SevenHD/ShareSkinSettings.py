@@ -1,7 +1,7 @@
 # -*- coding: UTF-8 -*-
 #######################################################################
 #
-#    SevenHD by Kraven, TBX & örlgrey
+#    SevenHD by Team Kraven
 #    based on
 #    MyMetrix
 #    Coded by iMaxxx (c) 2013

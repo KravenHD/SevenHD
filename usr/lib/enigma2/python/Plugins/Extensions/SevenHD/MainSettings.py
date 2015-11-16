@@ -1,7 +1,7 @@
 # -*- coding: UTF-8 -*-
 #######################################################################
 #
-#    SevenHD by Kraven, TBX & örlgrey
+#    SevenHD by Team Kraven
 #    based on
 #    MyMetrix
 #    Coded by iMaxxx (c) 2013
@@ -41,32 +41,28 @@ def translateBlock(block):
 class MainSettings(ConfigListScreen, Screen):
     skin = """
                   <screen name="SevenHD" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
-                         <eLabel font="Regular; 20" foregroundColor="#00ffffff" backgroundColor="#00000000" halign="left" valign="center" position="64,662" size="148,48" text="Cancel" transparent="1" />
-                         <eLabel font="Regular; 20" foregroundColor="#00ffffff" backgroundColor="#00000000" halign="left" valign="center" position="264,662" size="148,48" text="Save" transparent="1" />
-                         <eLabel font="Regular; 20" foregroundColor="#00ffffff" backgroundColor="#00000000" halign="left" valign="center" position="464,662" size="148,48" text="Defaults" transparent="1" />
-                         <widget name="blue" font="Regular; 20" foregroundColor="#00ffffff" backgroundColor="#00000000" halign="left" valign="center" position="664,662" size="148,48" transparent="1" />
-                         <widget name="config" position="18,72" size="816,575" transparent="1" zPosition="1" backgroundColor="#00000000" />
+                         <eLabel font="Regular; 20" foregroundColor="#00f23d21" backgroundColor="#00000000" halign="left" valign="center" position="64,662" size="148,48" text="Cancel" transparent="1" />
+                         <eLabel font="Regular; 20" foregroundColor="#00389416" backgroundColor="#00000000" halign="left" valign="center" position="264,662" size="148,48" text="Save" transparent="1" />
+                         <eLabel font="Regular; 20" foregroundColor="#00e5b243" backgroundColor="#00000000" halign="left" valign="center" position="464,662" size="148,48" text="Defaults" transparent="1" />
+                         <widget name="blue" font="Regular; 20" foregroundColor="#000064c7" backgroundColor="#00000000" halign="left" valign="center" position="664,662" size="148,48" transparent="1" />
+                         <widget name="config" position="18,72" size="816,575" scrollbarMode="showOnDemand" transparent="1" zPosition="1" backgroundColor="#00000000" />
                          <eLabel position="70,12" size="708,46" text="SevenHD" font="Regular; 35" valign="center" halign="center" transparent="1" backgroundColor="#00000000" foregroundColor="#00ffffff" name="," />
                          <eLabel position="891,657" size="372,46" text="Thanks to http://www.gigablue-support.org/" font="Regular; 12" valign="center" halign="center" transparent="1" backgroundColor="#00000000" foregroundColor="#00ffffff" name="," />
                          <widget name="helperimage" position="891,274" size="372,209" zPosition="1" backgroundColor="#00000000" />
                          <widget backgroundColor="#00000000" font="Regular2; 34" foregroundColor="#00ffffff" position="70,12" render="Label" size="708,46" source="Title" transparent="1" halign="center" valign="center" noWrap="1" />
                          <eLabel backgroundColor="#00000000" position="6,6" size="842,708" transparent="0" zPosition="-9" foregroundColor="#00ffffff" />
                          <eLabel backgroundColor="#00ffffff" position="6,6" size="842,2" zPosition="2" />
-                         <eLabel backgroundColor="#00ffffff" position="6,714" size="842,2" zPosition="2" />
+                         <eLabel backgroundColor="#00ffffff" position="6,714" size="844,2" zPosition="2" />
                          <eLabel backgroundColor="#00ffffff" position="6,6" size="2,708" zPosition="2" />
                          <eLabel backgroundColor="#00ffffff" position="848,6" size="2,708" zPosition="2" />
                          <eLabel backgroundColor="#00ffffff" position="18,64" size="816,2" zPosition="2" />
                          <eLabel backgroundColor="#00ffffff" position="18,656" size="816,2" zPosition="2" />
-                         <ePixmap pixmap="SevenHD/buttons/key_red1.png" position="22,670" size="32,32" backgroundColor="#00000000" alphatest="blend" />
-                         <ePixmap pixmap="SevenHD/buttons/key_green1.png" position="222,670" size="32,32" backgroundColor="#00000000" alphatest="blend" />
-                         <ePixmap pixmap="SevenHD/buttons/key_yellow1.png" position="422,670" size="32,32" backgroundColor="#00000000" alphatest="blend" />
-                         <ePixmap pixmap="SevenHD/buttons/key_blue1.png" position="622,670" size="32,32" backgroundColor="#00000000" alphatest="blend" />
                          <widget source="global.CurrentTime" render="Label" position="1154,16" size="100,28" font="Regular;26" halign="right" backgroundColor="#00000000" transparent="1" valign="center" foregroundColor="#00ffffff">
                                  <convert type="ClockToText">Default</convert>
                          </widget>
                          <eLabel backgroundColor="#00000000" position="878,6" size="396,708" transparent="0" zPosition="-9" />
                          <eLabel backgroundColor="#00ffffff" position="878,6" size="396,2" zPosition="2" />
-                         <eLabel backgroundColor="#00ffffff" position="878,714" size="396,2" zPosition="2" />
+                         <eLabel backgroundColor="#00ffffff" position="878,714" size="398,2" zPosition="2" />
                          <eLabel backgroundColor="#00ffffff" position="878,6" size="2,708" zPosition="2" />
                          <eLabel backgroundColor="#00ffffff" position="1274,6" size="2,708" zPosition="2" />
                          <eLabel position="891,88" size="372,46" text="Version: """ + str(version) + """" font="Regular; 35" valign="center" halign="center" transparent="1" backgroundColor="#00000000" foregroundColor="#00ffffff" name="," />
@@ -116,9 +112,13 @@ class MainSettings(ConfigListScreen, Screen):
         self.onLayoutFinish.append(self.UpdatePicture)
 
     def getMenuItemList(self):
-        list = []
+        list = [] 
         list.append(getConfigListEntry(_('_______________________________________ global system settings _______________________________________'), ))
         list.append(getConfigListEntry(_("image"), config.plugins.SevenHD.Image, 'IMAGE'))
+        list.append(getConfigListEntry(_("skinmode"), config.plugins.SevenHD.skin_mode, 'SKIN_MODE'))
+        if config.plugins.SevenHD.skin_mode.value == '7':
+           list.append(getConfigListEntry(_("X Resolution"), config.plugins.SevenHD.skin_mode_x, 'x_resolution'))
+           list.append(getConfigListEntry(_("Y Resolution"), config.plugins.SevenHD.skin_mode_y, 'y_resolution'))
         list.append(getConfigListEntry(_("buttons"), config.plugins.SevenHD.ButtonStyle, 'Button'))
         list.append(getConfigListEntry(_("plugin icons"), config.plugins.SevenHD.IconStyle, 'Icons'))
         list.append(getConfigListEntry(_("volume style"), config.plugins.SevenHD.VolumeStyle))
@@ -141,6 +141,8 @@ class MainSettings(ConfigListScreen, Screen):
            list.append(getConfigListEntry(_('{:<114}{:>1}'.format('EnhancedMovieCenter','not installed')), ))
         else:   
            list.append(getConfigListEntry(_("EMC"), config.plugins.SevenHD.EMCStyle))
+           config.EMC.skin_able.value = True
+           config.EMC.skin_able.save()
         if config.plugins.SevenHD.NumberZapExtImport.value:
            if fileExists(PLUGIN_PATH + "/SystemPlugins/NumberZapExt/NumberZapExt.pyo"):
               list.append(getConfigListEntry(_("ExtNumberZap"), config.plugins.SevenHD.NumberZapExt))
@@ -239,8 +241,11 @@ class MainSettings(ConfigListScreen, Screen):
         if config.plugins.SevenHD.grabdebug.value:
            os.system('grab -p /tmp/kraven_debug.png')
            self.session.open(MessageBox, _('Debug Picture\n"kraven_debug.png" saved in /tmp\n'), MessageBox.TYPE_INFO)
-           
+                                               
     def defaults(self):
+        self.setInputToDefault(config.plugins.SevenHD.skin_mode)
+        self.setInputToDefault(config.plugins.SevenHD.skin_mode_x)
+        self.setInputToDefault(config.plugins.SevenHD.skin_mode_y)
         self.setInputToDefault(config.plugins.SevenHD.AutoUpdate)
         self.setInputToDefault(config.plugins.SevenHD.AutoUpdateInfo)
         self.setInputToDefault(config.plugins.SevenHD.AutoUpdatePluginStart)
@@ -269,6 +274,33 @@ class MainSettings(ConfigListScreen, Screen):
         self.session.open(MessageBox, _("Information"), MessageBox.TYPE_INFO)
 
     def save(self):
+        if config.plugins.SevenHD.skin_mode.value >= '3':
+           if config.plugins.SevenHD.skin_mode.value == '3': 
+              msg_text = '3840x2160 for UHD'
+           if config.plugins.SevenHD.skin_mode.value == '4':
+              msg_text = '4096x2160 for 4k'
+           if config.plugins.SevenHD.skin_mode.value == '5':
+              msg_text = '7680x4320 for FUHD'
+           if config.plugins.SevenHD.skin_mode.value == '6':
+              msg_text = '8192x4320 for 8k'     
+           if config.plugins.SevenHD.skin_mode.value == '7':
+              msg_text = '%sx%s' % (str(int(config.plugins.SevenHD.skin_mode_x.value)), str(int(config.plugins.SevenHD.skin_mode_y.value)))
+           
+           self.session.open(MessageBox, _('Make sure that your Box support\nyour Resolution %s!!\n' % str(msg_text)), MessageBox.TYPE_INFO)   
+        
+        if fileExists(PLUGIN_PATH + "/Extensions/EnhancedMovieCenter/plugin.pyo"):
+           if config.plugins.SevenHD.EMCStyle.value != 'emcnocover':
+              config.EMC.movie_cover.value = True         
+           else:
+              config.EMC.movie_cover.value = False
+           config.EMC.movie_cover.save()
+        
+        if config.plugins.SevenHD.MovieSelectionStyle.value == 'movieselectionbigcover':
+           config.movielist.itemsperpage.value = '10'
+        else:
+           self.setInputToDefault(config.movielist.itemsperpage)
+        config.movielist.itemsperpage.save()
+              
         for x in self["config"].list:
             if len(x) > 1:
                 x[1].save()

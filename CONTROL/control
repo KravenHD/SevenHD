@@ -1,9 +1,9 @@
 Package: enigma2-plugin-skins-sevenhd
-Version: 3.5.20
+Version: 3.6.00
 Section: misc
 Priority: optional
 Architecture: all
 Depends:
-Maintainer: Kraven
+Maintainer: Team Kraven
 Description: Skin for Enigma2
 Source:

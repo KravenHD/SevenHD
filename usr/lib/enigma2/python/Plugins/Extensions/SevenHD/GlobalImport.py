@@ -1,12 +1,18 @@
-version = '3.5.30'
-version = '3.5.30'
+version = '3.6.00'
 import os
 import re
 import time
 import socket
 import gettext
 import urllib
+import subprocess
 from Plugins.Plugin import PluginDescriptor
+try:
+  from Plugins.SystemPlugins.OSDPositionSetup.plugin import OSDScreenPosition
+  OSDScreenPosition_plugin = True
+except ImportError:
+  from Screens.UserInterfacePositioner import UserInterfacePositioner
+  OSDScreenPosition_plugin = False
 from Screens.Screen import Screen
 from Screens.MessageBox import MessageBox
 from Screens.ChoiceBox import ChoiceBox
@@ -16,7 +22,7 @@ from Screens.Standby import TryQuitMainloop
 from Screens.VirtualKeyBoard import VirtualKeyBoard
 from Components.ActionMap import ActionMap
 from Components.AVSwitch import AVSwitch
-from Components.config import config, configfile, ConfigYesNo, ConfigSubsection, getConfigListEntry, ConfigSelection, ConfigNumber, ConfigText, ConfigInteger, ConfigClock
+from Components.config import config, configfile, ConfigYesNo, ConfigSubsection, getConfigListEntry, ConfigSelection, ConfigSelectionNumber, ConfigNumber, ConfigText, ConfigInteger, ConfigClock
 from Components.NimManager import nimmanager
 from Components.MenuList import MenuList
 from Components.MultiContent import MultiContentEntryText
@@ -77,6 +83,40 @@ config.plugins.SevenHD.version = ConfigText(default=version, fixed_size=False)
 config.plugins.SevenHD.AutoUpdate = ConfigYesNo(default = False)
 config.plugins.SevenHD.AutoUpdateInfo = ConfigYesNo(default = False)
 config.plugins.SevenHD.AutoUpdatePluginStart = ConfigYesNo(default = False)
+################# bmeminfo ##############################
+if fileExists('/proc/bmeminfo'):
+   entrie = os.popen('cat /proc/bmeminfo').read()
+   mem = entrie.split(':', 1)[1].split('k')[0]
+   bmem = int(mem)/1024
+else:
+   mem_info = []
+   entrie = os.popen('cat /proc/cmdline').read()
+   mem = entrie.split('bmem=')
+   for info in mem:
+     if 'M@' in info:
+       mem_info.append((info.split('M@')[0]))
+    
+   if len(mem_info) > 1:
+      bmem = int(mem_info[0]) + int(mem_info[1])  
+   else:
+      bmem = int(mem_info[0])
+      
+SkinModeList = []
+SkinModeList.append(("1", _("HD Skin 1280 x 720")))
+if bmem > 250:
+   SkinModeList.append(("2", _("FullHD Skin 1920 x 1080")))
+if bmem > 440:
+   SkinModeList.append(("3", _("UHD Skin 3840 x 2160")))
+   SkinModeList.append(("4", _("4K Skin 4096 x 2160")))
+if bmem > 880:
+   SkinModeList.append(("5", _("FullUHD Skin 7680 x 4320")))
+   SkinModeList.append(("6", _("8K Skin 8192 x 4320")))
+#SkinModeList.append(("7", _("User Selection")))
+
+config.plugins.SevenHD.skin_mode = ConfigSelection(default="1", choices = SkinModeList)
+config.plugins.SevenHD.skin_mode_x = ConfigInteger(default = 1280, limits=(720, 9999))
+config.plugins.SevenHD.skin_mode_y = ConfigInteger(default = 720, limits=(720, 9999))
+config.plugins.SevenHD.old_skin_mode = ConfigText(default = '1') 
 ###########################################
 config.plugins.SevenHD.FontStyle = ConfigSelection(default="noto", choices = [
 				("Noto", _("NotoSans-Regular"))
@@ -125,8 +165,8 @@ TransList.append(("4a", _("medium")))
 TransList.append(("8a", _("high")))
 TransList.append(("ff", _("full")))
 
-BackList = ['brownleather', 'blackleather', 'brick', 'carbon', 'checkerplate', 'colorexplosion', 'cubes', 'drop', 'flames', 'fire', 'fireflower', 'glass', 'iceflowers', 'lapis', 'matrix', 'metal', 
-            'redwood', 'slate', 'scratchedmetal', 'stone', 'stonewall', 'string']
+BackList = ['brownleather', 'brick', 'checkerplate', 'lapis', 'metal', 
+            'redwood', 'slate', 'scratchedmetal', 'stone']
 
 ################################################################################################################################################################
 # GlobalScreen
@@ -218,13 +258,36 @@ ProgressVolList = [("progressvol", _("bunt"))]
 ProgressVolList = ColorList + ProgressVolList
 config.plugins.SevenHD.ProgressVol = ConfigSelection(default="00ffffff", choices = ProgressVolList)
 
+config.plugins.SevenHD.CoolTVGuide = ConfigSelection(default="cooltv-minitv", choices = [
+				("cooltv-minitv", _("miniTV")),
+				("cooltv-picon", _("picon"))
+				])
+				
+config.plugins.SevenHD.EMCStyle = ConfigSelection(default="emcnocover", choices = [
+				("emcnocover", _("no cover")),
+				("emcsmallcover", _("small cover")),
+				("emcbigcover", _("big cover")),
+				("emcverybigcover", _("very big cover")),
+				("emcminitv", _("miniTV"))
+				])
+				
+config.plugins.SevenHD.MovieSelectionStyle = ConfigSelection(default="movieselectionnocover", choices = [
+				("movieselectionnocover", _("no cover")),
+				("movieselectionsmallcover", _("small cover")),
+				("movieselectionbigcover", _("big cover")),
+				("movieselectionminitv", _("miniTV"))
+				])
 ################################################################################################################################################################
 # MenuPluginScreen
 
 BackgroundList = []
 for x in BackList:
     BackgroundList.append(("back_%s_main" % x, _("%s" % x)))
+
+#if config.plugins.SevenHD.skin_mode.value == '1':
 BackgroundList = ColorList + BackgroundList
+#else:
+#   BackgroundList = ColorList
 config.plugins.SevenHD.Background = ConfigSelection(default="00000000", choices = BackgroundList)
 
 config.plugins.SevenHD.BackgroundColorTrans = ConfigSelection(default="0a", choices = TransList)
@@ -232,7 +295,10 @@ config.plugins.SevenHD.BackgroundColorTrans = ConfigSelection(default="0a", choi
 BackgroundRightList = []
 for x in BackList:
     BackgroundRightList.append(("back_%s_right" % x, _("%s" % x)))                       
+#if config.plugins.SevenHD.skin_mode.value == '1':
 BackgroundRightList = ColorList + BackgroundRightList
+#else:
+#   BackgroundRightList = ColorList
 config.plugins.SevenHD.BackgroundRight = ConfigSelection(default="00000000", choices = BackgroundRightList)
 				
 config.plugins.SevenHD.BackgroundRightColorTrans = ConfigSelection(default="0a", choices = TransList)
@@ -310,7 +376,10 @@ config.plugins.SevenHD.SIB = ConfigSelection(default="-top", choices = [
 BackgroundIB1List = []
 for x in BackList:
     BackgroundIB1List.append(("back_%s_ib1" % x, _("%s" % x)))                     
+#if config.plugins.SevenHD.skin_mode.value == '1':
 BackgroundIB1List = ColorList + BackgroundIB1List
+#else:
+#   BackgroundIB1List = ColorList
 config.plugins.SevenHD.BackgroundIB1 = ConfigSelection(default="00000000", choices = BackgroundIB1List)
 
 config.plugins.SevenHD.BackgroundIB1Trans = ConfigSelection(default="0a", choices = TransList)
@@ -320,7 +389,10 @@ config.plugins.SevenHD.BackgroundIB2Trans = ConfigSelection(default="0a", choice
 BackgroundIB2List = []
 for x in BackList:
     BackgroundIB2List.append(("back_%s_ib2" % x, _("%s" % x)))
+#if config.plugins.SevenHD.skin_mode.value == '1':
 BackgroundIB2List = ColorList + BackgroundIB2List
+#else:
+#   BackgroundIB2List = ColorList
 config.plugins.SevenHD.BackgroundIB2 = ConfigSelection(default="00000000", choices = BackgroundIB2List)
 
 config.plugins.SevenHD.InfobarLine = ConfigSelection(default="00ffffff", choices = ColorList)
@@ -377,17 +449,18 @@ config.plugins.SevenHD.ClockWeek = ConfigSelection(default="00ffffff", choices =
 config.plugins.SevenHD.WeatherStyle = ConfigSelection(default="none", choices = [
 				("none", _("off")),
 				("weather-big", _("big")),
+				("weather-slim", _("slim")),
 				("weather-left-side", _("left")),
 				("weather-small", _("small"))
 				])
 				
-config.plugins.SevenHD.refreshInterval = ConfigNumber(default="10")
+config.plugins.SevenHD.refreshInterval = ConfigSelectionNumber(10, 60, 10, default = 10, wraparound = True)
 
 config.plugins.SevenHD.AutoWoeID = ConfigYesNo(default= True)
 
 config.plugins.SevenHD.ClockWeather = ConfigSelection(default="00ffffff", choices = ColorList)
 
-config.plugins.SevenHD.weather_city = ConfigNumber(default="924938")
+config.plugins.SevenHD.weather_city = ConfigNumber(default="671072")
 
 config.plugins.SevenHD.WeatherView = ConfigSelection(default="icon", choices = [
 				("icon", _("Icon")),
@@ -412,10 +485,7 @@ config.plugins.SevenHD.ECMInfo = ConfigSelection(default="none", choices = [
 				("ecminfo2-on", _("on")),
 				("ecminfo-on", _("infobar"))
 				])
-config.plugins.SevenHD.FrontInfo = ConfigSelection(default="snr", choices = [
-				("snr", _("SNR")),
-				("db", _("dB"))
-				])
+
 
 ################################################################################################################################################################
 # ChannelScreen
@@ -435,27 +505,37 @@ config.plugins.SevenHD.ChannelSelectionStyle = ConfigSelection(default="channels
 				("channelselection-minitvzz", _("ZZPicon/miniTV")),
 				("channelselection-zzzpicon", _("ZZZPicon")),
 				("channelselection-minitvzzz", _("ZZZPicon/miniTV")),
-				("channelselection-minitv1", _("miniTV"))
+				("channelselection-minitv1", _("miniTV")),
+				("channelselection-pip", _("miniTV/PiP"))
 				])
 
 ChannelBack1List = []
 for x in BackList:
     ChannelBack1List.append(("back_%s_csleft" % x, _("%s" % x)))                    
+#if config.plugins.SevenHD.skin_mode.value == '1':
 ChannelBack1List = ColorList + ChannelBack1List
+#else:
+#   ChannelBack1List = ColorList
 config.plugins.SevenHD.ChannelBack1 = ConfigSelection(default="00000000", choices = ChannelBack1List)
 
 
 ChannelBack2List = []
 for x in BackList:
     ChannelBack2List.append(("back_%s_csright" % x, _("%s" % x)))                     
+#if config.plugins.SevenHD.skin_mode.value == '1':
 ChannelBack2List = ColorList + ChannelBack2List
+#else:
+#   ChannelBack2List = ColorList
 config.plugins.SevenHD.ChannelBack2 = ConfigSelection(default="00000000", choices = ChannelBack2List)
                    
 
 ChannelBack3List = []
 for x in BackList:
     ChannelBack3List.append(("back_%s_csmiddle" % x, _("%s" % x)))                    
+#if config.plugins.SevenHD.skin_mode.value == '1':
 ChannelBack3List = ColorList + ChannelBack3List
+#else:
+#   ChannelBack3List = ColorList
 config.plugins.SevenHD.ChannelBack3 = ConfigSelection(default="00000000", choices = ChannelBack3List)
 
 config.plugins.SevenHD.ChannelLine = ConfigSelection(default="00ffffff", choices = ColorList)
@@ -510,28 +590,10 @@ config.plugins.SevenHD.ProgressListCS = ConfigSelection(default="00ffffff", choi
 
 ################################################################################################################################################################
 # SonstigesScreen
-
-config.plugins.SevenHD.CoolTVGuide = ConfigSelection(default="cooltv-minitv", choices = [
-				("cooltv-minitv", _("miniTV")),
-				("cooltv-picon", _("picon"))
-				])
-				
-config.plugins.SevenHD.EMCStyle = ConfigSelection(default="emcbigcover", choices = [
-				("emcnocover", _("no cover")),
-				("emcsmallcover", _("small cover")),
-				("emcbigcover", _("big cover")),
-				("emcverybigcover", _("very big cover")),
-				("emcminitv", _("miniTV"))
-				])
-				
-config.plugins.SevenHD.MovieSelectionStyle = ConfigSelection(default="movieselectionnocover", choices = [
-				("movieselectionnocover", _("no cover")),
-				("movieselectionsmallcover", _("small cover")),
-				("movieselectionbigcover", _("big cover")),
-				("movieselectionminitv", _("miniTV"))
-				])
 				
 config.plugins.SevenHD.debug = ConfigYesNo(default = False)
+
+config.plugins.SevenHD.debug_screen_names = ConfigYesNo(default = False)
 
 config.plugins.SevenHD.msgdebug = ConfigYesNo(default = False)
 
@@ -593,7 +655,6 @@ myConfigList = [('config.plugins.SevenHD.Image.value = "' + str(config.plugins.S
                 ('config.plugins.SevenHD.SatInfo.value = "' + str(config.plugins.SevenHD.SatInfo.value) + '"'),
                 ('config.plugins.SevenHD.SysInfo.value = "' + str(config.plugins.SevenHD.SysInfo.value) + '"'),
                 ('config.plugins.SevenHD.ECMInfo.value = "' + str(config.plugins.SevenHD.ECMInfo.value) + '"'),
-                ('config.plugins.SevenHD.FrontInfo.value = "' + str(config.plugins.SevenHD.FrontInfo.value) + '"'),
                 ('config.plugins.SevenHD.ChannelSelectionStyle.value = "' + str(config.plugins.SevenHD.ChannelSelectionStyle.value) + '"'),
                 ('config.plugins.SevenHD.ChannelBack1.value = "' + str(config.plugins.SevenHD.ChannelBack1.value) + '"'),
                 ('config.plugins.SevenHD.ChannelBack2.value = "' + str(config.plugins.SevenHD.ChannelBack2.value) + '"'),

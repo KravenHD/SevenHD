@@ -3,6 +3,7 @@
 <!-- ********** openMips ********** -->
 <!-- About -->
 <screen backgroundColor="transparent" flags="wfNoBorder" name="About" position="1,1" size="1280,720" title="About">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="About" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
     <widget backgroundColor="SevenFontBackground" font="Regular2; 26" position="70,71" render="Label" size="700,40" source="EnigmaVersion" transparent="1" />
     <widget backgroundColor="SevenFontBackground" font="Regular2; 26" position="70,111" render="Label" size="700,40" source="ImageVersion" transparent="1" />
     <widget backgroundColor="SevenFontBackground" font="Regular2; 26" position="70,151" render="Label" size="700,40" source="FPVersion" transparent="1" />
@@ -19,6 +20,7 @@
   </screen>
  <!-- AboutOE -->
   <screen name="AboutOE" position="0,0" size="1280,720" title="About" flags="wfNoBorder" backgroundColor="transparent">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="AboutOE" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
     <widget source="lab1" render="Label" position="70,123" size="369,35" font="Regular;30" transparent="1" zPosition="2" backgroundColor="SevenFontBackground" />
     <widget source="lab2" render="Label" position="70,173" size="370,25" font="Regular;19" transparent="1" zPosition="2" backgroundColor="SevenFontBackground" />
     <widget source="lab3" render="Label" position="70,213" size="369,25" font="Regular;19" transparent="1" zPosition="1" backgroundColor="SevenFontBackground" />
@@ -30,6 +32,7 @@
   </screen>
 <!-- HotkeySetup -->
 <screen backgroundColor="transparent" flags="wfNoBorder" name="HotkeySetup" position="0,0" size="1280,720" title="Tasteneinstellungen">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="HotkeySetup" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
   <widget name="list" position="40,99" size="385,529" font="Regular;22" itemHeight="28" transparent="1" foregroundColor="SevenFont1" enableWrapAround="1" backgroundColor="SevenFontBackground" zPosition="0" />
   <widget name="choosen" position="427,99" size="385,530" font="Regular2; 22" itemHeight="28" foregroundColor="SevenFont1" backgroundColor="SevenFontBackground" zPosition="0" transparent="1" />
   <widget name="description" position="938,239" size="302,250" font="Regular2; 16" foregroundColor="SevenFont2" valign="center" halign="center" backgroundColor="SevenFontBackgroundRight" zPosition="0" transparent="1" />
@@ -38,6 +41,7 @@
 </screen>
 <!-- HotkeySetupSelect -->
 <screen backgroundColor="transparent" flags="wfNoBorder" name="HotkeySetupSelect" position="0,0" size="1280,720" title="Tasteneinstellungen">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="HotkeySetupSelect" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
   <widget name="list" position="40,99" size="385,529" font="Regular;22" itemHeight="28" transparent="1" foregroundColor="SevenFont1" enableWrapAround="1" backgroundColor="SevenFontBackground" zPosition="0" />
   <widget name="choosen" position="427,99" size="385,530" font="Regular2; 22" itemHeight="28" backgroundColor="SevenFontBackground" zPosition="0" transparent="1" />
   <widget name="description" position="938,239" size="302,250" font="Regular2; 16" foregroundColor="SevenFont2" valign="center" halign="center" backgroundColor="SevenFontBackgroundRight" zPosition="0" transparent="1" />
@@ -46,12 +50,14 @@
 </screen>
 <!-- OSD3DSetupScreen -->
 <screen backgroundColor="transparent" flags="wfNoBorder" name="OSD3DSetupScreen" position="0,0" size="1280,720" title="OSD 3D Setup">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="OSD3DSetupScreen" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
   <widget name="config" backgroundColor="SevenFontBackground" position="70,80" zPosition="1" size="708,540" transparent="1" />
 <panel name="template_menu_left_button" />
 <panel name="template_colorkey_text_source" />
 </screen>
 <!-- GBAspectRatioSwitchSetup -->
 <screen name="GBAspectRatioSwitchSetup" position="0,0" size="1280,720" title="GBAspectRatioSwitchSetup" flags="wfNoBorder" backgroundColor="transparent">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="GBAspectRatioSwitchSetup" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
   <widget name="config" position="71,80" size="708,495" backgroundColor="SevenFontBackground" zPosition="0" transparent="1" />
 <widget name="label" position="214,583" size="399,60" font="Regular2; 20" halign="center" backgroundColor="SevenFontBackground" zPosition="0" foregroundColor="SevenFont2" transparent="1" />
 <panel name="template_menu_left_button" />
@@ -59,6 +65,7 @@
 </screen>
 <!-- SwapManager -->
 <screen name="SwapManager" title="Swap File Manager" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="SwapManager" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
   <widget name="autostart_off" position="102,413" zPosition="1" pixmap="skin_default/icons/lock_off.png" size="32,32" alphatest="on" />
   <widget name="autostart_on" position="102,413" zPosition="2" pixmap="skin_default/icons/lock_on.png" size="32,32" alphatest="on" />
   <widget name="lab1" position="146,414" size="360,30" font="Regular;20" valign="center" transparent="1" backgroundColor="SevenFontBackground" />
@@ -74,24 +81,28 @@
 </screen>
 <!-- FastScanScreen -->
 <screen backgroundColor="transparent" flags="wfNoBorder" name="FastScanScreen" position="0,0" size="1280,720" title="Fast Scan">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="FastScanScreen" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
   <widget name="config" position="70,80" size="708,540" font="Regular;22" foregroundColor="SevenFont1" transparent="1" halign="left" backgroundColor="SevenFontBackground" valign="top" />
 <panel name="template_menu_left_button" />
 <panel name="template_colorkey_text_source" />
 </screen>
 <!-- ZapHistoryBrowser -->
 <screen backgroundColor="transparent" flags="wfNoBorder" name="ZapHistoryBrowser" position="0,0" size="1280,720" title="Zap History Browser">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="ZapHistoryBrowser" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
   <widget name="list" position="70,80" size="708,540" itemHeight="50" backgroundColor="SevenFontBackground" zPosition="0" transparent="1" />
 <panel name="template_menu_left_button" />
 <panel name="template_colorkey_text_source" />
 </screen>
 <!-- OMMetrixWeatherSetup -->
 <screen backgroundColor="transparent" flags="wfNoBorder" name="OMMetrixWeatherSetup" position="0,0" size="1280,720" title="OMMetrixWeatherSetup">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="OMMetrixWeatherSetup" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
   <widget name="config" position="70,80" size="708,540" itemHeight="30" enableWrapAround="1" backgroundColor="SevenFontBackground" transparent="1" />
 <panel name="template_menu_left_button" />
 <panel name="template_colorkey_text_source" />
 </screen>
 <!-- Softcam Panel -->
 <screen backgroundColor="transparent" flags="wfNoBorder" name="SoftCamPanel" position="0,0" size="1280,720" title="SoftCam Panel">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="SoftCamPanel" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
   <widget name="entries" position="62,115" size="755,150" backgroundColor="SevenFontBackground" transparent="1" />
 <widget name="text1" position="451,321" size="320,260" zPosition="2" font="Regular;17" backgroundColor="SevenFontBackground" transparent="1" />
 <widget name="cam" zPosition="2" position="130,271" size="310,21" font="Regular2; 18" halign="left" foregroundColor="SevenFont2" backgroundColor="SevenFontBackground" transparent="1" />
@@ -101,6 +112,7 @@
 </screen>
 <!-- SoftcamPackages -->
 <screen name="SoftCamPackages" position="0,0" size="1280,720" title="Install Softcams" flags="wfNoBorder" backgroundColor="transparent">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="SoftCamPackages" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
 <widget source="list" render="Listbox" position="70,80" size="705,540" backgroundColor="SevenFontBackground" transparent="1">
   <convert type="TemplatedMultiContent">
 				{"template": [
@@ -118,6 +130,7 @@
 </screen>
 <!-- HddSetup -->
 <screen backgroundColor="transparent" flags="wfNoBorder" name="HddSetup" position="0,0" size="1280,720" title="Hard Drive Setup">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="HddSetup" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
   <widget source="menu" render="Listbox" position="70,80" size="708,540" itemHeight="50" backgroundColor="SevenFontBackground" transparent="1">
     <convert type="TemplatedMultiContent">
 				{"template": [
@@ -135,6 +148,7 @@
 </screen>
 <!-- HddPartitions -->
 <screen backgroundColor="transparent" flags="wfNoBorder" name="HddPartitions" position="0,0" size="1280,720" title="Hard Drive Partitions">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="HddPartitions" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
   <widget name="label_disk" position="70,71" font="Regular2; 26" size="708,30" halign="center" valign="center" backgroundColor="SevenFontBackground" transparent="1" foregroundColor="SevenFont2" />
   <widget source="menu" render="Listbox" position="70,109" size="708,540" itemHeight="50" backgroundColor="SevenFontBackground" transparent="1">
     <convert type="TemplatedMultiContent">
@@ -153,6 +167,7 @@
 </screen>
 <!-- HddMounts -->
 <screen backgroundColor="transparent" flags="wfNoBorder" name="HddMount" position="0,0" size="1280,720" title="Hard Drive Mount">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="HddMount" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
   <widget name="menu" render="Listbox" position="70,80" size="708,540" itemHeight="50" backgroundColor="SevenFontBackground" transparent="1">
     <convert type="TemplatedMultiContent">
 				{"template": [
@@ -170,6 +185,7 @@
 </screen>
 <!-- HddInfo -->
 <screen backgroundColor="transparent" flags="wfNoBorder" name="HddInfo" position="0,0" size="1280,720" title="Hard Drive Info">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="HddInfo" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
    <widget name="config" position="95,237" size="585,30" backgroundColor="SevenFontBackground" transparent="1" />
   <widget font="Regular;20" halign="left" name="model" position="95,320" size="580,25" valign="center" backgroundColor="SevenFontBackground" transparent="1" />
   <widget font="Regular;20" halign="left" name="serial" position="95,350" size="580,25" valign="center" backgroundColor="SevenFontBackground" transparent="1" />
@@ -185,6 +201,7 @@
 </screen>
 <!-- HddFastRemove -->
 <screen backgroundColor="transparent" flags="wfNoBorder" name="HddFastRemove" position="0,0" size="1280,720" title="Hard Drive Fast Umount">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="HddFastRemove" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
    <widget name="menu" render="Listbox" position="70,80" size="708,540" itemHeight="50" backgroundColor="SevenFontBackground" transparent="1">
     <convert type="TemplatedMultiContent">
 				{"template": [
@@ -202,6 +219,7 @@
 </screen>
 <!-- LCDSkinSelector -->
 <screen name="LCDSkinSelector" position="0,0" size="1280,720" title="LCD Skin-Selector" backgroundColor="transparent">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="LCDSkinSelector" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
 <widget name="lab1" position="70,201" size="250,26" zPosition="1" font="Regular;22" halign="left" transparent="1" backgroundColor="SevenFontBackground" />
 <widget name="lab2" position="423,201" size="250,26" zPosition="1" font="Regular;22" halign="left" transparent="1" backgroundColor="SevenFontBackground" />
 <widget name="SkinList" position="70,265" size="270,371" enableWrapAround="1" backgroundColor="SevenFontBackground" transparent="1" />
@@ -211,6 +229,7 @@
 </screen>
 <!-- LCDClockSelector -->
 <screen name="LCDClockSelector" position="0,0" size="1280,720" title="LCD Clock-Selector" backgroundColor="transparent">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="LCDClockSelector" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
 <widget name="lab1" position="70,201" size="250,26" zPosition="1" font="Regular;22" halign="left" transparent="1" backgroundColor="SevenFontBackground" />
 <widget name="lab2" position="423,201" size="250,26" zPosition="1" font="Regular;22" halign="left" transparent="1" backgroundColor="SevenFontBackground" />
 <widget name="ClockList" position="70,265" size="270,371" enableWrapAround="1" backgroundColor="SevenFontBackground" transparent="1" />
@@ -220,12 +239,14 @@
 </screen>
 <!-- LED_GigaSetup -->
 <screen name="LED_GigaSetup" position="0,0" size="1280,720" title="LED Setup" backgroundColor="transparent">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="LED_GigaSetup" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
 <widget name="config" position="70,80" size="708,540" backgroundColor="SevenFontBackground" transparent="1" />
 <panel name="template_menu_left_button" />
 <panel name="template_colorkey_text_source" />
 </screen>
 <!-- SoftcamSetup -->
 <screen name="SoftcamSetup" position="0,0" size="1280,720" title="SoftcamSetup" backgroundColor="transparent">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="SoftcamSetup" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
 <widget name="config" position="70,129" size="550,200" backgroundColor="SevenFontBackground" transparent="1" />
 <widget name="info" position="70,366" size="550,200" backgroundColor="SevenFontBackground" transparent="1" font="Regular2; 16" foregroundColor="SevenFont2" />
 <panel name="template_menu_left_button" />
@@ -233,6 +254,7 @@
 </screen>
  <!-- GraphMultiEPGList -->
 <screen backgroundColor="transparent" flags="wfNoBorder" name="GraphMultiEPGList" position="0,0" size="1280,720" title="Electronic Program Guide">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="GraphMultiEPGList" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
   <widget backgroundColor="SevenFontBackground" font="Regular2; 28" position="25,70" render="Label" size="700,39" source="Event" transparent="1">
     <convert type="SevenHDEventName">Name</convert>
   </widget>
@@ -260,12 +282,14 @@
 </screen>
  <!-- GigaBlue IPBox Client -->
 <screen backgroundColor="transparent" name="GBIpboxMenu" position="0,0" flags="wfNoBorder" title="GigaBlue IPBox Client" size="1280,720">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="GBIpboxMenu" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
 <widget name="config" position="70,80" size="708,540" backgroundColor="SevenFontBackground" transparent="1" />
 <panel name="template_menu_left_button" />
 <panel name="template_colorkey_text" />
 </screen>
  <!-- Network Menu -->
 <screen backgroundColor="transparent" flags="wfNoBorder" name="menu_network_menu" position="0,0" size="1280,720" title="Network menu">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="menu_network_menu" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
    <widget source="menu" render="Listbox" backgroundColor="SevenFontBackground" foregroundColor="SevenFont1" position="70,80" size="708,480" scrollbarMode="showNever" enableWrapAround="1" transparent="1">
 			<convert type="TemplatedMultiContent">
 				{"template": [ MultiContentEntryText(pos = (30, 5), size = (420, 50), flags = RT_HALIGN_LEFT, text = 0) ],
@@ -278,6 +302,7 @@
   </screen>
     <!-- AdapterSetup -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="AdapterSetup" position="0,0" size="1280,720" title="Network Setup">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="AdapterSetup" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
     <widget backgroundColor="SevenFontBackground" font="Regular2;24" foregroundColor="SevenFont2" position="70,80" render="Label" size="495,30" source="Adapter" transparent="1" />
     <widget backgroundColor="SevenFontBackground" enableWrapAround="1" itemHeight="30" name="config" position="70,130" size="708,249" transparent="1" />
     <widget backgroundColor="SevenFontBackground" font="Regular2;24" foregroundColor="SevenFont2" halign="center" position="70,600" render="Label" size="708,30" source="introduction2" transparent="1" />

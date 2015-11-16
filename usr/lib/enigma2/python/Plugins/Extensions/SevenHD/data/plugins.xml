@@ -2,6 +2,7 @@
   <!-- ********** AutoBouquetsMaker ********** -->
   <!-- AutoBouquetsMaker -->
   <screen name="AutoBouquetsMaker" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="AutoBouquetsMaker" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
     <widget name="status" halign="left" valign="center" position="70,251" size="720,20" font="Regular;18" backgroundColor="SevenFontBackground" transparent="1" foregroundColor="SevenFont1" />
     <widget name="progress" position="70,277" size="720,5" borderWidth="1" backgroundColor="SevenFontBackground" transparent="1" />
     <widget name="action" halign="left" valign="center" position="70,226" size="720,20" font="Regular;18" backgroundColor="SevenFontBackground" transparent="1" />
@@ -9,6 +10,7 @@
   </screen>
   <!-- AutoBouquetsMaker_Menu -->
   <screen name="AutoBouquetsMaker_Menu" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="AutoBouquetsMaker_Menu" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
     <widget source="list" render="Listbox" position="70,80" size="708,540" backgroundColor="SevenFontBackground" transparent="1">
       <convert type="TemplatedMultiContent">
 			{"template": [
@@ -24,11 +26,13 @@
   </screen>
   <!-- AutoBouquetsMakerLogView -->
   <screen name="AutoBouquetsMakerLogView" position="0,0" title="Backup Log" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="AutoBouquetsMakerLogView" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
     <widget name="list" position="70,80" size="708,540" backgroundColor="SevenFontBackground" font="Regular;16" transparent="1" />
     <panel name="template_menu_left" />
   </screen>
   <!-- AutoBouquetsMaker_Ordering -->
   <screen name="AutoBouquetsMaker_Ordering" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="AutoBouquetsMaker_Ordering" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
     <widget source="list" render="Listbox" position="70,80" size="708,540" backgroundColor="SevenBackground" transparent="1">
       <convert type="TemplatedMultiContent">
 					{"template": [
@@ -45,6 +49,7 @@
   </screen>
   <!-- AutoBouquetsMaker_ProvidersSetup -->
   <screen name="AutoBouquetsMaker_ProvidersSetup" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="AutoBouquetsMaker_ProvidersSetup" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
     <widget name="description" position="70,352" size="708,50" font="Regular2; 18" halign="left" valign="bottom" transparent="1" backgroundColor="SevenFontBackground" foregroundColor="SevenFont2" />
     <widget name="pleasewait" position="70,80" size="708,230" font="Regular;18" halign="center" valign="center" transparent="1" backgroundColor="SevenFontBackground" />
     <panel name="template_menu_left_button" />
@@ -52,6 +57,7 @@
   </screen>
   <!-- AutoBouquetsMaker_Setup -->
   <screen name="AutoBouquetsMaker_Setup" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="AutoBouquetsMaker_Setup" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
     <widget name="description" position="70,352" size="708,50" font="Regular2; 18" halign="left" valign="bottom" transparent="1" backgroundColor="SevenFontBackground" foregroundColor="SevenFont2" />
     <widget name="pleasewait" position="70,80" size="708,230" font="Regular;18" halign="center" valign="center" transparent="1" backgroundColor="SevenFontBackground" />
     <panel name="template_menu_left_button" />
@@ -59,6 +65,7 @@
   </screen>
   <!-- AutoBouquetsMaker_KeepBouquets -->
   <screen name="AutoBouquetsMaker_KeepBouquets" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="AutoBouquetsMaker_KeepBouquets" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
     <widget source="list" render="Listbox" position="70,80" size="708,540" backgroundColor="SevenFontBackground" transparent="1">
       <convert type="TemplatedMultiContent">
 					{"template": [
@@ -76,6 +83,7 @@
   </screen>
   <!-- AutoBouquetsMaker_HideSections -->
   <screen name="AutoBouquetsMaker_HideSections" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="AutoBouquetsMaker_HideSections" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
     <widget source="list" render="Listbox" position="70,80" size="708,540" backgroundColor="SevenFontBackground" transparent="1">
       <convert type="TemplatedMultiContent">
 					{"template": [
@@ -93,12 +101,14 @@
   </screen>
   <!-- AutoBouquetsMaker_About -->
   <screen name="AutoBouquetsMaker_About" position="0,0" size="1280,720" title="AutobouquetsMaker - About" flags="wfNoBorder" backgroundColor="transparent">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="AutoBouquetsMaker_About" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
     <widget name="about" position="70,80" size="708,540" font="Regular;15" backgroundColor="SevenFontBackground" transparent="1" />
     <panel name="template_menu_left_button" />
     <panel name="template_colorkey_text" />
   </screen>
   <!-- AutoBouquetsMaker_Log -->
   <screen name="AutoBouquetsMaker_Log" position="0,0" size="1280,720" title="Update Database Log" flags="wfNoBorder" backgroundColor="transparent">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="AutoBouquetsMaker_Log" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
     <widget name="list" position="70,80" size="708,540" font="Regular;16" backgroundColor="SevenFontBackground" transparent="1" />
     <panel name="template_menu_left_button" />
     <panel name="template_colorkey_text" />
@@ -106,6 +116,7 @@
   <!-- ********** AutoTimer ********** -->
   <!-- AutoTimerSettings -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="AutoTimerSettings" position="0,0" size="1280,720" title="AutoTimer Settings">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="AutoTimerSettings" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
     <widget backgroundColor="SevenFontBackground" scrollbarMode="showNever" enableWrapAround="1" itemHeight="30" name="config" position="70,80" size="700,450" transparent="1" />
     <widget backgroundColor="SevenFontBackground" font="Regular2;20" position="70,558" render="Label" size="700,50" source="help" transparent="1" foregroundColor="SevenFont2" />
     <panel name="template_menu_left_button" />
@@ -113,6 +124,7 @@
   </screen>
   <!-- AutoTimerEditor -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="AutoTimerEditor" position="0,0" size="1280,720" title="Edit AutoTimer">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="AutoTimerEditor" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
     <widget backgroundColor="SevenFontBackground" enableWrapAround="1" itemHeight="30" name="config" position="70,80" size="700,450" transparent="1" />
     <widget backgroundColor="SevenFontBackground" font="Regular2;20" position="70,558" render="Label" size="700,50" source="help" transparent="1" foregroundColor="SevenFont2" />
     <panel name="template_menu_left_button" />
@@ -120,36 +132,41 @@
   </screen>
   <!-- AutoTimerFilterEditor -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="AutoTimerFilterEditor" position="0,0" size="1280,720" title="Edit AutoTimer Filters">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="AutoTimerFilterEditor" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
     <widget backgroundColor="SevenFontBackground" enableWrapAround="1" scrollbarMode="showNever" itemHeight="30" name="config" position="70,80" size="708,540" transparent="1" />
     <panel name="template_menu_left_button" />
     <panel name="template_colorkey_text_source" />
   </screen>
   <!-- AutoTimerServiceEditor -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="AutoTimerServiceEditor" position="0,0" size="1280,720" title="Edit AutoTimer Services">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="AutoTimerServiceEditor" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
     <widget backgroundColor="SevenFontBackground" enableWrapAround="1" itemHeight="30" name="config" position="70,80" size="708,540" transparent="1" />
     <panel name="template_menu_left_button" />
     <panel name="template_colorkey_text_source" />
   </screen>
   <!-- AutoTimerImporter -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="AutoTimerImporter" position="0,0" size="1280,720" title="Import AutoTimer">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="AutoTimerImporter" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
     <widget backgroundColor="SevenFontBackground" enableWrapAround="1" itemHeight="30" name="list" position="70,80" size="708,540" transparent="1" />
     <panel name="template_menu_left_button" />
     <panel name="template_colorkey_text_source" />
   </screen>
   <!-- AutoTimerOverview -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="AutoTimerOverview" position="0,0" size="1280,720" title="AutoTimer Overview">
-    <widget backgroundColor="SevenFontBackground" enableWrapAround="1" itemHeight="30" name="entries" position="70,80" size="708,540" transparent="1" />
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="AutoTimerOverview" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
+    <widget backgroundColor="SevenFontBackground" enableWrapAround="1" itemHeight="50" rowSplit1="25" rowSplit2="45" rowHeight="25" iconMargin="5" EventNameFont="Regular;18" ServiceNameFont="Regular;20" name="entries" position="70,80" size="708,540" transparent="1" />
     <panel name="template_menu_left_button" />
     <panel name="template_colorkey_text_source" />
   </screen>
   <!-- AutoTimerPreview -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="AutoTimerPreview" position="0,0" size="1280,720" title="Preview AutoTimer">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="AutoTimerPreview" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
     <widget backgroundColor="SevenFontBackground" enableWrapAround="1" position="70,80" render="Listbox" size="708,540" source="timerlist" transparent="1">
       <convert type="TemplatedMultiContent">
 				{"template": [
 						MultiContentEntryText(pos=( 10, 5), size=(660,26), text = 3, font = 0, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER),
 						MultiContentEntryText(pos=( 10,32), size=(660,24), text = 0, font = 1, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER),
-						MultiContentEntryText(pos=(	10,57), size=(420,24), text = 4, font = 1, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER),
+						MultiContentEntryText(pos=( 10,57), size=(420,24), text = 4, font = 1, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER),
 						MultiContentEntryText(pos=(430,57), size=(240,24), text = 2, font = 1, flags = RT_HALIGN_RIGHT|RT_VALIGN_CENTER),
 					],
 				 "fonts": [gFont("Regular2", 22),gFont("Regular2", 20)],
@@ -163,6 +180,7 @@
   <!-- ********** Bluetooth ********** -->
   <!-- BluetoothDevicesManager -->
   <screen name="BluetoothDevicesManager" title="Bluetooth Devices Manager" flags="wfNoBorder" size="1280,720" position="0,0" backgroundColor="transparent">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="BluetoothDevicesManager" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
     <widget name="devicelist" position="60,80" size="708,540" font="Regular;22" foregroundColor="SevenFont1" backgroundColor="SevenFontBackground" transparent="1" />
     <widget name="ConnStatus" position="889,268" size="379,214" font="Regular;22" backgroundColor="SevenFontBackgroundRight" transparent="1" halign="center" />
     <panel name="template_menu_left_right_button" />
@@ -171,6 +189,7 @@
   <!-- ********** BitrateViewer ********** -->
   <!-- BitrateViewer -->
   <screen name="BitrateViewer" backgroundColor="SevenBackground" flags="wfBorder" position="100,180" size="340,190" title="Bitrate viewer">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="BitrateViewer" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
     <eLabel text="Video" position="10,10" zPosition="1" size="80,26" font="Regular; 20" transparent="1" foregroundColor="white" backgroundColor="SevenFontBackground" />
     <eLabel text="min" position="10,40" zPosition="1" size="80,26" font="Regular; 20" transparent="1" foregroundColor="white" backgroundColor="SevenFontBackground" />
     <widget name="vmin" position="10,70" size="80,26" font="Regular; 20" transparent="1" backgroundColor="SevenFontBackground" />
@@ -193,6 +212,7 @@
   <!-- ********** CDInfo ********** -->
   <!-- CDInfo -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="CDInfo" position="0,0" size="1280,720" title="CDInfo">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="CDInfo" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
     <widget font="Regular2;21" position="70,80" render="Label" size="700,50" source="info" transparent="1" backgroundColor="SevenFontBackground" foregroundColor="SevenFont2" />
     <widget itemHeight="30" name="config" position="70,146" size="700,300" backgroundColor="SevenFontBackground" transparent="1" />
     <widget font="Regular2;21" position="70,469" render="Label" size="700,100" source="info2" transparent="1" backgroundColor="SevenFontBackground" foregroundColor="SevenFont2" />
@@ -202,6 +222,7 @@
   <!-- ********** CutListEditor ********** -->
   <!-- CutListEditor -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="CutListEditor" position="0,0" size="1280,720" title="Cutlist editor">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="CutListEditor" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
     <eLabel backgroundColor="white" position="70,130" size="700,381" zPosition="1" />
     <eLabel backgroundColor="transparent" position="72,132" size="696,377" zPosition="3" />
     <widget name="Video" position="72,132" size="696,377" zPosition="-10" />
@@ -231,6 +252,7 @@
   <!-- ********** DreamExplorerII ********** -->
   <!-- DreamExplorerII -->
   <screen name="DreamExplorerII" position="0,0" size="1280,720" flags="wfNoBorder" title="Dream-Explorer" backgroundColor="transparent">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="DreamExplorerII" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
     <widget name="filelist" position="70,80" size="708,540" scrollbarMode="showNever" backgroundColor="SevenFontBackground" transparent="1" />
     <eLabel text="delete" position="64,662" size="148,48" zPosition="1" font="Regular; 18" halign="left" valign="center" backgroundColor="SevenFontBackground" foregroundColor="SevenButtonText" transparent="1" />
     <eLabel text="Rename" position="264,662" size="148,48" zPosition="1" font="Regular; 18" halign="left" valign="center" backgroundColor="SevenFontBackground" foregroundColor="SevenButtonText" transparent="1" />
@@ -240,17 +262,20 @@
   </screen>
   <!-- vEditor -->
   <screen name="vEditor" position="0,0" size="1280,720" flags="wfNoBorder" title="File-Explorer" backgroundColor="transparent">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="vEditor" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
     <widget name="filedata" position="70,80" size="708,540" scrollbarMode="showNever" backgroundColor="SevenFontBackground" transparent="1" />
     <panel name="template_menu_left" />
   </screen>
   <!-- vInputBox -->
   <screen name="vInputBox" position="0,0" size="1280,720" flags="wfNoBorder" title="Input..." backgroundColor="transparent">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="vInputBox" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
     <widget name="text" position="70,80" size="708,250" scrollbarMode="showNever" backgroundColor="SevenFontBackground" transparent="1" />
     <widget name="input" position="70,383" size="708,250" scrollbarMode="showNever" font="Regular2; 20" itemHeight="28" transparent="1" foregroundColor="SevenFont2" enableWrapAround="1" backgroundColor="SevenFontBackground" />
     <panel name="template_menu_left" />
   </screen>
   <!-- CPmaniger -->
   <screen name="CPmaniger" position="0,0" size="1280,720" flags="wfNoBorder" title="Select Copy/Move location..." backgroundColor="transparent">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="CPmaniger" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
     <widget name="File" position="70,80" size="708,160" scrollbarMode="showNever" backgroundColor="SevenFontBackground" transparent="1" />
     <widget name="CPto" position="70,240" size="708,330" scrollbarMode="showNever" backgroundColor="SevenFontBackground" transparent="1" />
     <eLabel text="Move" position="64,662" size="148,48" zPosition="1" font="Regular; 18" halign="left" valign="center" backgroundColor="SevenFontBackground" foregroundColor="SevenButtonText" transparent="1" />
@@ -259,6 +284,7 @@
   </screen>
   <!-- MusicExplorer -->
   <screen name="MusicExplorer" backgroundColor="transparent" flags="wfNoBorder" position="center,center" size="1280,720">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="MusicExplorer" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
     <widget font="Regular; 24" position="50,80" render="Label" size="120,30" source="session.CurrentService" transparent="1" valign="center" zPosition="1" backgroundColor="SevenFontBackground">
       <convert type="ServicePosition">Remaining</convert>
     </widget>
@@ -270,6 +296,7 @@
   <!-- ********** DLNABrowser ********** -->
   <!-- DLNAFileBrowser -->
   <screen name="DLNAFileBrowser" position="0,0" size="1280,720" title="File Browser" flags="wfNoBorder" backgroundColor="transparent">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="DLNAFileBrowser" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
     <widget backgroundColor="SevenFontBackground" name="directory" position="70,80" size="708,30" valign="center" foregroundColor="SevenFont1" font="Regular;22" transparent="1" />
     <widget backgroundColor="SevenFontBackground" name="filelist" itemHeight="30" position="70,120" zPosition="1" size="708,480" foregroundColor="SevenFont1" font="Regular;22" transparent="1" />
     <panel name="template_menu_left_button" />
@@ -277,12 +304,14 @@
   </screen>
   <!-- DLNADeviceBrowser -->
   <screen name="DLNADeviceBrowser" position="0,0" size="1280,720" title="Device Browser" flags="wfNoBorder" backgroundColor="transparent">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="DLNADeviceBrowser" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
     <widget backgroundColor="SevenBackground" name="devicelist" itemHeight="30" position="70,80" size="708,510" zPosition="10" foregroundColor="SevenFont1" font="Regular;22" transparent="1" />
     <panel name="template_menu_left_button" />
     <panel name="template_colorkey_text_source" />
   </screen>
   <!-- DLNAClientConfig -->
   <screen name="DLNAClientConfig" position="0,0" size="1280,720" title="Client Config" flags="wfNoBorder" backgroundColor="transparent">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="DLNAClientConfig" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
     <widget backgroundColor="SevenBackground" name="config" itemHeight="30" position="70,80" size="708,510" zPosition="10" foregroundColor="SevenFont1" font="Regular;22" transparent="1" />
     <panel name="template_menu_left_button" />
     <panel name="template_colorkey_text_source" />
@@ -290,6 +319,7 @@
   <!-- ********** DVDPlayer ********** -->
   <!-- DVDPlayer -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="DVDPlayer" position="0,0" size="1280,720" title="InfoBar">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="DVDPlayer" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
     <widget backgroundColor="SevenFontBackground" font="Regular2; 30" noWrap="1" position="212,621" render="Label" size="619,35" source="session.CurrentService" transparent="1" valign="top" zPosition="1">
       <convert type="ServiceName">Name</convert>
     </widget>
@@ -321,6 +351,7 @@
   <!-- ********** Elektro Power Save ********** -->
   <!-- Elektro Power Save -->
   <screen name="Elektro" position="0,0" size="1280,720" title="Elektro Power Save" flags="wfNoBorder" backgroundColor="transparent">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="Elektro" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
     <widget name="config" position="70,80" size="708,550" font="Regular;16" backgroundColor="SevenFontBackground" transparent="1" />
     <panel name="template_menu_left_button" />
     <panel name="template_colorkey_text" />
@@ -328,6 +359,7 @@
   <!-- ********** EcmInfo ********** -->
   <!-- EcmInfoScreen -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="EcmInfoScreen" position="600,150" size="600, 80" zPosition="1">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="EcmInfoScreen" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
     <eLabel backgroundColor="SevenBackground" position="0,0" size="600,80" zPosition="-9" />
     <ePixmap pixmap="SevenHD/back/menumain.png" position="0,0" size="600,80" alphatest="blend" zPosition="-8" />
     <widget font="Regular2;16" foregroundColor="SevenFont1" halign="center" name="irdeto" position="149,14" size="18, 25" text="I" transparent="1" valign="center" zPosition="3" />
@@ -344,6 +376,7 @@
   <!-- ********** EMC ********** -->
   <!-- EMCMediaCenter -->
 <screen backgroundColor="transparent" flags="wfNoBorder" name="EMCMediaCenter" position="0,0" size="1280,720" title="InfoBar">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="EMCMediaCenter" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
     <widget source="global.CurrentTime" position="910,637" size="65,32" font="Regular; 20" render="Label" halign="right" zPosition="1" backgroundColor="SevenFontBackground" foregroundColor="SevenFont1" transparent="1">
       <convert type="SevenHDClockToText">Default</convert>
     </widget>
@@ -408,6 +441,7 @@
   </screen>
   <!-- EnhancedMovieCenterMenu -->
   <screen name="EnhancedMovieCenterMenu" position="0,0" size="1280,720" title="EnhancedMovieCenterMenu" flags="wfNoBorder" backgroundColor="transparent">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="EnhancedMovieCenterMenu" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
     <widget name="config" position="70,80" size="708,375" enableWrapAround="1" backgroundColor="SevenFontBackground" transparent="1" font="Regular; 20" />
     <widget source="help" render="Label" position="70,492" size="708,108" font="Regular2;20" foregroundColor="SevenFont2" backgroundColor="SevenFontBackground" transparent="1" />
     <panel name="template_menu_left_button" />
@@ -415,13 +449,20 @@
   </screen>
   <!-- MovieMenu -->
   <screen name="MovieMenu" position="0,0" size="1280,720" title="Movie Menu" flags="wfNoBorder" backgroundColor="transparent">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="MovieMenu" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
     <widget source="menu" render="Listbox" position="70,80" size="708,550" enableWrapAround="1" backgroundColor="SevenFontBackground" transparent="1">
-      <convert type="StringList" />
+    <convert type="TemplatedMultiContent">
+				{"template": [ MultiContentEntryText(pos = (30, 3), size = (1140, 44), flags = RT_HALIGN_LEFT, text = 0) ],
+				"fonts": [gFont("Regular", 33)],
+				"itemHeight": 48
+				}
+    </convert>
     </widget>
     <panel name="template_menu_left" />
   </screen>
   <!-- EMCImdbScan -->
   <screen name="EMCImdbScan" position="0,0" size="1280,720" title="EMC Cover Search" flags="wfNoBorder" backgroundColor="transparent">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="EMCImdbScan" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
     <widget name="poster" position="70,103" size="156,260" zPosition="4" alphatest="on" />
     <widget name="menulist" position="400,105" size="800,420" enableWrapAround="1" backgroundColor="SevenFontBackground" transparent="1" />
     <widget name="done_msg" position="400,542" size="800,65" font="Regular2;20" foregroundColor="SevenFont2" halign="center" backgroundColor="SevenFontBackground" transparent="1" />
@@ -440,13 +481,15 @@
   </screen>
   <!-- imdbSetup -->
   <screen name="imdbSetup" position="0,0" size="1280,720" title="EMC imdb Setup" flags="wfNoBorder" backgroundColor="transparent">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="imdbSetup" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
     <widget name="config" position="70,80" size="708,540" itemHeight="30" enableWrapAround="1" backgroundColor="SevenFontBackground" transparent="1" />
     <panel name="template_menu_left_button" />
     <panel name="template_colorkey_text_source" />
   </screen>
   <!-- IMDB -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="IMDB" position="0,0" size="1280,720" title="IMDb Details Plugin">
-    <widget itemHeight="30" name="menu" position="70,220" size="700,360" transparent="1" />
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="IMDB" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
+    <widget itemHeight="30" font="Regular2;20" name="menu" position="70,220" size="700,360" transparent="1" />
     <widget alphatest="blend" name="starsbg" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/IMDb/starsbar_empty.png" position="560,115" size="210,21" zPosition="2" transparent="1" />
     <widget name="stars" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/IMDb/starsbar_filled.png" position="560,115" size="210,21" transparent="1" zPosition="3" />
     <widget font="Regular2;20" foregroundColor="SevenFont1" halign="center" name="ratinglabel" position="560,134" size="210,24" transparent="1" />
@@ -460,6 +503,7 @@
   </screen>
   <!-- getCover -->
   <screen name="getCover" position="0,0" size="1280,720" title="EMC Cover Selecter" flags="wfNoBorder" backgroundColor="transparent">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="getCover" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
     <ePixmap pixmap="SevenHD/buttons/key_ok.png" position="998,435" size="32,32" alphatest="blend" />
     <ePixmap pixmap="SevenHD/buttons/key_menu.png" position="1122,435" size="32,32" alphatest="blend" />
     <widget name="menulist" position="100,80" size="708,420" enableWrapAround="1" backgroundColor="SevenFontBackground" transparent="1" />
@@ -470,6 +514,7 @@
   </screen>
   <!-- DownloadMovieInfo -->
   <screen name="DownloadMovieInfo" position="0,0" size="1280,720" title="Download Movie Info" flags="wfNoBorder" backgroundColor="transparent">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="DownloadMovieInfo" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
     <ePixmap pixmap="SevenHD/buttons/key_ok.png" position="22,670" size="32,32" alphatest="blend" />
     <ePixmap pixmap="SevenHD/buttons/key_menu.png" position="222,670" size="32,32" alphatest="blend" />
     <widget name="movielist" position="70,164" size="708,420" enableWrapAround="1" backgroundColor="SevenFontBackground" transparent="1" />
@@ -485,6 +530,7 @@
   </screen>
   <!-- MovieInfoPreview -->
   <screen name="MovieInfoPreview" position="0,0" size="1280,720" title="Movie Info Preview" flags="wfNoBorder" backgroundColor="transparent">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="MovieInfoPreview" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
     <widget position="70,135" size="708,500" enableWrapAround="1" backgroundColor="SevenFontBackground" transparent="1" />
     <widget name="movie_name" position="70,80" size="708,35" font="Regular2; 30" foregroundColor="SevenFont2" backgroundColor="SevenFontBackground" transparent="1" />
     <eLabel backgroundColor="SevenFontBackground" position="0,0" size="1280,720" transparent="1" zPosition="-9" />
@@ -493,6 +539,7 @@
   </screen>
   <!-- MovieInfoSetup -->
   <screen name="MovieInfoSetup" position="0,0" size="1280,720" title="Movie Info Setup" flags="wfNoBorder" backgroundColor="transparent">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="MovieInfoSetup" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
     <widget name="config" position="70,80" size="708,540" itemHeight="30" enableWrapAround="1" backgroundColor="SevenFontBackground" transparent="1" />
     <panel name="template_menu_left_button" />
     <panel name="template_colorkey_text_source" />
@@ -500,12 +547,14 @@
   <!-- ********** EPGRefresh ********** -->
   <!-- EPGRefreshServiceEditor -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="EPGRefreshServiceEditor" position="0,0" size="1280,720" title="Edit Services to refresh">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="EPGRefreshServiceEditor" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
     <widget backgroundColor="SevenFontBackground" enableWrapAround="1" itemHeight="30" name="config" position="70,80" size="708,540" transparent="1" />
     <panel name="template_menu_left_button" />
     <panel name="template_colorkey_text_source" />
   </screen>
   <!-- EPGRefreshConfiguration -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="EPGRefreshConfiguration" position="0,0" size="1280,720" title="Configure EPGRefresh">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="EPGRefreshConfiguration" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
     <widget backgroundColor="SevenFontBackground" enableWrapAround="1" itemHeight="30" name="config" position="70,80" size="708,510" transparent="1" />
     <widget backgroundColor="SevenFontBackground" font="Regular2;20" position="70,600" render="Label" size="708,50" source="help" transparent="1" foregroundColor="SevenFont2" />
     <panel name="template_menu_left_button" />
@@ -514,12 +563,14 @@
   <!-- ********** Filebrowser ********** -->
   <!-- FilebrowserConfigScreen -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="FilebrowserConfigScreen" position="0,0" size="1280,720" title="">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="FilebrowserConfigScreen" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
     <widget backgroundColor="SevenFontBackground" enableWrapAround="1" itemHeight="30" name="config" position="70,80" size="708,540" transparent="1" />
     <panel name="template_menu_left_button" />
     <panel name="template_colorkey_text_button" />
   </screen>
   <!-- FilebrowserScreen -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="FilebrowserScreen" position="0,0" size="1280,720" title="">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="FilebrowserScreen" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
     <widget backgroundColor="SevenFontBackground" itemHeight="30" name="list_left" position=" 70,115" size="550,510" transparent="1" />
     <widget backgroundColor="SevenFontBackground" itemHeight="30" name="list_right" position="660,115" size="550,510" transparent="1" />
     <panel name="template_menu_full_button" />
@@ -527,6 +578,7 @@
   </screen>
   <!-- Filebrowser -->
   <screen name="Filebrowser" title="File Browser" flags="wfNoBorder" size="1280,720" position="0,0" backgroundColor="transparent">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="Filebrowser" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
     <widget name="file_list" position="70,80" size="708,540" font="Regular;22" foregroundColor="SevenFont1" backgroundColor="SevenFontBackground" transparent="1" itemHeight="30" />
     <widget name="status" position="905,398" size="349,227" font="Regular2; 22" backgroundColor="SevenFontBackgroundRight" transparent="1" halign="center" foregroundColor="SevenFont2" />
     <panel name="template_menu_left_right_button" />
@@ -535,6 +587,7 @@
   <!-- ********** Frontpanel ********** -->
   <!-- Firmware Upgrade -->
   <screen name="FirmwareUpgrade" title="Firmware Upgrade" flags="wfNoBorder" size="1280,720" position="0,0" backgroundColor="transparent">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="FirmwareUpgrade" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
     <widget name="oldversion_label" position="105,250" size="300,25" font="Regular;22" backgroundColor="SevenFontBackground" transparent="1" />
     <widget name="oldversion" position="385,250" size="100,25" font="Regular;22" backgroundColor="SevenFontBackground" transparent="1" />
     <widget name="newversion_label" position="105,343" size="300,25" font="Regular;22" backgroundColor="SevenFontBackground" transparent="1" />
@@ -546,6 +599,7 @@
   <!-- ********** FritzCall ********** -->
   <!-- FritzCallSetup -->
   <screen name="FritzCallSetup" position="0,0" size="1280,720" flags="wfNoBorder" title="FritzCallSetup" backgroundColor="transparent">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="FritzCallSetup" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
     <widget name="consideration" position="70,80" size="708,90" font="Regular2; 20" backgroundColor="SevenFontBackground" transparent="1" foregroundColor="SevenFont2" />
     <widget name="config" position="71,196" size="708,440" itemHeight="30" scrollbarMode="showNever" enableWrapAround="1" backgroundColor="SevenFontBackground" transparent="1" font="Regular; 18" />
     <panel name="template_menu_left_button" />
@@ -553,6 +607,7 @@
   </screen>
   <!-- FritzDisplayCalls -->
   <screen name="FritzDisplayCalls" position="0,0" size="1280,720" flags="wfNoBorder" title="Fritz Display Calls" backgroundColor="transparent">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="FritzDisplayCalls" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
     <widget name="statusbar" position="70,80" size="708,46" font="Regular2; 20" backgroundColor="SevenFontBackground" transparent="1" foregroundColor="SevenFont2" />
     <widget source="entries" render="Listbox" position="70,154" size="708,460" zPosition="3" scrollbarMode="showNever" backgroundColor="SevenFontBackground" transparent="1">
       <convert type="TemplatedMultiContent">
@@ -573,6 +628,7 @@
   </screen>
   <!-- FritzDisplayPhonebook -->
   <screen name="FritzDisplayPhonebook" position="0,0" size="1280,720" flags="wfNoBorder" title="Fritz Display Phonebook" backgroundColor="transparent">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="FritzDisplayPhonebook" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
     <widget source="entries" render="Listbox" position="70,80" size="708,540" scrollbarMode="showNever" enableWrapAround="1" backgroundColor="SevenFontBackground" transparent="1">
       <convert type="TemplatedMultiContent">
 					 {"template": [
@@ -589,18 +645,21 @@
   </screen>
   <!-- AddScreen -->
   <screen name="AddScreen" position="0,0" size="1280,720" flags="wfNoBorder" title="Add Screen" backgroundColor="transparent">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="AddScreen" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
     <widget name="config" position="70,80" size="708,540" scrollbarMode="showNever" enableWrapAround="1" transparent="1" font="Regular; 18" backgroundColor="SevenFontBackground" />
     <panel name="template_menu_left_button" />
     <panel name="template_colorkey_text" />
   </screen>
   <!-- FritzAbout -->
   <screen name="FritzAbout" position="0,0" size="1280,720" flags="wfNoBorder" title="About Fritz Call" backgroundColor="transparent">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="FritzAbout" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
     <widget name="url" position="70,338" size="708,50" font="Regular2; 18" backgroundColor="SevenFontBackground" transparent="1" halign="center" foregroundColor="SevenFont2" />
     <widget name="text" position="70,80" size="708,230" font="Regular; 18" backgroundColor="SevenFontBackground" transparent="1" foregroundColor="SevenFont1" halign="center" />
     <panel name="template_menu_left" />
   </screen>
   <!-- FritzMenu -->
   <screen name="FritzMenu" position="0,0" size="1280,720" flags="wfNoBorder" title="Fritz Menu" backgroundColor="transparent">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="FritzMenu" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
     <widget name="FBFRufuml" position="130,440" size="760,25" font="Regular; 20" backgroundColor="SevenFontBackground" transparent="1" />
     <widget name="FBFInternet" position="130,259" size="760,80" font="Regular; 20" backgroundColor="SevenFontBackground" transparent="1" foregroundColor="SevenFont1" />
     <widget name="FBFDsl" position="130,360" size="760,25" font="Regular; 20" backgroundColor="SevenFontBackground" transparent="1" />
@@ -627,6 +686,7 @@
   </screen>
   <!-- FritzMenuNew -->
   <screen name="FritzMenuNew" position="0,0" size="1280,720" flags="wfNoBorder" title="Fritz Menu" backgroundColor="transparent">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="FritzMenuNew" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
     <widget name="FBFRufuml" position="130,440" size="760,25" font="Regular; 20" backgroundColor="SevenFontBackground" transparent="1" />
     <widget name="rufuml_active" pixmap="SevenHD/buttons/green.png" position="98,441" size="24,24" alphatest="blend" transparent="1" />
     <widget name="FBFInternet" position="130,259" size="760,80" font="Regular; 20" backgroundColor="SevenFontBackground" transparent="1" foregroundColor="SevenFont1" />
@@ -655,6 +715,7 @@
   <!-- ********** IPTV List Updater ********** -->
   <!-- IPTV -->
   <screen name="IPTV" position="0,0" size="1280,720" flags="wfNoBorder" title="IPTV List Updater" backgroundColor="transparent">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="IPTV" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
     <widget name="text1" position="57,98" size="880,30" font="Regular2; 24" transparent="1" valign="center" halign="left" backgroundColor="SevenFontBackground" foregroundColor="SevenFont2" />
     <widget name="IPTVList" position="58,147" size="560,420" scrollbarMode="showNever" font="Regular; 18" itemHeight="30" transparent="1" enableWrapAround="1" backgroundColor="SevenFontBackground" />
     <widget name="text2" position="56,578" size="880,30" font="Regular2; 20" transparent="1" valign="center" halign="left" backgroundColor="SevenFontBackground" foregroundColor="SevenFont2" />
@@ -664,6 +725,7 @@
   </screen>
   <!-- Start -->
   <screen name="Start" position="0,0" size="1280,720" flags="wfNoBorder" title="IPTV List Updater" backgroundColor="transparent">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="Start" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
     <widget name="maintain" position="65,160" size="800,30" font="Regular; 20" transparent="1" valign="center" halign="left" backgroundColor="SevenFontBackground" />
     <widget name="link1" position="65,200" size="800,30" font="Regular; 20" transparent="1" valign="center" halign="left" backgroundColor="SevenFontBackground" />
     <widget name="link2" position="65,240" size="800,30" font="Regular; 20" transparent="1" valign="center" halign="left" backgroundColor="SevenFontBackground" />
@@ -674,18 +736,21 @@
   </screen>
   <!-- Changelog -->
   <screen name="Changelog" position="0,0" size="1280,720" flags="wfNoBorder" title="Changelog IPTV List Updater" backgroundColor="transparent">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="Changelog" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
     <widget name="text" position="70,80" size="708,540" scrollbarMode="showNever" font="Regular; 21" transparent="1" enableWrapAround="1" backgroundColor="SevenFontBackground" />
     <panel name="template_menu_left_button" />
     <panel name="template_colorkey_text" />
   </screen>
   <!-- FAQ -->
   <screen name="FAQ" position="0,0" size="1280,720" flags="wfNoBorder" title="FAQ IPTV List Updater" backgroundColor="transparent">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="FAQ" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
     <widget name="text" position="70,80" size="708,540" scrollbarMode="showNever" font="Regular; 21" transparent="1" enableWrapAround="1" backgroundColor="SevenFontBackground" />
     <panel name="template_menu_left_button" />
     <panel name="template_colorkey_text" />
   </screen>
   <!-- Credits -->
   <screen name="Credits" position="0,0" size="1280,720" flags="wfNoBorder" title="Credits IPTV List Updater" backgroundColor="transparent">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="Credits" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
     <widget name="text" position="70,80" size="708,540" scrollbarMode="showNever" font="Regular; 21" transparent="1" enableWrapAround="1" backgroundColor="SevenFontBackground" />
     <panel name="template_menu_left_button" />
     <panel name="template_colorkey_text" />
@@ -693,6 +758,7 @@
   <!-- ********** LCD4Linux ********** -->
   <!-- LCDdisplayConfig -->
   <screen name="LCDdisplayConfig" position="0,0" size="1280,720" title="LCD4linux Settings" flags="wfNoBorder" backgroundColor="transparent">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="LCDdisplayConfig" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
     <widget name="LCD1" position="660,86" zPosition="3" size="550,250" transparent="1" alphatest="on" />
     <widget name="config" position="36,80" size="560,480" itemHeight="30" enableWrapAround="1" backgroundColor="SevenFontBackground" transparent="1" />
     <widget source="introduction" render="Label" position="36,570" size="550,30" font="Regular2;20" halign="center" valign="center" foregroundColor="SevenFont2" backgroundColor="SevenFontBackground" transparent="1" />
@@ -708,6 +774,7 @@
   <!-- ********** MediaInfo ********** -->
   <!-- MediaInfo -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="mediaInfo" position="0,0" size="1280,720" title="MediaInfo">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="mediaInfo" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
     <widget backgroundColor="SevenFontBackground" font="Regular;30" foregroundColor="SevenFont1" halign="center" name="head" position="60,90" size="1160,45" transparent="1" valign="center" zPosition="5" />
     <widget backgroundColor="SevenFontBackground" name="downloadList" itemHeight="65" position="21,152" scrollbarMode="showNever" size="1240,490" scrollbarWidth="5" scrollbarSliderForegroundColor="SevenFont1" scrollbarSliderBorderColor="darkgrey" scrollbarSliderBorderWidth="1" transparent="1" zPosition="-1" />
     <panel name="template_menu_full_button" />
@@ -715,6 +782,7 @@
   </screen>
   <!-- mediaInfoFolderScreen -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="mediaInfoFolderScreen" position="0,0" size="1280,720" title="MediaInfo">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="mediaInfoFolderScreen" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
     <widget font="Regular; 26" name="media" position="30,120" size="940,40" backgroundColor="SevenFontBackground" transparent="1" valign="top" />
     <widget name="folderlist" backgroundColor="SevenFontBackground" itemHeight="65" position="21,168" scrollbarMode="showNever" size="1240,440" scrollbarWidth="5" scrollbarSliderForegroundColor="SevenFont1" scrollbarSliderBorderColor="darkgrey" scrollbarSliderBorderWidth="1" transparent="1" />
     <panel name="template_menu_full_button" />
@@ -722,6 +790,7 @@
   </screen>
   <!-- mediaInfoConfigScreen -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="mediaInfoConfigScreen" position="0,0" size="1280,720" title="MediaInfo">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="mediaInfoConfigScreen" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
     <widget backgroundColor="SevenFontBackground" font="Regular;24" halign="center" name="head" position="60,90" size="1160,45" transparent="1" valign="center" zPosition="5" />
     <widget backgroundColor="SevenFontBackground" font="Regular;24" foregroundColor="SevenFont1" halign="center" name="check" position="60,143" size="1160,45" transparent="1" valign="center" zPosition="5" />
     <widget backgroundColor="SevenFontBackground" name="config" itemHeight="65" position="21,215" scrollbarMode="showNever" size="1240,405" scrollbarWidth="5" scrollbarSliderForegroundColor="SevenFont1" scrollbarSliderBorderColor="darkgrey" scrollbarSliderBorderWidth="1" transparent="1" zPosition="-1" />
@@ -731,6 +800,7 @@
   <!-- ********** MediaPlayer ********** -->
   <!-- MediaPlayer -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="MediaPlayer" position="center,center" size="1280,720" title="MediaPlayer" transparent="0">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="MediaPlayer" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
     <eLabel backgroundColor="SevenFontBackground" font="Regular2; 22" position="432,280" size="500,40" text="Playlist" transparent="1" />
     <eLabel backgroundColor="SevenFontBackground" foregroundColor="SevenLins" position="71,412" size="300,1" zPosition="-1" />
     <widget backgroundColor="SevenFontBackground" scrollbarMode="showNever" enableWrapAround="1" itemHeight="25" name="filelist" position="430,107" size="782,167" transparent="1" />
@@ -759,6 +829,7 @@
   </screen>
   <!-- DirectoryBrowser -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="DirectoryBrowser" position="0,0" size="1280,720" title="Directorybrowser">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="DirectoryBrowser" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
     <widget name="filelist" position="70,80" scrollbarMode="showNever" size="708,540" transparent="1" backgroundColor="SevenFontBackground" zPosition="3" />
     <eLabel text="Cancel" position="64,662" size="148,48" zPosition="1" font="Regular; 18" halign="left" valign="center" backgroundColor="SevenFontBackground" foregroundColor="SevenButtonText" transparent="1" />
     <eLabel text="Save" position="264,662" size="148,48" zPosition="1" font="Regular; 18" halign="left" valign="center" backgroundColor="SevenFontBackground" foregroundColor="SevenButtonText" transparent="1" />
@@ -766,6 +837,7 @@
   </screen>
   <!-- MediaPlayerSettings -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="MediaPlayerSettings" position="0,0" size="1280,720" title="Edit Settings">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="MediaPlayerSettings" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
     <widget name="config" position="70,80" scrollbarMode="showNever" size="708,540" transparent="1" backgroundColor="SevenFontBackground" zPosition="3" />
     <eLabel text="Cancel" position="64,662" size="148,48" zPosition="1" font="Regular; 18" halign="left" valign="center" backgroundColor="SevenFontBackground" foregroundColor="SevenButtonText" transparent="1" />
     <eLabel text="Save" position="264,662" size="148,48" zPosition="1" font="Regular; 18" halign="left" valign="center" backgroundColor="SevenFontBackground" foregroundColor="SevenButtonText" transparent="1" />
@@ -774,12 +846,14 @@
   <!-- ********** Merlin Music Player ********** -->
   <!-- MerlinMusicPlayerFileList -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="MerlinMusicPlayerFileList" position="0,0" size="1280,710" title="Merlin Music Player">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="MerlinMusicPlayerFileList" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
     <widget name="headertext" position="70,80" size="708,38" zPosition="3" halign="left" foregroundColor="SevenFont2" backgroundColor="SevenFontBackground" font="Regular2; 35" transparent="1" />
     <widget name="list" position="70,137" size="708,450" backgroundColor="SevenFontBackground" transparent="1" />
     <panel name="template_menu_left" />
   </screen>
   <!-- MerlinMusicPlayerLyrics -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="MerlinMusicPlayerLyrics" position="0,0" size="1280,720" title="Merlin Music Player">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="MerlinMusicPlayerLyrics" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
     <widget name="resulttext" position="70,127" size="708,38" backgroundColor="SevenFontBackground" font="Regular; 35" transparent="1" />
     <widget name="lyric_text" position="70,178" size="708,450" backgroundColor="SevenFontBackground" transparent="1" />
     <widget name="headertext" position="70,80" size="708,38" zPosition="3" halign="left" backgroundColor="SevenFontBackground" font="Regular; 30" transparent="1" />
@@ -787,6 +861,7 @@
   </screen>
   <!-- MerlinMusicPlayerScreen -->
   <screen name="MerlinMusicPlayerScreen" position="0,0" size="1280,720" title="Merlin Music Player" flags="wfNoBorder" backgroundColor="transparent">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="MerlinMusicPlayerScreen" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
     <widget name="title" position=" 80,375" size="545,32" font="Regular;26" backgroundColor="SevenFontBackground" transparent="1" />
     <widget source="session.CurrentService" render="Label" position="625,375" size="120,32" font="Regular;26" backgroundColor="SevenFontBackground" halign="right" transparent="1">
       <convert type="ServicePosition">Length</convert>
@@ -814,11 +889,13 @@
   </screen>
   <!-- MerlinMusicPlayerScreenSaver -->
   <screen name="MerlinMusicPlayerScreenSaver" position="0,0" size="1280,720" title="Merlin Music Player ScreenSaver" flags="wfNoBorder" backgroundColor="SevenBackground">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="MerlinMusicPlayerScreenSaver" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
     <widget name="coverArt" pixmap="SevenHD/mmp/new/no_coverArt.png" position="200,77" size="200,256" transparent="0" alphatest="blend" />
     <widget name="display" position="200,315" size="1280,24" zPosition="1" transparent="0" font="Regular;20" foregroundColor="SevenFont1" />
   </screen>
   <!-- MerlinMusicPlayerSetup -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="MerlinMusicPlayerSetup" position="0,0" size="1280,710" title="Merlin Music Player">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="MerlinMusicPlayerSetup" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
     <widget name="config" position="70,80" size="708,540" backgroundColor="SevenFontBackground" transparent="1" />
     <eLabel text="Cancel" position="64,662" size="148,48" zPosition="1" font="Regular; 18" halign="left" valign="center" backgroundColor="SevenFontBackground" foregroundColor="SevenButtonText" transparent="1" />
     <eLabel text="OK" position="264,662" size="148,48" zPosition="1" font="Regular; 18" halign="left" valign="center" backgroundColor="SevenFontBackground" foregroundColor="SevenButtonText" transparent="1" />
@@ -826,12 +903,14 @@
   </screen>
   <!-- MerlinMusicPlayerSongList -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="MerlinMusicPlayerSongList" position="0,0" size="1280,720" title="Songlist">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="MerlinMusicPlayerSongList" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
     <widget name="headertext" position="70,80" size="708,38" zPosition="3" halign="left" foregroundColor="SevenFont2" backgroundColor="SevenFontBackground" font="Regular2; 35" transparent="1" />
     <widget name="list" position="70,137" size="708,450" itemHeight="30" backgroundColor="SevenFontBackground" transparent="1" />
     <panel name="template_menu_left" />
   </screen>
   <!-- SelectPath -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="SelectPath" position="0,0" size="1280,720" title="Select path">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="SelectPath" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
     <widget name="target" position="70,80" size="708,38" zPosition="3" halign="left" foregroundColor="SevenFont2" backgroundColor="SevenFontBackground" font="Regular2; 35" transparent="1" />
     <widget name="filelist" position="70,159" size="708,450" backgroundColor="SevenFontBackground" transparent="1" />
     <panel name="template_menu_left_button" />
@@ -839,12 +918,14 @@
   </screen>
   <!-- iDreamAddToDatabase -->
   <screen name="iDreamAddToDatabase" position="0,0" size="1280,720" title="Add music files to iDream database" flags="wfNoBorder" backgroundColor="transparent">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="iDreamAddToDatabase" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
     <widget name="output" position="70,80" size="708,540" font="Regular;22" backgroundColor="SevenFontBackground" transparent="1" />
     <panel name="template_menu_left_button" />
     <panel name="template_colorkey_text" />
   </screen>
   <!-- iDreamMerlin -->
   <screen name="iDreamMerlin" position="0,0" size="1280,720" title="iDream" flags="wfNoBorder" backgroundColor="transparent">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="iDreamMerlin" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
     <widget name="list" position="70,80" size="708,540" zPosition="3" itemHeight="30" backgroundColor="SevenFontBackground" transparent="1" />
     <panel name="template_menu_left_button" />
     <panel name="template_colorkey_text" />
@@ -853,6 +934,7 @@
 
   <!-- MoviePlayer -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="MoviePlayer" position="0,0" size="1280,720" title="InfoBar">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="MoviePlayer" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
     <widget source="global.CurrentTime" position="910,681" size="65,32" font="Regular; 20" render="Label" halign="right" zPosition="1" backgroundColor="SevenFontBackground" foregroundColor="SevenFont1" transparent="1">
       <convert type="SevenHDClockToText">Default</convert>
     </widget>
@@ -906,6 +988,7 @@
   </screen>
   <!-- MovieEpgSetup -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="MovieEpgSetup" position="0,0" size="1280,720" title="MovieEpg Setup">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="MovieEpgSetup" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
     <widget backgroundColor="SevenFontBackground" enableWrapAround="1" name="config" position="70,80" size="700,400" transparent="1" />
     <widget backgroundColor="SevenFontBackground" font="Regular2;20" position="70,505" render="Label" size="700,88" source="help" transparent="1" foregroundColor="SevenFont2" />
     <panel name="template_menu_left_button" />
@@ -913,6 +996,7 @@
   </screen>
   <!-- MovieContextMenu -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="MovieContextMenu" position="0,0" size="860,723" title="Movielist menu">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="MovieContextMenu" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
     <eLabel backgroundColor="SevenFontBackground" font="Regular2;23" position="70,80" size="700,28" text="Movielist menu" transparent="1" foregroundColor="SevenFont2" />
     <widget enableWrapAround="1" itemHeight="30" name="menu" position="70,123" size="708,480" transparent="1" backgroundColor="SevenFontBackground" zPosition="3" />
     <panel name="template_menu_left" />
@@ -920,6 +1004,7 @@
   <!-- ********** MSNWeatherPlugin ********** -->
   <!-- MSNWeatherPlugin -->
   <screen name="MSNWeatherPlugin" backgroundColor="transparent" flags="wfNoBorder" position="0,0" size="1280,720" title="Weather Plugin">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="MSNWeatherPlugin" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
     <widget render="Label" source="caption" position="155,80" size="600,30" font="Regular;23" backgroundColor="SevenFontBackground" foregroundColor="SevenFont1" halign="left" transparent="1" />
     <widget render="Label" source="observationpoint" position="922,80" size="300,30" font="Regular;23" backgroundColor="SevenFontBackgroundRight" foregroundColor="SevenFont1" transparent="1" halign="center" />
     <widget render="Label" source="observationtime" position="996,126" size="150,30" font="Regular;23" backgroundColor="SevenFontBackgroundRight" foregroundColor="SevenFont1" transparent="1" halign="center" />
@@ -951,6 +1036,7 @@
   </screen>
   <!-- MSNWeatherPluginEntriesListConfigScreen -->
   <screen name="MSNWeatherPluginEntriesListConfigScreen" position="0,0" size="1280,720" title="WeatherPlugin: List of Entries" flags="wfNoBorder" backgroundColor="transparent">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="MSNWeatherPluginEntriesListConfigScreen" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
     <widget name="entrylist" position="70,146" zPosition="1" size="708,450" font="Regular; 22" halign="left" valign="top" transparent="1" backgroundColor="SevenFontBackground" foregroundColor="SevenFont1" />
     <widget source="city" render="Label" position="70,105" size="220,28" font="Regular2; 20" halign="left" valign="center" transparent="1" backgroundColor="SevenFontBackground" foregroundColor="SevenFont2" />
     <widget source="text" render="Label" position="297,105" size="480,28" font="Regular2; 22" halign="left" valign="center" transparent="1" backgroundColor="SevenFontBackground" foregroundColor="SevenFont2" />
@@ -960,6 +1046,7 @@
   </screen>
   <!-- MSNWeatherPluginEntryConfigScreen -->
   <screen name="MSNWeatherPluginEntryConfigScreen" position="0,0" size="1280,720" title="WeatherPlugin: Edit Entry" flags="wfNoBorder" backgroundColor="transparent">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="MSNWeatherPluginEntryConfigScreen" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
     <widget name="config" position="70,80" zPosition="1" size="708,540" font="Regular; 22" halign="left" valign="top" transparent="1" backgroundColor="SevenFontBackground" foregroundColor="SevenFont1" />
     <widget name="HelpWindow" position="70,423" size="532,200" backgroundColor="SevenBackground" transparent="1" flags="wfNoBorder" />
     <panel name="template_menu_left_button" />
@@ -967,6 +1054,7 @@
   </screen>
   <!-- MSNWeatherPluginSearch -->
   <screen name="MSNWeatherPluginSearch" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="MSNWeatherPluginSearch" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
     <widget name="entrylist" position="70,80" zPosition="1" size="708,540" font="Regular; 22" halign="left" valign="top" transparent="1" backgroundColor="SevenFontBackground" foregroundColor="SevenFont1" />
     <widget name="HelpWindow" position="70,423" size="532,200" backgroundColor="SevenBackground" transparent="1" flags="wfNoBorder" />
     <panel name="template_menu_left_button" />
@@ -976,6 +1064,7 @@
   <!-- ********** OMBManagerList ********** -->
   <!-- OMBManagerList -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="OMBManagerList" position="0,0" size="1280,720" title="OMBManagerList">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="OMBManagerList" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
     <widget source="list" render="Listbox" position="70,80" size="705,540" zPosition="3" backgroundColor="SevenFontBackground" transparent="1">
       <convert type="StringList" />
     </widget>
@@ -985,6 +1074,7 @@
   <!-- ********** openWebif ********** -->
   <!-- OpenWebifConfig -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="OpenWebifConfig" position="0,0" size="1280,720" title="OpenWebif Configuration">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="OpenWebifConfig" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
     <widget backgroundColor="SevenFontBackground" font="Regular2;24" halign="center" name="lab1" position="70,80" size="708,60" transparent="1" valign="top" zPosition="1" foregroundColor="SevenFont2" />
     <widget name="config" position="70,161" size="708,410" backgroundColor="SevenFontBackground" transparent="1" />
     <panel name="template_menu_left_button" />
@@ -993,16 +1083,19 @@
   <!-- ********** OscamInfo ********** -->
   <!-- OscamInfoMenu -->
   <screen name="OscamInfoMenu" position="0,0" size="1280,720" flags="wfNoBorder" title="OscamInfo-Main Menu" backgroundColor="transparent">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="OscamInfoMenu" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
     <widget name="mainmenu" position="70,80" size="708,540" backgroundColor="SevenFontBackground" transparent="1" />
     <panel name="template_menu_left" />
   </screen>
   <!-- oscECMInfo -->
   <screen name="oscECMInfo" position="0,0" size="1280,720" flags="wfNoBorder" title="ECM Info" backgroundColor="transparent">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="oscECMInfo" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
     <widget name="output" position="70,80" size="708,540" foregroundColor="SevenFont1" backgroundColor="SevenFontBackground" transparent="1" />
     <panel name="template_menu_left" />
   </screen>
   <!-- OscamInfoConfigScreen -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="OscamInfoConfigScreen" position="0,0" size="1280,720" title="Oscam Info Setup">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="OscamInfoConfigScreen" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
     <widget itemHeight="30" name="config" position="70,80" size="708,240" backgroundColor="SevenFontBackground" transparent="1" />
     <widget itemHeight="30" name="status" position="69,370" size="708,240" transparent="1" backgroundColor="SevenFontBackground" foregroundColor="SevenFont2" font="Regular2; 16" />
     <panel name="template_menu_left_button" />
@@ -1011,6 +1104,7 @@
   <!-- ********** PiconManager ********** -->
   <!-- PiconManagerScreen -->
   <screen name="PiconManagerScreen" backgroundColor="transparent" flags="wfNoBorder" title="PiconManager" position="0,0" size="1280,720">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="PiconManagerScreen" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
     <widget backgroundColor="SevenBackground" name="piconpath" position="80,80" size="690,26" font="Regular;18" foregroundColor="SevenFont1" transparent="1" zPosition="1" halign="left" />
     <widget backgroundColor="SevenBackground" name="piconpath2" position="260,80" size="500,26" font="Regular;18" foregroundColor="SevenFont1" transparent="1" zPosition="1" halign="left" />
     <widget backgroundColor="SevenBackground" name="piconspace" position="80,110" size="690,26" font="Regular;18" foregroundColor="SevenFont1" transparent="1" zPosition="1" halign="left" />
@@ -1036,6 +1130,7 @@
   </screen>
   <!-- PiconManagerFolderScreen -->
   <screen name="PiconManagerFolderScreen" position="0,0" size="1280,720" title="" backgroundColor="transparent" flags="wfNoBorder">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="PiconManagerFolderScreen" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
     <widget name="media" position="70,80" size="540,30" valign="top" font="Regular;22" foregroundColor="SevenFont1" backgroundColor="SevenFontBackground" transparent="1" />
     <widget name="folderlist" position="70,140" size="708,450" itemHeight="30" scrollbarMode="showNever" scrollbarWidth="5" scrollbarSliderForegroundColor="grey" scrollbarSliderBorderColor="grey" scrollbarSliderBorderWidth="1" enableWrapAround="1" backgroundColor="SevenFontBackground" transparent="1" />
     <panel name="template_colorkey_text_source" />
@@ -1043,6 +1138,7 @@
   </screen>
   <!-- PiconManagerConfigListScreen -->
   <screen name="ConfigListScreen" backgroundColor="transparent" flags="wfNoBorder" title="Select Color" position="0,0" size="1280,720">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="ConfigListScreen" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
     <widget name="config" position="70,80" size="708,540" backgroundColor="SevenFontBackground" transparent="1" />
     <panel name="template_colorkey_text" />
     <panel name="template_menu_left_button" />
@@ -1050,6 +1146,7 @@
   <!-- ********** PiconsUpdater ********** -->
   <!-- PiconsUpdaterView -->
   <screen name="PiconsUpdaterView" position="0,0" size="1280,720" title="Picons Updater" flags="wfNoBorder" backgroundColor="transparent">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="PiconsUpdaterView" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
   <widget name="config" position="70,80" size="708,510" transparent="1" backgroundColor="SevenFontBackground" />
   <widget name="previewImage" position="902,154" size="350,233" zPosition="1" alphatest="blend" transparent="1" backgroundColor="SevenFontBackgroundRight" />
   <widget name="backgroundImage" position="902,397" size="350,156" zPosition="1" alphatest="blend" transparent="1" backgroundColor="SevenFontBackgroundRight" />
@@ -1061,6 +1158,7 @@
 </screen>
   <!-- JobProgressView -->
   <screen name="JobProgressView" position="0,0" size="1280,720" zPosition="1" title="Job Progress" backgroundColor="transparent" flags="wfNoBorder">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="JobProgressView" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
     <widget source="titleText" position="174,80" size="500,40" render="Label" font="Regular;24" foregroundColor="SevenFont1" backgroundColor="SevenBackground" halign="center" transparent="1" />
     <widget name="downloadProgress" position="174,130" size="500,30" borderWidth="2" borderColor="SevenBorder" backgroundColor="SevenBackground" foregroundColor="SevenProgress" transparent="1" />
     <widget source="downloadProgressText" position="174,160" size="500,30" render="Label" font="Regular;20" foregroundColor="SevenFont1" backgroundColor="SevenBackground" halign="center" transparent="1" />
@@ -1069,6 +1167,7 @@
   <!-- ********** PicturePlayer ********** -->
   <!-- picshow -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="picshow" position="0,0" size="1280,720" title="PicturePlayer">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="picshow" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
     <widget alphatest="blend" name="thn" backgroundColor="SevenFontBackground" position="802,100" size="426,240" zPosition="4" transparent="1" />
     <widget backgroundColor="SevenFontBackground" font="Regular2;22" foregroundColor="SevenFont2" position="800,350" render="Label" size="430,260" source="label" transparent="1" />
     <widget backgroundColor="SevenFontBackground" itemHeight="30" name="filelist" position="70,80" size="708,510" transparent="1" />
@@ -1077,6 +1176,7 @@
   </screen>
   <!-- Pic_Exif -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="Pic_Exif" position="0,0" size="1280,720" title="Info">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="Pic_Exif" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
     <widget backgroundColor="SevenFontBackground" position="70,80" render="Listbox" selectionDisabled="1" size="708,490" source="menu" transparent="1">
       <convert type="TemplatedMultiContent">
 				{"template": [
@@ -1093,6 +1193,7 @@
   <!-- ********** Transcoding ********** -->
   <!-- TranscodingSetupAdvanced -->
   <screen name="TranscodingSetupAdvanced" position="0,0" size="1280,720" title="Transcoding Setup Advanced" flags="wfNoBorder" backgroundColor="transparent">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="TranscodingSetupAdvanced" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
     <widget name="config" position="70,80" zPosition="1" size="708,360" font="Regular;22" foregroundColor="SevenFont1" halign="left" valign="top" transparent="1" backgroundColor="SevenFontBackground" />
     <widget source="description" render="Label" position="70,485" size="708,60" font="Regular2;22" foregroundColor="SevenFont2" halign="left" valign="center" transparent="1" backgroundColor="SevenFontBackground" />
     <widget source="text" render="Label" position="70,560" size="708,30" font="Regular2;22" foregroundColor="SevenFont2" halign="left" valign="center" backgroundColor="SevenFontBackground" transparent="1" />
@@ -1101,6 +1202,7 @@
   </screen>
   <!-- TranscodingSetup -->
   <screen name="TranscodingSetup" position="0,0" size="1280,720" title="Transcoding Setup" flags="wfNoBorder" backgroundColor="transparent">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="TranscodingSetup" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
     <widget name="config" position="70,80" zPosition="1" size="708,360" font="Regular;22" foregroundColor="SevenFont1" halign="left" valign="top" transparent="1" backgroundColor="SevenFontBackground" />
     <widget source="description" render="Label" position="70,485" size="708,60" font="Regular2;22" foregroundColor="SevenFont2" halign="left" valign="center" transparent="1" backgroundColor="SevenFontBackground" />
     <widget source="text" render="Label" position="70,560" size="708,30" font="Regular2;22" foregroundColor="SevenFont2" halign="left" valign="center" backgroundColor="SevenFontBackground" transparent="1" />
@@ -1110,6 +1212,7 @@
   <!-- ********** VLC MediaPlayer ********** -->
   <!-- VlcMediaListScreen -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="VlcMediaListScreen" position="0,0" size="1280,720" title="VLC Video Player">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="VlcMediaListScreen" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
     <widget alphatest="blend" name="filelist_button_sel" foregroundColor="orange" position="70,138" size="150,5" zPosition="3" transparent="1" />
     <widget alphatest="blend" name="playlist_button_sel" foregroundColor="orange" position="230,138" size="150,5" zPosition="3" />
     <widget backgroundColor="SevenFontBackground" font="Regular;20" foregroundColor="SevenFont1" halign="center" name="filelist_text" position="70,112" size="150,23" transparent="1" zPosition="4" />
@@ -1122,6 +1225,7 @@
   </screen>
   <!-- VlcServerListScreen -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="VlcServerListScreen" position="0,0" size="1280,720" title="VLC Video Player">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="VlcServerListScreen" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
     <widget backgroundColor="SevenFontBackground" font="Regular;22" foregroundColor="SevenFont1" name="serverlabel" position="70,80" size="708,28" transparent="1" />
     <widget enableWrapAround="1" name="serverlist" backgroundColor="SevenFontBackground" position="70,130" size="708,420" transparent="1" zPosition="3" />
     <eLabel backgroundColor="SevenFontBackground" font="Regular2;22" foregroundColor="SevenFont2" halign="center" position="70,585" size="708,28" text="Select a VLC-Server Profile" transparent="1" />
@@ -1130,6 +1234,7 @@
   </screen>
   <!-- VlcServerConfigScreen -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="VlcServerConfigScreen" position="0,0" size="1280,720" title="VLC Video Player">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="VlcServerConfigScreen" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
     <widget enableWrapAround="1" name="config" backgroundColor="SevenFontBackground" position="70,80" size="708,480" transparent="1" />
     <eLabel backgroundColor="SevenFontBackground" font="Regular2;22" foregroundColor="SevenFont2" halign="center" position="70,585" size="708,28" text="Edit VLC Server" transparent="1" />
     <panel name="template_colorkey_text" />
@@ -1138,6 +1243,7 @@
   <!-- ********** Web Browser by Maggy ********** -->
   <!-- BrowserLauncher -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="BrowserLauncher" position="0,0" size="1280,720" title="Web Browser">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="BrowserLauncher" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
     <widget name="config" backgroundColor="SevenFontBackground" position="108,112" size="309,100" transparent="1" />
     <ePixmap alphatest="blend" pixmap="SevenHD/menu/rc_wb_desc.png" position="87,224" size="358,324" />
     <widget font="Regular2;18" foregroundColor="red" halign="center" name="info" position="100,550" size="309,70" backgroundColor="SevenFontBackground" transparent="1" />
@@ -1147,6 +1253,7 @@
   <!-- ********** WeatherPlugin ********** -->
   <!-- WeatherPluginEntriesListConfigScreen -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="WeatherPluginEntriesListConfigScreen" position="0,0" size="1280,720" title="WeatherPlugin: List of Entries">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="WeatherPluginEntriesListConfigScreen" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
     <widget backgroundColor="SevenFontBackground" font="Regular;24" foregroundColor="SevenFont1" position="70,80" render="Label" size="150,28" source="city" transparent="1" />
     <widget backgroundColor="SevenFontBackground" font="Regular;24" foregroundColor="SevenFont1" position="225,80" render="Label" size="500,28" source="language" transparent="1" />
     <widget backgroundColor="SevenFontBackground" enableWrapAround="1" itemHeight="30" name="entrylist" position="70,130" size="710,480" transparent="1" />
@@ -1155,12 +1262,14 @@
   </screen>
   <!-- WeatherPluginEntryConfigScreen -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="WeatherPluginEntryConfigScreen" position="0,0" size="1280,720" title="WeatherPlugin: Edit Entry">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="WeatherPluginEntryConfigScreen" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
     <widget backgroundColor="SevenFontBackground" enableWrapAround="1" itemHeight="30" name="config" position="70,80" size="78,540" transparent="1" />
     <panel name="template_colorkey_text_source" />
     <panel name="template_menu_left_button" />
   </screen>
   <!-- WeatherPlugin -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="WeatherPlugin" position="0,0" size="1280,720" title="Weather Plugin">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="WeatherPlugin" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
     <widget backgroundColor="SevenFontBackground" font="Regular;24" foregroundColor="SevenFont1" position="70,150" render="Label" size="400,28" source="caption" transparent="1" />
     <widget backgroundColor="SevenFontBackground" font="Regular;24" foregroundColor="SevenFont1" position="70,190" render="Label" size="400,28" source="currentTemp" transparent="1" />
     <widget backgroundColor="SevenFontBackground" font="Regular;22" foregroundColor="SevenFont1" position="70,250" render="Label" size="400,26" source="condition" transparent="1" />
@@ -1184,6 +1293,7 @@
   <!-- ********** WebRadioFS ********** -->
   <!-- WebradioFSScreen_12 -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="WebradioFSScreen_12" position="0,0" size="1280,720" title="">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="WebradioFSScreen_12" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
     <ePixmap alphatest="blend" pixmap="SevenHD/icons/ico_rec_off.png" position="785,621" size="60,25" zPosition="2" transparent="1" />
     <widget name="rec_pic" alphatest="blend" pixmap="SevenHD/icons/ico_rec_on.png" position="785,621" size="60,25" zPosition="2" transparent="1" />
     <widget backgroundColor="SevenFontBackground" font="Regular;18" foregroundColor="SevenFont1" halign="center" name="rec_txt" position="70,620" size="708,26" transparent="1" valign="center" zPosition="2" />
@@ -1197,6 +1307,7 @@
   </screen>
   <!-- menu_12 -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="menu_12" position="0,0" size="1280,720" title="webradioFS">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="menu_12" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
     <widget backgroundColor="SevenFontBackground" enableWrapAround="1" foregroundColor="SevenFont1" name="streamlist" position="70,80" scrollbarMode="showNever" size="690,510" transparent="1" zPosition="2" />
     <widget backgroundColor="SevenFontBackground" font="Regular;18" foregroundColor="SevenFont1" name="help" position="70,80" size="690,510" transparent="1" zPosition="3" />
     <widget backgroundColor="SevenFontBackground" foregroundColor="SevenFont1" name="info" position="70,80" scrollbarMode="showNever" size="690,510" transparent="1" zPosition="3" />
@@ -1206,6 +1317,7 @@
   </screen>
   <!-- wbrFS_r_site -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="wbrFS_r_site" position="880,0" size="400,720">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="wbrFS_r_site" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
   <widget alphatest="blend" backgroundColor="SevenFontBackgroundRight" name="picture" position="48,88" size="300,270" />
   <widget backgroundColor="SevenFontBackgroundRight" font="Regular;18" foregroundColor="SevenFont1" halign="left" name="zeile1" position="52,380" size="100,24" transparent="1" />
   <widget backgroundColor="SevenFontBackgroundRight" font="Regular;18" foregroundColor="SevenFont1" halign="left" name="zeile1b" position="172,380" size="180,24" transparent="1" noWrap="1" />
@@ -1235,6 +1347,7 @@
 </screen>
   <!-- genre_anzeige_12 -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="genre_anzeige_12" position="0,0" size="1280,720" title="webradioFS">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="genre_anzeige_12" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
   <widget backgroundColor="SevenFontBackground" enableWrapAround="1" foregroundColor="SevenFont1" name="streamlist" position="70,80" scrollbarMode="showNever" size="690,510" scrollbarWidth="5" scrollbarSliderForegroundColor="SevenFont1" scrollbarSliderBorderColor="darkgrey" scrollbarSliderBorderWidth="1" transparent="1" zPosition="2" />
   <widget backgroundColor="SevenFontBackground" font="Regular;18" foregroundColor="SevenFont1" name="help" position="70,80" size="690,510" transparent="1" zPosition="3" />
   <widget backgroundColor="SevenFontBackground" foregroundColor="SevenFont1" name="info" position="70,80" scrollbarMode="showNever" size="690,510" transparent="1" zPosition="3" />
@@ -1244,6 +1357,7 @@
 </screen>
   <!-- groups_12 -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="groups_12" position="0,0" size="1280,720" title="webradioFS">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="groups_12" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
   <widget backgroundColor="SevenFontBackground" enableWrapAround="1" foregroundColor="SevenFont1" name="streamlist" position="70,80" scrollbarMode="showNever" size="690,510" transparent="1" zPosition="2" />
   <widget backgroundColor="SevenFontBackground" font="Regular;18" foregroundColor="SevenFont1" name="help" position="70,80" size="690,510" transparent="1" zPosition="3" />
   <widget backgroundColor="SevenFontBackground" foregroundColor="SevenFont1" name="info" position="70,80" scrollbarMode="showNever" size="690,510" transparent="1" zPosition="3" />
@@ -1253,6 +1367,7 @@
 </screen>
   <!-- WebradioFSSetup_12 -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="WebradioFSSetup_12" position="0,0" size="1280,720" title="webradioFS">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="WebradioFSSetup_12" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
   <widget backgroundColor="SevenFontBackground" enableWrapAround="1" foregroundColor="SevenFont1" name="config" position="70,80" size="690,503" scrollbarMode="showNever" scrollbarWidth="5" scrollbarSliderForegroundColor="SevenFont1" scrollbarSliderBorderColor="darkgrey" scrollbarSliderBorderWidth="1" transparent="1" zPosition="3" />
   <widget backgroundColor="SevenFontBackground" font="Regular2;22" foregroundColor="SevenFont2" halign="left" name="playtext" position="70,608" size="708,30" transparent="1" valign="center" zPosition="2" />
   <panel name="template_colorkey_text" />
@@ -1260,6 +1375,7 @@
 </screen>
   <!-- WebradioFS_FB_Setup_12 -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="WebradioFS_FB_Setup_12" position="0,0" size="1280,720" title="webradioFS">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="WebradioFS_FB_Setup_12" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
   <widget backgroundColor="SevenFontBackground" enableWrapAround="1" foregroundColor="SevenFont1" name="config" position="70,80" size="690,503" scrollbarMode="showNever" scrollbarWidth="5" scrollbarSliderForegroundColor="SevenFont1" scrollbarSliderBorderColor="darkgrey" scrollbarSliderBorderWidth="1" transparent="1" zPosition="3" />
   <widget backgroundColor="SevenFontBackground" font="Regular2;22" foregroundColor="SevenFont2" halign="center" name="playtext" position="70,608" size="708,30" transparent="1" valign="center" zPosition="2" />
   <panel name="template_colorkey_text" />
@@ -1267,6 +1383,7 @@
 </screen>
   <!-- rec_menu_12 -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="rec_menu_12" position="0,0" size="1280,720" title="webradioFS">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="rec_menu_12" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
   <widget backgroundColor="SevenFontBackground" enableWrapAround="1" foregroundColor="SevenFont1" name="config" position="70,80" scrollbarMode="showNever" size="690,490" transparent="1" selectionPixmap="SevenHD/selpic/1240x24nt.png" zPosition="3" />
   <widget backgroundColor="SevenFontBackground" font="Regular2;22" foregroundColor="SevenFont2" halign="center" name="playtext" position="70,608" size="708,30" transparent="1" valign="center" zPosition="2" />
   <panel name="template_colorkey_text" />
@@ -1274,6 +1391,7 @@
 </screen>
   <!-- col_set_12 -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="col_set_12" position="0,0" size="1280,720" title="webradioFS">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="col_set_12" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
   <widget backgroundColor="SevenFontBackground" enableWrapAround="1" foregroundColor="SevenFont1" name="config" position="70,80" scrollbarMode="showNever" size="690,490" transparent="1" zPosition="3" />
   <widget backgroundColor="SevenFontBackground" font="Regular2;22" foregroundColor="SevenFont2" halign="left" name="playtext" position="70,608" size="708,30" transparent="1" valign="center" zPosition="2" />
   <panel name="template_colorkey_text" />
@@ -1281,6 +1399,7 @@
 </screen>
   <!-- Fav_edit_12 -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="Fav_edit_12" position="0,0" size="1280,720" title="webradioFS">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="Fav_edit_12" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
   <widget backgroundColor="SevenFontBackground" enableWrapAround="1" foregroundColor="SevenFont1" name="config" position="70,80" scrollbarMode="showNever" size="690,490" transparent="1" zPosition="3" />
   <widget backgroundColor="SevenFontBackground" font="Regular2;22" foregroundColor="SevenFont2" halign="left" name="playtext" position="70,608" size="708,30" transparent="1" valign="center" zPosition="2" />
   <panel name="template_colorkey_text" />
@@ -1289,6 +1408,7 @@
   <!-- ********** WebInterface ********** -->
   <!-- WebIfConfigScreen -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="WebIfConfigScreen" position="0,0" size="1280,720" title="Main Setup">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="WebIfConfigScreen" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
   <widget itemHeight="30" name="config" position="70,80" size="708,480" backgroundColor="SevenFontBackground" transparent="1" />
   <panel name="template_colorkey_text_source" />
   <panel name="template_menu_left_button" />
@@ -1296,28 +1416,33 @@
   <!-- ********** YouTube ********** -->
   <!-- YouTubePlayerConfig -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="YouTubePlayerConfig" position="0,0" size="1280,710" title="YouTubePlayer Config">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="YouTubePlayerConfig" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
   <widget name="list" position="70,80" size="708,480" backgroundColor="SevenFontBackground" transparent="1" />
   <panel name="template_menu_left" />
 </screen>
   <!-- YoutubeTVWindow -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="YoutubeTVWindow" position="0,0" size="1280,720" title="Start YouTube TV">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="YoutubeTVWindow" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
   <widget name="information" position="70,80" size="708,480" backgroundColor="SevenFontBackground" transparent="1" />
   <panel name="template_colorkey_text" />
   <panel name="template_menu_left_button" />
 </screen>
   <!-- YoutubeTVSettings -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="YoutubeTVSettings" position="0,0" size="1280,720" title="YouTube TV Settings">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="YoutubeTVSettings" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
   <widget itemHeight="30" name="config" backgroundColor="SevenFontBackground" position="70,80" size="708,480" transparent="1" />
   <panel name="template_colorkey_text_source" />
   <panel name="template_menu_left_button" />
 </screen>
   <!-- WebcamViewer -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="WebcamViewer" position="0,0" size="1280,720" title="WebcamViewer">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="WebcamViewer" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
   <widget enableWrapAround="1" itemHeight="30" backgroundColor="SevenFontBackground" font="Regular;22" foregroundColor="SevenFont1" name="menu" position="70,80" size="708,540" transparent="1" />
   <panel name="template_menu_left" />
 </screen>
   <!-- PictureViewer -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="PictureViewer" position="0,0" size="1280,720" title="PictureViewer">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="PictureViewer" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
   <eLabel backgroundColor="SevenFontBackground" text="Source:" font="Regular2;24" foregroundColor="SevenFont2" position="60,80" size="320,30" halign="left" valign="center" zPosition="1" transparent="1" />
   <widget name="menu" font="Regular;22" foregroundColor="SevenFont1" itemHeight="30" position="60,130" size="340,480" transparent="1" />
   <widget name="pixmap" position="448,160" size="352,270" backgroundColor="SevenFontBackground" />
@@ -1328,6 +1453,7 @@
 </screen>
   <!-- PictureViewer Settings -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="WebcamViewerMenu" position="0,0" size="1280,720" title="Setup">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="WebcamViewerMenu" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
   <widget name="config" itemHeight="30" font="Regular;22" foregroundColor="SevenFont1" backgroundColor="SevenFontBackground" position="70,80" size="708,240" transparent="1" />
   <panel name="template_menu_left_button" />
   <panel name="template_colorkey_text_button" />
@@ -1335,6 +1461,7 @@
   <!-- ********** MyTube ********** -->
   <!-- MyTubeSuggestionsListScreen -->
   <screen name="MyTubeSuggestionsListScreen" title="MyTube - Search" position="0,0" size="1280,720" backgroundColor="transparent" flags="wfNoBorder">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="MyTubeSuggestionsListScreen" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
   <widget source="suggestionslist" render="Listbox" position="50,80" zPosition="7" size="748,350" scrollbarWidth="5" scrollbarSliderForegroundColor="white" scrollbarSliderBorderColor="white" scrollbarSliderBorderWidth="1" backgroundColor="SevenFontBackground" transparent="1">
     <convert type="TemplatedMultiContent">
 					{"template": [
@@ -1350,12 +1477,14 @@
 </screen>
   <!-- MyTubeSettingsScreen -->
   <screen name="MyTubeSettingsScreen" flags="wfNoBorder" position="0,0" size="1280,720" title="MyTube - Settings" backgroundColor="transparent">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="MyTubeSettingsScreen" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
   <widget name="config" zPosition="2" position="50,120" size="748,470" scrollbarWidth="5" scrollbarSliderForegroundColor="white" scrollbarSliderBorderColor="white" scrollbarSliderBorderWidth="1" backgroundColor="SevenFontBackground" transparent="1" />
   <panel name="template_menu_left_button" />
   <panel name="template_colorkey_text" />
 </screen>
   <!-- MyTubeTasksScreen -->
   <screen name="MyTubeTasksScreen" flags="wfNoBorder" position="0,0" size="1280,720" title="MyTube - Tasks" backgroundColor="transparent">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="MyTubeTasksScreen" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
   <widget source="tasklist" render="Listbox" position="50,120" size="748,470" zPosition="7" backgroundColor="SevenFontBackground" transparent="1">
     <convert type="TemplatedMultiContent">
 					{"template": [
@@ -1374,6 +1503,7 @@
 </screen>
   <!-- MyTubePlayerMainScreen -->
   <screen name="MyTubePlayerMainScreen" flags="wfNoBorder" position="0,0" size="1280,720" title="MyTube - Browser" backgroundColor="transparent">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="MyTubePlayerMainScreen" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
   <widget name="config" zPosition="2" position="70,80" size="600,50" backgroundColor="SevenFontBackground" scrollbarMode="showNever" transparent="1" />
   <widget name="result" position="910,80" zPosition="3" size="350,50" font="Regular;21" foregroundColor="SevenFont1" transparent="1" backgroundColor="SevenFontBackground" halign="right" />
   <widget source="feedlist" render="Listbox" position="70,130" size="1140,500" zPosition="1" backgroundColor="SevenFontBackground" scrollbarWidth="5" scrollbarSliderForegroundColor="white" scrollbarSliderBorderColor="white" scrollbarSliderBorderWidth="1" transparent="1">
@@ -1403,6 +1533,7 @@
 </screen>
   <!-- MyTubeVideoInfoScreen -->
   <screen name="MyTubeVideoInfoScreen" flags="wfNoBorder" position="0,0" size="1280,720" title="MyTube - Video Info" backgroundColor="transparent">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="MyTubeVideoInfoScreen" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
   <widget name="starsbg" pixmap="~/starsbar_empty.png" position="560,220" zPosition="5" size="100,20" transparent="0" alphatest="on" />
   <widget name="stars" pixmap="~/starsbar_filled.png" position="560,220" zPosition="6" size="100,20" transparent="0" />
   <widget source="infolist" render="Listbox" position="50,108" size="748,110" foregroundColor="SevenFont1" zPosition="6" backgroundColor="SevenFontBackground" scrollbarMode="showNever" selectionDisabled="1" transparent="1">
@@ -1434,12 +1565,14 @@
 </screen>
   <!-- MyTubeVideoHelpScreen -->
   <screen name="MyTubeVideoHelpScreen" flags="wfNoBorder" position="0,0" size="1280,720" title="MyTube - Help" backgroundColor="transparent">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="MyTubeVideoHelpScreen" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
   <widget name="detailtext" position="70,80" size="708,540" zPosition="10" font="Regular;22" foregroundColor="SevenFont1" backgroundColor="SevenFontBackground" transparent="1" halign="left" valign="top" />
   <panel name="template_menu_left_button" />
   <panel name="template_colorkey_text" />
 </screen>
   <!-- MyTubePlayer -->
   <screen name="MyTubePlayer" position="0,546" size="1280,171" title="InfoBar" flags="wfNoBorder" backgroundColor="transparent">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="MyTubePlayer" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
   <widget source="session.CurrentService" render="Label" position="265,22" size="800,43" font="Regular2; 25" valign="center" noWrap="1" backgroundColor="SevenFontBackground" transparent="1" halign="center">
     <convert type="ServiceName">Name</convert>
   </widget>
@@ -1478,6 +1611,7 @@
 </screen>
   <!-- MyTubeHistoryScreen -->
   <screen name="MyTubeHistoryScreen" position="0,0" size="1280,720" title="MyTubeHistoryScreen..." zposition="6" flags="wfNoBorder" backgroundColor="transparent">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="MyTubeHistoryScreen" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
   <widget source="historylist" render="Listbox" position="50,80" zPosition="7" size="748,406" backgroundColor="SevenFontBackground" transparent="1">
     <convert type="TemplatedMultiContent">
 				{"template": [
@@ -1493,11 +1627,13 @@
   <!-- ********** VPS ********** -->
   <!-- vpsCheck -->
   <screen name="VPS_check_PDC_Screen" position="0,0" size="1280,720" title="VPS-Plugin" backgroundColor="transparent" flags="wfNoBorder">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="VPS_check_PDC_Screen" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
   <widget source="infotext" render="Label" backgroundColor="SevenFontBackground" font="Regular;22" foregroundColor="SevenFont1" position="70,80" size="708,120" transparent="1" />
   <panel name="template_menu_left" />
 </screen>
   <!-- vpsConfiguration -->
   <screen name="VPS_Setup" title="VPS-Plugin" position="0,0" size="1280,720" backgroundColor="transparent" flags="wfNoBorder">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="VPS_Setup" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
   <widget name="config" backgroundColor="SevenFontBackground" font="Regular;22" foregroundColor="SevenFont1" itemHeight="30" position="70,80" size="708,180" transparent="1" />
   <widget render="Label" backgroundColor="SevenFontBackground" font="Regular2;22" foregroundColor="SevenFont2" position="70,350" size="708,200" source="help" transparent="1" />
   <panel name="template_menu_left_button" />
@@ -1505,11 +1641,13 @@
 </screen>
   <!-- vpsInfo -->
   <screen name="VPS_Screen_Info" position="0,0" size="1280,720" title="VPS-Plugin Information" backgroundColor="transparent" flags="wfNoBorder">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="VPS_Screen_Info" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
   <widget name="text" position="70,80" size="708,520" backgroundColor="SevenFontBackground" font="Regular;22" foregroundColor="SevenFont1" transparent="1" />
   <panel name="template_menu_left" />
 </screen>
   <!-- AutoResolution -->
   <screen name="ResolutionLabel" backgroundColor="transparent" position="969,133" size="311,62" flags="wfNoBorder">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="ResolutionLabel" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
   <widget name="content" position="21,11" size="240,20" font="Regular;16" foregroundColor="SevenFont1" backgroundColor="SevenFontBackgroundIB1" halign="left" valign="center" transparent="1" zPosition="-1" />
   <widget name="restxt" position="21,31" size="240,20" font="Regular;16" foregroundColor="SevenFont1" backgroundColor="SevenFontBackgroundIB1" halign="left" valign="center" transparent="1" zPosition="-1" />
   <eLabel backgroundColor="SevenBorder" position="0,0" size="2,62" zPosition="2" />
@@ -1521,13 +1659,14 @@
 </screen>
   <!-- SevenHD-Setup -->
   <screen name="MainSettings" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="MainSettings" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
   <eLabel font="Regular; 18" foregroundColor="SevenButtonText" backgroundColor="SevenFontBackground" halign="left" valign="center" position="64,662" size="148,48" text="Cancel" transparent="1" />
   <eLabel font="Regular; 18" foregroundColor="SevenButtonText" backgroundColor="SevenFontBackground" halign="left" valign="center" position="264,662" size="148,48" text="Save" transparent="1" />
   <eLabel font="Regular; 18" foregroundColor="SevenButtonText" backgroundColor="SevenFontBackground" halign="left" valign="center" position="464,662" size="148,48" text="Defaults" transparent="1" />
   <widget name="blue" font="Regular; 18" foregroundColor="SevenButtonText" backgroundColor="SevenFontBackground" halign="left" valign="center" position="664,662" size="148,48" transparent="1" />
   <widget name="config" position="18,72" size="816,575" backgroundColor="SevenFontBackground" enableWrapAround="1" transparent="1" />
   <eLabel position="70,12" size="708,46" text="SevenHD" font="Regular; 35" valign="center" halign="center" transparent="1" backgroundColor="SevenFontBackground" />
-  <eLabel position="891,657" size="372,46" text="Thanks to TBX and http://www.gigablue-support.org/" font="Regular; 12" valign="center" halign="center" transparent="1" backgroundColor="SevenFontBackgroundRight" foregroundColor="SevenFont2" name="," />
+  <eLabel position="891,657" size="372,46" text="Thanks to http://www.gigablue-support.org/" font="Regular; 12" valign="center" halign="center" transparent="1" backgroundColor="SevenFontBackgroundRight" foregroundColor="SevenFont2" name="," />
   <widget name="helperimage" position="891,274" size="372,209" zPosition="1" backgroundColor="SevenFontBackground" />
   <widget backgroundColor="SevenFontBackground" font="Regular2; 34" position="70,12" render="Label" size="708,46" source="Title" transparent="1" halign="center" valign="center" foregroundColor="SevenFont1" noWrap="1" />
   <eLabel backgroundColor="SevenBackground" position="6,6" size="842,708" transparent="0" zPosition="-9" />
@@ -1537,7 +1676,7 @@
   <eLabel backgroundColor="SevenBorder" position="848,6" size="2,708" zPosition="2" />
   <eLabel backgroundColor="SevenLine" position="18,64" size="816,2" zPosition="2" />
   <eLabel backgroundColor="SevenLine" foregroundColor="SevenLine" position="18,656" size="816,2" zPosition="2" />
-  <ePixmap pixmap="SevenHD/buttons/key_red1.png" position="22,675" size="32,32" backgroundColor="SevenFontBackground" alphatest="blend" />
+  <ePixmap pixmap="SevenHD/buttons/key_red1.png" position="22,670" size="32,32" backgroundColor="SevenFontBackground" alphatest="blend" />
   <ePixmap pixmap="SevenHD/buttons/key_green1.png" position="222,670" size="32,32" backgroundColor="SevenFontBackground" alphatest="blend" />
   <ePixmap pixmap="SevenHD/buttons/key_yellow1.png" position="422,670" size="32,32" backgroundColor="SevenFontBackground" alphatest="blend" />
   <ePixmap pixmap="SevenHD/buttons/key_blue1.png" position="622,670" size="32,32" backgroundColor="SevenFontBackground" alphatest="blend" />
@@ -1557,13 +1696,14 @@
 <ePixmap pixmap="SevenHD/back/menuright.png" position="878,6" size="396,708" alphatest="blend" zPosition="-8" />
 </screen>
   <screen name="MenuPluginSettings" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="MenuPluginSettings" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
   <eLabel font="Regular; 18" foregroundColor="SevenButtonText" backgroundColor="SevenFontBackground" halign="left" valign="center" position="64,662" size="148,48" text="Cancel" transparent="1" />
   <eLabel font="Regular; 18" foregroundColor="SevenButtonText" backgroundColor="SevenFontBackground" halign="left" valign="center" position="264,662" size="148,48" text="Save" transparent="1" />
   <eLabel font="Regular; 18" foregroundColor="SevenButtonText" backgroundColor="SevenFontBackground" halign="left" valign="center" position="464,662" size="148,48" text="Defaults" transparent="1" />
   <widget name="blue" font="Regular; 18" foregroundColor="SevenButtonText" backgroundColor="SevenFontBackground" halign="left" valign="center" position="664,662" size="148,48" transparent="1" />
   <widget name="config" position="18,72" size="816,575" backgroundColor="SevenFontBackground" enableWrapAround="1" transparent="1" />
   <eLabel position="70,12" size="708,46" text="SevenHD" font="Regular; 35" valign="center" halign="center" transparent="1" backgroundColor="SevenFontBackground" />
-  <eLabel position="891,657" size="372,46" text="Thanks to TBX and http://www.gigablue-support.org/" font="Regular; 12" valign="center" halign="center" transparent="1" backgroundColor="SevenFontBackgroundRight" foregroundColor="SevenFont2" name="," />
+  <eLabel position="891,657" size="372,46" text="Thanks to http://www.gigablue-support.org/" font="Regular; 12" valign="center" halign="center" transparent="1" backgroundColor="SevenFontBackgroundRight" foregroundColor="SevenFont2" name="," />
   <widget name="helperimage" position="891,274" size="372,209" zPosition="1" backgroundColor="SevenFontBackground" />
   <widget backgroundColor="SevenFontBackground" font="Regular2; 34" position="70,12" render="Label" size="708,46" source="Title" transparent="1" halign="center" valign="center" foregroundColor="SevenFont1" noWrap="1" />
   <eLabel backgroundColor="SevenBackground" position="6,6" size="842,708" transparent="0" zPosition="-9" />
@@ -1573,7 +1713,7 @@
   <eLabel backgroundColor="SevenBorder" position="848,6" size="2,708" zPosition="2" />
   <eLabel backgroundColor="SevenLine" position="18,64" size="816,2" zPosition="2" />
   <eLabel backgroundColor="SevenLine" foregroundColor="SevenLine" position="18,656" size="816,2" zPosition="2" />
-  <ePixmap pixmap="SevenHD/buttons/key_red1.png" position="22,675" size="32,32" backgroundColor="SevenFontBackground" alphatest="blend" />
+  <ePixmap pixmap="SevenHD/buttons/key_red1.png" position="22,670" size="32,32" backgroundColor="SevenFontBackground" alphatest="blend" />
   <ePixmap pixmap="SevenHD/buttons/key_green1.png" position="222,670" size="32,32" backgroundColor="SevenFontBackground" alphatest="blend" />
   <ePixmap pixmap="SevenHD/buttons/key_yellow1.png" position="422,670" size="32,32" backgroundColor="SevenFontBackground" alphatest="blend" />
   <ePixmap pixmap="SevenHD/buttons/key_blue1.png" position="622,670" size="32,32" backgroundColor="SevenFontBackground" alphatest="blend" />
@@ -1593,13 +1733,14 @@
 <ePixmap pixmap="SevenHD/back/menuright.png" position="878,6" size="396,708" alphatest="blend" zPosition="-8" />
 </screen>
   <screen name="ChannelSettings" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="ChannelSettings" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
   <eLabel font="Regular; 18" foregroundColor="SevenButtonText" backgroundColor="SevenFontBackground" halign="left" valign="center" position="64,662" size="148,48" text="Cancel" transparent="1" />
   <eLabel font="Regular; 18" foregroundColor="SevenButtonText" backgroundColor="SevenFontBackground" halign="left" valign="center" position="264,662" size="148,48" text="Save" transparent="1" />
   <eLabel font="Regular; 18" foregroundColor="SevenButtonText" backgroundColor="SevenFontBackground" halign="left" valign="center" position="464,662" size="148,48" text="Defaults" transparent="1" />
   <widget name="blue" font="Regular; 18" foregroundColor="SevenButtonText" backgroundColor="SevenFontBackground" halign="left" valign="center" position="664,662" size="148,48" transparent="1" />
   <widget name="config" position="18,72" scrollbarMode="showOnDemand" size="816,575" backgroundColor="SevenFontBackground" enableWrapAround="1" transparent="1" />
   <eLabel position="70,12" size="708,46" text="SevenHD" font="Regular; 35" valign="center" halign="center" transparent="1" backgroundColor="SevenFontBackground" />
-  <eLabel position="891,657" size="372,46" text="Thanks to TBX and http://www.gigablue-support.org/" font="Regular; 12" valign="center" halign="center" transparent="1" backgroundColor="SevenFontBackgroundRight" foregroundColor="SevenFont2" name="," />
+  <eLabel position="891,657" size="372,46" text="Thanks to http://www.gigablue-support.org/" font="Regular; 12" valign="center" halign="center" transparent="1" backgroundColor="SevenFontBackgroundRight" foregroundColor="SevenFont2" name="," />
   <widget name="helperimage" position="891,274" size="372,209" zPosition="1" backgroundColor="SevenFontBackground" />
   <widget backgroundColor="SevenFontBackground" font="Regular2; 34" position="70,12" render="Label" size="708,46" source="Title" transparent="1" halign="center" valign="center" foregroundColor="SevenFont1" noWrap="1" />
   <eLabel backgroundColor="SevenBackground" position="6,6" size="842,708" transparent="0" zPosition="-9" />
@@ -1609,7 +1750,7 @@
   <eLabel backgroundColor="SevenBorder" position="848,6" size="2,708" zPosition="2" />
   <eLabel backgroundColor="SevenLine" position="18,64" size="816,2" zPosition="2" />
   <eLabel backgroundColor="SevenLine" foregroundColor="SevenLine" position="18,656" size="816,2" zPosition="2" />
-  <ePixmap pixmap="SevenHD/buttons/key_red1.png" position="22,675" size="32,32" backgroundColor="SevenFontBackground" alphatest="blend" />
+  <ePixmap pixmap="SevenHD/buttons/key_red1.png" position="22,670" size="32,32" backgroundColor="SevenFontBackground" alphatest="blend" />
   <ePixmap pixmap="SevenHD/buttons/key_green1.png" position="222,670" size="32,32" backgroundColor="SevenFontBackground" alphatest="blend" />
   <ePixmap pixmap="SevenHD/buttons/key_yellow1.png" position="422,670" size="32,32" backgroundColor="SevenFontBackground" alphatest="blend" />
   <ePixmap pixmap="SevenHD/buttons/key_blue1.png" position="622,670" size="32,32" backgroundColor="SevenFontBackground" alphatest="blend" />
@@ -1629,13 +1770,14 @@
 <ePixmap pixmap="SevenHD/back/menuright.png" position="878,6" size="396,708" alphatest="blend" zPosition="-8" />
 </screen>
   <screen name="InfobarExtraSettings" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="InfobarExtraSettings" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
   <eLabel font="Regular; 18" foregroundColor="SevenButtonText" backgroundColor="SevenFontBackground" halign="left" valign="center" position="64,662" size="148,48" text="Cancel" transparent="1" />
   <eLabel font="Regular; 18" foregroundColor="SevenButtonText" backgroundColor="SevenFontBackground" halign="left" valign="center" position="264,662" size="148,48" text="Save" transparent="1" />
   <eLabel font="Regular; 18" foregroundColor="SevenButtonText" backgroundColor="SevenFontBackground" halign="left" valign="center" position="464,662" size="148,48" text="Defaults" transparent="1" />
   <widget name="blue" font="Regular; 18" foregroundColor="SevenButtonText" backgroundColor="SevenFontBackground" halign="left" valign="center" position="664,662" size="148,48" transparent="1" />
   <widget name="config" position="18,72" size="816,575" backgroundColor="SevenFontBackground" enableWrapAround="1" transparent="1" />
   <eLabel position="70,12" size="708,46" text="SevenHD" font="Regular; 35" valign="center" halign="center" transparent="1" backgroundColor="SevenFontBackground" />
-  <eLabel position="891,657" size="372,46" text="Thanks to TBX and http://www.gigablue-support.org/" font="Regular; 12" valign="center" halign="center" transparent="1" backgroundColor="SevenFontBackgroundRight" foregroundColor="SevenFont2" name="," />
+  <eLabel position="891,657" size="372,46" text="Thanks to http://www.gigablue-support.org/" font="Regular; 12" valign="center" halign="center" transparent="1" backgroundColor="SevenFontBackgroundRight" foregroundColor="SevenFont2" name="," />
   <widget name="helperimage" position="891,274" size="372,209" zPosition="1" backgroundColor="SevenFontBackground" />
   <widget backgroundColor="SevenFontBackground" font="Regular2; 34" position="70,12" render="Label" size="708,46" source="Title" transparent="1" halign="center" valign="center" foregroundColor="SevenFont1" noWrap="1" />
   <eLabel backgroundColor="SevenBackground" position="6,6" size="842,708" transparent="0" zPosition="-9" />
@@ -1645,7 +1787,7 @@
   <eLabel backgroundColor="SevenBorder" position="848,6" size="2,708" zPosition="2" />
   <eLabel backgroundColor="SevenLine" position="18,64" size="816,2" zPosition="2" />
   <eLabel backgroundColor="SevenLine" foregroundColor="SevenLine" position="18,656" size="816,2" zPosition="2" />
-  <ePixmap pixmap="SevenHD/buttons/key_red1.png" position="22,675" size="32,32" backgroundColor="SevenFontBackground" alphatest="blend" />
+  <ePixmap pixmap="SevenHD/buttons/key_red1.png" position="22,670" size="32,32" backgroundColor="SevenFontBackground" alphatest="blend" />
   <ePixmap pixmap="SevenHD/buttons/key_green1.png" position="222,670" size="32,32" backgroundColor="SevenFontBackground" alphatest="blend" />
   <ePixmap pixmap="SevenHD/buttons/key_yellow1.png" position="422,670" size="32,32" backgroundColor="SevenFontBackground" alphatest="blend" />
   <ePixmap pixmap="SevenHD/buttons/key_blue1.png" position="622,670" size="32,32" backgroundColor="SevenFontBackground" alphatest="blend" />
@@ -1665,13 +1807,14 @@
 <ePixmap pixmap="SevenHD/back/menuright.png" position="878,6" size="396,708" alphatest="blend" zPosition="-8" />
 </screen>
   <screen name="InfobarSettings" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="InfobarSettings" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
   <eLabel font="Regular; 18" foregroundColor="SevenButtonText" backgroundColor="SevenFontBackground" halign="left" valign="center" position="64,662" size="148,48" text="Cancel" transparent="1" />
   <eLabel font="Regular; 18" foregroundColor="SevenButtonText" backgroundColor="SevenFontBackground" halign="left" valign="center" position="264,662" size="148,48" text="Save" transparent="1" />
   <eLabel font="Regular; 18" foregroundColor="SevenButtonText" backgroundColor="SevenFontBackground" halign="left" valign="center" position="464,662" size="148,48" text="Defaults" transparent="1" />
   <widget name="blue" font="Regular; 18" foregroundColor="SevenButtonText" backgroundColor="SevenFontBackground" halign="left" valign="center" position="664,662" size="148,48" transparent="1" />
   <widget name="config" position="18,72" size="816,575" backgroundColor="SevenFontBackground" enableWrapAround="1" transparent="1" />
   <eLabel position="70,12" size="708,46" text="SevenHD" font="Regular; 35" valign="center" halign="center" transparent="1" backgroundColor="SevenFontBackground" />
-  <eLabel position="891,657" size="372,46" text="Thanks to TBX and http://www.gigablue-support.org/" font="Regular; 12" valign="center" halign="center" transparent="1" backgroundColor="SevenFontBackgroundRight" foregroundColor="SevenFont2" name="," />
+  <eLabel position="891,657" size="372,46" text="Thanks to http://www.gigablue-support.org/" font="Regular; 12" valign="center" halign="center" transparent="1" backgroundColor="SevenFontBackgroundRight" foregroundColor="SevenFont2" name="," />
   <widget name="helperimage" position="891,274" size="372,209" zPosition="1" backgroundColor="SevenFontBackground" />
   <widget backgroundColor="SevenFontBackground" font="Regular2; 34" position="70,12" render="Label" size="708,46" source="Title" transparent="1" halign="center" valign="center" foregroundColor="SevenFont1" noWrap="1" />
   <eLabel backgroundColor="SevenBackground" position="6,6" size="842,708" transparent="0" zPosition="-9" />
@@ -1681,7 +1824,7 @@
   <eLabel backgroundColor="SevenBorder" position="848,6" size="2,708" zPosition="2" />
   <eLabel backgroundColor="SevenLine" position="18,64" size="816,2" zPosition="2" />
   <eLabel backgroundColor="SevenLine" foregroundColor="SevenLine" position="18,656" size="816,2" zPosition="2" />
-  <ePixmap pixmap="SevenHD/buttons/key_red1.png" position="22,675" size="32,32" backgroundColor="SevenFontBackground" alphatest="blend" />
+  <ePixmap pixmap="SevenHD/buttons/key_red1.png" position="22,670" size="32,32" backgroundColor="SevenFontBackground" alphatest="blend" />
   <ePixmap pixmap="SevenHD/buttons/key_green1.png" position="222,670" size="32,32" backgroundColor="SevenFontBackground" alphatest="blend" />
   <ePixmap pixmap="SevenHD/buttons/key_yellow1.png" position="422,670" size="32,32" backgroundColor="SevenFontBackground" alphatest="blend" />
   <ePixmap pixmap="SevenHD/buttons/key_blue1.png" position="622,670" size="32,32" backgroundColor="SevenFontBackground" alphatest="blend" />
@@ -1701,13 +1844,14 @@
 <ePixmap pixmap="SevenHD/back/menuright.png" position="878,6" size="396,708" alphatest="blend" zPosition="-8" />
 </screen>
   <screen name="SecondInfobarSettings" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="SecondInfobarSettings" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
   <eLabel font="Regular; 18" foregroundColor="SevenButtonText" backgroundColor="SevenFontBackground" halign="left" valign="center" position="64,662" size="148,48" text="Cancel" transparent="1" />
   <eLabel font="Regular; 18" foregroundColor="SevenButtonText" backgroundColor="SevenFontBackground" halign="left" valign="center" position="264,662" size="148,48" text="Save" transparent="1" />
   <eLabel font="Regular; 18" foregroundColor="SevenButtonText" backgroundColor="SevenFontBackground" halign="left" valign="center" position="464,662" size="148,48" text="Defaults" transparent="1" />
   <widget name="blue" font="Regular; 18" foregroundColor="SevenButtonText" backgroundColor="SevenFontBackground" halign="left" valign="center" position="664,662" size="148,48" transparent="1" />
   <widget name="config" position="18,72" size="816,575" backgroundColor="SevenFontBackground" enableWrapAround="1" transparent="1" />
   <eLabel position="70,12" size="708,46" text="SevenHD" font="Regular; 35" valign="center" halign="center" transparent="1" backgroundColor="SevenFontBackground" />
-  <eLabel position="891,657" size="372,46" text="Thanks to TBX and http://www.gigablue-support.org/" font="Regular; 12" valign="center" halign="center" transparent="1" backgroundColor="SevenFontBackgroundRight" foregroundColor="SevenFont2" name="," />
+  <eLabel position="891,657" size="372,46" text="Thanks to http://www.gigablue-support.org/" font="Regular; 12" valign="center" halign="center" transparent="1" backgroundColor="SevenFontBackgroundRight" foregroundColor="SevenFont2" name="," />
   <widget name="helperimage" position="891,274" size="372,209" zPosition="1" backgroundColor="SevenFontBackground" />
   <widget backgroundColor="SevenFontBackground" font="Regular2; 34" position="70,12" render="Label" size="708,46" source="Title" transparent="1" halign="center" valign="center" foregroundColor="SevenFont1" noWrap="1" />
   <eLabel backgroundColor="SevenBackground" position="6,6" size="842,708" transparent="0" zPosition="-9" />
@@ -1717,7 +1861,7 @@
   <eLabel backgroundColor="SevenBorder" position="848,6" size="2,708" zPosition="2" />
   <eLabel backgroundColor="SevenLine" position="18,64" size="816,2" zPosition="2" />
   <eLabel backgroundColor="SevenLine" foregroundColor="SevenLine" position="18,656" size="816,2" zPosition="2" />
-  <ePixmap pixmap="SevenHD/buttons/key_red1.png" position="22,675" size="32,32" backgroundColor="SevenFontBackground" alphatest="blend" />
+  <ePixmap pixmap="SevenHD/buttons/key_red1.png" position="22,670" size="32,32" backgroundColor="SevenFontBackground" alphatest="blend" />
   <ePixmap pixmap="SevenHD/buttons/key_green1.png" position="222,670" size="32,32" backgroundColor="SevenFontBackground" alphatest="blend" />
   <ePixmap pixmap="SevenHD/buttons/key_yellow1.png" position="422,670" size="32,32" backgroundColor="SevenFontBackground" alphatest="blend" />
   <ePixmap pixmap="SevenHD/buttons/key_blue1.png" position="622,670" size="32,32" backgroundColor="SevenFontBackground" alphatest="blend" />
@@ -1737,13 +1881,14 @@
 <ePixmap pixmap="SevenHD/back/menuright.png" position="878,6" size="396,708" alphatest="blend" zPosition="-8" />
 </screen>
   <screen name="SonstigeSettings" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="SonstigeSettings" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
   <eLabel font="Regular; 18" foregroundColor="SevenButtonText" backgroundColor="SevenFontBackground" halign="left" valign="center" position="64,662" size="148,48" text="Cancel" transparent="1" />
   <eLabel font="Regular; 18" foregroundColor="SevenButtonText" backgroundColor="SevenFontBackground" halign="left" valign="center" position="264,662" size="148,48" text="Save" transparent="1" />
   <eLabel font="Regular; 18" foregroundColor="SevenButtonText" backgroundColor="SevenFontBackground" halign="left" valign="center" position="464,662" size="148,48" text="Defaults" transparent="1" />
   <widget name="blue" font="Regular; 18" foregroundColor="SevenButtonText" backgroundColor="SevenFontBackground" halign="left" valign="center" position="664,662" size="148,48" transparent="1" />
   <widget name="config" position="18,72" size="816,575" backgroundColor="SevenFontBackground" enableWrapAround="1" transparent="1" />
   <eLabel position="70,12" size="708,46" text="SevenHD" font="Regular; 35" valign="center" halign="center" transparent="1" backgroundColor="SevenFontBackground" />
-  <eLabel position="891,657" size="372,46" text="Thanks to TBX and http://www.gigablue-support.org/" font="Regular; 12" valign="center" halign="center" transparent="1" backgroundColor="SevenFontBackgroundRight" foregroundColor="SevenFont2" name="," />
+  <eLabel position="891,657" size="372,46" text="Thanks to http://www.gigablue-support.org/" font="Regular; 12" valign="center" halign="center" transparent="1" backgroundColor="SevenFontBackgroundRight" foregroundColor="SevenFont2" name="," />
   <widget name="helperimage" position="891,274" size="372,209" zPosition="1" backgroundColor="SevenFontBackground" />
   <widget backgroundColor="SevenFontBackground" font="Regular2; 34" position="70,12" render="Label" size="708,46" source="Title" transparent="1" halign="center" valign="center" foregroundColor="SevenFont1" noWrap="1" />
   <eLabel backgroundColor="SevenBackground" position="6,6" size="842,708" transparent="0" zPosition="-9" />
@@ -1753,7 +1898,7 @@
   <eLabel backgroundColor="SevenBorder" position="848,6" size="2,708" zPosition="2" />
   <eLabel backgroundColor="SevenLine" position="18,64" size="816,2" zPosition="2" />
   <eLabel backgroundColor="SevenLine" foregroundColor="SevenLine" position="18,656" size="816,2" zPosition="2" />
-  <ePixmap pixmap="SevenHD/buttons/key_red1.png" position="22,675" size="32,32" backgroundColor="SevenFontBackground" alphatest="blend" />
+  <ePixmap pixmap="SevenHD/buttons/key_red1.png" position="22,670" size="32,32" backgroundColor="SevenFontBackground" alphatest="blend" />
   <ePixmap pixmap="SevenHD/buttons/key_green1.png" position="222,670" size="32,32" backgroundColor="SevenFontBackground" alphatest="blend" />
   <ePixmap pixmap="SevenHD/buttons/key_yellow1.png" position="422,670" size="32,32" backgroundColor="SevenFontBackground" alphatest="blend" />
   <ePixmap pixmap="SevenHD/buttons/key_blue1.png" position="622,670" size="32,32" backgroundColor="SevenFontBackground" alphatest="blend" />
@@ -1773,13 +1918,14 @@
 <ePixmap pixmap="SevenHD/back/menuright.png" position="878,6" size="396,708" alphatest="blend" zPosition="-8" />
 </screen>
   <screen name="SevenHD" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="SevenHD" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
   <eLabel font="Regular; 18" foregroundColor="SevenButtonText" backgroundColor="SevenFontBackground" halign="left" valign="center" position="64,662" size="148,48" text="Cancel" transparent="1" />
     <eLabel font="Regular; 18" foregroundColor="SevenButtonText" backgroundColor="SevenFontBackground" halign="left" valign="center" position="264,662" size="148,48" text="Save" transparent="1" />
     <eLabel font="Regular; 18" foregroundColor="SevenButtonText" backgroundColor="SevenFontBackground" halign="left" valign="center" position="464,662" size="148,48" text="Reboot" transparent="1" />
     <eLabel font="Regular; 18" foregroundColor="SevenButtonText" backgroundColor="SevenFontBackground" halign="left" valign="center" position="664,662" size="148,48" text="Extras" transparent="1" />
   <widget name="menuList" position="18,72" size="816,575" backgroundColor="SevenFontBackground" enableWrapAround="1" transparent="1" />
   <eLabel position="70,12" size="708,46" text="SevenHD" font="Regular; 35" valign="center" halign="center" transparent="1" backgroundColor="SevenFontBackground" />
-  <eLabel position="891,657" size="372,46" text="Thanks to TBX and http://www.gigablue-support.org/" font="Regular; 12" valign="center" halign="center" transparent="1" backgroundColor="SevenFontBackgroundRight" foregroundColor="SevenFont2" name="," />
+  <eLabel position="891,657" size="372,46" text="Thanks to http://www.gigablue-support.org/" font="Regular; 12" valign="center" halign="center" transparent="1" backgroundColor="SevenFontBackgroundRight" foregroundColor="SevenFont2" name="," />
   <widget name="helperimage" position="891,274" size="372,209" zPosition="1" backgroundColor="SevenFontBackground" />
   <widget backgroundColor="SevenFontBackground" font="Regular2; 34" position="70,12" render="Label" size="708,46" source="Title" transparent="1" halign="center" valign="center" foregroundColor="SevenFont1" noWrap="1" />
   <eLabel backgroundColor="SevenBackground" position="6,6" size="842,708" transparent="0" zPosition="-9" />
@@ -1789,7 +1935,7 @@
   <eLabel backgroundColor="SevenBorder" position="848,6" size="2,708" zPosition="2" />
   <eLabel backgroundColor="SevenLine" position="18,64" size="816,2" zPosition="2" />
   <eLabel backgroundColor="SevenLine" foregroundColor="SevenLine" position="18,656" size="816,2" zPosition="2" />
-  <ePixmap pixmap="SevenHD/buttons/key_red1.png" position="22,675" size="32,32" backgroundColor="SevenFontBackground" alphatest="blend" />
+  <ePixmap pixmap="SevenHD/buttons/key_red1.png" position="22,670" size="32,32" backgroundColor="SevenFontBackground" alphatest="blend" />
   <ePixmap pixmap="SevenHD/buttons/key_green1.png" position="222,670" size="32,32" backgroundColor="SevenFontBackground" alphatest="blend" />
   <ePixmap pixmap="SevenHD/buttons/key_yellow1.png" position="422,670" size="32,32" backgroundColor="SevenFontBackground" alphatest="blend" />
   <ePixmap pixmap="SevenHD/buttons/key_blue1.png" position="622,670" size="32,32" backgroundColor="SevenFontBackground" alphatest="blend" />
@@ -1810,6 +1956,7 @@
 </screen>
   <!-- Sky Select -->
   <screen name="skyselectscreen" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="skyselectscreen" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
     <widget name="bestellungen" position="70,80" size="708,540" font="Regular;20" backgroundColor="SevenFontBackground" foregroundColor="SevenFont1" transparent="1" />
     <eLabel backgroundColor="SevenFontBackground" font="Regular;34" halign="center" noWrap="1" position="70,12" size="708,46" text="Sky Select Planer" transparent="1" valign="center" zPosition="1" foregroundColor="SevenFont1" />
     <eLabel backgroundColor="SevenBackground" position="6,6" size="842,708" transparent="0" zPosition="-9" />
@@ -1823,12 +1970,14 @@
   </screen>
   <!-- SHOUTcast -->
   <screen name="SHOUTcastStreamripperRecordingPath" size="1280,720" title="Select record path for streamripper">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="SHOUTcastStreamripperRecordingPath" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
     <widget name="target" position="70,80" size="708,22" valign="center" font="Regular2;22" backgroundColor="SevenBackground" foregroundColor="SevenFont2" transparent="1" />
     <widget name="filelist" position="70,112" zPosition="1" size="708,504" font="Regular2;22" foregroundColor="SevenFont1" backgroundColor="SevenBackground" transparent="1" />
     <panel name="template_menu_left_button" />
     <panel name="template_colorkey_text_source" />
   </screen>
   <screen name="SHOUTcastWidget" title="SHOUTcast" size="1280,720">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="SHOUTcastWidget" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
     <widget name="headertext" position="70,80" zPosition="1" size="708,22" font="Regular2;20" transparent="1" foregroundColor="SevenFont2" backgroundColor="SevenFontBackground" />
     <widget name="statustext" position="70,624" zPosition="1" size="708,22" font="Regular2;20" halign="center" valign="center" transparent="1" backgroundColor="SevenFontBackground" foregroundColor="SevenFont2" />
     <widget name="list" position="70,110" zPosition="2" size="708,504" transparent="1" font="Regular1;22" foregroundColor="SevenFont1" backgroundColor="SevenFontBackground" />
@@ -1840,12 +1989,14 @@
     <panel name="template_colorkey_text_source" />
   </screen>
   <screen name="SHOUTcastSetup" size="1280,720" title="SHOUTcast Setup">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="SHOUTcastSetup" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
     <widget name="config" position="70,80" size="708,504" valign="center" font="Regular;22" backgroundColor="SevenFontBackground" foregroundColor="SevenFont2" transparent="1" />
     <panel name="template_menu_left_button" />
     <panel name="template_colorkey_text_source" />
   </screen>
   <!-- OscamUpdaterView -->
   <screen name="OscamUpdaterView" position="0,0" size="1280,720" title="Downloading list..." flags="wfNoBorder" backgroundColor="transparent">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="OscamUpdaterView" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
     <widget source="oscamInfo" render="Label" font="Regular; 18" foregroundColor="SevenFont1" backgroundColor="SevenFontBackground" halign="left" position="70,80" size="708,66" transparent="1" />
     <widget name="oscamList" position="70,163" size="708,452" transparent="1" foregroundColor="SevenFont1" backgroundColor="SevenFontBackground" />
     <widget source="downloadProgressText" position="70,163" size="708,452" font="Regular;20" valign="center" halign="center" zPosition="2" foregroundColor="SevenFont1" backgroundColor="SevenFontBackground" transparent="1" />
@@ -1856,10 +2007,12 @@
   </screen>
   <!-- BurningSeries -->
   <screen name="burns_setup" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent" title="Setup">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="burns_setup" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
   <widget name="config" position="70,80" size="708,540" backgroundColor="SevenFontBackground" font="Regular;16" transparent="1" />
   <panel name="template_menu_left" />
   </screen>
   <screen name="burns" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent" title="Burning-seri.es Streamer v0.6">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="burns" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
   <widget name="myTVmenulist" position="70,80" size="708,530" backgroundColor="SevenFontBackground" font="Regular;16" transparent="1" />
   <widget name="info" halign="left" valign="center" position="70,618" size="708,30" font="Regular2; 18" backgroundColor="SevenFontBackground" transparent="1" foregroundColor="SevenFont2" />
   <widget font="Regular; 18" halign="left" valign="center" name="TextRed" position="64,662" size="148,48" backgroundColor="SevenFontBackground" foregroundColor="SevenButtonText" transparent="1" zPosition="1" />
@@ -1870,12 +2023,14 @@
   </screen>
   <!-- KodiSetupScreen -->
   <screen name="KodiSetupScreen" title="Kodi Settings" position="0,0" size="1280,720" backgroundColor="transparent" flags="wfNoBorder">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="KodiSetupScreen" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
   <widget name="config" backgroundColor="SevenFontBackground" font="Regular;22" foregroundColor="SevenFont1" itemHeight="30" position="70,80" size="708,540" transparent="1" />
   <panel name="template_menu_left_button" />
   <panel name="template_colorkey_text_source" />
 </screen>
   <!-- SortableMenu -->
 <screen backgroundColor="transparent" flags="wfNoBorder" name="SortableMenu" position="0,0" size="1280,720" title="Sortable Menu">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="SortableMenu" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
 <widget backgroundColor="SevenFontBackground" name="menu" itemHeight="30" font="Regular;22" foregroundColor="SevenFont1" position="70,80" size="708,540" transparent="1" />
     <panel name="template_menu_left_button" />
     <panel name="template_colorkey_text_source" />
