@@ -535,6 +535,7 @@ class SevenHD(Screen):
 		if not config.plugins.SevenHD.SelectionBorder.value == "none":
 			self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.Header.value + "-middle" + XML)
 		self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.Header.value + "-end" + XML)
+                self.debug(MAIN_DATA_PATH + 'header' + XML)
                 
                 ### Volume
                 self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.VolumeStyle.value + XML)
@@ -684,6 +685,12 @@ class SevenHD(Screen):
                    self.debug('Remove SevenHD Root')
                    sub = subprocess.Popen("rm -rf /usr/share/enigma2/SevenHD/*; rm -rf /usr/share/enigma2/SevenHD; wget -q http://www.gigablue-support.org/skins/%s/SevenHD.tar.gz -O /tmp/SevenHD.tar.gz; tar xf /tmp/SevenHD.tar.gz -C /usr/share/enigma2/" % str(self.server_dir), shell=True)
                    sub.wait()
+                
+                if fileExists(PLUGIN_PATH + 'Extensions/SevenHD/firststart'):
+                   self.debug('First SevenHD Start')
+                   sub = subprocess.Popen("rm -rf /usr/share/enigma2/SevenHD/*; rm -rf /usr/share/enigma2/SevenHD; wget -q http://www.gigablue-support.org/skins/%s/SevenHD.tar.gz -O /tmp/SevenHD.tar.gz; tar xf /tmp/SevenHD.tar.gz -C /usr/share/enigma2/" % str(self.server_dir), shell=True)
+                   sub.wait()
+                   remove(PLUGIN_PATH + 'Extensions/SevenHD/firststart')
                    
                 self.debug('try open: ' + TMPFILE)
                 xFile = open(TMPFILE, "w")
@@ -937,11 +944,6 @@ class SevenHD(Screen):
 def main(session, **kwargs):
         if fileExists("/tmp/kraven_debug.txt"):
            remove('/tmp/kraven_debug.txt')
-        
-        if fileExists(PLUGIN_PATH + 'SevenHD/firststart'):
-           config.plugins.SevenHD.version.value = '3.6.00'
-           config.plugins.SevenHD.version.save()
-           remove(PLUGIN_PATH + 'SevenHD/firststart')
            
         updateInstance = None
         session.open(SevenHD)

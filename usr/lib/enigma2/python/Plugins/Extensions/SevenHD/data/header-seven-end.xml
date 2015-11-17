@@ -594,7 +594,7 @@
       <convert type="SevenHDEventTime">Remaining</convert>
       <convert type="SevenHDRemainingToText">InMinutes</convert>
     </widget>
-    <widget alphatest="blend" position="14,451" render="SevenHDXPicon" size="100,60" source="session.CurrentService" transparent="1" zPosition="4">
+    <widget alphatest="blend" position="14,450" render="SevenHDXPicon" size="100,60" source="session.CurrentService" transparent="1" zPosition="4">
       <convert type="ServiceName">Reference</convert>
     </widget>
     <widget alphatest="blend" pixmap="SevenHD/buttons/ico_rec_on.png" position="1228,537" render="Pixmap" size="32,32" source="session.RecordState" zPosition="5" transparent="1">

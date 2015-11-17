@@ -40,8 +40,6 @@ class SevenHDUpdate(Converter, object):
 
         def look(self, what):
             box_version = config.plugins.SevenHD.version.value
-            #version = os.popen("opkg info enigma2-plugin-skins-sevenhd | grep -e 'Version' | cut -d '+' -f1 | cut -d ' ' -f2").read()
-            #box_version = version.rstrip()
             
             if not fileExists(TMP_FILE):
                self.get()

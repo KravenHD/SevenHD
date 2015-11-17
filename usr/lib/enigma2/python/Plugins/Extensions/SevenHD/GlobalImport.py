@@ -1,7 +1,5 @@
-#version = '3.6.00'
+version = '3.6.11'
 import os
-box_version = os.popen("opkg info enigma2-plugin-skins-sevenhd | grep -e 'Version' | cut -d '+' -f1 | cut -d ' ' -f2").read()
-version = box_version.rstrip()
 import re
 import time
 import urllib
