@@ -1,7 +1,7 @@
 #
 #  ECM LINE Converter
 #
-#  Coded by tomele and tbx for Kraven Skins
+#  Coded by tomele for Kraven Skins
 #
 #  This code is licensed under the Creative Commons 
 #  Attribution-NonCommercial-ShareAlike 4.0 International 
@@ -55,16 +55,12 @@ class SevenHDECMLine(Poll, Converter, object):
 		Converter.__init__(self, type)
 
 		args = type.split(',')
-		if len(args) < 2: 
+		if len(args) != 2: 
 			raise ElementError("type must contain exactly 2 arguments")
-	        if len(args) == 2:
-		   type = args.pop(0)
-		   invisible = args.pop(0)
-		if len(args) == 3:
-                   type = args.pop(0)
-		   invisible = args.pop(0)
-                   two_lines = args.pop(0)
-                   		
+	
+		type = args.pop(0)
+		invisible = args.pop(0)
+				
 		if type == 'SatInfo':
 			self.type = self.SATINFO
 		elif type == 'VeryShortCaid':
@@ -87,12 +83,7 @@ class SevenHDECMLine(Poll, Converter, object):
 		else:
 			self.invisible = self.FTAVISIBLE
 
-                self.two_lines = 0
-                if len(args) == 3:
-                   self.two_lines = 1
-		   
-
-		self.poll_interval = 1000
+		self.poll_interval = 5000
 		self.poll_enabled = True
 
 	@cached
@@ -101,6 +92,7 @@ class SevenHDECMLine(Poll, Converter, object):
 		ecmline = ''
 
 		if self.IsCrypted():
+			
 			try:
 				f = open('/tmp/ecm.info', 'r')
 				flines = f.readlines()
@@ -108,69 +100,71 @@ class SevenHDECMLine(Poll, Converter, object):
 			except:
 				
 				if CI:
-					NUM_CI=eDVBCIInterfaces.getInstance().getNumOfSlots()
-					if NUM_CI > 0:
-						channel_caid_list = self.get_system_caid()
-						appname = _('CAM/Card unsupported')
-						
-						for slot in range(NUM_CI):
-							appname = eDVBCI_UI.getInstance().getAppName(slot)
-							self.ci_cam = appname
-							i=0
-							caidlist=[]
-						
-							for caid in eDVBCIInterfaces.getInstance().readCICaIds(slot):
-								i+=1
-								caidlist.append((str(hex(int(caid)))))
-							 
-							for channel_caid in channel_caid_list:
-								if channel_caid in caidlist:
-									caidlist=[]
-									caidlist.append((str(channel_caid)))
-									appname = self.ci_cam
-									found_caid = True
-									break
-								else:
-									appname = _('CAM/Card unsupported')
-									caid = str(channel_caid)
-									found_caid = False
-						
-						if found_caid:
-							for entrie in caidlist:
-								caid = '0x' + str(entrie)
-						
-						caid = caid.lstrip('0x')
-						caid = caid.upper()
-						
-						if ((caid>='1800') and (caid<='18FF')):
-							system = 'System: NAGRA'
-						elif ((caid>='1700') and (caid<='17FF')):
-							system = 'System: BETA'
-						elif ((caid>='E00') and (caid<='EFF')):
-							system = 'System: POWERVU'
-						elif ((caid>='D00') and (caid<='DFF')):
-							system = 'System: CWORKS'
-						elif ((caid>='B00') and (caid<='BFF')):
-							system = 'System: CONAX'
-						elif ((caid>='900') and (caid<='9FF')):
-							system = 'System: NDS'
-						elif ((caid>='600') and (caid<='6FF')):
-							system = 'System: IRDETO'
-						elif ((caid>='500') and (caid<='5FF')):
-							system = 'System: VIACCESS'
-						elif ((caid>='100') and (caid<='1FF')):
-							system = 'System: SECA'
-						else:
-							system = _('System: unknown')
-						
-						if self.two_lines == 1:
-                                                   ecmline = 'Slot ' + str(i) + ': ' + appname + '\nCaid: ' + str(caid.lower()) + ' ' + system
-						else:
-						   ecmline = 'Slot ' + str(i) + ': ' + appname + ' Caid: ' + str(caid.lower()) + ' ' + system
-					else:
-						ecmline = _('waiting for information ...')
-				else:
-					ecmline = _('no information available')
+				   NUM_CI=eDVBCIInterfaces.getInstance().getNumOfSlots()
+                                   if NUM_CI > 0:
+				      
+                                      channel_caid_list = self.get_system_caid()
+                                      appname = 'unsupported Cam/Card'
+                                      found_caid = False
+                                      
+                                      for slot in range(NUM_CI):
+                                          appname = eDVBCI_UI.getInstance().getAppName(slot)
+                                          self.ci_cam = appname
+                                          i=0
+                                          caidlist=[]
+                                      
+                                          for caid in eDVBCIInterfaces.getInstance().readCICaIds(slot):
+			                      i+=1
+                                              caidlist.append((str(hex(int(caid)))))
+                                          
+                                          for channel_caid in channel_caid_list:
+                                              if channel_caid in caidlist:
+                                                 caidlist=[]
+                                                 caidlist.append((str(channel_caid)))
+                                                 appname = self.ci_cam
+                                                 found_caid = True
+                                                 break
+                                              else:
+                                                 appname = 'unsupported Cam/Card'
+                                                 caid = str(channel_caid)
+                                                 found_caid = False
+                                      
+                                      if found_caid:
+                                         for entrie in caidlist:
+                                             caid = '0x' + str(entrie)
+                                      
+                                      try:
+                                         caid = caid.lstrip('0x')
+                                         caid = caid.upper()
+                                      except:
+                                         caid = str('unknow')
+                                         
+                                      system = 'System: unknow'    
+                                      if ((caid>='100') and (caid<='1FF')):
+					     system = 'System: SECA'
+                                      if ((caid>='500') and (caid<='5FF')):
+			  		     system = 'System: VIACCESS'
+                                      if ((caid>='600') and (caid<='6FF')):
+					     system = 'System: IRDETO'
+                                      if ((caid>='900') and (caid<='9FF')):
+					     system = 'System: NDS'
+                                      if ((caid>='B00') and (caid<='BFF')):
+				             system = 'System: CONAX'
+                                      if ((caid>='D00') and (caid<='DFF')):
+					     system = 'System: CWORKS'
+                                      if ((caid>='E00') and (caid<='EFF')):
+					     system = 'System: POWERVU'
+                                      if ((caid>='1700') and (caid<='17FF')):
+					     system = 'System: BETA'
+                                      if ((caid>='1800') and (caid<='18FF')):
+					     system = 'System: NAGRA'
+                                      
+                                      ecmline = 'Slot ' + str(i) + ': ' + str(appname) + '\nCaid: ' + str(caid.lower()) + ' ' + str(system)
+                                      
+                                   else:
+				      ecmline = _('No CICam/Card/EMU available')
+                                else:
+				   ecmline = _('No CICam/Card/EMU available')
 			else:
 				camInfo = {}
 				for line in flines:
@@ -184,26 +178,26 @@ class SevenHDECMLine(Poll, Converter, object):
 				caid = caid.upper()
 				caid = caid.zfill(4)
 				
-				if ((caid>='1800') and (caid<='18FF')):
-					system = 'System: NAGRA'
-				elif ((caid>='1700') and (caid<='17FF')):
-					system = 'System: BETA'
-				elif ((caid>='0E00') and (caid<='0EFF')):
-					system = 'System: POWERVU'
-				elif ((caid>='0D00') and (caid<='0DFF')):
-					system = 'System: CWORKS'
-				elif ((caid>='0B00') and (caid<='0BFF')):
-					system = 'System: CONAX'
-				elif ((caid>='0900') and (caid<='09FF')):
-					system = 'System: NDS'
-				elif ((caid>='0600') and (caid<='06FF')):
-					system = 'System: IRDETO'
+				if ((caid>='0100') and (caid<='01FF')):
+					system = 'System: SECA'
 				elif ((caid>='0500') and (caid<='05FF')):
 					system = 'System: VIACCESS'
-				elif ((caid>='0100') and (caid<='01FF')):
-					system = 'System: SECA'
+				elif ((caid>='0600') and (caid<='06FF')):
+					system = 'System: IRDETO'
+				elif ((caid>='0900') and (caid<='09FF')):
+					system = 'System: NDS'
+				elif ((caid>='0B00') and (caid<='0BFF')):
+					system = 'System: CONAX'
+				elif ((caid>='0D00') and (caid<='0DFF')):
+					system = 'System: CWORKS'
+				elif ((caid>='0E00') and (caid<='0EFF')):
+					system = 'System: POWERVU'
+				elif ((caid>='1700') and (caid<='17FF')):
+					system = 'System: BETA'
+				elif ((caid>='1800') and (caid<='18FF')):
+					system = 'System: NAGRA'
 				else:
-					system = _('System: unknown')
+					system = _('not available')
 	
 				caid = 'CAID: ' + caid
 				
@@ -299,7 +293,7 @@ class SevenHDECMLine(Poll, Converter, object):
 	
 				else:
 					active = 'Unknown'
-					ecmline = _('no information available')
+					ecmline = _('not available')
 
 		else:
 			if self.invisible == self.FTAINVISIBLE:
