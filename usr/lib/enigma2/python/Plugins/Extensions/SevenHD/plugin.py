@@ -937,8 +937,12 @@ class SevenHD(Screen):
 def main(session, **kwargs):
         if fileExists("/tmp/kraven_debug.txt"):
            remove('/tmp/kraven_debug.txt')
-
-
+        
+        if fileExists(PLUGIN_PATH + 'SevenHD/firststart'):
+           config.plugins.SevenHD.version.value = '3.6.00'
+           config.plugins.SevenHD.version.save()
+           remove(PLUGIN_PATH + 'SevenHD/firststart')
+           
         updateInstance = None
         session.open(SevenHD)
         
