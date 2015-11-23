@@ -833,11 +833,17 @@ class SevenHD(Screen):
         options.extend(((_("Information"), boundFunction(self.send_to_msg_box, "Team Kraven\n\xc3\xb6rlgrey, TBX, stony272, thomele, Philipswalther and Kraven")),))
         if fileExists(FILE):
            options.extend(((_("About Skin"), boundFunction(self.About)),))
+        options.extend(((_("Version"), boundFunction(self.do_version)),))
         self.session.openWithCallback(self.menuCallback, ChoiceBox,list = options)
             
     def menuCallback(self, ret):
         ret and ret[1]()
     
+    def do_version(self):
+        config.plugins.SevenHD.version.value = str(version)
+        config.plugins.SevenHD.version.save()
+        self.session.open(MessageBox,_('Youre Version is %s' % str(config.plugins.SevenHD.version.value)), MessageBox.TYPE_INFO)
+        
     def About(self):
         with open(FILE, 'r') as xFile:
              self.lines = xFile.readlines()

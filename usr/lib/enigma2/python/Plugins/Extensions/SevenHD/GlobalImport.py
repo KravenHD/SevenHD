@@ -1,4 +1,4 @@
-version = '3.6.12'
+version = '3.6.13'
 import os
 import re
 import time
@@ -92,11 +92,10 @@ if fileExists('/proc/bmeminfo'):
 else:
    mem_info = []
    entrie = os.popen('cat /proc/cmdline').read()
-   mem = entrie.split('bmem=')
+   mem = re.findall('bmem=(.*?)M', entrie)
    for info in mem:
-     if 'M@' in info:
-       mem_info.append((info.split('M@')[0]))
-    
+      mem_info.append((info))
+       
    if len(mem_info) > 1:
       bmem = int(mem_info[0]) + int(mem_info[1])  
    else:
@@ -104,7 +103,7 @@ else:
       
 SkinModeList = []
 SkinModeList.append(("1", _("HD Skin 1280 x 720")))
-if bmem > 250:
+if bmem > 180:
    SkinModeList.append(("2", _("FullHD Skin 1920 x 1080")))
 if bmem > 440:
    SkinModeList.append(("3", _("UHD Skin 3840 x 2160")))

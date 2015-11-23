@@ -450,11 +450,11 @@
   <!-- MovieMenu -->
   <screen name="MovieMenu" position="0,0" size="1280,720" title="Movie Menu" flags="wfNoBorder" backgroundColor="transparent">
 <!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="MovieMenu" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
-    <widget source="menu" render="Listbox" position="70,80" size="708,550" enableWrapAround="1" backgroundColor="SevenFontBackground" transparent="1">
+    <widget source="menu" render="Listbox" position="70,80" size="708,548" enableWrapAround="1" backgroundColor="SevenFontBackground" transparent="1">
     <convert type="TemplatedMultiContent">
 				{"template": [ MultiContentEntryText(pos = (30, 3), size = (1140, 44), flags = RT_HALIGN_LEFT, text = 0) ],
-				"fonts": [gFont("Regular", 33)],
-				"itemHeight": 48
+				"fonts": [gFont("Regular", 20)],
+				"itemHeight": 30
 				}
     </convert>
     </widget>

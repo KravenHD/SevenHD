@@ -231,7 +231,7 @@ class SevenHDRunningText(Renderer):
 		if not (self.txtflags & RT_WRAP):
 			self.txtext = self.txtext.replace("\xe0\x8a"," ").replace(chr(0x8A)," ").replace("\n"," ").replace("\r"," ")
 
-		self.scroll_label.setText(self.txtext)
+		self.scroll_label.setText(self.txtext.replace("\n\x05",""))
 	
 		if self.txtext == "" or \
 		   self.type == NONE or \
