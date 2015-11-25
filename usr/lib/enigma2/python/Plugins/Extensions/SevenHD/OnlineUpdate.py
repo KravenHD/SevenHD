@@ -11,7 +11,6 @@ class Update():
 		self.session = session
 		self.onClose = [ ]
 		self.msgBox = None                                                    
-                self.dir_list = ['buttons','WetterIcons','clock','volume','progress','progressib','progresscs','progressvol','progresslistcs','icons','back']
                 self.do_update()   
 
         
@@ -36,7 +35,7 @@ class Update():
 
                 self.debug('%s - %s' % (str(len(self.version)), str(len(self.new_version))))
 
-                self.version = self.change_to_int(self.version.rstrip())
+                self.version = self.change_to_int(self.version)
                 self.new_version = self.change_to_int(self.new_version)
                 
                 self.debug('%s - %s' % (str(self.version), str(self.new_version)))
@@ -75,27 +74,8 @@ class Update():
             return versionnumber
             
             
-        def save_old_dirs(self):
-            if os.path.exists("/tmp/SevenHDdirsbackup"):
-               rmtree("/tmp/SevenHDdirsbackup")
-               
-            for dirs in self.dir_list:
-                if os.path.exists(MAIN_SKIN_PATH + dirs):
-                   copytree(MAIN_SKIN_PATH + dirs, '/tmp/SevenHDdirsbackup/%s' % dirs, symlinks=False, ignore=None)
-        
-        
-        def copy_old_dirs_back(self):
-            
-            for dirs in self.dir_list:
-                if os.path.exists('/tmp/SevenHDdirsbackup/%s' % dirs):
-                   if os.path.exists(MAIN_SKIN_PATH + dirs):
-                      rmtree(MAIN_SKIN_PATH + dirs)
-                   copytree('/tmp/SevenHDdirsbackup/%s' % dirs, MAIN_SKIN_PATH + dirs, symlinks=False, ignore=None)
-            
-                
         def download_ipk(self, answer):
             if answer is True:
-               self.save_old_dirs()
                self.debug('Try to download and install new Version')
                downloadPage(self.ipk_url, self.filename).addCallback(self.on_finish).addErrback(self.Error)
                self.msgBox = self.session.open(MessageBox, _("Please Wait ..."), MessageBox.TYPE_INFO, enable_input = False)
@@ -104,8 +84,6 @@ class Update():
         def on_finish(self, fake): 
                self.debug('Install new Version finished')
                os.system('opkg install %s' % str(self.filename))
-               self.debug('copy back')
-               self.copy_old_dirs_back()
                self.debug('Download and Install new Version finished')
                self.msgBox = self.session.openWithCallback(self.reboot, MessageBox, _("GUI needs a restart after download Plugin."), MessageBox.TYPE_YESNO, timeout=30)
                
