@@ -253,7 +253,7 @@ class MainSettings(ConfigListScreen, Screen):
         self.setInputToDefault(config.plugins.SevenHD.Volume)
         self.setInputToDefault(config.plugins.SevenHD.NumberZapExt)
         self.setInputToDefault(config.plugins.SevenHD.EMCStyle)
-        self.setInputToDefault(config.plugins.SevenHD.MovieSeletionStyle)
+        self.setInputToDefault(config.plugins.SevenHD.MovieSelectionStyle)
         self.setInputToDefault(config.plugins.SevenHD.CoolTVGuide)
         self.setInputToDefault(config.plugins.SevenHD.BackgroundColorTrans)
         self.setInputToDefault(config.plugins.SevenHD.BackgroundRightColorTrans)
