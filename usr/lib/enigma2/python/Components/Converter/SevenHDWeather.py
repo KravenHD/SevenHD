@@ -46,6 +46,7 @@ weather_data = None
 weather_data_old = None
 look_again = False
 load_data = False
+look_count = 0
 
 class SevenHDWeather(Poll, Converter, object):
 
@@ -907,15 +908,17 @@ class WeatherData:
 
 	def GetWeather(self):
 		global look_again
+		global look_count
 		global weather_data_old
 		
 		url = "http://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20weather.forecast%20where%20woeid%3D%22"+str(config.plugins.SevenHD.weather_city.value)+"%22&format=xml"
-		timeout = config.plugins.SevenHD.refreshInterval.value * 1000 * 60
-		retry_timeout = 15000
+		timeout = int(config.plugins.SevenHD.refreshInterval.value) * 1000.0 * 60.0
+		retry_timeout = 15555
 		
 		if timeout > 0:
 			if weather_data is None:
-				print "SevenHDWeather lookup for ID " + str(config.plugins.SevenHD.weather_city.value)
+				look_count = 1
+				print "SevenHDWeather lookup 1 for ID " + str(config.plugins.SevenHD.weather_city.value)
 				getPage(url,method = 'GET').addCallback(self.GotWeatherData).addErrback(self.downloadError)
 				self.timer.start(retry_timeout, True)
 				look_again = True
@@ -925,18 +928,21 @@ class WeatherData:
 				mdate = weather_data.WeatherInfo["forecastTomorrowDate"]
 				looking = look_again
 				if adate not in (ddate,mdate):
+					look_count +=1
 					print "SevenHDWeather: Weather data for "+str(ddate)+" is not for current day: "+str(adate)
-					print "SevenHDWeather: Weather lookup for ID " + str(config.plugins.SevenHD.weather_city.value)
+					print "SevenHDWeather: Weather lookup "+str(look_count)+" for ID " + str(config.plugins.SevenHD.weather_city.value)
 					getPage(url,method = 'GET').addCallback(self.GotWeatherData).addErrback(self.downloadError)
 					self.timer.start(retry_timeout, True)
 					look_again = True
 				elif looking:
-					print "SevenHDWeather: Weather data is correct, next refresh in "+str(config.plugins.SevenHD.refreshInterval.value)+" minutes"
+					look_count = 0
+					print "SevenHDWeather: Weather data is correct, next lookup in "+str(config.plugins.SevenHD.refreshInterval.value)+" minutes"
 					weather_data_old = deepcopy(weather_data)
-					self.timer.start(timeout, True)
+					self.timer.start(int(timeout), True)
 					look_again = False
 				else:
-					print "SevenHDWeather: Weather lookup for ID "+str(config.plugins.SevenHD.weather_city.value)
+					look_count +=1
+					print "SevenHDWeather: Weather lookup "+str(look_count)+" for ID "+str(config.plugins.SevenHD.weather_city.value)
 					getPage(url,method = 'GET').addCallback(self.GotWeatherData).addErrback(self.downloadError)
 					self.timer.start(retry_timeout, True)
 					look_again = True

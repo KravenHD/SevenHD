@@ -1,4 +1,4 @@
-version = '3.6.13'
+version = '3.6.14'
 import os
 import re
 import time
@@ -454,7 +454,7 @@ config.plugins.SevenHD.WeatherStyle = ConfigSelection(default="none", choices = 
 				("weather-small", _("small"))
 				])
 				
-config.plugins.SevenHD.refreshInterval = ConfigSelectionNumber(10, 60, 10, default = 10, wraparound = True)
+config.plugins.SevenHD.refreshInterval = ConfigSelectionNumber(0, 480, 15, default = 15, wraparound = True)
 
 config.plugins.SevenHD.AutoWoeID = ConfigYesNo(default= True)
 
