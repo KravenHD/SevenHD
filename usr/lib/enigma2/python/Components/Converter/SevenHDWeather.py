@@ -862,6 +862,7 @@ class WeatherData:
 			"forecastTodayPicon": "N/A",
 			"forecastTodayDay": "N/A",
 			"forecastTodayDate": "N/A",
+			"forecastTodayDateEn": "N/A",
 			"forecastTodayTempMin": "0",
 			"forecastTodayTempMax": "0",
 			"forecastTodayTempMinMax": "0",
@@ -870,6 +871,7 @@ class WeatherData:
 			"forecastTomorrowPicon": "N/A",
 			"forecastTomorrowDay": "N/A",
 			"forecastTomorrowDate": "N/A",
+			"forecastTomorrowDateEn": "N/A",
 			"forecastTomorrowTempMin": "0",
 			"forecastTomorrowTempMax": "0",
 			"forecastTomorrowTempMinMax": "0",
@@ -918,31 +920,31 @@ class WeatherData:
 		if timeout > 0:
 			if weather_data is None:
 				look_count = 1
-				print "SevenHDWeather lookup 1 for ID " + str(config.plugins.SevenHD.weather_city.value)
+				print "SevenWeather lookup 1 for ID " + str(config.plugins.SevenHD.weather_city.value)
 				getPage(url,method = 'GET').addCallback(self.GotWeatherData).addErrback(self.downloadError)
 				self.timer.start(retry_timeout, True)
 				look_again = True
 			else:
-				adate = strftime("%-d. %b", time.localtime())
-				ddate = weather_data.WeatherInfo["forecastTodayDate"]
-				mdate = weather_data.WeatherInfo["forecastTomorrowDate"]
+				adate = strftime("%-d. %b", time.localtime()).replace('Dez','Dec').replace('Mai','May').replace('Okt','Oct').replace('Mrz','Mar')
+				ddate = weather_data.WeatherInfo["forecastTodayDateEn"]
+				mdate = weather_data.WeatherInfo["forecastTomorrowDateEn"]
 				looking = look_again
 				if adate not in (ddate,mdate):
 					look_count +=1
-					print "SevenHDWeather: Weather data for "+str(ddate)+" is not for current day: "+str(adate)
-					print "SevenHDWeather: Weather lookup "+str(look_count)+" for ID " + str(config.plugins.SevenHD.weather_city.value)
+					print "SevenWeather: Weather data for "+str(ddate)+" is not for current day: "+str(adate)
+					print "SevenWeather: Weather lookup "+str(look_count)+" for ID " + str(config.plugins.SevenHD.weather_city.value)
 					getPage(url,method = 'GET').addCallback(self.GotWeatherData).addErrback(self.downloadError)
 					self.timer.start(retry_timeout, True)
 					look_again = True
 				elif looking:
 					look_count = 0
-					print "SevenHDWeather: Weather data is correct, next lookup in "+str(config.plugins.SevenHD.refreshInterval.value)+" minutes"
+					print "SevenWeather: Weather data is correct, next lookup in "+str(config.plugins.SevenHD.refreshInterval.value)+" minutes"
 					weather_data_old = deepcopy(weather_data)
 					self.timer.start(int(timeout), True)
 					look_again = False
 				else:
 					look_count +=1
-					print "SevenHDWeather: Weather lookup "+str(look_count)+" for ID "+str(config.plugins.SevenHD.weather_city.value)
+					print "SevenWeather: Weather lookup "+str(look_count)+" for ID "+str(config.plugins.SevenHD.weather_city.value)
 					getPage(url,method = 'GET').addCallback(self.GotWeatherData).addErrback(self.downloadError)
 					self.timer.start(retry_timeout, True)
 					look_again = True
@@ -1013,6 +1015,7 @@ class WeatherData:
 			self.WeatherInfo["forecastTodayCode"] = self.ConvertCondition(weather.getAttributeNode('code').nodeValue)
 			self.WeatherInfo["forecastTodayDay"] = _(weather.getAttributeNode('day').nodeValue)
 			self.WeatherInfo["forecastTodayDate"] = self.getWeatherDate(weather)
+			self.WeatherInfo["forecastTodayDateEn"] = self.getWeatherDateEn(weather)
 			self.WeatherInfo["forecastTodayTempMax"] = self.getTemp(weather.getAttributeNode('high').nodeValue) + "°C"
 			self.WeatherInfo["forecastTodayTempMin"] = self.getTemp(weather.getAttributeNode('low').nodeValue) + "°C"
 			self.WeatherInfo["forecastTodayTempMinMax"] = self.getTemp(weather.getAttributeNode('low').nodeValue) + "°/" + self.getTemp(weather.getAttributeNode('high').nodeValue) + "°"
@@ -1023,6 +1026,7 @@ class WeatherData:
 			self.WeatherInfo["forecastTomorrowCode"] = self.ConvertCondition(weather.getAttributeNode('code').nodeValue)
 			self.WeatherInfo["forecastTomorrowDay"] = _(weather.getAttributeNode('day').nodeValue)
 			self.WeatherInfo["forecastTomorrowDate"] = self.getWeatherDate(weather)
+			self.WeatherInfo["forecastTomorrowDateEn"] = self.getWeatherDateEn(weather)
 			self.WeatherInfo["forecastTomorrowTempMax"] = self.getTemp(weather.getAttributeNode('high').nodeValue) + "°C"
 			self.WeatherInfo["forecastTomorrowTempMin"] = self.getTemp(weather.getAttributeNode('low').nodeValue) + "°C"
 			self.WeatherInfo["forecastTomorrowTempMinMax"] = self.getTemp(weather.getAttributeNode('low').nodeValue) + "°/" + self.getTemp(weather.getAttributeNode('high').nodeValue) + "°"
@@ -1118,4 +1122,11 @@ class WeatherData:
 		str_weather = cur_weather[0]
 		if len(cur_weather) >= 2:
 			str_weather += ". " + _(cur_weather[1])
+		return str_weather
+
+	def getWeatherDateEn(self, weather):
+		cur_weather = str(weather.getAttributeNode('date').nodeValue).split(" ")
+		str_weather = cur_weather[0]
+		if len(cur_weather) >= 2:
+			str_weather += ". " + cur_weather[1]
 		return str_weather
