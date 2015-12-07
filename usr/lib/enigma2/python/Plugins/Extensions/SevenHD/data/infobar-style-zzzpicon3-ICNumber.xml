@@ -1,3 +1,0 @@
-<widget font="Regular2; 50" backgroundColor="SevenBackgroundIB1" foregroundColor="SevenFontCN" halign="left" noWrap="1" position="429,456" render="Label" size="820,64" source="session.CurrentService" transparent="1" valign="center" zPosition="1" alphatest="blend">
-    <convert type="SevenHDExtServiceInfo">ServiceNumber</convert>
-  </widget>

@@ -1,6 +1,0 @@
-
-<!-- /* InfoBar ZZPicon -->
-<screen backgroundColor="transparent" flags="wfNoBorder" name="InfoBar" position="0,0" size="1280,720" title="InfoBar">
-<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="InfoBar" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
-<panel name="template_menu_ibzz5" />
-  

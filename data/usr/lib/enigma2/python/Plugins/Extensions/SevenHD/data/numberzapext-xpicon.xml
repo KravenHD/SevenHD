@@ -1,0 +1,21 @@
+<!--/* NumberZapExt -->
+<screen backgroundColor="transparent" flags="wfNoBorder" name="NumberZapExt" position="264,216" size="714,243" title="QuickZap">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="NumberZapExt" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
+  <widget name="chPicon" backgroundColor="SevenBackground" position="372,43" size="220,132" transparent="1" zPosition="1" alphatest="blend" />
+  <widget font="Regular; 80" foregroundColor="SevenFont1" halign="center" name="chNum" position="97,72" size="136,100" transparent="1" zPosition="0" backgroundColor="SevenFontBackground" />
+  <widget font="Regular; 20" foregroundColor="SevenFont1" halign="center" name="chName" noWrap="1" position="295,179" size="387,26" transparent="1" zPosition="0" backgroundColor="SevenFontBackground" />
+  <eLabel halign="center" position="274,36" size="421,174" zPosition="-9" />
+<ePixmap pixmap="SevenHD/back/menumain.png" position="274,36" size="421,174" alphatest="blend" zPosition="-8" />
+  <eLabel backgroundColor="SevenBorder" position="694,35" size="1,175" />
+  <eLabel backgroundColor="SevenBorder" position="274,35" size="420,1" />
+  <eLabel halign="center" position="49,49" size="235,146" zPosition="-9" />
+<ePixmap pixmap="SevenHD/back/menumain.png" position="49,49" size="235,146" alphatest="blend" zPosition="-7" />
+  <eLabel backgroundColor="SevenBorder" position="49,49" size="1,147" />
+  <eLabel backgroundColor="SevenBorder" position="49,49" size="235,1" />
+  <eLabel backgroundColor="SevenBorder" position="284,49" size="1,147" />
+  <eLabel backgroundColor="SevenBorder" position="49,195" size="235,1" />
+  <eLabel backgroundColor="SevenBorder" position="274,209" size="420,1" />
+  <eLabel backgroundColor="SevenBorder" position="274,196" size="1,14" />
+  <eLabel backgroundColor="SevenBorder" position="274,35" size="1,14" />
+</screen>
+<!-- NumberZapExt */-->

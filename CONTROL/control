@@ -1,9 +1,9 @@
 Package: enigma2-plugin-skins-sevenhd
-Version: 3.6.15
+Version: 3.6.20
 Section: misc
 Priority: optional
 Architecture: all
 Depends: python-requests, python-subprocess
 Maintainer: Team Kraven
-Description: Skin for Enigma2 (HD, FHD, UHD, 4K)
+Description: Skin for Enigma2 (HD, FHD, UHD)
 Source:
