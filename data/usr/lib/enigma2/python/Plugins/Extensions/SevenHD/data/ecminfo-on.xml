@@ -1,6 +1,6 @@
 <!-- /* ECM-Info -->
-<eLabel backgroundColor="SevenBackgroundIB1" position="14,703" size="1250,18" transparent="0" zPosition="-9" />
-<ePixmap pixmap="SevenHD/back/ibone.png" position="14,703" size="1250,18" alphatest="blend" zPosition="-8" />
+<eLabel backgroundColor="SevenBackgroundIB1" position="14,702" size="1250,16" transparent="0" zPosition="-9" />
+<ePixmap pixmap="SevenHD/back/ibone.png" position="14,702" size="1250,16" alphatest="blend" zPosition="-8" />
 <widget source="session.CurrentService" position="16,701" size="1245,20" font="Regular; 14" render="Label" halign="center" valign="center" backgroundColor="SevenFontBackgroundIB1" foregroundColor="SevenSNRIB" transparent="1" zPosition="1">
     <convert type="SevenHDECMLine">VeryLong,FTAVisible</convert>
   </widget>	

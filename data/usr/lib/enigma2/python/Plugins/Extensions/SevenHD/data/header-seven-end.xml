@@ -497,7 +497,7 @@
     <widget font="Regular2;36" halign="center" valign="center" noWrap="1" position="215,630" render="SevenHDRunningText" options="movetype=running,startpoint=0,startdelay=2000,steptime=90,wrap=0,always=0,repeat=2,oneshot=1" size="850,48" source="session.Event_Next" backgroundColor="SevenFontBackgroundIB1" transparent="1" zPosition="1" foregroundColor="SevenNextIB">
       <convert type="SevenHDEventName">Name</convert>
     </widget>
-    <ePixmap pixmap="SevenHD/back/ibone.png" position="14,533" size="1250,168" alphatest="blend" zPosition="-8" />
+    <ePixmap pixmap="SevenHD/back/ibone.png" position="14,533" size="1250,170" alphatest="blend" zPosition="-8" />
   </screen>
   <screen name="template_menu_sib1">
     <eLabel backgroundColor="SevenBackgroundIB1" position="14,534" size="1250,168" zPosition="-9" />
@@ -656,7 +656,7 @@
     <widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 20" foregroundColor="SevenNextIB" halign="center" position="37,306" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,steptime=90,wrap=1,always=0,repeat=2,oneshot=1" size="1200,130" source="session.Event_Next" zPosition="1" transparent="1">
       <convert type="SevenHDEventName">ExtendedDescription</convert>
     </widget>
-    <ePixmap pixmap="SevenHD/back/ibone.png" position="14,533" size="1250,168" alphatest="blend" zPosition="-8" />
+    <ePixmap pixmap="SevenHD/back/ibone.png" position="14,533" size="1250,170" alphatest="blend" zPosition="-8" />
     <ePixmap pixmap="SevenHD/back/ibone.png" position="14,77" size="1250,364" alphatest="blend" zPosition="-8" />
     <ePixmap pixmap="SevenHD/back/ibtwo.png" position="14,2" size="1250,70" alphatest="blend" zPosition="-8" />
   </screen>
@@ -821,7 +821,7 @@
     <eLabel backgroundColor="SevenBorderIB" position="644,75" size="620,2" zPosition="2" />
     <eLabel backgroundColor="SevenBorderIB" position="643,439" size="620,2" zPosition="2" />
     <eLabel backgroundColor="SevenBackgroundIB2" position="643,77" size="620,363" zPosition="-9" />
-    <ePixmap pixmap="SevenHD/back/ibone.png" position="14,533" size="1250,168" alphatest="blend" zPosition="-8" />
+    <ePixmap pixmap="SevenHD/back/ibone.png" position="14,533" size="1250,170" alphatest="blend" zPosition="-8" />
     <ePixmap pixmap="SevenHD/back/ibone.png" position="14,77" size="620,364" alphatest="blend" zPosition="-8" />
     <ePixmap pixmap="SevenHD/back/ibtwo.png" position="14,2" size="1250,70" alphatest="blend" zPosition="-8" />
     <ePixmap pixmap="SevenHD/back/ibtwo.png" position="643,77" size="620,364" alphatest="blend" zPosition="-8" />
@@ -976,7 +976,7 @@
       <convert type="SevenHDEventTime">EndTime</convert>
       <convert type="SevenHDClockToText">Default</convert>
     </widget>
-    <ePixmap pixmap="SevenHD/back/ibone.png" position="14,533" size="1250,168" alphatest="blend" zPosition="-8" />
+    <ePixmap pixmap="SevenHD/back/ibone.png" position="14,533" size="1250,170" alphatest="blend" zPosition="-8" />
     <ePixmap pixmap="SevenHD/back/ibone.png" position="14,77" size="1250,364" alphatest="blend" zPosition="-8" />
     <ePixmap pixmap="SevenHD/back/ibtwo.png" position="14,2" size="1250,70" alphatest="blend" zPosition="-8" />
   </screen>
@@ -1140,7 +1140,7 @@
     <widget font="Regular2;36" halign="center" valign="center" noWrap="1" position="215,630" render="SevenHDRunningText" options="movetype=running,startpoint=0,startdelay=2000,steptime=90,wrap=0,always=0,repeat=2,oneshot=1" size="850,48" source="session.Event_Next" backgroundColor="SevenFontBackgroundIB1" transparent="1" zPosition="1" foregroundColor="SevenNextIB">
       <convert type="SevenHDEventName">Name</convert>
     </widget>
-    <ePixmap pixmap="SevenHD/back/ibone.png" position="14,533" size="1250,168" alphatest="blend" zPosition="-8" />
+    <ePixmap pixmap="SevenHD/back/ibone.png" position="14,533" size="1250,170" alphatest="blend" zPosition="-8" />
   </screen>
   <screen name="template_menu_sib1.4">
       <!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="SecondInfoBar" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
@@ -1316,7 +1316,7 @@
     <widget alphatest="blend" position="26,552" render="SevenHDXPicon" size="220,132" source="session.CurrentService" transparent="1" zPosition="4">
       <convert type="ServiceName">Reference</convert>
     </widget>
-    <ePixmap pixmap="SevenHD/back/ibone.png" position="14,533" size="1250,168" alphatest="blend" zPosition="-8" />
+    <ePixmap pixmap="SevenHD/back/ibone.png" position="14,533" size="1250,170" alphatest="blend" zPosition="-8" />
   </screen>
   <screen name="template_menu_sibx0">
     <eLabel backgroundColor="SevenBackgroundIB1" position="14,534" size="1250,168" zPosition="-9" />
@@ -1475,7 +1475,7 @@
     <widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 20" foregroundColor="SevenNextIB" halign="center" position="37,306" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,steptime=90,wrap=1,always=0,repeat=2,oneshot=1" size="1200,130" source="session.Event_Next" zPosition="1" transparent="1">
       <convert type="SevenHDEventName">ExtendedDescription</convert>
     </widget>
-    <ePixmap pixmap="SevenHD/back/ibone.png" position="14,533" size="1250,168" alphatest="blend" zPosition="-8" />
+    <ePixmap pixmap="SevenHD/back/ibone.png" position="14,533" size="1250,170" alphatest="blend" zPosition="-8" />
     <ePixmap pixmap="SevenHD/back/ibone.png" position="14,77" size="1250,364" alphatest="blend" zPosition="-8" />
     <ePixmap pixmap="SevenHD/back/ibtwo.png" position="14,2" size="1250,70" alphatest="blend" zPosition="-8" />
   </screen>
@@ -1640,7 +1640,7 @@
     <eLabel backgroundColor="SevenBorderIB" position="643,75" size="620,2" zPosition="2" />
     <eLabel backgroundColor="SevenBorderIB" position="643,439" size="620,2" zPosition="2" />
     <eLabel backgroundColor="SevenBackgroundIB1" position="14,78" size="620,363" zPosition="-9" />
-    <ePixmap pixmap="SevenHD/back/ibone.png" position="14,533" size="1250,168" alphatest="blend" zPosition="-8" />
+    <ePixmap pixmap="SevenHD/back/ibone.png" position="14,533" size="1250,170" alphatest="blend" zPosition="-8" />
     <ePixmap pixmap="SevenHD/back/ibone.png" position="14,77" size="620,364" alphatest="blend" zPosition="-8" />
     <ePixmap pixmap="SevenHD/back/ibtwo.png" position="14,2" size="1250,70" alphatest="blend" zPosition="-8" />
     <ePixmap pixmap="SevenHD/back/ibtwo.png" position="643,77" size="620,364" alphatest="blend" zPosition="-8" />
@@ -1795,7 +1795,7 @@
       <convert type="SevenHDEventName">ExtendedDescription</convert>
     </widget>
     <eLabel backgroundColor="SevenBackgroundIB1" position="14,77" size="1250,363" zPosition="-9" />
-    <ePixmap pixmap="SevenHD/back/ibone.png" position="14,533" size="1250,168" alphatest="blend" zPosition="-8" />
+    <ePixmap pixmap="SevenHD/back/ibone.png" position="14,533" size="1250,170" alphatest="blend" zPosition="-8" />
     <ePixmap pixmap="SevenHD/back/ibone.png" position="14,77" size="1250,364" alphatest="blend" zPosition="-8" />
     <ePixmap pixmap="SevenHD/back/ibtwo.png" position="14,2" size="1250,70" alphatest="blend" zPosition="-8" />
   </screen>
@@ -1959,7 +1959,7 @@
     <widget alphatest="blend" position="26,552" render="SevenHDXPicon" size="220,132" source="session.CurrentService" transparent="1" zPosition="4">
       <convert type="ServiceName">Reference</convert>
     </widget>
-    <ePixmap pixmap="SevenHD/back/ibone.png" position="14,533" size="1250,168" alphatest="blend" zPosition="-8" />
+    <ePixmap pixmap="SevenHD/back/ibone.png" position="14,533" size="1250,170" alphatest="blend" zPosition="-8" />
   </screen>
   <screen name="template_menu_sibx0.4">
        <!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="SecondInfoBar" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
@@ -2212,7 +2212,7 @@
       <convert type="SevenHDEventTime">Duration</convert>
       <convert type="SevenHDClockToText">InMinutes</convert>
     </widget>
-    <ePixmap pixmap="SevenHD/back/ibone.png" position="14,533" size="1250,168" alphatest="blend" zPosition="-8" />
+    <ePixmap pixmap="SevenHD/back/ibone.png" position="14,533" size="1250,170" alphatest="blend" zPosition="-8" />
   </screen>
   <screen name="template_menu_sibx1">
     <eLabel backgroundColor="SevenBackgroundIB2" position="14,2" size="1250,40" zPosition="-9" />
@@ -2375,7 +2375,7 @@
       <convert type="SevenHDEventTime">Duration</convert>
       <convert type="SevenHDClockToText">InMinutes</convert>
     </widget>
-    <ePixmap pixmap="SevenHD/back/ibone.png" position="14,533" size="1250,168" alphatest="blend" zPosition="-8" />
+    <ePixmap pixmap="SevenHD/back/ibone.png" position="14,533" size="1250,170" alphatest="blend" zPosition="-8" />
     <ePixmap pixmap="SevenHD/back/ibone.png" position="14,45" size="1250,422" alphatest="blend" zPosition="-8" />
     <ePixmap pixmap="SevenHD/back/ibtwo.png" position="14,2" size="1250,40" alphatest="blend" zPosition="-8" />
   </screen>
@@ -2544,7 +2544,7 @@
       <convert type="SevenHDEventTime">Duration</convert>
       <convert type="SevenHDClockToText">InMinutes</convert>
     </widget>
-    <ePixmap pixmap="SevenHD/back/ibone.png" position="14,533" size="1250,168" alphatest="blend" zPosition="-8" />
+    <ePixmap pixmap="SevenHD/back/ibone.png" position="14,533" size="1250,170" alphatest="blend" zPosition="-8" />
     <ePixmap pixmap="SevenHD/back/ibone.png" position="14,47" size="620,420" alphatest="blend" zPosition="-8" />
     <ePixmap pixmap="SevenHD/back/ibtwo.png" position="14,2" size="1250,40" alphatest="blend" zPosition="-8" />
     <ePixmap pixmap="SevenHD/back/ibtwo.png" position="643,47" size="620,420" alphatest="blend" zPosition="-8" />
@@ -2703,7 +2703,7 @@
       <convert type="SevenHDEventTime">Duration</convert>
       <convert type="SevenHDClockToText">InMinutes</convert>
     </widget>
-    <ePixmap pixmap="SevenHD/back/ibone.png" position="14,533" size="1250,168" alphatest="blend" zPosition="-8" />
+    <ePixmap pixmap="SevenHD/back/ibone.png" position="14,533" size="1250,170" alphatest="blend" zPosition="-8" />
     <ePixmap pixmap="SevenHD/back/ibone.png" position="14,45" size="1250,422" alphatest="blend" zPosition="-8" />
     <ePixmap pixmap="SevenHD/back/ibtwo.png" position="14,2" size="1250,40" alphatest="blend" zPosition="-8" />
   </screen>
@@ -2871,7 +2871,7 @@
       <convert type="SevenHDEventTime">Duration</convert>
       <convert type="SevenHDClockToText">InMinutes</convert>
     </widget>
-    <ePixmap pixmap="SevenHD/back/ibone.png" position="14,533" size="1250,168" alphatest="blend" zPosition="-8" />
+    <ePixmap pixmap="SevenHD/back/ibone.png" position="14,533" size="1250,170" alphatest="blend" zPosition="-8" />
   </screen>
   <screen name="template_menu_sibx1.4">
      <!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="SecondInfoBar" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
@@ -3111,7 +3111,7 @@
     <convert type="SevenHDEventTime">Duration</convert>
     <convert type="SevenHDClockToText">InMinutes</convert>
   </widget>
-  <ePixmap pixmap="SevenHD/back/ibone.png" position="14,533" size="1250,168" alphatest="blend" zPosition="-8" />
+  <ePixmap pixmap="SevenHD/back/ibone.png" position="14,533" size="1250,170" alphatest="blend" zPosition="-8" />
   <eLabel backgroundColor="SevenFontBackgroundIB1" foregroundColor="SevenFont1" font="Regular; 19" halign="left" noWrap="1" position="275,611" size="196,25" text="Sendung läuft seit" transparent="1" valign="center" zPosition="1" />
   <widget backgroundColor="SevenFontBackgroundIB1" foregroundColor="SevenFont1" font="Regular; 19" halign="left" position="438,611" render="Label" size="75,25" source="session.Event_Now" transparent="1" valign="center" zPosition="1">
     <convert type="SevenHDEventTime">RunTime</convert>
@@ -3278,7 +3278,7 @@
     <convert type="SevenHDEventTime">Duration</convert>
     <convert type="SevenHDClockToText">InMinutes</convert>
   </widget>
-  <ePixmap pixmap="SevenHD/back/ibone.png" position="14,533" size="1250,168" alphatest="blend" zPosition="-8" />
+  <ePixmap pixmap="SevenHD/back/ibone.png" position="14,533" size="1250,170" alphatest="blend" zPosition="-8" />
   <eLabel backgroundColor="SevenFontBackgroundIB1" foregroundColor="SevenFont1" font="Regular; 19" halign="left" noWrap="1" position="275,611" size="196,25" text="Sendung läuft seit" transparent="1" valign="center" zPosition="1" />
   <widget backgroundColor="SevenFontBackgroundIB1" foregroundColor="SevenFont1" font="Regular; 19" halign="left" position="438,611" render="Label" size="75,25" source="session.Event_Now" transparent="1" valign="center" zPosition="1">
     <convert type="SevenHDEventTime">RunTime</convert>
@@ -3451,7 +3451,7 @@
     <convert type="SevenHDEventTime">Duration</convert>
     <convert type="SevenHDClockToText">InMinutes</convert>
   </widget>
-  <ePixmap pixmap="SevenHD/back/ibone.png" position="14,533" size="1250,168" alphatest="blend" zPosition="-8" />
+  <ePixmap pixmap="SevenHD/back/ibone.png" position="14,533" size="1250,170" alphatest="blend" zPosition="-8" />
   <eLabel backgroundColor="SevenFontBackgroundIB1" foregroundColor="SevenFont1" font="Regular; 19" halign="left" noWrap="1" position="275,611" size="196,25" text="Sendung läuft seit" transparent="1" valign="center" zPosition="1" />
   <widget backgroundColor="SevenFontBackgroundIB1" foregroundColor="SevenFont1" font="Regular; 19" halign="left" position="438,611" render="Label" size="75,25" source="session.Event_Now" transparent="1" valign="center" zPosition="1">
     <convert type="SevenHDEventTime">RunTime</convert>
@@ -3460,7 +3460,7 @@
   <eLabel backgroundColor="SevenBorderIB" position="248,533" size="2,112" zPosition="2" />
   <eLabel backgroundColor="SevenBorderIB" position="1076,533" size="2,112" zPosition="2" />
   <eLabel backgroundColor="SevenBorderIB" position="248,643" size="830,2" zPosition="2" />
-  <ePixmap pixmap="SevenHD/back/ibone.png" position="14,533" size="1250,168" alphatest="blend" zPosition="-8" />
+  <ePixmap pixmap="SevenHD/back/ibone.png" position="14,533" size="1250,170" alphatest="blend" zPosition="-8" />
   <ePixmap pixmap="SevenHD/back/ibone.png" position="14,47" size="620,420" alphatest="blend" zPosition="-8" />
   <ePixmap pixmap="SevenHD/back/ibtwo.png" position="14,2" size="1250,40" alphatest="blend" zPosition="-8" />
   <ePixmap pixmap="SevenHD/back/ibtwo.png" position="643,47" size="620,420" alphatest="blend" zPosition="-8" />
@@ -3615,7 +3615,7 @@
     <convert type="SevenHDEventTime">Duration</convert>
     <convert type="SevenHDClockToText">InMinutes</convert>
   </widget>
-  <ePixmap pixmap="SevenHD/back/ibone.png" position="14,533" size="1250,168" alphatest="blend" zPosition="-8" />
+  <ePixmap pixmap="SevenHD/back/ibone.png" position="14,533" size="1250,170" alphatest="blend" zPosition="-8" />
   <eLabel backgroundColor="SevenFontBackgroundIB1" foregroundColor="SevenFont1" font="Regular; 19" halign="left" noWrap="1" position="275,611" size="196,25" text="Sendung läuft seit" transparent="1" valign="center" zPosition="1" />
   <widget backgroundColor="SevenFontBackgroundIB1" foregroundColor="SevenFont1" font="Regular; 19" halign="left" position="438,611" render="Label" size="75,25" source="session.Event_Now" transparent="1" valign="center" zPosition="1">
     <convert type="SevenHDEventTime">RunTime</convert>
@@ -3787,7 +3787,7 @@
     <convert type="SevenHDEventTime">Duration</convert>
     <convert type="SevenHDClockToText">InMinutes</convert>
   </widget>
-  <ePixmap pixmap="SevenHD/back/ibone.png" position="14,533" size="1250,168" alphatest="blend" zPosition="-8" />
+  <ePixmap pixmap="SevenHD/back/ibone.png" position="14,533" size="1250,170" alphatest="blend" zPosition="-8" />
   <eLabel backgroundColor="SevenFontBackgroundIB1" foregroundColor="SevenFont1" font="Regular; 19" halign="left" noWrap="1" position="275,611" size="196,25" text="Sendung läuft seit" transparent="1" valign="center" zPosition="1" />
   <widget backgroundColor="SevenFontBackgroundIB1" foregroundColor="SevenFont1" font="Regular; 19" halign="left" position="438,611" render="Label" size="75,25" source="session.Event_Now" transparent="1" valign="center" zPosition="1">
     <convert type="SevenHDEventTime">RunTime</convert>
@@ -3937,7 +3937,7 @@
     <eLabel backgroundColor="SevenBorderIB" position="14,533" size="1250,2" zPosition="2" />
     <eLabel backgroundColor="SevenBorderIB" position="1262,533" size="2,170" zPosition="2" />
     <eLabel backgroundColor="SevenBorderIB" position="248,533" size="2,128" zPosition="2" />
-    <eLabel backgroundColor="SevenBackgroundIB2" position="250,533" size="825,130" zPosition="-9" />
+    <eLabel backgroundColor="SevenBackgroundIB2" position="250,533" size="828,129" zPosition="-9" />
     <eLabel backgroundColor="SevenBackgroundIB1" position="248,659" size="828,44" zPosition="-9" />
     <eLabel backgroundColor="SevenBackgroundIB1" position="16,534" size="232,168" zPosition="-9" />
     <widget position="273,603" backgroundColor="SevenFontBackgroundIB2" render="Progress" size="793,6" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgressIB" pixmap="SevenHD/progressib/progressib793.png">
@@ -4054,8 +4054,8 @@
       <convert type="SevenHDEventTime">Duration</convert>
       <convert type="SevenHDClockToText">InMinutes</convert>
     </widget>
-    <ePixmap pixmap="SevenHD/back/ibone.png" position="14,533" size="1250,168" alphatest="blend" zPosition="-8" />
-    <ePixmap pixmap="SevenHD/back/ibtwo.png" position="250,533" size="825,130" alphatest="blend" zPosition="-7" />
+    <ePixmap pixmap="SevenHD/back/ibone.png" position="14,533" size="1250,170" alphatest="blend" zPosition="-8" />
+    <ePixmap pixmap="SevenHD/back/ibtwo.png" position="250,533" size="828,129" alphatest="blend" zPosition="-7" />
   </screen>
   <screen name="template_menu_sibx3">
     <eLabel backgroundColor="SevenBackgroundIB1" position="1076,534" size="186,168" zPosition="-9" />
@@ -4067,7 +4067,7 @@
     <eLabel backgroundColor="SevenBorderIB" position="14,533" size="1250,2" zPosition="2" />
     <eLabel backgroundColor="SevenBorderIB" position="1262,533" size="2,170" zPosition="2" />
     <eLabel backgroundColor="SevenBorderIB" position="248,533" size="2,128" zPosition="2" />
-    <eLabel backgroundColor="SevenBackgroundIB2" position="250,533" size="825,130" zPosition="-9" />
+    <eLabel backgroundColor="SevenBackgroundIB2" position="250,533" size="828,129" zPosition="-9" />
     <eLabel backgroundColor="SevenBackgroundIB1" position="248,659" size="828,44" zPosition="-9" />
     <eLabel backgroundColor="SevenBackgroundIB1" position="16,534" size="232,168" zPosition="-9" />
     <widget source="session.CurrentService" position="37,10" size="500,22" font="Regular2;12" render="Label" halign="left" valign="bottom" foregroundColor="SevenSNRIB" backgroundColor="SevenFontBackgroundIB2" transparent="1" zPosition="1">
@@ -4224,8 +4224,8 @@
     <widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 20" foregroundColor="SevenNextIB" halign="center" position="37,316" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,steptime=90,wrap=1,always=0,repeat=2,oneshot=1" size="1200,132" source="session.Event_Next" zPosition="1" transparent="1">
       <convert type="SevenHDEventName">ExtendedDescription</convert>
     </widget>
-    <ePixmap pixmap="SevenHD/back/ibone.png" position="14,533" size="1250,168" alphatest="blend" zPosition="-8" />
-    <ePixmap pixmap="SevenHD/back/ibtwo.png" position="250,533" size="825,130" alphatest="blend" zPosition="-7" />
+    <ePixmap pixmap="SevenHD/back/ibone.png" position="14,533" size="1250,170" alphatest="blend" zPosition="-8" />
+    <ePixmap pixmap="SevenHD/back/ibtwo.png" position="250,533" size="828,129" alphatest="blend" zPosition="-7" />
     <ePixmap pixmap="SevenHD/back/ibone.png" position="14,45" size="1250,422" alphatest="blend" zPosition="-8" />
     <ePixmap pixmap="SevenHD/back/ibtwo.png" position="14,2" size="1250,40" alphatest="blend" zPosition="-8" />
   </screen>
@@ -4239,7 +4239,7 @@
     <eLabel backgroundColor="SevenBorderIB" position="14,533" size="1250,2" zPosition="2" />
     <eLabel backgroundColor="SevenBorderIB" position="1262,533" size="2,170" zPosition="2" />
     <eLabel backgroundColor="SevenBorderIB" position="248,533" size="2,128" zPosition="2" />
-    <eLabel backgroundColor="SevenBackgroundIB2" position="250,533" size="825,130" zPosition="-9" />
+    <eLabel backgroundColor="SevenBackgroundIB2" position="250,533" size="828,129" zPosition="-9" />
     <eLabel backgroundColor="SevenBackgroundIB1" position="248,659" size="828,44" zPosition="-9" />
     <eLabel backgroundColor="SevenBackgroundIB1" position="16,534" size="232,168" zPosition="-9" />
     <widget source="session.CurrentService" position="37,10" size="500,22" font="Regular2;12" render="Label" halign="left" valign="bottom" foregroundColor="SevenSNRIB" backgroundColor="SevenFontBackgroundIB2" transparent="1" zPosition="1">
@@ -4400,8 +4400,8 @@
     <eLabel backgroundColor="SevenBorderIB" position="643,45" size="620,2" zPosition="2" />
     <eLabel backgroundColor="SevenBorderIB" position="643,465" size="620,2" zPosition="2" />
     <eLabel backgroundColor="SevenBackgroundIB2" position="643,47" size="620,420" zPosition="-9" />
-    <ePixmap pixmap="SevenHD/back/ibone.png" position="14,533" size="1250,168" alphatest="blend" zPosition="-8" />
-    <ePixmap pixmap="SevenHD/back/ibtwo.png" position="250,533" size="825,130" alphatest="blend" zPosition="-7" />
+    <ePixmap pixmap="SevenHD/back/ibone.png" position="14,533" size="1250,170" alphatest="blend" zPosition="-8" />
+    <ePixmap pixmap="SevenHD/back/ibtwo.png" position="250,533" size="828,129" alphatest="blend" zPosition="-7" />
     <ePixmap pixmap="SevenHD/back/ibone.png" position="14,47" size="620,420" alphatest="blend" zPosition="-8" />
     <ePixmap pixmap="SevenHD/back/ibtwo.png" position="14,2" size="1250,40" alphatest="blend" zPosition="-8" />
     <ePixmap pixmap="SevenHD/back/ibtwo.png" position="643,47" size="620,420" alphatest="blend" zPosition="-8" />
@@ -4416,7 +4416,7 @@
     <eLabel backgroundColor="SevenBorderIB" position="14,533" size="1250,2" zPosition="2" />
     <eLabel backgroundColor="SevenBorderIB" position="1262,533" size="2,170" zPosition="2" />
     <eLabel backgroundColor="SevenBorderIB" position="248,533" size="2,128" zPosition="2" />
-    <eLabel backgroundColor="SevenBackgroundIB2" position="250,533" size="825,130" zPosition="-9" />
+    <eLabel backgroundColor="SevenBackgroundIB2" position="250,533" size="828,129" zPosition="-9" />
     <eLabel backgroundColor="SevenBackgroundIB1" position="248,659" size="828,44" zPosition="-9" />
     <eLabel backgroundColor="SevenBackgroundIB1" position="16,534" size="232,168" zPosition="-9" />
     <widget source="session.CurrentService" position="37,10" size="500,22" font="Regular2;12" render="Label" halign="left" valign="bottom" foregroundColor="SevenSNRIB" backgroundColor="SevenFontBackgroundIB2" transparent="1" zPosition="1">
@@ -4566,8 +4566,8 @@
     <widget backgroundColor="SevenFontBackgroundIB1" font="Regular; 20" foregroundColor="SevenNowIB" halign="center" position="37,93" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,steptime=90,wrap=1,always=0,repeat=2,oneshot=1" size="1202,364" source="session.Event_Now" zPosition="1" transparent="1">
       <convert type="SevenHDEventName">ExtendedDescription</convert>
     </widget>
-    <ePixmap pixmap="SevenHD/back/ibone.png" position="14,533" size="1250,168" alphatest="blend" zPosition="-8" />
-    <ePixmap pixmap="SevenHD/back/ibtwo.png" position="250,533" size="825,130" alphatest="blend" zPosition="-7" />
+    <ePixmap pixmap="SevenHD/back/ibone.png" position="14,533" size="1250,170" alphatest="blend" zPosition="-8" />
+    <ePixmap pixmap="SevenHD/back/ibtwo.png" position="250,533" size="828,129" alphatest="blend" zPosition="-7" />
     <ePixmap pixmap="SevenHD/back/ibone.png" position="14,45" size="1250,422" alphatest="blend" zPosition="-8" />
     <ePixmap pixmap="SevenHD/back/ibtwo.png" position="14,2" size="1250,40" alphatest="blend" zPosition="-8" />
   </screen>
@@ -4624,7 +4624,7 @@
     <eLabel backgroundColor="SevenBorderIB" position="14,533" size="1250,2" zPosition="2" />
     <eLabel backgroundColor="SevenBorderIB" position="1262,533" size="2,170" zPosition="2" />
     <eLabel backgroundColor="SevenBorderIB" position="248,533" size="2,128" zPosition="2" />
-    <eLabel backgroundColor="SevenBackgroundIB2" position="250,533" size="825,130" zPosition="-9" />
+    <eLabel backgroundColor="SevenBackgroundIB2" position="250,533" size="828,129" zPosition="-9" />
     <eLabel backgroundColor="SevenBackgroundIB1" position="248,659" size="828,44" zPosition="-9" />
     <eLabel backgroundColor="SevenBackgroundIB1" position="16,534" size="232,168" zPosition="-9" />
     <widget position="273,603" backgroundColor="SevenFontBackgroundIB1" render="Progress" size="793,6" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgressIB" pixmap="SevenHD/progressib/progressib793.png">
@@ -4741,8 +4741,8 @@
       <convert type="SevenHDEventTime">Duration</convert>
       <convert type="SevenHDClockToText">InMinutes</convert>
     </widget>
-    <ePixmap pixmap="SevenHD/back/ibone.png" position="14,533" size="1250,168" alphatest="blend" zPosition="-8" />
-    <ePixmap pixmap="SevenHD/back/ibtwo.png" position="250,533" size="825,130" alphatest="blend" zPosition="-7" />
+    <ePixmap pixmap="SevenHD/back/ibone.png" position="14,533" size="1250,170" alphatest="blend" zPosition="-8" />
+    <ePixmap pixmap="SevenHD/back/ibtwo.png" position="250,533" size="828,129" alphatest="blend" zPosition="-7" />
   </screen>
   <screen name="template_menu_sibx3.4">
        <!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="SecondInfoBar" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
@@ -4885,7 +4885,7 @@
     <eLabel backgroundColor="SevenBorderIB" position="14,473" size="274,2" zPosition="2" />
     <eLabel backgroundColor="SevenBorderIB" position="1262,533" size="2,170" zPosition="2" />
     <eLabel backgroundColor="SevenBorderIB" position="288,473" size="2,188" zPosition="2" />
-    <eLabel backgroundColor="SevenBackgroundIB2" position="290,533" size="785,129" zPosition="-9" />
+    <eLabel backgroundColor="SevenBackgroundIB2" position="290,533" size="787,129" zPosition="-9" />
     <eLabel backgroundColor="SevenBackgroundIB1" position="288,659" size="788,44" zPosition="-9" />
     <eLabel backgroundColor="SevenBackgroundIB1" position="16,474" size="272,228" zPosition="-9" />
     <widget position="313,603" backgroundColor="SevenFontBackgroundIB2" render="Progress" size="753,6" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgressIB" pixmap="SevenHD/progressib/progressib793.png">
@@ -5019,9 +5019,9 @@
     <widget source="session.CurrentService" render="Label" zPosition="3" position="466,670" size="150,25" font="Regular; 19" halign="center" backgroundColor="SevenFontBackgroundIB1" foregroundColor="SevenSNRIB" transparent="1">
       <convert type="SevenHDExtraInfo2">ResolutionString</convert>
     </widget>
-    <ePixmap pixmap="SevenHD/back/ibone.png" position="16,534" size="1246,168" alphatest="blend" zPosition="-8" />
-    <ePixmap pixmap="SevenHD/back/ibtwo.png" position="290,533" size="785,129" alphatest="blend" zPosition="-7" />
-    <ePixmap pixmap="SevenHD/back/ibone.png" position="16,474" size="272,59" alphatest="blend" zPosition="-8" />
+    <ePixmap pixmap="SevenHD/back/ibone.png" position="16,534" size="1246,170" alphatest="blend" zPosition="-8" />
+    <ePixmap pixmap="SevenHD/back/ibtwo.png" position="290,533" size="787,129" alphatest="blend" zPosition="-7" />
+    <ePixmap pixmap="SevenHD/back/ibone.png" position="16,474" size="272,181" alphatest="blend" zPosition="-8" />
   </screen>
   <screen name="template_menu_sibx4">
     <eLabel backgroundColor="SevenBackgroundIB1" position="1076,534" size="186,168" zPosition="-9" />
@@ -5033,7 +5033,7 @@
     <eLabel backgroundColor="SevenBorderIB" position="14,473" size="274,2" zPosition="2" />
     <eLabel backgroundColor="SevenBorderIB" position="1262,533" size="2,170" zPosition="2" />
     <eLabel backgroundColor="SevenBorderIB" position="288,473" size="2,188" zPosition="2" />
-    <eLabel backgroundColor="SevenBackgroundIB2" position="290,533" size="785,129" zPosition="-9" />
+    <eLabel backgroundColor="SevenBackgroundIB2" position="290,533" size="787,129" zPosition="-9" />
     <eLabel backgroundColor="SevenBackgroundIB1" position="288,659" size="788,44" zPosition="-9" />
     <eLabel backgroundColor="SevenBackgroundIB1" position="16,474" size="272,228" zPosition="-9" />
     <widget source="session.CurrentService" position="37,10" size="500,22" font="Regular2;12" render="Label" halign="left" valign="bottom" foregroundColor="SevenSNRIB" backgroundColor="SevenFontBackgroundIB2" transparent="1" zPosition="1">
@@ -5209,9 +5209,9 @@
     </widget>
     <ePixmap pixmap="SevenHD/back/ibtwo.png" position="14,2" size="1250,40" alphatest="blend" zPosition="-8" />
     <ePixmap pixmap="SevenHD/back/ibone.png" position="14,45" size="1250,422" alphatest="blend" zPosition="-8" />
-    <ePixmap pixmap="SevenHD/back/ibone.png" position="16,534" size="1246,168" alphatest="blend" zPosition="-8" />
-    <ePixmap pixmap="SevenHD/back/ibtwo.png" position="290,533" size="785,129" alphatest="blend" zPosition="-7" />
-    <ePixmap pixmap="SevenHD/back/ibone.png" position="16,474" size="272,59" alphatest="blend" zPosition="-8" />
+    <ePixmap pixmap="SevenHD/back/ibone.png" position="16,534" size="1246,170" alphatest="blend" zPosition="-8" />
+    <ePixmap pixmap="SevenHD/back/ibtwo.png" position="290,533" size="787,129" alphatest="blend" zPosition="-7" />
+    <ePixmap pixmap="SevenHD/back/ibone.png" position="16,474" size="272,181" alphatest="blend" zPosition="-8" />
   </screen>
   <screen name="template_menu_sibx4.1">
     <eLabel backgroundColor="SevenBackgroundIB1" position="1076,534" size="186,168" zPosition="-9" />
@@ -5223,7 +5223,7 @@
     <eLabel backgroundColor="SevenBorderIB" position="14,473" size="274,2" zPosition="2" />
     <eLabel backgroundColor="SevenBorderIB" position="1262,533" size="2,170" zPosition="2" />
     <eLabel backgroundColor="SevenBorderIB" position="288,473" size="2,188" zPosition="2" />
-    <eLabel backgroundColor="SevenBackgroundIB2" position="290,533" size="785,129" zPosition="-9" />
+    <eLabel backgroundColor="SevenBackgroundIB2" position="290,533" size="787,129" zPosition="-9" />
     <eLabel backgroundColor="SevenBackgroundIB1" position="288,659" size="788,44" zPosition="-9" />
     <eLabel backgroundColor="SevenBackgroundIB1" position="16,474" size="272,228" zPosition="-9" />
     <widget position="312,603" backgroundColor="SevenFontBackgroundIB2" render="Progress" size="753,6" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgressIB" pixmap="SevenHD/progressib/progressib793.png">
@@ -5404,9 +5404,9 @@
     <ePixmap pixmap="SevenHD/back/ibtwo.png" position="14,2" size="1250,40" alphatest="blend" zPosition="-8" />
     <ePixmap pixmap="SevenHD/back/ibone.png" position="14,45" size="620,420" alphatest="blend" zPosition="-8" />
     <ePixmap pixmap="SevenHD/back/ibtwo.png" position="643,45" size="620,420" alphatest="blend" zPosition="-8" />
-    <ePixmap pixmap="SevenHD/back/ibone.png" position="16,534" size="1246,168" alphatest="blend" zPosition="-8" />
-    <ePixmap pixmap="SevenHD/back/ibtwo.png" position="290,533" size="785,129" alphatest="blend" zPosition="-7" />
-    <ePixmap pixmap="SevenHD/back/ibone.png" position="16,474" size="272,59" alphatest="blend" zPosition="-8" />
+    <ePixmap pixmap="SevenHD/back/ibone.png" position="16,534" size="1246,170" alphatest="blend" zPosition="-8" />
+    <ePixmap pixmap="SevenHD/back/ibtwo.png" position="290,533" size="787,129" alphatest="blend" zPosition="-7" />
+    <ePixmap pixmap="SevenHD/back/ibone.png" position="16,474" size="272,181" alphatest="blend" zPosition="-8" />
   </screen>
   <screen name="template_menu_sibx4.2">
     <eLabel backgroundColor="SevenBackgroundIB1" position="1076,534" size="186,168" zPosition="-9" />
@@ -5418,7 +5418,7 @@
     <eLabel backgroundColor="SevenBorderIB" position="14,473" size="274,2" zPosition="2" />
     <eLabel backgroundColor="SevenBorderIB" position="1262,533" size="2,170" zPosition="2" />
     <eLabel backgroundColor="SevenBorderIB" position="288,473" size="2,188" zPosition="2" />
-    <eLabel backgroundColor="SevenBackgroundIB2" position="290,533" size="785,129" zPosition="-9" />
+    <eLabel backgroundColor="SevenBackgroundIB2" position="290,533" size="787,129" zPosition="-9" />
     <eLabel backgroundColor="SevenBackgroundIB1" position="288,659" size="788,44" zPosition="-9" />
     <eLabel backgroundColor="SevenBackgroundIB1" position="16,474" size="272,228" zPosition="-9" />
     <widget position="313,603" backgroundColor="SevenFontBackgroundIB2" render="Progress" size="753,6" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgressIB" pixmap="SevenHD/progressib/progressib793.png">
@@ -5587,9 +5587,9 @@
     </widget>
     <ePixmap pixmap="SevenHD/back/ibtwo.png" position="14,2" size="1250,40" alphatest="blend" zPosition="-8" />
     <ePixmap pixmap="SevenHD/back/ibone.png" position="14,45" size="1250,422" alphatest="blend" zPosition="-8" />
-    <ePixmap pixmap="SevenHD/back/ibone.png" position="16,534" size="1246,168" alphatest="blend" zPosition="-8" />
-    <ePixmap pixmap="SevenHD/back/ibtwo.png" position="290,533" size="785,129" alphatest="blend" zPosition="-7" />
-    <ePixmap pixmap="SevenHD/back/ibone.png" position="16,474" size="272,59" alphatest="blend" zPosition="-8" />
+    <ePixmap pixmap="SevenHD/back/ibone.png" position="16,534" size="1246,170" alphatest="blend" zPosition="-8" />
+    <ePixmap pixmap="SevenHD/back/ibtwo.png" position="290,533" size="787,129" alphatest="blend" zPosition="-7" />
+    <ePixmap pixmap="SevenHD/back/ibone.png" position="16,474" size="272,181" alphatest="blend" zPosition="-8" />
   </screen>
   <screen name="template_menu_sibx4.3">
     <eLabel backgroundColor="SevenBackgroundIB2" position="14,2" size="1250,40" zPosition="-9" />
@@ -5644,7 +5644,7 @@
     <eLabel backgroundColor="SevenBorderIB" position="14,473" size="274,2" zPosition="2" />
     <eLabel backgroundColor="SevenBorderIB" position="1262,533" size="2,170" zPosition="2" />
     <eLabel backgroundColor="SevenBorderIB" position="288,473" size="2,188" zPosition="2" />
-    <eLabel backgroundColor="SevenBackgroundIB2" position="290,533" size="785,129" zPosition="-9" />
+    <eLabel backgroundColor="SevenBackgroundIB2" position="290,533" size="787,129" zPosition="-9" />
     <eLabel backgroundColor="SevenBackgroundIB1" position="288,659" size="788,44" zPosition="-9" />
     <eLabel backgroundColor="SevenBackgroundIB1" position="16,474" size="272,228" zPosition="-9" />
     <widget position="313,603" backgroundColor="SevenFontBackgroundIB1" render="Progress" size="753,6" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgressIB" pixmap="SevenHD/progressib/progressib793.png">
@@ -5778,9 +5778,9 @@
     <widget source="session.FrontendStatus" render="Progress" position="21,686" size="259,10" zPosition="4" pixmap="SevenHD/snr.png" transparent="1">
       <convert type="FrontendInfo">AGC</convert>
     </widget>
-    <ePixmap pixmap="SevenHD/back/ibone.png" position="16,534" size="1246,168" alphatest="blend" zPosition="-8" />
-    <ePixmap pixmap="SevenHD/back/ibtwo.png" position="290,533" size="785,129" alphatest="blend" zPosition="-7" />
-    <ePixmap pixmap="SevenHD/back/ibone.png" position="16,474" size="272,59" alphatest="blend" zPosition="-8" />
+    <ePixmap pixmap="SevenHD/back/ibone.png" position="16,534" size="1246,170" alphatest="blend" zPosition="-8" />
+    <ePixmap pixmap="SevenHD/back/ibtwo.png" position="290,533" size="787,129" alphatest="blend" zPosition="-7" />
+    <ePixmap pixmap="SevenHD/back/ibone.png" position="16,474" size="272,181" alphatest="blend" zPosition="-8" />
   </screen>
   <screen name="template_menu_sibx4.4">
        <!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="SecondInfoBar" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
@@ -5922,7 +5922,7 @@
     <eLabel backgroundColor="SevenBorderIB" position="14,473" size="274,2" zPosition="2" />
     <eLabel backgroundColor="SevenBorderIB" position="1262,533" size="2,170" zPosition="2" />
     <eLabel backgroundColor="SevenBorderIB" position="288,473" size="2,188" zPosition="2" />
-    <eLabel backgroundColor="SevenBackgroundIB2" position="290,533" size="785,129" zPosition="-9" />
+    <eLabel backgroundColor="SevenBackgroundIB2" position="290,533" size="787,129" zPosition="-9" />
     <eLabel backgroundColor="SevenBackgroundIB1" position="288,659" size="788,44" zPosition="-9" />
     <eLabel backgroundColor="SevenBackgroundIB1" position="16,474" size="272,228" zPosition="-9" />
     <widget position="295,613" backgroundColor="SevenFontBackgroundIB2" render="Progress" size="770,5" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgressIB" pixmap="SevenHD/progressib/progressib770.png">
@@ -6049,9 +6049,9 @@
     <widget source="session.CurrentService" render="Label" zPosition="3" position="466,670" size="150,25" font="Regular; 19" halign="center" backgroundColor="SevenFontBackgroundIB1" foregroundColor="SevenSNRIB" transparent="1">
       <convert type="SevenHDExtraInfo2">ResolutionString</convert>
     </widget>
-    <ePixmap pixmap="SevenHD/back/ibone.png" position="16,534" size="1246,168" alphatest="blend" zPosition="-8" />
-    <ePixmap pixmap="SevenHD/back/ibtwo.png" position="290,533" size="785,129" alphatest="blend" zPosition="-7" />
-    <ePixmap pixmap="SevenHD/back/ibone.png" position="16,474" size="272,59" alphatest="blend" zPosition="-8" />
+    <ePixmap pixmap="SevenHD/back/ibone.png" position="16,534" size="1246,170" alphatest="blend" zPosition="-8" />
+    <ePixmap pixmap="SevenHD/back/ibtwo.png" position="290,533" size="787,129" alphatest="blend" zPosition="-7" />
+    <ePixmap pixmap="SevenHD/back/ibone.png" position="16,474" size="272,181" alphatest="blend" zPosition="-8" />
   </screen>
   <screen name="template_menu_sibx5">
     <widget source="session.CurrentService" position="37,10" size="500,22" font="Regular2;12" render="Label" halign="left" valign="bottom" foregroundColor="SevenSNRIB" backgroundColor="SevenFontBackgroundIB2" transparent="1" zPosition="1">
@@ -6109,7 +6109,7 @@
     <eLabel backgroundColor="SevenBorderIB" position="14,473" size="274,2" zPosition="2" />
     <eLabel backgroundColor="SevenBorderIB" position="1262,533" size="2,170" zPosition="2" />
     <eLabel backgroundColor="SevenBorderIB" position="288,473" size="2,188" zPosition="2" />
-    <eLabel backgroundColor="SevenBackgroundIB2" position="290,533" size="785,129" zPosition="-9" />
+    <eLabel backgroundColor="SevenBackgroundIB2" position="290,533" size="787,129" zPosition="-9" />
     <eLabel backgroundColor="SevenBackgroundIB1" position="288,659" size="788,44" zPosition="-9" />
     <eLabel backgroundColor="SevenBackgroundIB1" position="16,474" size="272,228" zPosition="-9" />
     <widget position="295,613" backgroundColor="SevenFontBackgroundIB2" render="Progress" size="770,5" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgressIB" pixmap="SevenHD/progressib/progressib770.png">
@@ -6236,9 +6236,9 @@
     <widget source="session.CurrentService" render="Label" zPosition="3" position="466,670" size="150,25" font="Regular; 19" halign="center" backgroundColor="SevenFontBackgroundIB1" foregroundColor="SevenSNRIB" transparent="1">
       <convert type="SevenHDExtraInfo2">ResolutionString</convert>
     </widget>
-    <ePixmap pixmap="SevenHD/back/ibone.png" position="16,534" size="1246,168" alphatest="blend" zPosition="-8" />
-    <ePixmap pixmap="SevenHD/back/ibtwo.png" position="290,533" size="785,129" alphatest="blend" zPosition="-7" />
-    <ePixmap pixmap="SevenHD/back/ibone.png" position="16,474" size="272,59" alphatest="blend" zPosition="-8" />
+    <ePixmap pixmap="SevenHD/back/ibone.png" position="16,534" size="1246,170" alphatest="blend" zPosition="-8" />
+    <ePixmap pixmap="SevenHD/back/ibtwo.png" position="290,533" size="787,129" alphatest="blend" zPosition="-7" />
+    <ePixmap pixmap="SevenHD/back/ibone.png" position="16,474" size="272,181" alphatest="blend" zPosition="-8" />
   </screen>
   <screen name="template_menu_sibx5.1">
     <eLabel backgroundColor="SevenBackgroundIB2" position="14,2" size="1250,40" zPosition="-9" />
@@ -6301,7 +6301,7 @@
     <eLabel backgroundColor="SevenBorderIB" position="14,473" size="274,2" zPosition="2" />
     <eLabel backgroundColor="SevenBorderIB" position="1262,533" size="2,170" zPosition="2" />
     <eLabel backgroundColor="SevenBorderIB" position="288,473" size="2,188" zPosition="2" />
-    <eLabel backgroundColor="SevenBackgroundIB2" position="290,533" size="785,129" zPosition="-9" />
+    <eLabel backgroundColor="SevenBackgroundIB2" position="290,533" size="787,129" zPosition="-9" />
     <eLabel backgroundColor="SevenBackgroundIB1" position="288,659" size="788,44" zPosition="-9" />
     <eLabel backgroundColor="SevenBackgroundIB1" position="16,474" size="272,228" zPosition="-9" />
     <widget position="295,613" backgroundColor="SevenFontBackgroundIB2" render="Progress" size="770,5" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgressIB" pixmap="SevenHD/progressib/progressib770.png">
@@ -6428,9 +6428,9 @@
     <widget source="session.CurrentService" render="Label" zPosition="3" position="466,670" size="150,25" font="Regular; 19" halign="center" backgroundColor="SevenFontBackgroundIB1" foregroundColor="SevenSNRIB" transparent="1">
       <convert type="SevenHDExtraInfo2">ResolutionString</convert>
     </widget>
-    <ePixmap pixmap="SevenHD/back/ibone.png" position="16,534" size="1246,168" alphatest="blend" zPosition="-8" />
-    <ePixmap pixmap="SevenHD/back/ibtwo.png" position="290,533" size="785,129" alphatest="blend" zPosition="-7" />
-    <ePixmap pixmap="SevenHD/back/ibone.png" position="16,474" size="272,59" alphatest="blend" zPosition="-8" />
+    <ePixmap pixmap="SevenHD/back/ibone.png" position="16,534" size="1246,170" alphatest="blend" zPosition="-8" />
+    <ePixmap pixmap="SevenHD/back/ibtwo.png" position="290,533" size="787,129" alphatest="blend" zPosition="-7" />
+    <ePixmap pixmap="SevenHD/back/ibone.png" position="16,474" size="272,181" alphatest="blend" zPosition="-8" />
   </screen>
   <screen name="template_menu_sibx5.2">
     <eLabel backgroundColor="SevenBackgroundIB2" position="14,2" size="1250,40" zPosition="-9" />
@@ -6481,7 +6481,7 @@
     <eLabel backgroundColor="SevenBorderIB" position="14,473" size="274,2" zPosition="2" />
     <eLabel backgroundColor="SevenBorderIB" position="1262,533" size="2,170" zPosition="2" />
     <eLabel backgroundColor="SevenBorderIB" position="288,473" size="2,188" zPosition="2" />
-    <eLabel backgroundColor="SevenBackgroundIB2" position="290,533" size="785,129" zPosition="-9" />
+    <eLabel backgroundColor="SevenBackgroundIB2" position="290,533" size="787,129" zPosition="-9" />
     <eLabel backgroundColor="SevenBackgroundIB1" position="288,659" size="788,44" zPosition="-9" />
     <eLabel backgroundColor="SevenBackgroundIB1" position="16,474" size="272,228" zPosition="-9" />
     <widget position="295,613" backgroundColor="SevenFontBackgroundIB2" render="Progress" size="770,5" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgressIB" pixmap="SevenHD/progressib/progressib770.png">
@@ -6608,9 +6608,9 @@
     <widget source="session.CurrentService" render="Label" zPosition="3" position="466,670" size="150,25" font="Regular; 19" halign="center" backgroundColor="SevenFontBackgroundIB1" foregroundColor="SevenSNRIB" transparent="1">
       <convert type="SevenHDExtraInfo2">ResolutionString</convert>
     </widget>
-    <ePixmap pixmap="SevenHD/back/ibone.png" position="16,534" size="1246,168" alphatest="blend" zPosition="-8" />
-    <ePixmap pixmap="SevenHD/back/ibtwo.png" position="290,533" size="785,129" alphatest="blend" zPosition="-7" />
-    <ePixmap pixmap="SevenHD/back/ibone.png" position="16,474" size="272,59" alphatest="blend" zPosition="-8" />
+    <ePixmap pixmap="SevenHD/back/ibone.png" position="16,534" size="1246,170" alphatest="blend" zPosition="-8" />
+    <ePixmap pixmap="SevenHD/back/ibtwo.png" position="290,533" size="787,129" alphatest="blend" zPosition="-7" />
+    <ePixmap pixmap="SevenHD/back/ibone.png" position="16,474" size="272,181" alphatest="blend" zPosition="-8" />
   </screen>
   <screen name="template_menu_sibx5.3">
     <eLabel backgroundColor="SevenBackgroundIB2" position="14,2" size="1250,40" zPosition="-9" />
@@ -6669,7 +6669,7 @@
     <eLabel backgroundColor="SevenBorderIB" position="14,473" size="274,2" zPosition="2" />
     <eLabel backgroundColor="SevenBorderIB" position="1262,533" size="2,170" zPosition="2" />
     <eLabel backgroundColor="SevenBorderIB" position="288,473" size="2,188" zPosition="2" />
-    <eLabel backgroundColor="SevenBackgroundIB2" position="290,533" size="785,129" zPosition="-9" />
+    <eLabel backgroundColor="SevenBackgroundIB2" position="290,533" size="787,129" zPosition="-9" />
     <eLabel backgroundColor="SevenBackgroundIB1" position="288,659" size="788,44" zPosition="-9" />
     <eLabel backgroundColor="SevenBackgroundIB1" position="16,474" size="272,228" zPosition="-9" />
     <widget position="295,613" backgroundColor="SevenFontBackgroundIB2" render="Progress" size="770,5" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgressIB" pixmap="SevenHD/progressib/progressib770.png">
@@ -6796,9 +6796,9 @@
     <widget source="session.CurrentService" render="Label" zPosition="3" position="466,670" size="150,25" font="Regular; 19" halign="center" backgroundColor="SevenFontBackgroundIB1" foregroundColor="SevenSNRIB" transparent="1">
       <convert type="SevenHDExtraInfo2">ResolutionString</convert>
     </widget>
-    <ePixmap pixmap="SevenHD/back/ibone.png" position="16,534" size="1246,168" alphatest="blend" zPosition="-8" />
-    <ePixmap pixmap="SevenHD/back/ibtwo.png" position="290,533" size="785,129" alphatest="blend" zPosition="-7" />
-    <ePixmap pixmap="SevenHD/back/ibone.png" position="16,474" size="272,59" alphatest="blend" zPosition="-8" />
+    <ePixmap pixmap="SevenHD/back/ibone.png" position="16,534" size="1246,170" alphatest="blend" zPosition="-8" />
+    <ePixmap pixmap="SevenHD/back/ibtwo.png" position="290,533" size="787,129" alphatest="blend" zPosition="-7" />
+    <ePixmap pixmap="SevenHD/back/ibone.png" position="16,474" size="272,181" alphatest="blend" zPosition="-8" />
   </screen>
   <screen name="template_menu_sibx5.4">
       <!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="SecondInfoBar" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
@@ -6939,7 +6939,7 @@
     <eLabel backgroundColor="SevenBorderIB" position="14,533" size="1250,2" zPosition="2" />
     <eLabel backgroundColor="SevenBorderIB" position="1262,533" size="2,170" zPosition="2" />
     <eLabel backgroundColor="SevenBorderIB" position="248,533" size="2,128" zPosition="2" />
-    <eLabel backgroundColor="SevenBackgroundIB2" position="250,533" size="825,130" zPosition="-9" />
+    <eLabel backgroundColor="SevenBackgroundIB2" position="250,533" size="828,129" zPosition="-9" />
     <eLabel backgroundColor="SevenBackgroundIB1" position="248,659" size="828,44" zPosition="-9" />
     <eLabel backgroundColor="SevenBackgroundIB1" position="16,534" size="232,168" zPosition="-9" />
     <widget alphatest="blend" pixmap="SevenHD/buttons/ico_rec_on.png" position="1228,537" render="Pixmap" size="32,32" source="session.RecordState" zPosition="15" transparent="1">
@@ -7038,8 +7038,8 @@
     <widget position="256,578" backgroundColor="SevenFontBackgroundIB2" render="Progress" size="812,5" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgressIB" pixmap="SevenHD/progressib/progressib812.png">
       <convert type="SevenHDEventTime">Progress</convert>
     </widget>
-    <ePixmap pixmap="SevenHD/back/ibone.png" position="14,533" size="1250,168" alphatest="blend" zPosition="-8" />
-    <ePixmap pixmap="SevenHD/back/ibtwo.png" position="250,533" size="825,130" alphatest="blend" zPosition="-7" />
+    <ePixmap pixmap="SevenHD/back/ibone.png" position="14,533" size="1250,170" alphatest="blend" zPosition="-8" />
+    <ePixmap pixmap="SevenHD/back/ibtwo.png" position="250,533" size="828,129" alphatest="blend" zPosition="-7" />
   </screen>
   <screen name="template_menu_sibx6">
   <widget source="session.CurrentService" position="37,10" size="500,22" font="Regular2;12" render="Label" halign="left" valign="bottom" foregroundColor="SevenSNRIB" backgroundColor="SevenFontBackgroundIB2" transparent="1" zPosition="1">
@@ -7195,8 +7195,8 @@
   <widget position="256,578" backgroundColor="SevenFontBackgroundIB2" render="Progress" size="812,5" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgressIB" pixmap="SevenHD/progressib/progressib812.png">
     <convert type="SevenHDEventTime">Progress</convert>
   </widget>
-  <ePixmap pixmap="SevenHD/back/ibone.png" position="14,533" size="1250,168" alphatest="blend" zPosition="-8" />
-  <ePixmap pixmap="SevenHD/back/ibtwo.png" position="250,533" size="825,130" alphatest="blend" zPosition="-7" />
+  <ePixmap pixmap="SevenHD/back/ibone.png" position="14,533" size="1250,170" alphatest="blend" zPosition="-8" />
+  <ePixmap pixmap="SevenHD/back/ibtwo.png" position="250,533" size="828,129" alphatest="blend" zPosition="-7" />
 </screen>
   <screen name="template_menu_sibx6.1">
   <eLabel backgroundColor="SevenBackgroundIB2" position="14,2" size="1250,40" zPosition="-9" />
@@ -7357,8 +7357,8 @@
   <widget position="256,578" backgroundColor="SevenFontBackgroundIB2" render="Progress" size="812,5" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgressIB" pixmap="SevenHD/progressib/progressib812.png">
     <convert type="SevenHDEventTime">Progress</convert>
   </widget>
-  <ePixmap pixmap="SevenHD/back/ibone.png" position="14,533" size="1250,168" alphatest="blend" zPosition="-8" />
-  <ePixmap pixmap="SevenHD/back/ibtwo.png" position="250,533" size="825,130" alphatest="blend" zPosition="-7" />
+  <ePixmap pixmap="SevenHD/back/ibone.png" position="14,533" size="1250,170" alphatest="blend" zPosition="-8" />
+  <ePixmap pixmap="SevenHD/back/ibtwo.png" position="250,533" size="828,129" alphatest="blend" zPosition="-7" />
 </screen>
   <screen name="template_menu_sibx6.2">
   <eLabel backgroundColor="SevenBackgroundIB2" position="14,2" size="1250,40" zPosition="-9" />
@@ -7507,8 +7507,8 @@
   <widget position="256,578" backgroundColor="SevenFontBackgroundIB2" render="Progress" size="812,5" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgressIB" pixmap="SevenHD/progressib/progressib812.png">
     <convert type="SevenHDEventTime">Progress</convert>
   </widget>
-  <ePixmap pixmap="SevenHD/back/ibone.png" position="14,533" size="1250,168" alphatest="blend" zPosition="-8" />
-  <ePixmap pixmap="SevenHD/back/ibtwo.png" position="250,533" size="825,130" alphatest="blend" zPosition="-7" />
+  <ePixmap pixmap="SevenHD/back/ibone.png" position="14,533" size="1250,170" alphatest="blend" zPosition="-8" />
+  <ePixmap pixmap="SevenHD/back/ibtwo.png" position="250,533" size="828,129" alphatest="blend" zPosition="-7" />
 </screen>
   <screen name="template_menu_sibx6.3">
   <eLabel backgroundColor="SevenBackgroundIB2" position="14,2" size="1250,40" zPosition="-9" />
@@ -7665,8 +7665,8 @@
   <widget position="256,578" backgroundColor="SevenFontBackgroundIB2" render="Progress" size="812,5" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgressIB" pixmap="SevenHD/progressib/progressib812.png">
     <convert type="SevenHDEventTime">Progress</convert>
   </widget>
-  <ePixmap pixmap="SevenHD/back/ibone.png" position="14,533" size="1250,168" alphatest="blend" zPosition="-8" />
-  <ePixmap pixmap="SevenHD/back/ibtwo.png" position="250,533" size="825,130" alphatest="blend" zPosition="-7" />
+  <ePixmap pixmap="SevenHD/back/ibone.png" position="14,533" size="1250,170" alphatest="blend" zPosition="-8" />
+  <ePixmap pixmap="SevenHD/back/ibtwo.png" position="250,533" size="828,129" alphatest="blend" zPosition="-7" />
 </screen>
 <screen name="template_menu_sibx6.4">
        <!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="SecondInfoBar" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
@@ -7906,7 +7906,7 @@
     <convert type="SevenHDEventTime">Duration</convert>
     <convert type="SevenHDClockToText">InMinutes</convert>
   </widget>
-  <ePixmap pixmap="SevenHD/back/ibone.png" position="14,533" size="1250,168" alphatest="blend" zPosition="-8" />
+  <ePixmap pixmap="SevenHD/back/ibone.png" position="14,533" size="1250,170" alphatest="blend" zPosition="-8" />
   <eLabel backgroundColor="SevenFontBackgroundIB1" foregroundColor="SevenFont1" font="Regular; 19" halign="left" noWrap="1" position="275,615" size="196,25" text="Sendung läuft seit" transparent="1" valign="center" zPosition="1" />
   <widget backgroundColor="SevenFontBackgroundIB1" foregroundColor="SevenFont1" font="Regular; 19" halign="left" position="438,615" render="Label" size="75,25" source="session.Event_Now" transparent="1" valign="center" zPosition="1">
     <convert type="SevenHDEventTime">RunTime</convert>
@@ -8068,7 +8068,7 @@
     <convert type="SevenHDEventTime">Duration</convert>
     <convert type="SevenHDClockToText">InMinutes</convert>
   </widget>
-  <ePixmap pixmap="SevenHD/back/ibone.png" position="14,533" size="1250,168" alphatest="blend" zPosition="-8" />
+  <ePixmap pixmap="SevenHD/back/ibone.png" position="14,533" size="1250,170" alphatest="blend" zPosition="-8" />
   <eLabel backgroundColor="SevenFontBackgroundIB1" foregroundColor="SevenFont1" font="Regular; 19" halign="left" noWrap="1" position="275,615" size="196,25" text="Sendung läuft seit" transparent="1" valign="center" zPosition="1" />
   <widget backgroundColor="SevenFontBackgroundIB1" foregroundColor="SevenFont1" font="Regular; 19" halign="left" position="438,615" render="Label" size="75,25" source="session.Event_Now" transparent="1" valign="center" zPosition="1">
     <convert type="SevenHDEventTime">RunTime</convert>
@@ -8235,7 +8235,7 @@
     <convert type="SevenHDEventTime">Duration</convert>
     <convert type="SevenHDClockToText">InMinutes</convert>
   </widget>
-  <ePixmap pixmap="SevenHD/back/ibone.png" position="14,533" size="1250,168" alphatest="blend" zPosition="-8" />
+  <ePixmap pixmap="SevenHD/back/ibone.png" position="14,533" size="1250,170" alphatest="blend" zPosition="-8" />
   <eLabel backgroundColor="SevenFontBackgroundIB1" foregroundColor="SevenFont1" font="Regular; 19" halign="left" noWrap="1" position="275,615" size="196,25" text="Sendung läuft seit" transparent="1" valign="center" zPosition="1" />
   <widget backgroundColor="SevenFontBackgroundIB1" foregroundColor="SevenFont1" font="Regular; 19" halign="left" position="438,615" render="Label" size="75,25" source="session.Event_Now" transparent="1" valign="center" zPosition="1">
     <convert type="SevenHDEventTime">RunTime</convert>
@@ -8390,7 +8390,7 @@
     <convert type="SevenHDEventTime">Duration</convert>
     <convert type="SevenHDClockToText">InMinutes</convert>
   </widget>
-  <ePixmap pixmap="SevenHD/back/ibone.png" position="14,533" size="1250,168" alphatest="blend" zPosition="-8" />
+  <ePixmap pixmap="SevenHD/back/ibone.png" position="14,533" size="1250,170" alphatest="blend" zPosition="-8" />
   <eLabel backgroundColor="SevenFontBackgroundIB1" foregroundColor="SevenFont1" font="Regular; 19" halign="left" noWrap="1" position="275,615" size="196,25" text="Sendung läuft seit" transparent="1" valign="center" zPosition="1" />
   <widget backgroundColor="SevenFontBackgroundIB1" foregroundColor="SevenFont1" font="Regular; 19" halign="left" position="438,615" render="Label" size="75,25" source="session.Event_Now" transparent="1" valign="center" zPosition="1">
     <convert type="SevenHDEventTime">RunTime</convert>
@@ -8553,7 +8553,7 @@
     <convert type="SevenHDEventTime">Duration</convert>
     <convert type="SevenHDClockToText">InMinutes</convert>
   </widget>
-  <ePixmap pixmap="SevenHD/back/ibone.png" position="14,533" size="1250,168" alphatest="blend" zPosition="-8" />
+  <ePixmap pixmap="SevenHD/back/ibone.png" position="14,533" size="1250,170" alphatest="blend" zPosition="-8" />
   <eLabel backgroundColor="SevenFontBackgroundIB1" foregroundColor="SevenFont1" font="Regular; 19" halign="left" noWrap="1" position="275,615" size="196,25" text="Sendung läuft seit" transparent="1" valign="center" zPosition="1" />
   <widget backgroundColor="SevenFontBackgroundIB1" foregroundColor="SevenFont1" font="Regular; 19" halign="left" position="438,615" render="Label" size="75,25" source="session.Event_Now" transparent="1" valign="center" zPosition="1">
     <convert type="SevenHDEventTime">RunTime</convert>
