@@ -14,6 +14,11 @@ try:
 except ImportError:
   from Screens.UserInterfacePositioner import UserInterfacePositioner
   OSDScreenPosition_plugin = False
+try:
+  from boxbranding import getBoxType
+  brand = True
+except ImportError:
+  brand = False
 from Screens.Screen import Screen
 from Screens.MessageBox import MessageBox
 from Screens.ChoiceBox import ChoiceBox
@@ -92,7 +97,15 @@ if fileExists('/proc/bmeminfo'):
 else:
    mem_info = []
    entrie = os.popen('cat /proc/cmdline').read()
-   mem = re.findall('bmem=(.*?)M', entrie)
+   
+   if brand:
+      if getBoxType() == 'vusolo4k':
+         mem = re.findall('_cma=(.*?)M', entrie)
+      else:   
+         mem = re.findall('bmem=(.*?)M', entrie)
+   else:   
+      mem = re.findall('bmem=(.*?)M', entrie)
+      
    for info in mem:
       mem_info.append((info))
        
