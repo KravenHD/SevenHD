@@ -8,8 +8,7 @@
   </screen>
   <screen backgroundColor="transparent" flags="wfNoBorder" name="ChoiceBox" position="0,0" size="1280,720">
 <!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="ChoiceBox" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
-    <eLabel backgroundColor="SevenFontBackground" text="Auswahlfenster" font="Regular2;23" foregroundColor="SevenFont2" position="70,12" size="708,46" halign="center" valign="center" zPosition="1" transparent="1" />
-    <widget backgroundColor="SevenFontBackground" font="Regular2;20" foregroundColor="SevenFont2" position="70,80" size="708,27" render="Label" source="Title" halign="left" valign="center" transparent="1" />
+    <widget backgroundColor="SevenFontBackground" font="Regular2;23" foregroundColor="SevenFont2" position="70,12" size="708,46" render="Label" source="Title" halign="center" valign="center" transparent="1" />
     <widget backgroundColor="SevenFontBackground" font="Regular2;20" foregroundColor="SevenFont2" position="70,107" size="708,80" halign="left" valign="center" name="text" transparent="1" />
     <widget backgroundColor="SevenFontBackground" enableWrapAround="1" itemHeight="30" name="list" position="70,193" size="708,450" transparent="1" />
     <panel name="template_choicebox" />
@@ -1357,10 +1356,13 @@
     <panel name="template_colorkey_text" />
   </screen>
   <!-- TimerEditList -->
-  <screen backgroundColor="transparent" flags="wfNoBorder" name="TimerEditList" position="0,0" size="1280,720" title="Timer Editor">
+<screen backgroundColor="transparent" flags="wfNoBorder" name="TimerEditList" position="0,0" size="1280,720" title="Timer Editor">
 <!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="TimerEditList" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
     <widget name="timerlist" rowSplit="26" iconMargin="5" satPosLeft="160" itemHeight="50" setFont="Regular;18" setEventNameFont="Regular;20" setServiceNameFont="Regular;20" position="45,80" size="766,550" backgroundColor="SevenFontBackground" enableWrapAround="1" transparent="1" />
-    <panel name="template_menu_left_button" />
+    <widget source="global.CurrentTime" render="Label" position="732,18" size="100,28" font="Regular;26" halign="right" backgroundColor="SevenFontBackground" transparent="1" valign="right" foregroundColor="SevenFont1">
+  <convert type="SevenHDClockToText">Default</convert>
+</widget>
+<panel name="template_menu_left_button" />
     <panel name="template_colorkey_text" />
   </screen>
   <!-- TimerEntry -->
@@ -1403,16 +1405,14 @@
     <widget name="timerlist" backgroundColor="SevenFontBackground" position="70,80" size="708,550" scrollbarMode="showNever" transparent="1" />
     <panel name="template_menu_left" />
   </screen>
-  <!-- SleepTimerEdit -->
-  <screen backgroundColor="transparent" flags="wfNoBorder" name="SleepTimerEdit" position="0,0" size="1280,720" title="Sleep Timer">
+    <!-- SleepTimer -->
+<screen backgroundColor="transparent" flags="wfNoBorder" name="SleepTimerEdit" position="0,0" size="1280,720" title="Sleep Timer">
 <!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="SleepTimerEdit" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
-    <widget backgroundColor="SevenFontBackground" font="Regular2;22" foregroundColor="SevenFont2" name="pretext" position="100,140" size="250,25" transparent="1" />
-    <widget backgroundColor="SevenFontBackground" font="Regular2;22" foregroundColor="SevenFont2" name="input" position="350,140" size="50,25" transparent="1" />
-    <widget backgroundColor="SevenFontBackground" font="Regular2;22" foregroundColor="SevenFont2" name="aftertext" position="400,140" size="120,25" transparent="1" />
-    <widget backgroundColor="SevenFontBackground" font="Regular2;22" foregroundColor="SevenFont2" name="current_status" position="100,180" size="690,30" transparent="1" />
+<widget backgroundColor="SevenFontBackground" name="config" itemHeight="30" font="Regular;22" foregroundColor="SevenFont1" position="70,80" size="708,60" transparent="1" />
+<widget backgroundColor="SevenFontBackground" name="description" itemHeight="30" font="Regular;22" halign="center" foregroundColor="SevenFont1" position="70,578" size="708,60" transparent="1" />
     <panel name="template_menu_left_button" />
-    <panel name="template_colorkey_text" />
-  </screen>
+    <panel name="template_colorkey_text_source" />
+</screen>
   <!-- TimerEdit -->
   <screen name="TimerEdit" backgroundColor="SevenBackground" position="70,130" size="590,335">
 <!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="TimerEdit" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
@@ -2625,8 +2625,9 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,orgpos.y()))
   </screen>
 <screen name="QuitMainloopScreen" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
 <!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="QuitMainloopScreen" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
-<ePixmap pixmap="SevenHD/buttons/message/info-53.png" position="613,256" size="53,53" alphatest="on" />
-<widget position="280,310" size="720,100" font="Regular;22" backgroundColor="transparent" halign="center" name="text" />
+<ePixmap pixmap="SevenHD/buttons/message/info-53.png" position="613,256" size="53,53" backgroundColor="SevenBackground" alphatest="on" />
+<widget position="280,310" size="720,100" font="Regular;22" backgroundColor="SevenBackground" halign="center" name="text" />
+<eLabel backgroundColor="SevenBackground" position="0,0" size="1280,720" transparent="0" zPosition="-9" />
 </screen>
 <screen name="EventViewContextMenu" position="0,0" size="1280,720" title="Eventview Menu" flags="wfNoBorder" backgroundColor="transparent">
 <!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="EventViewContextMenu" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->

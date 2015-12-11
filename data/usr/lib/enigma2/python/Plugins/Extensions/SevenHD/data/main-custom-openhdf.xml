@@ -95,19 +95,9 @@
   <!-- HddSetup -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="HddSetup" position="0,0" size="1280,720" title="Hard Drive Setup">
 <!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="HddSetup" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
-  <widget source="menu" render="Listbox" position="70,80" size="708,540" backgroundColor="SevenFontBackground" itemHeight="50" transparent="1">
-    <convert type="TemplatedMultiContent">
-				{"template": [
-					MultiContentEntryPixmapAlphaTest(pos = (2, 0), size = (48, 48), png = 0),
-					MultiContentEntryText(pos = (65, 10), size = (330, 38), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_TOP, text = 1),
-					MultiContentEntryText(pos = (475, 10), size = (125, 38), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_TOP, text = 2),
-					],
-					"fonts": [gFont("Regular", 20)],
-					"itemHeight": 50
-				}
-			</convert>
+  <widget name="menu" position="70,80" size="708,540" backgroundColor="SevenFontBackground" scrollbarMode="showOnDemand" itemHeight="50" transparent="1">
   </widget>
-<panel name="template_menu_left_button" />
+  <panel name="template_menu_left_button" />
   <panel name="template_colorkey_text_source" />
 </screen>
   <!-- HddPartitions -->
@@ -180,6 +170,36 @@
   </widget>
  <panel name="template_menu_left_button" />
   <panel name="template_colorkey_text_source" />
+</screen>
+  <!-- HarddiskSelection -->
+  <screen backgroundColor="transparent" flags="wfNoBorder" name="HarddiskSelection" position="0,0" size="1280,720" title="Select HDD">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="HarddiskSelection" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
+<widget itemHeight="30" name="hddlist" position="70,80" size="708,540" backgroundColor="SevenFontBackground" transparent="1" />
+ <panel name="template_menu_left" />
+</screen>
+  <!-- HarddiskSetup  -->
+  <screen backgroundColor="transparent" flags="wfNoBorder" name="HarddiskSetup " position="0,0" size="1280,720" title="Harddisk">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="HarddiskSetup " position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
+  <widget font="Regular2;23" name="model" position="70,150" size="700,25" backgroundColor="SevenFontBackground" transparent="1" />
+  <widget font="Regular2;23" name="capacity" position="70,200" size="700,25" backgroundColor="SevenFontBackground" transparent="1" />
+  <widget font="Regular2;23" name="bus" position="70,250" size="700,25" backgroundColor="SevenFontBackground" transparent="1" />
+  <widget backgroundColor="SevenBackground" halign="left" valign="center" font="Regular2;20" name="initializetext" position="64,662" size="148,48" foregroundColor="SevenButtonText" transparent="1" zPosition="1" />
+  <panel name="template_colorkey_text" />
+  <panel name="template_menu_left_button" />
+</screen>
+  <!-- HarddiskWait  -->
+  <screen backgroundColor="transparent" flags="wfNoBorder" name="HarddiskWait " position="0,0" size="1280,720" title="HarddiskWait ">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="HarddiskWait " position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
+ <widget name="wait" position="70,80" size="708,540" backgroundColor="SevenFontBackground" transparent="1" />
+ <panel name="template_menu_left" />
+</screen>
+<!-- DriverManagerFile -->
+<screen flags="wfNoBorder" name="DriverManagerFile" position="0,0" size="1280,720" title="Select file to execute" transparent="0" backgroundColor="transparent">
+  <!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="DriverManagerFile " position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
+  <widget backgroundColor="SevenBackground" font="Regular2;23" name="driverfile" position="70,74" size="708,28" transparent="1" foregroundColor="SevenFont2" />
+  <widget backgroundColor="SevenBackground" itemHeight="30" name="filelist" position="70,107" size="708,540" transparent="1" foregroundColor="SevenFont1" zPosition="3" />
+    <panel name="template_colorkey_text_source" />
+    <panel name="template_menu_left_button" />
 </screen>
   <!-- LED_GigaSetup -->
   <screen name="LED_GigaSetup" position="0,0" size="1280,720" title="LED Setup" backgroundColor="transparent">
@@ -322,5 +342,24 @@
     <panel name="template_menu_full_button" />
     <panel name="template_colorkey_text" />
   </screen>
+    <!-- AutomaticVolumeAdjustmentConfigScreen -->
+<screen name="AutomaticVolumeAdjustmentConfigScreen" position="0,0" size="1280,720" title="Automatic Volume Adjust" flags="wfNoBorder" backgroundColor="transparent">
+    <!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="AutomaticVolumeAdjustmentConfigScreen" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
+	<widget name="config" position="70,80" size="708,450" font="Regular;21" foregroundColor="SevenFont1" backgroundColor="SevenFontBackground" transparent="1" />
+    <panel name="template_menu_left_button" />
+    <panel name="template_colorkey_text_source" />
+</screen>
+<!-- 3D AutoSwitch -->
+<screen backgroundColor="transparent" flags="wfNoBorder" name="ThreeDSettings" position="0,0" size="1280,720" title="AutoSwitch 3D">
+    <widget name="config" position="70,80" size="708,540" foregroundColor="SevenFont1" backgroundColor="SevenFontBackground" transparent="1" zPosition="2" />
+<widget font="Regular; 18" halign="left" valign="center" source="red" position="64,662" size="148,48" render="Label" backgroundColor="SevenFontBackground" foregroundColor="SevenButtonText" transparent="1" zPosition="1" />
+  <widget font="Regular; 18" halign="left" valign="center" source="green" position="264,662" size="148,48" render="Label" backgroundColor="SevenFontBackground" foregroundColor="SevenButtonText" transparent="1" zPosition="1" />
+  <widget font="Regular; 18" halign="left" valign="center" source="yellow" position="464,662" size="148,48" render="Label" backgroundColor="SevenFontBackground" foregroundColor="SevenButtonText" transparent="1" zPosition="1" />
+  <widget font="Regular; 18" halign="left" valign="center" source="blue" position="664,662" size="148,48" render="Label" backgroundColor="SevenFontBackground" foregroundColor="SevenButtonText" transparent="1" zPosition="1" />
+   <panel name="template_menu_left_button" />
+</screen>
+
   <!-- main-custom-openhdf */ -->
+  
+  
  

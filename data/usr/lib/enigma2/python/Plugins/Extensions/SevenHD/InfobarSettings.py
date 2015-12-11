@@ -142,7 +142,7 @@ class InfobarSettings(ConfigListScreen, Screen):
 	   list.append(getConfigListEntry(_("color time"), config.plugins.SevenHD.ClockTime, 'ClockTime'))
 	   list.append(getConfigListEntry(_("color date"), config.plugins.SevenHD.ClockDate, 'ClockDate'))
 	   list.append(getConfigListEntry(_("color weekday"), config.plugins.SevenHD.ClockWeek, 'ClockWeek'))
-        if config.plugins.SevenHD.ClockStyle.value == "clock-weather":
+        if config.plugins.SevenHD.ClockStyle.value == "clock-weather" or config.plugins.SevenHD.ClockStyle.value == "clock-weather-meteo":
 	   list.append(getConfigListEntry(_("color time"), config.plugins.SevenHD.ClockTime, 'ClockTime'))
 	   list.append(getConfigListEntry(_("color date"), config.plugins.SevenHD.ClockDate, 'ClockDate'))
 	   list.append(getConfigListEntry(_("color weather"), config.plugins.SevenHD.ClockWeather, 'ClockWeather'))
@@ -257,7 +257,7 @@ class InfobarSettings(ConfigListScreen, Screen):
         self.session.open(MessageBox, _("Information"), MessageBox.TYPE_INFO)
 
     def save(self):
-        if config.plugins.SevenHD.skin_mode.value > '2':
+        if config.plugins.SevenHD.skin_mode.value > '3':
            if 'back' in config.plugins.SevenHD.BackgroundIB1.value:
               self.setInputToDefault(config.plugins.SevenHD.BackgroundIB1)
               self.session.open(MessageBox, _('Sorry, only Colors allowed.'), MessageBox.TYPE_INFO)

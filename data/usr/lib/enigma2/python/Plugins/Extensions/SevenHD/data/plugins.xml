@@ -2035,5 +2035,22 @@
     <panel name="template_menu_left_button" />
     <panel name="template_colorkey_text_source" />
 </screen>
+    <!-- AutomaticVolumeAdjustmentConfigScreen -->
+<screen name="AutomaticVolumeAdjustmentConfigScreen" position="0,0" size="1280,720" title="Automatic Volume Adjust" flags="wfNoBorder" backgroundColor="transparent">
+    <!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="AutomaticVolumeAdjustmentConfigScreen" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
+ <widget name="config" position="70,80" size="708,450" font="Regular;21" foregroundColor="SevenFont1" backgroundColor="SevenFontBackground" transparent="1" />
+    <panel name="template_menu_left_button" />
+    <panel name="template_colorkey_text_source" />
+</screen>
+<!-- 3D AutoSwitch -->
+<screen backgroundColor="transparent" flags="wfNoBorder" name="ThreeDSettings" position="0,0" size="1280,720" title="AutoSwitch 3D">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="ThreeDSettings" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
+    <widget name="config" position="70,80" size="708,540" foregroundColor="SevenFont1" backgroundColor="SevenFontBackground" transparent="1" zPosition="2" />
+<widget font="Regular; 18" halign="left" valign="center" source="red" position="64,662" size="148,48" render="Label" backgroundColor="SevenFontBackground" foregroundColor="SevenButtonText" transparent="1" zPosition="1" />
+  <widget font="Regular; 18" halign="left" valign="center" source="green" position="264,662" size="148,48" render="Label" backgroundColor="SevenFontBackground" foregroundColor="SevenButtonText" transparent="1" zPosition="1" />
+  <widget font="Regular; 18" halign="left" valign="center" source="yellow" position="464,662" size="148,48" render="Label" backgroundColor="SevenFontBackground" foregroundColor="SevenButtonText" transparent="1" zPosition="1" />
+  <widget font="Regular; 18" halign="left" valign="center" source="blue" position="664,662" size="148,48" render="Label" backgroundColor="SevenFontBackground" foregroundColor="SevenButtonText" transparent="1" zPosition="1" />
+   <panel name="template_menu_left_button" />
+</screen>
   <!-- plugins -->
   

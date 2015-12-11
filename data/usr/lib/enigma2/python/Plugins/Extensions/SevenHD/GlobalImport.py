@@ -1,4 +1,4 @@
-version = '3.6.21'
+version = '3.6.30'
 import os
 import re
 import time
@@ -174,8 +174,7 @@ BackList = ['brownleather', 'carbon', 'lightwood',
 config.plugins.SevenHD.Image = ConfigSelection(default="main-custom-openatv", choices = [
 				("main-custom-openatv", _("openATV")),
 				("main-custom-openhdf", _("openHDF")),
-				("main-custom-openmips", _("openMIPS")),
-				("main-custom-opennfr", _("openNFR"))
+				("main-custom-openmips", _("openMIPS"))
 				])
 
 config.plugins.SevenHD.ButtonStyle = ConfigSelection(default="buttons_seven_white", choices = [
@@ -407,7 +406,8 @@ config.plugins.SevenHD.ClockStyle = ConfigSelection(default="clock-standard", ch
 				("clock-seconds", _("with seconds")),
 				("clock-weekday", _("with weekday")),
 				("clock-analog", _("analog")),
-				("clock-weather", _("weather")),
+				("clock-weather", _("weather icon")),
+				("clock-weather-meteo", _("weather meteo")),
 				("clock-android", _("android"))
 				])
 
@@ -484,7 +484,8 @@ config.plugins.SevenHD.ChannelSelectionStyle = ConfigSelection(default="channels
 				("channelselection-threecolumnsminitv", _("three columns/miniTV")),
 				("channelselection-minitv1", _("miniTV")),
 				("channelselection-minitvx", _("miniTV/Picon")),
-				("channelselection-pip", _("miniTV/PiP"))
+				("channelselection-pip", _("miniTV/preview")),
+				("channelselection-preview", _("preview"))
 				])
 
 ChannelBack1List = []

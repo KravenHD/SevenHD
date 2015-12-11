@@ -341,5 +341,8 @@
     <widget font="Regular; 18" halign="left" valign="center" source="key_blue" position="664,662" size="148,48" render="Label" backgroundColor="SevenFontBackground" foregroundColor="SevenButtonText" transparent="1" zPosition="1" />
     <panel name="template_menu_left_button" />
   </screen>
+
 <!-- main-custom-openmips */ -->
+
+
   

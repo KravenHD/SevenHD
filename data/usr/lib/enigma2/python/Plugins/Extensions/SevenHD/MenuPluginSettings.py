@@ -222,7 +222,7 @@ class MenuPluginSettings(ConfigListScreen, Screen):
         self.session.open(MessageBox, _("Information"), MessageBox.TYPE_INFO)
 
     def save(self):
-        if config.plugins.SevenHD.skin_mode.value > '2':
+        if config.plugins.SevenHD.skin_mode.value > '3':
            if 'back' in config.plugins.SevenHD.Background.value:
               self.setInputToDefault(config.plugins.SevenHD.Background)
               self.session.open(MessageBox, _('Sorry, only Colors allowed.'), MessageBox.TYPE_INFO)

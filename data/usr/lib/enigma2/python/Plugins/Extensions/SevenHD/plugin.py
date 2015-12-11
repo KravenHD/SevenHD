@@ -744,7 +744,7 @@ class SevenHD(Screen):
                 eConsole().ePopen("rm -rf /usr/share/enigma2/SevenHD/icons/*.*; rm -rf /usr/share/enigma2/SevenHD/icons; wget -q http://www.gigablue-support.org/skins/%s/icons/%s.tar.gz -O /tmp/%s.tar.gz; tar xf /tmp/%s.tar.gz -C /usr/share/enigma2/SevenHD/" % (str(self.server_dir), str(config.plugins.SevenHD.IconStyle.value), str(config.plugins.SevenHD.IconStyle.value), str(config.plugins.SevenHD.IconStyle.value)))
 		
                 
-                if config.plugins.SevenHD.skin_mode.value == '1' or '2':
+                if config.plugins.SevenHD.skin_mode.value == '1' or '2' or '3':
                    #background only in HD Mode
 		   eConsole().ePopen("rm -rf /usr/share/enigma2/SevenHD/back/*.*; rm -rf /usr/share/enigma2/SevenHD/back")
                 

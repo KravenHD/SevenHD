@@ -27,7 +27,7 @@
     <widget source="ServiceEvent" render="SevenHDMiniTV" position="92,310" size="400,220" backgroundColor="transparent" zPosition="2">
       <convert type="SevenHDMiniTVDisplay" />
     </widget>
-        <widget backgroundColor="SevenFontBackCS" font="Regular;22" foregroundColor="SevenPrimeCS" position="18,626" render="Label" size="530,30" source="ServiceEvent" transparent="1" zPosition="5" noWrap="1" halign="center">
+  <widget backgroundColor="SevenFontBackCS" font="Regular;22" foregroundColor="SevenPrimeCS" position="18,626" render="Label" size="530,30" source="ServiceEvent" transparent="1" zPosition="5" noWrap="1" halign="center">
   <convert type="SevenHDNextEvents">PrimeTime,noDuration</convert>
 </widget>
  <panel name="template_menu_cs7_button" />

@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: SevenHD\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-10-26 18:55+0100\n"
-"PO-Revision-Date: 2015-12-05 19:45+0100\n"
+"PO-Revision-Date: 2015-12-08 17:14+0100\n"
 "Last-Translator: mike99 <mike99@mail.to>\n"
 "Language-Team: kraven & mike99\n"
 "Language: de\n"
@@ -1572,26 +1572,38 @@ msgstr "Zeige Screen Namen"
 msgid "system osd position setup"
 msgstr "System OSD Position Setup"
 
-msgid " Style 1 "
-msgstr " Stil 1 "
+msgid "Style 1"
+msgstr "Stil 1"
 
-msgid " Style 2 "
-msgstr " Stil 2 "
+msgid "Style 2"
+msgstr "Stil 2"
 
-msgid " Style 3 "
-msgstr " Stil 3 "
+msgid "Style 3"
+msgstr "Stil 3"
 
-msgid " Style 4 "
-msgstr " Stil 4 "
+msgid "Style 4"
+msgstr "Stil 4"
 
-msgid " Style 5 "
-msgstr " Stil 5 "
+msgid "Style 5"
+msgstr "Stil 5"
 
-msgid " Style 6 "
-msgstr " Stil 6 "
+msgid "Style 6"
+msgstr "Stil 6"
 
-msgid " Style 7 "
-msgstr " Stil 7 "
+msgid "Style 7"
+msgstr "Stil 7"
 
-msgid " Style 8 "
-msgstr " Stil 8 "
+msgid "Style 8"
+msgstr "Stil 8"
+
+msgid "preview"
+msgstr "Vorschau"
+
+msgid "miniTV/preview"
+msgstr "miniTV/Vorschau"
+
+msgid "weather icon"
+msgstr "Wetter Icon"
+
+msgid "weather meteo"
+msgstr "Wetter Meteo"
