@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: SevenHD\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-10-26 18:55+0100\n"
-"PO-Revision-Date: 2015-12-08 17:14+0100\n"
+"PO-Revision-Date: 2015-12-12 23:22+0100\n"
 "Last-Translator: mike99 <mike99@mail.to>\n"
 "Language-Team: kraven & mike99\n"
 "Language: de\n"
@@ -1595,6 +1595,12 @@ msgstr "Stil 7"
 
 msgid "Style 8"
 msgstr "Stil 8"
+
+msgid "Style 9"
+msgstr "Stil 9"
+
+msgid "Style 10"
+msgstr "Stil 10"
 
 msgid "preview"
 msgstr "Vorschau"
