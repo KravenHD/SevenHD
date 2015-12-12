@@ -346,14 +346,15 @@ config.plugins.SevenHD.ProgressLinePlug = ConfigSelection(default="00ffffff", ch
 
 config.plugins.SevenHD.InfobarStyle = ConfigSelection(default="infobar-style-original", choices = [
 				("infobar-style-original", _("Style 1")),
-				("infobar-style-xpicon", _("Style 2")),
-				("infobar-style-xpicon1", _("Style 3")),
-				("infobar-style-xpicon2", _("Style 4")),
-				("infobar-style-xpicon3", _("Style 5")),
-				("infobar-style-xpicon4", _("Style 6")),
-				("infobar-style-xpicon5", _("Style 7")),
-				("infobar-style-xpicon6", _("Style 8")),
-				("infobar-style-xpicon7", _("Style 9"))
+				("infobar-style-original2", _("Style 2")),
+				("infobar-style-xpicon", _("Style 3")),
+				("infobar-style-xpicon1", _("Style 4")),
+				("infobar-style-xpicon2", _("Style 5")),
+				("infobar-style-xpicon3", _("Style 6")),
+				("infobar-style-xpicon4", _("Style 7")),
+				("infobar-style-xpicon5", _("Style 8")),
+				("infobar-style-xpicon6", _("Style 9")),
+				("infobar-style-xpicon7", _("Style 10"))
 				])
 				
 config.plugins.SevenHD.SIB = ConfigSelection(default="-top", choices = [
