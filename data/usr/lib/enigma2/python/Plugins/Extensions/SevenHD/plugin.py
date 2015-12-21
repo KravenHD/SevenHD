@@ -638,13 +638,17 @@ class SevenHD(Screen):
                 self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.SysInfo.value + XML)        
                 
                 ###weather-style
-                if config.plugins.SevenHD.AutoWoeIDServer.value == 'yahoo':
-		   self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.WeatherStyle.value + '_yahoo' + XML)
-                   self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.WeatherStyle.value + '_yahoo' + XML)        
+                if config.plugins.SevenHD.WeatherStyle.value != 'none':
+                   if config.plugins.SevenHD.AutoWoeIDServer.value == 'yahoo':
+		      self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.WeatherStyle.value + '_yahoo' + XML)
+                      self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.WeatherStyle.value + '_yahoo' + XML)        
+                   else:
+                      self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.WeatherStyle.value + '_owm' + XML)
+                      self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.WeatherStyle.value + '_owm' + XML)
                 else:
-                   self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.WeatherStyle.value + '_owm' + XML)
-                   self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.WeatherStyle.value + '_owm' + XML)
-                   
+                   self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.WeatherStyle.value + XML)
+                   self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.WeatherStyle.value + XML)      
+                
                 ###Infobar_middle
 		self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.InfobarStyle.value + "-middle.xml")
                 self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.InfobarStyle.value + "-middle.xml")         
