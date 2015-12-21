@@ -76,7 +76,6 @@ class SevenHD(Screen):
                          <widget name="blue" font="Regular; 20" foregroundColor="#000064c7" backgroundColor="#00000000" halign="left" valign="center" position="664,662" size="148,48" transparent="1" />
                          <widget name="menuList" position="18,72" size="816,575" scrollbarMode="showOnDemand" transparent="1" zPosition="1" backgroundColor="#00000000" />
                          <eLabel position="70,12" size="708,46" text="SevenHD" font="Regular; 35" valign="center" halign="center" transparent="1" backgroundColor="#00000000" foregroundColor="#00ffffff" name="," />
-                         <eLabel position="891,657" size="372,46" text="Thanks to http://www.gigablue-support.org/" font="Regular; 12" valign="center" halign="center" transparent="1" backgroundColor="#00000000" foregroundColor="#00ffffff" name="," />
                          <widget name="helperimage" position="891,274" size="372,209" zPosition="1" backgroundColor="#00000000" />
                          <widget backgroundColor="#00000000" font="Regular2; 34" foregroundColor="#00ffffff" position="70,12" render="Label" size="708,46" source="Title" transparent="1" halign="center" valign="center" noWrap="1" />
                          <eLabel backgroundColor="#00000000" position="6,6" size="842,708" transparent="0" zPosition="-9" foregroundColor="#00ffffff" />
@@ -619,9 +618,17 @@ class SevenHD(Screen):
                    else:
                       self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.ClockStyle.value + '_owm' + XML)
                       self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.ClockStyle.value + '_owm' + XML)
+                elif config.plugins.SevenHD.ClockStyle.value == 'clock-android':
+                   if config.plugins.SevenHD.AutoWoeIDServer.value == 'yahoo':
+                      self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.ClockStyle.value + '_yahoo' + XML)
+                      self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.ClockStyle.value + '_yahoo' + XML)               
+                   else:
+                      self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.ClockStyle.value + '_owm' + XML)
+                      self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.ClockStyle.value + '_owm' + XML)
                 else:
                    self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.ClockStyle.value + XML)
                    self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.ClockStyle.value + XML)
+                
                 ###sat-info
 		self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.SatInfo.value + XML)
                 self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.SatInfo.value + XML)        
@@ -667,6 +674,13 @@ class SevenHD(Screen):
                          self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.ClockStyle.value + '_owm' + XML)
                          self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.ClockStyle.value + '_owm' + XML)
                    elif config.plugins.SevenHD.ClockStyle.value == 'clock-weather-meteo':
+                      if config.plugins.SevenHD.AutoWoeIDServer.value == 'yahoo':
+                         self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.ClockStyle.value + '_yahoo' + XML)
+                         self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.ClockStyle.value + '_yahoo' + XML)               
+                      else:
+                         self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.ClockStyle.value + '_owm' + XML)
+                         self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.ClockStyle.value + '_owm' + XML)
+                   elif config.plugins.SevenHD.ClockStyle.value == 'clock-android':
                       if config.plugins.SevenHD.AutoWoeIDServer.value == 'yahoo':
                          self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.ClockStyle.value + '_yahoo' + XML)
                          self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.ClockStyle.value + '_yahoo' + XML)               

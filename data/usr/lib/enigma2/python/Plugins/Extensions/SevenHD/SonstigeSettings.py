@@ -121,9 +121,9 @@ class SonstigeSettings(ConfigListScreen, Screen):
         else:
            list.append(getConfigListEntry(_("Debug Mode (only for skinning)"),             config.plugins.SevenHD.debug,                 'Schaltet den Debug Mode ein.',                                                    '4', 'none'))
         if config.plugins.SevenHD.debug_screen_names.value:
-           list.append(getConfigListEntry(_("Show Screen Name"),                           config.plugins.SevenHD.debug_screen_names,    'Zeigt oben links den aktuellen ScreenNamen an.',                                  '4', 'True'))
+           list.append(getConfigListEntry(_("Show Screen Name"),                           config.plugins.SevenHD.debug_screen_names,    'Zeigt oben links den aktuellen Screennamen an.',                                  '4', 'True'))
         else:                                                                                                                                                                                             
-           list.append(getConfigListEntry(_("Show Screen Name"),                           config.plugins.SevenHD.debug_screen_names,    'Zeigt oben links den aktuellen ScreenNamen an.',                                  '4', 'none'))
+           list.append(getConfigListEntry(_("Show Screen Name"),                           config.plugins.SevenHD.debug_screen_names,    'Zeigt oben links den aktuellen Screennamen an.',                                  '4', 'none'))
         if config.plugins.SevenHD.msgdebug.value:
            list.append(getConfigListEntry(_("MSG Box Debug Mode (only for skinning)"),     config.plugins.SevenHD.msgdebug,              'Schaltet die Debug MessageBox ein.',                                              '4', 'True'))
         else:
@@ -139,9 +139,9 @@ class SonstigeSettings(ConfigListScreen, Screen):
         else:
            list.append(getConfigListEntry(_("activate"),                                   config.plugins.SevenHD.AutoUpdate,            'Schaltet das AutoUpdate ein.',                                                    '4', 'none'))
         if config.plugins.SevenHD.AutoUpdateInfo.value:
-           list.append(getConfigListEntry(_("autoupdate infobar info"),                    config.plugins.SevenHD.AutoUpdateInfo,        'Zeigt dir die Verfuegbarkeit eines PluginUpdates unten rechts in der InfoBar an.','4', 'True'))
+           list.append(getConfigListEntry(_("autoupdate infobar info"),                    config.plugins.SevenHD.AutoUpdateInfo,        'Zeigt dir die Verf\xc3\xbcgbarkeit eines PluginUpdates unten rechts in der InfoBar an.','4', 'True'))
         else:
-           list.append(getConfigListEntry(_("autoupdate infobar info"),                    config.plugins.SevenHD.AutoUpdateInfo,        'Zeigt dir die Verfuegbarkeit eines PluginUpdates unten rechts in der InfoBar an.','4', 'none'))
+           list.append(getConfigListEntry(_("autoupdate infobar info"),                    config.plugins.SevenHD.AutoUpdateInfo,        'Zeigt dir die Verf\xc3\xbcgbarkeit eines PluginUpdates unten rechts in der InfoBar an.','4', 'none'))
         if config.plugins.SevenHD.AutoUpdatePluginStart.value:
            list.append(getConfigListEntry(_("autoupdate plugin startinfo"),                config.plugins.SevenHD.AutoUpdatePluginStart, 'Fragt beim PluginStart ob ein neues Update installiert werden soll.',             '4', 'True'))
         else:

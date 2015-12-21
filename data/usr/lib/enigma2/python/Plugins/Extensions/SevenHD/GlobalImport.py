@@ -1,4 +1,4 @@
-#version = '3.6.42'
+#version = '3.6.43'
 import os
 try:
    opkg_info = os.popen("opkg list-installed enigma2-plugin-skins-sevenhd | cut -d ' ' -f3").read()

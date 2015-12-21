@@ -42,7 +42,7 @@ class SevenHDWetterPicon(Renderer):
 	def changed(self, what):
 		if self.instance:
 			if self.path:
-                           self.pngname = '/usr/share/enigma2/SevenHD/WetterIcons/' + str(self.source.text) + '.png'
+                           self.pngname = '/usr/share/enigma2/SevenHD/' + self.path + '/' + str(self.source.text) + '.png'
                            if not fileExists(self.pngname):
                               self.debug('Missing png: ' + str(self.pngname))
                               self.pngname = resolveFilename(SCOPE_CURRENT_SKIN, 'picon_default.png')

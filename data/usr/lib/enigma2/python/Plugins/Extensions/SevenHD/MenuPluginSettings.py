@@ -121,22 +121,22 @@ class MenuPluginSettings(ConfigListScreen, Screen):
         list.append(getConfigListEntry(_("right window"),       config.plugins.SevenHD.BackgroundRight,        'Stellt die Farbe des rechten Fenster ein.',                  '4',     'Right'))
         list.append(getConfigListEntry(_('_____________________________color lines_______________________________________'), ))
         list.append(getConfigListEntry(_("line"),               config.plugins.SevenHD.Line,                   'Stellt die Farbe der Linie zwischen "Serie und Liste" ein.', '4',     'Line'))
-        list.append(getConfigListEntry(_("border"),             config.plugins.SevenHD.Border,                 'Stellt die Rahmen Farbe ein.',                               '4',     'Border'))
+        list.append(getConfigListEntry(_("border"),             config.plugins.SevenHD.Border,                 'Stellt die Rahmenfarbe ein.',                               '4',     'Border'))
         list.append(getConfigListEntry(_("progressbar"),        config.plugins.SevenHD.Progress,               'Stellt die Farbe des Fortschrittbalkens ein.',               '4',     'Progress'))
         list.append(getConfigListEntry(_('_____________________________listselection______________________________________'), ))
         list.append(getConfigListEntry(_("color"),              config.plugins.SevenHD.SelectionBackground,    'Stellt die Farbe des Auswahlbalken ein.',                    '4',     'Listselection'))
         list.append(getConfigListEntry(_("border"),             config.plugins.SevenHD.SelectionBorder,        'Stellt die Farbe des Rahmen ein.',                   '4',     'Listborder'))
         list.append(getConfigListEntry(_("selection font"),     config.plugins.SevenHD.SelectionFont,          'Stellt die Farbe der Schrift ein.',                          '4',     'Selfont'))
         list.append(getConfigListEntry(_('______________________________color font________________________________________'), ))
-        list.append(getConfigListEntry(_("primary font"),             config.plugins.SevenHD.Font1,                  'Stellt die Schrift Farbe der Liste ein.',                    '4',     'Font1'))
-        list.append(getConfigListEntry(_("secondary font"),             config.plugins.SevenHD.Font2,                  'Stellt die Schrift Farbe der Beschreibung ein.',             '4',     'Font2'))
-        list.append(getConfigListEntry(_("button text"),        config.plugins.SevenHD.ButtonText,             'Stellt die Schrift Farbe der FarbTasten Beschreibung ein.',  '4',     'Buttontext'))
+        list.append(getConfigListEntry(_("primary font"),             config.plugins.SevenHD.Font1,                  'Stellt die Schriftfarbe der Liste ein.',                    '4',     'Font1'))
+        list.append(getConfigListEntry(_("secondary font"),             config.plugins.SevenHD.Font2,                  'Stellt die Schriftfarbe der Beschreibung ein.',             '4',     'Font2'))
+        list.append(getConfigListEntry(_("button text"),        config.plugins.SevenHD.ButtonText,             'Stellt die Schriftfarbe der Farbtastenbeschreibung ein.',  '4',     'Buttontext'))
         list.append(getConfigListEntry(_('_______________________________plugins__________________________________________'), ))
-        list.append(getConfigListEntry(_("Movie Selection"),    config.plugins.SevenHD.MovieSelectionStyle,    'Auswahl der Covergroesse.',                                  '1',     ''))
+        list.append(getConfigListEntry(_("Movie Selection"),    config.plugins.SevenHD.MovieSelectionStyle,    'Auswahl der Covergr\xc3\xb6\xc3\x9fe.',                                  '1',     ''))
         if not fileExists(PLUGIN_PATH + "/Extensions/EnhancedMovieCenter/plugin.pyo"):
            list.append(getConfigListEntry(_('{:<114}{:>1}'.format('EnhancedMovieCenter','not installed')), ))
         else:   
-           list.append(getConfigListEntry(_("EMC"),             config.plugins.SevenHD.EMCStyle,               'Auswahl der Covergroesse.',                                  '1',     ''))
+           list.append(getConfigListEntry(_("EMC"),             config.plugins.SevenHD.EMCStyle,               'Auswahl der Covergr\xc3\xb6\xc3\x9fe.',                                  '1',     ''))
            config.EMC.skin_able.value = True
            config.EMC.skin_able.save()
         if config.plugins.SevenHD.NumberZapExtImport.value:
