@@ -15,22 +15,30 @@ class SevenHDUpdate(Converter, object):
 		Converter.__init__(self, type)
                 
                 if type == 'Update':
-                   self.type = 1
-
+                   self.type = 'Update'
+                elif type == 'Version':
+                   self.type = 'Version'
+                   
                 self.check_timer = eTimer()
                 self.check_timer.callback.append(self.get)
                 self.check_timer.start(30000)
 	
 	@cached
 	def getText(self):
-            self.info = self.look('1')
+            if self.type == 'Update':
+               self.info = self.look('1')
+            if self.type == 'Version':
+               self.info = self.get_version()
             return str(self.info)
 
 	text = property(getText)
 
         @cached
 	def getBoolean(self):
-	    self.info = self.look('2')
+	    if self.type == 'Update':
+               self.info = self.look('2')
+            if self.type == 'Version':
+               self.info = True
             return self.info
 
 	boolean = property(getBoolean)
@@ -72,6 +80,7 @@ class SevenHDUpdate(Converter, object):
             return self.update_available
         
         def change_to_int(self, versionnumber):
+            versionnumber = versionnumber.split('+')[0]
             if str(len(versionnumber)) <= str('3'): 
                    versionnumber = versionnumber + str('0')
                    if str(len(versionnumber)) < str('4'): 
@@ -82,5 +91,10 @@ class SevenHDUpdate(Converter, object):
             box_version = config.plugins.SevenHD.version.value
             os.system('echo "' + box_version + '" > ' + TMP_FILE)
 
+        def get_version(self):
+            opkg_info = os.popen("opkg list-installed enigma2-plugin-skins-sevenhd | cut -d ' ' -f3").read()
+            version = 'Version: ' + str(opkg_info.strip())
+            return version
+            
         def changed(self, what):
 	    Converter.changed(self, (self.CHANGED_POLL,))

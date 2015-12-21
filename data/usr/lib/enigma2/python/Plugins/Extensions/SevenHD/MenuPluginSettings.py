@@ -42,8 +42,8 @@ class MenuPluginSettings(ConfigListScreen, Screen):
                          <widget name="blue" font="Regular; 20" foregroundColor="#000064c7" backgroundColor="#00000000" halign="left" valign="center" position="664,662" size="148,48" transparent="1" />
                          <widget name="config" position="18,72" size="816,575" scrollbarMode="showOnDemand" transparent="1" zPosition="1" backgroundColor="#00000000" />
                          <eLabel position="70,12" size="708,46" text="SevenHD" font="Regular; 35" valign="center" halign="center" transparent="1" backgroundColor="#00000000" foregroundColor="#00ffffff" name="," />
-                         <eLabel position="891,657" size="372,46" text="Thanks to http://www.gigablue-support.org/" font="Regular; 12" valign="center" halign="center" transparent="1" backgroundColor="#00000000" foregroundColor="#00ffffff" name="," />
                          <widget name="helperimage" position="891,274" size="372,209" zPosition="1" backgroundColor="#00000000" />
+                         <widget name="description" position="891,490" size="372,200" font="Regular; 26" valign="center" halign="center" transparent="1" backgroundColor="#00000000" foregroundColor="#00ffffff" />
                          <widget backgroundColor="#00000000" font="Regular2; 34" foregroundColor="#00ffffff" position="70,12" render="Label" size="708,46" source="Title" transparent="1" halign="center" valign="center" noWrap="1" />
                          <eLabel backgroundColor="#00000000" position="6,6" size="842,708" transparent="0" zPosition="-9" foregroundColor="#00ffffff" />
                          <eLabel backgroundColor="#00ffffff" position="6,6" size="842,2" zPosition="2" />
@@ -60,10 +60,16 @@ class MenuPluginSettings(ConfigListScreen, Screen):
                          <eLabel backgroundColor="#00ffffff" position="878,714" size="398,2" zPosition="2" />
                          <eLabel backgroundColor="#00ffffff" position="878,6" size="2,708" zPosition="2" />
                          <eLabel backgroundColor="#00ffffff" position="1274,6" size="2,708" zPosition="2" />
-                         <eLabel position="891,88" size="372,46" text="Version: """ + str(version) + """" font="Regular; 35" valign="center" halign="center" transparent="1" backgroundColor="#00000000" foregroundColor="#00ffffff" name="," />
+                         <widget source="session.CurrentService" render="Label" position="891,88" size="372,46" font="Regular2;35" halign="center" backgroundColor="#00000000" transparent="1" valign="center" foregroundColor="#00ffffff">
+                                 <convert type="SevenHDUpdate">Version</convert>
+                         </widget>
                          <widget source="session.CurrentService" render="Label" position="891,134" size="372,28" font="Regular;26" halign="center" backgroundColor="#00000000" transparent="1" valign="center" foregroundColor="#00B27708">
                                  <convert type="SevenHDUpdate">Update</convert>
                          </widget>
+                         <eLabel position="891,274" size="372,2" backgroundColor="#00ffffff" zPosition="5" />
+                         <eLabel position="891,481" size="372,2" backgroundColor="#00ffffff" zPosition="5" />
+                         <eLabel position="891,274" size="2,208" backgroundColor="#00ffffff" zPosition="5" />
+                         <eLabel position="1261,274" size="2,208" backgroundColor="#00ffffff" zPosition="5" />
                   </screen>
                """
 
@@ -73,6 +79,7 @@ class MenuPluginSettings(ConfigListScreen, Screen):
         self.Scale = AVSwitch().getFramebufferScale()
         self.PicLoad = ePicLoad()
         self["helperimage"] = Pixmap()
+        self["description"] = Label()
         self["blue"] = Label()
         
         if config.plugins.SevenHD.grabdebug.value:
@@ -109,62 +116,64 @@ class MenuPluginSettings(ConfigListScreen, Screen):
     def getMenuItemList(self):
         
         list = []
-        list.append(getConfigListEntry(_('__________________________________________ MENU und PLUGINS __________________________________________'), ))
-        list.append(getConfigListEntry(_(' '), ))
-        list.append(getConfigListEntry(_('_____________________________________________ background _____________________________________________'), ))
-        list.append(getConfigListEntry(_("main window"), config.plugins.SevenHD.Background, 'Main'))
-        list.append(getConfigListEntry(_("right window"), config.plugins.SevenHD.BackgroundRight, 'Right'))
-        list.append(getConfigListEntry(_('_____________________________________________ color lines ____________________________________________'), ))
-        list.append(getConfigListEntry(_("line"), config.plugins.SevenHD.Line, 'Line'))
-        list.append(getConfigListEntry(_("border"), config.plugins.SevenHD.Border, 'Border'))
-        list.append(getConfigListEntry(_("progressbar"), config.plugins.SevenHD.Progress, 'Progress'))
-        list.append(getConfigListEntry(_('____________________________________________ listselection ___________________________________________'), ))
-        list.append(getConfigListEntry(_("color"), config.plugins.SevenHD.SelectionBackground, 'Listselection'))
-        list.append(getConfigListEntry(_("border"), config.plugins.SevenHD.SelectionBorder, 'Listborder'))
-        list.append(getConfigListEntry(_("selection font"), config.plugins.SevenHD.SelectionFont, 'Selfont'))
-        list.append(getConfigListEntry(_('______________________________________________ color font ____________________________________________'), ))
-        list.append(getConfigListEntry(_("font 1"), config.plugins.SevenHD.Font1, 'Font1'))
-        list.append(getConfigListEntry(_("font 2"), config.plugins.SevenHD.Font2, 'Font2'))
-        list.append(getConfigListEntry(_("button text"), config.plugins.SevenHD.ButtonText, 'Buttontext'))
+        list.append(getConfigListEntry(_('_____________________________background________________________________________'), ))
+        list.append(getConfigListEntry(_("main window"),        config.plugins.SevenHD.Background,             'Stellt die Farbe des linken Fenster ein.',                   '4',     'Main'))
+        list.append(getConfigListEntry(_("right window"),       config.plugins.SevenHD.BackgroundRight,        'Stellt die Farbe des rechten Fenster ein.',                  '4',     'Right'))
+        list.append(getConfigListEntry(_('_____________________________color lines_______________________________________'), ))
+        list.append(getConfigListEntry(_("line"),               config.plugins.SevenHD.Line,                   'Stellt die Farbe der Linie zwischen "Serie und Liste" ein.', '4',     'Line'))
+        list.append(getConfigListEntry(_("border"),             config.plugins.SevenHD.Border,                 'Stellt die Rahmen Farbe ein.',                               '4',     'Border'))
+        list.append(getConfigListEntry(_("progressbar"),        config.plugins.SevenHD.Progress,               'Stellt die Farbe des Fortschrittbalkens ein.',               '4',     'Progress'))
+        list.append(getConfigListEntry(_('_____________________________listselection______________________________________'), ))
+        list.append(getConfigListEntry(_("color"),              config.plugins.SevenHD.SelectionBackground,    'Stellt die Farbe des Auswahlbalken ein.',                    '4',     'Listselection'))
+        list.append(getConfigListEntry(_("border"),             config.plugins.SevenHD.SelectionBorder,        'Stellt die Farbe des Rahmen ein.',                   '4',     'Listborder'))
+        list.append(getConfigListEntry(_("selection font"),     config.plugins.SevenHD.SelectionFont,          'Stellt die Farbe der Schrift ein.',                          '4',     'Selfont'))
+        list.append(getConfigListEntry(_('______________________________color font________________________________________'), ))
+        list.append(getConfigListEntry(_("primary font"),             config.plugins.SevenHD.Font1,                  'Stellt die Schrift Farbe der Liste ein.',                    '4',     'Font1'))
+        list.append(getConfigListEntry(_("secondary font"),             config.plugins.SevenHD.Font2,                  'Stellt die Schrift Farbe der Beschreibung ein.',             '4',     'Font2'))
+        list.append(getConfigListEntry(_("button text"),        config.plugins.SevenHD.ButtonText,             'Stellt die Schrift Farbe der FarbTasten Beschreibung ein.',  '4',     'Buttontext'))
+        list.append(getConfigListEntry(_('_______________________________plugins__________________________________________'), ))
+        list.append(getConfigListEntry(_("Movie Selection"),    config.plugins.SevenHD.MovieSelectionStyle,    'Auswahl der Covergroesse.',                                  '1',     ''))
+        if not fileExists(PLUGIN_PATH + "/Extensions/EnhancedMovieCenter/plugin.pyo"):
+           list.append(getConfigListEntry(_('{:<114}{:>1}'.format('EnhancedMovieCenter','not installed')), ))
+        else:   
+           list.append(getConfigListEntry(_("EMC"),             config.plugins.SevenHD.EMCStyle,               'Auswahl der Covergroesse.',                                  '1',     ''))
+           config.EMC.skin_able.value = True
+           config.EMC.skin_able.save()
+        if config.plugins.SevenHD.NumberZapExtImport.value:
+           if fileExists(PLUGIN_PATH + "/SystemPlugins/NumberZapExt/NumberZapExt.pyo"):
+              list.append(getConfigListEntry(_("ExtNumberZap"), config.plugins.SevenHD.NumberZapExt,           'Auswahl der Darstellung beim Senderwechsel per Nummertaste.','1',     ''))
+           else:
+              list.append(getConfigListEntry(_('{:<121}{:>1}'.format('ExtNumberZap','not installed')), ))                   
+        else:
+           list.append(getConfigListEntry(_('{:<121}{:>1}'.format('ExtNumberZap','not installed')), ))
+           
+        if not fileExists(PLUGIN_PATH + "/Extensions/CoolTVGuide/plugin.pyo"):
+           list.append(getConfigListEntry(_('{:<124}{:>1}'.format('CoolTVGuide','not installed')), ))
+        else:
+           list.append(getConfigListEntry(_("CoolTVGuide"),     config.plugins.SevenHD.CoolTVGuide,            'Auswahl der Darstellung bei langen INFO Tsatendruck.',       '1',     ''))
         return list
 
     def __selectionChanged(self):
         self["config"].setList(self.getMenuItemList())
 
     def GetPicturePath(self):
-        try:
-           returnValue = self["config"].getCurrent()[1].value
-	   self.debug('\nRet_value[1]: ' + str(returnValue) + '\n')		
+        returnValue = self["config"].getCurrent()[3]
+        self.debug('\nRet_value[3]: ' + str(returnValue))		
            		
-           if returnValue.endswith('-top'):
-              path = MAIN_IMAGE_PATH + str("SIB1.jpg")
-           elif returnValue.endswith('-left'):
-              path = MAIN_IMAGE_PATH + str("SIB2.jpg")
-           elif returnValue.endswith('-full'):
-              path = MAIN_IMAGE_PATH + str("SIB3.jpg")
-           elif returnValue.endswith('-minitv'):
-              path = MAIN_IMAGE_PATH + str("SIB4.jpg")
-           else:
-              path = MAIN_IMAGE_PATH + str(returnValue) + str(".jpg")
-	   		
-           if fileExists(path):
-              return path
-           else:
-           ## colors
-              try:
-                 returnValue = self["config"].getCurrent()[2]
-                 path = MAIN_IMAGE_PATH + returnValue + str(".jpg")
-                 if fileExists(path):
-                    return path
-                 
-                 self.debug('1: Missing Picture: ' + str(path) + '\n')
-              except:
-                    self.debug('2: Missing Picture: ' + str(path) + '\n')
-                    
-        except:
-           returnValue = self["config"].getCurrent()[0]
-           self.debug('3: Missing Picture: ' + MAIN_IMAGE_PATH + str(returnValue) + '.jpg\n')
-           ## weather
+        if returnValue == '4':
+           returnValue = self["config"].getCurrent()[int(returnValue)]
+        else:
+           returnValue = self["config"].getCurrent()[int(returnValue)].value
+        
+        self.debug('Ret_value[4]: ' + str(returnValue))   
+        path = MAIN_IMAGE_PATH + str(returnValue) + str(".jpg")
+        
+        self["description"].setText(self["config"].getCurrent()[2])
+        
+        if fileExists(path):
+           return path
+        else:
+           self.debug('Missing Picture: ' + str(path) + '\n')
            return MAIN_IMAGE_PATH + str("924938.jpg")
 
     def UpdatePicture(self):
@@ -172,6 +181,7 @@ class MenuPluginSettings(ConfigListScreen, Screen):
         self.onLayoutFinish.append(self.ShowPicture)
 
     def ShowPicture(self):
+        self["description"].setText(self["config"].getCurrent()[4])
         self.PicLoad.setPara([self["helperimage"].instance.size().width(),self["helperimage"].instance.size().height(),self.Scale[0],self.Scale[1],0,1,"#00000000"])
         self.PicLoad.startDecode(self.GetPicturePath())
 
@@ -213,6 +223,10 @@ class MenuPluginSettings(ConfigListScreen, Screen):
         self.setInputToDefault(config.plugins.SevenHD.ButtonText)
         self.setInputToDefault(config.plugins.SevenHD.ProgressLinePlug)
         self.setInputToDefault(config.plugins.SevenHD.Progress)
+        self.setInputToDefault(config.plugins.SevenHD.NumberZapExt)
+        self.setInputToDefault(config.plugins.SevenHD.EMCStyle)
+        self.setInputToDefault(config.plugins.SevenHD.MovieSelectionStyle)
+        self.setInputToDefault(config.plugins.SevenHD.CoolTVGuide)
         self.save()
 
     def setInputToDefault(self, configItem):
@@ -222,6 +236,21 @@ class MenuPluginSettings(ConfigListScreen, Screen):
         self.session.open(MessageBox, _("Information"), MessageBox.TYPE_INFO)
 
     def save(self):
+        
+        if fileExists(PLUGIN_PATH + "/Extensions/EnhancedMovieCenter/plugin.pyo"):
+           if config.plugins.SevenHD.EMCStyle.value != 'emcnocover':
+              config.EMC.movie_cover.value = True         
+           else:
+              config.EMC.movie_cover.value = False
+           config.EMC.movie_cover.save()
+        
+        if CREATOR != 'OpenMips':
+           if config.plugins.SevenHD.MovieSelectionStyle.value == 'movieselectionbigcover':
+              config.movielist.itemsperpage.value = '10'
+           else:
+              self.setInputToDefault(config.movielist.itemsperpage)
+           config.movielist.itemsperpage.save()
+        
         if config.plugins.SevenHD.skin_mode.value > '3':
            if 'back' in config.plugins.SevenHD.Background.value:
               self.setInputToDefault(config.plugins.SevenHD.Background)

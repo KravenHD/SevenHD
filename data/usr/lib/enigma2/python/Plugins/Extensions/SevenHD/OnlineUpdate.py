@@ -11,12 +11,11 @@ class Update():
 		self.session = session
 		self.onClose = [ ]
 		self.msgBox = None                                                    
-                self.dir_list = ['buttons','WetterIcons','clock','volume','progress','progressib','progresscs','progressvol','progresslistcs','icons','back']
                 self.do_update()   
 
         
         def do_update(self):
-                self.version = config.plugins.SevenHD.version.value
+                self.version = version
                 self.debug(self.version)
 
                 try:
@@ -36,7 +35,7 @@ class Update():
 
                 self.debug('%s - %s' % (str(len(self.version)), str(len(self.new_version))))
 
-                self.version = self.change_to_int(self.version.rstrip())
+                self.version = self.change_to_int(self.version)
                 self.new_version = self.change_to_int(self.new_version)
                 
                 self.debug('%s - %s' % (str(self.version), str(self.new_version)))
@@ -68,6 +67,7 @@ class Update():
         
         
         def change_to_int(self, versionnumber):
+            versionnumber = versionnumber.split('+')[0]
             if str(len(versionnumber)) <= str('3'): 
                    versionnumber = versionnumber + str('0')
                    if str(len(versionnumber)) < str('4'): 
@@ -79,18 +79,14 @@ class Update():
             if os.path.exists("/tmp/SevenHDdirsbackup"):
                rmtree("/tmp/SevenHDdirsbackup")
                
-            for dirs in self.dir_list:
-                if os.path.exists(MAIN_SKIN_PATH + dirs):
-                   copytree(MAIN_SKIN_PATH + dirs, '/tmp/SevenHDdirsbackup/%s' % dirs, symlinks=False, ignore=None)
+            if os.path.exists('/usr/share/enigma2/SevenHD'):
+               copytree('/usr/share/enigma2/SevenHD', '/tmp/SevenHDdirsbackup', symlinks=False, ignore=None)
         
         
         def copy_old_dirs_back(self):
-            
-            for dirs in self.dir_list:
-                if os.path.exists('/tmp/SevenHDdirsbackup/%s' % dirs):
-                   if os.path.exists(MAIN_SKIN_PATH + dirs):
-                      rmtree(MAIN_SKIN_PATH + dirs)
-                   copytree('/tmp/SevenHDdirsbackup/%s' % dirs, MAIN_SKIN_PATH + dirs, symlinks=False, ignore=None)
+            if os.path.exists('/tmp/SevenHDdirsbackup'):
+               if not os.path.exists('/usr/share/enigma2/SevenHD'):
+                  copytree('/tmp/SevenHDdirsbackup', '/usr/share/enigma2/SevenHD', symlinks=False, ignore=None)
             
                 
         def download_ipk(self, answer):

@@ -91,6 +91,7 @@
     <font filename="SevenHD/fonts/NotoSans-Regular.ttf" name="Regular" scale="95" />
     <font filename="SevenHD/fonts/NotoSans-Bold.ttf" name="Regular2" scale="95" />
     <font filename="SevenHD/fonts/meteocons.ttf" name="Meteo" scale="100" />
+    <font filename="SevenHD/fonts/owfont-regular.ttf" name="Meteo2" scale="100" />
     <alias name="Body" font="Regular" size="20" height="30" />
     <alias name="ChoiceList" font="Regular" size="20" height="30" />
     <alias name="Dreamexplorer" font="Regular" size="20" height="30" />

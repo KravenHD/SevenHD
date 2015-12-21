@@ -1666,8 +1666,8 @@
   <widget name="blue" font="Regular; 18" foregroundColor="SevenButtonText" backgroundColor="SevenFontBackground" halign="left" valign="center" position="664,662" size="148,48" transparent="1" />
   <widget name="config" position="18,72" size="816,575" backgroundColor="SevenFontBackground" enableWrapAround="1" transparent="1" />
   <eLabel position="70,12" size="708,46" text="SevenHD" font="Regular; 35" valign="center" halign="center" transparent="1" backgroundColor="SevenFontBackground" />
-  <eLabel position="891,657" size="372,46" text="Thanks to http://www.gigablue-support.org/" font="Regular; 12" valign="center" halign="center" transparent="1" backgroundColor="SevenFontBackgroundRight" foregroundColor="SevenFont2" name="," />
   <widget name="helperimage" position="891,274" size="372,209" zPosition="1" backgroundColor="SevenFontBackground" />
+  <widget name="description" position="891,490" size="372,200" font="Regular; 35" valign="center" halign="center" transparent="1" backgroundColor="#00000000" foregroundColor="#00ffffff" />
   <widget backgroundColor="SevenFontBackground" font="Regular2; 34" position="70,12" render="Label" size="708,46" source="Title" transparent="1" halign="center" valign="center" foregroundColor="SevenFont1" noWrap="1" />
   <eLabel backgroundColor="SevenBackground" position="6,6" size="842,708" transparent="0" zPosition="-9" />
   <eLabel backgroundColor="SevenBorder" position="6,6" size="842,2" zPosition="2" />
@@ -1688,12 +1688,18 @@
   <eLabel backgroundColor="SevenBorder" position="878,714" size="398,2" zPosition="2" />
   <eLabel backgroundColor="SevenBorder" position="878,6" size="2,708" zPosition="2" />
   <eLabel backgroundColor="SevenBorder" position="1274,6" size="2,708" zPosition="2" />
-  <eLabel position="891,88" size="372,46" text="PluginVersionString" font="Regular2; 35" valign="center" halign="center" transparent="1" backgroundColor="SevenFontBackgroundRight" foregroundColor="SevenFont2" name="," />
+  <widget source="session.CurrentService" render="Label" position="891,88" size="372,46" font="Regular2;35" halign="center" backgroundColor="SevenFontBackgroundRight" transparent="1" valign="center" foregroundColor="SevenFont2">
+    <convert type="SevenHDUpdate">Version</convert>
+  </widget>
   <widget source="session.CurrentService" render="Label" position="891,134" size="372,28" font="Regular;26" halign="center" backgroundColor="SevenFontBackgroundRight" transparent="1" valign="center" foregroundColor="SevenFont1">
     <convert type="SevenHDUpdate">Update</convert>
   </widget>
 <ePixmap pixmap="SevenHD/back/menumain.png" position="6,6" size="842,708" alphatest="blend" zPosition="-8" />
 <ePixmap pixmap="SevenHD/back/menuright.png" position="878,6" size="396,708" alphatest="blend" zPosition="-8" />
+<eLabel position="891,274" size="372,2" backgroundColor="SevenBorder" zPosition="5" />
+<eLabel position="891,481" size="372,2" backgroundColor="SevenBorder" zPosition="5" />
+<eLabel position="891,274" size="2,208" backgroundColor="SevenBorder" zPosition="5" />
+<eLabel position="1261,274" size="2,208" backgroundColor="SevenBorder" zPosition="5" />
 </screen>
   <screen name="MenuPluginSettings" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
 <!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="MenuPluginSettings" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
@@ -1703,8 +1709,8 @@
   <widget name="blue" font="Regular; 18" foregroundColor="SevenButtonText" backgroundColor="SevenFontBackground" halign="left" valign="center" position="664,662" size="148,48" transparent="1" />
   <widget name="config" position="18,72" size="816,575" backgroundColor="SevenFontBackground" enableWrapAround="1" transparent="1" />
   <eLabel position="70,12" size="708,46" text="SevenHD" font="Regular; 35" valign="center" halign="center" transparent="1" backgroundColor="SevenFontBackground" />
-  <eLabel position="891,657" size="372,46" text="Thanks to http://www.gigablue-support.org/" font="Regular; 12" valign="center" halign="center" transparent="1" backgroundColor="SevenFontBackgroundRight" foregroundColor="SevenFont2" name="," />
   <widget name="helperimage" position="891,274" size="372,209" zPosition="1" backgroundColor="SevenFontBackground" />
+  <widget name="description" position="891,490" size="372,200" font="Regular; 35" valign="center" halign="center" transparent="1" backgroundColor="#00000000" foregroundColor="#00ffffff" />
   <widget backgroundColor="SevenFontBackground" font="Regular2; 34" position="70,12" render="Label" size="708,46" source="Title" transparent="1" halign="center" valign="center" foregroundColor="SevenFont1" noWrap="1" />
   <eLabel backgroundColor="SevenBackground" position="6,6" size="842,708" transparent="0" zPosition="-9" />
   <eLabel backgroundColor="SevenBorder" position="6,6" size="842,2" zPosition="2" />
@@ -1725,12 +1731,18 @@
   <eLabel backgroundColor="SevenBorder" position="878,714" size="398,2" zPosition="2" />
   <eLabel backgroundColor="SevenBorder" position="878,6" size="2,708" zPosition="2" />
   <eLabel backgroundColor="SevenBorder" position="1274,6" size="2,708" zPosition="2" />
-  <eLabel position="891,88" size="372,46" text="PluginVersionString" font="Regular2; 35" valign="center" halign="center" transparent="1" backgroundColor="SevenFontBackgroundRight" foregroundColor="SevenFont2" name="," />
+  <widget source="session.CurrentService" render="Label" position="891,88" size="372,46" font="Regular2;35" halign="center" backgroundColor="SevenFontBackgroundRight" transparent="1" valign="center" foregroundColor="SevenFont2">
+    <convert type="SevenHDUpdate">Version</convert>
+  </widget>
   <widget source="session.CurrentService" render="Label" position="891,134" size="372,28" font="Regular;26" halign="center" backgroundColor="SevenFontBackgroundRight" transparent="1" valign="center" foregroundColor="SevenFont1">
     <convert type="SevenHDUpdate">Update</convert>
   </widget>
 <ePixmap pixmap="SevenHD/back/menumain.png" position="6,6" size="842,708" alphatest="blend" zPosition="-8" />
 <ePixmap pixmap="SevenHD/back/menuright.png" position="878,6" size="396,708" alphatest="blend" zPosition="-8" />
+<eLabel position="891,274" size="372,2" backgroundColor="SevenBorder" zPosition="5" />
+<eLabel position="891,481" size="372,2" backgroundColor="SevenBorder" zPosition="5" />
+<eLabel position="891,274" size="2,208" backgroundColor="SevenBorder" zPosition="5" />
+<eLabel position="1261,274" size="2,208" backgroundColor="SevenBorder" zPosition="5" />
 </screen>
   <screen name="ChannelSettings" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
 <!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="ChannelSettings" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
@@ -1740,8 +1752,8 @@
   <widget name="blue" font="Regular; 18" foregroundColor="SevenButtonText" backgroundColor="SevenFontBackground" halign="left" valign="center" position="664,662" size="148,48" transparent="1" />
   <widget name="config" position="18,72" scrollbarMode="showOnDemand" size="816,575" backgroundColor="SevenFontBackground" enableWrapAround="1" transparent="1" />
   <eLabel position="70,12" size="708,46" text="SevenHD" font="Regular; 35" valign="center" halign="center" transparent="1" backgroundColor="SevenFontBackground" />
-  <eLabel position="891,657" size="372,46" text="Thanks to http://www.gigablue-support.org/" font="Regular; 12" valign="center" halign="center" transparent="1" backgroundColor="SevenFontBackgroundRight" foregroundColor="SevenFont2" name="," />
   <widget name="helperimage" position="891,274" size="372,209" zPosition="1" backgroundColor="SevenFontBackground" />
+  <widget name="description" position="891,490" size="372,200" font="Regular; 35" valign="center" halign="center" transparent="1" backgroundColor="#00000000" foregroundColor="#00ffffff" />
   <widget backgroundColor="SevenFontBackground" font="Regular2; 34" position="70,12" render="Label" size="708,46" source="Title" transparent="1" halign="center" valign="center" foregroundColor="SevenFont1" noWrap="1" />
   <eLabel backgroundColor="SevenBackground" position="6,6" size="842,708" transparent="0" zPosition="-9" />
   <eLabel backgroundColor="SevenBorder" position="6,6" size="842,2" zPosition="2" />
@@ -1762,12 +1774,18 @@
   <eLabel backgroundColor="SevenBorder" position="878,714" size="398,2" zPosition="2" />
   <eLabel backgroundColor="SevenBorder" position="878,6" size="2,708" zPosition="2" />
   <eLabel backgroundColor="SevenBorder" position="1274,6" size="2,708" zPosition="2" />
-  <eLabel position="891,88" size="372,46" text="PluginVersionString" font="Regular2; 35" valign="center" halign="center" transparent="1" backgroundColor="SevenFontBackgroundRight" foregroundColor="SevenFont2" name="," />
+  <widget source="session.CurrentService" render="Label" position="891,88" size="372,46" font="Regular2;35" halign="center" backgroundColor="SevenFontBackgroundRight" transparent="1" valign="center" foregroundColor="SevenFont2">
+    <convert type="SevenHDUpdate">Version</convert>
+  </widget>
   <widget source="session.CurrentService" render="Label" position="891,134" size="372,28" font="Regular;26" halign="center" backgroundColor="SevenFontBackgroundRight" transparent="1" valign="center" foregroundColor="SevenFont1">
     <convert type="SevenHDUpdate">Update</convert>
   </widget>
 <ePixmap pixmap="SevenHD/back/menumain.png" position="6,6" size="842,708" alphatest="blend" zPosition="-8" />
 <ePixmap pixmap="SevenHD/back/menuright.png" position="878,6" size="396,708" alphatest="blend" zPosition="-8" />
+<eLabel position="891,274" size="372,2" backgroundColor="SevenBorder" zPosition="5" />
+<eLabel position="891,481" size="372,2" backgroundColor="SevenBorder" zPosition="5" />
+<eLabel position="891,274" size="2,208" backgroundColor="SevenBorder" zPosition="5" />
+<eLabel position="1261,274" size="2,208" backgroundColor="SevenBorder" zPosition="5" />
 </screen>
   <screen name="InfobarExtraSettings" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
 <!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="InfobarExtraSettings" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
@@ -1777,8 +1795,8 @@
   <widget name="blue" font="Regular; 18" foregroundColor="SevenButtonText" backgroundColor="SevenFontBackground" halign="left" valign="center" position="664,662" size="148,48" transparent="1" />
   <widget name="config" position="18,72" size="816,575" backgroundColor="SevenFontBackground" enableWrapAround="1" transparent="1" />
   <eLabel position="70,12" size="708,46" text="SevenHD" font="Regular; 35" valign="center" halign="center" transparent="1" backgroundColor="SevenFontBackground" />
-  <eLabel position="891,657" size="372,46" text="Thanks to http://www.gigablue-support.org/" font="Regular; 12" valign="center" halign="center" transparent="1" backgroundColor="SevenFontBackgroundRight" foregroundColor="SevenFont2" name="," />
   <widget name="helperimage" position="891,274" size="372,209" zPosition="1" backgroundColor="SevenFontBackground" />
+  <widget name="description" position="891,490" size="372,200" font="Regular; 35" valign="center" halign="center" transparent="1" backgroundColor="#00000000" foregroundColor="#00ffffff" />
   <widget backgroundColor="SevenFontBackground" font="Regular2; 34" position="70,12" render="Label" size="708,46" source="Title" transparent="1" halign="center" valign="center" foregroundColor="SevenFont1" noWrap="1" />
   <eLabel backgroundColor="SevenBackground" position="6,6" size="842,708" transparent="0" zPosition="-9" />
   <eLabel backgroundColor="SevenBorder" position="6,6" size="842,2" zPosition="2" />
@@ -1799,12 +1817,18 @@
   <eLabel backgroundColor="SevenBorder" position="878,714" size="398,2" zPosition="2" />
   <eLabel backgroundColor="SevenBorder" position="878,6" size="2,708" zPosition="2" />
   <eLabel backgroundColor="SevenBorder" position="1274,6" size="2,708" zPosition="2" />
-  <eLabel position="891,88" size="372,46" text="PluginVersionString" font="Regular2; 35" valign="center" halign="center" transparent="1" backgroundColor="SevenFontBackgroundRight" foregroundColor="SevenFont2" name="," />
+  <widget source="session.CurrentService" render="Label" position="891,88" size="372,46" font="Regular2;35" halign="center" backgroundColor="SevenFontBackgroundRight" transparent="1" valign="center" foregroundColor="SevenFont2">
+    <convert type="SevenHDUpdate">Version</convert>
+  </widget>
   <widget source="session.CurrentService" render="Label" position="891,134" size="372,28" font="Regular;26" halign="center" backgroundColor="SevenFontBackgroundRight" transparent="1" valign="center" foregroundColor="SevenFont1">
     <convert type="SevenHDUpdate">Update</convert>
   </widget>
 <ePixmap pixmap="SevenHD/back/menumain.png" position="6,6" size="842,708" alphatest="blend" zPosition="-8" />
 <ePixmap pixmap="SevenHD/back/menuright.png" position="878,6" size="396,708" alphatest="blend" zPosition="-8" />
+<eLabel position="891,274" size="372,2" backgroundColor="SevenBorder" zPosition="5" />
+<eLabel position="891,481" size="372,2" backgroundColor="SevenBorder" zPosition="5" />
+<eLabel position="891,274" size="2,208" backgroundColor="SevenBorder" zPosition="5" />
+<eLabel position="1261,274" size="2,208" backgroundColor="SevenBorder" zPosition="5" />
 </screen>
   <screen name="InfobarSettings" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
 <!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="InfobarSettings" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
@@ -1814,8 +1838,8 @@
   <widget name="blue" font="Regular; 18" foregroundColor="SevenButtonText" backgroundColor="SevenFontBackground" halign="left" valign="center" position="664,662" size="148,48" transparent="1" />
   <widget name="config" position="18,72" size="816,575" backgroundColor="SevenFontBackground" enableWrapAround="1" transparent="1" />
   <eLabel position="70,12" size="708,46" text="SevenHD" font="Regular; 35" valign="center" halign="center" transparent="1" backgroundColor="SevenFontBackground" />
-  <eLabel position="891,657" size="372,46" text="Thanks to http://www.gigablue-support.org/" font="Regular; 12" valign="center" halign="center" transparent="1" backgroundColor="SevenFontBackgroundRight" foregroundColor="SevenFont2" name="," />
   <widget name="helperimage" position="891,274" size="372,209" zPosition="1" backgroundColor="SevenFontBackground" />
+  <widget name="description" position="891,490" size="372,200" font="Regular; 35" valign="center" halign="center" transparent="1" backgroundColor="#00000000" foregroundColor="#00ffffff" />
   <widget backgroundColor="SevenFontBackground" font="Regular2; 34" position="70,12" render="Label" size="708,46" source="Title" transparent="1" halign="center" valign="center" foregroundColor="SevenFont1" noWrap="1" />
   <eLabel backgroundColor="SevenBackground" position="6,6" size="842,708" transparent="0" zPosition="-9" />
   <eLabel backgroundColor="SevenBorder" position="6,6" size="842,2" zPosition="2" />
@@ -1836,12 +1860,18 @@
   <eLabel backgroundColor="SevenBorder" position="878,714" size="398,2" zPosition="2" />
   <eLabel backgroundColor="SevenBorder" position="878,6" size="2,708" zPosition="2" />
   <eLabel backgroundColor="SevenBorder" position="1274,6" size="2,708" zPosition="2" />
-  <eLabel position="891,88" size="372,46" text="PluginVersionString" font="Regular2; 35" valign="center" halign="center" transparent="1" backgroundColor="SevenFontBackgroundRight" foregroundColor="SevenFont2" name="," />
+  <widget source="session.CurrentService" render="Label" position="891,88" size="372,46" font="Regular2;35" halign="center" backgroundColor="SevenFontBackgroundRight" transparent="1" valign="center" foregroundColor="SevenFont2">
+    <convert type="SevenHDUpdate">Version</convert>
+  </widget>
   <widget source="session.CurrentService" render="Label" position="891,134" size="372,28" font="Regular;26" halign="center" backgroundColor="SevenFontBackgroundRight" transparent="1" valign="center" foregroundColor="SevenFont1">
     <convert type="SevenHDUpdate">Update</convert>
   </widget>
 <ePixmap pixmap="SevenHD/back/menumain.png" position="6,6" size="842,708" alphatest="blend" zPosition="-8" />
 <ePixmap pixmap="SevenHD/back/menuright.png" position="878,6" size="396,708" alphatest="blend" zPosition="-8" />
+<eLabel position="891,274" size="372,2" backgroundColor="SevenBorder" zPosition="5" />
+<eLabel position="891,481" size="372,2" backgroundColor="SevenBorder" zPosition="5" />
+<eLabel position="891,274" size="2,208" backgroundColor="SevenBorder" zPosition="5" />
+<eLabel position="1261,274" size="2,208" backgroundColor="SevenBorder" zPosition="5" />
 </screen>
   <screen name="SecondInfobarSettings" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
 <!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="SecondInfobarSettings" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
@@ -1851,8 +1881,8 @@
   <widget name="blue" font="Regular; 18" foregroundColor="SevenButtonText" backgroundColor="SevenFontBackground" halign="left" valign="center" position="664,662" size="148,48" transparent="1" />
   <widget name="config" position="18,72" size="816,575" backgroundColor="SevenFontBackground" enableWrapAround="1" transparent="1" />
   <eLabel position="70,12" size="708,46" text="SevenHD" font="Regular; 35" valign="center" halign="center" transparent="1" backgroundColor="SevenFontBackground" />
-  <eLabel position="891,657" size="372,46" text="Thanks to http://www.gigablue-support.org/" font="Regular; 12" valign="center" halign="center" transparent="1" backgroundColor="SevenFontBackgroundRight" foregroundColor="SevenFont2" name="," />
   <widget name="helperimage" position="891,274" size="372,209" zPosition="1" backgroundColor="SevenFontBackground" />
+  <widget name="description" position="891,490" size="372,200" font="Regular; 35" valign="center" halign="center" transparent="1" backgroundColor="#00000000" foregroundColor="#00ffffff" />
   <widget backgroundColor="SevenFontBackground" font="Regular2; 34" position="70,12" render="Label" size="708,46" source="Title" transparent="1" halign="center" valign="center" foregroundColor="SevenFont1" noWrap="1" />
   <eLabel backgroundColor="SevenBackground" position="6,6" size="842,708" transparent="0" zPosition="-9" />
   <eLabel backgroundColor="SevenBorder" position="6,6" size="842,2" zPosition="2" />
@@ -1873,12 +1903,18 @@
   <eLabel backgroundColor="SevenBorder" position="878,714" size="398,2" zPosition="2" />
   <eLabel backgroundColor="SevenBorder" position="878,6" size="2,708" zPosition="2" />
   <eLabel backgroundColor="SevenBorder" position="1274,6" size="2,708" zPosition="2" />
-  <eLabel position="891,88" size="372,46" text="PluginVersionString" font="Regular2; 35" valign="center" halign="center" transparent="1" backgroundColor="SevenFontBackgroundRight" foregroundColor="SevenFont2" name="," />
+  <widget source="session.CurrentService" render="Label" position="891,88" size="372,46" font="Regular2;35" halign="center" backgroundColor="SevenFontBackgroundRight" transparent="1" valign="center" foregroundColor="SevenFont2">
+    <convert type="SevenHDUpdate">Version</convert>
+  </widget>
   <widget source="session.CurrentService" render="Label" position="891,134" size="372,28" font="Regular;26" halign="center" backgroundColor="SevenFontBackgroundRight" transparent="1" valign="center" foregroundColor="SevenFont1">
     <convert type="SevenHDUpdate">Update</convert>
   </widget>
 <ePixmap pixmap="SevenHD/back/menumain.png" position="6,6" size="842,708" alphatest="blend" zPosition="-8" />
 <ePixmap pixmap="SevenHD/back/menuright.png" position="878,6" size="396,708" alphatest="blend" zPosition="-8" />
+<eLabel position="891,274" size="372,2" backgroundColor="SevenBorder" zPosition="5" />
+<eLabel position="891,481" size="372,2" backgroundColor="SevenBorder" zPosition="5" />
+<eLabel position="891,274" size="2,208" backgroundColor="SevenBorder" zPosition="5" />
+<eLabel position="1261,274" size="2,208" backgroundColor="SevenBorder" zPosition="5" />
 </screen>
   <screen name="SonstigeSettings" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
 <!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="SonstigeSettings" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
@@ -1888,8 +1924,8 @@
   <widget name="blue" font="Regular; 18" foregroundColor="SevenButtonText" backgroundColor="SevenFontBackground" halign="left" valign="center" position="664,662" size="148,48" transparent="1" />
   <widget name="config" position="18,72" size="816,575" backgroundColor="SevenFontBackground" enableWrapAround="1" transparent="1" />
   <eLabel position="70,12" size="708,46" text="SevenHD" font="Regular; 35" valign="center" halign="center" transparent="1" backgroundColor="SevenFontBackground" />
-  <eLabel position="891,657" size="372,46" text="Thanks to http://www.gigablue-support.org/" font="Regular; 12" valign="center" halign="center" transparent="1" backgroundColor="SevenFontBackgroundRight" foregroundColor="SevenFont2" name="," />
   <widget name="helperimage" position="891,274" size="372,209" zPosition="1" backgroundColor="SevenFontBackground" />
+  <widget name="description" position="891,490" size="372,200" font="Regular; 35" valign="center" halign="center" transparent="1" backgroundColor="#00000000" foregroundColor="#00ffffff" />
   <widget backgroundColor="SevenFontBackground" font="Regular2; 34" position="70,12" render="Label" size="708,46" source="Title" transparent="1" halign="center" valign="center" foregroundColor="SevenFont1" noWrap="1" />
   <eLabel backgroundColor="SevenBackground" position="6,6" size="842,708" transparent="0" zPosition="-9" />
   <eLabel backgroundColor="SevenBorder" position="6,6" size="842,2" zPosition="2" />
@@ -1910,12 +1946,18 @@
   <eLabel backgroundColor="SevenBorder" position="878,714" size="398,2" zPosition="2" />
   <eLabel backgroundColor="SevenBorder" position="878,6" size="2,708" zPosition="2" />
   <eLabel backgroundColor="SevenBorder" position="1274,6" size="2,708" zPosition="2" />
-  <eLabel position="891,88" size="372,46" text="PluginVersionString" font="Regular2; 35" valign="center" halign="center" transparent="1" backgroundColor="SevenFontBackgroundRight" foregroundColor="SevenFont2" name="," />
+  <widget source="session.CurrentService" render="Label" position="891,88" size="372,46" font="Regular2;35" halign="center" backgroundColor="SevenFontBackgroundRight" transparent="1" valign="center" foregroundColor="SevenFont2">
+    <convert type="SevenHDUpdate">Version</convert>
+  </widget>
   <widget source="session.CurrentService" render="Label" position="891,134" size="372,28" font="Regular;26" halign="center" backgroundColor="SevenFontBackgroundRight" transparent="1" valign="center" foregroundColor="SevenFont1">
     <convert type="SevenHDUpdate">Update</convert>
   </widget>
 <ePixmap pixmap="SevenHD/back/menumain.png" position="6,6" size="842,708" alphatest="blend" zPosition="-8" />
 <ePixmap pixmap="SevenHD/back/menuright.png" position="878,6" size="396,708" alphatest="blend" zPosition="-8" />
+<eLabel position="891,274" size="372,2" backgroundColor="SevenBorder" zPosition="5" />
+<eLabel position="891,481" size="372,2" backgroundColor="SevenBorder" zPosition="5" />
+<eLabel position="891,274" size="2,208" backgroundColor="SevenBorder" zPosition="5" />
+<eLabel position="1261,274" size="2,208" backgroundColor="SevenBorder" zPosition="5" />
 </screen>
   <screen name="SevenHD" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
 <!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="SevenHD" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
@@ -1925,8 +1967,8 @@
     <eLabel font="Regular; 18" foregroundColor="SevenButtonText" backgroundColor="SevenFontBackground" halign="left" valign="center" position="664,662" size="148,48" text="Extras" transparent="1" />
   <widget name="menuList" position="18,72" size="816,575" backgroundColor="SevenFontBackground" enableWrapAround="1" transparent="1" />
   <eLabel position="70,12" size="708,46" text="SevenHD" font="Regular; 35" valign="center" halign="center" transparent="1" backgroundColor="SevenFontBackground" />
-  <eLabel position="891,657" size="372,46" text="Thanks to http://www.gigablue-support.org/" font="Regular; 12" valign="center" halign="center" transparent="1" backgroundColor="SevenFontBackgroundRight" foregroundColor="SevenFont2" name="," />
   <widget name="helperimage" position="891,274" size="372,209" zPosition="1" backgroundColor="SevenFontBackground" />
+  <widget name="description" position="891,490" size="372,200" font="Regular; 35" valign="center" halign="center" transparent="1" backgroundColor="#00000000" foregroundColor="#00ffffff" />
   <widget backgroundColor="SevenFontBackground" font="Regular2; 34" position="70,12" render="Label" size="708,46" source="Title" transparent="1" halign="center" valign="center" foregroundColor="SevenFont1" noWrap="1" />
   <eLabel backgroundColor="SevenBackground" position="6,6" size="842,708" transparent="0" zPosition="-9" />
   <eLabel backgroundColor="SevenBorder" position="6,6" size="842,2" zPosition="2" />
@@ -1947,12 +1989,18 @@
   <eLabel backgroundColor="SevenBorder" position="878,714" size="398,2" zPosition="2" />
   <eLabel backgroundColor="SevenBorder" position="878,6" size="2,708" zPosition="2" />
   <eLabel backgroundColor="SevenBorder" position="1274,6" size="2,708" zPosition="2" />
-  <eLabel position="891,88" size="372,46" text="PluginVersionString" font="Regular2; 35" valign="center" halign="center" transparent="1" backgroundColor="SevenFontBackgroundRight" foregroundColor="SevenFont2" name="," />
+  <widget source="session.CurrentService" render="Label" position="891,88" size="372,46" font="Regular2;35" halign="center" backgroundColor="SevenFontBackgroundRight" transparent="1" valign="center" foregroundColor="SevenFont2">
+    <convert type="SevenHDUpdate">Version</convert>
+  </widget>
   <widget source="session.CurrentService" render="Label" position="891,134" size="372,28" font="Regular;26" halign="center" backgroundColor="SevenFontBackgroundRight" transparent="1" valign="center" foregroundColor="SevenFont1">
     <convert type="SevenHDUpdate">Update</convert>
   </widget>
 <ePixmap pixmap="SevenHD/back/menumain.png" position="6,6" size="842,708" alphatest="blend" zPosition="-8" />
 <ePixmap pixmap="SevenHD/back/menuright.png" position="878,6" size="396,708" alphatest="blend" zPosition="-8" />
+<eLabel position="891,274" size="372,2" backgroundColor="SevenBorder" zPosition="5" />
+<eLabel position="891,481" size="372,2" backgroundColor="SevenBorder" zPosition="5" />
+<eLabel position="891,274" size="2,208" backgroundColor="SevenBorder" zPosition="5" />
+<eLabel position="1261,274" size="2,208" backgroundColor="SevenBorder" zPosition="5" />
 </screen>
   <!-- Sky Select -->
   <screen name="skyselectscreen" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
@@ -2052,5 +2100,82 @@
   <widget font="Regular; 18" halign="left" valign="center" source="blue" position="664,662" size="148,48" render="Label" backgroundColor="SevenFontBackground" foregroundColor="SevenButtonText" transparent="1" zPosition="1" />
    <panel name="template_menu_left_button" />
 </screen>
+<!-- SerienRecorder3.0 -->
+<screen name="SerienRecorder3.0" position="0,0" size="1280,720" title="Serien Recorder" flags="wfNoBorder" backgroundColor="transparent">
+	
+    <widget name="title" position="20,50" size="880,55" backgroundColor="SevenBackground" foregroundColor="SevenFont1" transparent="1" font="Regular;26" valign="center" halign="center" />
+    <widget name="headline" position="20,50" size="860,55" backgroundColor="SevenBackground" foregroundColor="SevenFont1" transparent="1" font="Regular;26" valign="center" halign="center" />
+    <widget backgroundColor="SevenBackground" name="headline" position="20,20" size="880,40" transparent="1" font="Regular;26" valign="center" halign="center" />
+    <widget backgroundColor="SevenBackground" name="version" position="860,20" size="400,40" foregroundColor="SevenFont2" transparent="1" font="Regular;26" valign="center" halign="right" />
+    <widget backgroundColor="SevenBackground" source="global.CurrentTime" position="860,50" size="400,55" render="Label" font="Regular;26" valign="center" halign="right" foregroundColor="SevenFont2" transparent="1">
+        <convert type="SevenHDClockToText">Format:%A, %d.%m.%Y  %H:%M</convert>
+    </widget>
+    <widget name="video" position="938,120" size="322,182" zPosition="5" backgroundColor="transparent" />
+	<!-- Channelzuordnung -->
+    <widget name="list" position="20,150" size="880,470" zPosition="5" backgroundColor="SevenBackground" foregroundColor="SevenFont1" enableWrapAround="1" transparent="1" />
+	<!-- Marker-/Planer-Listen -->
+    <widget name="config" position="20,120" size="870,500" zPosition="5" backgroundColor="SevenFontBackground" foregroundColor="SevenFont1" enableWrapAround="1" transparent="1" />
+    <widget name="menu_list" position="20,120" size="870,500" zPosition="5" backgroundColor="SevenFontBackground" foregroundColor="SevenFont1" foregroundColorSelected="SevenSelFont" enableWrapAround="1" transparent="1" />
+	<!-- Log-Listen -->
+    <widget name="log" position="20,120" size="1240,500" zPosition="5" backgroundColor="SevenBackground" foregroundColor="SevenFont1" enableWrapAround="1" transparent="1" />
+	<!-- PopUp-Listen -->
+    <widget name="popup_bg" borderWidth="2" flags="wfBorder"  position="188,178" size="564,354" backgroundColor="SevenBackground" pixmap="SevenHD/back/menumain.png" foregroundColor="SevenFont2" transparent="0" zPosition="6" />
+    <widget name="popup_list" borderWidth="2" flags="wfBorder"  position="190,180" size="560,350" zPosition="7" backgroundColor="SevenBackground" pixmap="SevenHD/back/menumain.png" foregroundColor="SevenFont1" enableWrapAround="1" transparent="0" />
+	<!-- Alternative Channelliste -->
+    <widget name="popup_list2" borderWidth="2" flags="wfBorder"  position="190,180" size="560,350" zPosition="8" backgroundColor="SevenBackground" pixmap="SevenHD/back/menumain.png" foregroundColor="SevenFont1" enableWrapAround="1" transparent="0" />
+	<!-- Channel-List -->
+    <widget name="Web_Channel" position="55,115" size="200,30" halign="left" font="Regular; 25" backgroundColor="SevenBackground" foregroundColor="SevenFont2" transparent="1" />
+    <widget name="STB_Channel" position="370,115" size="200,30" halign="left" font="Regular; 25" backgroundColor="SevenBackground" foregroundColor="SevenFont2" transparent="1" />
+    <widget name="alt_STB_Channel" position="610,115" size="200,30" halign="left" font="Regular; 25" backgroundColor="SevenBackground" foregroundColor="SevenFont2" transparent="1" />
+    <!--widget name="separator" position="20,145" size="880,2" backgroundColor="SevenLine" zPosition="6" /-->
+	<!-- Setup-Beschreibungen -->
+    <widget name="config_information" position="938,320" zPosition="3" size="322,300" backgroundColor="transparent" />
+    <widget name="config_information_text" position="948,325" size="302,290" backgroundColor="SevenBackground" transparent="1" halign="left" zPosition="5" font="Regular;14" />
+	<!-- Serienbeschreibung -->
+    <widget name="info" position="20,120" size="870,500" font="Regular;24" backgroundColor="SevenBackground" foregroundColor="SevenFont2"  transparent="1" zPosition="1" />
+	<!-- Info's Log-File -->
+    <widget name="path" position="50,50" size="820,55" backgroundColor="SevenBackground" foregroundColor="SevenFont2" transparent="1" font="Regular;19" valign="center" halign="left" />
+	<!-- Colour Buttons -->
+    <widget name="bt_red" pixmap="SevenHD/buttons/key_red1.png" position="20,646" zPosition="1" size="32,32" alphatest="blend" />
+    <widget name="text_red" position="60,649" size="200,26" zPosition="1" font="Regular; 19" halign="left" backgroundColor="SevenBackground" foregroundColor="SevenFont1" transparent="1" />
+    <widget name="bt_green" pixmap="SevenHD/buttons/key_green1.png" position="268,646" zPosition="1" size="32,32" alphatest="blend" />
+    <widget name="text_green" position="308,649" size="200,26" zPosition="1" font="Regular;19" halign="left" backgroundColor="SevenBackground" foregroundColor="SevenFont1" transparent="1" />
+    <widget name="bt_ok" pixmap="SevenHD/buttons/key_ok.png" position="516,646" zPosition="1" size="32,32" alphatest="blend" />
+    <widget name="text_ok" position="556,649" size="200,26" zPosition="1" font="Regular;19" halign="left" backgroundColor="SevenBackground" foregroundColor="SevenFont1" transparent="1" />
+    <widget name="bt_yellow" pixmap="SevenHD/buttons/key_yellow1.png" position="764,646" zPosition="1" size="32,32" alphatest="blend" />
+    <widget name="text_yellow" position="804,649" size="200,26" zPosition="1" font="Regular;19" halign="left" backgroundColor="SevenBackground" foregroundColor="SevenFont1" transparent="1" />
+    <widget name="bt_blue" pixmap="SevenHD/buttons/key_blue1.png" position="1012,646" zPosition="1" size="32,32" alphatest="blend" />
+    <widget name="text_blue" position="1052,649" size="230,26" zPosition="1" font="Regular;19" halign="left" backgroundColor="SevenBackground" foregroundColor="SevenFont1" transparent="1" />
+    <widget name="bt_0" pixmap="SevenHD/buttons/key_0.png" position="20,680" zPosition="3" size="32,32" alphatest="blend" />
+    <widget name="bt_5" pixmap="SevenHD/buttons/key_5.png" position="20,680" zPosition="2" size="32,32" alphatest="blend" />
+    <widget name="bt_exit" pixmap="SevenHD/buttons/key_exit.png" position="20,680" zPosition="1" size="32,32" alphatest="blend" />
+    <widget name="text_0" position="60,683" size="200,26" zPosition="1" font="Regular; 19" halign="left" backgroundColor="SevenBackground" foregroundColor="SevenFont1" transparent="1" />
+    <widget name="bt_1" pixmap="SevenHD/buttons/key_1.png" position="268,680" zPosition="3" size="32,32" alphatest="blend" />
+    <widget name="bt_6" pixmap="SevenHD/buttons/key_6.png" position="268,680" zPosition="2" size="32,32" alphatest="blend" />
+    <widget name="bt_text" pixmap="SevenHD/buttons/key_text.png" position="268,680" zPosition="1" size="32,32" alphatest="blend" />
+    <widget name="text_1" position="308,683" size="200,26" zPosition="1" font="Regular;19" halign="left" backgroundColor="SevenBackground" foregroundColor="SevenFont1" transparent="1" />
+    <widget name="bt_2" pixmap="SevenHD/buttons/key_2.png" position="516,680" zPosition="3" size="32,32" alphatest="blend" />
+    <widget name="bt_7" pixmap="SevenHD/buttons/key_7.png" position="516,680" zPosition="2" size="32,32" alphatest="blend" />
+    <widget name="bt_epg" pixmap="SevenHD/buttons/key_epg.png" position="516,680" zPosition="1" size="32,32" alphatest="blend" />
+    <widget name="text_2" position="556,683" size="200,26" zPosition="1" font="Regular;19" halign="left" backgroundColor="SevenBackground" foregroundColor="SevenFont1" transparent="1" />
+    <widget name="bt_3" pixmap="SevenHD/buttons/key_3.png" position="764,680" zPosition="3" size="32,32" alphatest="blend" />
+    <widget name="bt_8" pixmap="SevenHD/buttons/key_8.png" position="764,680" zPosition="2" size="32,32" alphatest="blend" />
+    <widget name="bt_info" pixmap="SevenHD/buttons/key_help.png" position="764,680" zPosition="1" size="32,32" alphatest="blend" />
+    <widget name="text_3" position="804,683" size="200,26" zPosition="1" font="Regular;19" halign="left" backgroundColor="SevenBackground" foregroundColor="SevenFont1" transparent="1" />
+    <widget name="bt_4" pixmap="SevenHD/buttons/key_4.png" position="1012,680" zPosition="3" size="32,32" alphatest="blend" />
+    <widget name="bt_9" pixmap="SevenHD/buttons/key_9.png" position="1012,680" zPosition="2" size="32,32" alphatest="blend" />
+    <widget name="bt_menu" pixmap="SevenHD/buttons/key_menu.png" position="1012,680" zPosition="1" size="32,32" alphatest="blend" />
+    <widget name="text_4" position="1052,683" size="200,26" zPosition="1" font="Regular;19" halign="left" backgroundColor="SevenBackground" foregroundColor="SevenFont1" transparent="1" />
+    <!--eLabel backgroundColor="SevenBackground" foregroundColor="SevenFont2" position="0,0" size="1280,720" transparent="1" zPosition="-10" /-->
+  <widget name="cover" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/serienrecorder/images/no_cover.png" position="938,320" size="322,300" zPosition="2" transparent="1" alphatest="blend" />
+<eLabel backgroundColor="SevenBackground" position="6,6" size="1269,708" transparent="0" zPosition="-9" foregroundColor="SevenFont2" />
+  <ePixmap pixmap="SevenHD/back/menumain.png" position="6,6" size="1269,708" alphatest="blend" zPosition="-8" />
+  <eLabel backgroundColor="SevenBorder" position="6,6" size="1270,2" zPosition="2" />
+  <eLabel backgroundColor="SevenBorder" position="6,714" size="1270,2" zPosition="2" />
+  <eLabel backgroundColor="SevenBorder" position="6,6" size="2,708" zPosition="2" />
+  <eLabel backgroundColor="SevenBorder" position="1274,6" size="2,708" zPosition="2" />
+<eLabel backgroundColor="SevenLine" position="18,110" size="1245,2" zPosition="2" />
+  <eLabel backgroundColor="SevenLine" position="18,636" size="1245,2" zPosition="2" />
+  </screen>
   <!-- plugins -->
   

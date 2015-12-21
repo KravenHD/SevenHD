@@ -33,11 +33,12 @@
     <convert type="SevenHDLayoutInfo">UsbInfo,Frei</convert>
   </widget>
 
-
-  <eLabel backgroundColor="SevenBorderIB" position="969,264" size="295,2" zPosition="2" />
+  <eLabel backgroundColor="SevenBorderIB" position="969,264" size="294,2" zPosition="2" />
   <eLabel backgroundColor="SevenBorderIB" position="969,264" size="2,144" zPosition="2" />
   <eLabel backgroundColor="SevenBorderIB" position="1262,264" size="2,144" zPosition="2" />
-  <eLabel backgroundColor="SevenBorderIB" position="969,316" size="295,2" zPosition="2" />
-  <eLabel backgroundColor="SevenBorderIB" position="969,406" size="295,2" zPosition="2" />
-  <eLabel backgroundColor="SevenBackgroundIB1" position="971,265" size="293,142" transparent="0" zPosition="-10" />
-  <ePixmap pixmap="SevenHD/back/ibone.png" position="971,265" size="293,142" alphatest="blend" zPosition="-8" />
+  <eLabel backgroundColor="SevenBorderIB" position="969,316" size="294,2" zPosition="2" />
+  <eLabel backgroundColor="SevenBorderIB" position="969,406" size="294,2" zPosition="2" />
+  <eLabel backgroundColor="SevenBackgroundIB1" position="971,265" size="291,142" transparent="0" zPosition="-10" />
+  <ePixmap pixmap="SevenHD/back/ibone.png" position="971,265" size="291,142" alphatest="blend" zPosition="-8" />
+  
+  

@@ -285,7 +285,7 @@
     <panel name="template_colorkey_text" />
   </screen>
   <!-- GraphicalEPG -->
-  <screen backgroundColor="transparent" flags="wfNoBorder" name="GraphicalEPG" position="0,0" size="1280,720" title="Electronic Program Guide">
+<screen backgroundColor="transparent" flags="wfNoBorder" name="GraphicalEPG" position="0,0" size="1280,720" title="Electronic Program Guide">
 <!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="GraphicalEPG" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
     <widget backgroundColor="SevenFontBackground" font="Regular2; 28" position="25,70" render="Label" size="700,39" source="Event" transparent="1">
       <convert type="SevenHDEventName">Name</convert>
@@ -305,15 +305,16 @@
       <convert type="SevenHDEventName">ExtendedDescription</convert>
     </widget>
     <eLabel backgroundColor="SevenFont1" position="101,119" size="990,1" />
-    <widget name="timeline_text" position="25,273" selectionDisabled="1" size="1230,25" transparent="1" backgroundColor="SevenFontBackground" />
-    <widget EntryBackgroundColor="SevenBackground" EntryBackgroundColorSelected="SevenFont1" EntryBorderColor="SevenFont1" itemHeight="60" name="list" position="25,300" size="1230,345" transparent="1" />
+     <widget name="timeline_text" position="25,273" size="1230,25"  transparent="1" backgroundColor="SevenFontBackground" />
+	<widget name="bouquetlist" position="25,273" size="1230,25" zPosition="2" transparent="1" backgroundColor="SevenFontBackground" />
+    <widget itemHeight="60" name="list" EntryFontWrap="no" position="25,300" size="1230,345" transparent="1" />
     <widget name="timeline_now" position="80,297" zPosition="2" size="13,355" pixmap="SevenHD/epg/timeline-now.png" alphatest="blend" transparent="1" />
     <eLabel position="101,119" size="990,1" backgroundColor="SevenFont1" />
     <panel name="template_menu_full_button" />
     <panel name="template_colorkey_text" />
   </screen>
   <!-- GraphicalEPGPIG -->
-  <screen name="GraphicalEPGPIG" position="0,0" size="1280,720" title="Electronic Program Guide" flags="wfNoBorder" backgroundColor="transparent">
+ <screen name="GraphicalEPGPIG" position="0,0" size="1280,720" title="Electronic Program Guide" flags="wfNoBorder" backgroundColor="transparent">
 <!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="GraphicalEPGPIG" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
     <widget source="Event" render="Label" position="25,70" size="700,39" font="Regular; 24" backgroundColor="SevenFontBackground" foregroundColor="SevenFont1" transparent="1">
       <convert type="SevenHDEventName">Name</convert>
@@ -332,8 +333,9 @@
     <widget source="Event" render="SevenHDRunningText" transparent="1" options="movetype=running,direction=top,startpoint=0,startdelay=2000,steptime=90,wrap=1,always=0,repeat=2,oneshot=1" position="25,145" size="880,104" font="Regular2; 19" backgroundColor="SevenFontBackground" foregroundColor="SevenFont1" valign="top" zPosition="0">
       <convert type="SevenHDEventName">ExtendedDescription</convert>
     </widget>
-    <widget name="timeline_text" position="25,273" size="1230,25" selectionDisabled="1" transparent="1" backgroundColor="SevenFontBackground" />
-    <widget name="list" position="25,304" size="1230,345" EntryBorderColor="white" EntryBackgroundColor="black" EntryBackgroundColorSelected="grey" scrollbarMode="showNever" backgroundColor="SevenFontBackground" transparent="1" />
+    <widget name="timeline_text" position="25,273" size="1230,25"  transparent="1" backgroundColor="SevenFontBackground" />
+	<widget name="bouquetlist" position="25,273" size="1230,25" zPosition="2" transparent="1" backgroundColor="SevenFontBackground" />
+    <widget name="list" position="25,304" size="1230,345" EntryFontWrap="no" scrollbarMode="showNever" backgroundColor="SevenFontBackground" transparent="1" />
     <widget name="timeline_now" position="80,297" zPosition="2" size="13,355" pixmap="SevenHD/epg/timeline-now.png" alphatest="blend" transparent="1" />
     <widget source="session.VideoPicture" render="Pig" position="927,77" size="330,187" zPosition="3" backgroundColor="transparent" />
     <eLabel position="101,125" size="535,1" backgroundColor="SevenLine" />
@@ -1358,11 +1360,10 @@
   <!-- TimerEditList -->
 <screen backgroundColor="transparent" flags="wfNoBorder" name="TimerEditList" position="0,0" size="1280,720" title="Timer Editor">
 <!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="TimerEditList" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
-    <widget name="timerlist" rowSplit="26" iconMargin="5" satPosLeft="160" itemHeight="50" setFont="Regular;18" setEventNameFont="Regular;20" setServiceNameFont="Regular;20" position="45,80" size="766,550" backgroundColor="SevenFontBackground" enableWrapAround="1" transparent="1" />
-    <widget source="global.CurrentTime" render="Label" position="732,18" size="100,28" font="Regular;26" halign="right" backgroundColor="SevenFontBackground" transparent="1" valign="right" foregroundColor="SevenFont1">
-  <convert type="SevenHDClockToText">Default</convert>
-</widget>
-<panel name="template_menu_left_button" />
+    <widget name="timerlist" rowSplit="26" iconMargin="5" satPosLeft="160" itemHeight="50" setFont="Regular;18" setEventNameFont="Regular;20" setServiceNameFont="Regular;20" position="45,79" size="766,550" backgroundColor="SevenFontBackground" enableWrapAround="1" transparent="1" />
+<widget name="description" position="888,80" size="377,550" font="Regular2; 32" foregroundColor="SevenFont2" halign="center" backgroundColor="SevenFontBackground" valign="center" transparent="1" />
+
+<panel name="template_menu_left_right_button" />
     <panel name="template_colorkey_text" />
   </screen>
   <!-- TimerEntry -->

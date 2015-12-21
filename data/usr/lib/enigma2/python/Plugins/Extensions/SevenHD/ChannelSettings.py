@@ -42,8 +42,8 @@ class ChannelSettings(ConfigListScreen, Screen):
                          <widget name="blue" font="Regular; 20" foregroundColor="#000064c7" backgroundColor="#00000000" halign="left" valign="center" position="664,662" size="148,48" transparent="1" />
                          <widget name="config" position="18,72" size="816,575" scrollbarMode="showOnDemand" transparent="1" zPosition="1" backgroundColor="#00000000" />
                          <eLabel position="70,12" size="708,46" text="SevenHD" font="Regular; 35" valign="center" halign="center" transparent="1" backgroundColor="#00000000" foregroundColor="#00ffffff" name="," />
-                         <eLabel position="891,657" size="372,46" text="Thanks to http://www.gigablue-support.org/" font="Regular; 12" valign="center" halign="center" transparent="1" backgroundColor="#00000000" foregroundColor="#00ffffff" name="," />
                          <widget name="helperimage" position="891,274" size="372,209" zPosition="1" backgroundColor="#00000000" />
+                         <widget name="description" position="891,490" size="372,200" font="Regular; 26" valign="center" halign="center" transparent="1" backgroundColor="#00000000" foregroundColor="#00ffffff" />
                          <widget backgroundColor="#00000000" font="Regular2; 34" foregroundColor="#00ffffff" position="70,12" render="Label" size="708,46" source="Title" transparent="1" halign="center" valign="center" noWrap="1" />
                          <eLabel backgroundColor="#00000000" position="6,6" size="842,708" transparent="0" zPosition="-9" foregroundColor="#00ffffff" />
                          <eLabel backgroundColor="#00ffffff" position="6,6" size="842,2" zPosition="2" />
@@ -60,10 +60,16 @@ class ChannelSettings(ConfigListScreen, Screen):
                          <eLabel backgroundColor="#00ffffff" position="878,714" size="398,2" zPosition="2" />
                          <eLabel backgroundColor="#00ffffff" position="878,6" size="2,708" zPosition="2" />
                          <eLabel backgroundColor="#00ffffff" position="1274,6" size="2,708" zPosition="2" />
-                         <eLabel position="891,88" size="372,46" text="Version: """ + str(version) + """" font="Regular; 35" valign="center" halign="center" transparent="1" backgroundColor="#00000000" foregroundColor="#00ffffff" name="," />
+                         <widget source="session.CurrentService" render="Label" position="891,88" size="372,46" font="Regular2;35" halign="center" backgroundColor="#00000000" transparent="1" valign="center" foregroundColor="#00ffffff">
+                                 <convert type="SevenHDUpdate">Version</convert>
+                         </widget>
                          <widget source="session.CurrentService" render="Label" position="891,134" size="372,28" font="Regular;26" halign="center" backgroundColor="#00000000" transparent="1" valign="center" foregroundColor="#00B27708">
                                  <convert type="SevenHDUpdate">Update</convert>
                          </widget>
+                         <eLabel position="891,274" size="372,2" backgroundColor="#00ffffff" zPosition="5" />
+                         <eLabel position="891,481" size="372,2" backgroundColor="#00ffffff" zPosition="5" />
+                         <eLabel position="891,274" size="2,208" backgroundColor="#00ffffff" zPosition="5" />
+                         <eLabel position="1261,274" size="2,208" backgroundColor="#00ffffff" zPosition="5" />
                   </screen>
                """
 
@@ -74,6 +80,8 @@ class ChannelSettings(ConfigListScreen, Screen):
         self.PicLoad = ePicLoad()
         self["helperimage"] = Pixmap()
         self["blue"] = Label()
+        self["description"] = Label()
+        
         if config.plugins.SevenHD.grabdebug.value:
            self["blue"].setText('Screenshot')
            
@@ -107,96 +115,78 @@ class ChannelSettings(ConfigListScreen, Screen):
 
     def getMenuItemList(self):
         list = []
-        list.append(getConfigListEntry(_('__________________________________________ channelselection __________________________________________'), ))
-        list.append(getConfigListEntry(_("style"), config.plugins.SevenHD.ChannelSelectionStyle))
+        list.append(getConfigListEntry(_('___________________________channelselection___________________________________'), ))
+        list.append(getConfigListEntry(_("style"),                        config.plugins.SevenHD.ChannelSelectionStyle,      'Waehle den Stil der KanalListe',                                                              '1',        ''))
         ChannelSelectionStyle = config.plugins.SevenHD.ChannelSelectionStyle.value
         if ChannelSelectionStyle.startswith('channelselection-threecolumns') or ChannelSelectionStyle.endswith('2') or ChannelSelectionStyle.endswith('3'):
            pass
         else:
-           list.append(getConfigListEntry(_("prime time"), config.plugins.SevenHD.PrimeTimeTime, 'primetimetime'))
-        list.append(getConfigListEntry(_('_____________________________________________ background _____________________________________________'), ))
-        list.append(getConfigListEntry(_("color left"), config.plugins.SevenHD.ChannelBack1, 'colorleftcs'))
+           list.append(getConfigListEntry(_("prime time"),                config.plugins.SevenHD.PrimeTimeTime,              'Zeigt dir in der KanalListe die PrimeZeit an.',                                                '4',       'primetimetime'))
+        list.append(getConfigListEntry(_('_____________________________background________________________________________'), ))
+        list.append(getConfigListEntry(_("color left"),                   config.plugins.SevenHD.ChannelBack1,               'Stellt den Hintergrund der linken Spalte ein.',                                                '4',       'colorleftcs'))
         if ChannelSelectionStyle.startswith('channelselection-threecolumns'):
-           list.append(getConfigListEntry(_("color middle"), config.plugins.SevenHD.ChannelBack3, 'colormiddlecs'))
-        list.append(getConfigListEntry(_("color right"), config.plugins.SevenHD.ChannelBack2 ,'colorrightcs'))
-        list.append(getConfigListEntry(_('_____________________________________________ color lines ____________________________________________'), ))
-        list.append(getConfigListEntry(_("line"), config.plugins.SevenHD.ChannelLine, 'linecs'))
-        list.append(getConfigListEntry(_("border"), config.plugins.SevenHD.ChannelBorder, 'bordercs'))
+           list.append(getConfigListEntry(_("color middle"),              config.plugins.SevenHD.ChannelBack3,               'Stellt den Hinergrund der mittleren Spalte ein',                                               '4',       'colormiddlecs'))
+        list.append(getConfigListEntry(_("color right"),                  config.plugins.SevenHD.ChannelBack2,               'Stellt den Hintergrund der rechten Spalte ein.',                                               '4',       'colorrightcs'))
+        list.append(getConfigListEntry(_('_____________________________color lines_______________________________________'), ))
+        list.append(getConfigListEntry(_("line"),                         config.plugins.SevenHD.ChannelLine,                'Stellt die Farbe der Linie  ein.',                                                             '4',       'linecs'))
+        list.append(getConfigListEntry(_("border"),                       config.plugins.SevenHD.ChannelBorder,              'Stellt die Farbe des Rahmen ein.',                                                             '4',       'bordercs'))
         if ChannelSelectionStyle.endswith('2') or ChannelSelectionStyle.endswith('3'):
            pass
         else:
-           list.append(getConfigListEntry(_("progressbar"), config.plugins.SevenHD.ProgressCS, 'progresscs'))
+           list.append(getConfigListEntry(_("progressbar"),               config.plugins.SevenHD.ProgressCS,                 'Stellt die Farbe des Fortschrittsbalken ein.',                                                 '4',       'progresscs'))
         if ChannelSelectionStyle.endswith('2') or ChannelSelectionStyle.endswith('3'):
            pass
         else:
-           list.append(getConfigListEntry(_("progressbar line"), config.plugins.SevenHD.ProgressLineCS, 'progresslinecs'))
-        list.append(getConfigListEntry(_('__________________________________________ color description _________________________________________'), ))
-        list.append(getConfigListEntry(_("bouquet name"), config.plugins.SevenHD.ChannelColorBouquet, 'bouquetname'))
+           list.append(getConfigListEntry(_("progressbar line"),          config.plugins.SevenHD.ProgressLineCS,             'Stellt die Farbe der Linie unter dem Fortschrittsbalken ein.',                                 '4',       'progresslinecs'))
+        list.append(getConfigListEntry(_('_____________________________color description__________________________________'), ))
+        list.append(getConfigListEntry(_("bouquet name"),                 config.plugins.SevenHD.ChannelColorBouquet,        'Stellt die Farbe des Bouquetnamen ein. ',                                                      '4',       'bouquetname'))
         if not ChannelSelectionStyle.startswith('channelselection-twocolumns4'):
-           list.append(getConfigListEntry(_("program name"), config.plugins.SevenHD.ChannelColorProgram, 'programname'))
+           list.append(getConfigListEntry(_("program name"),              config.plugins.SevenHD.ChannelColorProgram,        'Stellt die Farbe des aktuellen Program ein.',                                                  '4',       'programname'))
         if not ChannelSelectionStyle.startswith('channelselection-twocolumns4'):
-           list.append(getConfigListEntry(_("next events"), config.plugins.SevenHD.ChannelColorNext, 'nextevents'))
-        list.append(getConfigListEntry(_("runtime"), config.plugins.SevenHD.ChannelColorRuntime, 'runtime'))
+           list.append(getConfigListEntry(_("next events"),               config.plugins.SevenHD.ChannelColorNext,           'Stellt die Farbe der naechsten Sendungen ein.',                                                '4',       'nextevents'))
+        list.append(getConfigListEntry(_("runtime"),                      config.plugins.SevenHD.ChannelColorRuntime,        'Stellt die Farbe der Laufzeit ein.',                                                           '4',       'runtime'))
         if ChannelSelectionStyle.startswith('channelselection-threecolumns') or ChannelSelectionStyle.endswith('2') or ChannelSelectionStyle.endswith('3'):
-           list.append(getConfigListEntry(_("channel name"), config.plugins.SevenHD.ChannelColorChannel, 'channelnamecs'))
+           list.append(getConfigListEntry(_("channel name"),              config.plugins.SevenHD.ChannelColorChannel,        'Stellt die Farbe des aktuellen Sender auf der linken Seite ein.',                              '4',       'channelnamecs'))
         if not ChannelSelectionStyle.startswith('channelselection-threecolumns'):
-           list.append(getConfigListEntry(_("time"), config.plugins.SevenHD.ChannelColorTimeCS, 'time'))
+           list.append(getConfigListEntry(_("time"),                      config.plugins.SevenHD.ChannelColorTimeCS,         'Stellt die Farbe der Zeit oben rechts ein.',                                                   '4',       'time'))
         if ChannelSelectionStyle.startswith('channelselection-threecolumns') or ChannelSelectionStyle.endswith('2') or ChannelSelectionStyle.endswith('3'):
            pass
         else:
-           list.append(getConfigListEntry(_("prime time"), config.plugins.SevenHD.ChannelColorPrimeTime, 'primetime'))
-        list.append(getConfigListEntry(_("program description now"), config.plugins.SevenHD.ChannelColorDesciption, 'descriptionnow'))
+           list.append(getConfigListEntry(_("prime time"),                config.plugins.SevenHD.ChannelColorPrimeTime,      'Stellt die Farbe der PrimeTime ein.',                                                          '4',       'primetime'))
+        list.append(getConfigListEntry(_("program description now"),      config.plugins.SevenHD.ChannelColorDesciption,     'Stellt die Farbe der aktuellen Sendung ein.',                                                  '4',       'descriptionnow'))
         if ChannelSelectionStyle.startswith('channelselection-threecolumns') or ChannelSelectionStyle.startswith('channelselection-twocolumns4'):
-           list.append(getConfigListEntry(_("program description next"), config.plugins.SevenHD.ChannelColorDesciptionNext, 'descriptionnext'))
+           list.append(getConfigListEntry(_("program description next"),  config.plugins.SevenHD.ChannelColorDesciptionNext, 'Stellt die Farbe der kommenden Sendung ein.',                                                  '4',       'descriptionnext'))
         if ChannelSelectionStyle.startswith('channelselection-twocolumns4'):
-           list.append(getConfigListEntry(_("program description later"), config.plugins.SevenHD.ChannelColorDesciptionLater, 'descriptionlater'))
-        list.append(getConfigListEntry(_("buttons"), config.plugins.SevenHD.ChannelColorButton, 'textbuttons'))
-        list.append(getConfigListEntry(_('______________________________________________ color list ____________________________________________'), ))
-        list.append(getConfigListEntry(_("channel name and number"), config.plugins.SevenHD.ChannelColorChannelName, 'channelnamelist'))
-        list.append(getConfigListEntry(_("program"), config.plugins.SevenHD.ChannelColorEvent, 'programlist'))
-        list.append(getConfigListEntry(_("progressbar"), config.plugins.SevenHD.ProgressListCS, 'progresslistcs'))
-        list.append(getConfigListEntry(_("progressbar border"), config.plugins.SevenHD.ProgressBorderCS, 'progressbordercs'))
+           list.append(getConfigListEntry(_("program description later"), config.plugins.SevenHD.ChannelColorDesciptionLater,'Stellt die Farbe der spaeter kommenden Sendungen ein.',                                        '4',       'descriptionlater'))
+        list.append(getConfigListEntry(_("buttons"),                      config.plugins.SevenHD.ChannelColorButton,         'Stellt die Farbe der Farbtastenbeschreibung ein.',                                             '4',       'textbuttons'))
+        list.append(getConfigListEntry(_('_____________________________color list_________________________________________'), ))
+        list.append(getConfigListEntry(_("channel name and number"),      config.plugins.SevenHD.ChannelColorChannelName,    'Stellt die Farbe der Sender ein.',                                                             '4',       'channelnamelist'))
+        list.append(getConfigListEntry(_("program"),                      config.plugins.SevenHD.ChannelColorEvent,          'Stellt die Farbe der Sendung ein.',                                                            '4',       'programlist'))
+        list.append(getConfigListEntry(_("progressbar"),                  config.plugins.SevenHD.ProgressListCS,             'Stellt die Farbe des Fortschrittsbalken ein.',                                                 '4',       'progresslistcs'))
+        list.append(getConfigListEntry(_("progressbar border"),           config.plugins.SevenHD.ProgressBorderCS,           'Stellt die Farbe des Fortschrittsbalken Rahmen ein.',                                          '4',       'progressbordercs'))
         return list
 
     def __selectionChanged(self):
         self["config"].setList(self.getMenuItemList())
 
     def GetPicturePath(self):
-        try:
-           returnValue = self["config"].getCurrent()[1].value
-	   #self.debug('\nRet_value[1]: ' + str(returnValue) + '\n')		
-           self.debug('\nvalue[1]: ' + str(int(config.plugins.SevenHD.PrimeTimeTime.value[0])) + '-' + str(int(config.plugins.SevenHD.PrimeTimeTime.value[1])) + '\n')
-           if returnValue.endswith('-top'):
-              path = MAIN_IMAGE_PATH + str("SIB1.jpg")
-           elif returnValue.endswith('-left'):
-              path = MAIN_IMAGE_PATH + str("SIB2.jpg")
-           elif returnValue.endswith('-full'):
-              path = MAIN_IMAGE_PATH + str("SIB3.jpg")
-           elif returnValue.endswith('-minitv'):
-              path = MAIN_IMAGE_PATH + str("SIB4.jpg")
-           else:
-              path = MAIN_IMAGE_PATH + str(returnValue) + str(".jpg")
-	   		
-           if fileExists(path):
-              return path
-           else:
-           ## colors
-              try:
-                 returnValue = self["config"].getCurrent()[2]
-                 path = MAIN_IMAGE_PATH + returnValue + str(".jpg")
-                 if fileExists(path):
-                    return path
-                 
-                 self.debug('1: Missing Picture: ' + str(path) + '\n')
-              except:
-                 self.debug('2: Missing Picture: ' + str(path) + '\n')
-
-        except:
-           returnValue = self["config"].getCurrent()[0]
-           self.debug('3: Missing Picture: ' + MAIN_IMAGE_PATH + str(returnValue) + '.jpg\n')
-           if returnValue == 'prime time' or returnValue == 'Prime Time':
-              return MAIN_IMAGE_PATH + str("primetime.jpg")
-           
+        returnValue = self["config"].getCurrent()[3]
+        self.debug('\nRet_value[3]: ' + str(returnValue))		
+           		
+        if returnValue == '4':
+           returnValue = self["config"].getCurrent()[int(returnValue)]
+        else:
+           returnValue = self["config"].getCurrent()[int(returnValue)].value
+        
+        self.debug('Ret_value[4]: ' + str(returnValue))   
+        path = MAIN_IMAGE_PATH + str(returnValue) + str(".jpg")
+        
+        self["description"].setText(self["config"].getCurrent()[2])
+        
+        if fileExists(path):
+           return path
+        else:
+           self.debug('Missing Picture: ' + str(path) + '\n')
            return MAIN_IMAGE_PATH + str("924938.jpg")
 
     def UpdatePicture(self):
@@ -263,10 +253,8 @@ class ChannelSettings(ConfigListScreen, Screen):
     def setInputToDefault(self, configItem):
         configItem.setValue(configItem.default)
 
-    def showInfo(self):
-        self.session.open(MessageBox, _("Information"), MessageBox.TYPE_INFO)
-
     def save(self):
+        
         if config.plugins.SevenHD.skin_mode.value > '3':
            if 'back' in config.plugins.SevenHD.ChannelBack1.value:
               self.setInputToDefault(config.plugins.SevenHD.ChannelBack1)

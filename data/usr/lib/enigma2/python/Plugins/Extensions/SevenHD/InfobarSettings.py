@@ -42,8 +42,8 @@ class InfobarSettings(ConfigListScreen, Screen):
                          <widget name="blue" font="Regular; 20" foregroundColor="#000064c7" backgroundColor="#00000000" halign="left" valign="center" position="664,662" size="148,48" transparent="1" />
                          <widget name="config" position="18,72" size="816,575" scrollbarMode="showOnDemand" transparent="1" zPosition="1" backgroundColor="#00000000" />
                          <eLabel position="70,12" size="708,46" text="SevenHD" font="Regular; 35" valign="center" halign="center" transparent="1" backgroundColor="#00000000" foregroundColor="#00ffffff" name="," />
-                         <eLabel position="891,657" size="372,46" text="Thanks to http://www.gigablue-support.org/" font="Regular; 12" valign="center" halign="center" transparent="1" backgroundColor="#00000000" foregroundColor="#00ffffff" name="," />
                          <widget name="helperimage" position="891,274" size="372,209" zPosition="1" backgroundColor="#00000000" />
+                         <widget name="description" position="891,490" size="372,200" font="Regular; 26" valign="center" halign="center" transparent="1" backgroundColor="#00000000" foregroundColor="#00ffffff" />
                          <widget backgroundColor="#00000000" font="Regular2; 34" foregroundColor="#00ffffff" position="70,12" render="Label" size="708,46" source="Title" transparent="1" halign="center" valign="center" noWrap="1" />
                          <eLabel backgroundColor="#00000000" position="6,6" size="842,708" transparent="0" zPosition="-9" foregroundColor="#00ffffff" />
                          <eLabel backgroundColor="#00ffffff" position="6,6" size="842,2" zPosition="2" />
@@ -60,10 +60,16 @@ class InfobarSettings(ConfigListScreen, Screen):
                          <eLabel backgroundColor="#00ffffff" position="878,714" size="398,2" zPosition="2" />
                          <eLabel backgroundColor="#00ffffff" position="878,6" size="2,708" zPosition="2" />
                          <eLabel backgroundColor="#00ffffff" position="1274,6" size="2,708" zPosition="2" />
-                         <eLabel position="891,88" size="372,46" text="Version: """ + str(version) + """" font="Regular; 35" valign="center" halign="center" transparent="1" backgroundColor="#00000000" foregroundColor="#00ffffff" name="," />
+                         <widget source="session.CurrentService" render="Label" position="891,88" size="372,46" font="Regular2;35" halign="center" backgroundColor="#00000000" transparent="1" valign="center" foregroundColor="#00ffffff">
+                                 <convert type="SevenHDUpdate">Version</convert>
+                         </widget>
                          <widget source="session.CurrentService" render="Label" position="891,134" size="372,28" font="Regular;26" halign="center" backgroundColor="#00000000" transparent="1" valign="center" foregroundColor="#00B27708">
                                  <convert type="SevenHDUpdate">Update</convert>
                          </widget>
+                         <eLabel position="891,274" size="372,2" backgroundColor="#00ffffff" zPosition="5" />
+                         <eLabel position="891,481" size="372,2" backgroundColor="#00ffffff" zPosition="5" />
+                         <eLabel position="891,274" size="2,208" backgroundColor="#00ffffff" zPosition="5" />
+                         <eLabel position="1261,274" size="2,208" backgroundColor="#00ffffff" zPosition="5" />
                   </screen>
                """
 
@@ -73,6 +79,7 @@ class InfobarSettings(ConfigListScreen, Screen):
         self.Scale = AVSwitch().getFramebufferScale()
         self.PicLoad = ePicLoad()
         self["helperimage"] = Pixmap()
+        self["description"] = Label()
         self["blue"] = Label()
         
         if config.plugins.SevenHD.grabdebug.value:
@@ -108,90 +115,83 @@ class InfobarSettings(ConfigListScreen, Screen):
 
     def getMenuItemList(self):
         list = []
-        list.append(getConfigListEntry(_('_______________________________________________ style ________________________________________________'), ))
-        list.append(getConfigListEntry(_("infobar"), config.plugins.SevenHD.InfobarStyle))
-        list.append(getConfigListEntry(_("second infobar"), config.plugins.SevenHD.SIB))
+        list.append(getConfigListEntry(_('_______________________________style___________________________________________'), ))
+        list.append(getConfigListEntry(_("infobar"),                 config.plugins.SevenHD.InfobarStyle,         'Waehle den Stil der Infobar.',                                                                          '1',       ''))
+        if config.plugins.SevenHD.SIB.value == '-top':
+           list.append(getConfigListEntry(_("second infobar"),          config.plugins.SevenHD.SIB,               'Waehle den Stil der zweiten Infobar',                                                                    '4',       'SIB1'))
+        if config.plugins.SevenHD.SIB.value == '-left':
+           list.append(getConfigListEntry(_("second infobar"),          config.plugins.SevenHD.SIB,               'Waehle den Stil der zweiten Infobar',                                                                    '4',       'SIB2'))
+        if config.plugins.SevenHD.SIB.value == '-full':
+           list.append(getConfigListEntry(_("second infobar"),          config.plugins.SevenHD.SIB,               'Waehle den Stil der zweiten Infobar',                                                                    '4',       'SIB3'))
+        if config.plugins.SevenHD.SIB.value == '-minitv':
+           list.append(getConfigListEntry(_("second infobar"),          config.plugins.SevenHD.SIB,               'Waehle den Stil der zweiten Infobar',                                                                    '4',       'SIB4'))
+        if config.plugins.SevenHD.SIB.value == '-right':
+           list.append(getConfigListEntry(_("second infobar"),          config.plugins.SevenHD.SIB,               'Waehle den Stil der zweiten Infobar',                                                                    '4',       'SIB5'))
         #list.append(getConfigListEntry(_("progress-/volumebar"), config.plugins.SevenHD.ProgressInfobar, 'ProgressInfobar'))
-        list.append(getConfigListEntry(_('_____________________________________________ background _____________________________________________'), ))
-        list.append(getConfigListEntry(_("color 1"), config.plugins.SevenHD.BackgroundIB1, 'Color1'))
-        list.append(getConfigListEntry(_("color 2"), config.plugins.SevenHD.BackgroundIB2, 'Color2'))
-        list.append(getConfigListEntry(_('_____________________________________________ color lines ____________________________________________'), ))
-        list.append(getConfigListEntry(_("line"), config.plugins.SevenHD.InfobarLine, 'InfobarLine'))
-        list.append(getConfigListEntry(_("border"), config.plugins.SevenHD.InfobarBorder, 'InfobarBorder'))
-        list.append(getConfigListEntry(_("progressbar"), config.plugins.SevenHD.ProgressIB, 'progressib'))
-        list.append(getConfigListEntry(_("progressbar line"), config.plugins.SevenHD.ProgressLineIB, 'progresslineib'))
-        list.append(getConfigListEntry(_('______________________________________________ color font ____________________________________________'), ))
-        list.append(getConfigListEntry(_("channelname"), config.plugins.SevenHD.InfobarChannelName, 'channelname'))
+        list.append(getConfigListEntry(_('_____________________________background________________________________________'), ))
+        list.append(getConfigListEntry(_("primary font"),                 config.plugins.SevenHD.BackgroundIB1,        'Stellt die Farbe der linken Seite sowie den unteren Bereich der Infobar ein.',                         '4',       'Color1'))
+        list.append(getConfigListEntry(_("secondary font"),                 config.plugins.SevenHD.BackgroundIB2,        'Stellt die Farbe der rechten Seite sowie den mittigen Bereich der Infobar ein.',                       '4',       'Color2'))
+        list.append(getConfigListEntry(_('_____________________________color lines_______________________________________'), ))
+        list.append(getConfigListEntry(_("line"),                    config.plugins.SevenHD.InfobarLine,          'Stellt die Farbe der Linie unter dem FortschrittsBalken in der Infobar ein.',                          '4',       'InfobarLine'))
+        list.append(getConfigListEntry(_("border"),                  config.plugins.SevenHD.InfobarBorder,        'Stellt die RahmenFarbe der Infobar ein.',                                                              '4',       'InfobarBorder'))
+        list.append(getConfigListEntry(_("progressbar"),             config.plugins.SevenHD.ProgressIB,           'Stellt die Farbe des Sendungsforschritt in der Infobar ein.',                                          '4',       'progressib'))
+        list.append(getConfigListEntry(_("progressbar line"),        config.plugins.SevenHD.ProgressLineIB,       'Stellt die Farbe der Linie unter dem FortschrittsBalken in der Infobar ein.',                          '4',       'progresslineib'))
+        list.append(getConfigListEntry(_('______________________________color font________________________________________'), ))
+        if config.plugins.SevenHD.InfobarChannelName.value == 'none':
+           list.append(getConfigListEntry(_("channelname"),             config.plugins.SevenHD.InfobarChannelName,'Auswahl zwischen der Anzeige Name, Nummer, Name und Nummer oder Aus, wenn die Infobar angezeigt wird.','4',       'none'))
+        else:
+           list.append(getConfigListEntry(_("channelname"),             config.plugins.SevenHD.InfobarChannelName,'Auswahl zwischen der Anzeige Name, Nummer, Name und Nummer oder Aus, wenn die Infobar angezeigt wird.','4',       'channelname'))
         if config.plugins.SevenHD.InfobarChannelName.value != 'none':
-           list.append(getConfigListEntry(_("color channelname"), config.plugins.SevenHD.FontCN, 'ColorCN'))
-        list.append(getConfigListEntry(_("now event"), config.plugins.SevenHD.NowEvent, 'NowEvent'))
-        list.append(getConfigListEntry(_("next event"), config.plugins.SevenHD.NextEvent, 'NextEvent'))
-        list.append(getConfigListEntry(_("indicate"), config.plugins.SevenHD.SNR, 'SNR'))
-        list.append(getConfigListEntry(_('________________________________________________ clock _______________________________________________'), ))
-        list.append(getConfigListEntry(_("style"), config.plugins.SevenHD.ClockStyle))
+           list.append(getConfigListEntry(_("color channelname"),    config.plugins.SevenHD.FontCN,               'Stellt die Farbe des Sendernamen ein.',                                                                '4',       'ColorCN'))
+        list.append(getConfigListEntry(_("now event"),               config.plugins.SevenHD.NowEvent,             'Stellt die Farbe der aktuellen Programmbeschreibung ein.',                                             '4',       'NowEvent'))
+        list.append(getConfigListEntry(_("next event"),              config.plugins.SevenHD.NextEvent,            'Stellt die Farbe der naechsten Programmbeschreibung ein.',                                             '4',       'NextEvent'))
+        list.append(getConfigListEntry(_("indicate"),                config.plugins.SevenHD.SNR,                  'Stellt die Farbe der Zusatzinfos (SNR, Videogroesse, ...) in der Infobar ein.',                        '4',       'snr'))
+        list.append(getConfigListEntry(_('_______________________________clock___________________________________________'), ))
+        list.append(getConfigListEntry(_("style"),                   config.plugins.SevenHD.ClockStyle,           'Waehle deinen Uhr Style.',                                                                             '1',       ''))
         if config.plugins.SevenHD.ClockStyle.value == "clock-analog":
-	   list.append(getConfigListEntry(_("color clock"), config.plugins.SevenHD.AnalogStyle, 'Analog'))
-           list.append(getConfigListEntry(_("color date"), config.plugins.SevenHD.ClockDate, 'ClockDate'))
-           list.append(getConfigListEntry(_("color pointer hour"), config.plugins.SevenHD.ClockTimeh, 'ClockTimeh'))
-	   list.append(getConfigListEntry(_("color pointer minute"), config.plugins.SevenHD.ClockTimem, 'ClockTimem'))
-	   list.append(getConfigListEntry(_("color pointer second"), config.plugins.SevenHD.ClockTimes, 'ClockTimes'))
+	   list.append(getConfigListEntry(_("color clock"),          config.plugins.SevenHD.AnalogStyle,          'Stellt die Farbe vom Ziffernblatt ein.',                                                               '4',       'Analog'))
+           list.append(getConfigListEntry(_("color date"),           config.plugins.SevenHD.ClockDate,            'Stellt die Farbe des Datums ein.',                                                                     '4',       'ClockDate'))
+           list.append(getConfigListEntry(_("color pointer hour"),   config.plugins.SevenHD.ClockTimeh,           'Stellt die Farbe des Stunden Zeiger ein.',                                                             '4',       'ClockTimeh'))
+	   list.append(getConfigListEntry(_("color pointer minute"), config.plugins.SevenHD.ClockTimem,           'Stellt die Farbe des Minuten Zeiger ein.',                                                             '4',       'ClockTimem'))
+	   list.append(getConfigListEntry(_("color pointer second"), config.plugins.SevenHD.ClockTimes,           'Stellt die Farbe des Sekunden Zeiger ein.',                                                            '4',       'ClockTimes'))
         if config.plugins.SevenHD.ClockStyle.value == "clock-standard" or config.plugins.SevenHD.ClockStyle.value == "clock-seconds":
-	   list.append(getConfigListEntry(_("color time"), config.plugins.SevenHD.ClockTime, 'ClockTime'))
-	   list.append(getConfigListEntry(_("color date"), config.plugins.SevenHD.ClockDate, 'ClockDate'))
+	   list.append(getConfigListEntry(_("color time"),           config.plugins.SevenHD.ClockTime,            'Stellt die Farbe der Zeit ein.',                                                                       '4',       'ClockTime'))
+	   list.append(getConfigListEntry(_("color date"),           config.plugins.SevenHD.ClockDate,            'Stellt die Farbe des Datum ein.',                                                                      '4',       'ClockDate'))
         if config.plugins.SevenHD.ClockStyle.value == "clock-weekday":
-	   list.append(getConfigListEntry(_("color time"), config.plugins.SevenHD.ClockTime, 'ClockTime'))
-	   list.append(getConfigListEntry(_("color date"), config.plugins.SevenHD.ClockDate, 'ClockDate'))
-	   list.append(getConfigListEntry(_("color weekday"), config.plugins.SevenHD.ClockWeek, 'ClockWeek'))
+	   list.append(getConfigListEntry(_("color time"),           config.plugins.SevenHD.ClockTime,            'Stellt die Farbe der Zeit ein.',                                                                       '4',       'ClockTime'))
+	   list.append(getConfigListEntry(_("color date"),           config.plugins.SevenHD.ClockDate,            'Stellt die Farbe des Datum ein.',                                                                      '4',       'ClockDate'))
+	   list.append(getConfigListEntry(_("color weekday"),        config.plugins.SevenHD.ClockWeek,            'Stellt die Farbe der Woche ein.',                                                                      '4',       'ClockWeek'))
         if config.plugins.SevenHD.ClockStyle.value == "clock-weather" or config.plugins.SevenHD.ClockStyle.value == "clock-weather-meteo":
-	   list.append(getConfigListEntry(_("color time"), config.plugins.SevenHD.ClockTime, 'ClockTime'))
-	   list.append(getConfigListEntry(_("color date"), config.plugins.SevenHD.ClockDate, 'ClockDate'))
-	   list.append(getConfigListEntry(_("color weather"), config.plugins.SevenHD.ClockWeather, 'ClockWeather'))
+	   list.append(getConfigListEntry(_("color time"),           config.plugins.SevenHD.ClockTime,            'Stellt die Farbe der Zeit ein.',                                                                       '4',       'ClockTime'))
+	   list.append(getConfigListEntry(_("color date"),           config.plugins.SevenHD.ClockDate,            'Stellt die Farbe des Datum ein.',                                                                      '4',       'ClockDate'))
+	   list.append(getConfigListEntry(_("color weather"),        config.plugins.SevenHD.ClockWeather,         'Stellt die Farbe von der Temperatur ein.',                                                             '4',       'ClockWeather'))
         if config.plugins.SevenHD.ClockStyle.value == "clock-android":
-	   list.append(getConfigListEntry(_("color date"), config.plugins.SevenHD.ClockDate, 'ClockDate'))
+	   list.append(getConfigListEntry(_("color date"),           config.plugins.SevenHD.ClockDate,            'Stellt die Farbe des Datum ein.',                                                                      '4',       'ClockDate'))
         return list
 
     def __selectionChanged(self):
         self["config"].setList(self.getMenuItemList())
 
     def GetPicturePath(self):
-        try:
-           returnValue = self["config"].getCurrent()[1].value
-	   self.debug('\nRet_value[1]: ' + str(returnValue) + '\n')		
+        returnValue = self["config"].getCurrent()[3]
+        self.debug('\nRet_value[3]: ' + str(returnValue))		
            		
-           if returnValue.endswith('-top'):
-              path = MAIN_IMAGE_PATH + str("SIB1.jpg")
-           elif returnValue.endswith('-left'):
-              path = MAIN_IMAGE_PATH + str("SIB2.jpg")
-           elif returnValue.endswith('-full'):
-              path = MAIN_IMAGE_PATH + str("SIB3.jpg")
-           elif returnValue.endswith('-minitv'):
-              path = MAIN_IMAGE_PATH + str("SIB4.jpg")
-           elif returnValue.endswith('-right'):
-              path = MAIN_IMAGE_PATH + str("SIB5.jpg")
-           else:
-              path = MAIN_IMAGE_PATH + str(returnValue) + str(".jpg")
-	   		
-           if fileExists(path):
-              return path
-           else:
-           ## colors
-              try:
-                 returnValue = self["config"].getCurrent()[2]
-                 path = MAIN_IMAGE_PATH + returnValue + str(".jpg")
-                 if fileExists(path):
-                    return path
-                 
-                 self.debug('1: Missing Picture: ' + str(path) + '\n')
-              except:
-                    self.debug('2: Missing Picture: ' + str(path) + '\n')
-                    
-        except:
-           returnValue = self["config"].getCurrent()[0]
-           
-           self.debug('3: Missing Picture: ' + MAIN_IMAGE_PATH + str(returnValue) + '.jpg\n')
-           ## weather
-           return MAIN_IMAGE_PATH + str("924938.jpg")
-
+        if returnValue == '4':
+           returnValue = self["config"].getCurrent()[int(returnValue)]
+        else:
+           returnValue = self["config"].getCurrent()[int(returnValue)].value
+        
+        self.debug('Ret_value[4]: ' + str(returnValue))   
+        path = MAIN_IMAGE_PATH + str(returnValue) + str(".jpg")
+        
+        self["description"].setText(self["config"].getCurrent()[2])
+        
+        if fileExists(path):
+           return path
+        else:
+           self.debug('Missing Picture: ' + str(path) + '\n')
+           return MAIN_IMAGE_PATH + str("924938.jpg")		
+        
     def UpdatePicture(self):
         self.PicLoad.PictureData.get().append(self.DecodePicture)
         self.onLayoutFinish.append(self.ShowPicture)
@@ -253,10 +253,8 @@ class InfobarSettings(ConfigListScreen, Screen):
     def setInputToDefault(self, configItem):
         configItem.setValue(configItem.default)
 
-    def showInfo(self):
-        self.session.open(MessageBox, _("Information"), MessageBox.TYPE_INFO)
-
     def save(self):
+        
         if config.plugins.SevenHD.skin_mode.value > '3':
            if 'back' in config.plugins.SevenHD.BackgroundIB1.value:
               self.setInputToDefault(config.plugins.SevenHD.BackgroundIB1)
@@ -264,6 +262,7 @@ class InfobarSettings(ConfigListScreen, Screen):
            if 'back' in config.plugins.SevenHD.BackgroundIB2.value:
               self.setInputToDefault(config.plugins.SevenHD.BackgroundIB2)
               self.session.open(MessageBox, _('Sorry, only Colors allowed.'), MessageBox.TYPE_INFO)
+        
         for x in self["config"].list:
             if len(x) > 1:
                 x[1].save()

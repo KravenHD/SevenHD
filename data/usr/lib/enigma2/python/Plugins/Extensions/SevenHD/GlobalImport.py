@@ -1,7 +1,13 @@
-version = '3.6.30'
+#version = '3.6.42'
 import os
+try:
+   opkg_info = os.popen("opkg list-installed enigma2-plugin-skins-sevenhd | cut -d ' ' -f3").read()
+   version = str(opkg_info.strip().split('+')[0])
+except:
+   version = '3.6.40'
 import re
 import time
+import math
 import urllib
 import socket
 import gettext
@@ -40,6 +46,9 @@ from Components.Console import Console as eConsole
 from Components.Language import language
 from os import environ, listdir, remove, rename, system, popen
 from shutil import move, copy, rmtree, copytree
+from PIL import Image
+from PIL import ImageFont
+from PIL import ImageDraw 
 from skin import parseColor
 from urllib import urlencode
 from urllib2 import urlopen, URLError
@@ -48,13 +57,27 @@ from enigma import ePicLoad, getDesktop, eConsoleAppContainer, eListboxPythonMul
 from Tools.BoundFunction import boundFunction
 from Tools.Directories import fileExists, resolveFilename, SCOPE_LANGUAGE, SCOPE_PLUGINS
 ################################################################################################################################################################
-MAIN_IMAGE_PATH = '/usr/lib/enigma2/python/Plugins/Extensions/SevenHD/images/'
-MAIN_DATA_PATH = "/usr/lib/enigma2/python/Plugins/Extensions/SevenHD/data/"
+MAIN_PLUGIN_PATH = "/usr/lib/enigma2/python/Plugins/Extensions/SevenHD/"
+MAIN_IMAGE_PATH = MAIN_PLUGIN_PATH + "images/"
+MAIN_DATA_PATH = MAIN_PLUGIN_PATH + "data/"
 MAIN_SKIN_PATH = "/usr/share/enigma2/SevenHD/"
 PLUGIN_PATH = "/usr/lib/enigma2/python/Plugins/"
-FILE = "/usr/share/enigma2/SevenHD/skin.xml"
+FILE = MAIN_SKIN_PATH + "skin.xml"
+DEV_MODE = MAIN_PLUGIN_PATH + "dev_mode"
 TMPFILE = FILE + ".tmp"
 XML = ".xml"
+CREATOR = 'openATV'
+try:
+   image = os.popen('cat /etc/image-version').read()
+   if 'creator=OpenMips' in image: 
+      CREATOR = 'OpenMips'
+except:
+   try:
+      image = os.popen('cat /etc/motd').read()
+      if 'HDMU' in image: 
+         CREATOR = 'OpenMips'
+   except:
+         CREATOR = 'unknow'
 #######################################################################
 lang = language.getLanguage()
 environ["LANGUAGE"] = lang[:2]
@@ -131,9 +154,28 @@ config.plugins.SevenHD.skin_mode_x = ConfigInteger(default = 1280, limits=(720, 
 config.plugins.SevenHD.skin_mode_y = ConfigInteger(default = 720, limits=(720, 9999))
 config.plugins.SevenHD.old_skin_mode = ConfigText(default = '1') 
 ###########################################
-config.plugins.SevenHD.FontStyle = ConfigSelection(default="noto", choices = [
-				("Noto", _("NotoSans-Regular"))
-				])
+config.plugins.SevenHD.systemfonts = ConfigYesNo(default = False) 
+FontList = []
+FontList.append(("noto", _("NotoSans (Standard)")))
+FontList.append(("handel", _("HandelGotD")))
+FontList.append(("campton", _("Campton")))
+FontList.append(("proxima", _("Proxima Nova")))
+FontList.append(("opensans", _("OpenSans")))
+# todo skip Fonts from above
+USE_FONT = 0
+if fileExists("/etc/enigma2/SystemFont"):
+   USE_FONT = 1
+   if os.path.exists(MAIN_SKIN_PATH + 'fonts'):
+      USE_FONT = 2
+      FontsDir = os.listdir(MAIN_SKIN_PATH + 'fonts')
+      for font in FontsDir:
+          if font.endswith('.otf') or font.endswith('.ttf'):
+             FontList.append(("%s?systemfont" % font, _("%s (SystemFont)" % font))) 
+config.plugins.SevenHD.FontStyle_1 = ConfigSelection(default="noto", choices = FontList)
+config.plugins.SevenHD.FontStyle_2 = ConfigSelection(default="noto", choices = FontList)
+
+config.plugins.SevenHD.FontStyleHeight_1 = ConfigSelectionNumber(default = 95, stepwidth = 1, min = 0, max = 120, wraparound = True)
+config.plugins.SevenHD.FontStyleHeight_2 = ConfigSelectionNumber(default = 95, stepwidth = 1, min = 0, max = 120, wraparound = True)
 
 config.plugins.SevenHD.Header = ConfigSelection(default="header-seven", choices = [
 				("header-seven", _("SevenHD"))
@@ -389,7 +431,9 @@ config.plugins.SevenHD.BackgroundIB2 = ConfigSelection(default="00000000", choic
 
 config.plugins.SevenHD.InfobarLine = ConfigSelection(default="00ffffff", choices = ColorList)
 
-config.plugins.SevenHD.InfobarBorder = ConfigSelection(default="00ffffff", choices = ColorList)
+BorderList = [("ff000000", _("off"))]
+BorderList = ColorList + BorderList
+config.plugins.SevenHD.InfobarBorder = ConfigSelection(default="00ffffff", choices = BorderList)
 
 config.plugins.SevenHD.InfobarChannelName = ConfigSelection(default="none", choices = [
 				("none", _("off")),
@@ -447,23 +491,53 @@ config.plugins.SevenHD.WeatherStyle = ConfigSelection(default="none", choices = 
 				("weather-small", _("small"))
 				])
 				
+config.plugins.SevenHD.weather_language = ConfigSelection(default="de", choices = [
+				("de", _("Deutsch")),
+                                ("en", _("English")),
+				("ru", _("Russian")),
+				("it", _("Italian")),
+				("es", _("Spanish (es)")),
+				("sp", _("Spanish (sp)")),
+				("uk", _("Ukrainian (uk)")),
+				("ua", _("Ukrainian (ua)")),
+				("pt", _("Portuguese")),
+				("ro", _("Romanian")),
+				("pl", _("Polish")),
+                                ("fi", _("Finnish")),
+				("nl", _("Dutch")),
+				("fr", _("French")),
+				("bg", _("Bulgarian")),
+				("sv", _("Swedish (sv)")),
+				("se", _("Swedish (se)")),
+				("zh_tw", _("Chinese Traditional")),
+				("zh", _("Chinese Simplified (zh)")),
+				("zh_cn", _("Chinese Simplified (zh_cn)")),
+				("tr", _("Turkish")),
+                                ("hr", _("Croatian")),
+				("ca", _("Catalan"))
+                                ])
+				
 config.plugins.SevenHD.refreshInterval = ConfigSelectionNumber(0, 480, 15, default = 15, wraparound = True)
 
 config.plugins.SevenHD.AutoWoeID = ConfigYesNo(default= True)
 
 config.plugins.SevenHD.ClockWeather = ConfigSelection(default="00ffffff", choices = ColorList)
 
+config.plugins.SevenHD.weather_cityname = ConfigText(default = 'N/A')
+
 config.plugins.SevenHD.weather_city = ConfigNumber(default="671072")
-config.plugins.SevenHD.AutoWoeIDServer = ConfigSelection(default="1", choices = [
-				("1", _("Server 1")),
-				("2", _("Server 2"))
+                                                                  
+config.plugins.SevenHD.weather_lat_lon = ConfigText(default = 'lat=51.3452&lon=12.38594&units=metric&lang=de') 
+
+config.plugins.SevenHD.AutoWoeIDServer = ConfigSelection(default="openweathermap", choices = [
+				("yahoo", _("Yahoo")),
+				("openweathermap", _("OpenWeatherMap"))
 				])
 
 config.plugins.SevenHD.WeatherView = ConfigSelection(default="icon", choices = [
 				("icon", _("Icon")),
 				("meteo", _("Meteo"))
 				])
-				
 
 config.plugins.SevenHD.MeteoColor = ConfigSelection(default="00ffffff", choices = ColorList)
 
@@ -597,6 +671,8 @@ config.plugins.SevenHD.grabdebug = ConfigYesNo(default= False)
 
 myConfigList = [('config.plugins.SevenHD.Image.value = "' + str(config.plugins.SevenHD.Image.value) + '"'),
                 ('config.plugins.SevenHD.ButtonStyle.value = "' + str(config.plugins.SevenHD.ButtonStyle.value) + '"'),
+                ('config.plugins.SevenHD.FontStyle_1.value = "' + str(config.plugins.SevenHD.FontStyle_1.value) + '"'),
+                ('config.plugins.SevenHD.FontStyle_2.value = "' + str(config.plugins.SevenHD.FontStyle_2.value) + '"'),
                 ('config.plugins.SevenHD.RunningText.value = "' + str(config.plugins.SevenHD.RunningText.value) + '"'),
                 ('config.plugins.SevenHD.Startdelay.value = "' + str(config.plugins.SevenHD.Startdelay.value) + '"'),
                 ('config.plugins.SevenHD.Steptime.value = "' + str(config.plugins.SevenHD.Steptime.value) + '"'),

@@ -42,8 +42,8 @@ class MainSettings(ConfigListScreen, Screen):
                          <widget name="blue" font="Regular; 20" foregroundColor="#000064c7" backgroundColor="#00000000" halign="left" valign="center" position="664,662" size="148,48" transparent="1" />
                          <widget name="config" position="18,72" size="816,575" scrollbarMode="showOnDemand" transparent="1" zPosition="1" backgroundColor="#00000000" />
                          <eLabel position="70,12" size="708,46" text="SevenHD" font="Regular; 35" valign="center" halign="center" transparent="1" backgroundColor="#00000000" foregroundColor="#00ffffff" name="," />
-                         <eLabel position="891,657" size="372,46" text="Thanks to http://www.gigablue-support.org/" font="Regular; 12" valign="center" halign="center" transparent="1" backgroundColor="#00000000" foregroundColor="#00ffffff" name="," />
                          <widget name="helperimage" position="891,274" size="372,209" zPosition="1" backgroundColor="#00000000" />
+                         <widget name="description" position="891,490" size="372,200" font="Regular; 26" valign="center" halign="center" transparent="1" backgroundColor="#00000000" foregroundColor="#00ffffff" />
                          <widget backgroundColor="#00000000" font="Regular2; 34" foregroundColor="#00ffffff" position="70,12" render="Label" size="708,46" source="Title" transparent="1" halign="center" valign="center" noWrap="1" />
                          <eLabel backgroundColor="#00000000" position="6,6" size="842,708" transparent="0" zPosition="-9" foregroundColor="#00ffffff" />
                          <eLabel backgroundColor="#00ffffff" position="6,6" size="842,2" zPosition="2" />
@@ -60,10 +60,16 @@ class MainSettings(ConfigListScreen, Screen):
                          <eLabel backgroundColor="#00ffffff" position="878,714" size="398,2" zPosition="2" />
                          <eLabel backgroundColor="#00ffffff" position="878,6" size="2,708" zPosition="2" />
                          <eLabel backgroundColor="#00ffffff" position="1274,6" size="2,708" zPosition="2" />
-                         <eLabel position="891,88" size="372,46" text="Version: """ + str(version) + """" font="Regular; 35" valign="center" halign="center" transparent="1" backgroundColor="#00000000" foregroundColor="#00ffffff" name="," />
+                         <widget source="session.CurrentService" render="Label" position="891,88" size="372,46" font="Regular2;35" halign="center" backgroundColor="#00000000" transparent="1" valign="center" foregroundColor="#00ffffff">
+                                 <convert type="SevenHDUpdate">Version</convert>
+                         </widget>
                          <widget source="session.CurrentService" render="Label" position="891,134" size="372,28" font="Regular;26" halign="center" backgroundColor="#00000000" transparent="1" valign="center" foregroundColor="#00B27708">
                                  <convert type="SevenHDUpdate">Update</convert>
                          </widget>
+                         <eLabel position="891,274" size="372,2" backgroundColor="#00ffffff" zPosition="5" />
+                         <eLabel position="891,481" size="372,2" backgroundColor="#00ffffff" zPosition="5" />
+                         <eLabel position="891,274" size="2,208" backgroundColor="#00ffffff" zPosition="5" />
+                         <eLabel position="1261,274" size="2,208" backgroundColor="#00ffffff" zPosition="5" />
                   </screen>
                """
 
@@ -73,6 +79,7 @@ class MainSettings(ConfigListScreen, Screen):
         self.Scale = AVSwitch().getFramebufferScale()
         self.PicLoad = ePicLoad()
         self["helperimage"] = Pixmap()
+        self["description"] = Label()
         self["blue"] = Label()
         
         if config.plugins.SevenHD.grabdebug.value:
@@ -103,118 +110,62 @@ class MainSettings(ConfigListScreen, Screen):
             "blue": self.grab_png,
             "cancel": self.exit
         }, -1)
-        self.creator = 'openATV'
-        try:
-           image = os.popen('cat /etc/image-version').read()
-           if 'creator=OpenMips' in image: 
-              self.creator = 'OpenMips'
-        except:
-           try:
-              image = os.popen('cat /etc/motd').read()
-              if 'HDMU' in image: 
-                 self.creator = 'OpenMips'
-           except:
-              self.creator = 'unknow'
-        self.debug('Image-Type: ' + str(self.creator) + '\n')
         
         self.onLayoutFinish.append(self.UpdatePicture)
-
+        
     def getMenuItemList(self):
         list = [] 
-        list.append(getConfigListEntry(_('_______________________________________ global system settings _______________________________________'), ))
-        list.append(getConfigListEntry(_("image"), config.plugins.SevenHD.Image, 'IMAGE'))
-        list.append(getConfigListEntry(_("skinmode"), config.plugins.SevenHD.skin_mode, 'SKIN_MODE'))
+        list.append(getConfigListEntry(_('_____________________________global system settings________________________________________'), ))
+        list.append(getConfigListEntry(_("image"),                    config.plugins.SevenHD.Image,                     'Diese Einstellung spezifiziert dein Image.',                                        '4',                'IMAGE'))
+        list.append(getConfigListEntry(_("skinmode"),                 config.plugins.SevenHD.skin_mode,                 'Hier kannst du die Afloessung zwischen HD, FHD und UHD wechseln.',                                   '4',                'SKIN_MODE'))
         if config.plugins.SevenHD.skin_mode.value == '7':
-           list.append(getConfigListEntry(_("X Resolution"), config.plugins.SevenHD.skin_mode_x, 'x_resolution'))
-           list.append(getConfigListEntry(_("Y Resolution"), config.plugins.SevenHD.skin_mode_y, 'y_resolution'))
-        list.append(getConfigListEntry(_("buttons"), config.plugins.SevenHD.ButtonStyle, 'Button'))
-        list.append(getConfigListEntry(_("plugin icons"), config.plugins.SevenHD.IconStyle, 'Icons'))
-        list.append(getConfigListEntry(_("volume style"), config.plugins.SevenHD.VolumeStyle))
-        list.append(getConfigListEntry(_("volumebar"), config.plugins.SevenHD.ProgressVol, 'progressvol'))
-        list.append(getConfigListEntry(_('_____________________________________________running text ____________________________________________'), ))
-        list.append(getConfigListEntry(_("activate"), config.plugins.SevenHD.RunningText, 'RunningText'))
+           list.append(getConfigListEntry(_("X Resolution"),          config.plugins.SevenHD.skin_mode_x,               'Stell hier die Breite ein.',                                                        '4',                'x_resolution'))
+           list.append(getConfigListEntry(_("Y Resolution"),          config.plugins.SevenHD.skin_mode_y,               'Stell hier die Hoehe ein.',                                                         '4',                'y_resolution'))
+        list.append(getConfigListEntry(_("buttons"),                  config.plugins.SevenHD.ButtonStyle,               'Stellt die Farbe der Icons in der Infobar und Menu ein.',                           '4',                'Button'))
+        list.append(getConfigListEntry(_("plugin icons"),             config.plugins.SevenHD.IconStyle,                 'Stellt die Farbe der [+] und | im PluginBrowser sowie NetzwerkBrowser ein.',        '4',                'Icons'))
+        list.append(getConfigListEntry(_("volume style"),             config.plugins.SevenHD.VolumeStyle,               'Aendert die Darstellung der Volume Anzeige.',                                       '1',                ''))
+        list.append(getConfigListEntry(_("volumebar"),                config.plugins.SevenHD.ProgressVol,               'Stellt die Farbe der Volume Anzeige ein.',                                          '4',                'progressvol'))
+        list.append(getConfigListEntry(_('_____________________________________font__________________________________________________'), ))
+        if config.plugins.SevenHD.systemfonts.value:
+           list.append(getConfigListEntry(_("use systemfonts"),       config.plugins.SevenHD.systemfonts,               'Wenn JA dann kannst du alle SystemFonts beim naechsten PluginStart nutzen.',        '4',                'True'))
+        else:
+           list.append(getConfigListEntry(_("use systemfonts"),       config.plugins.SevenHD.systemfonts,               'Wenn JA dann kannst du alle SystemFonts beim naechsten PluginStart nutzen.',        '4',                'none'))
+        list.append(getConfigListEntry(_("primary font style"),             config.plugins.SevenHD.FontStyle_1,               'Waehle hier die primäre Schrift aus.',                                        '4',                'fontpreview'))
+        list.append(getConfigListEntry(_("primary font height in %"), config.plugins.SevenHD.FontStyleHeight_1,         'Stellt die Groesse der primären Schrift ein.',                                        '4',                'fontheight'))
+        list.append(getConfigListEntry(_("secondary font style"),             config.plugins.SevenHD.FontStyle_2,               'Waehle hier die sekundäre Schrift aus.',                                      '4',                'fontpreview'))
+        list.append(getConfigListEntry(_("secondary font height in %"), config.plugins.SevenHD.FontStyleHeight_2,         'Stellt die Groesse der sekundären Schrift ein.',                                          '4',                'fontheight'))
+        list.append(getConfigListEntry(_('__________________________________running text____________________________________________'), ))
+        list.append(getConfigListEntry(_("activate"),                 config.plugins.SevenHD.RunningText,               'Laesst die Schrift scrollen oder schreiben.',                                       '1',                'RunningText'))
         if config.plugins.SevenHD.RunningText.value == 'running':
-           list.append(getConfigListEntry(_("startdelay"), config.plugins.SevenHD.Startdelay, 'Delay'))
-           list.append(getConfigListEntry(_("steptime"), config.plugins.SevenHD.Steptime, 'Delay'))
-        list.append(getConfigListEntry(_('_____________________________________________transparency ____________________________________________'), ))
-        list.append(getConfigListEntry(_("main window"), config.plugins.SevenHD.BackgroundColorTrans))
-        list.append(getConfigListEntry(_("right window"), config.plugins.SevenHD.BackgroundRightColorTrans))
-        list.append(getConfigListEntry(_('_____________________________________________ autoupdate _____________________________________________'), ))
-        list.append(getConfigListEntry(_("activate"), config.plugins.SevenHD.AutoUpdate))
-        list.append(getConfigListEntry(_("autoupdate infobar info"), config.plugins.SevenHD.AutoUpdateInfo))
-        list.append(getConfigListEntry(_("autoupdate plugin startinfo"), config.plugins.SevenHD.AutoUpdatePluginStart))
-        list.append(getConfigListEntry(_('______________________________________________ plugins _______________________________________________'), ))
-        list.append(getConfigListEntry(_("Movie Selection"), config.plugins.SevenHD.MovieSelectionStyle))
-        if not fileExists(PLUGIN_PATH + "/Extensions/EnhancedMovieCenter/plugin.pyo"):
-           list.append(getConfigListEntry(_('{:<114}{:>1}'.format('EnhancedMovieCenter','not installed')), ))
-        else:   
-           list.append(getConfigListEntry(_("EMC"), config.plugins.SevenHD.EMCStyle))
-           config.EMC.skin_able.value = True
-           config.EMC.skin_able.save()
-        if config.plugins.SevenHD.NumberZapExtImport.value:
-           if fileExists(PLUGIN_PATH + "/SystemPlugins/NumberZapExt/NumberZapExt.pyo"):
-              list.append(getConfigListEntry(_("ExtNumberZap"), config.plugins.SevenHD.NumberZapExt))
-           else:
-              list.append(getConfigListEntry(_('{:<121}{:>1}'.format('ExtNumberZap','not installed')), ))                   
-        else:
-           list.append(getConfigListEntry(_('{:<121}{:>1}'.format('ExtNumberZap','not installed')), ))
-           
-        if not fileExists(PLUGIN_PATH + "/Extensions/CoolTVGuide/plugin.pyo"):
-           list.append(getConfigListEntry(_('{:<124}{:>1}'.format('CoolTVGuide','not installed')), ))
-        else:
-           list.append(getConfigListEntry(_("CoolTVGuide"), config.plugins.SevenHD.CoolTVGuide))
+           list.append(getConfigListEntry(_("startdelay"),            config.plugins.SevenHD.Startdelay,                'Stellt die Startzeit ein nach wieviel Sek. der Text anfangen soll sich zu bewegen.','4',                'Delay'))
+           list.append(getConfigListEntry(_("steptime"),              config.plugins.SevenHD.Steptime,                  'Stellt die Laufgeschwindigkeit ein.',                                               '4',                'Delay'))
+        list.append(getConfigListEntry(_('__________________________________transparency_____________________________________________'), ))
+        list.append(getConfigListEntry(_("main window"),              config.plugins.SevenHD.BackgroundColorTrans,      'Stellt die Transparenz des linken Fenster ein.',                                    '1',                ''))
+        list.append(getConfigListEntry(_("right window"),             config.plugins.SevenHD.BackgroundRightColorTrans, 'Stellt die Transparenz des rechten Fenster ein.',                                   '1',                ''))
+        
         return list
 
     def __selectionChanged(self):
         self["config"].setList(self.getMenuItemList())
 
     def GetPicturePath(self):
-        try:
-           returnValue = self["config"].getCurrent()[1].value
-	   self.debug('\nRet_value[1]: ' + str(returnValue) + '\n')		
+        returnValue = self["config"].getCurrent()[3]
+        self.debug('\nRet_value[3]: ' + str(returnValue))		
            		
-           if returnValue.endswith('-top'):
-              path = MAIN_IMAGE_PATH + str("SIB1.jpg")
-           elif returnValue.endswith('-left'):
-              path = MAIN_IMAGE_PATH + str("SIB2.jpg")
-           elif returnValue.endswith('-full'):
-              path = MAIN_IMAGE_PATH + str("SIB3.jpg")
-           elif returnValue.endswith('-minitv'):
-              path = MAIN_IMAGE_PATH + str("SIB4.jpg")
-           else:
-              path = MAIN_IMAGE_PATH + str(returnValue) + str(".jpg")
-	   		
-           if fileExists(path):
-              return path
-           else:
-           ## update
-              try:
-                 returnValue = self["config"].getCurrent()[2]
-                 path = MAIN_IMAGE_PATH + returnValue + str(".jpg")
-                 if fileExists(path):
-                    return path
-                 
-                 self.debug('1: Missing Picture: ' + str(path) + '\n')
-              except:
-                    self.debug('2: Missing Picture: ' + str(path) + '\n')
-                    
-        except:
-           returnValue = self["config"].getCurrent()[0]
-           
-           if returnValue == 'activate' or returnValue == 'Aktivieren' and config.plugins.SevenHD.AutoUpdate.value == False:
-              return MAIN_IMAGE_PATH + str("none.jpg")
-           if returnValue == 'activate' or returnValue == 'Aktivieren' and config.plugins.SevenHD.AutoUpdate.value == True:
-              return MAIN_IMAGE_PATH + str("True.jpg")
-           if returnValue == 'autoupdate infobar info' or returnValue == 'Updateinformationen in Infobar' and config.plugins.SevenHD.AutoUpdateInfo.value == False:
-              return MAIN_IMAGE_PATH + str("none.jpg")
-           if returnValue == 'autoupdate infobar info' or returnValue == 'Updateinformationen in Infobar' and config.plugins.SevenHD.AutoUpdateInfo.value == True:
-              return MAIN_IMAGE_PATH + str("True.jpg") 
-           if returnValue == 'autoupdate plugin startinfo' or returnValue == 'Updateinformationen beim Pluginstart' and config.plugins.SevenHD.AutoUpdatePluginStart.value == False:
-              return MAIN_IMAGE_PATH + str("none.jpg")
-           if returnValue == 'autoupdate plugin startinfo' or returnValue == 'Updateinformationen beim Pluginstart' and config.plugins.SevenHD.AutoUpdatePluginStart.value == True:
-              return MAIN_IMAGE_PATH + str("True.jpg")
-           self.debug('3: Missing Picture: ' + MAIN_IMAGE_PATH + str(returnValue) + '.jpg\n')
-           ## weather
+        if returnValue == '4':
+           returnValue = self["config"].getCurrent()[int(returnValue)]
+        else:
+           returnValue = self["config"].getCurrent()[int(returnValue)].value
+        
+        self.debug('Ret_value[4]: ' + str(returnValue))   
+        path = MAIN_IMAGE_PATH + str(returnValue) + str(".jpg")
+        
+        self["description"].setText(self["config"].getCurrent()[2])
+        
+        if fileExists(path):
+           return path
+        else:
+           self.debug('Missing Picture: ' + str(path) + '\n')
            return MAIN_IMAGE_PATH + str("924938.jpg")
 
     def UpdatePicture(self):
@@ -231,18 +182,49 @@ class MainSettings(ConfigListScreen, Screen):
 
     def keyLeft(self):
         ConfigListScreen.keyLeft(self)
+        self.preview_font()
         self.ShowPicture()
 
     def keyRight(self):
         ConfigListScreen.keyRight(self)
+        self.preview_font()
         self.ShowPicture()
+
+    def preview_font(self):
+        returnValue = self["config"].getCurrent()[1].value
+        try:
+           path = None
+           if '?systemfont' in returnValue:
+              path = MAIN_SKIN_PATH + 'fonts/' + returnValue.split('?')[0]
+           elif returnValue == 'noto':
+              path = MAIN_SKIN_PATH + 'fonts/NotoSans-Regular.ttf'
+           elif returnValue == 'handel':
+              path = MAIN_SKIN_PATH + 'fonts/HandelGotD.ttf'
+           elif returnValue == 'campton':
+              path = MAIN_SKIN_PATH + 'fonts/Campton Medium.otf'
+           elif returnValue == 'proxima':
+              path = MAIN_SKIN_PATH + 'fonts/Proxima Nova Regular.otf'
+           elif returnValue == 'opensans':
+              path = MAIN_SKIN_PATH + 'fonts/OpenSans-Regular.ttf'
+           
+           if path:            
+              img = Image.open(MAIN_IMAGE_PATH + str("fontpreview_in.jpg"))
+              draw = ImageDraw.Draw(img)
+              font = ImageFont.truetype(path, 30)
+              draw.text((30, 85),"Sample Text",255,font=font)
+              img.save(MAIN_IMAGE_PATH + str("fontpreview.jpg"))
+              
+        except TypeError:
+           pass
 
     def keyDown(self):
         self["config"].instance.moveSelection(self["config"].instance.moveDown)
+        self.preview_font()
         self.ShowPicture()
 
     def keyUp(self):
         self["config"].instance.moveSelection(self["config"].instance.moveUp)
+        self.preview_font()
         self.ShowPicture()
 
     def grab_png(self):
@@ -254,9 +236,10 @@ class MainSettings(ConfigListScreen, Screen):
         self.setInputToDefault(config.plugins.SevenHD.skin_mode)
         self.setInputToDefault(config.plugins.SevenHD.skin_mode_x)
         self.setInputToDefault(config.plugins.SevenHD.skin_mode_y)
-        self.setInputToDefault(config.plugins.SevenHD.AutoUpdate)
-        self.setInputToDefault(config.plugins.SevenHD.AutoUpdateInfo)
-        self.setInputToDefault(config.plugins.SevenHD.AutoUpdatePluginStart)
+        self.setInputToDefault(config.plugins.SevenHD.FontStyle_1)
+        self.setInputToDefault(config.plugins.SevenHD.FontStyleHeight_1)
+        self.setInputToDefault(config.plugins.SevenHD.FontStyle_2)
+        self.setInputToDefault(config.plugins.SevenHD.FontStyleHeight_2)
         self.setInputToDefault(config.plugins.SevenHD.Image)
         self.setInputToDefault(config.plugins.SevenHD.ButtonStyle)
         self.setInputToDefault(config.plugins.SevenHD.IconStyle)
@@ -264,10 +247,6 @@ class MainSettings(ConfigListScreen, Screen):
         self.setInputToDefault(config.plugins.SevenHD.Startdelay)
         self.setInputToDefault(config.plugins.SevenHD.Steptime)
         self.setInputToDefault(config.plugins.SevenHD.Volume)
-        self.setInputToDefault(config.plugins.SevenHD.NumberZapExt)
-        self.setInputToDefault(config.plugins.SevenHD.EMCStyle)
-        self.setInputToDefault(config.plugins.SevenHD.MovieSelectionStyle)
-        self.setInputToDefault(config.plugins.SevenHD.CoolTVGuide)
         self.setInputToDefault(config.plugins.SevenHD.BackgroundColorTrans)
         self.setInputToDefault(config.plugins.SevenHD.BackgroundRightColorTrans)
         self.setInputToDefault(config.plugins.SevenHD.ProgressVol)
@@ -278,12 +257,16 @@ class MainSettings(ConfigListScreen, Screen):
     def setInputToDefault(self, configItem):
         configItem.setValue(configItem.default)
 
-    def showInfo(self):
-        self.session.open(MessageBox, _("Information"), MessageBox.TYPE_INFO)
-
     def save(self):
         
-        if self.creator != 'OpenMips':
+        if config.plugins.SevenHD.systemfonts.value == True:
+           if not fileExists("/etc/enigma2/SystemFont"):
+              self.session.open(MessageBox, _('Please look in "Extra" and do "Import SystemFonts"'), MessageBox.TYPE_INFO)
+        else:
+           if fileExists("/etc/enigma2/SystemFont"):
+              remove("/etc/enigma2/SystemFont")
+        
+        if CREATOR != 'OpenMips':
            if config.plugins.SevenHD.skin_mode.value >= '2':
               config.epgselection.multi_itemsperpage.value = '10'
            else:
@@ -303,20 +286,7 @@ class MainSettings(ConfigListScreen, Screen):
               msg_text = '%sx%s' % (str(int(config.plugins.SevenHD.skin_mode_x.value)), str(int(config.plugins.SevenHD.skin_mode_y.value)))
            
            self.session.open(MessageBox, _('Make sure that your Box support\nyour Resolution %s!!\n' % str(msg_text)), MessageBox.TYPE_INFO)   
-        
-        if fileExists(PLUGIN_PATH + "/Extensions/EnhancedMovieCenter/plugin.pyo"):
-           if config.plugins.SevenHD.EMCStyle.value != 'emcnocover':
-              config.EMC.movie_cover.value = True         
-           else:
-              config.EMC.movie_cover.value = False
-           config.EMC.movie_cover.save()
-        
-        if self.creator != 'OpenMips':
-           if config.plugins.SevenHD.MovieSelectionStyle.value == 'movieselectionbigcover':
-              config.movielist.itemsperpage.value = '10'
-           else:
-              self.setInputToDefault(config.movielist.itemsperpage)
-           config.movielist.itemsperpage.save()
+
               
         for x in self["config"].list:
             if len(x) > 1:

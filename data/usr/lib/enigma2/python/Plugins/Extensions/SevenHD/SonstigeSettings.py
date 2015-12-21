@@ -42,8 +42,8 @@ class SonstigeSettings(ConfigListScreen, Screen):
                          <widget name="blue" font="Regular; 20" foregroundColor="#000064c7" backgroundColor="#00000000" halign="left" valign="center" position="664,662" size="148,48" transparent="1" />
                          <widget name="config" position="18,72" size="816,575" scrollbarMode="showOnDemand" transparent="1" zPosition="1" backgroundColor="#00000000" />
                          <eLabel position="70,12" size="708,46" text="SevenHD" font="Regular; 35" valign="center" halign="center" transparent="1" backgroundColor="#00000000" foregroundColor="#00ffffff" name="," />
-                         <eLabel position="891,657" size="372,46" text="Thanks to http://www.gigablue-support.org/" font="Regular; 12" valign="center" halign="center" transparent="1" backgroundColor="#00000000" foregroundColor="#00ffffff" name="," />
                          <widget name="helperimage" position="891,274" size="372,209" zPosition="1" backgroundColor="#00000000" />
+                         <widget name="description" position="891,490" size="372,200" font="Regular; 26" valign="center" halign="center" transparent="1" backgroundColor="#00000000" foregroundColor="#00ffffff" />
                          <widget backgroundColor="#00000000" font="Regular2; 34" foregroundColor="#00ffffff" position="70,12" render="Label" size="708,46" source="Title" transparent="1" halign="center" valign="center" noWrap="1" />
                          <eLabel backgroundColor="#00000000" position="6,6" size="842,708" transparent="0" zPosition="-9" foregroundColor="#00ffffff" />
                          <eLabel backgroundColor="#00ffffff" position="6,6" size="842,2" zPosition="2" />
@@ -60,10 +60,16 @@ class SonstigeSettings(ConfigListScreen, Screen):
                          <eLabel backgroundColor="#00ffffff" position="878,714" size="398,2" zPosition="2" />
                          <eLabel backgroundColor="#00ffffff" position="878,6" size="2,708" zPosition="2" />
                          <eLabel backgroundColor="#00ffffff" position="1274,6" size="2,708" zPosition="2" />
-                         <eLabel position="891,88" size="372,46" text="Version: """ + str(version) + """" font="Regular; 35" valign="center" halign="center" transparent="1" backgroundColor="#00000000" foregroundColor="#00ffffff" name="," />
+                         <widget source="session.CurrentService" render="Label" position="891,88" size="372,46" font="Regular2;35" halign="center" backgroundColor="#00000000" transparent="1" valign="center" foregroundColor="#00ffffff">
+                                 <convert type="SevenHDUpdate">Version</convert>
+                         </widget>
                          <widget source="session.CurrentService" render="Label" position="891,134" size="372,28" font="Regular;26" halign="center" backgroundColor="#00000000" transparent="1" valign="center" foregroundColor="#00B27708">
                                  <convert type="SevenHDUpdate">Update</convert>
                          </widget>
+                         <eLabel position="891,274" size="372,2" backgroundColor="#00ffffff" zPosition="5" />
+                         <eLabel position="891,481" size="372,2" backgroundColor="#00ffffff" zPosition="5" />
+                         <eLabel position="891,274" size="2,208" backgroundColor="#00ffffff" zPosition="5" />
+                         <eLabel position="1261,274" size="2,208" backgroundColor="#00ffffff" zPosition="5" />
                   </screen>
                """
 
@@ -73,7 +79,9 @@ class SonstigeSettings(ConfigListScreen, Screen):
         self.Scale = AVSwitch().getFramebufferScale()
         self.PicLoad = ePicLoad()
         self["helperimage"] = Pixmap()
+        self["description"] = Label()
         self["blue"] = Label()
+        
         if config.plugins.SevenHD.grabdebug.value:
            self["blue"].setText('Screenshot')
            
@@ -107,12 +115,37 @@ class SonstigeSettings(ConfigListScreen, Screen):
 
     def getMenuItemList(self):                                   
         list = []
-	list.append(getConfigListEntry(_('_______________________________________________ debug ________________________________________________'), ))
-        list.append(getConfigListEntry(_("Debug Mode (only for skinning)"), config.plugins.SevenHD.debug, 'log'))
-        list.append(getConfigListEntry(_("Show Screen Name"), config.plugins.SevenHD.debug_screen_names, 'debug_screen_names'))
-        list.append(getConfigListEntry(_("MSG Box Debug Mode (only for skinning)"), config.plugins.SevenHD.msgdebug, 'msgbox'))
+        list.append(getConfigListEntry(_('_____________________________debug________________________________________'), ))
+        if config.plugins.SevenHD.debug.value:
+           list.append(getConfigListEntry(_("Debug Mode (only for skinning)"),             config.plugins.SevenHD.debug,                 'Schaltet den Debug Mode ein.',                                                    '4', 'True'))
+        else:
+           list.append(getConfigListEntry(_("Debug Mode (only for skinning)"),             config.plugins.SevenHD.debug,                 'Schaltet den Debug Mode ein.',                                                    '4', 'none'))
+        if config.plugins.SevenHD.debug_screen_names.value:
+           list.append(getConfigListEntry(_("Show Screen Name"),                           config.plugins.SevenHD.debug_screen_names,    'Zeigt oben links den aktuellen ScreenNamen an.',                                  '4', 'True'))
+        else:                                                                                                                                                                                             
+           list.append(getConfigListEntry(_("Show Screen Name"),                           config.plugins.SevenHD.debug_screen_names,    'Zeigt oben links den aktuellen ScreenNamen an.',                                  '4', 'none'))
+        if config.plugins.SevenHD.msgdebug.value:
+           list.append(getConfigListEntry(_("MSG Box Debug Mode (only for skinning)"),     config.plugins.SevenHD.msgdebug,              'Schaltet die Debug MessageBox ein.',                                              '4', 'True'))
+        else:
+           list.append(getConfigListEntry(_("MSG Box Debug Mode (only for skinning)"),     config.plugins.SevenHD.msgdebug,              'Schaltet die Debug MessageBox ein.',                                              '4', 'none'))
         if os.path.isfile("/usr/bin/grab"):
-           list.append(getConfigListEntry(_("Grab png Debug Mode (only for skinning)"), config.plugins.SevenHD.grabdebug, 'picture'))
+           if config.plugins.SevenHD.grabdebug.value:
+              list.append(getConfigListEntry(_("Grab png Debug Mode (only for skinning)"), config.plugins.SevenHD.grabdebug,             'Schaltet unter Blau den ScreenGrab ein.',                                         '4', 'True'))
+           else:                                                                                                                                                                                    
+              list.append(getConfigListEntry(_("Grab png Debug Mode (only for skinning)"), config.plugins.SevenHD.grabdebug,             'Schaltet unter Blau den ScreenGrab ein.',                                         '4', 'none'))
+        list.append(getConfigListEntry(_('_____________________________update________________________________________'), ))
+        if config.plugins.SevenHD.AutoUpdate.value:
+           list.append(getConfigListEntry(_("activate"),                                   config.plugins.SevenHD.AutoUpdate,            'Schaltet das AutoUpdate ein.',                                                    '4', 'True'))
+        else:
+           list.append(getConfigListEntry(_("activate"),                                   config.plugins.SevenHD.AutoUpdate,            'Schaltet das AutoUpdate ein.',                                                    '4', 'none'))
+        if config.plugins.SevenHD.AutoUpdateInfo.value:
+           list.append(getConfigListEntry(_("autoupdate infobar info"),                    config.plugins.SevenHD.AutoUpdateInfo,        'Zeigt dir die Verfuegbarkeit eines PluginUpdates unten rechts in der InfoBar an.','4', 'True'))
+        else:
+           list.append(getConfigListEntry(_("autoupdate infobar info"),                    config.plugins.SevenHD.AutoUpdateInfo,        'Zeigt dir die Verfuegbarkeit eines PluginUpdates unten rechts in der InfoBar an.','4', 'none'))
+        if config.plugins.SevenHD.AutoUpdatePluginStart.value:
+           list.append(getConfigListEntry(_("autoupdate plugin startinfo"),                config.plugins.SevenHD.AutoUpdatePluginStart, 'Fragt beim PluginStart ob ein neues Update installiert werden soll.',             '4', 'True'))
+        else:
+           list.append(getConfigListEntry(_("autoupdate plugin startinfo"),                config.plugins.SevenHD.AutoUpdatePluginStart, 'Fragt beim PluginStart ob ein neues Update installiert werden soll.',             '4', 'none'))
         
         return list
 
@@ -120,28 +153,23 @@ class SonstigeSettings(ConfigListScreen, Screen):
         self["config"].setList(self.getMenuItemList())
 
     def GetPicturePath(self):
-        try:
-           returnValue = self["config"].getCurrent()[2]
-           
-           if config.plugins.SevenHD.debug.value and returnValue == 'log':
-              return MAIN_IMAGE_PATH + str("True.jpg")
-           if config.plugins.SevenHD.debug_screen_names.value and returnValue == 'debug_screen_names':
-              return MAIN_IMAGE_PATH + str("True.jpg")
-           if config.plugins.SevenHD.msgdebug.value and returnValue == 'msgbox':
-              return MAIN_IMAGE_PATH + str("True.jpg")
-           if config.plugins.SevenHD.grabdebug.value and returnValue == 'picture':
-              return MAIN_IMAGE_PATH + str("True.jpg")
-           if not config.plugins.SevenHD.debug.value and returnValue == 'log':
-              return MAIN_IMAGE_PATH + str("none.jpg")
-           if not config.plugins.SevenHD.debug_screen_names.value and returnValue == 'debug_screen_names':
-              return MAIN_IMAGE_PATH + str("none.jpg")
-           if not config.plugins.SevenHD.msgdebug.value and returnValue == 'msgbox':
-              return MAIN_IMAGE_PATH + str("none.jpg")
-           if not config.plugins.SevenHD.grabdebug.value and returnValue == 'picture':
-              return MAIN_IMAGE_PATH + str("none.jpg")
-        except:   
-           self.debug('3: Missing Picture: ' + MAIN_IMAGE_PATH + str(returnValue) + '.jpg\n')
-           ## weather
+        returnValue = self["config"].getCurrent()[3]
+        self.debug('\nRet_value[3]: ' + str(returnValue))		
+           		
+        if returnValue == '4':
+           returnValue = self["config"].getCurrent()[int(returnValue)]
+        else:
+           returnValue = self["config"].getCurrent()[int(returnValue)].value
+        
+        self.debug('Ret_value[4]: ' + str(returnValue))   
+        path = MAIN_IMAGE_PATH + str(returnValue) + str(".jpg")
+        
+        self["description"].setText(self["config"].getCurrent()[2])
+        
+        if fileExists(path):
+           return path
+        else:
+           self.debug('Missing Picture: ' + str(path) + '\n')
            return MAIN_IMAGE_PATH + str("924938.jpg")
 
     def UpdatePicture(self):
@@ -182,13 +210,13 @@ class SonstigeSettings(ConfigListScreen, Screen):
         self.setInputToDefault(config.plugins.SevenHD.msgdebug)
         self.setInputToDefault(config.plugins.SevenHD.grabdebug)
         self.setInputToDefault(config.plugins.SevenHD.debug_screen_names)
+        self.setInputToDefault(config.plugins.SevenHD.AutoUpdate)
+        self.setInputToDefault(config.plugins.SevenHD.AutoUpdateInfo)
+        self.setInputToDefault(config.plugins.SevenHD.AutoUpdatePluginStart)
         self.save()
 
     def setInputToDefault(self, configItem):
         configItem.setValue(configItem.default)
-
-    def showInfo(self):
-        self.session.open(MessageBox, _("Information"), MessageBox.TYPE_INFO)
 
     def save(self):
         for x in self["config"].list:

@@ -49,7 +49,7 @@ class SevenHDEmptyEpg(VariableText, Renderer):
 
                     self.text = self.text[:-3] + '...'
                 if self.backText != self.text:
-                    self.backText = self.text
+                    self.backText = self.text.replace("\n\x05","")
                     ena = True
                     try:
                         ena = config.plugins.setupGlass16.par30.value

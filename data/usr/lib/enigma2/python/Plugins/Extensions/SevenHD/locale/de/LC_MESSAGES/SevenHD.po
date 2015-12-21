@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: SevenHD\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-10-26 18:55+0100\n"
-"PO-Revision-Date: 2015-12-12 23:22+0100\n"
+"PO-Revision-Date: 2015-12-20 15:40+0100\n"
 "Last-Translator: mike99 <mike99@mail.to>\n"
 "Language-Team: kraven & mike99\n"
 "Language: de\n"
@@ -19,8 +19,8 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ChannelSettings.py:115
-msgid "__________________________________________ channelselection __________________________________________"
-msgstr "____________________________________________ Kanalauswahl ___________________________________________"
+msgid "___________________________channelselection___________________________________"
+msgstr "___________________________Kanalauswahl___________________________________"
 
 #: ChannelSettings.py:116 InfobarSettings.py:136
 msgid "style"
@@ -31,8 +31,8 @@ msgid "prime time"
 msgstr "Prime Time"
 
 #: ChannelSettings.py:122 InfobarSettings.py:120 MenuPluginSettings.py:119
-msgid "_____________________________________________ background _____________________________________________"
-msgstr "_____________________________________________ Hintergrund _____________________________________________"
+msgid "_____________________________background________________________________________"
+msgstr "____________________________Hintergrund__________________________________________"
 
 #: ChannelSettings.py:123
 msgid "color left"
@@ -47,8 +47,8 @@ msgid "color right"
 msgstr "Farbe Rechts"
 
 #: ChannelSettings.py:127 InfobarSettings.py:123 MenuPluginSettings.py:122
-msgid "_____________________________________________ color lines ____________________________________________"
-msgstr "_____________________________________________ Linienfarbe ____________________________________________"
+msgid "_____________________________color lines_______________________________________"
+msgstr "____________________________Linienfarben_________________________________________"
 
 #: ChannelSettings.py:128 InfobarSettings.py:124 MenuPluginSettings.py:123
 msgid "line"
@@ -69,8 +69,8 @@ msgid "progressbar line"
 msgstr "Fortschrittsbalken Linie"
 
 #: ChannelSettings.py:138
-msgid "__________________________________________ color description _________________________________________"
-msgstr "______________________________________ Farbe für Beschreibungen _______________________________________"
+msgid "_____________________________color description__________________________________"
+msgstr "_______________________Farbe für Beschreibung____________________________________"
 
 #: ChannelSettings.py:139
 msgid "bouquet name"
@@ -113,8 +113,8 @@ msgid "buttons"
 msgstr "Farbe Buttons"
 
 #: ChannelSettings.py:159
-msgid "______________________________________________ color list ____________________________________________"
-msgstr "____________________________________________ List Einträge ___________________________________________"
+msgid "_____________________________color list_________________________________________"
+msgstr "__________________________Listeneinträge_________________________________________"
 
 #: ChannelSettings.py:160
 msgid "channel name and number"
@@ -710,8 +710,8 @@ msgid "big + sat"
 msgstr "Groß + Satinfo"
 
 #: InfobarExtraSettings.py:117
-msgid "___________________________________________ infobar extras ___________________________________________"
-msgstr "___________________________________________ Infobar Extras ___________________________________________"
+msgid "_____________________________infobar extras________________________________________"
+msgstr "_____________________________Infobar Extras________________________________________"
 
 #: InfobarExtraSettings.py:118
 msgid "satellite information"
@@ -726,8 +726,8 @@ msgid "ECM information"
 msgstr "ECM Informationen"
 
 #: InfobarExtraSettings.py:121
-msgid "______________________________________________ weather _______________________________________________"
-msgstr "_______________________________________________ Wetter ________________________________________________"
+msgid "________________________________weather____________________________________________"
+msgstr "________________________________Wetter____________________________________________"
 
 #: InfobarExtraSettings.py:124
 msgid "Weather Style"
@@ -786,24 +786,24 @@ msgid "[InfobarExtraSettings]\n"
 msgstr ""
 
 #: InfobarSettings.py:116
-msgid "_______________________________________________ style ________________________________________________"
-msgstr "________________________________________________ Ansicht ________________________________________________"
+msgid "_______________________________style___________________________________________"
+msgstr "_____________________________Ansicht___________________________________________"
 
 #: InfobarSettings.py:118
 msgid "second infobar"
 msgstr "Zweite Infobar"
 
 #: InfobarSettings.py:121
-msgid "color 1"
-msgstr "Farbe 1"
+msgid "primary color"
+msgstr "Primäre Farbe"
 
 #: InfobarSettings.py:122
-msgid "color 2"
-msgstr "Farbe 2"
+msgid "secondary color"
+msgstr "Sekundäre Farbe"
 
 #: InfobarSettings.py:128 MenuPluginSettings.py:130
-msgid "______________________________________________ color font ____________________________________________"
-msgstr "_____________________________________________ Schriftfarbe ___________________________________________"
+msgid "______________________________color font________________________________________"
+msgstr "____________________________Schriftfarbe________________________________________"
 
 #: InfobarSettings.py:129
 msgid "channelname"
@@ -826,8 +826,8 @@ msgid "indicate"
 msgstr "Infospalte"
 
 #: InfobarSettings.py:135
-msgid "________________________________________________ clock _______________________________________________"
-msgstr "_________________________________________________ Uhr ________________________________________________"
+msgid "_______________________________clock___________________________________________"
+msgstr "_______________________________Uhr___________________________________________"
 
 #: InfobarSettings.py:138
 msgid "color clock"
@@ -866,10 +866,6 @@ msgstr "Farbe Wetter"
 msgid "[InfobarSettings]\n"
 msgstr ""
 
-#: MainSettings.py:116
-msgid "_______________________________________ global system settings _______________________________________"
-msgstr "________________________________________ Haupteinstellungen _________________________________________"
-
 #: MainSettings.py:117
 msgid "image"
 msgstr "Image"
@@ -899,8 +895,14 @@ msgid "volumebar"
 msgstr "Lautstärkebalken"
 
 #: MainSettings.py:126
-msgid "_____________________________________________running text ____________________________________________"
-msgstr "________________________________________________ Lauftext ___________________________________________"
+msgid "__________________________________running text____________________________________________"
+msgstr "_______________________________Lauftext____________________________________________"
+
+msgid "_____________________________global system settings________________________________________"
+msgstr "___________________________Globale Einstellungen________________________________________"
+
+msgid "_____________________________________font__________________________________________________"
+msgstr "_______________________________Schrift__________________________________________________"
 
 #: MainSettings.py:127 MainSettings.py:135
 msgid "activate"
@@ -915,8 +917,8 @@ msgid "steptime"
 msgstr "Geschwindigkeit"
 
 #: MainSettings.py:131
-msgid "_____________________________________________transparency ____________________________________________"
-msgstr "_____________________________________________ Transparenz ___________________________________________"
+msgid "__________________________________transparency_____________________________________________"
+msgstr "______________________________Tranzparenz_____________________________________________"
 
 #: MainSettings.py:132 MenuPluginSettings.py:120
 msgid "main window"
@@ -925,10 +927,6 @@ msgstr "Hauptfenster"
 #: MainSettings.py:133 MenuPluginSettings.py:121
 msgid "right window"
 msgstr "Hauptfenster Rechts"
-
-#: MainSettings.py:134
-msgid "_____________________________________________ autoupdate _____________________________________________"
-msgstr "________________________________________ Automatische Updates ________________________________________"
 
 #: MainSettings.py:136
 msgid "autoupdate infobar info"
@@ -939,8 +937,8 @@ msgid "autoupdate plugin startinfo"
 msgstr "Updateinformationen beim Pluginstart"
 
 #: MainSettings.py:138
-msgid "______________________________________________ plugins _______________________________________________"
-msgstr "________________________________________________ Plugins ____________________________________________"
+msgid "_______________________________plugins__________________________________________"
+msgstr "_____________________________Plugins__________________________________________"
 
 #: MainSettings.py:139
 msgid "Movie Selection"
@@ -981,17 +979,13 @@ msgstr ""
 msgid "[MainSettingsScreen]\n"
 msgstr ""
 
-#: MenuPluginSettings.py:117
-msgid "__________________________________________ MENU und PLUGINS __________________________________________"
-msgstr "________________________________________ MENÜ und PLUGINS ____________________________________________"
-
 #: MenuPluginSettings.py:118
 msgid " "
 msgstr ""
 
 #: MenuPluginSettings.py:126
-msgid "____________________________________________ listselection ___________________________________________"
-msgstr "____________________________________________ Auswahlbalken ___________________________________________"
+msgid "_____________________________listselection______________________________________"
+msgstr "____________________________Auswahlbalken______________________________________"
 
 #: MenuPluginSettings.py:127
 msgid "color"
@@ -1002,12 +996,12 @@ msgid "selection font"
 msgstr "Schriftfarbe"
 
 #: MenuPluginSettings.py:131
-msgid "font 1"
-msgstr "Schrift 1"
+msgid "primary font"
+msgstr "Primäre Schrift"
 
 #: MenuPluginSettings.py:132
-msgid "font 2"
-msgstr "Schrift 2"
+msgid "secondary font"
+msgstr "Sekundäre Schrift"
 
 #: MenuPluginSettings.py:133
 msgid "button text"
@@ -1547,8 +1541,11 @@ msgid ", feels "
 msgstr ", gefühlt "
 
 #: SonstigeSettings.py:115
-msgid "_______________________________________________ debug ________________________________________________"
-msgstr "_______________________________________________ DEBUG ________________________________________________"
+msgid "_____________________________debug________________________________________"
+msgstr "_____________________________Debug________________________________________"
+
+msgid "_____________________________update________________________________________"
+msgstr "_____________________________Update________________________________________"
 
 #: SonstigeSettings.py:116
 msgid "Debug Mode (only for skinning)"
@@ -1613,3 +1610,24 @@ msgstr "Wetter Icon"
 
 msgid "weather meteo"
 msgstr "Wetter Meteo"
+
+msgid "primary font style"
+msgstr "Primäre Schriftart"
+
+msgid "primary font height in %"
+msgstr "Primäre Schriftgröße in %"
+
+msgid "secondary font style"
+msgstr "Sekundäre Schriftart"
+
+msgid "secondary font height in %"
+msgstr "Sekundäre Schriftgröße in %"
+
+msgid "use systemfonts"
+msgstr "Benutze Systemschriften"
+
+msgid "Please look in \"Extra\" and do \"ImportSystemFonts\""
+msgstr "gehe nach \"Extras\" und nutze \"ImportSystemFonts\""
+
+msgid "Language for Weather"
+msgstr "Sprache für Wetter"

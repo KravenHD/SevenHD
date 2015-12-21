@@ -94,10 +94,16 @@ class SevenHD(Screen):
                          <eLabel backgroundColor="#00ffffff" position="878,714" size="398,2" zPosition="2" />
                          <eLabel backgroundColor="#00ffffff" position="878,6" size="2,708" zPosition="2" />
                          <eLabel backgroundColor="#00ffffff" position="1274,6" size="2,708" zPosition="2" />
-                         <eLabel position="891,88" size="372,46" text="Version: """ + str(version) + """" font="Regular; 35" valign="center" halign="center" transparent="1" backgroundColor="#00000000" foregroundColor="#00ffffff" name="," />
+                         <widget source="session.CurrentService" render="Label" position="891,88" size="372,46" font="Regular2;35" halign="center" backgroundColor="#00000000" transparent="1" valign="center" foregroundColor="#00ffffff">
+                                 <convert type="SevenHDUpdate">Version</convert>
+                         </widget>
                          <widget source="session.CurrentService" render="Label" position="891,134" size="372,28" font="Regular;26" halign="center" backgroundColor="#00000000" transparent="1" valign="center" foregroundColor="#00B27708">
                                  <convert type="SevenHDUpdate">Update</convert>
                          </widget>
+                         <eLabel position="891,274" size="372,2" backgroundColor="#00ffffff" zPosition="5" />
+                         <eLabel position="891,481" size="372,2" backgroundColor="#00ffffff" zPosition="5" />
+                         <eLabel position="891,274" size="2,208" backgroundColor="#00ffffff" zPosition="5" />
+                         <eLabel position="1261,274" size="2,208" backgroundColor="#00ffffff" zPosition="5" />
                   </screen>
                """
                   
@@ -126,19 +132,6 @@ class SevenHD(Screen):
                 "blue": self.showInfo
                 
             }, -1)	
-        creator = 'openATV'
-        try:
-           image = os.popen('cat /etc/image-version').read()
-           if 'creator=OpenMips' in image: 
-              creator = 'OpenMips'
-        except:
-           try:
-              image = os.popen('cat /etc/motd').read()
-              if 'HDMU' in image: 
-                 creator = 'OpenMips'
-           except:
-              creator = 'unknow'
-        self.debug('Image-Type: ' + str(creator) + '\n')   
            
         list = []
         list.append(MenuEntryItem(_("main setting"), "MainSettings"))
@@ -148,7 +141,7 @@ class SevenHD(Screen):
         list.append(MenuEntryItem(_("channel selection"), "ChannelSettings"))
         list.append(MenuEntryItem(_("other settings"), "SonstigeSettings"))
         list.append(MenuEntryItem(_("system osd settings"), "SystemOSDSettings"))
-        if creator != 'OpenMips':
+        if CREATOR != 'OpenMips':
            list.append(MenuEntryItem(_("system channel settings"), "SystemChannelSettings"))
         list.append(MenuEntryItem(_("system osd position setup"), "OSDPositionSetup"))
            
@@ -281,7 +274,42 @@ class SevenHD(Screen):
         try:
                 #global tag search and replace in all skin elements
 		self.skinSearchAndReplace = []
-                
+                # Normal Font
+                self.FontStyle_1 = config.plugins.SevenHD.FontStyle_1.value
+                self.FontStyleHeight_1 = config.plugins.SevenHD.FontStyleHeight_1.value
+                if self.FontStyle_1 != 'noto':
+                   if self.FontStyle_1 == 'campton':
+                      self.skinSearchAndReplace.append(['<font filename="SevenHD/fonts/NotoSans-Regular.ttf" name="Regular" scale="95" />', '<font filename="SevenHD/fonts/Campton Light.otf" name="Regular" scale="%s" />' % str(self.FontStyleHeight_1)])
+                   elif self.FontStyle_1 == 'handel':
+                      self.skinSearchAndReplace.append(['<font filename="SevenHD/fonts/NotoSans-Regular.ttf" name="Regular" scale="95" />', '<font filename="SevenHD/fonts/HandelGotD.ttf" name="Regular" scale="%s" />' % str(self.FontStyleHeight_1)])
+                   elif self.FontStyle_1 == 'proxima':
+                      self.skinSearchAndReplace.append(['<font filename="SevenHD/fonts/NotoSans-Regular.ttf" name="Regular" scale="95" />', '<font filename="SevenHD/fonts/Proxima Nova Regular.otf" name="Regular" scale="%s" />' % str(self.FontStyleHeight_1)])
+                   elif self.FontStyle_1 == 'opensans':
+                      self.skinSearchAndReplace.append(['<font filename="SevenHD/fonts/NotoSans-Regular.ttf" name="Regular" scale="95" />', '<font filename="SevenHD/fonts/setrixHD.ttf" name="Regular" scale="%s" />' % str(self.FontStyleHeight_1)])
+                   elif '?systemfont' in self.FontStyle_1:
+                      self.Font_1 = self.FontStyle_1.split('?')[0]
+                      self.skinSearchAndReplace.append(['<font filename="SevenHD/fonts/NotoSans-Regular.ttf" name="Regular" scale="95" />', '<font filename="SevenHD/fonts/%s" name="Regular" scale="%s" />' % (str(self.Font_1),str(self.FontStyleHeight_1))])
+                else:
+                   self.skinSearchAndReplace.append(['<font filename="SevenHD/fonts/NotoSans-Regular.ttf" name="Regular" scale="95" />', '<font filename="SevenHD/fonts/NotoSans-Regular.ttf" name="Regular" scale="%s" />' % str(self.FontStyleHeight_1)])
+                   
+                # Bold Font
+                self.FontStyle_2 = config.plugins.SevenHD.FontStyle_2.value
+                self.FontStyleHeight_2 = config.plugins.SevenHD.FontStyleHeight_2.value
+                if self.FontStyle_2 != 'noto':
+                   if self.FontStyle_2 == 'campton':
+                      self.skinSearchAndReplace.append(['<font filename="SevenHD/fonts/NotoSans-Bold.ttf" name="Regular2" scale="95" />', '<font filename="SevenHD/fonts/Campton Medium.otf" name="Regular2" scale="%s" />' % str(self.FontStyleHeight_2)])
+                   elif self.FontStyle_2 == 'handel':
+                      self.skinSearchAndReplace.append(['<font filename="SevenHD/fonts/NotoSans-Bold.ttf" name="Regular2" scale="95" />', '<font filename="SevenHD/fonts/HandelGotDBol.ttf" name="Regular2" scale="%s" />' % str(self.FontStyleHeight_2)])
+                   elif self.FontStyle_2 == 'proxima':
+                      self.skinSearchAndReplace.append(['<font filename="SevenHD/fonts/NotoSans-Bold.ttf" name="Regular2" scale="95" />', '<font filename="SevenHD/fonts/Proxima Nova Bold.otf" name="Regular2" scale="%s" />' % str(self.FontStyleHeight_2)])
+                   elif self.FontStyle_2 == 'opensans':
+                      self.skinSearchAndReplace.append(['<font filename="SevenHD/fonts/NotoSans-Bold.ttf" name="Regular2" scale="95" />', '<font filename="SevenHD/fonts/OpenSans-Regular.ttf" name="Regular2" scale="%s" />' % str(self.FontStyleHeight_2)])
+                   elif '?systemfont' in self.FontStyle_2:
+                      self.Font_2 = self.FontStyle_2.split('?')[0]
+                      self.skinSearchAndReplace.append(['<font filename="SevenHD/fonts/NotoSans-Bold.ttf" name="Regular2" scale="95" />', '<font filename="SevenHD/fonts/%s" name="Regular2" scale="%s" />' % (str(self.Font_2),str(self.FontStyleHeight_2))])
+                else:
+                   self.skinSearchAndReplace.append(['<font filename="SevenHD/fonts/NotoSans-Bold.ttf" name="Regular2" scale="95" />', '<font filename="SevenHD/fonts/NotoSans-Bold.ttf" name="Regular2" scale="%s" />' % str(self.FontStyleHeight_2)])
+                      
                 self.Background = config.plugins.SevenHD.Background.value
                 if self.Background.startswith('back'):
                    self.skinSearchAndReplace.append(["SevenHD/back/menumain.png","SevenHD/back/menumain_1.png"])
@@ -337,8 +365,6 @@ class SevenHD(Screen):
                    self.skinSearchAndReplace.append(['name="SevenBackgroundRight" value="#00000000"', 'name="SevenBackgroundRight" value="#%s%s"' % (config.plugins.SevenHD.BackgroundRightColorTrans.value, self.BackgroundRight[2:8])])
                    self.skinSearchAndReplace.append(['name="SevenFontBackgroundRight" value="#00000000"', 'name="SevenFontBackgroundRight" value="#%s%s"' % (config.plugins.SevenHD.BackgroundColorTrans.value, self.BackgroundRight[2:8])])
                    self.skinSearchAndReplace.append(['pixmap="SevenHD/back/menuright.png"',""])
-                
-                self.skinSearchAndReplace.append(["PluginVersionString", "Version: %s" % str(version)])
                 
 		self.skinSearchAndReplace.append(["Seven_Selection", config.plugins.SevenHD.SelectionBackground.value])
 		self.skinSearchAndReplace.append(["SevenFont_1", config.plugins.SevenHD.Font1.value])
@@ -398,17 +424,27 @@ class SevenHD(Screen):
 		self.skinSearchAndReplace.append(["SevenNumber_List", config.plugins.SevenHD.ChannelColorChannelNumber.value])
 		self.skinSearchAndReplace.append(["SevenProgram_List", config.plugins.SevenHD.ChannelColorEvent.value])
 		
-		
-                if config.plugins.SevenHD.WeatherView.value == "meteo":
-                   self.skinSearchAndReplace.append(['size="50,50" path="WetterIcons" render="SevenHDPiconUni" alphatest="blend"', 'size="50,50" render="Label" font="Meteo; 45" halign="center" valign="center" foregroundColor="SevenMeteoFont" backgroundColor="SevenFontBackgroundIB1" noWrap="1"'])
-                   self.skinSearchAndReplace.append(['size="70,70" render="SevenHDPiconUni" alphatest="blend" path="WetterIcons"', 'size="70,70" render="Label" font="Meteo; 70" halign="center" valign="center" foregroundColor="SevenMeteoFont" backgroundColor="SevenFontBackgroundIB1" noWrap="1"'])
-                   self.skinSearchAndReplace.append(['convert  type="SevenHDWeather">currentWeatherPicon', 'convert  type="SevenHDWeather">currentWeatherCode'])
-                   self.skinSearchAndReplace.append(['convert  type="SevenHDWeather">forecastTomorrowPicon', 'convert  type="SevenHDWeather">forecastTomorrowCode'])
-                   self.skinSearchAndReplace.append(['convert  type="SevenHDWeather">forecastTomorrow1Picon', 'convert  type="SevenHDWeather">forecastTomorrow1Code'])
-                   self.skinSearchAndReplace.append(['convert  type="SevenHDWeather">forecastTomorrow2Picon', 'convert  type="SevenHDWeather">forecastTomorrow2Code'])
-                   self.skinSearchAndReplace.append(['convert  type="SevenHDWeather">forecastTomorrow3Picon', 'convert  type="SevenHDWeather">forecastTomorrow3Code'])
-                
-                       
+		# Weather Font
+                if config.plugins.SevenHD.AutoWoeIDServer.value == 'yahoo':
+                   if config.plugins.SevenHD.WeatherView.value == "meteo":
+                      self.skinSearchAndReplace.append(['size="50,50" path="WetterIcons" render="SevenHDWetterPicon" alphatest="blend"', 'size="50,50" render="Label" font="Meteo; 45" halign="center" valign="center" foregroundColor="SevenMeteoFont" backgroundColor="SevenFontBackgroundIB1" noWrap="1"'])
+                      self.skinSearchAndReplace.append(['size="70,70" render="SevenHDWetterPicon" alphatest="blend" path="WetterIcons"', 'size="70,70" render="Label" font="Meteo; 70" halign="center" valign="center" foregroundColor="SevenMeteoFont" backgroundColor="SevenFontBackgroundIB1" noWrap="1"'])
+                      self.skinSearchAndReplace.append(['convert  type="SevenHDWeather">currentWeatherPicon', 'convert  type="SevenHDWeather">currentWeatherCode'])
+                      self.skinSearchAndReplace.append(['convert  type="SevenHDWeather">forecastTomorrowPicon', 'convert  type="SevenHDWeather">forecastTomorrowCode'])
+                      self.skinSearchAndReplace.append(['convert  type="SevenHDWeather">forecastTomorrow1Picon', 'convert  type="SevenHDWeather">forecastTomorrow1Code'])
+                      self.skinSearchAndReplace.append(['convert  type="SevenHDWeather">forecastTomorrow2Picon', 'convert  type="SevenHDWeather">forecastTomorrow2Code'])
+                      self.skinSearchAndReplace.append(['convert  type="SevenHDWeather">forecastTomorrow3Picon', 'convert  type="SevenHDWeather">forecastTomorrow3Code'])
+                else:
+                   if config.plugins.SevenHD.WeatherView.value == "meteo":
+                      self.skinSearchAndReplace.append(['size="50,50" path="WetterIcons" render="SevenHDWetterPicon" alphatest="blend"', 'size="50,50" render="Label" font="Meteo2; 45" halign="center" valign="center" foregroundColor="SevenMeteoFont" backgroundColor="SevenFontBackgroundIB1" noWrap="1"'])
+                      self.skinSearchAndReplace.append(['size="70,70" render="SevenHDWetterPicon" alphatest="blend" path="WetterIcons"', 'size="70,70" render="Label" font="Meteo2; 70" halign="center" valign="center" foregroundColor="SevenMeteoFont" backgroundColor="SevenFontBackgroundIB1" noWrap="1"'])
+                      self.skinSearchAndReplace.append(['convert  type="SevenHDWeather_owm">Day_0,MeteoIcon', 'convert  type="SevenHDWeather_owm">Day_0,MeteoFont'])
+                      self.skinSearchAndReplace.append(['convert  type="SevenHDWeather_owm">Day_1,MeteoIcon', 'convert  type="SevenHDWeather_owm">Day_1,MeteoFont'])
+                      self.skinSearchAndReplace.append(['convert  type="SevenHDWeather_owm">Day_2,MeteoIcon', 'convert  type="SevenHDWeather_owm">Day_2,MeteoFont'])
+                      self.skinSearchAndReplace.append(['convert  type="SevenHDWeather_owm">Day_3,MeteoIcon', 'convert  type="SevenHDWeather_owm">Day_3,MeteoFont'])
+                      self.skinSearchAndReplace.append(['convert  type="SevenHDWeather_owm">Day_4,MeteoIcon', 'convert  type="SevenHDWeather_owm">Day_4,MeteoFont'])    
+                      
+                      
                 ### Progress
                 if config.plugins.SevenHD.Progress.value == "progress":
                    self.skinSearchAndReplace.append(["SevenHD/progress/progress52.png","SevenHD/progress/progress52_1.png"])
@@ -549,7 +585,7 @@ class SevenHD(Screen):
 		self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.InfobarStyle.value + "-main.xml")
                 self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.InfobarStyle.value + "-main.xml")       
                 
-                ###Channelname-IB
+                ###Channelname Infobar
                 if config.plugins.SevenHD.InfobarChannelName.value == "none":
                    self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.InfobarChannelName.value + XML)
                    self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.InfobarChannelName.value + XML) 
@@ -567,10 +603,25 @@ class SevenHD(Screen):
 		self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.ECMInfo.value + XML)
                 self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.ECMInfo.value + XML)        
                 
-                ###clock-style xml
-		self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.ClockStyle.value + XML)
-                self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.ClockStyle.value + XML)               
-
+                ###clock-style xml Infobar
+		if config.plugins.SevenHD.ClockStyle.value == 'clock-weather':
+                   self.debug('clock')
+                   if config.plugins.SevenHD.AutoWoeIDServer.value == 'yahoo':
+                      self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.ClockStyle.value + '_yahoo' + XML)
+                      self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.ClockStyle.value + '_yahoo' + XML)               
+                   else:
+                      self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.ClockStyle.value + '_owm' + XML)
+                      self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.ClockStyle.value + '_owm' + XML)
+                elif config.plugins.SevenHD.ClockStyle.value == 'clock-weather-meteo':
+                   if config.plugins.SevenHD.AutoWoeIDServer.value == 'yahoo':
+                      self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.ClockStyle.value + '_yahoo' + XML)
+                      self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.ClockStyle.value + '_yahoo' + XML)               
+                   else:
+                      self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.ClockStyle.value + '_owm' + XML)
+                      self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.ClockStyle.value + '_owm' + XML)
+                else:
+                   self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.ClockStyle.value + XML)
+                   self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.ClockStyle.value + XML)
                 ###sat-info
 		self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.SatInfo.value + XML)
                 self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.SatInfo.value + XML)        
@@ -580,15 +631,19 @@ class SevenHD(Screen):
                 self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.SysInfo.value + XML)        
                 
                 ###weather-style
-		self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.WeatherStyle.value + XML)
-                self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.WeatherStyle.value + XML)        
-                
+                if config.plugins.SevenHD.AutoWoeIDServer.value == 'yahoo':
+		   self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.WeatherStyle.value + '_yahoo' + XML)
+                   self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.WeatherStyle.value + '_yahoo' + XML)        
+                else:
+                   self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.WeatherStyle.value + '_owm' + XML)
+                   self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.WeatherStyle.value + '_owm' + XML)
+                   
                 ###Infobar_middle
 		self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.InfobarStyle.value + "-middle.xml")
                 self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.InfobarStyle.value + "-middle.xml")         
                 
-                ###Channelname-SIB
-                if config.plugins.SevenHD.SIB.value != "-right":
+                ###Channelname 2nd Infobar
+                if config.plugins.SevenHD.SIB.value != '-right':
                    if config.plugins.SevenHD.InfobarChannelName.value == "none":
                       self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.InfobarChannelName.value + XML)
                       self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.InfobarChannelName.value + XML) 
@@ -602,10 +657,25 @@ class SevenHD(Screen):
                       self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.InfobarStyle.value + "-ICNameandNumber.xml")
                       self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.InfobarStyle.value + "-ICNameandNumber.xml") 
                 
-                ###clock-style xml
-		if config.plugins.SevenHD.SIB.value != "-right":
-                   self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.ClockStyle.value + XML)
-                   self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.ClockStyle.value + XML)       
+                ###clock-style xml 2nd Infobar
+		if config.plugins.SevenHD.SIB.value != '-right':
+                   if config.plugins.SevenHD.ClockStyle.value == 'clock-weather':
+                      if config.plugins.SevenHD.AutoWoeIDServer.value == 'yahoo':
+                         self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.ClockStyle.value + '_yahoo' + XML)
+                         self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.ClockStyle.value + '_yahoo' + XML)               
+                      else:
+                         self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.ClockStyle.value + '_owm' + XML)
+                         self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.ClockStyle.value + '_owm' + XML)
+                   elif config.plugins.SevenHD.ClockStyle.value == 'clock-weather-meteo':
+                      if config.plugins.SevenHD.AutoWoeIDServer.value == 'yahoo':
+                         self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.ClockStyle.value + '_yahoo' + XML)
+                         self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.ClockStyle.value + '_yahoo' + XML)               
+                      else:
+                         self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.ClockStyle.value + '_owm' + XML)
+                         self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.ClockStyle.value + '_owm' + XML)
+                   else:
+                      self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.ClockStyle.value + XML)
+                      self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.ClockStyle.value + XML)       
                 
                 ###Infobar_end
 		self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.InfobarStyle.value + config.plugins.SevenHD.SIB.value + XML)
@@ -830,6 +900,11 @@ class SevenHD(Screen):
         if not fileExists(PLUGIN_PATH + "/Extensions/CoolTVGuide/plugin.pyo"):
            options.extend(((_("Install CoolTVGuide?"), boundFunction(self.Open_Setup, "enigma2-plugin-extensions-cooltvguide")),))
         
+        if not fileExists("/etc/enigma2/SystemFont"):
+           options.extend(((_("Install SystemFonts"), boundFunction(self.install_systemfonts)),))
+        else:
+           options.extend(((_("Refresh SystemFonts"), boundFunction(self.install_systemfonts)),))
+           
         options.extend(((_("Share my Skin"), boundFunction(self.Share_Skin)),))
         options.extend(((_("ChangeLog"), boundFunction(self.ChangeLog)),))
         options.extend(((_("Information"), boundFunction(self.send_to_msg_box, "Team Kraven\n\xc3\xb6rlgrey, TBX, stony272, thomele, Philipswalther and Kraven")),))
@@ -841,10 +916,29 @@ class SevenHD(Screen):
     def menuCallback(self, ret):
         ret and ret[1]()
     
+    def install_systemfonts(self):
+        ttf_dir = os.popen('find / -name *.ttf').read().split('\n')
+        for ttf in ttf_dir:
+            if fileExists(ttf):               
+               if not ttf.startswith(MAIN_SKIN_PATH + 'fonts'):
+                  copy(str(ttf),MAIN_SKIN_PATH + 'fonts')
+        
+        otf_dir = os.popen('find / -name *.otf').read().split('\n')
+        for otf in otf_dir:
+            if fileExists(otf):
+               if not otf.startswith(MAIN_SKIN_PATH + 'fonts'):
+                  copy(str(otf),MAIN_SKIN_PATH + 'fonts') 
+                    
+        os.system('touch /etc/enigma2/SystemFont')
+        config.plugins.SevenHD.systemfonts.value = True
+        config.plugins.SevenHD.systemfonts.save()
+        
+        self.session.open(MessageBox,_('!! Reboot Gui !!\nAnd on the next PluginStart you can use all SystemFonts'), MessageBox.TYPE_INFO)
+        
     def do_version(self):
-        config.plugins.SevenHD.version.value = str(version)
+        config.plugins.SevenHD.version.setValue(str(version))
         config.plugins.SevenHD.version.save()
-        self.session.open(MessageBox,_('Youre Version is %s' % str(config.plugins.SevenHD.version.value)), MessageBox.TYPE_INFO)
+        self.session.open(MessageBox,_('Youre Version is %s' % str(config.plugins.SevenHD.version.getValue())), MessageBox.TYPE_INFO)
         
     def About(self):
         with open(FILE, 'r') as xFile:
