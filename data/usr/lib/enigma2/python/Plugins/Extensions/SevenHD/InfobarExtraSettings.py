@@ -117,30 +117,30 @@ class InfobarExtraSettings(ConfigListScreen, Screen):
     def getMenuItemList(self):
         list = []
         list.append(getConfigListEntry(_('_____________________________infobar extras________________________________________'), ))
-        list.append(getConfigListEntry(_("satellite information"),            config.plugins.SevenHD.SatInfo,         'Zeigt die Satelliten Informationen auf der rechten Seite.',                    '1',        ''))
-        list.append(getConfigListEntry(_("system information"),               config.plugins.SevenHD.SysInfo,         'Zeigt die System Informationen auf der rechten Seite.',                 '1',        ''))
-        list.append(getConfigListEntry(_("ECM information"),                  config.plugins.SevenHD.ECMInfo,         'Zeigt die ECM Informationen im unteren Bereich der Infobar an.',        '1',        ''))
+        list.append(getConfigListEntry(_("satellite information"),            config.plugins.SevenHD.SatInfo,         'Zeigt die Satelliten Informationen auf der rechten Seite.',                   '1',        ''))
+        list.append(getConfigListEntry(_("system information"),               config.plugins.SevenHD.SysInfo,         'Zeigt die System Informationen auf der rechten Seite.',                       '1',        ''))
+        list.append(getConfigListEntry(_("ECM information"),                  config.plugins.SevenHD.ECMInfo,         'Zeigt die ECM Informationen im unteren Bereich der Infobar an.',              '1',        ''))
         list.append(getConfigListEntry(_('________________________________weather____________________________________________'), ))
         if config.plugins.SevenHD.WeatherStyle.value == 'none':
-           list.append(getConfigListEntry(_("weather"),                       config.plugins.SevenHD.WeatherStyle,    'Zeigt das Wetter an.',                      '4',        'none'))
+           list.append(getConfigListEntry(_("weather"),                       config.plugins.SevenHD.WeatherStyle,    'Zeigt das Wetter an.',                                                        '4',        'none'))
         else:
-           list.append(getConfigListEntry(_("weather"),                       config.plugins.SevenHD.WeatherStyle,    'Zeigt das Wetter an.',                      '1',        ''))
+           list.append(getConfigListEntry(_("weather"),                       config.plugins.SevenHD.WeatherStyle,    'Zeigt das Wetter an.',                                                        '1',        ''))
         
         if config.plugins.SevenHD.WeatherStyle.value != 'none' or config.plugins.SevenHD.ClockStyle.value == "clock-android" or config.plugins.SevenHD.ClockStyle.value == "clock-weather":
            list.append(getConfigListEntry(_("Server"),                        config.plugins.SevenHD.AutoWoeIDServer, 'Stellt den Server ein, wor\xc3\xbcber die Wetterdaten gesucht werden sollen.','4','server'))
            if config.plugins.SevenHD.AutoWoeIDServer.value != 'yahoo':
-              list.append(getConfigListEntry(_("Language for Weather"),       config.plugins.SevenHD.weather_language,'Stellt die Ausgabesprache ein.',                               '4',        'language'))
+              list.append(getConfigListEntry(_("Language for Weather"),       config.plugins.SevenHD.weather_language,'Stellt die Ausgabesprache ein.',                                              '4',        'language'))
            
-           list.append(getConfigListEntry(_("Weather Style"),                 config.plugins.SevenHD.WeatherView,     'W\xc3\xa4hle zwischen Wetter Icon oder Meteo.',                      '1',        ''))
+           list.append(getConfigListEntry(_("Weather Style"),                 config.plugins.SevenHD.WeatherView,     'W\xc3\xa4hle zwischen Wetter Icon oder Meteo.',                               '1',        ''))
            if config.plugins.SevenHD.WeatherView.value == 'meteo':
-              list.append(getConfigListEntry(_("Meteo Color"),                config.plugins.SevenHD.MeteoColor,      'Stellt die Farbe des MeteoIcon ein.',                          '4',        'MeteoColor'))
-           list.append(getConfigListEntry(_("Refresh interval (in minutes)"), config.plugins.SevenHD.refreshInterval, 'Stellt die Abfragezeit des Wetter ein.',                       '4',        'MeteoColor'))
+              list.append(getConfigListEntry(_("Meteo Color"),                config.plugins.SevenHD.MeteoColor,      'Stellt die Farbe des MeteoIcon ein.',                                         '4',        'MeteoColor'))
+           list.append(getConfigListEntry(_("Refresh interval (in minutes)"), config.plugins.SevenHD.refreshInterval, 'Stellt die Abfragezeit des Wetter ein.',                                      '4',        'MeteoColor'))
            if config.plugins.SevenHD.AutoWoeID.value == True:
-              list.append(getConfigListEntry(_("auto weather ID"),            config.plugins.SevenHD.AutoWoeID,       'Auf JA, wird deine Stadt automatisch gesucht und eingestellt.', '4',        'True'))
+              list.append(getConfigListEntry(_("auto weather ID"),            config.plugins.SevenHD.AutoWoeID,       'Auf JA, wird deine Stadt automatisch gesucht und eingestellt.',               '4',        'True'))
            else:
-              list.append(getConfigListEntry(_("auto weather ID"),            config.plugins.SevenHD.AutoWoeID,       'Auf JA, wird deine Stadt automatisch gesucht und eingestellt.', '4',        'none'))
+              list.append(getConfigListEntry(_("auto weather ID"),            config.plugins.SevenHD.AutoWoeID,       'Auf JA, wird deine Stadt automatisch gesucht und eingestellt.',               '4',        'none'))
            if config.plugins.SevenHD.AutoWoeID.value == False:
-              list.append(getConfigListEntry(_("weather ID"),                 config.plugins.SevenHD.weather_city,    'Gib hier deine WoeID ein.',                                    '4',        'WOEID'))
+              list.append(getConfigListEntry(_("weather ID"),                 config.plugins.SevenHD.weather_city,    'Gib hier deine WoeID ein.',                                                   '4',        'WOEID'))
            
         return list
 
