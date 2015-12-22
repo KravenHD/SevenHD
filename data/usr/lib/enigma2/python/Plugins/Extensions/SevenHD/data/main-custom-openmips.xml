@@ -86,13 +86,6 @@
 <panel name="template_menu_left_button" />
 <panel name="template_colorkey_text_source" />
 </screen>
-<!-- ZapHistoryBrowser -->
-<screen backgroundColor="transparent" flags="wfNoBorder" name="ZapHistoryBrowser" position="0,0" size="1280,720" title="Zap History Browser">
-<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="ZapHistoryBrowser" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
-  <widget name="list" position="70,80" size="708,540" itemHeight="50" backgroundColor="SevenFontBackground" zPosition="0" transparent="1" />
-<panel name="template_menu_left_button" />
-<panel name="template_colorkey_text_source" />
-</screen>
 <!-- OMMetrixWeatherSetup -->
 <screen backgroundColor="transparent" flags="wfNoBorder" name="OMMetrixWeatherSetup" position="0,0" size="1280,720" title="OMMetrixWeatherSetup">
 <!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="OMMetrixWeatherSetup" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
