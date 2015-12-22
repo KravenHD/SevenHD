@@ -2249,7 +2249,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,orgpos.y()))
 				}
 			</convert>
     </widget>
-    <widget backgroundColor="SevenFontBackgroundRight" foregroundColor="SevenFont2" position="901,80" render="Listbox" scrollbarMode="showNever" selectionDisabled="1" size="355,540" source="menu" transparent="1" zPosition="3">
+ <widget backgroundColor="SevenFontBackgroundRight" foregroundColor="SevenFont2" position="901,80" render="Listbox" scrollbarMode="showNever" selectionDisabled="1" size="355,540" source="menu" transparent="1" zPosition="3">
       <convert type="TemplatedMultiContent">
 				{"template": [
 					MultiContentEntryText(pos = (0, 0), size = (355, 180), flags = RT_HALIGN_LEFT|RT_VALIGN_TOP|RT_WRAP, text = 2), # index 2 is the Description,
@@ -2336,14 +2336,15 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,orgpos.y()))
     <panel name="template_colorkey_text_source" />
   </screen>
   <!-- UpdatePlugin -->
-  <screen backgroundColor="transparent" flags="wfNoBorder" name="UpdatePlugin" position="0,0" size="1280,720" title="Software Update...">
+<screen name="UpdatePlugin" position="0,0" size="1280,720" title="Software Update..." flags="wfNoBorder" backgroundColor="transparent">
 <!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="UpdatePlugin" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
-    <widget borderWidth="1" name="activityslider" backgroundColor="SevenFontBackground" position="70,160" size="708,15" transparent="1" />
-    <widget backgroundColor="SevenFontBackground" font="Regular2;20" foregroundColor="SevenFont2" position="80,190" render="Label" size="688,25" source="package" transparent="1" />
-    <widget backgroundColor="SevenFontBackground" font="Regular2;20" foregroundColor="SevenFont2" position="80,230" render="Label" size="688,50" source="status" transparent="1" />
-    <widget borderWidth="1" name="slider" position="70,320" backgroundColor="SevenFontBackground" size="708,20" transparent="1" />
-    <panel name="template_menu_left" />
-  </screen>
+		<widget name="list" position="70,135" size="725,387" font="Regular; 29" zPosition="3" itemHeight="35" scrollbarMode="showOnDemand" foregroundColor="SevenFont1" backgroundColor="SevenFontBackground" transparent="1" />
+		<widget name="activityslider" flags="wfBorder" borderWidth="2" borderColor="SevenBorder" position="110,160" size="655,15" foregroundColor="SevenFont1" backgroundColor="SevenFontBackground" transparent="1" />
+		<widget source="package" flags="wfBorder" borderWidth="2" borderColor="SevenBorder" render="Label" position="110,190" size="655,30" font="Regular;20" foregroundColor="SevenFont1" backgroundColor="SevenFontBackground" transparent="1" />
+		<widget source="status" flags="wfBorder" borderWidth="2" borderColor="SevenBorder" render="Label" position="110,230" size="655,30" font="Regular;20" foregroundColor="SevenFont1" backgroundColor="SevenFontBackground" transparent="1" />
+		<widget name="slider" flags="wfBorder" borderWidth="2" borderColor="SevenBorder" position="110,402" size="655,20" transparent="1" />
+<panel name="template_menu_left" />
+</screen>
   <!-- Ipkg -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="Ipkg" position="0,0" size="1280,720" title="Installing Software...">
 <!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="Ipkg" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->

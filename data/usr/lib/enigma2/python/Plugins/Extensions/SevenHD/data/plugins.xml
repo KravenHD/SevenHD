@@ -1122,7 +1122,7 @@
     <widget backgroundColor="SevenBackground" name="bit" position="620,290" size="160,26" font="Regular;18" foregroundColor="SevenFont1" transparent="1" zPosition="1" halign="left" />
     <widget backgroundColor="SevenBackground" name="spiconname" position="80,321" size="690,26" font="Regular;18" foregroundColor="SevenFont1" transparent="1" zPosition="1" halign="left" />
     <widget backgroundColor="SevenBackground" name="spicon" position="240,320" size="690,26" font="Regular;18" foregroundColor="SevenFont1" transparent="1" zPosition="1" halign="left" />
-    <widget backgroundColor="SevenBackground" name="piconslider" position="340,234" size="180,20" zPosition="2" transparent="1" />
+    <widget backgroundColor="SevenBackground" flags="wfBorder" borderColor="SevenBorder" borderWidth="1" name="piconslider" position="340,234" size="180,20" zPosition="2" transparent="1" />
     <widget backgroundColor="SevenBackground" name="picon" position="798,80" size="400,240" zPosition="4" transparent="0" borderWidth="0" borderColor="black" alphatest="blend" />
     <widget backgroundColor="SevenBackground" name="list" position="70,370" size="1130,270" itemHeight="30" zPosition="1" foregroundColor="SevenFont1" foregroundColorSelected="SevenSelFont" scrollbarWidth="5" scrollbarSliderForegroundColor="grey" scrollbarSliderBorderColor="grey" scrollbarSliderBorderWidth="1" transparent="1" />
     <panel name="template_colorkey_text" />
