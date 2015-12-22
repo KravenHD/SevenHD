@@ -1,7 +1,4 @@
 #!/bin/sh
-if [ -f /tmp/skin.xml ]; then
-mv /tmp/skin.xml /usr/share/enigma2/SevenHD
-fi
 echo "                                                          "
 echo "             ...Skin successful installed.                "
 echo "                                                          "

@@ -1,10 +1,10 @@
-#version = '3.6.45'
+#version = '3.6.46'
 import os
 try:
    opkg_info = os.popen("opkg list-installed enigma2-plugin-skins-sevenhd | cut -d ' ' -f3").read()
    version = str(opkg_info.strip().split('+')[0])
 except:
-   version = '3.6.40'
+   version = '3.6.46'
 import re
 import time
 import math
@@ -132,11 +132,10 @@ else:
    for info in mem:
       mem_info.append((info))
        
-   if len(mem_info) > 1:
-      bmem = int(mem_info[0]) + int(mem_info[1])  
-   else:
-      bmem = int(mem_info[0])
-      
+   bmem = 0
+   for x in range(len(mem_info)):
+       bmem += int(mem_info[x])   
+       
 SkinModeList = []
 SkinModeList.append(("1", _("HD Skin 1280 x 720")))
 if bmem > 180:
@@ -214,11 +213,107 @@ ColorList.append(("00FFBE00", _("yellow dark")))
 ColorList.append(("00FFF006", _("yellow")))
 
 TransList = []
-TransList.append(("00", _("off")))
-TransList.append(("0a", _("low")))
-TransList.append(("4a", _("medium")))
-TransList.append(("8a", _("high")))
-TransList.append(("ff", _("full")))
+TransList.append(("00", _("0%")))
+TransList.append(("03", _("1%")))
+TransList.append(("05", _("2%")))
+TransList.append(("08", _("3%")))
+TransList.append(("0a", _("4%")))
+TransList.append(("0d", _("5%")))
+TransList.append(("0f", _("6%")))
+TransList.append(("12", _("7%")))
+TransList.append(("14", _("8%")))
+TransList.append(("17", _("9%")))
+TransList.append(("1a", _("10%")))
+TransList.append(("1c", _("11%")))
+TransList.append(("1f", _("12%")))
+TransList.append(("21", _("13%")))
+TransList.append(("24", _("14%")))
+TransList.append(("26", _("15%")))
+TransList.append(("29", _("16%")))
+TransList.append(("2b", _("17%")))
+TransList.append(("2e", _("18%")))
+TransList.append(("30", _("19%")))
+TransList.append(("33", _("20%")))
+TransList.append(("36", _("21%")))
+TransList.append(("38", _("22%")))
+TransList.append(("3b", _("23%")))
+TransList.append(("3d", _("24%")))
+TransList.append(("40", _("25%")))
+TransList.append(("42", _("26%")))
+TransList.append(("45", _("27%")))
+TransList.append(("47", _("28%")))
+TransList.append(("4a", _("29%")))
+TransList.append(("4d", _("30%")))
+TransList.append(("4f", _("31%")))
+TransList.append(("52", _("32%")))
+TransList.append(("54", _("33%")))
+TransList.append(("57", _("34%")))
+TransList.append(("59", _("35%")))
+TransList.append(("5c", _("36%")))
+TransList.append(("5e", _("37%")))
+TransList.append(("61", _("38%")))
+TransList.append(("63", _("39%")))
+TransList.append(("66", _("40%")))
+TransList.append(("69", _("41%")))
+TransList.append(("6b", _("42%")))
+TransList.append(("6e", _("43%")))
+TransList.append(("70", _("44%")))
+TransList.append(("73", _("45%")))
+TransList.append(("75", _("46%")))
+TransList.append(("78", _("47%")))
+TransList.append(("7a", _("48%")))
+TransList.append(("7d", _("49%")))
+TransList.append(("80", _("50%")))
+TransList.append(("82", _("51%")))
+TransList.append(("85", _("52%")))
+TransList.append(("87", _("53%")))
+TransList.append(("8a", _("54%")))
+TransList.append(("8c", _("55%")))
+TransList.append(("8f", _("56%")))
+TransList.append(("91", _("57%")))
+TransList.append(("94", _("58%")))
+TransList.append(("96", _("59%")))
+TransList.append(("99", _("60%")))
+TransList.append(("9c", _("61%")))
+TransList.append(("9e", _("62%")))
+TransList.append(("a1", _("63%")))
+TransList.append(("a3", _("64%")))
+TransList.append(("a6", _("65%")))
+TransList.append(("a8", _("66%")))
+TransList.append(("ab", _("67%")))
+TransList.append(("ad", _("68%")))
+TransList.append(("b0", _("69%")))
+TransList.append(("b3", _("70%")))
+TransList.append(("b5", _("71%")))
+TransList.append(("b8", _("72%")))
+TransList.append(("ba", _("73%")))
+TransList.append(("bd", _("74%")))
+TransList.append(("bf", _("75%")))
+TransList.append(("c2", _("76%")))
+TransList.append(("c4", _("77%")))
+TransList.append(("c7", _("78%")))
+TransList.append(("c9", _("79%")))
+TransList.append(("cc", _("80%")))
+TransList.append(("cf", _("81%")))
+TransList.append(("d1", _("82%")))
+TransList.append(("d4", _("83%")))
+TransList.append(("d6", _("84%")))
+TransList.append(("d9", _("85%")))
+TransList.append(("db", _("86%")))
+TransList.append(("de", _("87%")))
+TransList.append(("e0", _("88%")))
+TransList.append(("e3", _("89%")))
+TransList.append(("e6", _("90%")))
+TransList.append(("e8", _("91%")))
+TransList.append(("eb", _("92%")))
+TransList.append(("ed", _("93%")))
+TransList.append(("f0", _("94%")))
+TransList.append(("f2", _("95%")))
+TransList.append(("f5", _("96%")))
+TransList.append(("f7", _("97%")))
+TransList.append(("fa", _("98%")))
+TransList.append(("fc", _("99%")))
+TransList.append(("ff", _("100%")))
 
 BackList = ['brownleather', 'carbon', 'lightwood', 
             'redwood', 'slate']
@@ -275,16 +370,41 @@ config.plugins.SevenHD.RunningText = ConfigSelection(default="running", choices 
 				("none", _("off"))
 				])
 config.plugins.SevenHD.Startdelay = ConfigSelection(default="startdelay=2000", choices = [
+				("startdelay=1000", _("1 sec")),
 				("startdelay=2000", _("2 sec")),
+				("startdelay=3000", _("3 sec")),
 				("startdelay=4000", _("4 sec")),
+				("startdelay=5000", _("5 sec")),
 				("startdelay=6000", _("6 sec")),
+				("startdelay=7000", _("7 sec")),
 				("startdelay=8000", _("8 sec")),
-				("startdelay=10000", _("10 sec"))
+				("startdelay=9000", _("9 sec")),
+				("startdelay=10000", _("10 sec")),
+				("startdelay=11000", _("11 sec")),
+				("startdelay=12000", _("12 sec")),
+				("startdelay=13000", _("13 sec")),
+				("startdelay=14000", _("14 sec")),
+				("startdelay=15000", _("15 sec")),
+				("startdelay=16000", _("16 sec")),
+				("startdelay=17000", _("17 sec")),
+				("startdelay=18000", _("18 sec")),
+				("startdelay=19000", _("19 sec")),
+				("startdelay=20000", _("20 sec"))
 				])
 config.plugins.SevenHD.Steptime = ConfigSelection(default="steptime=90", choices = [
-				("steptime=150", _("low")),
-				("steptime=90", _("standard")),
-				("steptime=30", _("high"))
+				("steptime=25", _("25")),
+				("steptime=50", _("50")),
+				("steptime=75", _("75")),
+				("steptime=90", _("90")),
+				("steptime=115", _("115")),
+				("steptime=140", _("140")),
+				("steptime=165", _("165")),
+				("steptime=190", _("190")),
+				("steptime=215", _("215")),
+				("steptime=240", _("240")),
+				("steptime=265", _("265")),
+				("steptime=290", _("290")),
+				("steptime=315", _("315"))
 				])
 config.plugins.SevenHD.VolumeStyle = ConfigSelection(default="volumestyle-original", choices = [
 				("volumestyle-original", _("original")),
@@ -321,7 +441,8 @@ config.plugins.SevenHD.EMCStyle = ConfigSelection(default="emcnocover", choices 
 				("emcsmallcover", _("small cover")),
 				("emcbigcover", _("big cover")),
 				("emcverybigcover", _("very big cover")),
-				("emcminitv", _("miniTV"))
+				("emcminitv", _("miniTV (1)")),
+				("emcminitv2", _("miniTV (2)"))
 				])
 				
 config.plugins.SevenHD.MovieSelectionStyle = ConfigSelection(default="movieselectionnocover", choices = [

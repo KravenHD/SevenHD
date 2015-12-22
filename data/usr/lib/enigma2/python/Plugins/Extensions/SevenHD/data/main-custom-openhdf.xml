@@ -140,7 +140,7 @@
   <!-- HddInfo -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="HddInfo" position="0,0" size="1280,720" title="Hard Drive Info">
 <!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="HddInfo" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
-  <widget name="config" position="95,237" size="585,30" backgroundColor="SevenFontBackground" transparent="1" />
+  <widget name="config" position="95,237" size="585,30" itemHeight="26" font="Regular;22" backgroundColor="SevenFontBackground" transparent="1" />
   <widget font="Regular;20" foregroundColor="SevenFont1" halign="left" name="model" position="95,320" size="580,25" valign="center" backgroundColor="SevenFontBackground" transparent="1" />
   <widget font="Regular;20" foregroundColor="SevenFont1" halign="left" name="serial" position="95,350" size="580,25" valign="center" backgroundColor="SevenFontBackground" transparent="1" />
   <widget font="Regular;20" foregroundColor="SevenFont1" halign="left" name="firmware" position="95,380" size="580,25" valign="center" backgroundColor="SevenFontBackground" transparent="1" />
@@ -222,9 +222,8 @@
   <!-- HFD Toolbox -->
   <screen name="Fantastic" position="0,0" size="1280,720" title="HDF Toolbox" backgroundColor="transparent">
 <!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="Fantastic" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
-  <widget name="menu" position="70,100" size="510,469" backgroundColor="SevenFontBackground" transparent="1" />
+  <widget name="menu" position="70,100" size="510,469" itemHeight="26" font="Regular;22" backgroundColor="SevenFontBackground" transparent="1" />
   <ePixmap position="70,445" size="380,57" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/HDF-Toolbox/banner.png" zPosition="2" alphatest="on" />
-  <eLabel text="Toolbox Version - 13.11.2014" position="536,607" size="304,45" font="Regular2; 22" valign="center" halign="center" transparent="1" backgroundColor="SevenFontBackground" foregroundColor="SevenFont2" />
   <panel name="template_menu_left" />
 </screen>
   <!-- LogManager -->
@@ -237,25 +236,25 @@
   <!-- DownloadMenu -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="Hdf_Downloader" position="0,0" size="1280,720" title="Select your Download">
 <!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="Hdf_Downloader" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
-  <widget name="downloadmenu" position="68,115" size="400,300" backgroundColor="SevenFontBackground" transparent="1" />
+  <widget name="downloadmenu" position="68,115" size="400,315" itemHeight="26" font="Regular;22" backgroundColor="SevenFontBackground" transparent="1" />
   <widget source="introduction" render="Label" position="12,438" size="560,30" zPosition="10" font="Regular;21" foregroundColor="SevenFont1" halign="center" valign="center" backgroundColor="SevenFontBackground" transparent="1" />
   <widget source="size" render="Label" position="555,121" size="100,30" zPosition="10" font="Regular;15" foregroundColor="SevenFont1" halign="left" valign="top" backgroundColor="SevenFontBackground" transparent="1" />
   <widget source="size2" render="Label" position="485,116" size="100,30" zPosition="10" font="Regular;21" foregroundColor="SevenFont1" halign="left" valign="top" backgroundColor="SevenFontBackground" transparent="1" />
   <widget source="description" render="Label" position="485,210" size="330,150" zPosition="10" font="Regular;15" foregroundColor="SevenFont1" halign="left" valign="top" backgroundColor="SevenFontBackground" transparent="1" />
   <widget source="description2" render="Label" position="485,168" size="150,30" zPosition="10" font="Regular;21" foregroundColor="SevenFont1" halign="left" valign="top" backgroundColor="SevenFontBackground" transparent="1" />
-  <ePixmap name="1" position="1058,385" zPosition="1" size="35,25" pixmap="skin_default/buttons/key_1.png" transparent="1" alphatest="on" />
+  <ePixmap name="1" position="1058,390" zPosition="1" size="35,25" pixmap="skin_default/buttons/key_1.png" transparent="1" alphatest="on" />
   <widget name="key_1" position="853,385" zPosition="2" size="200,25" valign="center" halign="right" font="Regular;15" foregroundColor="SevenFont1" transparent="1" shadowColor="black" shadowOffset="-1,-1" />
-  <ePixmap name="2" position="1058,410" zPosition="1" size="35,25" pixmap="skin_default/buttons/key_2.png" transparent="1" alphatest="on" />
+  <ePixmap name="2" position="1058,415" zPosition="1" size="35,25" pixmap="skin_default/buttons/key_2.png" transparent="1" alphatest="on" />
   <widget name="key_2" position="853,410" zPosition="2" size="200,25" valign="center" halign="right" font="Regular;15" foregroundColor="SevenFont1" transparent="1" shadowColor="black" shadowOffset="-1,-1" />
-  <ePixmap name="3" position="1058,435" zPosition="1" size="35,25" pixmap="skin_default/buttons/key_3.png" transparent="1" alphatest="on" />
+  <ePixmap name="3" position="1058,440" zPosition="1" size="35,25" pixmap="skin_default/buttons/key_3.png" transparent="1" alphatest="on" />
   <widget name="key_3" position="853,435" zPosition="2" size="200,25" valign="center" halign="right" font="Regular;15" foregroundColor="SevenFont1" transparent="1" shadowColor="black" shadowOffset="-1,-1" />
-  <ePixmap name="4" position="1058,460" zPosition="1" size="35,25" pixmap="skin_default/buttons/key_4.png" transparent="1" alphatest="on" />
+  <ePixmap name="4" position="1058,465" zPosition="1" size="35,25" pixmap="skin_default/buttons/key_4.png" transparent="1" alphatest="on" />
   <widget name="key_4" position="853,460" zPosition="2" size="200,25" valign="center" halign="right" font="Regular;15" foregroundColor="SevenFont1" transparent="1" shadowColor="black" shadowOffset="-1,-1" />
-  <ePixmap name="5" position="1058,485" zPosition="1" size="35,25" pixmap="skin_default/buttons/key_5.png" transparent="1" alphatest="on" />
+  <ePixmap name="5" position="1058,490" zPosition="1" size="35,25" pixmap="skin_default/buttons/key_5.png" transparent="1" alphatest="on" />
   <widget name="key_5" position="853,485" zPosition="2" size="200,25" valign="center" halign="right" font="Regular;15" foregroundColor="SevenFont1" transparent="1" shadowColor="black" shadowOffset="-1,-1" />
-  <ePixmap name="6" position="1058,510" zPosition="1" size="35,25" pixmap="skin_default/buttons/key_6.png" transparent="1" alphatest="on" />
+  <ePixmap name="6" position="1058,515" zPosition="1" size="35,25" pixmap="skin_default/buttons/key_6.png" transparent="1" alphatest="on" />
   <widget name="key_6" position="853,510" zPosition="2" size="200,25" valign="center" halign="right" font="Regular;15" foregroundColor="SevenFont1" transparent="1" shadowColor="black" shadowOffset="-1,-1" />
-  <ePixmap name="0" position="1058,535" zPosition="1" size="35,25" pixmap="skin_default/buttons/key_0.png" transparent="1" alphatest="on" />
+  <ePixmap name="0" position="1058,540" zPosition="1" size="35,25" pixmap="skin_default/buttons/key_0.png" transparent="1" alphatest="on" />
   <widget name="key_0" position="853,535" zPosition="2" size="200,25" valign="center" halign="right" font="Regular;15" foregroundColor="SevenFont1" transparent="1" shadowColor="black" shadowOffset="-1,-1" />
 <panel name="template_menu_full_button" />
   <panel name="template_colorkey_text_source" />
@@ -263,7 +262,7 @@
   <!-- Softcam Cardserver Manager -->
 <screen backgroundColor="transparent" flags="wfNoBorder" name="ScSelection" position="0,0" size="1280,720" title="Softcam Cardserver Manager">
 <!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="ScSelection" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
-  <widget name="entries" position="68,160" size="505,310" enableWrapAround="1" backgroundColor="SevenFontBackground" transparent="1" />
+  <widget name="entries" position="68,160" size="505,310" itemHeight="26" font="Regular;22" enableWrapAround="1" backgroundColor="SevenFontBackground" transparent="1" />
   <eLabel font="Regular;18" foregroundColor="SevenFont1" halign="left" valign="top" position="695,160" size="85,26" text="ECM:" zPosition="2" transparent="1" backgroundColor="SevenFontBackground" />
   <widget source="session.CurrentService" render="Label" position="782,160" size="490,56" transparent="1" zPosition="2" font="Regular;18" foregroundColor="SevenFont1" valign="top" halign="left" noWrap="1" backgroundColor="SevenFontBackground">
     <convert type="CryptoInfo">VerboseInfo</convert>

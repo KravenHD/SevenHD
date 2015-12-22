@@ -333,7 +333,7 @@
     <widget source="Event" render="SevenHDRunningText" transparent="1" options="movetype=running,direction=top,startpoint=0,startdelay=2000,steptime=90,wrap=1,always=0,repeat=2,oneshot=1" position="25,145" size="880,104" font="Regular2; 19" backgroundColor="SevenFontBackground" foregroundColor="SevenFont1" valign="top" zPosition="0">
       <convert type="SevenHDEventName">ExtendedDescription</convert>
     </widget>
-    <widget name="timeline_text" position="25,273" size="1230,25"  transparent="1" backgroundColor="SevenFontBackground" />
+    <widget name="timeline_text" position="25,273" size="1230,25" transparent="1" backgroundColor="SevenFontBackground" />
 	<widget name="bouquetlist" position="25,273" size="1230,25" zPosition="2" transparent="1" backgroundColor="SevenFontBackground" />
     <widget name="list" position="25,304" size="1230,345" EntryFontWrap="no" scrollbarMode="showNever" backgroundColor="SevenFontBackground" transparent="1" />
     <widget name="timeline_now" position="80,297" zPosition="2" size="13,355" pixmap="SevenHD/epg/timeline-now.png" alphatest="blend" transparent="1" />
@@ -341,6 +341,10 @@
     <eLabel position="101,125" size="535,1" backgroundColor="SevenLine" />
     <panel name="template_menu_full_button" />
     <panel name="template_colorkey_text" />
+<eLabel backgroundColor="SevenBorder" position="925,262" size="334,4" zPosition="5" />
+<eLabel backgroundColor="SevenBorder" position="925,74" size="334,4" zPosition="5" />
+<eLabel backgroundColor="SevenBorder" position="1256,74" size="4,192" zPosition="5" />
+<eLabel backgroundColor="SevenBorder" position="925,74" size="4,192" zPosition="5" />
   </screen>
   <!-- GraphicalInfoBarEPG -->
   <screen name="GraphicalInfoBarEPG" title="InfoBar" position="0,435" size="1280,285" backgroundColor="SevenBackground" flags="wfNoBorder">

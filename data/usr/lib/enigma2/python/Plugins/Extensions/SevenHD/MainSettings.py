@@ -43,7 +43,7 @@ class MainSettings(ConfigListScreen, Screen):
                          <widget name="config" position="18,72" size="816,575" scrollbarMode="showOnDemand" transparent="1" zPosition="1" backgroundColor="#00000000" />
                          <eLabel position="70,12" size="708,46" text="SevenHD" font="Regular; 35" valign="center" halign="center" transparent="1" backgroundColor="#00000000" foregroundColor="#00ffffff" name="," />
                          <widget name="helperimage" position="891,274" size="372,209" zPosition="1" backgroundColor="#00000000" />
-                         <widget name="description" position="891,490" size="372,200" font="Regular; 26" valign="center" halign="center" transparent="1" backgroundColor="#00000000" foregroundColor="#00ffffff" />
+                         <widget name="description" position="891,490" size="372,200" font="Regular; 22" valign="center" halign="center" transparent="1" backgroundColor="#00000000" foregroundColor="#00ffffff" />
                          <widget backgroundColor="#00000000" font="Regular2; 34" foregroundColor="#00ffffff" position="70,12" render="Label" size="708,46" source="Title" transparent="1" halign="center" valign="center" noWrap="1" />
                          <eLabel backgroundColor="#00000000" position="6,6" size="842,708" transparent="0" zPosition="-9" foregroundColor="#00ffffff" />
                          <eLabel backgroundColor="#00ffffff" position="6,6" size="842,2" zPosition="2" />
@@ -116,32 +116,32 @@ class MainSettings(ConfigListScreen, Screen):
     def getMenuItemList(self):
         list = [] 
         list.append(getConfigListEntry(_('_____________________________global system settings________________________________________'), ))
-        list.append(getConfigListEntry(_("image"),                     config.plugins.SevenHD.Image,                     'Diese Einstellung spezifiziert dein Image.',                                           '4',                'IMAGE'))
-        list.append(getConfigListEntry(_("skinmode"),                  config.plugins.SevenHD.skin_mode,                 'Hier kannst du die Aufl\xc3\xb6sung zwischen HD, FHD und UHD wechseln.',               '4',                'SKIN_MODE'))
+        list.append(getConfigListEntry(_("image"),                     config.plugins.SevenHD.Image,                     'Diese Einstellung spezifiziert dein Image.',                                                         '4',                'IMAGE'))
+        list.append(getConfigListEntry(_("skinmode"),                  config.plugins.SevenHD.skin_mode,                 'Hier kannst du die Aufl\xc3\xb6sung zwischen HD, FHD und UHD wechseln.',                             '4',                'SKIN_MODE'))
         if config.plugins.SevenHD.skin_mode.value == '7':
-           list.append(getConfigListEntry(_("X Resolution"),           config.plugins.SevenHD.skin_mode_x,               'Stell hier die Breite ein.',                                                           '4',                'x_resolution'))
-           list.append(getConfigListEntry(_("Y Resolution"),           config.plugins.SevenHD.skin_mode_y,               'Stell hier die H\xc3\xb6he ein.',                                                      '4',                'y_resolution'))
-        list.append(getConfigListEntry(_("buttons"),                   config.plugins.SevenHD.ButtonStyle,               'Stellt die Farbe der Icons in der Infobar und Menu ein.',                              '4',                'Button'))
-        list.append(getConfigListEntry(_("plugin icons"),              config.plugins.SevenHD.IconStyle,                 'Stellt die Farbe der [+] und | im PluginBrowser sowie NetzwerkBrowser ein.',           '4',                'Icons'))
-        list.append(getConfigListEntry(_("volume style"),              config.plugins.SevenHD.VolumeStyle,               '\xc3\x84ndert die Darstellung der Lautst\xc3\xa4rkeanzeige.',                          '1',                ''))
-        list.append(getConfigListEntry(_("volumebar"),                 config.plugins.SevenHD.ProgressVol,               'Stellt die Farbe der Lautst\xc3\xa4rkeanzeige ein.',                                   '4',                'progressvol'))
+           list.append(getConfigListEntry(_("X Resolution"),           config.plugins.SevenHD.skin_mode_x,               'Stell hier die Breite ein.',                                                                         '4',                'x_resolution'))
+           list.append(getConfigListEntry(_("Y Resolution"),           config.plugins.SevenHD.skin_mode_y,               'Stell hier die H\xc3\xb6he ein.',                                                                    '4',                'y_resolution'))
+        list.append(getConfigListEntry(_("buttons"),                   config.plugins.SevenHD.ButtonStyle,               'Stellt die Farbe der Icons in der Infobar und Menu ein.',                                            '4',                'Button'))
+        list.append(getConfigListEntry(_("plugin icons"),              config.plugins.SevenHD.IconStyle,                 'Stellt die Farbe der [+] und | im PluginBrowser sowie NetzwerkBrowser ein.',                         '4',                'Icons'))
+        list.append(getConfigListEntry(_("volume style"),              config.plugins.SevenHD.VolumeStyle,               '\xc3\x84ndert die Darstellung der Lautst\xc3\xa4rkeanzeige.',                                        '1',                ''))
+        list.append(getConfigListEntry(_("volumebar"),                 config.plugins.SevenHD.ProgressVol,               'Stellt die Farbe der Lautst\xc3\xa4rkeanzeige ein.',                                                 '4',                'progressvol'))
         list.append(getConfigListEntry(_('_____________________________________font__________________________________________________'), ))
         if config.plugins.SevenHD.systemfonts.value:
-           list.append(getConfigListEntry(_("use systemfonts"),        config.plugins.SevenHD.systemfonts,               'Wenn JA, dann kannst du alle SystemFonts beim n\xc3\xa4chsten PluginStart nutzen.',    '4',                'True'))
+           list.append(getConfigListEntry(_("use systemfonts"),        config.plugins.SevenHD.systemfonts,               'Wenn JA, dann kannst du alle SystemFonts beim n\xc3\xa4chsten PluginStart nutzen.',                  '4',                'True'))
         else:
-           list.append(getConfigListEntry(_("use systemfonts"),        config.plugins.SevenHD.systemfonts,               'Wenn JA, dann kannst du alle Systemschriften beim n\xc3\xa4chsten Pluginstart nutzen.','4',                'none'))
-        list.append(getConfigListEntry(_("primary font style"),        config.plugins.SevenHD.FontStyle_1,               'W\xc3\xa4hle hier die prim\xc3\xa4re Schrift aus.',                                    '4',                'fontpreview'))
-        list.append(getConfigListEntry(_("primary font height in %"),  config.plugins.SevenHD.FontStyleHeight_1,         'Stellt die Gr\xc3\xb6\xc3\x9fe der prim\xc3\xa4ren Schrift ein.',                      '4',                'fontheight'))
-        list.append(getConfigListEntry(_("secondary font style"),      config.plugins.SevenHD.FontStyle_2,               'W\xc3\xa4hle hier die sekund\xc3\xa4re Schrift aus.',                                  '4',                'fontpreview'))
-        list.append(getConfigListEntry(_("secondary font height in %"),config.plugins.SevenHD.FontStyleHeight_2,         'Stellt die Gr\xc3\xb6\xc3\x9fe der sekund\xc3\xa4ren Schrift ein.',                    '4',                'fontheight'))
+           list.append(getConfigListEntry(_("use systemfonts"),        config.plugins.SevenHD.systemfonts,               'Wenn JA, dann kannst du alle Systemschriften beim n\xc3\xa4chsten Pluginstart nutzen.',              '4',                'none'))
+        list.append(getConfigListEntry(_("primary font style"),        config.plugins.SevenHD.FontStyle_1,               'W\xc3\xa4hle hier die prim\xc3\xa4re Schrift aus.',                                                  '4',                'fontpreview'))
+        list.append(getConfigListEntry(_("primary font height in %"),  config.plugins.SevenHD.FontStyleHeight_1,         'Stellt die Gr\xc3\xb6\xc3\x9fe der prim\xc3\xa4ren Schrift ein.',                                    '4',                'fontheight'))
+        list.append(getConfigListEntry(_("secondary font style"),      config.plugins.SevenHD.FontStyle_2,               'W\xc3\xa4hle hier die sekund\xc3\xa4re Schrift aus.',                                                '4',                'fontpreview'))
+        list.append(getConfigListEntry(_("secondary font height in %"),config.plugins.SevenHD.FontStyleHeight_2,         'Stellt die Gr\xc3\xb6\xc3\x9fe der sekund\xc3\xa4ren Schrift ein.',                                  '4',                'fontheight'))
         list.append(getConfigListEntry(_('__________________________________running text____________________________________________'), ))
-        list.append(getConfigListEntry(_("activate"),                  config.plugins.SevenHD.RunningText,               'L\xc3\xa4sst die Schrift scrollen oder schreiben.',                                    '1',                'RunningText'))
+        list.append(getConfigListEntry(_("activate"),                  config.plugins.SevenHD.RunningText,               'L\xc3\xa4sst die Schrift scrollen oder schreiben.',                                                  '1',                'RunningText'))
         if config.plugins.SevenHD.RunningText.value == 'running':
-           list.append(getConfigListEntry(_("startdelay"),             config.plugins.SevenHD.Startdelay,                'Stellt die Startzeit ein, nach wieviel Sek. der Text anfangen soll sich zu bewegen.',  '4',                'Delay'))
-           list.append(getConfigListEntry(_("steptime"),               config.plugins.SevenHD.Steptime,                  'Stellt die Laufgeschwindigkeit ein.',                                                  '4',                'Delay'))
+           list.append(getConfigListEntry(_("startdelay"),             config.plugins.SevenHD.Startdelay,                'Stellt die Startzeit ein, nach wieviel Sek. der Text anfangen soll sich zu bewegen.',                '4',                'Delay'))
+           list.append(getConfigListEntry(_("steptime"),               config.plugins.SevenHD.Steptime,                  'Stellt die Laufgeschwindigkeit ein. Je h\xc3\xb6her der Wert, desto langsamger die Geschwindigkeit', '4',                'Delay'))
         list.append(getConfigListEntry(_('__________________________________transparency_____________________________________________'), ))
-        list.append(getConfigListEntry(_("main window"),               config.plugins.SevenHD.BackgroundColorTrans,      'Stellt die Transparenz des linken Fenster ein.',                                       '1',                ''))
-        list.append(getConfigListEntry(_("right window"),              config.plugins.SevenHD.BackgroundRightColorTrans, 'Stellt die Transparenz des rechten Fenster ein.',                                      '1',                ''))
+        list.append(getConfigListEntry(_("main window"),               config.plugins.SevenHD.BackgroundColorTrans,      'Stellt die Transparenz des linken Fenster ein.',                                                     '1',                'transparency'))
+        list.append(getConfigListEntry(_("right window"),              config.plugins.SevenHD.BackgroundRightColorTrans, 'Stellt die Transparenz des rechten Fenster ein.',                                                    '1',                'transparency'))
         
         return list
 

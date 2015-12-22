@@ -26,9 +26,9 @@
     <convert type="SevenHDNextEvents">PrimeTime,noDuration</convert>
   </widget>
 
-<eLabel backgroundColor="SevenLineCS" position="30,387" size="505,4" zPosition="2" />
-<eLabel backgroundColor="SevenLineCS" position="30,108" size="505,4" zPosition="2" />
-<eLabel backgroundColor="SevenLineCS" position="531,108" size="4,282" zPosition="2" />
-<eLabel backgroundColor="SevenLineCS" position="30,108" size="4,282" zPosition="2" />
+<eLabel backgroundColor="SevenBorderCS" position="30,387" size="505,4" zPosition="5" />
+<eLabel backgroundColor="SevenBorderCS" position="30,108" size="505,4" zPosition="5" />
+<eLabel backgroundColor="SevenBorderCS" position="531,108" size="4,282" zPosition="5" />
+<eLabel backgroundColor="SevenBorderCS" position="30,108" size="4,282" zPosition="5" />
 </screen>
 <!-- ChannelSelection Preview */-->

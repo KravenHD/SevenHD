@@ -43,7 +43,7 @@ class ChannelSettings(ConfigListScreen, Screen):
                          <widget name="config" position="18,72" size="816,575" scrollbarMode="showOnDemand" transparent="1" zPosition="1" backgroundColor="#00000000" />
                          <eLabel position="70,12" size="708,46" text="SevenHD" font="Regular; 35" valign="center" halign="center" transparent="1" backgroundColor="#00000000" foregroundColor="#00ffffff" name="," />
                          <widget name="helperimage" position="891,274" size="372,209" zPosition="1" backgroundColor="#00000000" />
-                         <widget name="description" position="891,490" size="372,200" font="Regular; 26" valign="center" halign="center" transparent="1" backgroundColor="#00000000" foregroundColor="#00ffffff" />
+                         <widget name="description" position="891,490" size="372,200" font="Regular; 22" valign="center" halign="center" transparent="1" backgroundColor="#00000000" foregroundColor="#00ffffff" />
                          <widget backgroundColor="#00000000" font="Regular2; 34" foregroundColor="#00ffffff" position="70,12" render="Label" size="708,46" source="Title" transparent="1" halign="center" valign="center" noWrap="1" />
                          <eLabel backgroundColor="#00000000" position="6,6" size="842,708" transparent="0" zPosition="-9" foregroundColor="#00ffffff" />
                          <eLabel backgroundColor="#00ffffff" position="6,6" size="842,2" zPosition="2" />
@@ -121,7 +121,7 @@ class ChannelSettings(ConfigListScreen, Screen):
         if ChannelSelectionStyle.startswith('channelselection-threecolumns') or ChannelSelectionStyle.endswith('2') or ChannelSelectionStyle.endswith('3'):
            pass
         else:
-           list.append(getConfigListEntry(_("prime time"),                config.plugins.SevenHD.PrimeTimeTime,              'Zeigt dir in der Kanalliste die PrimeTime an.',                   '4',       'primetimetime'))
+           list.append(getConfigListEntry(_("prime time"),                config.plugins.SevenHD.PrimeTimeTime,              'Zeigt dir in der Kanalliste die PrimeTime an.',                   '4',       'primetime'))
         list.append(getConfigListEntry(_('_____________________________background________________________________________'), ))
         list.append(getConfigListEntry(_("color left"),                   config.plugins.SevenHD.ChannelBack1,               'Stellt den Hintergrund der linken Spalte ein.',                   '4',       'colorleftcs'))
         if ChannelSelectionStyle.startswith('channelselection-threecolumns'):
