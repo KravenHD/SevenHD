@@ -531,6 +531,8 @@ class SevenHD(Screen):
 			self.skinSearchAndReplace.append(['render="SevenHDRunningText" options="movetype=running,startpoint=0,startdelay=2000,steptime=90,wrap=0,always=0,repeat=2,oneshot=1"', 'render="Label"'])
 		
 		self.skinSearchAndReplace.append(["startdelay=2000", config.plugins.SevenHD.Startdelay.value])
+		
+		self.skinSearchAndReplace.append(["steptime=90", config.plugins.SevenHD.Steptime.value])
 			
 		if not config.plugins.SevenHD.SelectionBorder.value == "none":
 			self.selectionbordercolor = config.plugins.SevenHD.SelectionBorder.value

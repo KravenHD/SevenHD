@@ -2119,14 +2119,14 @@
     <widget backgroundColor="SevenBackground" source="global.CurrentTime" position="860,50" size="400,55" render="Label" font="Regular;26" valign="center" halign="right" foregroundColor="SevenFont2" transparent="1">
         <convert type="SevenHDClockToText">Format:%A, %d.%m.%Y  %H:%M</convert>
     </widget>
-    <widget name="video" position="938,120" size="322,182" zPosition="5" backgroundColor="transparent" />
+    <widget name="video" position="938,120" size="322,182" zPosition="9" backgroundColor="transparent" />
 	<!-- Channelzuordnung -->
     <widget name="list" position="20,150" size="880,470" zPosition="5" backgroundColor="SevenBackground" foregroundColor="SevenFont1" enableWrapAround="1" transparent="1" />
 	<!-- Marker-/Planer-Listen -->
     <widget name="config" position="20,120" size="870,500" zPosition="5" backgroundColor="SevenFontBackground" foregroundColor="SevenFont1" enableWrapAround="1" transparent="1" />
     <widget name="menu_list" position="20,120" size="870,500" zPosition="5" backgroundColor="SevenFontBackground" foregroundColor="SevenFont1" foregroundColorSelected="SevenSelFont" enableWrapAround="1" transparent="1" />
 	<!-- Log-Listen -->
-    <widget name="log" position="20,120" size="1240,500" zPosition="5" backgroundColor="SevenBackground" foregroundColor="SevenFont1" enableWrapAround="1" transparent="1" />
+    <widget name="log" position="20,120" size="902,500" zPosition="5" backgroundColor="SevenBackground" foregroundColor="SevenFont1" enableWrapAround="1" transparent="1" />
 	<!-- PopUp-Listen -->
     <widget name="popup_bg" borderWidth="2" flags="wfBorder"  position="188,178" size="564,354" backgroundColor="SevenBackground" pixmap="SevenHD/back/menumain.png" foregroundColor="SevenFont2" transparent="0" zPosition="6" />
     <widget name="popup_list" borderWidth="2" flags="wfBorder"  position="190,180" size="560,350" zPosition="7" backgroundColor="SevenBackground" pixmap="SevenHD/back/menumain.png" foregroundColor="SevenFont1" enableWrapAround="1" transparent="0" />

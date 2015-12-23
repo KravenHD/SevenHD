@@ -7,9 +7,7 @@
   <widget font="Regular; 30" foregroundColor="SevenProgramCS" position="30,16" halign="center" render="SevenHDRunningText" options="movetype=running,startpoint=0,startdelay=2000,steptime=90,wrap=0,always=0,repeat=2,oneshot=1" size="505,40" source="ServiceEvent" backgroundColor="SevenFontBackCS" zPosition="1" valign="bottom" noWrap="1" transparent="1">
     <convert type="SevenHDEventName">Name</convert>
   </widget>
-  <widget source="ServiceEvent" render="SevenHDMiniTV" position="30,109" size="505,282" backgroundColor="transparent" zPosition="2">
-    <convert type="SevenHDMiniTVDisplay" />
-    </widget>
+  <widget source="session.VideoPicture" render="Pig" position="30,109" size="505,282" backgroundColor="transparent" zPosition="2" />
   <widget backgroundColor="SevenFontBackCS" font="Regular; 18" halign="right" position="459,80" render="Label" size="77,25" source="ServiceEvent" transparent="1" valign="center" zPosition="1" foregroundColor="SevenRuntimeCS">
     <convert type="SevenHDEventTime">Remaining</convert>
     <convert type="SevenHDRemainingToText">InMinutes</convert>
