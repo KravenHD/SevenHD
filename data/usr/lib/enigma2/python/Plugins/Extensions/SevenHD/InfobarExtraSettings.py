@@ -123,7 +123,7 @@ class InfobarExtraSettings(ConfigListScreen, Screen):
         list.append(getConfigListEntry(_("satellite information"),            config.plugins.SevenHD.SatInfo,         'Zeigt die Satelliten Informationen auf der rechten Seite.',                   '1',        ''))
         list.append(getConfigListEntry(_("system information"),               config.plugins.SevenHD.SysInfo,         'Zeigt die System Informationen auf der rechten Seite.',                       '1',        ''))
         list.append(getConfigListEntry(_("ECM information"),                  config.plugins.SevenHD.ECMInfo,         'Zeigt die ECM Informationen im unteren Bereich der Infobar an.',              '1',        ''))
-        list.append(getConfigListEntry(_("signal strengh"),                   config.plugins.SevenHD.FrontInfo,       'Zeigt die Anzeige in SNR oder dB an.',                                       '1',        'SNRdB'))
+        list.append(getConfigListEntry(_("signal strengh"),                   config.plugins.SevenHD.FrontInfo,       'Zeigt die Anzeige in SNR oder dB an.',                                        '4',        'SNRdB'))
         list.append(getConfigListEntry(_('________________________________weather____________________________________________'), ))
         if config.plugins.SevenHD.WeatherStyle.value == 'none':
            list.append(getConfigListEntry(_("weather"),                       config.plugins.SevenHD.WeatherStyle,    'Zeigt das Wetter an.',                                                        '4',        'none'))
