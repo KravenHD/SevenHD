@@ -4041,7 +4041,7 @@
   </widget>
   <ePixmap pixmap="SevenHD/back/ibone.png" position="14,533" size="1250,170" alphatest="blend" zPosition="-8" />
   <eLabel backgroundColor="SevenFontBackgroundIB1" foregroundColor="SevenFont1" font="Regular; 19" halign="left" noWrap="1" position="275,611" size="196,25" text="Sendung läuft seit" transparent="1" valign="center" zPosition="1" />
-  <widget backgroundColor="SevenFontBackgroundIB1" foregroundColor="SevenFont1" font="Regular; 19" halign="left" position="438,611" render="Label" size="75,25" source="session.Event_Now" transparent="1" valign="center" zPosition="1">
+  <widget backgroundColor="SevenFontBackgroundIB1" foregroundColor="SevenFont1" font="Regular; 19" halign="left" position="443,611" render="Label" size="75,25" source="session.Event_Now" transparent="1" valign="center" zPosition="1">
     <convert type="SevenHDEventTime">RunTime</convert>
     <convert type="SevenHDRemainingToText">InMinutes</convert>
   </widget>
@@ -4208,7 +4208,7 @@
   </widget>
   <ePixmap pixmap="SevenHD/back/ibone.png" position="14,533" size="1250,170" alphatest="blend" zPosition="-8" />
   <eLabel backgroundColor="SevenFontBackgroundIB1" foregroundColor="SevenFont1" font="Regular; 19" halign="left" noWrap="1" position="275,611" size="196,25" text="Sendung läuft seit" transparent="1" valign="center" zPosition="1" />
-  <widget backgroundColor="SevenFontBackgroundIB1" foregroundColor="SevenFont1" font="Regular; 19" halign="left" position="438,611" render="Label" size="75,25" source="session.Event_Now" transparent="1" valign="center" zPosition="1">
+  <widget backgroundColor="SevenFontBackgroundIB1" foregroundColor="SevenFont1" font="Regular; 19" halign="left" position="443,611" render="Label" size="75,25" source="session.Event_Now" transparent="1" valign="center" zPosition="1">
     <convert type="SevenHDEventTime">RunTime</convert>
     <convert type="SevenHDRemainingToText">InMinutes</convert>
   </widget>
@@ -4381,7 +4381,7 @@
   </widget>
   <ePixmap pixmap="SevenHD/back/ibone.png" position="14,533" size="1250,170" alphatest="blend" zPosition="-8" />
   <eLabel backgroundColor="SevenFontBackgroundIB1" foregroundColor="SevenFont1" font="Regular; 19" halign="left" noWrap="1" position="275,611" size="196,25" text="Sendung läuft seit" transparent="1" valign="center" zPosition="1" />
-  <widget backgroundColor="SevenFontBackgroundIB1" foregroundColor="SevenFont1" font="Regular; 19" halign="left" position="438,611" render="Label" size="75,25" source="session.Event_Now" transparent="1" valign="center" zPosition="1">
+  <widget backgroundColor="SevenFontBackgroundIB1" foregroundColor="SevenFont1" font="Regular; 19" halign="left" position="443,611" render="Label" size="75,25" source="session.Event_Now" transparent="1" valign="center" zPosition="1">
     <convert type="SevenHDEventTime">RunTime</convert>
     <convert type="SevenHDRemainingToText">InMinutes</convert>
   </widget>
@@ -4545,7 +4545,7 @@
   </widget>
   <ePixmap pixmap="SevenHD/back/ibone.png" position="14,533" size="1250,170" alphatest="blend" zPosition="-8" />
   <eLabel backgroundColor="SevenFontBackgroundIB1" foregroundColor="SevenFont1" font="Regular; 19" halign="left" noWrap="1" position="275,611" size="196,25" text="Sendung läuft seit" transparent="1" valign="center" zPosition="1" />
-  <widget backgroundColor="SevenFontBackgroundIB1" foregroundColor="SevenFont1" font="Regular; 19" halign="left" position="438,611" render="Label" size="75,25" source="session.Event_Now" transparent="1" valign="center" zPosition="1">
+  <widget backgroundColor="SevenFontBackgroundIB1" foregroundColor="SevenFont1" font="Regular; 19" halign="left" position="443,611" render="Label" size="75,25" source="session.Event_Now" transparent="1" valign="center" zPosition="1">
     <convert type="SevenHDEventTime">RunTime</convert>
     <convert type="SevenHDRemainingToText">InMinutes</convert>
   </widget>
@@ -4717,7 +4717,7 @@
   </widget>
   <ePixmap pixmap="SevenHD/back/ibone.png" position="14,533" size="1250,170" alphatest="blend" zPosition="-8" />
   <eLabel backgroundColor="SevenFontBackgroundIB1" foregroundColor="SevenFont1" font="Regular; 19" halign="left" noWrap="1" position="275,611" size="196,25" text="Sendung läuft seit" transparent="1" valign="center" zPosition="1" />
-  <widget backgroundColor="SevenFontBackgroundIB1" foregroundColor="SevenFont1" font="Regular; 19" halign="left" position="438,611" render="Label" size="75,25" source="session.Event_Now" transparent="1" valign="center" zPosition="1">
+  <widget backgroundColor="SevenFontBackgroundIB1" foregroundColor="SevenFont1" font="Regular; 19" halign="left" position="443,611" render="Label" size="75,25" source="session.Event_Now" transparent="1" valign="center" zPosition="1">
     <convert type="SevenHDEventTime">RunTime</convert>
     <convert type="SevenHDRemainingToText">InMinutes</convert>
   </widget>
@@ -5938,7 +5938,7 @@
     <eLabel text="AGC" position="21,661" size="63,22" zPosition="3" font="Regular; 19" halign="left" backgroundColor="SevenFontBackgroundIB1" foregroundColor="SevenSNRIB" transparent="1" />
     <eLabel backgroundColor="SevenBorderIB" position="288,533" size="973,2" zPosition="2" />
     <widget source="session.FrontendStatus" render="Progress" position="21,648" size="259,10" zPosition="4" pixmap="SevenHD/snr.png" transparent="1">
-      <convert type="FrontendInfo">SNR</convert>
+      <convert  type="FrontendInfo">SNR</convert>
     </widget>
     <widget source="session.FrontendStatus" render="Label" position="210,662" size="70,21" font="Regular; 19" transparent="1" foregroundColor="SevenSNRIB" backgroundColor="SevenFontBackgroundIB1" zPosition="3" halign="right" valign="center">
       <convert type="FrontendInfo">AGC</convert>
@@ -6112,7 +6112,7 @@
     <eLabel text="AGC" position="21,661" size="63,22" zPosition="3" font="Regular; 19" halign="left" backgroundColor="SevenFontBackgroundIB1" foregroundColor="SevenSNRIB" transparent="1" />
     <eLabel backgroundColor="SevenBorderIB" position="288,533" size="973,2" zPosition="2" />
     <widget source="session.FrontendStatus" render="Progress" position="21,648" size="259,10" zPosition="4" pixmap="SevenHD/snr.png" transparent="1">
-      <convert type="FrontendInfo">SNR</convert>
+      <convert  type="FrontendInfo">SNR</convert>
     </widget>
     <widget source="session.FrontendStatus" render="Label" position="210,662" size="70,21" font="Regular; 19" transparent="1" foregroundColor="SevenSNRIB" backgroundColor="SevenFontBackgroundIB1" zPosition="3" halign="right" valign="center">
       <convert type="FrontendInfo">AGC</convert>
@@ -6329,7 +6329,7 @@
     <eLabel text="AGC" position="21,661" size="63,22" zPosition="3" font="Regular; 19" halign="left" backgroundColor="SevenFontBackgroundIB1" foregroundColor="SevenSNRIB" transparent="1" />
     <eLabel backgroundColor="SevenBorderIB" position="288,533" size="973,2" zPosition="2" />
     <widget source="session.FrontendStatus" render="Progress" position="21,648" size="259,10" zPosition="4" pixmap="SevenHD/snr.png" transparent="1">
-      <convert type="FrontendInfo">SNR</convert>
+      <convert  type="FrontendInfo">SNR</convert>
     </widget>
     <widget source="session.FrontendStatus" render="Label" position="210,662" size="70,21" font="Regular; 19" transparent="1" foregroundColor="SevenSNRIB" backgroundColor="SevenFontBackgroundIB1" zPosition="3" halign="right" valign="center">
       <convert type="FrontendInfo">AGC</convert>
@@ -6480,7 +6480,7 @@
     <eLabel text="AGC" position="21,661" size="63,22" zPosition="3" font="Regular; 19" halign="left" backgroundColor="SevenFontBackgroundIB1" foregroundColor="SevenSNRIB" transparent="1" />
     <eLabel backgroundColor="SevenBorderIB" position="288,533" size="973,2" zPosition="2" />
     <widget source="session.FrontendStatus" render="Progress" position="21,648" size="259,10" zPosition="4" pixmap="SevenHD/snr.png" transparent="1">
-      <convert type="FrontendInfo">SNR</convert>
+      <convert  type="FrontendInfo">SNR</convert>
     </widget>
     <widget source="session.FrontendStatus" render="Label" position="210,662" size="70,21" font="Regular; 19" transparent="1" foregroundColor="SevenSNRIB" backgroundColor="SevenFontBackgroundIB1" zPosition="3" halign="right" valign="center">
       <convert type="FrontendInfo">AGC</convert>
@@ -6706,7 +6706,7 @@
     <eLabel text="AGC" position="21,661" size="63,22" zPosition="3" font="Regular; 19" halign="left" backgroundColor="SevenFontBackgroundIB1" foregroundColor="SevenSNRIB" transparent="1" />
     <eLabel backgroundColor="SevenBorderIB" position="288,533" size="973,2" zPosition="2" />
     <widget source="session.FrontendStatus" render="Progress" position="21,648" size="259,10" zPosition="4" pixmap="SevenHD/snr.png" transparent="1">
-      <convert type="FrontendInfo">SNR</convert>
+      <convert  type="FrontendInfo">SNR</convert>
     </widget>
     <widget source="session.FrontendStatus" render="Label" position="210,662" size="70,21" font="Regular; 19" transparent="1" foregroundColor="SevenSNRIB" backgroundColor="SevenFontBackgroundIB1" zPosition="3" halign="right" valign="center">
       <convert type="FrontendInfo">AGC</convert>
@@ -6972,7 +6972,7 @@
     <eLabel text="AGC" position="21,661" size="63,22" zPosition="3" font="Regular; 19" halign="left" backgroundColor="SevenFontBackgroundIB1" foregroundColor="SevenSNRIB" transparent="1" />
     <eLabel backgroundColor="SevenBorderIB" position="288,533" size="973,2" zPosition="2" />
     <widget source="session.FrontendStatus" render="Progress" position="21,648" size="259,10" zPosition="4" pixmap="SevenHD/snr.png" transparent="1">
-      <convert type="FrontendInfo">SNR</convert>
+      <convert  type="FrontendInfo">SNR</convert>
     </widget>
     <widget source="session.FrontendStatus" render="Label" position="210,662" size="70,21" font="Regular; 19" transparent="1" foregroundColor="SevenSNRIB" backgroundColor="SevenFontBackgroundIB1" zPosition="3" halign="right" valign="center">
       <convert type="FrontendInfo">AGC</convert>
@@ -7159,7 +7159,7 @@
     <eLabel text="AGC" position="21,661" size="63,22" zPosition="3" font="Regular; 19" halign="left" backgroundColor="SevenFontBackgroundIB1" foregroundColor="SevenSNRIB" transparent="1" />
     <eLabel backgroundColor="SevenBorderIB" position="288,533" size="973,2" zPosition="2" />
     <widget source="session.FrontendStatus" render="Progress" position="21,648" size="259,10" zPosition="4" pixmap="SevenHD/snr.png" transparent="1">
-      <convert type="FrontendInfo">SNR</convert>
+      <convert  type="FrontendInfo">SNR</convert>
     </widget>
     <widget source="session.FrontendStatus" render="Label" position="210,662" size="70,21" font="Regular; 19" transparent="1" foregroundColor="SevenSNRIB" backgroundColor="SevenFontBackgroundIB1" zPosition="3" halign="right" valign="center">
       <convert type="FrontendInfo">AGC</convert>
@@ -7351,7 +7351,7 @@
     <eLabel text="AGC" position="21,661" size="63,22" zPosition="3" font="Regular; 19" halign="left" backgroundColor="SevenFontBackgroundIB1" foregroundColor="SevenSNRIB" transparent="1" />
     <eLabel backgroundColor="SevenBorderIB" position="288,533" size="973,2" zPosition="2" />
     <widget source="session.FrontendStatus" render="Progress" position="21,648" size="259,10" zPosition="4" pixmap="SevenHD/snr.png" transparent="1">
-      <convert type="FrontendInfo">SNR</convert>
+      <convert  type="FrontendInfo">SNR</convert>
     </widget>
     <widget source="session.FrontendStatus" render="Label" position="210,662" size="70,21" font="Regular; 19" transparent="1" foregroundColor="SevenSNRIB" backgroundColor="SevenFontBackgroundIB1" zPosition="3" halign="right" valign="center">
       <convert type="FrontendInfo">AGC</convert>
@@ -7531,7 +7531,7 @@
     <eLabel text="AGC" position="21,661" size="63,22" zPosition="3" font="Regular; 19" halign="left" backgroundColor="SevenFontBackgroundIB1" foregroundColor="SevenSNRIB" transparent="1" />
     <eLabel backgroundColor="SevenBorderIB" position="288,533" size="973,2" zPosition="2" />
     <widget source="session.FrontendStatus" render="Progress" position="21,648" size="259,10" zPosition="4" pixmap="SevenHD/snr.png" transparent="1">
-      <convert type="FrontendInfo">SNR</convert>
+      <convert  type="FrontendInfo">SNR</convert>
     </widget>
     <widget source="session.FrontendStatus" render="Label" position="210,662" size="70,21" font="Regular; 19" transparent="1" foregroundColor="SevenSNRIB" backgroundColor="SevenFontBackgroundIB1" zPosition="3" halign="right" valign="center">
       <convert type="FrontendInfo">AGC</convert>
@@ -7719,7 +7719,7 @@
     <eLabel text="AGC" position="21,661" size="63,22" zPosition="3" font="Regular; 19" halign="left" backgroundColor="SevenFontBackgroundIB1" foregroundColor="SevenSNRIB" transparent="1" />
     <eLabel backgroundColor="SevenBorderIB" position="288,533" size="973,2" zPosition="2" />
     <widget source="session.FrontendStatus" render="Progress" position="21,648" size="259,10" zPosition="4" pixmap="SevenHD/snr.png" transparent="1">
-      <convert type="FrontendInfo">SNR</convert>
+      <convert  type="FrontendInfo">SNR</convert>
     </widget>
     <widget source="session.FrontendStatus" render="Label" position="210,662" size="70,21" font="Regular; 19" transparent="1" foregroundColor="SevenSNRIB" backgroundColor="SevenFontBackgroundIB1" zPosition="3" halign="right" valign="center">
       <convert type="FrontendInfo">AGC</convert>
@@ -8856,7 +8856,7 @@
   </widget>
   <ePixmap pixmap="SevenHD/back/ibone.png" position="14,533" size="1250,170" alphatest="blend" zPosition="-8" />
   <eLabel backgroundColor="SevenFontBackgroundIB1" foregroundColor="SevenFont1" font="Regular; 19" halign="left" noWrap="1" position="275,615" size="196,25" text="Sendung läuft seit" transparent="1" valign="center" zPosition="1" />
-  <widget backgroundColor="SevenFontBackgroundIB1" foregroundColor="SevenFont1" font="Regular; 19" halign="left" position="438,615" render="Label" size="75,25" source="session.Event_Now" transparent="1" valign="center" zPosition="1">
+  <widget backgroundColor="SevenFontBackgroundIB1" foregroundColor="SevenFont1" font="Regular; 19" halign="left" position="443,615" render="Label" size="75,25" source="session.Event_Now" transparent="1" valign="center" zPosition="1">
     <convert type="SevenHDEventTime">RunTime</convert>
     <convert type="SevenHDRemainingToText">InMinutes</convert>
   </widget>
@@ -9018,7 +9018,7 @@
   </widget>
   <ePixmap pixmap="SevenHD/back/ibone.png" position="14,533" size="1250,170" alphatest="blend" zPosition="-8" />
   <eLabel backgroundColor="SevenFontBackgroundIB1" foregroundColor="SevenFont1" font="Regular; 19" halign="left" noWrap="1" position="275,615" size="196,25" text="Sendung läuft seit" transparent="1" valign="center" zPosition="1" />
-  <widget backgroundColor="SevenFontBackgroundIB1" foregroundColor="SevenFont1" font="Regular; 19" halign="left" position="438,615" render="Label" size="75,25" source="session.Event_Now" transparent="1" valign="center" zPosition="1">
+  <widget backgroundColor="SevenFontBackgroundIB1" foregroundColor="SevenFont1" font="Regular; 19" halign="left" position="443,615" render="Label" size="75,25" source="session.Event_Now" transparent="1" valign="center" zPosition="1">
     <convert type="SevenHDEventTime">RunTime</convert>
     <convert type="SevenHDRemainingToText">InMinutes</convert>
   </widget>
@@ -9185,7 +9185,7 @@
   </widget>
   <ePixmap pixmap="SevenHD/back/ibone.png" position="14,533" size="1250,170" alphatest="blend" zPosition="-8" />
   <eLabel backgroundColor="SevenFontBackgroundIB1" foregroundColor="SevenFont1" font="Regular; 19" halign="left" noWrap="1" position="275,615" size="196,25" text="Sendung läuft seit" transparent="1" valign="center" zPosition="1" />
-  <widget backgroundColor="SevenFontBackgroundIB1" foregroundColor="SevenFont1" font="Regular; 19" halign="left" position="438,615" render="Label" size="75,25" source="session.Event_Now" transparent="1" valign="center" zPosition="1">
+  <widget backgroundColor="SevenFontBackgroundIB1" foregroundColor="SevenFont1" font="Regular; 19" halign="left" position="443,615" render="Label" size="75,25" source="session.Event_Now" transparent="1" valign="center" zPosition="1">
     <convert type="SevenHDEventTime">RunTime</convert>
     <convert type="SevenHDRemainingToText">InMinutes</convert>
   </widget>
@@ -9340,7 +9340,7 @@
   </widget>
   <ePixmap pixmap="SevenHD/back/ibone.png" position="14,533" size="1250,170" alphatest="blend" zPosition="-8" />
   <eLabel backgroundColor="SevenFontBackgroundIB1" foregroundColor="SevenFont1" font="Regular; 19" halign="left" noWrap="1" position="275,615" size="196,25" text="Sendung läuft seit" transparent="1" valign="center" zPosition="1" />
-  <widget backgroundColor="SevenFontBackgroundIB1" foregroundColor="SevenFont1" font="Regular; 19" halign="left" position="438,615" render="Label" size="75,25" source="session.Event_Now" transparent="1" valign="center" zPosition="1">
+  <widget backgroundColor="SevenFontBackgroundIB1" foregroundColor="SevenFont1" font="Regular; 19" halign="left" position="443,615" render="Label" size="75,25" source="session.Event_Now" transparent="1" valign="center" zPosition="1">
     <convert type="SevenHDEventTime">RunTime</convert>
     <convert type="SevenHDRemainingToText">InMinutes</convert>
   </widget>
@@ -9503,7 +9503,7 @@
   </widget>
   <ePixmap pixmap="SevenHD/back/ibone.png" position="14,533" size="1250,170" alphatest="blend" zPosition="-8" />
   <eLabel backgroundColor="SevenFontBackgroundIB1" foregroundColor="SevenFont1" font="Regular; 19" halign="left" noWrap="1" position="275,615" size="196,25" text="Sendung läuft seit" transparent="1" valign="center" zPosition="1" />
-  <widget backgroundColor="SevenFontBackgroundIB1" foregroundColor="SevenFont1" font="Regular; 19" halign="left" position="438,615" render="Label" size="75,25" source="session.Event_Now" transparent="1" valign="center" zPosition="1">
+  <widget backgroundColor="SevenFontBackgroundIB1" foregroundColor="SevenFont1" font="Regular; 19" halign="left" position="443,615" render="Label" size="75,25" source="session.Event_Now" transparent="1" valign="center" zPosition="1">
     <convert type="SevenHDEventTime">RunTime</convert>
     <convert type="SevenHDRemainingToText">InMinutes</convert>
   </widget>
@@ -9687,27 +9687,27 @@
     <ePixmap pixmap="SevenHD/buttons/key_blue1.png" position="622,669" size="32,37" backgroundColor="black" alphatest="blend" />
   </screen>
   <screen name="template_weather_big">
-    <eLabel backgroundColor="SevenBorderIB" position="1262,4" size="2,102" zPosition="2" />
-    <eLabel backgroundColor="SevenBorderIB" position="14,4" size="2,102" zPosition="2" />
-    <eLabel backgroundColor="SevenBorderIB" position="14,4" size="1250,2" zPosition="2" />
-    <eLabel backgroundColor="SevenBorderIB" position="14,105" size="1250,2" zPosition="2" />
-    <eLabel backgroundColor="SevenBackgroundIB1" position="15,4" size="955,103" zPosition="-9" />
-    <ePixmap pixmap="SevenHD/back/ibone.png" position="15,4" size="955,103" alphatest="blend" zPosition="-8" />
-    <eLabel backgroundColor="SevenBorderIB" position="969,4" size="2,102" zPosition="2" />
-    <eLabel backgroundColor="SevenBackgroundIB2" position="971,4" size="292,103" zPosition="-9" />
-    <ePixmap pixmap="SevenHD/back/ibtwo.png" position="971,4" size="292,103" alphatest="blend" zPosition="-8" />
-  </screen>
+  <eLabel backgroundColor="SevenBorderIB" position="1262,4" size="2,102" zPosition="2" />
+  <eLabel backgroundColor="SevenBorderIB" position="14,4" size="2,102" zPosition="2" />
+  <eLabel backgroundColor="SevenBorderIB" position="14,4" size="1250,2" zPosition="2" />
+  <eLabel backgroundColor="SevenBorderIB" position="14,105" size="1250,2" zPosition="2" />
+  <eLabel backgroundColor="SevenBackgroundIB1" position="15,4" size="960,103" zPosition="-9" />
+  <ePixmap pixmap="SevenHD/back/ibone.png" position="15,4" size="960,103" alphatest="blend" zPosition="-8" />
+  <eLabel backgroundColor="SevenBorderIB" position="974,4" size="2,102" zPosition="2" />
+  <eLabel backgroundColor="SevenBackgroundIB2" position="976,4" size="287,103" zPosition="-9" />
+  <ePixmap pixmap="SevenHD/back/ibtwo.png" position="976,4" size="287,103" alphatest="blend" zPosition="-8" />
+</screen>
   <screen name="template_weather_slim">
-    <eLabel backgroundColor="SevenBorderIB" position="1262,4" size="2,68" zPosition="2" />
-    <eLabel backgroundColor="SevenBorderIB" position="14,4" size="2,68" zPosition="2" />
-    <eLabel backgroundColor="SevenBorderIB" position="14,4" size="1250,2" zPosition="2" />
-    <eLabel backgroundColor="SevenBorderIB" position="14,70" size="1250,2" zPosition="2" />
-    <eLabel backgroundColor="SevenBackgroundIB1" position="15,4" size="955,68" zPosition="-9" />
-    <ePixmap pixmap="SevenHD/back/ibone.png" position="15,4" size="955,68" alphatest="blend" zPosition="-8" />
-    <eLabel backgroundColor="SevenBorderIB" position="969,4" size="2,68" zPosition="2" />
-    <eLabel backgroundColor="SevenBackgroundIB2" position="971,4" size="292,68" zPosition="-9" />
-    <ePixmap pixmap="SevenHD/back/ibtwo.png" position="971,4" size="292,68" alphatest="blend" zPosition="-8" />
-  </screen>
+  <eLabel backgroundColor="SevenBorderIB" position="1262,4" size="2,68" zPosition="2" />
+  <eLabel backgroundColor="SevenBorderIB" position="14,4" size="2,68" zPosition="2" />
+  <eLabel backgroundColor="SevenBorderIB" position="14,4" size="1250,2" zPosition="2" />
+  <eLabel backgroundColor="SevenBorderIB" position="14,70" size="1250,2" zPosition="2" />
+  <eLabel backgroundColor="SevenBackgroundIB1" position="15,4" size="960,68" zPosition="-9" />
+  <ePixmap pixmap="SevenHD/back/ibone.png" position="15,4" size="960,68" alphatest="blend" zPosition="-8" />
+  <eLabel backgroundColor="SevenBorderIB" position="974,4" size="2,68" zPosition="2" />
+  <eLabel backgroundColor="SevenBackgroundIB2" position="976,4" size="287,68" zPosition="-9" />
+  <ePixmap pixmap="SevenHD/back/ibtwo.png" position="976,4" size="287,68" alphatest="blend" zPosition="-8" />
+</screen>
   <screen name="template_weather_left">
     <eLabel backgroundColor="SevenBorderIB" position="202,4" size="2,404" zPosition="2" />
     <eLabel backgroundColor="SevenBorderIB" position="14,4" size="2,404" zPosition="2" />

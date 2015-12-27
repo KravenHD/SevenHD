@@ -42,6 +42,7 @@ class MainSettings(ConfigListScreen, Screen):
                          <widget name="blue" font="Regular; 20" foregroundColor="#000064c7" backgroundColor="#00000000" halign="left" valign="center" position="664,662" size="148,48" transparent="1" />
                          <widget name="config" position="18,72" size="816,575" scrollbarMode="showOnDemand" transparent="1" zPosition="1" backgroundColor="#00000000" />
                          <eLabel position="70,12" size="708,46" text="SevenHD" font="Regular; 35" valign="center" halign="center" transparent="1" backgroundColor="#00000000" foregroundColor="#00ffffff" name="," />
+                         <widget name="colorthump" position="891,220" size="372,30" zPosition="1" backgroundColor="#00000000" alphatest="blend" />
                          <widget name="helperimage" position="891,274" size="372,209" zPosition="1" backgroundColor="#00000000" />
                          <widget name="description" position="891,490" size="372,200" font="Regular; 22" valign="center" halign="center" transparent="1" backgroundColor="#00000000" foregroundColor="#00ffffff" />
                          <widget backgroundColor="#00000000" font="Regular2; 34" foregroundColor="#00ffffff" position="70,12" render="Label" size="708,46" source="Title" transparent="1" halign="center" valign="center" noWrap="1" />
@@ -78,6 +79,8 @@ class MainSettings(ConfigListScreen, Screen):
         self.session = session
         self.Scale = AVSwitch().getFramebufferScale()
         self.PicLoad = ePicLoad()
+        self.ColorLoad = ePicLoad()
+        self["colorthump"] = Pixmap()
         self["helperimage"] = Pixmap()
         self["description"] = Label()
         self["blue"] = Label()
@@ -138,10 +141,10 @@ class MainSettings(ConfigListScreen, Screen):
         list.append(getConfigListEntry(_("activate"),                  config.plugins.SevenHD.RunningText,               'L\xc3\xa4sst die Schrift scrollen oder schreiben.',                                                  '1',                'RunningText'))
         if config.plugins.SevenHD.RunningText.value == 'running':
            list.append(getConfigListEntry(_("startdelay"),             config.plugins.SevenHD.Startdelay,                'Stellt die Startzeit ein, nach wieviel Sek. der Text anfangen soll sich zu bewegen.',                '4',                'Delay'))
-           list.append(getConfigListEntry(_("steptime"),               config.plugins.SevenHD.Steptime,                  'Stellt die Laufgeschwindigkeit ein. Je h\xc3\xb6her der Wert, desto langsamger die Geschwindigkeit', '4',                'Delay'))
+           list.append(getConfigListEntry(_("steptime"),               config.plugins.SevenHD.Steptime,                  'Stellt die Laufgeschwindigkeit ein. Je h\xc3\xb6her der Wert, desto langsamer die Geschwindigkeit', '4',                'Delay'))
         list.append(getConfigListEntry(_('__________________________________transparency_____________________________________________'), ))
-        list.append(getConfigListEntry(_("main window"),               config.plugins.SevenHD.BackgroundColorTrans,      'Stellt die Transparenz des linken Fenster ein.',                                                     '1',                'transparency'))
-        list.append(getConfigListEntry(_("right window"),              config.plugins.SevenHD.BackgroundRightColorTrans, 'Stellt die Transparenz des rechten Fenster ein.',                                                    '1',                'transparency'))
+        list.append(getConfigListEntry(_("main window"),               config.plugins.SevenHD.BackgroundColorTrans,      'Stellt die Transparenz des linken Fenster ein.',                                                     '4',                'transparency'))
+        list.append(getConfigListEntry(_("right window"),              config.plugins.SevenHD.BackgroundRightColorTrans, 'Stellt die Transparenz des rechten Fenster ein.',                                                    '4',                'transparency'))
         
         return list
 
@@ -149,15 +152,13 @@ class MainSettings(ConfigListScreen, Screen):
         self["config"].setList(self.getMenuItemList())
 
     def GetPicturePath(self):
-        returnValue = self["config"].getCurrent()[3]
-        self.debug('\nRet_value[3]: ' + str(returnValue))		
+        returnValue = self["config"].getCurrent()[3]		
            		
         if returnValue == '4':
            returnValue = self["config"].getCurrent()[int(returnValue)]
         else:
            returnValue = self["config"].getCurrent()[int(returnValue)].value
-        
-        self.debug('Ret_value[4]: ' + str(returnValue))   
+           
         path = MAIN_IMAGE_PATH + str(returnValue) + str(".jpg")
         
         self["description"].setText(self["config"].getCurrent()[2])
@@ -170,6 +171,7 @@ class MainSettings(ConfigListScreen, Screen):
 
     def UpdatePicture(self):
         self.PicLoad.PictureData.get().append(self.DecodePicture)
+        self.UpdateColor()
         self.onLayoutFinish.append(self.ShowPicture)
            
     def ShowPicture(self):
@@ -180,16 +182,65 @@ class MainSettings(ConfigListScreen, Screen):
         ptr = self.PicLoad.getData()
         self["helperimage"].instance.setPixmap(ptr)
 
+    def UpdateColor(self):
+        self.ColorLoad.PictureData.get().append(self.DecodeColor)
+        self.onLayoutFinish.append(self.ShowColor)
+
+    def ShowColor(self):
+        self.ColorLoad.setPara([self["colorthump"].instance.size().width(),self["colorthump"].instance.size().height(),self.Scale[0],self.Scale[1],0,1,"#00000000"])
+        self.ColorLoad.startDecode(self.getFontColor())
+
+    def DecodeColor(self, PicInfo = ""):
+        ptr = self.ColorLoad.getData()
+        self["colorthump"].instance.setPixmap(ptr)
+    
+    def getFontColor(self):   
+        returnValue = self["config"].getCurrent()[1]
+        self["colorthump"].instance.show()
+        preview = ''
+        if returnValue == config.plugins.SevenHD.ProgressVol:
+              preview = self.generate(config.plugins.SevenHD.ProgressVol.value)
+        else:
+              self["colorthump"].instance.hide()
+        return str(preview)
+        
+    def generate(self,color):    
+        
+        if color.startswith('00'):
+           r = int(color[2:4], 16)
+           g = int(color[4:6], 16)
+           b = int(color[6:], 16)
+
+           img = Image.new("RGB",(372,30),(r,g,b))
+           img.save(str(MAIN_IMAGE_PATH) + "color.png")
+           return str(MAIN_IMAGE_PATH) + "color.png"
+        
+        elif 'progress' in color:
+           return str(MAIN_IMAGE_PATH) + "progress.png"
+        elif 'carbon' in color:
+           return str(MAIN_IMAGE_PATH) + "carbon.png"
+        elif 'lightwood' in color:
+           return str(MAIN_IMAGE_PATH) + "lightwood.png"
+        elif 'redwood' in color:
+           return str(MAIN_IMAGE_PATH) + "redwood.png"
+        elif 'slate' in color:
+           return str(MAIN_IMAGE_PATH) + "slate.png"
+        elif 'brownleather' in color:
+           return str(MAIN_IMAGE_PATH) + "brownleather.png"
+
+
     def keyLeft(self):
         ConfigListScreen.keyLeft(self)
         self.preview_font()
         self.ShowPicture()
-
+        self.ShowColor()
+        
     def keyRight(self):
         ConfigListScreen.keyRight(self)
         self.preview_font()
         self.ShowPicture()
-
+        self.ShowColor()
+        
     def preview_font(self):
         returnValue = self["config"].getCurrent()[1].value
         try:
@@ -226,12 +277,14 @@ class MainSettings(ConfigListScreen, Screen):
         self["config"].instance.moveSelection(self["config"].instance.moveDown)
         self.preview_font()
         self.ShowPicture()
-
+        self.ShowColor()
+        
     def keyUp(self):
         self["config"].instance.moveSelection(self["config"].instance.moveUp)
         self.preview_font()
         self.ShowPicture()
-
+        self.ShowColor()
+        
     def grab_png(self):
         if config.plugins.SevenHD.grabdebug.value:
            os.system('grab -p /tmp/kraven_debug.png')

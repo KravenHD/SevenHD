@@ -20,7 +20,6 @@ from Components.Converter.Converter import Converter
 from Components.Language import language
 from Components.Element import cached
 from Components.config import config
-from Poll import Poll
 from enigma import eTimer
 import requests, json, time, os, gettext
 
@@ -38,13 +37,9 @@ def _(txt):
 
 URL = 'http://api.openweathermap.org/data/2.5/forecast/daily?' + config.plugins.SevenHD.weather_lat_lon.value + '&cnt=5&mode=json&lang=de&appid=89b59e4d7d07894243b5acd24e7f18a3'
 
-class SevenHDWeather_owm(Poll, Converter, object):
-
+class SevenHDWeather_owm(Converter, object):
 	def __init__(self, type):
-                Poll.__init__(self)
                 Converter.__init__(self, type)
-                self.poll_interval = 10000
-		self.poll_enabled = True
                 type = type.split(',')                
                 self.day_value = type[0]
                 self.what = type[1]

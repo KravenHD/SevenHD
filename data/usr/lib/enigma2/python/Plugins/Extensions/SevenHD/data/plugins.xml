@@ -1678,6 +1678,7 @@
   <widget name="helperimage" position="891,274" size="372,209" zPosition="1" backgroundColor="SevenFontBackground" />
   <widget name="description" position="891,490" size="372,200" font="Regular; 22" valign="center" halign="center" transparent="1" backgroundColor="#00000000" foregroundColor="#00ffffff" />
   <widget backgroundColor="SevenFontBackground" font="Regular2; 34" position="70,12" render="Label" size="708,46" source="Title" transparent="1" halign="center" valign="center" foregroundColor="SevenFont1" noWrap="1" />
+  <widget name="colorthump" position="891,220" size="372,30" zPosition="1" backgroundColor="SevenFontBackgroundRight" alphatest="blend" />
   <eLabel backgroundColor="SevenBackground" position="6,6" size="842,708" transparent="0" zPosition="-9" />
   <eLabel backgroundColor="SevenBorder" position="6,6" size="842,2" zPosition="2" />
   <eLabel backgroundColor="SevenBorder" position="6,714" size="844,2" zPosition="2" />
@@ -1710,7 +1711,7 @@
 <eLabel position="891,274" size="2,208" backgroundColor="SevenBorder" zPosition="5" />
 <eLabel position="1261,274" size="2,208" backgroundColor="SevenBorder" zPosition="5" />
 </screen>
-  <screen name="MenuPluginSettings" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
+ <screen name="MenuPluginSettings" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
 <!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="MenuPluginSettings" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
   <eLabel font="Regular; 18" foregroundColor="SevenButtonText" backgroundColor="SevenFontBackground" halign="left" valign="center" position="64,662" size="148,48" text="Cancel" transparent="1" />
   <eLabel font="Regular; 18" foregroundColor="SevenButtonText" backgroundColor="SevenFontBackground" halign="left" valign="center" position="264,662" size="148,48" text="Save" transparent="1" />
@@ -1720,7 +1721,8 @@
   <eLabel position="70,12" size="708,46" text="SevenHD" font="Regular; 35" valign="center" halign="center" transparent="1" backgroundColor="SevenFontBackground" />
   <widget name="helperimage" position="891,274" size="372,209" zPosition="1" backgroundColor="SevenFontBackground" />
   <widget name="description" position="891,490" size="372,200" font="Regular; 22" valign="center" halign="center" transparent="1" backgroundColor="#00000000" foregroundColor="#00ffffff" />
-  <widget backgroundColor="SevenFontBackground" font="Regular2; 34" position="70,12" render="Label" size="708,46" source="Title" transparent="1" halign="center" valign="center" foregroundColor="SevenFont1" noWrap="1" />
+  <widget name="colorthump" position="891,220" size="372,30" zPosition="1" backgroundColor="SevenFontBackgroundRight" alphatest="blend" />
+<widget backgroundColor="SevenFontBackground" font="Regular2; 34" position="70,12" render="Label" size="708,46" source="Title" transparent="1" halign="center" valign="center" foregroundColor="SevenFont1" noWrap="1" />
   <eLabel backgroundColor="SevenBackground" position="6,6" size="842,708" transparent="0" zPosition="-9" />
   <eLabel backgroundColor="SevenBorder" position="6,6" size="842,2" zPosition="2" />
   <eLabel backgroundColor="SevenBorder" position="6,714" size="844,2" zPosition="2" />
@@ -1763,6 +1765,7 @@
   <eLabel position="70,12" size="708,46" text="SevenHD" font="Regular; 35" valign="center" halign="center" transparent="1" backgroundColor="SevenFontBackground" />
   <widget name="helperimage" position="891,274" size="372,209" zPosition="1" backgroundColor="SevenFontBackground" />
   <widget name="description" position="891,490" size="372,200" font="Regular; 22" valign="center" halign="center" transparent="1" backgroundColor="#00000000" foregroundColor="#00ffffff" />
+  <widget name="colorthump" position="891,220" size="372,30" zPosition="1" backgroundColor="SevenFontBackgroundRight" alphatest="blend" />
   <widget backgroundColor="SevenFontBackground" font="Regular2; 34" position="70,12" render="Label" size="708,46" source="Title" transparent="1" halign="center" valign="center" foregroundColor="SevenFont1" noWrap="1" />
   <eLabel backgroundColor="SevenBackground" position="6,6" size="842,708" transparent="0" zPosition="-9" />
   <eLabel backgroundColor="SevenBorder" position="6,6" size="842,2" zPosition="2" />
@@ -1806,6 +1809,7 @@
   <eLabel position="70,12" size="708,46" text="SevenHD" font="Regular; 35" valign="center" halign="center" transparent="1" backgroundColor="SevenFontBackground" />
   <widget name="helperimage" position="891,274" size="372,209" zPosition="1" backgroundColor="SevenFontBackground" />
   <widget name="description" position="891,490" size="372,200" font="Regular; 22" valign="center" halign="center" transparent="1" backgroundColor="#00000000" foregroundColor="#00ffffff" />
+  <widget name="colorthump" position="891,220" size="372,30" zPosition="1" backgroundColor="SevenFontBackgroundRight" alphatest="blend" />
   <widget backgroundColor="SevenFontBackground" font="Regular2; 34" position="70,12" render="Label" size="708,46" source="Title" transparent="1" halign="center" valign="center" foregroundColor="SevenFont1" noWrap="1" />
   <eLabel backgroundColor="SevenBackground" position="6,6" size="842,708" transparent="0" zPosition="-9" />
   <eLabel backgroundColor="SevenBorder" position="6,6" size="842,2" zPosition="2" />
@@ -1849,6 +1853,7 @@
   <eLabel position="70,12" size="708,46" text="SevenHD" font="Regular; 35" valign="center" halign="center" transparent="1" backgroundColor="SevenFontBackground" />
   <widget name="helperimage" position="891,274" size="372,209" zPosition="1" backgroundColor="SevenFontBackground" />
   <widget name="description" position="891,490" size="372,200" font="Regular; 22" valign="center" halign="center" transparent="1" backgroundColor="#00000000" foregroundColor="#00ffffff" />
+  <widget name="colorthump" position="891,220" size="372,30" zPosition="1" backgroundColor="SevenFontBackgroundRight" alphatest="blend" />
   <widget backgroundColor="SevenFontBackground" font="Regular2; 34" position="70,12" render="Label" size="708,46" source="Title" transparent="1" halign="center" valign="center" foregroundColor="SevenFont1" noWrap="1" />
   <eLabel backgroundColor="SevenBackground" position="6,6" size="842,708" transparent="0" zPosition="-9" />
   <eLabel backgroundColor="SevenBorder" position="6,6" size="842,2" zPosition="2" />
@@ -1892,6 +1897,7 @@
   <eLabel position="70,12" size="708,46" text="SevenHD" font="Regular; 35" valign="center" halign="center" transparent="1" backgroundColor="SevenFontBackground" />
   <widget name="helperimage" position="891,274" size="372,209" zPosition="1" backgroundColor="SevenFontBackground" />
   <widget name="description" position="891,490" size="372,200" font="Regular; 22" valign="center" halign="center" transparent="1" backgroundColor="#00000000" foregroundColor="#00ffffff" />
+  <widget name="colorthump" position="891,220" size="372,30" zPosition="1" backgroundColor="SevenFontBackgroundRight" alphatest="blend" />
   <widget backgroundColor="SevenFontBackground" font="Regular2; 34" position="70,12" render="Label" size="708,46" source="Title" transparent="1" halign="center" valign="center" foregroundColor="SevenFont1" noWrap="1" />
   <eLabel backgroundColor="SevenBackground" position="6,6" size="842,708" transparent="0" zPosition="-9" />
   <eLabel backgroundColor="SevenBorder" position="6,6" size="842,2" zPosition="2" />
@@ -2189,6 +2195,17 @@
 <eLabel backgroundColor="SevenBorder" position="936,118" size="326,4" zPosition="10" />
 <eLabel backgroundColor="SevenBorder" position="1258,118" size="4,186" zPosition="10" />
 <eLabel backgroundColor="SevenBorder" position="936,118" size="4,186" zPosition="10" />
+  </screen>
+   <!-- OscamSmartcard --> 
+<screen name="OscamSmartcard-Setup" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent" title="OscamSmartcard">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="OscamSmartcard-Setup" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
+  <eLabel font="Regular; 18" halign="left" valign="center" text="Cancel" position="64,662" size="148,48" backgroundColor="SevenFontBackground" foregroundColor="SevenButtonText" transparent="1" zPosition="1" />
+  <eLabel font="Regular; 18" halign="left" valign="center" text="Save" position="264,662" size="148,48" backgroundColor="SevenFontBackground" foregroundColor="SevenButtonText" transparent="1" zPosition="1" />
+  <eLabel font="Regular; 18" halign="left" valign="center" text="E2 Restart" position="464,662" size="148,48" backgroundColor="SevenFontBackground" foregroundColor="SevenButtonText" transparent="1" zPosition="1" />   
+<widget name="config" position="70,80" size="590,500" scrollbarMode="showOnDemand" transparent="1" />
+<widget name="oscamsmartcardhelperimage" position="680,80" size="550,500" zPosition="1" />
+<widget name="HELPTEXT" position="70,366" size="590,250" zPosition="1" font="Regular; 20" halign="left" valign="top" backgroundColor="#20000000" transparent="1" />
+<panel name="template_menu_full_button" />
   </screen>
   <!-- plugins -->
   

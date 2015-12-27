@@ -285,8 +285,8 @@
   <screen name="EPGSelectionMulti" position="0,0" size="1280,720" title="EPG Selection" flags="wfNoBorder" backgroundColor="transparent">
 <!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="EPGSelectionMulti" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
     <widget name="now_button_sel" pixmap="SevenHD/now.png" position="70,125" size="150,5" zPosition="2" />
-    <widget name="next_button_sel" pixmap="SevenHD/next.png" position="220,125" size="150,5" zPosition="2" />
-    <widget name="more_button_sel" pixmap="SevenHD/next.png" position="370,125" size="150,5" zPosition="2" />
+    <widget name="next_button_sel" pixmap="SevenHD/now.png" position="220,125" size="150,5" zPosition="2" />
+    <widget name="more_button_sel" pixmap="SevenHD/now.png" position="370,125" size="150,5" zPosition="2" />
     <widget backgroundColor="SevenFontBackground" font="Regular; 22" halign="center" name="now_text" position="70,87" size="150,30" text="NOW" transparent="1" zPosition="10" />
     <widget backgroundColor="SevenFontBackground" font="Regular; 22" halign="center" name="next_text" position="220,87" size="150,30" text="NEXT" transparent="1" zPosition="10" />
     <widget backgroundColor="SevenFontBackground" font="Regular; 22" halign="center" name="more_text" position="370,87" size="150,30" text="MORE" transparent="1" zPosition="10" />
@@ -2095,14 +2095,14 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,orgpos.y()))
   <screen backgroundColor="transparent" flags="wfNoBorder" name="Satfinder" position="0,0" size="1280,720" title="Satfinder">
 <!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="Satfinder" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
     <widget backgroundColor="SevenFontBackground" font="Regular2;21" foregroundColor="SevenFont2" halign="center" position="120,80" render="Label" size="600,22" source="Frontend" transparent="1" zPosition="2">
-      <convert type="FrontendInfo">SNRdB</convert>
+      <convert  type="FrontendInfo">SNRdB</convert>
     </widget>
     <eLabel backgroundColor="SevenFontBackground" font="Regular2;21" foregroundColor="SevenFont2" halign="right" name="snr" position="120,110" size="80,25" text="SNR:" transparent="1" />
     <widget borderColor="SevenBorder" borderWidth="1" position="210,112" render="Progress" size="420,20" source="Frontend" transparent="1">
-      <convert type="FrontendInfo">SNR</convert>
+      <convert  type="FrontendInfo">SNR</convert>
     </widget>
     <widget backgroundColor="SevenFontBackground" font="Regular2;21" foregroundColor="SevenFont2" position="640,110" render="Label" size="80,25" source="Frontend" transparent="1">
-      <convert type="FrontendInfo">SNR</convert>
+      <convert  type="FrontendInfo">SNR</convert>
     </widget>
     <eLabel backgroundColor="SevenFontBackground" font="Regular2;21" foregroundColor="SevenFont2" halign="right" name="ber" position="120,145" size="80,25" text="BER:" transparent="1" />
     <widget borderColor="SevenBorder" borderWidth="1" position="210,147" render="Progress" size="420,20" source="Frontend" transparent="1">

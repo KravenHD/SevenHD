@@ -42,6 +42,7 @@ class ChannelSettings(ConfigListScreen, Screen):
                          <widget name="blue" font="Regular; 20" foregroundColor="#000064c7" backgroundColor="#00000000" halign="left" valign="center" position="664,662" size="148,48" transparent="1" />
                          <widget name="config" position="18,72" size="816,575" scrollbarMode="showOnDemand" transparent="1" zPosition="1" backgroundColor="#00000000" />
                          <eLabel position="70,12" size="708,46" text="SevenHD" font="Regular; 35" valign="center" halign="center" transparent="1" backgroundColor="#00000000" foregroundColor="#00ffffff" name="," />
+                         <widget name="colorthump" position="891,220" size="372,30" zPosition="1" backgroundColor="#00000000" alphatest="blend" />
                          <widget name="helperimage" position="891,274" size="372,209" zPosition="1" backgroundColor="#00000000" />
                          <widget name="description" position="891,490" size="372,200" font="Regular; 22" valign="center" halign="center" transparent="1" backgroundColor="#00000000" foregroundColor="#00ffffff" />
                          <widget backgroundColor="#00000000" font="Regular2; 34" foregroundColor="#00ffffff" position="70,12" render="Label" size="708,46" source="Title" transparent="1" halign="center" valign="center" noWrap="1" />
@@ -78,6 +79,8 @@ class ChannelSettings(ConfigListScreen, Screen):
         self.session = session
         self.Scale = AVSwitch().getFramebufferScale()
         self.PicLoad = ePicLoad()
+        self.ColorLoad = ePicLoad()
+        self["colorthump"] = Pixmap()
         self["helperimage"] = Pixmap()
         self["blue"] = Label()
         self["description"] = Label()
@@ -191,6 +194,7 @@ class ChannelSettings(ConfigListScreen, Screen):
 
     def UpdatePicture(self):
         self.PicLoad.PictureData.get().append(self.DecodePicture)
+        self.UpdateColor()
         self.onLayoutFinish.append(self.ShowPicture)
 
     def ShowPicture(self):
@@ -201,22 +205,123 @@ class ChannelSettings(ConfigListScreen, Screen):
         ptr = self.PicLoad.getData()
         self["helperimage"].instance.setPixmap(ptr)
 
+    def UpdateColor(self):
+        self.ColorLoad.PictureData.get().append(self.DecodeColor)
+        self.onLayoutFinish.append(self.ShowColor)
+
+    def ShowColor(self):
+        self.ColorLoad.setPara([self["colorthump"].instance.size().width(),self["colorthump"].instance.size().height(),self.Scale[0],self.Scale[1],0,1,"#00000000"])
+        self.ColorLoad.startDecode(self.getFontColor())
+
+    def DecodeColor(self, PicInfo = ""):
+        ptr = self.ColorLoad.getData()
+        self["colorthump"].instance.setPixmap(ptr)
+    
+    def getFontColor(self):   
+        returnValue = self["config"].getCurrent()[1]
+        self.debug(returnValue)
+        self["colorthump"].instance.show()
+        preview = ''
+        if returnValue == config.plugins.SevenHD.ChannelSelectionStyle:
+              self["colorthump"].instance.hide()
+        elif returnValue == config.plugins.SevenHD.PrimeTimeTime:
+              self["colorthump"].instance.hide()
+        elif returnValue == config.plugins.SevenHD.ChannelBack1:
+              preview = self.generate(config.plugins.SevenHD.ChannelBack1.value)
+        elif returnValue == config.plugins.SevenHD.ChannelBack2:
+              preview = self.generate(config.plugins.SevenHD.ChannelBack2.value)
+        elif returnValue == config.plugins.SevenHD.ChannelBack3:
+              preview = self.generate(config.plugins.SevenHD.ChannelBack3.value)  
+        elif returnValue == config.plugins.SevenHD.ChannelLine:
+              preview = self.generate(config.plugins.SevenHD.ChannelLine.value)
+        elif returnValue == config.plugins.SevenHD.ChannelBorder:
+              preview = self.generate(config.plugins.SevenHD.ChannelBorder.value)
+        elif returnValue == config.plugins.SevenHD.ProgressCS:
+              preview = self.generate(config.plugins.SevenHD.ProgressCS.value)
+        elif returnValue == config.plugins.SevenHD.ProgressLineCS:
+              preview = self.generate(config.plugins.SevenHD.ProgressLineCS.value)
+        elif returnValue == config.plugins.SevenHD.ChannelColorBouquet:
+              preview = self.generate(config.plugins.SevenHD.ChannelColorBouquet.value)
+        elif returnValue == config.plugins.SevenHD.ChannelColorProgram:
+              preview = self.generate(config.plugins.SevenHD.ChannelColorProgram.value)
+        elif returnValue == config.plugins.SevenHD.ChannelColorNext:
+              preview = self.generate(config.plugins.SevenHD.ChannelColorNext.value)
+        elif returnValue == config.plugins.SevenHD.ChannelColorRuntime:
+              preview = self.generate(config.plugins.SevenHD.ChannelColorRuntime.value)
+        elif returnValue == config.plugins.SevenHD.ChannelColorChannel:
+              preview = self.generate(config.plugins.SevenHD.ChannelColorChannel.value)
+        elif returnValue == config.plugins.SevenHD.ChannelColorTimeCS:
+              preview = self.generate(config.plugins.SevenHD.ChannelColorTimeCS.value)
+        
+        elif returnValue == config.plugins.SevenHD.ChannelColorPrimeTime:
+              preview = self.generate(config.plugins.SevenHD.ChannelColorPrimeTime.value)
+        elif returnValue == config.plugins.SevenHD.ChannelColorDesciption:
+              preview = self.generate(config.plugins.SevenHD.ChannelColorDesciption.value)
+        elif returnValue == config.plugins.SevenHD.ChannelColorDesciptionNext:
+              preview = self.generate(config.plugins.SevenHD.ChannelColorDesciptionNext.value)
+        elif returnValue == config.plugins.SevenHD.ChannelColorDesciptionLater:
+              preview = self.generate(config.plugins.SevenHD.ChannelColorDesciptionLater.value)
+        elif returnValue == config.plugins.SevenHD.ChannelColorButton:
+              preview = self.generate(config.plugins.SevenHD.ChannelColorButton.value)
+        elif returnValue == config.plugins.SevenHD.ChannelColorChannelName:
+              preview = self.generate(config.plugins.SevenHD.ChannelColorChannelName.value)
+        elif returnValue == config.plugins.SevenHD.ChannelColorEvent:
+              preview = self.generate(config.plugins.SevenHD.ChannelColorEvent.value)
+        elif returnValue == config.plugins.SevenHD.ProgressListCS:
+              preview = self.generate(config.plugins.SevenHD.ProgressListCS.value)
+        elif returnValue == config.plugins.SevenHD.ProgressBorderCS:
+              preview = self.generate(config.plugins.SevenHD.ProgressBorderCS.value)
+        
+        
+        
+        else:
+              self["colorthump"].instance.hide()
+        return str(preview)
+        
+    def generate(self,color):    
+        
+        if color.startswith('00'):
+           r = int(color[2:4], 16)
+           g = int(color[4:6], 16)
+           b = int(color[6:], 16)
+
+           img = Image.new("RGB",(372,30),(r,g,b))
+           img.save(str(MAIN_IMAGE_PATH) + "color.png")
+           return str(MAIN_IMAGE_PATH) + "color.png"
+        
+        elif 'progress' in color:
+           return str(MAIN_IMAGE_PATH) + "progress.png"
+        elif 'carbon' in color:
+           return str(MAIN_IMAGE_PATH) + "carbon.png"
+        elif 'lightwood' in color:
+           return str(MAIN_IMAGE_PATH) + "lightwood.png"
+        elif 'redwood' in color:
+           return str(MAIN_IMAGE_PATH) + "redwood.png"
+        elif 'slate' in color:
+           return str(MAIN_IMAGE_PATH) + "slate.png"
+        elif 'brownleather' in color:
+           return str(MAIN_IMAGE_PATH) + "brownleather.png"
+        
     def keyLeft(self):
         ConfigListScreen.keyLeft(self)
         self.ShowPicture()
-
+        self.ShowColor()
+        
     def keyRight(self):
         ConfigListScreen.keyRight(self)
         self.ShowPicture()
-
+        self.ShowColor()
+        
     def keyDown(self):
         self["config"].instance.moveSelection(self["config"].instance.moveDown)
         self.ShowPicture()
-
+        self.ShowColor()
+        
     def keyUp(self):
         self["config"].instance.moveSelection(self["config"].instance.moveUp)
         self.ShowPicture()
-    
+        self.ShowColor()
+        
     def grab_png(self):
         if config.plugins.SevenHD.grabdebug.value:
            os.system('grab -p /tmp/kraven_debug.png')

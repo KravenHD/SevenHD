@@ -1,0 +1,65 @@
+
+<!-- /* Weather -->
+  <widget backgroundColor="SevenFontBackgroundIB1" font="Regular2; 20" foregroundColor="SevenNextIB" render="Label" position="22,22" size="60,25" source="session.CurrentService" zPosition="3" halign="center" transparent="1" noWrap="1">
+    <convert type="SevenHDWeather_msn">Day_2,ShortDay</convert>
+  </widget>
+  <widget position="83,10" size="50,50" path="WetterIcons" render="SevenHDWetterPicon" alphatest="blend" source="session.CurrentService" transparent="1" zPosition="8">
+    <convert  type="SevenHDWeather_msn">Day_2,MeteoIcon</convert>
+  </widget>
+  <widget Wrap="1" backgroundColor="SevenFontBackgroundIB1" font="Regular2; 16" foregroundColor="SevenNextIB" render="Label" position="50,60" size="118,42" source="session.CurrentService" halign="center" transparent="1" zPosition="8" valign="center">
+    <convert type="SevenHDWeather_msn">Day_2,Description</convert>
+  </widget>
+  <widget noWrap="1" backgroundColor="SevenFontBackgroundIB1" font="Regular; 18" foregroundColor="SevenNowIB" render="Label" position="133,10" size="60,25" source="session.CurrentService" zPosition="8" halign="center" transparent="1">
+    <convert type="SevenHDWeather_msn">Day_2,MaxTemp</convert>
+  </widget>
+  <widget noWrap="1" backgroundColor="SevenFontBackgroundIB1" font="Regular; 18" foregroundColor="SevenNowIB" render="Label" position="133,35" size="60,25" source="session.CurrentService" zPosition="8" halign="center" transparent="1">
+    <convert type="SevenHDWeather_msn">Day_2,MinTemp</convert>
+  </widget>
+  <widget backgroundColor="SevenFontBackgroundIB1" font="Regular2; 20" foregroundColor="SevenNextIB" render="Label" position="22,122" size="60,25" source="session.CurrentService" zPosition="3" halign="center" transparent="1" noWrap="1">
+    <convert type="SevenHDWeather_msn">Day_3,ShortDay</convert>
+  </widget>
+  <widget position="83,110" size="50,50" path="WetterIcons" render="SevenHDWetterPicon" alphatest="blend" source="session.CurrentService" transparent="1" zPosition="5">
+    <convert  type="SevenHDWeather_msn">Day_3,MeteoIcon</convert>
+  </widget>
+  <widget Wrap="1" backgroundColor="SevenFontBackgroundIB1" font="Regular2; 16" foregroundColor="SevenNextIB" render="Label" position="50,160" size="118,42" source="session.CurrentService" halign="center" transparent="1" zPosition="8" valign="center">
+    <convert type="SevenHDWeather_msn">Day_3,Description</convert>
+  </widget>
+  <widget noWrap="1" backgroundColor="SevenFontBackgroundIB1" font="Regular; 18" foregroundColor="SevenNowIB" render="Label" position="133,110" size="60,25" source="session.CurrentService" zPosition="8" halign="center" transparent="1">
+    <convert type="SevenHDWeather_msn">Day_3,MaxTemp</convert>
+  </widget>
+  <widget noWrap="1" backgroundColor="SevenFontBackgroundIB1" font="Regular; 18" foregroundColor="SevenNowIB" render="Label" position="133,135" size="60,25" source="session.CurrentService" zPosition="8" halign="center" transparent="1">
+    <convert type="SevenHDWeather_msn">Day_3,MinTemp</convert>
+  </widget>
+  <widget backgroundColor="SevenFontBackgroundIB1" font="Regular2; 20" foregroundColor="SevenNextIB" render="Label" position="22,222" size="60,25" source="session.CurrentService" zPosition="3" halign="center" transparent="1" noWrap="1">
+    <convert type="SevenHDWeather_msn">Day_4,ShortDay</convert>
+  </widget>
+  <widget position="83,210" size="50,50" path="WetterIcons" render="SevenHDWetterPicon" alphatest="blend" source="session.CurrentService" transparent="1" zPosition="5">
+    <convert  type="SevenHDWeather_msn">Day_4,MeteoIcon</convert>
+  </widget>
+  <widget Wrap="1" backgroundColor="SevenFontBackgroundIB1" font="Regular2; 16" foregroundColor="SevenNextIB" render="Label" position="50,260" size="118,42" source="session.CurrentService" halign="center" transparent="1" zPosition="8" valign="center">
+    <convert type="SevenHDWeather_msn">Day_4,Description</convert>
+  </widget>
+  <widget noWrap="1" backgroundColor="SevenFontBackgroundIB1" font="Regular; 18" foregroundColor="SevenNowIB" render="Label" position="133,210" size="60,25" source="session.CurrentService" zPosition="8" halign="center" transparent="1">
+    <convert type="SevenHDWeather_msn">Day_4,MaxTemp</convert>
+  </widget>
+  <widget noWrap="1" backgroundColor="SevenFontBackgroundIB1" font="Regular; 18" foregroundColor="SevenNowIB" render="Label" position="133,235" size="60,25" source="session.CurrentService" zPosition="8" halign="center" transparent="1">
+    <convert type="SevenHDWeather_msn">Day_4,MinTemp</convert>
+  </widget>
+  <widget backgroundColor="SevenFontBackgroundIB1" font="Regular2; 20" foregroundColor="SevenNextIB" render="Label" position="22,322" size="60,25" source="session.CurrentService" zPosition="3" halign="center" transparent="1" noWrap="1">
+    <convert type="SevenHDWeather_msn">Day_5,ShortDay</convert>
+  </widget>
+  <widget position="83,310" size="50,50" path="WetterIcons" render="SevenHDWetterPicon" alphatest="blend" source="session.CurrentService" transparent="1" zPosition="5">
+    <convert  type="SevenHDWeather_msn">Day_5,MeteoIcon</convert>
+  </widget>
+  <widget Wrap="1" backgroundColor="SevenFontBackgroundIB1" font="Regular2; 16" foregroundColor="SevenNextIB" render="Label" position="50,360" size="118,42" source="session.CurrentService" halign="center" transparent="1" zPosition="8" valign="center">
+    <convert type="SevenHDWeather_msn">Day_5,Description</convert>
+  </widget>
+  <widget noWrap="1" backgroundColor="SevenFontBackgroundIB1" font="Regular; 18" foregroundColor="SevenNowIB" render="Label" position="133,310" size="60,25" source="session.CurrentService" zPosition="8" halign="center" transparent="1">
+    <convert type="SevenHDWeather_msn">Day_5,MaxTemp</convert>
+  </widget>
+  <widget noWrap="1" backgroundColor="SevenFontBackgroundIB1" font="Regular; 18" foregroundColor="SevenNowIB" render="Label" position="133,335" size="60,25" source="session.CurrentService" zPosition="8" halign="center" transparent="1">
+    <convert type="SevenHDWeather_msn">Day_5,MinTemp</convert>
+  </widget>
+<panel name="template_weather_left" />
+<!-- Weather */-->
+

@@ -1,10 +1,10 @@
-#version = '3.6.46'
+#version = '3.6.47'
 import os
 try:
    opkg_info = os.popen("opkg list-installed enigma2-plugin-skins-sevenhd | cut -d ' ' -f3").read()
    version = str(opkg_info.strip().split('+')[0])
 except:
-   version = '3.6.46'
+   version = '3.6.47'
 import re
 import time
 import math
@@ -647,13 +647,16 @@ config.plugins.SevenHD.ClockWeather = ConfigSelection(default="00ffffff", choice
 config.plugins.SevenHD.weather_cityname = ConfigText(default = 'N/A')
 
 config.plugins.SevenHD.weather_city = ConfigNumber(default="671072")
+
+config.plugins.SevenHD.weather_locationcode = ConfigText(default="GMXX0072")
                                                                   
 config.plugins.SevenHD.weather_lat_lon = ConfigText(default = 'lat=51.3452&lon=12.38594&units=metric&lang=de') 
 
-config.plugins.SevenHD.AutoWoeIDServer = ConfigSelection(default="openweathermap", choices = [
-				("yahoo", _("Yahoo")),
-				("openweathermap", _("OpenWeatherMap"))
-				])
+config.plugins.SevenHD.AutoWoeIDServer = ConfigSelection(default="_owm", choices = [
+				("_yahoo", _("Yahoo")),
+				("_owm", _("OpenWeatherMap")),
+				("_msn", _("MSN"))
+                                ])
 
 config.plugins.SevenHD.WeatherView = ConfigSelection(default="icon", choices = [
 				("icon", _("Icon")),
@@ -677,6 +680,11 @@ config.plugins.SevenHD.SysInfo = ConfigSelection(default="none", choices = [
 config.plugins.SevenHD.ECMInfo = ConfigSelection(default="none", choices = [
 				("none", _("off")),
 				("ecminfo-on", _("on"))
+				])
+
+config.plugins.SevenHD.FrontInfo = ConfigSelection(default="snr", choices = [
+				("snr", _("SNR")),
+				("db", _("dB"))
 				])
 
 
@@ -845,6 +853,7 @@ myConfigList = [('config.plugins.SevenHD.Image.value = "' + str(config.plugins.S
                 ('config.plugins.SevenHD.SatInfo.value = "' + str(config.plugins.SevenHD.SatInfo.value) + '"'),
                 ('config.plugins.SevenHD.SysInfo.value = "' + str(config.plugins.SevenHD.SysInfo.value) + '"'),
                 ('config.plugins.SevenHD.ECMInfo.value = "' + str(config.plugins.SevenHD.ECMInfo.value) + '"'),
+                ('config.plugins.SevenHD.FrontInfo.value = "' + str(config.plugins.SevenHD.FrontInfo.value) + '"'),
                 ('config.plugins.SevenHD.ChannelSelectionStyle.value = "' + str(config.plugins.SevenHD.ChannelSelectionStyle.value) + '"'),
                 ('config.plugins.SevenHD.ChannelBack1.value = "' + str(config.plugins.SevenHD.ChannelBack1.value) + '"'),
                 ('config.plugins.SevenHD.ChannelBack2.value = "' + str(config.plugins.SevenHD.ChannelBack2.value) + '"'),

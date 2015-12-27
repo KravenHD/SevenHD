@@ -334,6 +334,122 @@
     <widget font="Regular; 18" halign="left" valign="center" source="key_blue" position="664,662" size="148,48" render="Label" backgroundColor="SevenFontBackground" foregroundColor="SevenButtonText" transparent="1" zPosition="1" />
     <panel name="template_menu_left_button" />
   </screen>
+  
+    <screen backgroundColor="transparent" flags="wfNoBorder" name="CiSelection" position="0,0" size="1280,720" title="Common Interface">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="CiSelection" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
+  <widget name="text" position="70,80" size="708,30" font="Regular2; 22" backgroundColor="SevenFontBackground" transparent="1" />
+  <widget name="entries" position="70,123" size="708,504" itemHeight="30" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="SevenFontBackground" transparent="1" />
+<panel name="template_menu_left" />
+</screen>
+  <screen backgroundColor="transparent" flags="wfNoBorder" name="menu_recording_menu" position="0,0" size="1280,720" title="Recording menu">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="menu_recording_menu" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
+<widget source="menu" render="Listbox" position="70,80" size="708,540" scrollbarMode="showNever" enableWrapAround="1" transparent="1" backgroundColor="SevenFontBackground">
+  <convert type="TemplatedMultiContent">
+				{"template": [ MultiContentEntryText(pos = (16, 10), size = (500, 50), flags = RT_HALIGN_LEFT, text = 0) ],
+				"fonts": [gFont("Regular", 30)],
+				"itemHeight": 60
+				}
+	  </convert>
+</widget>
+<panel name="template_menu_left" />
+</screen>
+  <screen backgroundColor="transparent" flags="wfNoBorder" name="menu_audio_menu" position="0,0" size="1280,720" title="Audio menu">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="menu_audio_menu" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
+<widget source="menu" render="Listbox" position="70,80" size="708,540" scrollbarMode="showNever" enableWrapAround="1" transparent="1" backgroundColor="SevenFontBackground">
+  <convert type="TemplatedMultiContent">
+				{"template": [ MultiContentEntryText(pos = (16, 10), size = (500, 50), flags = RT_HALIGN_LEFT, text = 0) ],
+				"fonts": [gFont("Regular", 30)],
+				"itemHeight": 60
+				}
+	  </convert>
+</widget>
+<panel name="template_menu_left" />
+</screen>
+  <screen backgroundColor="transparent" flags="wfNoBorder" name="menu_video_menu" position="0,0" size="1280,720" title="Video menu">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="menu_video_menu" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
+<widget source="menu" render="Listbox" position="70,80" size="708,540" scrollbarMode="showNever" enableWrapAround="1" transparent="1" backgroundColor="SevenFontBackground">
+  <convert type="TemplatedMultiContent">
+				{"template": [ MultiContentEntryText(pos = (16, 10), size = (500, 50), flags = RT_HALIGN_LEFT, text = 0) ],
+				"fonts": [gFont("Regular", 30)],
+				"itemHeight": 60
+				}
+	  </convert>
+</widget>
+<panel name="template_menu_left" />
+</screen>
+  <screen backgroundColor="transparent" flags="wfNoBorder" name="menu_frontpanel_menu" position="0,0" size="1280,720" title="Frontpanel menu">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="menu_frontpanel_menu" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
+<widget source="menu" render="Listbox" position="70,80" size="708,540" scrollbarMode="showNever" enableWrapAround="1" transparent="1" backgroundColor="SevenFontBackground">
+  <convert type="TemplatedMultiContent">
+				{"template": [ MultiContentEntryText(pos = (16, 10), size = (500, 50), flags = RT_HALIGN_LEFT, text = 0) ],
+				"fonts": [gFont("Regular", 30)],
+				"itemHeight": 60
+				}
+	  </convert>
+</widget>
+<panel name="template_menu_left" />
+</screen>
+  <screen backgroundColor="transparent" flags="wfNoBorder" name="AutoResSetupMenu" position="0,0" size="1280,720" title="Setup">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="AutoResSetupMenu" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
+<widget name="list" position="70,80" size="708,540" font="Regular; 22" itemHeight="35" scrollbarMode="showOnDemand" backgroundColor="SevenFontBackground" foregroundColor="SevenFont1" transparent="1" />
+<panel name="template_menu_left" />
+</screen>
+  <screen backgroundColor="transparent" flags="wfNoBorder" name="menu_devices_menu" position="0,0" size="1280,720" title="Devices menu">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="menu_devices_menu" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
+<widget source="menu" render="Listbox" position="70,80" size="708,540" scrollbarMode="showNever" enableWrapAround="1" transparent="1" backgroundColor="SevenFontBackground">
+  <convert type="TemplatedMultiContent">
+				{"template": [ MultiContentEntryText(pos = (16, 10), size = (500, 50), flags = RT_HALIGN_LEFT, text = 0) ],
+				"fonts": [gFont("Regular", 30)],
+				"itemHeight": 60
+				}
+	  </convert>
+</widget>
+<panel name="template_menu_left" />
+</screen>
+  <screen backgroundColor="transparent" flags="wfNoBorder" name="menu_general_menu" position="0,0" size="1280,720" title="General menu">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="menu_general_menu" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
+<widget source="menu" render="Listbox" position="70,80" size="708,540" scrollbarMode="showNever" enableWrapAround="1" transparent="1" backgroundColor="SevenFontBackground">
+  <convert type="TemplatedMultiContent">
+				{"template": [ MultiContentEntryText(pos = (16, 10), size = (500, 50), flags = RT_HALIGN_LEFT, text = 0) ],
+				"fonts": [gFont("Regular", 30)],
+				"itemHeight": 60
+				}
+	  </convert>
+</widget>
+<panel name="template_menu_left" />
+</screen>
+  <screen backgroundColor="transparent" flags="wfNoBorder" name="AutoResSetupMenu" position="0,0" size="1280,720" title="Setup">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="AutoResSetupMenu" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
+<widget name="config" position="70,80" size="708,540" itemHeight="30" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="SevenFontBackground" transparent="1" />
+<panel name="template_menu_left_button" />
+<panel name="template_colorkey_text_source" />
+</screen>
+  <screen backgroundColor="transparent" flags="wfNoBorder" name="AudioSetup" position="0,0" size="1280,720" title="Setup">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="AudioSetup" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
+<widget name="config" position="70,80" size="708,540" itemHeight="30" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="SevenFontBackground" transparent="1" />
+<panel name="template_menu_left_button" />
+<panel name="template_colorkey_text_source" />
+</screen>
+  <screen backgroundColor="transparent" flags="wfNoBorder" name="setup_subtitlesetup" position="0,0" size="1280,720" title="Setup">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="setup_subtitlesetup" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
+<widget name="config" position="70,80" size="708,540" itemHeight="30" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="SevenFontBackground" transparent="1" />
+<panel name="template_menu_left_button" />
+<panel name="template_colorkey_text_source" />
+</screen>
+  <screen backgroundColor="transparent" flags="wfNoBorder" name="setup_autolanguagesetup" position="0,0" size="1280,720" title="Setup">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="setup_autolanguagesetup" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
+<widget name="config" position="70,80" size="708,540" itemHeight="30" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="SevenFontBackground" transparent="1" />
+<panel name="template_menu_left_button" />
+<panel name="template_colorkey_text_source" />
+</screen>
+  <screen backgroundColor="transparent" flags="wfNoBorder" name="OMBManagerList" position="0,0" size="1280,720" title="OMBManagerList">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="OMBManagerList" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
+<widget source="list" render="Listbox" position="70,80" size="708,540" scrollbarMode="showOnDemand" transparent="1">
+  <convert type="StringList" />
+</widget>
+<panel name="template_menu_left_button" />
+<panel name="template_colorkey_text_source" />
+</screen>
 <!-- main-custom-openmips */ -->
 
 

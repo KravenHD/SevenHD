@@ -424,7 +424,7 @@ class SevenHD(Screen):
 		self.skinSearchAndReplace.append(["SevenProgram_List", config.plugins.SevenHD.ChannelColorEvent.value])
 		
 		# Weather Font
-                if config.plugins.SevenHD.AutoWoeIDServer.value == 'yahoo':
+                if config.plugins.SevenHD.AutoWoeIDServer.value == '_yahoo':
                    if config.plugins.SevenHD.WeatherView.value == "meteo":
                       self.skinSearchAndReplace.append(['size="50,50" path="WetterIcons" render="SevenHDWetterPicon" alphatest="blend"', 'size="50,50" render="Label" font="Meteo; 45" halign="center" valign="center" foregroundColor="SevenMeteoFont" backgroundColor="SevenFontBackgroundIB1" noWrap="1"'])
                       self.skinSearchAndReplace.append(['size="70,70" render="SevenHDWetterPicon" alphatest="blend" path="WetterIcons"', 'size="70,70" render="Label" font="Meteo; 70" halign="center" valign="center" foregroundColor="SevenMeteoFont" backgroundColor="SevenFontBackgroundIB1" noWrap="1"'])
@@ -433,16 +433,24 @@ class SevenHD(Screen):
                       self.skinSearchAndReplace.append(['convert  type="SevenHDWeather">forecastTomorrow1Picon', 'convert  type="SevenHDWeather">forecastTomorrow1Code'])
                       self.skinSearchAndReplace.append(['convert  type="SevenHDWeather">forecastTomorrow2Picon', 'convert  type="SevenHDWeather">forecastTomorrow2Code'])
                       self.skinSearchAndReplace.append(['convert  type="SevenHDWeather">forecastTomorrow3Picon', 'convert  type="SevenHDWeather">forecastTomorrow3Code'])
-                else:
+                elif config.plugins.SevenHD.AutoWoeIDServer.value == '_owm':
                    if config.plugins.SevenHD.WeatherView.value == "meteo":
-                      self.skinSearchAndReplace.append(['size="50,50" path="WetterIcons" render="SevenHDWetterPicon" alphatest="blend"', 'size="50,50" render="Label" font="Meteo2; 45" halign="center" valign="center" foregroundColor="SevenMeteoFont" backgroundColor="SevenFontBackgroundIB1" noWrap="1"'])
-                      self.skinSearchAndReplace.append(['size="70,70" render="SevenHDWetterPicon" alphatest="blend" path="WetterIcons"', 'size="70,70" render="Label" font="Meteo2; 70" halign="center" valign="center" foregroundColor="SevenMeteoFont" backgroundColor="SevenFontBackgroundIB1" noWrap="1"'])
+                      self.skinSearchAndReplace.append(['size="50,50" path="WetterIcons" render="SevenHDWetterPicon" alphatest="blend"', 'size="50,50" render="Label" font="Meteo; 45" halign="center" valign="center" foregroundColor="SevenMeteoFont" backgroundColor="SevenFontBackgroundIB1" noWrap="1"'])
+                      self.skinSearchAndReplace.append(['size="70,70" render="SevenHDWetterPicon" alphatest="blend" path="WetterIcons"', 'size="70,70" render="Label" font="Meteo; 70" halign="center" valign="center" foregroundColor="SevenMeteoFont" backgroundColor="SevenFontBackgroundIB1" noWrap="1"'])
                       self.skinSearchAndReplace.append(['convert  type="SevenHDWeather_owm">Day_0,MeteoIcon', 'convert  type="SevenHDWeather_owm">Day_0,MeteoFont'])
                       self.skinSearchAndReplace.append(['convert  type="SevenHDWeather_owm">Day_1,MeteoIcon', 'convert  type="SevenHDWeather_owm">Day_1,MeteoFont'])
                       self.skinSearchAndReplace.append(['convert  type="SevenHDWeather_owm">Day_2,MeteoIcon', 'convert  type="SevenHDWeather_owm">Day_2,MeteoFont'])
                       self.skinSearchAndReplace.append(['convert  type="SevenHDWeather_owm">Day_3,MeteoIcon', 'convert  type="SevenHDWeather_owm">Day_3,MeteoFont'])
                       self.skinSearchAndReplace.append(['convert  type="SevenHDWeather_owm">Day_4,MeteoIcon', 'convert  type="SevenHDWeather_owm">Day_4,MeteoFont'])    
-                      
+                elif config.plugins.SevenHD.AutoWoeIDServer.value == '_msn':
+                   if config.plugins.SevenHD.WeatherView.value == "meteo":
+                      self.skinSearchAndReplace.append(['size="50,50" path="WetterIcons" render="SevenHDWetterPicon" alphatest="blend"', 'size="50,50" render="Label" font="Meteo; 45" halign="center" valign="center" foregroundColor="SevenMeteoFont" backgroundColor="SevenFontBackgroundIB1" noWrap="1"'])
+                      self.skinSearchAndReplace.append(['size="70,70" render="SevenHDWetterPicon" alphatest="blend" path="WetterIcons"', 'size="70,70" render="Label" font="Meteo; 70" halign="center" valign="center" foregroundColor="SevenMeteoFont" backgroundColor="SevenFontBackgroundIB1" noWrap="1"'])
+                      self.skinSearchAndReplace.append(['convert  type="SevenHDWeather_msn">Day_0,MeteoIcon', 'convert  type="SevenHDWeather_msn">Day_0,MeteoFont'])
+                      self.skinSearchAndReplace.append(['convert  type="SevenHDWeather_msn">Day_2,MeteoIcon', 'convert  type="SevenHDWeather_msn">Day_2,MeteoFont'])
+                      self.skinSearchAndReplace.append(['convert  type="SevenHDWeather_msn">Day_3,MeteoIcon', 'convert  type="SevenHDWeather_msn">Day_3,MeteoFont'])
+                      self.skinSearchAndReplace.append(['convert  type="SevenHDWeather_msn">Day_4,MeteoIcon', 'convert  type="SevenHDWeather_msn">Day_4,MeteoFont'])    
+                      self.skinSearchAndReplace.append(['convert  type="SevenHDWeather_msn">Day_5,MeteoIcon', 'convert  type="SevenHDWeather_msn">Day_5,MeteoFont'])
                       
                 ### Progress
                 if config.plugins.SevenHD.Progress.value == "progress":
@@ -519,7 +527,11 @@ class SevenHD(Screen):
 
 		self.skinSearchAndReplace.append(["buttons_seven_white", config.plugins.SevenHD.ButtonStyle.value])
 		self.skinSearchAndReplace.append(["icons_seven_white", config.plugins.SevenHD.IconStyle.value])
-		
+
+		### FrontInfo
+		if config.plugins.SevenHD.FrontInfo.value == "db":
+		   self.skinSearchAndReplace.append(['<convert type="FrontendInfo">SNR' , '<convert type="FrontendInfo">SNRdB'])
+
 		### Text (running, writing, none)
 		if config.plugins.SevenHD.RunningText.value == "writing":
 			self.skinSearchAndReplace.append(['render="SevenHDRunningText" options="movetype=running,startpoint=0,startdelay=2000,steptime=90,wrap=1,always=0,repeat=2,oneshot=1"', 'render="SevenHDEmptyEpg"'])
@@ -606,27 +618,14 @@ class SevenHD(Screen):
                 
                 ###clock-style xml Infobar
 		if config.plugins.SevenHD.ClockStyle.value == 'clock-weather':
-                   self.debug('clock')
-                   if config.plugins.SevenHD.AutoWoeIDServer.value == 'yahoo':
-                      self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.ClockStyle.value + '_yahoo' + XML)
-                      self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.ClockStyle.value + '_yahoo' + XML)               
-                   else:
-                      self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.ClockStyle.value + '_owm' + XML)
-                      self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.ClockStyle.value + '_owm' + XML)
+                   self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.ClockStyle.value + str(config.plugins.SevenHD.AutoWoeIDServer.value) + XML)
+                   self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.ClockStyle.value + str(config.plugins.SevenHD.AutoWoeIDServer.value) + XML)
                 elif config.plugins.SevenHD.ClockStyle.value == 'clock-weather-meteo':
-                   if config.plugins.SevenHD.AutoWoeIDServer.value == 'yahoo':
-                      self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.ClockStyle.value + '_yahoo' + XML)
-                      self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.ClockStyle.value + '_yahoo' + XML)               
-                   else:
-                      self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.ClockStyle.value + '_owm' + XML)
-                      self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.ClockStyle.value + '_owm' + XML)
+                   self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.ClockStyle.value + str(config.plugins.SevenHD.AutoWoeIDServer.value) + XML)
+                   self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.ClockStyle.value + str(config.plugins.SevenHD.AutoWoeIDServer.value) + XML)
                 elif config.plugins.SevenHD.ClockStyle.value == 'clock-android':
-                   if config.plugins.SevenHD.AutoWoeIDServer.value == 'yahoo':
-                      self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.ClockStyle.value + '_yahoo' + XML)
-                      self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.ClockStyle.value + '_yahoo' + XML)               
-                   else:
-                      self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.ClockStyle.value + '_owm' + XML)
-                      self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.ClockStyle.value + '_owm' + XML)
+                   self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.ClockStyle.value + str(config.plugins.SevenHD.AutoWoeIDServer.value) + XML)
+                   self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.ClockStyle.value + str(config.plugins.SevenHD.AutoWoeIDServer.value) + XML)
                 else:
                    self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.ClockStyle.value + XML)
                    self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.ClockStyle.value + XML)
@@ -641,12 +640,8 @@ class SevenHD(Screen):
                 
                 ###weather-style
                 if config.plugins.SevenHD.WeatherStyle.value != 'none':
-                   if config.plugins.SevenHD.AutoWoeIDServer.value == 'yahoo':
-		      self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.WeatherStyle.value + '_yahoo' + XML)
-                      self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.WeatherStyle.value + '_yahoo' + XML)        
-                   else:
-                      self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.WeatherStyle.value + '_owm' + XML)
-                      self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.WeatherStyle.value + '_owm' + XML)
+                   self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.WeatherStyle.value + str(config.plugins.SevenHD.AutoWoeIDServer.value) + XML)
+                   self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.WeatherStyle.value + str(config.plugins.SevenHD.AutoWoeIDServer.value) + XML)
                 else:
                    self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.WeatherStyle.value + XML)
                    self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.WeatherStyle.value + XML)      
@@ -673,26 +668,14 @@ class SevenHD(Screen):
                 ###clock-style xml 2nd Infobar
 		if config.plugins.SevenHD.SIB.value != '-right':
                    if config.plugins.SevenHD.ClockStyle.value == 'clock-weather':
-                      if config.plugins.SevenHD.AutoWoeIDServer.value == 'yahoo':
-                         self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.ClockStyle.value + '_yahoo' + XML)
-                         self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.ClockStyle.value + '_yahoo' + XML)               
-                      else:
-                         self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.ClockStyle.value + '_owm' + XML)
-                         self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.ClockStyle.value + '_owm' + XML)
+                      self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.ClockStyle.value + str(config.plugins.SevenHD.AutoWoeIDServer.value) + XML)
+                      self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.ClockStyle.value + str(config.plugins.SevenHD.AutoWoeIDServer.value) + XML)
                    elif config.plugins.SevenHD.ClockStyle.value == 'clock-weather-meteo':
-                      if config.plugins.SevenHD.AutoWoeIDServer.value == 'yahoo':
-                         self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.ClockStyle.value + '_yahoo' + XML)
-                         self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.ClockStyle.value + '_yahoo' + XML)               
-                      else:
-                         self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.ClockStyle.value + '_owm' + XML)
-                         self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.ClockStyle.value + '_owm' + XML)
+                      self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.ClockStyle.value + str(config.plugins.SevenHD.AutoWoeIDServer.value) + XML)
+                      self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.ClockStyle.value + str(config.plugins.SevenHD.AutoWoeIDServer.value) + XML)
                    elif config.plugins.SevenHD.ClockStyle.value == 'clock-android':
-                      if config.plugins.SevenHD.AutoWoeIDServer.value == 'yahoo':
-                         self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.ClockStyle.value + '_yahoo' + XML)
-                         self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.ClockStyle.value + '_yahoo' + XML)               
-                      else:
-                         self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.ClockStyle.value + '_owm' + XML)
-                         self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.ClockStyle.value + '_owm' + XML)
+                      self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.ClockStyle.value + str(config.plugins.SevenHD.AutoWoeIDServer.value) + XML)
+                      self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.ClockStyle.value + str(config.plugins.SevenHD.AutoWoeIDServer.value) + XML)
                    else:
                       self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.ClockStyle.value + XML)
                       self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.ClockStyle.value + XML)       
@@ -712,7 +695,6 @@ class SevenHD(Screen):
                 #EMCSTYLE
 		self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.EMCStyle.value + XML)
                 self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.EMCStyle.value + XML)        
-                
                 
                 #MOVIESELECTIONSTYLE
 		self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.MovieSelectionStyle.value + XML)
