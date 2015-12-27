@@ -435,8 +435,8 @@ class SevenHD(Screen):
                       self.skinSearchAndReplace.append(['convert  type="SevenHDWeather">forecastTomorrow3Picon', 'convert  type="SevenHDWeather">forecastTomorrow3Code'])
                 elif config.plugins.SevenHD.AutoWoeIDServer.value == '_owm':
                    if config.plugins.SevenHD.WeatherView.value == "meteo":
-                      self.skinSearchAndReplace.append(['size="50,50" path="WetterIcons" render="SevenHDWetterPicon" alphatest="blend"', 'size="50,50" render="Label" font="Meteo; 45" halign="center" valign="center" foregroundColor="SevenMeteoFont" backgroundColor="SevenFontBackgroundIB1" noWrap="1"'])
-                      self.skinSearchAndReplace.append(['size="70,70" render="SevenHDWetterPicon" alphatest="blend" path="WetterIcons"', 'size="70,70" render="Label" font="Meteo; 70" halign="center" valign="center" foregroundColor="SevenMeteoFont" backgroundColor="SevenFontBackgroundIB1" noWrap="1"'])
+                      self.skinSearchAndReplace.append(['size="50,50" path="WetterIcons" render="SevenHDWetterPicon" alphatest="blend"', 'size="50,50" render="Label" font="Meteo2; 45" halign="center" valign="center" foregroundColor="SevenMeteoFont" backgroundColor="SevenFontBackgroundIB1" noWrap="1"'])
+                      self.skinSearchAndReplace.append(['size="70,70" render="SevenHDWetterPicon" alphatest="blend" path="WetterIcons"', 'size="70,70" render="Label" font="Meteo2; 70" halign="center" valign="center" foregroundColor="SevenMeteoFont" backgroundColor="SevenFontBackgroundIB1" noWrap="1"'])
                       self.skinSearchAndReplace.append(['convert  type="SevenHDWeather_owm">Day_0,MeteoIcon', 'convert  type="SevenHDWeather_owm">Day_0,MeteoFont'])
                       self.skinSearchAndReplace.append(['convert  type="SevenHDWeather_owm">Day_1,MeteoIcon', 'convert  type="SevenHDWeather_owm">Day_1,MeteoFont'])
                       self.skinSearchAndReplace.append(['convert  type="SevenHDWeather_owm">Day_2,MeteoIcon', 'convert  type="SevenHDWeather_owm">Day_2,MeteoFont'])
@@ -542,9 +542,9 @@ class SevenHD(Screen):
 			self.skinSearchAndReplace.append(['render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,steptime=90,wrap=1,always=0,repeat=2,oneshot=1"', 'render="Label"'])
 			self.skinSearchAndReplace.append(['render="SevenHDRunningText" options="movetype=running,startpoint=0,startdelay=2000,steptime=90,wrap=0,always=0,repeat=2,oneshot=1"', 'render="Label"'])
 		
-		self.skinSearchAndReplace.append(["startdelay=2000", config.plugins.SevenHD.Startdelay.value])
+		self.skinSearchAndReplace.append(["startdelay=2000", "startdelay=%s" % str(int(config.plugins.SevenHD.Startdelay.value) * 1000)])
 		
-		self.skinSearchAndReplace.append(["steptime=90", config.plugins.SevenHD.Steptime.value])
+		self.skinSearchAndReplace.append(["steptime=90", "steptime=%s" % str(config.plugins.SevenHD.Steptime.value)])
 			
 		if not config.plugins.SevenHD.SelectionBorder.value == "none":
 			self.selectionbordercolor = config.plugins.SevenHD.SelectionBorder.value

@@ -60,6 +60,7 @@ from Tools.Directories import fileExists, resolveFilename, SCOPE_LANGUAGE, SCOPE
 MAIN_PLUGIN_PATH = "/usr/lib/enigma2/python/Plugins/Extensions/SevenHD/"
 MAIN_IMAGE_PATH = MAIN_PLUGIN_PATH + "images/"
 MAIN_DATA_PATH = MAIN_PLUGIN_PATH + "data/"
+MAIN_USER_PATH = MAIN_PLUGIN_PATH + "user/"
 MAIN_SKIN_PATH = "/usr/share/enigma2/SevenHD/"
 PLUGIN_PATH = "/usr/lib/enigma2/python/Plugins/"
 FILE = MAIN_SKIN_PATH + "skin.xml"
@@ -180,6 +181,15 @@ config.plugins.SevenHD.Header = ConfigSelection(default="header-seven", choices 
 				("header-seven", _("SevenHD"))
 				])
 
+UserList = []
+if fileExists(MAIN_USER_PATH + "user_color.txt"):
+   with open(MAIN_USER_PATH + "user_color.txt", 'r') as xFile:
+        lines = xFile.readlines()
+   for line in lines:
+        if ',' in line and not line.startswith('#'):
+           ColorHexCode, ColorName = re.split(',', str(line))
+           UserList.append(("%s" % str(ColorHexCode.strip()), _("%s" % str(ColorName.strip()))))
+
 ColorList = []
 ColorList.append(("00000000", _("black")))
 ColorList.append(("00ffffff", _("white")))
@@ -212,111 +222,16 @@ ColorList.append(("001F0333", _("violet dark")))
 ColorList.append(("00FFBE00", _("yellow dark")))
 ColorList.append(("00FFF006", _("yellow")))
 
-TransList = []
-TransList.append(("00", _("0%")))
-TransList.append(("03", _("1%")))
-TransList.append(("05", _("2%")))
-TransList.append(("08", _("3%")))
-TransList.append(("0a", _("4%")))
-TransList.append(("0d", _("5%")))
-TransList.append(("0f", _("6%")))
-TransList.append(("12", _("7%")))
-TransList.append(("14", _("8%")))
-TransList.append(("17", _("9%")))
-TransList.append(("1a", _("10%")))
-TransList.append(("1c", _("11%")))
-TransList.append(("1f", _("12%")))
-TransList.append(("21", _("13%")))
-TransList.append(("24", _("14%")))
-TransList.append(("26", _("15%")))
-TransList.append(("29", _("16%")))
-TransList.append(("2b", _("17%")))
-TransList.append(("2e", _("18%")))
-TransList.append(("30", _("19%")))
-TransList.append(("33", _("20%")))
-TransList.append(("36", _("21%")))
-TransList.append(("38", _("22%")))
-TransList.append(("3b", _("23%")))
-TransList.append(("3d", _("24%")))
-TransList.append(("40", _("25%")))
-TransList.append(("42", _("26%")))
-TransList.append(("45", _("27%")))
-TransList.append(("47", _("28%")))
-TransList.append(("4a", _("29%")))
-TransList.append(("4d", _("30%")))
-TransList.append(("4f", _("31%")))
-TransList.append(("52", _("32%")))
-TransList.append(("54", _("33%")))
-TransList.append(("57", _("34%")))
-TransList.append(("59", _("35%")))
-TransList.append(("5c", _("36%")))
-TransList.append(("5e", _("37%")))
-TransList.append(("61", _("38%")))
-TransList.append(("63", _("39%")))
-TransList.append(("66", _("40%")))
-TransList.append(("69", _("41%")))
-TransList.append(("6b", _("42%")))
-TransList.append(("6e", _("43%")))
-TransList.append(("70", _("44%")))
-TransList.append(("73", _("45%")))
-TransList.append(("75", _("46%")))
-TransList.append(("78", _("47%")))
-TransList.append(("7a", _("48%")))
-TransList.append(("7d", _("49%")))
-TransList.append(("80", _("50%")))
-TransList.append(("82", _("51%")))
-TransList.append(("85", _("52%")))
-TransList.append(("87", _("53%")))
-TransList.append(("8a", _("54%")))
-TransList.append(("8c", _("55%")))
-TransList.append(("8f", _("56%")))
-TransList.append(("91", _("57%")))
-TransList.append(("94", _("58%")))
-TransList.append(("96", _("59%")))
-TransList.append(("99", _("60%")))
-TransList.append(("9c", _("61%")))
-TransList.append(("9e", _("62%")))
-TransList.append(("a1", _("63%")))
-TransList.append(("a3", _("64%")))
-TransList.append(("a6", _("65%")))
-TransList.append(("a8", _("66%")))
-TransList.append(("ab", _("67%")))
-TransList.append(("ad", _("68%")))
-TransList.append(("b0", _("69%")))
-TransList.append(("b3", _("70%")))
-TransList.append(("b5", _("71%")))
-TransList.append(("b8", _("72%")))
-TransList.append(("ba", _("73%")))
-TransList.append(("bd", _("74%")))
-TransList.append(("bf", _("75%")))
-TransList.append(("c2", _("76%")))
-TransList.append(("c4", _("77%")))
-TransList.append(("c7", _("78%")))
-TransList.append(("c9", _("79%")))
-TransList.append(("cc", _("80%")))
-TransList.append(("cf", _("81%")))
-TransList.append(("d1", _("82%")))
-TransList.append(("d4", _("83%")))
-TransList.append(("d6", _("84%")))
-TransList.append(("d9", _("85%")))
-TransList.append(("db", _("86%")))
-TransList.append(("de", _("87%")))
-TransList.append(("e0", _("88%")))
-TransList.append(("e3", _("89%")))
-TransList.append(("e6", _("90%")))
-TransList.append(("e8", _("91%")))
-TransList.append(("eb", _("92%")))
-TransList.append(("ed", _("93%")))
-TransList.append(("f0", _("94%")))
-TransList.append(("f2", _("95%")))
-TransList.append(("f5", _("96%")))
-TransList.append(("f7", _("97%")))
-TransList.append(("fa", _("98%")))
-TransList.append(("fc", _("99%")))
-TransList.append(("ff", _("100%")))
+ColorList += UserList
+   
+TransList = [] 
+for x in range(101):
+    tc = hex(int(round(float(255 * x / 100))))[2:]
+    if len(tc) == 1:
+       tc = '0' + str(tc)
+    TransList.append(("%s" % str(tc), "%s" % str(str(x) + ' %')))              
 
-BackList = ['brownleather', 'carbon', 'lightwood', 
-            'redwood', 'slate']
+BackList = ['brownleather', 'carbon', 'lightwood', 'redwood', 'slate']
 
 ################################################################################################################################################################
 # GlobalScreen
@@ -369,43 +284,11 @@ config.plugins.SevenHD.RunningText = ConfigSelection(default="running", choices 
 				("writing", _("writing")),
 				("none", _("off"))
 				])
-config.plugins.SevenHD.Startdelay = ConfigSelection(default="startdelay=2000", choices = [
-				("startdelay=1000", _("1 sec")),
-				("startdelay=2000", _("2 sec")),
-				("startdelay=3000", _("3 sec")),
-				("startdelay=4000", _("4 sec")),
-				("startdelay=5000", _("5 sec")),
-				("startdelay=6000", _("6 sec")),
-				("startdelay=7000", _("7 sec")),
-				("startdelay=8000", _("8 sec")),
-				("startdelay=9000", _("9 sec")),
-				("startdelay=10000", _("10 sec")),
-				("startdelay=11000", _("11 sec")),
-				("startdelay=12000", _("12 sec")),
-				("startdelay=13000", _("13 sec")),
-				("startdelay=14000", _("14 sec")),
-				("startdelay=15000", _("15 sec")),
-				("startdelay=16000", _("16 sec")),
-				("startdelay=17000", _("17 sec")),
-				("startdelay=18000", _("18 sec")),
-				("startdelay=19000", _("19 sec")),
-				("startdelay=20000", _("20 sec"))
-				])
-config.plugins.SevenHD.Steptime = ConfigSelection(default="steptime=90", choices = [
-				("steptime=25", _("25")),
-				("steptime=50", _("50")),
-				("steptime=75", _("75")),
-				("steptime=90", _("90")),
-				("steptime=115", _("115")),
-				("steptime=140", _("140")),
-				("steptime=165", _("165")),
-				("steptime=190", _("190")),
-				("steptime=215", _("215")),
-				("steptime=240", _("240")),
-				("steptime=265", _("265")),
-				("steptime=290", _("290")),
-				("steptime=315", _("315"))
-				])
+				
+config.plugins.SevenHD.Startdelay = ConfigSelectionNumber(default = 20, stepwidth = 1, min = 1, max = 20, wraparound = True)
+
+config.plugins.SevenHD.Steptime = ConfigSelectionNumber(default = 100, stepwidth = 25, min = 25, max = 325, wraparound = True)
+
 config.plugins.SevenHD.VolumeStyle = ConfigSelection(default="volumestyle-original", choices = [
 				("volumestyle-original", _("original")),
 				("volumestyle-left-side", _("left")),
@@ -458,10 +341,7 @@ BackgroundList = []
 for x in BackList:
     BackgroundList.append(("back_%s_main" % x, _("%s" % x)))
 
-#if config.plugins.SevenHD.skin_mode.value == '1':
 BackgroundList = ColorList + BackgroundList
-#else:
-#   BackgroundList = ColorList
 config.plugins.SevenHD.Background = ConfigSelection(default="00000000", choices = BackgroundList)
 
 config.plugins.SevenHD.BackgroundColorTrans = ConfigSelection(default="0a", choices = TransList)
@@ -469,10 +349,7 @@ config.plugins.SevenHD.BackgroundColorTrans = ConfigSelection(default="0a", choi
 BackgroundRightList = []
 for x in BackList:
     BackgroundRightList.append(("back_%s_right" % x, _("%s" % x)))                       
-#if config.plugins.SevenHD.skin_mode.value == '1':
 BackgroundRightList = ColorList + BackgroundRightList
-#else:
-#   BackgroundRightList = ColorList
 config.plugins.SevenHD.BackgroundRight = ConfigSelection(default="00000000", choices = BackgroundRightList)
 				
 config.plugins.SevenHD.BackgroundRightColorTrans = ConfigSelection(default="0a", choices = TransList)
@@ -531,10 +408,7 @@ config.plugins.SevenHD.SIB = ConfigSelection(default="-top", choices = [
 BackgroundIB1List = []
 for x in BackList:
     BackgroundIB1List.append(("back_%s_ib1" % x, _("%s" % x)))                     
-#if config.plugins.SevenHD.skin_mode.value == '1':
 BackgroundIB1List = ColorList + BackgroundIB1List
-#else:
-#   BackgroundIB1List = ColorList
 config.plugins.SevenHD.BackgroundIB1 = ConfigSelection(default="00000000", choices = BackgroundIB1List)
 
 config.plugins.SevenHD.BackgroundIB1Trans = ConfigSelection(default="0a", choices = TransList)
@@ -544,10 +418,7 @@ config.plugins.SevenHD.BackgroundIB2Trans = ConfigSelection(default="0a", choice
 BackgroundIB2List = []
 for x in BackList:
     BackgroundIB2List.append(("back_%s_ib2" % x, _("%s" % x)))
-#if config.plugins.SevenHD.skin_mode.value == '1':
 BackgroundIB2List = ColorList + BackgroundIB2List
-#else:
-#   BackgroundIB2List = ColorList
 config.plugins.SevenHD.BackgroundIB2 = ConfigSelection(default="00000000", choices = BackgroundIB2List)
 
 config.plugins.SevenHD.InfobarLine = ConfigSelection(default="00ffffff", choices = ColorList)
@@ -708,30 +579,21 @@ config.plugins.SevenHD.ChannelSelectionStyle = ConfigSelection(default="channels
 ChannelBack1List = []
 for x in BackList:
     ChannelBack1List.append(("back_%s_csleft" % x, _("%s" % x)))                    
-#if config.plugins.SevenHD.skin_mode.value == '1':
 ChannelBack1List = ColorList + ChannelBack1List
-#else:
-#   ChannelBack1List = ColorList
 config.plugins.SevenHD.ChannelBack1 = ConfigSelection(default="00000000", choices = ChannelBack1List)
 
 
 ChannelBack2List = []
 for x in BackList:
     ChannelBack2List.append(("back_%s_csright" % x, _("%s" % x)))                     
-#if config.plugins.SevenHD.skin_mode.value == '1':
 ChannelBack2List = ColorList + ChannelBack2List
-#else:
-#   ChannelBack2List = ColorList
 config.plugins.SevenHD.ChannelBack2 = ConfigSelection(default="00000000", choices = ChannelBack2List)
                    
 
 ChannelBack3List = []
 for x in BackList:
     ChannelBack3List.append(("back_%s_csmiddle" % x, _("%s" % x)))                    
-#if config.plugins.SevenHD.skin_mode.value == '1':
 ChannelBack3List = ColorList + ChannelBack3List
-#else:
-#   ChannelBack3List = ColorList
 config.plugins.SevenHD.ChannelBack3 = ConfigSelection(default="00000000", choices = ChannelBack3List)
 
 config.plugins.SevenHD.ChannelLine = ConfigSelection(default="00ffffff", choices = ColorList)
