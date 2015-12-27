@@ -435,8 +435,8 @@ class SevenHD(Screen):
                       self.skinSearchAndReplace.append(['convert  type="SevenHDWeather">forecastTomorrow3Picon', 'convert  type="SevenHDWeather">forecastTomorrow3Code'])
                 elif config.plugins.SevenHD.AutoWoeIDServer.value == '_owm':
                    if config.plugins.SevenHD.WeatherView.value == "meteo":
-                      self.skinSearchAndReplace.append(['size="50,50" path="WetterIcons" render="SevenHDWetterPicon" alphatest="blend"', 'size="50,50" render="Label" font="Meteo; 45" halign="center" valign="center" foregroundColor="SevenMeteoFont" backgroundColor="SevenFontBackgroundIB1" noWrap="1"'])
-                      self.skinSearchAndReplace.append(['size="70,70" render="SevenHDWetterPicon" alphatest="blend" path="WetterIcons"', 'size="70,70" render="Label" font="Meteo; 70" halign="center" valign="center" foregroundColor="SevenMeteoFont" backgroundColor="SevenFontBackgroundIB1" noWrap="1"'])
+                      self.skinSearchAndReplace.append(['size="50,50" path="WetterIcons" render="SevenHDWetterPicon" alphatest="blend"', 'size="50,50" render="Label" font="Meteo2; 45" halign="center" valign="center" foregroundColor="SevenMeteoFont" backgroundColor="SevenFontBackgroundIB1" noWrap="1"'])
+                      self.skinSearchAndReplace.append(['size="70,70" render="SevenHDWetterPicon" alphatest="blend" path="WetterIcons"', 'size="70,70" render="Label" font="Meteo2; 70" halign="center" valign="center" foregroundColor="SevenMeteoFont" backgroundColor="SevenFontBackgroundIB1" noWrap="1"'])
                       self.skinSearchAndReplace.append(['convert  type="SevenHDWeather_owm">Day_0,MeteoIcon', 'convert  type="SevenHDWeather_owm">Day_0,MeteoFont'])
                       self.skinSearchAndReplace.append(['convert  type="SevenHDWeather_owm">Day_1,MeteoIcon', 'convert  type="SevenHDWeather_owm">Day_1,MeteoFont'])
                       self.skinSearchAndReplace.append(['convert  type="SevenHDWeather_owm">Day_2,MeteoIcon', 'convert  type="SevenHDWeather_owm">Day_2,MeteoFont'])
