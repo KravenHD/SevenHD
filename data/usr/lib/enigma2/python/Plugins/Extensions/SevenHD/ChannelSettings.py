@@ -173,15 +173,13 @@ class ChannelSettings(ConfigListScreen, Screen):
         self["config"].setList(self.getMenuItemList())
 
     def GetPicturePath(self):
-        returnValue = self["config"].getCurrent()[3]
-        self.debug('\nRet_value[3]: ' + str(returnValue))		
+        returnValue = self["config"].getCurrent()[3]		
            		
         if returnValue == '4':
            returnValue = self["config"].getCurrent()[int(returnValue)]
         else:
            returnValue = self["config"].getCurrent()[int(returnValue)].value
         
-        self.debug('Ret_value[4]: ' + str(returnValue))   
         path = MAIN_IMAGE_PATH + str(returnValue) + str(".jpg")
         
         self["description"].setText(self["config"].getCurrent()[2])
