@@ -3,7 +3,7 @@ Version: 3.6.47
 Section: misc
 Priority: optional
 Architecture: all
-Depends: python-requests, python-subprocess, python-imaging
+Depends: python-requests, python-subprocess, python-imaging, enigma2-plugin-systemplugins-mphelp
 Maintainer: Team Kraven
 Description: Skin for Enigma2 (HD, FHD, UHD)
 Source:
