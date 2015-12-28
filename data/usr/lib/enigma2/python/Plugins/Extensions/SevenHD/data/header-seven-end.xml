@@ -9717,12 +9717,12 @@
     <ePixmap pixmap="SevenHD/back/ibone.png" position="15,6" size="188,402" alphatest="blend" zPosition="-8" />
   </screen>
   <screen name="template_weather_small">
-  <eLabel backgroundColor="SevenBorderIB" position="969,4" size="2,120" zPosition="2" />
+  <eLabel backgroundColor="SevenBorderIB" position="974,4" size="2,120" zPosition="2" />
   <eLabel backgroundColor="SevenBorderIB" position="1262,4" size="2,120" zPosition="2" />
-  <eLabel backgroundColor="SevenBorderIB" position="969,4" size="294,2" zPosition="2" />
-  <eLabel backgroundColor="SevenBorderIB" position="969,123" size="294,2" zPosition="2" />
-  <eLabel backgroundColor="SevenBackgroundIB1" position="970,5" size="293,118" zPosition="-9" />
-  <ePixmap pixmap="SevenHD/back/ibone.png" position="970,5" size="293,118" alphatest="blend" zPosition="-8" />
+  <eLabel backgroundColor="SevenBorderIB" position="974,4" size="290,2" zPosition="2" />
+  <eLabel backgroundColor="SevenBorderIB" position="974,123" size="290,2" zPosition="2" />
+  <eLabel backgroundColor="SevenBackgroundIB1" position="974,5" size="290,118" zPosition="-9" />
+  <ePixmap pixmap="SevenHD/back/ibone.png" position="974,5" size="290,118" alphatest="blend" zPosition="-8" />
   </screen>
   <screen name="template_emc">
     <eLabel backgroundColor="SevenLine" position="18,458" size="816,2" zPosition="2" />
