@@ -884,7 +884,7 @@ class SevenHD(Screen):
           
     def showInfo(self):
         options = []
-        options.extend(((_("Hier koennte ihre Werbung stehen ...."), boundFunction(self.send_to_msg_box, "Ehrlich jetzt?")),))
+        options.extend(((_("Thanks to"), boundFunction(self.send_to_msg_box, "http://www.gigablue-support.org/")),))
         if config.plugins.SevenHD.debug.value:
            options.extend(((_("Show Debug Log"), boundFunction(self.show_log)),))
         
@@ -913,10 +913,20 @@ class SevenHD(Screen):
         if fileExists(FILE):
            options.extend(((_("About Skin"), boundFunction(self.About)),))
         options.extend(((_("Version"), boundFunction(self.do_version)),))
+        if fileExists(PLUGIN_PATH + "SystemPlugins/MPHelp/plugin.pyo"):
+           options.extend(((_("FAQ"), boundFunction(self.show_faq)),))
+        else:
+           options.extend(((_("FAQ"), boundFunction(self.send_to_msg_box, "No MPHelp Plugin installed")),))
         self.session.openWithCallback(self.menuCallback, ChoiceBox,list = options)
             
     def menuCallback(self, ret):
         ret and ret[1]()
+    
+    def show_faq(self):
+        from Plugins.SystemPlugins.MPHelp import PluginHelp, XMLHelpReader
+        reader = XMLHelpReader(resolveFilename(SCOPE_PLUGINS, "Extensions/SevenHD/data/faq.xml"))
+        Faq = PluginHelp(*reader)
+        Faq.open(self.session)
     
     def install_systemfonts(self):
         ttf_dir = os.popen('find / -name *.ttf').read().split('\n')
