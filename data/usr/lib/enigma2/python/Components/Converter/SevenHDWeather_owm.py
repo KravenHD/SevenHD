@@ -112,7 +112,7 @@ class SevenHDWeather_owm(Converter, object):
             return str(weather)
             
         def getWeatherIcon(self, day):
-            weathericon = self.data['list'][day]['weather'][0]['icon']
+            weathericon = self.data['list'][day]['weather'][0]['icon'][:3]
             return str(weathericon)
             
         def getWeatherDate(self, day):
