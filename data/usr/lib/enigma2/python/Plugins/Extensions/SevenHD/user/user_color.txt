@@ -1,0 +1,8 @@
+# user file to add own colors
+# format is 
+# ColorCode (00+HEX), ColorName
+# e.g.   00ffaabb, TestColor1
+# every new Color must be in a new Line
+# after work make a GUI restart
+
+#00ffaabb, TestColor1
