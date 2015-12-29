@@ -108,7 +108,7 @@
     <alias name="VirtualKeyboard" font="Regular" size="24" height="45" />
   </fonts>
   <parameters>
-    <parameter name="ChoicelistName" value="33,3,433,30"/>
+    <parameter name="ChoicelistName" value="33,3,708,30"/>
     <parameter name="ChoicelistIcon" value="1,1,27,27"/>
     <parameter name="PluginBrowserName" value="113,1,26"/>
     <parameter name="PluginBrowserDescr" value="113,20,26"/>
@@ -116,7 +116,7 @@
     <parameter name="PluginBrowserDownloadName" value="73,2,26"/>
     <parameter name="PluginBrowserDownloadDescr" value="73,20,26"/>
     <parameter name="PluginBrowserDownloadIcon" value="7,0,60,50"/>
-    <parameter name="HelpMenuListHlp" value="0,0,700,26"/>
+    <parameter name="HelpMenuListHlp" value="0,0,708,26"/>
     <parameter name="FileListName" value="35,1,470,26"/>
     <parameter name="FileListIcon" value="9,1,20,20"/>
     <parameter name="PlayListName" value="25,1,470,22"/>
