@@ -357,7 +357,48 @@
   <widget font="Regular; 18" halign="left" valign="center" source="blue" position="664,662" size="148,48" render="Label" backgroundColor="SevenFontBackground" foregroundColor="SevenButtonText" transparent="1" zPosition="1" />
    <panel name="template_menu_left_button" />
 </screen>
-
+  <!-- HistoryZapSelector -->
+   <screen name="HistoryZapSelector" position="0,0" size="1280,720" title="History Zap" flags="wfNoBorder" backgroundColor="transparent">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="HistoryZapSelector" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
+  <widget source="menu" render="Listbox" position="70,120" size="708,500" backgroundColor="SevenFontBackground" transparent="1">
+    <convert type="TemplatedMultiContent">
+				{"template": [
+						MultiContentEntryText(pos = (60, 10), size = (10, 20), font = 2, flags = RT_HALIGN_CENTER | RT_VALIGN_CENTER, text = 1),
+						MultiContentEntryText(pos = (80, 0), size = (260, 21), font = 1, flags = RT_HALIGN_LEFT | RT_VALIGN_TOP, text = 2),
+						MultiContentEntryText(pos = (350, 5), size = (270, 22), font = 2, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 3),
+						MultiContentEntryText(pos = (80, 25), size = (180, 17), font = 3, flags = RT_HALIGN_LEFT, text = 5),
+						MultiContentEntryText(pos = (270, 25), size = (510, 17), font = 3, flags = RT_HALIGN_LEFT, text = 4),
+						MultiContentEntryPixmapAlphaBlend(pos=(0, 6), size=(50, 30), png=6, flags = BT_SCALE)
+					],
+				 "fonts": [gFont("Regular", 22), gFont("Regular", 20), gFont("Regular", 17), gFont("Regular", 16)],
+				 "itemHeight": 45
+				}
+          </convert>
+  </widget>
+  <panel name="template_menu_left" />
+</screen>
+<!-- HistoryZapBrowser -->
+<screen name="ZapHistoryBrowser" position="0,0" size="1280,720" title="ZapHistoryBrowser" backgroundColor="transparent">
+<widget name="list" position="70,80" size="708,540" scrollbarMode="showOnDemand" itemHeight="30" font="Regular;22" backgroundColor="SevenFontBackground" transparent="1" />
+<panel name="template_menu_left_button" />
+<panel name="template_colorkey_text_source" />
+  </screen>
+ <!-- LanguageSelection --> 
+  <screen backgroundColor="transparent" flags="wfNoBorder" name="LanguageSelection" position="0,0" size="1280,720" title="Language selection">
+<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="LanguageSelection" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
+    <widget position="70,120" render="Listbox" backgroundColor="SevenFontBackground" size="708,420" source="languages" transparent="1" zPosition="3">
+      <convert type="TemplatedMultiContent">
+				{"template": [
+				MultiContentEntryText(pos = (130, 17), size = (550, 60), flags = RT_HALIGN_LEFT, text = 1), # index 1 is the language name,
+				MultiContentEntryPixmap(pos = (20, 10), size = (60, 40), png = 2), # index 2 is the pixmap
+				],
+				"fonts": [gFont("Regular", 24)],
+				"itemHeight": 60
+				}
+			</convert>
+    </widget>
+    <panel name="template_menu_left" />
+  </screen>
   <!-- main-custom-openhdf */ -->
   
   
