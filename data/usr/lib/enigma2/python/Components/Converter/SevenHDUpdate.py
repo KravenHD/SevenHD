@@ -43,8 +43,11 @@ class SevenHDUpdate(Converter, object):
 	boolean = property(getBoolean)
 
         def get(self):
-            res = requests.request('get', URL)
-            self.git_version = str(res.text)
+            try:
+                res = requests.request('get', URL)
+                self.git_version = str(res.text)
+            except:
+            	print 'SevenHD Update Request Fails'
         
         def look(self, what):
             if self.git_version == '0.0.0.0':
