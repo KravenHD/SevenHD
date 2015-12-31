@@ -223,7 +223,7 @@
   <screen name="Fantastic" position="0,0" size="1280,720" title="HDF Toolbox" backgroundColor="transparent">
 <!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="Fantastic" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
   <widget name="menu" position="70,100" size="510,469" itemHeight="30" font="Regular;22" backgroundColor="SevenFontBackground" transparent="1" />
-  <ePixmap position="70,445" size="380,57" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/HDF-Toolbox/banner.png" zPosition="2" alphatest="on" />
+  <ePixmap position="70,570" size="380,57" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/HDF-Toolbox/banner.png" zPosition="2" alphatest="on" />
   <panel name="template_menu_left" />
 </screen>
   <!-- LogManager -->

@@ -147,7 +147,7 @@ class SonstigeSettings(ConfigListScreen, Screen):
         else:
            list.append(getConfigListEntry(_("autoupdate plugin startinfo"),                config.plugins.SevenHD.AutoUpdatePluginStart, 'Fragt beim PluginStart ob ein neues Update installiert werden soll.',                   '4', 'none'))
         list.append(getConfigListEntry(_('_____________________________FAQ___________________________________________'), ))
-        list.append(getConfigListEntry(_("FAQ"),                                           config.plugins.SevenHD.faq_language,          'Stellt die Ausgabesprache der FAQ ein.',                                                '4', 'language'))
+        list.append(getConfigListEntry(_("language"),                                           config.plugins.SevenHD.faq_language,          'Stellt die Ausgabesprache der FAQ ein.',                                                '4', 'language'))
         return list
 
     def __selectionChanged(self):
