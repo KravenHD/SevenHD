@@ -87,8 +87,8 @@
   <screen backgroundColor="transparent" flags="wfNoBorder" name="ButtonSetupSelect" position="0,0" size="1280,720" title="Tasteneinstellungen">
 <!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="ButtonSetupSelect" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
   <widget name="list" position="40,99" size="385,529" font="Regular;22" itemHeight="28" transparent="1" foregroundColor="SevenFont1" enableWrapAround="1" backgroundColor="SevenFontBackground" zPosition="0" />
-  <widget name="choosen" position="427,99" size="385,530" font="Regular2; 22" itemHeight="28" foregroundColor="SevenFont2" backgroundColor="SevenFontBackground" zPosition="0" transparent="1" />
-  <widget name="description" position="935,228" size="302,250" font="Regular2; 16" foregroundColor="SevenFont2" valign="center" halign="center" backgroundColor="SevenFontBackgroundRight" zPosition="0" transparent="1" />
+  <widget name="choosen" position="428,99" size="385,530" font="Regular2; 22" itemHeight="28" foregroundColor="SevenFont2" backgroundColor="SevenFontBackground" zPosition="0" transparent="1" />
+  <widget name="description" position="936,228" size="302,250" font="Regular2; 16" foregroundColor="SevenFont2" valign="center" halign="center" backgroundColor="SevenFontBackgroundRight" zPosition="0" transparent="1" />
 <panel name="template_menu_left_right_button" />
   <panel name="template_colorkey_text_source" />
 </screen>
@@ -174,7 +174,7 @@
   <!-- HarddiskSelection -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="HarddiskSelection" position="0,0" size="1280,720" title="Select HDD">
 <!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="HarddiskSelection" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
-<widget itemHeight="30" name="hddlist" position="70,80" size="708,540" backgroundColor="SevenFontBackground" transparent="1" />
+<widget itemHeight="30" name="hddlist" font="Regular;22" position="70,80" size="708,540" backgroundColor="SevenFontBackground" transparent="1" />
  <panel name="template_menu_left" />
 </screen>
   <!-- HarddiskSetup  -->
@@ -222,7 +222,7 @@
   <!-- HFD Toolbox -->
   <screen name="Fantastic" position="0,0" size="1280,720" title="HDF Toolbox" backgroundColor="transparent">
 <!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="Fantastic" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
-  <widget name="menu" position="70,100" size="510,469" itemHeight="26" font="Regular;22" backgroundColor="SevenFontBackground" transparent="1" />
+  <widget name="menu" position="70,100" size="510,469" itemHeight="30" font="Regular;22" backgroundColor="SevenFontBackground" transparent="1" />
   <ePixmap position="70,445" size="380,57" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/HDF-Toolbox/banner.png" zPosition="2" alphatest="on" />
   <panel name="template_menu_left" />
 </screen>
@@ -401,5 +401,3 @@
   </screen>
   <!-- main-custom-openhdf */ -->
   
-  
- 

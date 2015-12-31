@@ -25,6 +25,7 @@
   <color name="yellow" value="#00e5b243" />
   <color name="SevenButtonText" value="#SevenButton_Text" />
   <color name="SevenLine" value="#Seven_Line" />
+  <color name="SevenLineRight" value="#SevenLine_Right" />
   <color name="SevenSelection" value="#Seven_Selection" />
   <color name="SevenSelFont" value="#SevenSel_Font" />  
   <color name="SevenFont1" value="#SevenFont_1" />
@@ -34,6 +35,7 @@
   <color name="SevenFontBackground" value="#00000000" />
   <color name="SevenFontBackgroundRight" value="#00000000" /> 
   <color name="SevenBorder" value="#Seven_Border" /> 
+  <color name="SevenBorderRight" value="#SevenBorder_Right" />
   <color name="SevenBackgroundIB1" value="#00000000" />
   <color name="SevenBackgroundIB2" value="#00000000" />
   <color name="SevenFontBackgroundIB1" value="#00000000" />
@@ -59,7 +61,11 @@
   <color name="SevenFontBackMiddleCS" value="#00000000" />
   <color name="SevenFontBackRightCS" value="#00000000" />
   <color name="SevenLineCS" value="#SevenLine_CS" />
+  <color name="SevenLineRightCS" value="#SevenLineRight_CS" />
+    <color name="SevenLineMiddleCS" value="#SevenLineMiddle_CS" />
   <color name="SevenBorderCS" value="#SevenBorder_CS" />
+  <color name="SevenBorderRightCS" value="#SevenBorderRight_CS" />
+    <color name="SevenBorderMiddleCS" value="#SevenBorderMiddle_CS" />
   <color name="SevenButtonsCS" value="#SevenButtons_CS" />
   <color name="SevenBouquetCS" value="#SevenBouquet_CS" />
   <color name="SevenChannelCS" value="#SevenChannel_CS" />

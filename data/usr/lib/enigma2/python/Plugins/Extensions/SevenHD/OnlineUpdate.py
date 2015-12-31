@@ -17,11 +17,11 @@ class Update():
         def do_update(self):
                 self.version = version
                 self.debug(self.version)
-
+                
                 try:
-                   self.new_version = urlopen('http://www.gigablue-support.org/skins/SevenHD/update/version.txt').read()
+                   self.new_version = urlopen(DOWNLOAD_UPDATE_URL + 'version.txt').read()
                    self.dl_version = self.new_version
-                   self.ipk_url = 'http://www.gigablue-support.org/skins/SevenHD/update/enigma2-plugin-skins-sevenhd_%s_all.ipk' % str(self.dl_version)
+                   self.ipk_url = DOWNLOAD_UPDATE_URL + 'enigma2-plugin-skins-sevenhd_%s_all.ipk' % str(self.dl_version)
                    self.filename = '/tmp/enigma2-plugin-skins-sevenhd_%s_all.ipk' % str(self.dl_version)
                    self.debug('Found new Version -> enigma2-plugin-skins-sevenhd_%s_all.ipk' % str(self.dl_version))
                    self.debug(self.ipk_url)

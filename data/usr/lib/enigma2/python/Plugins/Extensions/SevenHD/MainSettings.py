@@ -128,6 +128,10 @@ class MainSettings(ConfigListScreen, Screen):
         list.append(getConfigListEntry(_("plugin icons"),              config.plugins.SevenHD.IconStyle,                 'Stellt die Farbe der [+] und | im PluginBrowser sowie NetzwerkBrowser ein.',                         '4',                'Icons'))
         list.append(getConfigListEntry(_("volume style"),              config.plugins.SevenHD.VolumeStyle,               '\xc3\x84ndert die Darstellung der Lautst\xc3\xa4rkeanzeige.',                                        '1',                ''))
         list.append(getConfigListEntry(_("volumebar"),                 config.plugins.SevenHD.ProgressVol,               'Stellt die Farbe der Lautst\xc3\xa4rkeanzeige ein.',                                                 '4',                'progressvol'))
+        list.append(getConfigListEntry(_('_____________________________listselection______________________________________'), ))
+        list.append(getConfigListEntry(_("color"),              config.plugins.SevenHD.SelectionBackground,    'Stellt die Farbe des Auswahlbalken ein.',                                                                      '4',     'Listselection'))
+        list.append(getConfigListEntry(_("border"),             config.plugins.SevenHD.SelectionBorder,        'Stellt die Farbe des Rahmen ein.',                                                                             '4',     'Listborder'))
+        list.append(getConfigListEntry(_("selection font"),     config.plugins.SevenHD.SelectionFont,          'Stellt die Farbe der Schrift ein.',                                                                            '4',     'Selfont'))
         list.append(getConfigListEntry(_('_____________________________________font__________________________________________________'), ))
         if config.plugins.SevenHD.systemfonts.value:
            list.append(getConfigListEntry(_("use systemfonts"),        config.plugins.SevenHD.systemfonts,               'Wenn JA, dann kannst du alle SystemFonts beim n\xc3\xa4chsten PluginStart nutzen.',                  '4',                'True'))
@@ -141,7 +145,7 @@ class MainSettings(ConfigListScreen, Screen):
         list.append(getConfigListEntry(_("activate"),                  config.plugins.SevenHD.RunningText,               'L\xc3\xa4sst die Schrift scrollen oder schreiben.',                                                  '1',                'RunningText'))
         if config.plugins.SevenHD.RunningText.value == 'running':
            list.append(getConfigListEntry(_("startdelay"),             config.plugins.SevenHD.Startdelay,                'Stellt die Startzeit ein, nach wieviel Sek. der Text anfangen soll sich zu bewegen.',                '4',                'Delay'))
-           list.append(getConfigListEntry(_("steptime"),               config.plugins.SevenHD.Steptime,                  'Stellt die Laufgeschwindigkeit ein. Je h\xc3\xb6her der Wert, desto langsamer die Geschwindigkeit',  '4',                'Delay'))
+           list.append(getConfigListEntry(_("steptime"),               config.plugins.SevenHD.Steptime,                  'Stellt die Laufgeschwindigkeit ein. Je h\xc3\xb6her der Wert, desto langsamger die Geschwindigkeit', '4',                'Delay'))
         list.append(getConfigListEntry(_('__________________________________transparency_____________________________________________'), ))
         list.append(getConfigListEntry(_("main window"),               config.plugins.SevenHD.BackgroundColorTrans,      'Stellt die Transparenz des linken Fenster ein.',                                                     '4',                'transparency'))
         list.append(getConfigListEntry(_("right window"),              config.plugins.SevenHD.BackgroundRightColorTrans, 'Stellt die Transparenz des rechten Fenster ein.',                                                    '4',                'transparency'))
@@ -200,6 +204,12 @@ class MainSettings(ConfigListScreen, Screen):
         preview = ''
         if returnValue == config.plugins.SevenHD.ProgressVol:
               preview = self.generate(config.plugins.SevenHD.ProgressVol.value)
+        elif returnValue == config.plugins.SevenHD.SelectionBackground:
+              preview = self.generate(config.plugins.SevenHD.SelectionBackground.value)
+        elif returnValue == config.plugins.SevenHD.SelectionBorder:
+              preview = self.generate(config.plugins.SevenHD.SelectionBorder.value)
+        elif returnValue == config.plugins.SevenHD.SelectionFont:
+              preview = self.generate(config.plugins.SevenHD.SelectionFont.value)
         else:
               self["colorthump"].instance.hide()
         return str(preview)
@@ -310,6 +320,8 @@ class MainSettings(ConfigListScreen, Screen):
         self.setInputToDefault(config.plugins.SevenHD.ProgressVol)
         self.setInputToDefault(config.plugins.SevenHD.SelectionBackground)
         self.setInputToDefault(config.plugins.SevenHD.SelectionBorder)
+        self.setInputToDefault(config.plugins.SevenHD.SelectionFont)
+
         self.save()
 
     def setInputToDefault(self, configItem):

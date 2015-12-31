@@ -32,15 +32,15 @@ A: Der Provider liefert zur Zeit keine Aktuellen Daten. Bitte unter Infobar Extr
 	</page>
 
         <page title="FAQ"><text value="Q: Wie kann ich meine Einstellungen auf eine andere Box kopieren?\n\n\n
-A: Drücke die blaue Taste (Extras) --> Taste 6 (Skin Share) --> Taste 1 (Verteile Skin). Dann findest du unter /tmp die Datei:kraven_share_3.6.47.skin. Diese Datei kopierst du auf deiner anderen Box nach /tmp. Dann drückst Du wieder die blaue Taste (Extras) --> Taste 6 (Skin Share) --> Taste 2 (Lade andere Skin Config) und lässt den skin neu erzeugen."/>
+A:\nDrücke die\nblaue Taste (Extras) --> Taste 6 (Skin Share) --> Taste 1 (Verteile Skin).\nDann findest du unter /tmp die Datei:kraven_share_3.6.47.skin.\nDiese Datei kopierst du auf deiner anderen Box nach /tmp.\nDann drückst Du wieder die\nblaue Taste (Extras) --> Taste 6 (Skin Share) --> Taste 2 (Lade andere Skin Config) und lässt den Skin neu erzeugen."/>
 	</page> 
 
         <page title="FAQ"><text value="Q: Warum werden meine eigenen Änderungen an der skin.xml immer wieder überschrieben?\n\n\n
-A: Du musst deine Änderungen unter skin_user.xml nach /usr/lib/enigma2/python/Plugins/Extensions/SevenHD/data/ speichern, dann werden sie bei einem update nicht überschrieben."/>
+A: Du musst deine Änderungen in der skin_user.xml unter /usr/lib/enigma2/python/Plugins/Extensions/SevenHD/data/ speichern,\ndann werden sie bei einem update nicht überschrieben."/>
 	</page>
 
         <page title="FAQ"><text value="Q: Was bedeutet das kleine grüne Symbol unten rechts in der Infobar?\n\n\n
-A: Das bedeutet, dass ein Update verfügbar ist. Das Update bekommst du, wenn Du das SevenHD Plugin aufrufst. Die Einstellungen für Updates findes Du unter Sonstige Einstellungen."/>
+A: Das bedeutet, dass ein Update des SevenHD Plugin verfügbar ist.\nDas Update bekommst du, wenn Du das SevenHD Plugin aufrufst.\nDie Einstellungen für Updates findes Du unter Sonstige Einstellungen."/>
 	</page>
 
         <page title="FAQ"><text value="Q: Kann ich eigene Farben zu der Farbauswahl hinzufügen?\n\n\n
@@ -48,18 +48,18 @@ A: Ja. Einfach Deine gewünschten Farben in user_color.txt unter /usr/lib/enigma
 	</page>
 
         <page title="FAQ"><text value="Q: Wie kann ich die Systemschriften benutzen?\n\n\n
-A: Unter Haupteinstellungen Benutze Systemschriften auf Ja stellen. Danach im Hauptmenü die blaue Taste (Extras) drücken --> Taste 5 (use SystemFonts). Nach dem Neustart stehen die Schriften zur Auswahl."/>
+A: Unter 'Haupteinstellungen' -> 'Benutze Systemschriften' auf Ja stellen.\nDanach im Hauptmenü die blaue Taste (Extras) drücken --> Taste 5 (use SystemFonts). Nach dem Neustart stehen die Schriften zur Auswahl."/>
 	</page>
 
-        <page title="FAQ"><text value="Q: Ich soll mal eine Datei testen weiß aber nicht wohin die genau soll?\n\n\n
-A: Wenn es eine xml Datei ist, dann nach /usr/.../SevenHD/data bei einer SevenHDxxxxxx.py dann nach /usr/.../Components/Converter bzw. Renderer. Alle anderen .py kommen nach /usr/.…Extensions/SevenHD/"/>
+        <page title="FAQ"><text value="Q: Ich soll mal eine Datei testen, weiß aber nicht wohin die genau soll?\n\n\n
+A: Wenn es eine xml Datei ist, dann nach\n/usr/lib/enigma2/python/Plugins/Extensions/SevenHD/data\nbei einer SevenHDxxxxxx.py dann nach\n/usr/lib/enigma2/python/Components/Converter bzw. Renderer.\nAlle anderen .py kommen nach\n/usr/lib/enigma2/python/Plugins/Extensions/SevenHD"/>
 	</page>
 
         <page title="FAQ"><text value="Q: Ich habe einen Fehler gefunden, weiß aber nicht wie der Screen heißt und wie ich den am besten beschreiben soll, was kann ich da machen?\n\n\n
-A: Unter Sonstige Einstellungen die Option ScreenName auf JA stellen, dann wird Dir oben links der Name des Screens angezeigt. 1.) Auf den Screen gehen wo sich der Fehler befindet 2.) WebBrowser öffnen und die IP Deiner Box eingeben und ein BildschirmFoto machen."/>
+A: Unter 'Sonstige Einstellungen' die Option 'ScreenName' auf JA stellen,\ndann wird Dir oben links der Name des Screens angezeigt.\n1.) Auf den Screen gehen wo sich der Fehler befindet\n2.) WebBrowser öffnen und die IP Deiner Box eingeben\n3.) Dann ein 'BildschirmFoto' mit 'Hohe Auflösung' machen."/>
 	</page>
 
-        <page title="FAQ"><text value="Q:: Irgendwie scheint das Skin bei mir nicht zu funktionieren woran kann das liegen?\n\n\n
+        <page title="FAQ"><text value="Q: Irgendwie scheint das Skin bei mir nicht zu funktionieren woran kann das liegen?\n\n\n
 A: Schau bitte das Dein Image auf einen aktuellen Stand ist, da das SevenHD jeweils mit einem aktuellen Image erstellt und getestet wird."/>
 	</page>
 </mphelp>

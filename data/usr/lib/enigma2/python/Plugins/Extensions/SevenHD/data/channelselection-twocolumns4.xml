@@ -24,9 +24,9 @@
 <widget font="Regular; 20" foregroundColor="SevenDestcriptionLaterCS" position="891,540" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,steptime=90,wrap=1,always=0,repeat=2,oneshot=1" size="362,132" source="ServiceEvent" valign="top" backgroundColor="SevenFontBackRightCS" transparent="1" zPosition="0">
       <convert type="SevenHDNextEvents">Event2,ExtendedDescription</convert>
     </widget>
-<eLabel backgroundColor="SevenLineCS" position="891,503" size="362,2" zPosition="2" />
-<eLabel backgroundColor="SevenLineCS" position="891,328" size="362,2" zPosition="2" />
-<eLabel backgroundColor="SevenLineCS" position="891,676" size="362,2" zPosition="2" />  
+<eLabel backgroundColor="SevenLineRightCS" position="891,503" size="362,2" zPosition="2" />
+<eLabel backgroundColor="SevenLineRightCS" position="891,328" size="362,2" zPosition="2" />
+<eLabel backgroundColor="SevenLineRightCS" position="891,676" size="362,2" zPosition="2" />  
 <widget backgroundColor="SevenFontBackRightCS" font="Regular2; 22" foregroundColor="SevenDestcriptionCS" position="891,155" render="Label" size="362,30" source="ServiceEvent" transparent="1" zPosition="5" noWrap="1">
   <convert type="SevenHDNextEvents">Event0,noDuration</convert>
 </widget>

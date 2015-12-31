@@ -34,10 +34,10 @@
     <convert type="SevenHDClockToText">Default</convert>
   </widget>
   <eLabel backgroundColor="SevenBackgroundRight" position="878,6" size="396,708" transparent="0" zPosition="-9" />
-  <eLabel backgroundColor="SevenBorder" position="878,6" size="396,2" zPosition="2" />
-  <eLabel backgroundColor="SevenBorder" position="878,714" size="398,2" zPosition="2" />
-  <eLabel backgroundColor="SevenBorder" position="878,6" size="2,708" zPosition="2" />
-  <eLabel backgroundColor="SevenBorder" position="1274,6" size="2,708" zPosition="2" />
+  <eLabel backgroundColor="SevenBorderRight" position="878,6" size="396,2" zPosition="2" />
+  <eLabel backgroundColor="SevenBorderRight" position="878,714" size="398,2" zPosition="2" />
+  <eLabel backgroundColor="SevenBorderRight" position="878,6" size="2,708" zPosition="2" />
+  <eLabel backgroundColor="SevenBorderRight" position="1274,6" size="2,708" zPosition="2" />
 <widget source="Service" render="SevenHDCover" position="888,190" size="374,445" zPosition="4" backgroundColor="SevenBackgroundRight" alphatest="on" transparent="1" />
 <ePixmap pixmap="SevenHD/back/menumain.png" position="6,6" size="842,708" alphatest="blend" zPosition="-8" />
 <ePixmap pixmap="SevenHD/back/menuright.png" position="878,6" size="396,708" alphatest="blend" zPosition="-8" />

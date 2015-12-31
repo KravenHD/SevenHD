@@ -1,4 +1,4 @@
-#version = '3.6.47'
+#version = '3.6.48'
 import os
 try:
    opkg_info = os.popen("opkg list-installed enigma2-plugin-skins-sevenhd | cut -d ' ' -f3").read()
@@ -52,11 +52,13 @@ from PIL import ImageDraw
 from skin import parseColor
 from urllib import urlencode
 from urllib2 import urlopen, URLError
-from twisted.web.client import downloadPage
+from twisted.web.client import downloadPage, getPage
 from enigma import ePicLoad, getDesktop, eConsoleAppContainer, eListboxPythonMultiContent, gFont
 from Tools.BoundFunction import boundFunction
 from Tools.Directories import fileExists, resolveFilename, SCOPE_LANGUAGE, SCOPE_PLUGINS
 ################################################################################################################################################################
+DOWNLOAD_URL = 'https://raw.githubusercontent.com/KravenHD/SevenHD-Daten/master/'
+DOWNLOAD_UPDATE_URL = DOWNLOAD_URL + 'update/'
 MAIN_PLUGIN_PATH = "/usr/lib/enigma2/python/Plugins/Extensions/SevenHD/"
 MAIN_IMAGE_PATH = MAIN_PLUGIN_PATH + "images/"
 MAIN_DATA_PATH = MAIN_PLUGIN_PATH + "data/"
@@ -221,7 +223,6 @@ ColorList.append(("006C0AAB", _("violet")))
 ColorList.append(("001F0333", _("violet dark")))
 ColorList.append(("00FFBE00", _("yellow dark")))
 ColorList.append(("00FFF006", _("yellow")))
-
 ColorList += UserList
    
 TransList = [] 
@@ -233,13 +234,38 @@ for x in range(101):
 
 BackList = ['brownleather', 'carbon', 'lightwood', 'redwood', 'slate']
 
+LanguageList = []
+LanguageList.append(("de", _("Deutsch")))
+LanguageList.append(("en", _("English")))
+LanguageList.append(("ru", _("Russian")))
+LanguageList.append(("it", _("Italian")))
+LanguageList.append(("es", _("Spanish (es)")))
+LanguageList.append(("sp", _("Spanish (sp)")))
+LanguageList.append(("uk", _("Ukrainian (uk)")))
+LanguageList.append(("ua", _("Ukrainian (ua)")))
+LanguageList.append(("pt", _("Portuguese")))
+LanguageList.append(("ro", _("Romanian")))
+LanguageList.append(("pl", _("Polish")))
+LanguageList.append(("fi", _("Finnish")))
+LanguageList.append(("nl", _("Dutch")))
+LanguageList.append(("fr", _("French")))
+LanguageList.append(("bg", _("Bulgarian")))
+LanguageList.append(("sv", _("Swedish (sv)")))
+LanguageList.append(("se", _("Swedish (se)")))
+LanguageList.append(("zh_tw", _("Chinese Traditional")))
+LanguageList.append(("zh", _("Chinese Simplified (zh)")))
+LanguageList.append(("zh_cn", _("Chinese Simplified (zh_cn)")))
+LanguageList.append(("tr", _("Turkish")))
+LanguageList.append(("hr", _("Croatian")))
+LanguageList.append(("ca", _("Catalan")))
 ################################################################################################################################################################
 # GlobalScreen
 
 config.plugins.SevenHD.Image = ConfigSelection(default="main-custom-openatv", choices = [
 				("main-custom-openatv", _("openATV")),
 				("main-custom-openhdf", _("openHDF")),
-				("main-custom-openmips", _("openMIPS"))
+				("main-custom-openmips", _("openMIPS")),
+				("main-custom-opennfr", _("openNFR"))
 				])
 
 config.plugins.SevenHD.ButtonStyle = ConfigSelection(default="buttons_seven_white", choices = [
@@ -356,9 +382,15 @@ config.plugins.SevenHD.BackgroundRightColorTrans = ConfigSelection(default="0a",
 
 config.plugins.SevenHD.Line = ConfigSelection(default="00ffffff", choices = ColorList)
 				
+config.plugins.SevenHD.LineRight = ConfigSelection(default="00ffffff", choices = ColorList)
+
 BorderList = [("ff000000", _("off"))]
 BorderList = ColorList + BorderList
 config.plugins.SevenHD.Border = ConfigSelection(default="00ffffff", choices = BorderList)
+
+BorderRightList = [("ff000000", _("off"))]
+BorderRightList = ColorList + BorderRightList
+config.plugins.SevenHD.BorderRight = ConfigSelection(default="00ffffff", choices = BorderRightList)
 
 config.plugins.SevenHD.SelectionBackground = ConfigSelection(default="000050EF", choices = ColorList)
 				
@@ -482,32 +514,10 @@ config.plugins.SevenHD.WeatherStyle = ConfigSelection(default="none", choices = 
 				("weather-left-side", _("left")),
 				("weather-small", _("small"))
 				])
-				
-config.plugins.SevenHD.weather_language = ConfigSelection(default="de", choices = [
-				("de", _("Deutsch")),
-                                ("en", _("English")),
-				("ru", _("Russian")),
-				("it", _("Italian")),
-				("es", _("Spanish (es)")),
-				("sp", _("Spanish (sp)")),
-				("uk", _("Ukrainian (uk)")),
-				("ua", _("Ukrainian (ua)")),
-				("pt", _("Portuguese")),
-				("ro", _("Romanian")),
-				("pl", _("Polish")),
-                                ("fi", _("Finnish")),
-				("nl", _("Dutch")),
-				("fr", _("French")),
-				("bg", _("Bulgarian")),
-				("sv", _("Swedish (sv)")),
-				("se", _("Swedish (se)")),
-				("zh_tw", _("Chinese Traditional")),
-				("zh", _("Chinese Simplified (zh)")),
-				("zh_cn", _("Chinese Simplified (zh_cn)")),
-				("tr", _("Turkish")),
-                                ("hr", _("Croatian")),
-				("ca", _("Catalan"))
-                                ])
+                                				
+config.plugins.SevenHD.weather_language = ConfigSelection(default="de", choices = LanguageList)
+
+config.plugins.SevenHD.faq_language = ConfigSelection(default="de", choices = LanguageList)
 				
 config.plugins.SevenHD.refreshInterval = ConfigSelectionNumber(0, 480, 15, default = 15, wraparound = True)
 
@@ -598,9 +608,21 @@ config.plugins.SevenHD.ChannelBack3 = ConfigSelection(default="00000000", choice
 
 config.plugins.SevenHD.ChannelLine = ConfigSelection(default="00ffffff", choices = ColorList)
 
+config.plugins.SevenHD.ChannelLineRight = ConfigSelection(default="00ffffff", choices = ColorList)
+
+config.plugins.SevenHD.ChannelLineMiddle = ConfigSelection(default="00ffffff", choices = ColorList)
+
 ChannelBorderList = [("ff000000", _("off"))]
 ChannelBorderList = ColorList + ChannelBorderList
 config.plugins.SevenHD.ChannelBorder = ConfigSelection(default="00ffffff", choices = ChannelBorderList)
+
+ChannelBorderRightList = [("ff000000", _("off"))]
+ChannelBorderRightList = ColorList + ChannelBorderRightList
+config.plugins.SevenHD.ChannelBorderRight = ConfigSelection(default="00ffffff", choices = ChannelBorderRightList)
+
+ChannelBorderMiddleList = [("ff000000", _("off"))]
+ChannelBorderMiddleList = ColorList + ChannelBorderMiddleList
+config.plugins.SevenHD.ChannelBorderMiddle = ConfigSelection(default="00ffffff", choices = ChannelBorderMiddleList)
 
 config.plugins.SevenHD.ChannelColorButton = ConfigSelection(default="00ffffff", choices = ColorList)
 
@@ -676,6 +698,8 @@ myConfigList = [('config.plugins.SevenHD.Image.value = "' + str(config.plugins.S
                 ('config.plugins.SevenHD.BackgroundRightColorTrans.value = "' + str(config.plugins.SevenHD.BackgroundRightColorTrans.value) + '"'),
                 ('config.plugins.SevenHD.Line.value = "' + str(config.plugins.SevenHD.Line.value) + '"'),
                 ('config.plugins.SevenHD.Border.value = "' + str(config.plugins.SevenHD.Border.value) + '"'),
+                ('config.plugins.SevenHD.LineRight.value = "' + str(config.plugins.SevenHD.LineRight.value) + '"'),
+                ('config.plugins.SevenHD.BorderRight.value = "' + str(config.plugins.SevenHD.BorderRight.value) + '"'),
                 ('config.plugins.SevenHD.SelectionBackground.value = "' + str(config.plugins.SevenHD.SelectionBackground.value) + '"'),
                 ('config.plugins.SevenHD.SelectionBorder.value = "' + str(config.plugins.SevenHD.SelectionBorder.value) + '"'),
                 ('config.plugins.SevenHD.Progress.value = "' + str(config.plugins.SevenHD.Progress.value) + '"'),
@@ -722,6 +746,10 @@ myConfigList = [('config.plugins.SevenHD.Image.value = "' + str(config.plugins.S
                 ('config.plugins.SevenHD.ChannelBack3.value = "' + str(config.plugins.SevenHD.ChannelBack3.value) + '"'),
                 ('config.plugins.SevenHD.ChannelLine.value = "' + str(config.plugins.SevenHD.ChannelLine.value) + '"'),
                 ('config.plugins.SevenHD.ChannelBorder.value = "' + str(config.plugins.SevenHD.ChannelBorder.value) + '"'),
+                ('config.plugins.SevenHD.ChannelLineRight.value = "' + str(config.plugins.SevenHD.ChannelLineRight.value) + '"'),
+                ('config.plugins.SevenHD.ChannelBorderRight.value = "' + str(config.plugins.SevenHD.ChannelBorderRight.value) + '"'),
+                ('config.plugins.SevenHD.ChannelLineMiddle.value = "' + str(config.plugins.SevenHD.ChannelLineMiddle.value) + '"'),
+                ('config.plugins.SevenHD.ChannelBorderMiddle.value = "' + str(config.plugins.SevenHD.ChannelBorderMiddle.value) + '"'),
                 ('config.plugins.SevenHD.ChannelColorButton.value = "' + str(config.plugins.SevenHD.ChannelColorButton.value) + '"'),
                 ('config.plugins.SevenHD.ChannelColorBouquet.value = "' + str(config.plugins.SevenHD.ChannelColorBouquet.value) + '"'),
                 ('config.plugins.SevenHD.ChannelColorChannel.value = "' + str(config.plugins.SevenHD.ChannelColorChannel.value) + '"'),

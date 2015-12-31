@@ -220,7 +220,7 @@
 <!-- HarddiskSelection -->
 <screen backgroundColor="transparent" flags="wfNoBorder" name="HarddiskSelection" position="0,0" size="1280,720" title="Select HDD">
 <!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="HarddiskSelection" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
-  <widget itemHeight="30" name="hddlist" position="70,80" size="708,540" foregroundColor="SevenFont1" backgroundColor="SevenFontBackground" transparent="1" />
+  <widget itemHeight="30" name="hddlist" position="70,80" size="708,540" font="Regular;22" foregroundColor="SevenFont1" backgroundColor="SevenFontBackground" transparent="1" />
     <panel name="template_menu_left" />
 </screen>
 <!-- HarddiskSetup -->

@@ -123,13 +123,11 @@ class MenuPluginSettings(ConfigListScreen, Screen):
         list.append(getConfigListEntry(_("main window"),        config.plugins.SevenHD.Background,             'Stellt die Farbe des linken Fenster ein.',                   '4',     'Main'))
         list.append(getConfigListEntry(_("right window"),       config.plugins.SevenHD.BackgroundRight,        'Stellt die Farbe des rechten Fenster ein.',                  '4',     'Right'))
         list.append(getConfigListEntry(_('_____________________________color lines_______________________________________'), ))
-        list.append(getConfigListEntry(_("line"),               config.plugins.SevenHD.Line,                   'Stellt die Farbe der Linie zwischen "Serie und Liste" ein.', '4',     'Line'))
-        list.append(getConfigListEntry(_("border"),             config.plugins.SevenHD.Border,                 'Stellt die Rahmenfarbe ein.',                                '4',     'Border'))
+        list.append(getConfigListEntry(_("line leftside"),      config.plugins.SevenHD.Line,                   'Stellt die Farbe der Linie f\xc3\xbcr die linke Seite ein.', '4',     'Line'))
+        list.append(getConfigListEntry(_("line rightside"),     config.plugins.SevenHD.LineRight,              'Stellt die Farbe der Linie f\xc3\xbcr die rechte Seite ein.','4',     'Line'))
+        list.append(getConfigListEntry(_("border leftside"),    config.plugins.SevenHD.Border,                 'Stellt die Rahmenfarbe f\xc3\xbcr die linke Seite ein.',     '4',     'Border'))
+        list.append(getConfigListEntry(_("border rightside"),   config.plugins.SevenHD.BorderRight,            'Stellt die Rahmenfarbe f\xc3\xbcr die rechte Seite ein.',    '4',     'Border'))
         list.append(getConfigListEntry(_("progressbar"),        config.plugins.SevenHD.Progress,               'Stellt die Farbe des Fortschrittbalkens ein.',               '4',     'Progress'))
-        list.append(getConfigListEntry(_('_____________________________listselection______________________________________'), ))
-        list.append(getConfigListEntry(_("color"),              config.plugins.SevenHD.SelectionBackground,    'Stellt die Farbe des Auswahlbalken ein.',                    '4',     'Listselection'))
-        list.append(getConfigListEntry(_("border"),             config.plugins.SevenHD.SelectionBorder,        'Stellt die Farbe des Rahmen ein.',                           '4',     'Listborder'))
-        list.append(getConfigListEntry(_("selection font"),     config.plugins.SevenHD.SelectionFont,          'Stellt die Farbe der Schrift ein.',                          '4',     'Selfont'))
         list.append(getConfigListEntry(_('______________________________color font________________________________________'), ))
         list.append(getConfigListEntry(_("primary font"),       config.plugins.SevenHD.Font1,                  'Stellt die Schriftfarbe der Liste ein.',                     '4',     'Font1'))
         list.append(getConfigListEntry(_("secondary font"),     config.plugins.SevenHD.Font2,                  'Stellt die Schriftfarbe der Beschreibung ein.',              '4',     'Font2'))
@@ -218,21 +216,19 @@ class MenuPluginSettings(ConfigListScreen, Screen):
         elif returnValue == config.plugins.SevenHD.CoolTVGuide:
               self["colorthump"].instance.hide()
         elif returnValue == config.plugins.SevenHD.Line:
-              preview = self.generate(config.plugins.SevenHD.Line.value)  
+              preview = self.generate(config.plugins.SevenHD.Line.value)
+        elif returnValue == config.plugins.SevenHD.LineRight:
+              preview = self.generate(config.plugins.SevenHD.LineRight.value)
         elif returnValue == config.plugins.SevenHD.Background:
               preview = self.generate(config.plugins.SevenHD.Background.value)
         elif returnValue == config.plugins.SevenHD.BackgroundRight:
               preview = self.generate(config.plugins.SevenHD.BackgroundRight.value)
         elif returnValue == config.plugins.SevenHD.Border:
               preview = self.generate(config.plugins.SevenHD.Border.value)
+        elif returnValue == config.plugins.SevenHD.BorderRight:
+              preview = self.generate(config.plugins.SevenHD.BorderRight.value)
         elif returnValue == config.plugins.SevenHD.Progress:
               preview = self.generate(config.plugins.SevenHD.Progress.value)
-        elif returnValue == config.plugins.SevenHD.SelectionBackground:
-              preview = self.generate(config.plugins.SevenHD.SelectionBackground.value)
-        elif returnValue == config.plugins.SevenHD.SelectionBorder:
-              preview = self.generate(config.plugins.SevenHD.SelectionBorder.value)
-        elif returnValue == config.plugins.SevenHD.SelectionFont:
-              preview = self.generate(config.plugins.SevenHD.SelectionFont.value)
         elif returnValue == config.plugins.SevenHD.Font1:
               preview = self.generate(config.plugins.SevenHD.Font1.value)
         elif returnValue == config.plugins.SevenHD.Font2:
@@ -297,11 +293,10 @@ class MenuPluginSettings(ConfigListScreen, Screen):
         self.setInputToDefault(config.plugins.SevenHD.BackgroundRight)
         self.setInputToDefault(config.plugins.SevenHD.Line)
         self.setInputToDefault(config.plugins.SevenHD.Border)
-        self.setInputToDefault(config.plugins.SevenHD.SelectionBackground)
-        self.setInputToDefault(config.plugins.SevenHD.SelectionBorder)
+        self.setInputToDefault(config.plugins.SevenHD.LineRight)
+        self.setInputToDefault(config.plugins.SevenHD.BorderRight)
         self.setInputToDefault(config.plugins.SevenHD.Font1)
         self.setInputToDefault(config.plugins.SevenHD.Font2)
-        self.setInputToDefault(config.plugins.SevenHD.SelectionFont)
         self.setInputToDefault(config.plugins.SevenHD.ButtonText)
         self.setInputToDefault(config.plugins.SevenHD.ProgressLinePlug)
         self.setInputToDefault(config.plugins.SevenHD.Progress)

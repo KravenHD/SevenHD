@@ -146,20 +146,23 @@ class SonstigeSettings(ConfigListScreen, Screen):
            list.append(getConfigListEntry(_("autoupdate plugin startinfo"),                config.plugins.SevenHD.AutoUpdatePluginStart, 'Fragt beim PluginStart ob ein neues Update installiert werden soll.',                   '4', 'True'))
         else:
            list.append(getConfigListEntry(_("autoupdate plugin startinfo"),                config.plugins.SevenHD.AutoUpdatePluginStart, 'Fragt beim PluginStart ob ein neues Update installiert werden soll.',                   '4', 'none'))
-        
+        list.append(getConfigListEntry(_('_____________________________FAQ___________________________________________'), ))
+        list.append(getConfigListEntry(_("FAQ"),                                           config.plugins.SevenHD.faq_language,          'Stellt die Ausgabesprache der FAQ ein.',                                                '4', 'language'))
         return list
 
     def __selectionChanged(self):
         self["config"].setList(self.getMenuItemList())
 
     def GetPicturePath(self):
-        returnValue = self["config"].getCurrent()[3]		
+        returnValue = self["config"].getCurrent()[3]
+        self.debug('\nRet_value[3]: ' + str(returnValue))		
            		
         if returnValue == '4':
            returnValue = self["config"].getCurrent()[int(returnValue)]
         else:
            returnValue = self["config"].getCurrent()[int(returnValue)].value
         
+        self.debug('Ret_value[4]: ' + str(returnValue))   
         path = MAIN_IMAGE_PATH + str(returnValue) + str(".jpg")
         
         self["description"].setText(self["config"].getCurrent()[2])
@@ -211,6 +214,7 @@ class SonstigeSettings(ConfigListScreen, Screen):
         self.setInputToDefault(config.plugins.SevenHD.AutoUpdate)
         self.setInputToDefault(config.plugins.SevenHD.AutoUpdateInfo)
         self.setInputToDefault(config.plugins.SevenHD.AutoUpdatePluginStart)
+        self.setInputToDefault(config.plugins.SevenHD.faq_language)
         self.save()
 
     def setInputToDefault(self, configItem):

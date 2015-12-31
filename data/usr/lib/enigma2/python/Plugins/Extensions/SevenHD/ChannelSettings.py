@@ -131,8 +131,14 @@ class ChannelSettings(ConfigListScreen, Screen):
            list.append(getConfigListEntry(_("color middle"),              config.plugins.SevenHD.ChannelBack3,               'Stellt den Hinergrund der mittleren Spalte ein',                  '4',       'colormiddlecs'))
         list.append(getConfigListEntry(_("color right"),                  config.plugins.SevenHD.ChannelBack2,               'Stellt den Hintergrund der rechten Spalte ein.',                  '4',       'colorrightcs'))
         list.append(getConfigListEntry(_('_____________________________color lines_______________________________________'), ))
-        list.append(getConfigListEntry(_("line"),                         config.plugins.SevenHD.ChannelLine,                'Stellt die Farbe der Linie ein.',                                 '4',       'linecs'))
-        list.append(getConfigListEntry(_("border"),                       config.plugins.SevenHD.ChannelBorder,              'Stellt die Farbe des Rahmen ein.',                                '4',       'bordercs'))
+        list.append(getConfigListEntry(_("line leftside"),                config.plugins.SevenHD.ChannelLine,                'Stellt die Farbe der Linie der linken Spalte ein.',               '4',       'linecs'))
+        if ChannelSelectionStyle.startswith('channelselection-threecolumns'):
+           list.append(getConfigListEntry(_("line middle"),               config.plugins.SevenHD.ChannelLineMiddle,          'Stellt die Farbe der Linie der mittleren Spalte ein.',            '4',       'linecs'))
+        list.append(getConfigListEntry(_("line rightside"),               config.plugins.SevenHD.ChannelLineRight,           'Stellt die Farbe der Linie der rechten Spalte ein.',              '4',       'linecs'))
+        list.append(getConfigListEntry(_("border leftside"),              config.plugins.SevenHD.ChannelBorder,              'Stellt die Farbe des Rahmen der linken Spalte ein.',              '4',       'bordercs'))
+        if ChannelSelectionStyle.startswith('channelselection-threecolumns'):
+           list.append(getConfigListEntry(_("border middle"),             config.plugins.SevenHD.ChannelBorderMiddle,        'Stellt die Farbe des Rahmen der mittleren Spalte ein.',           '4',       'bordercs'))
+        list.append(getConfigListEntry(_("border rightside"),             config.plugins.SevenHD.ChannelBorderRight,         'Stellt die Farbe des Rahmen der rechten Spalte ein.',             '4',       'bordercs'))
         if ChannelSelectionStyle.endswith('2') or ChannelSelectionStyle.endswith('3'):
            pass
         else:
@@ -173,7 +179,7 @@ class ChannelSettings(ConfigListScreen, Screen):
         self["config"].setList(self.getMenuItemList())
 
     def GetPicturePath(self):
-        returnValue = self["config"].getCurrent()[3]		
+        returnValue = self["config"].getCurrent()[3]
            		
         if returnValue == '4':
            returnValue = self["config"].getCurrent()[int(returnValue)]
@@ -234,6 +240,14 @@ class ChannelSettings(ConfigListScreen, Screen):
               preview = self.generate(config.plugins.SevenHD.ChannelLine.value)
         elif returnValue == config.plugins.SevenHD.ChannelBorder:
               preview = self.generate(config.plugins.SevenHD.ChannelBorder.value)
+        elif returnValue == config.plugins.SevenHD.ChannelLineRight:
+              preview = self.generate(config.plugins.SevenHD.ChannelLineRight.value)
+        elif returnValue == config.plugins.SevenHD.ChannelLineMiddle:
+              preview = self.generate(config.plugins.SevenHD.ChannelLineMiddle.value)
+        elif returnValue == config.plugins.SevenHD.ChannelBorderRight:
+              preview = self.generate(config.plugins.SevenHD.ChannelBorderRight.value)
+        elif returnValue == config.plugins.SevenHD.ChannelBorderMiddle:
+              preview = self.generate(config.plugins.SevenHD.ChannelBorderMiddle.value) 
         elif returnValue == config.plugins.SevenHD.ProgressCS:
               preview = self.generate(config.plugins.SevenHD.ProgressCS.value)
         elif returnValue == config.plugins.SevenHD.ProgressLineCS:
@@ -250,7 +264,6 @@ class ChannelSettings(ConfigListScreen, Screen):
               preview = self.generate(config.plugins.SevenHD.ChannelColorChannel.value)
         elif returnValue == config.plugins.SevenHD.ChannelColorTimeCS:
               preview = self.generate(config.plugins.SevenHD.ChannelColorTimeCS.value)
-        
         elif returnValue == config.plugins.SevenHD.ChannelColorPrimeTime:
               preview = self.generate(config.plugins.SevenHD.ChannelColorPrimeTime.value)
         elif returnValue == config.plugins.SevenHD.ChannelColorDesciption:
@@ -269,9 +282,6 @@ class ChannelSettings(ConfigListScreen, Screen):
               preview = self.generate(config.plugins.SevenHD.ProgressListCS.value)
         elif returnValue == config.plugins.SevenHD.ProgressBorderCS:
               preview = self.generate(config.plugins.SevenHD.ProgressBorderCS.value)
-        
-        
-        
         else:
               self["colorthump"].instance.hide()
         return str(preview)
@@ -333,6 +343,10 @@ class ChannelSettings(ConfigListScreen, Screen):
         self.setInputToDefault(config.plugins.SevenHD.ChannelBack3)
         self.setInputToDefault(config.plugins.SevenHD.ChannelLine)
         self.setInputToDefault(config.plugins.SevenHD.ChannelBorder)
+        self.setInputToDefault(config.plugins.SevenHD.ChannelLineRight)
+        self.setInputToDefault(config.plugins.SevenHD.ChannelBorderRight)
+        self.setInputToDefault(config.plugins.SevenHD.ChannelLineMiddle)
+        self.setInputToDefault(config.plugins.SevenHD.ChannelBorderMiddle)
         self.setInputToDefault(config.plugins.SevenHD.ChannelColorButton)
         self.setInputToDefault(config.plugins.SevenHD.ChannelColorBouquet)
         self.setInputToDefault(config.plugins.SevenHD.ChannelColorChannel)

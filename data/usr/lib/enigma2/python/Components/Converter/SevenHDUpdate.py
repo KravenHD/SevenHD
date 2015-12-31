@@ -1,14 +1,12 @@
 # -*- coding: utf-8 -*-
 import os
+import requests
 from enigma import eTimer
 from Components.config import config
 from Components.Element import cached
-from Tools.Directories import fileExists
-from twisted.web.client import downloadPage
 from Components.Converter.Converter import Converter
 
-TMP_FILE = '/tmp/SevenHDversion.txt'
-URL = 'http://www.gigablue-support.org/skins/SevenHD/update/version.txt'
+URL = 'https://raw.githubusercontent.com/KravenHD/SevenHD-Daten/master/update/version.txt'
 
 class SevenHDUpdate(Converter, object):
 	def __init__(self, type):
@@ -18,7 +16,8 @@ class SevenHDUpdate(Converter, object):
                    self.type = 'Update'
                 elif type == 'Version':
                    self.type = 'Version'
-                   
+                
+                self.git_version = '0.0.0.0'   
                 self.check_timer = eTimer()
                 self.check_timer.callback.append(self.get)
                 self.check_timer.start(30000)
@@ -43,32 +42,22 @@ class SevenHDUpdate(Converter, object):
 
 	boolean = property(getBoolean)
 
-        def get(self):        
-            downloadPage(URL, TMP_FILE).addErrback(self.error)
-
+        def get(self):
+            res = requests.request('get', URL)
+            self.git_version = str(res.text)
+        
         def look(self, what):
-            box_version = config.plugins.SevenHD.version.value
-            
-            if not fileExists(TMP_FILE):
+            if self.git_version == '0.0.0.0':
                self.get()
-            
-            try:
-               content = os.popen("cat %s" % TMP_FILE).read()
-	    except IOError:
-	       content = box_version
-	       
-            version = box_version
-            new_version = content
-
-            version = version.replace('.','')
-            online_version = content.replace('.','')
-                    
-	    version = self.change_to_int(version)
-	    online_version = self.change_to_int(online_version)
+            box_version = config.plugins.SevenHD.version.value
+            online_version = self.git_version
+	            
+	    version_on_box = self.change_to_int(box_version)
+	    version_on_line = self.change_to_int(online_version)
 	    
-            if int(version) < int(online_version):
+            if int(version_on_box) < int(version_on_line):
                 if str(what) == str('1'):   
-                   self.update_available = 'Last Version on Server ' + str(new_version)
+                   self.update_available = 'Last Version on Server ' + str(online_version)
                 else:
                    self.update_available = True
             else:
@@ -80,16 +69,12 @@ class SevenHDUpdate(Converter, object):
             return self.update_available
         
         def change_to_int(self, versionnumber):
-            versionnumber = versionnumber.split('+')[0]
+            versionnumber = versionnumber.replace('.','').split('+')[0]
             if str(len(versionnumber)) <= str('3'): 
                    versionnumber = versionnumber + str('0')
                    if str(len(versionnumber)) < str('4'): 
                       versionnumber = versionnumber + str('0')
             return versionnumber
-        
-        def error(self, error):
-            box_version = config.plugins.SevenHD.version.value
-            os.system('echo "' + box_version + '" > ' + TMP_FILE)
 
         def get_version(self):
             opkg_info = os.popen("opkg list-installed enigma2-plugin-skins-sevenhd | cut -d ' ' -f3").read()

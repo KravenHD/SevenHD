@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: SevenHD\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-10-26 18:55+0100\n"
-"PO-Revision-Date: 2015-12-26 10:54+0100\n"
+"PO-Revision-Date: 2015-12-30 22:35+0100\n"
 "Last-Translator: mike99 <mike99@mail.to>\n"
 "Language-Team: kraven & mike99\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.8.4\n"
+"X-Generator: Poedit 1.8.6\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ChannelSettings.py:115
@@ -1691,6 +1691,24 @@ msgstr "gehe nach \"Extras\" und nutze \"ImportSystemFonts\""
 
 msgid "Language for Weather"
 msgstr "Sprache für Wetter"
+
+msgid "line leftside"
+msgstr "Linie linke Spalte"
+
+msgid "line middle"
+msgstr "Linie mittlere Spalte"
+
+msgid "line rightside"
+msgstr "Linie rechte Spalte"
+
+msgid "border leftside"
+msgstr "Rahmen linke Spalte"
+
+msgid "border middle"
+msgstr "Rahmen mittlere Spalte"
+
+msgid "border rightside"
+msgstr "Rahmen rechte Seite"
 
 msgid "signal strengh"
 msgstr "Signalstärke"

@@ -372,6 +372,8 @@ class SevenHD(Screen):
 		self.skinSearchAndReplace.append(["SevenButton_Text", config.plugins.SevenHD.ButtonText.value])
 		self.skinSearchAndReplace.append(["Seven_Border", config.plugins.SevenHD.Border.value])
 		self.skinSearchAndReplace.append(["Seven_Line", config.plugins.SevenHD.Line.value])
+		self.skinSearchAndReplace.append(["SevenBorder_Right", config.plugins.SevenHD.BorderRight.value])
+		self.skinSearchAndReplace.append(["SevenLine_Right", config.plugins.SevenHD.LineRight.value])
 
 
 		self.skinSearchAndReplace.append(["SevenMeteo_Font", config.plugins.SevenHD.MeteoColor.value])
@@ -407,7 +409,11 @@ class SevenHD(Screen):
 
 
 		self.skinSearchAndReplace.append(["SevenLine_CS", config.plugins.SevenHD.ChannelLine.value])
+		self.skinSearchAndReplace.append(["SevenLineRight_CS", config.plugins.SevenHD.ChannelLineRight.value])
+		self.skinSearchAndReplace.append(["SevenLineMiddle_CS", config.plugins.SevenHD.ChannelLineMiddle.value])
 		self.skinSearchAndReplace.append(["SevenBorder_CS", config.plugins.SevenHD.ChannelBorder.value])
+		self.skinSearchAndReplace.append(["SevenBorderRight_CS", config.plugins.SevenHD.ChannelBorderRight.value])
+		self.skinSearchAndReplace.append(["SevenBorderMiddle_CS", config.plugins.SevenHD.ChannelBorderMiddle.value])
 		self.skinSearchAndReplace.append(["SevenButtons_CS", config.plugins.SevenHD.ChannelColorButton.value])
 		self.skinSearchAndReplace.append(["SevenBouquet_CS", config.plugins.SevenHD.ChannelColorBouquet.value])
 		self.skinSearchAndReplace.append(["SevenChannel_CS", config.plugins.SevenHD.ChannelColorChannel.value])
@@ -755,17 +761,13 @@ class SevenHD(Screen):
                 self.debug('Old Skin Resolution: ' + str(config.plugins.SevenHD.old_skin_mode.value) + ' New Skin Resolution: ' + str(config.plugins.SevenHD.skin_mode.value))
                 self.debug('DownLoad Path: ' + str(self.server_dir))
                 
-                if str(config.plugins.SevenHD.skin_mode.value) != str(config.plugins.SevenHD.old_skin_mode.value):
+                if str(config.plugins.SevenHD.skin_mode.value) != str(config.plugins.SevenHD.old_skin_mode.value) or fileExists(PLUGIN_PATH + 'Extensions/SevenHD/firststart'):
                    self.debug('Remove SevenHD Root')
-                   sub = subprocess.Popen("rm -rf /usr/share/enigma2/SevenHD/*; rm -rf /usr/share/enigma2/SevenHD; wget -q http://www.gigablue-support.org/skins/%s/SevenHD.tar.gz -O /tmp/SevenHD.tar.gz; tar xf /tmp/SevenHD.tar.gz -C /usr/share/enigma2/" % str(self.server_dir), shell=True)
-                   sub.wait()
-                
-                if fileExists(PLUGIN_PATH + 'Extensions/SevenHD/firststart'):
-                   self.debug('First SevenHD Start')
-                   sub = subprocess.Popen("rm -rf /usr/share/enigma2/SevenHD/*; rm -rf /usr/share/enigma2/SevenHD; wget -q http://www.gigablue-support.org/skins/%s/SevenHD.tar.gz -O /tmp/SevenHD.tar.gz; tar xf /tmp/SevenHD.tar.gz -C /usr/share/enigma2/" % str(self.server_dir), shell=True)
-                   sub.wait()
-                   remove(PLUGIN_PATH + 'Extensions/SevenHD/firststart')
+                   self.unpack()
                    
+                   if fileExists(PLUGIN_PATH + 'Extensions/SevenHD/firststart'):
+                      remove(PLUGIN_PATH + 'Extensions/SevenHD/firststart')
+                                  
                 self.debug('try open: ' + TMPFILE)
                 xFile = open(TMPFILE, "w")
                 for xx in self.skin_lines:
@@ -787,54 +789,64 @@ class SevenHD(Screen):
                 self.debug('Console')	
 		
                 #DOWNLOADS	
-                #buttons
-                eConsole().ePopen("rm -rf /usr/share/enigma2/SevenHD/buttons/*.*; rm -rf /usr/share/enigma2/SevenHD/buttons; wget -q http://www.gigablue-support.org/skins/%s/buttons/%s.tar.gz -O /tmp/%s.tar.gz; tar xf /tmp/%s.tar.gz -C /usr/share/enigma2/SevenHD/" % (str(self.server_dir), str(config.plugins.SevenHD.ButtonStyle.value), str(config.plugins.SevenHD.ButtonStyle.value), str(config.plugins.SevenHD.ButtonStyle.value)))
-                #buttons/vkey
-                eConsole().ePopen("rm -rf /usr/share/enigma2/SevenHD/buttons/vkey*; wget -q http://www.gigablue-support.org/skins/%s/buttons/vkeys.tar.gz -O /tmp/vkeys.tar.gz; tar xf /tmp/vkeys.tar.gz -C /usr/share/enigma2/SevenHD/" % (str(self.server_dir)))
-                #weather
-                eConsole().ePopen("rm -rf /usr/share/enigma2/SevenHD/WetterIcons/*.*; rm -rf /usr/share/enigma2/SevenHD/WetterIcons; wget -q http://www.gigablue-support.org/skins/%s/weather/%s.tar.gz -O /tmp/%s.tar.gz; tar xf /tmp/%s.tar.gz -C /usr/share/enigma2/SevenHD/" % (str(self.server_dir), str(config.plugins.SevenHD.WeatherStyle.value), str(config.plugins.SevenHD.WeatherStyle.value), str(config.plugins.SevenHD.WeatherStyle.value)))
-                #clock
-                eConsole().ePopen("rm -rf /usr/share/enigma2/SevenHD/clock/*.*; rm -rf /usr/share/enigma2/SevenHD/clock; wget -q http://www.gigablue-support.org/skins/%s/clock/%s.tar.gz -O /tmp/%s.tar.gz; tar xf /tmp/%s.tar.gz -C /usr/share/enigma2/SevenHD/" % (str(self.server_dir), str(config.plugins.SevenHD.ClockStyle.value), str(config.plugins.SevenHD.ClockStyle.value), str(config.plugins.SevenHD.ClockStyle.value)))
-                #volume
-                eConsole().ePopen("rm -rf /usr/share/enigma2/SevenHD/volume/*.*; rm -rf /usr/share/enigma2/SevenHD/volume; wget -q http://www.gigablue-support.org/skins/%s/volume/%s.tar.gz -O /tmp/%s.tar.gz; tar xf /tmp/%s.tar.gz -C /usr/share/enigma2/SevenHD/" % (str(self.server_dir), str(config.plugins.SevenHD.VolumeStyle.value), str(config.plugins.SevenHD.VolumeStyle.value), str(config.plugins.SevenHD.VolumeStyle.value)))
-                #progress
-                if config.plugins.SevenHD.Progress.value == "progress":
-                   eConsole().ePopen("rm -rf /usr/share/enigma2/SevenHD/progress/*.*; rm -rf /usr/share/enigma2/SevenHD/progress/progress; wget -q http://www.gigablue-support.org/skins/%s/progress/%s.tar.gz -O /tmp/%s.tar.gz; tar xf /tmp/%s.tar.gz -C /usr/share/enigma2/SevenHD/" % (str(self.server_dir), str(config.plugins.SevenHD.Progress.value), str(config.plugins.SevenHD.Progress.value), str(config.plugins.SevenHD.Progress.value)))
-                #progressVol
-                if config.plugins.SevenHD.ProgressVol.value == "progressvol":
-                   eConsole().ePopen("rm -rf /usr/share/enigma2/SevenHD/progressvol/*.*; rm -rf /usr/share/enigma2/SevenHD/progressvol; wget -q http://www.gigablue-support.org/skins/%s/progress/%s.tar.gz -O /tmp/%s.tar.gz; tar xf /tmp/%s.tar.gz -C /usr/share/enigma2/SevenHD/" % (str(self.server_dir), str(config.plugins.SevenHD.ProgressVol.value), str(config.plugins.SevenHD.ProgressVol.value), str(config.plugins.SevenHD.ProgressVol.value)))
-                #progressIB
-                if config.plugins.SevenHD.ProgressIB.value == "progressib":
-                   eConsole().ePopen("rm -rf /usr/share/enigma2/SevenHD/progressib/*.*; rm -rf /usr/share/enigma2/SevenHD/progressib; wget -q http://www.gigablue-support.org/skins/%s/progress/%s.tar.gz -O /tmp/%s.tar.gz; tar xf /tmp/%s.tar.gz -C /usr/share/enigma2/SevenHD/" % (str(self.server_dir), str(config.plugins.SevenHD.ProgressIB.value), str(config.plugins.SevenHD.ProgressIB.value), str(config.plugins.SevenHD.ProgressIB.value)))
-                #progressCS
-                if config.plugins.SevenHD.ProgressCS.value == "progresscs":
-                   eConsole().ePopen("rm -rf /usr/share/enigma2/SevenHD/progresscs/*.*; rm -rf /usr/share/enigma2/SevenHD/progresscs; wget -q http://www.gigablue-support.org/skins/%s/progress/%s.tar.gz -O /tmp/%s.tar.gz; tar xf /tmp/%s.tar.gz -C /usr/share/enigma2/SevenHD/" % (str(self.server_dir), str(config.plugins.SevenHD.ProgressCS.value), str(config.plugins.SevenHD.ProgressCS.value), str(config.plugins.SevenHD.ProgressCS.value)))
-                #progressListCS
-                if config.plugins.SevenHD.ProgressListCS.value == "progresslistcs":
-                   eConsole().ePopen("rm -rf /usr/share/enigma2/SevenHD/progresslistcs/*.*; rm -rf /usr/share/enigma2/SevenHD/progresslistcs; wget -q http://www.gigablue-support.org/skins/%s/progress/%s.tar.gz -O /tmp/%s.tar.gz; tar xf /tmp/%s.tar.gz -C /usr/share/enigma2/SevenHD/" % (str(self.server_dir), str(config.plugins.SevenHD.ProgressListCS.value), str(config.plugins.SevenHD.ProgressListCS.value), str(config.plugins.SevenHD.ProgressListCS.value)))
-                #icons
-                eConsole().ePopen("rm -rf /usr/share/enigma2/SevenHD/icons/*.*; rm -rf /usr/share/enigma2/SevenHD/icons; wget -q http://www.gigablue-support.org/skins/%s/icons/%s.tar.gz -O /tmp/%s.tar.gz; tar xf /tmp/%s.tar.gz -C /usr/share/enigma2/SevenHD/" % (str(self.server_dir), str(config.plugins.SevenHD.IconStyle.value), str(config.plugins.SevenHD.IconStyle.value), str(config.plugins.SevenHD.IconStyle.value)))
-		
+                download_list = ['buttons', 'vkeys', 'WetterIcons', 'clock', 'volume', 'icons', 'progress', 'progressvol', 'progressib', 'progresscs', 'progresslistcs']
+                
+                for entrie in download_list:
+                       
+                       if entrie == 'buttons':
+                          os.system("rm -rf /usr/share/enigma2/SevenHD/%s/*.*; rm -rf /usr/share/enigma2/SevenHD/%s" % (str(entrie), str(entrie)))
+                          self.download_tgz(entrie, config.plugins.SevenHD.ButtonStyle.value)
+                       elif entrie == 'vkeys':
+                          os.system("rm -rf /usr/share/enigma2/SevenHD/buttons/vkey*")
+                          self.download_tgz('buttons', entrie)
+                       elif entrie == 'WetterIcons':
+                          os.system("rm -rf /usr/share/enigma2/SevenHD/%s/*.*; rm -rf /usr/share/enigma2/SevenHD/%s" % (str(entrie), str(entrie)))
+                          self.download_tgz('weather', config.plugins.SevenHD.WeatherStyle.value)
+                       elif entrie == 'clock' and config.plugins.SevenHD.ClockStyle.value in 'clock-analog clock-android clock-weather':
+                          os.system("rm -rf /usr/share/enigma2/SevenHD/%s/*.*; rm -rf /usr/share/enigma2/SevenHD/%s" % (str(entrie), str(entrie)))
+                          self.download_tgz(entrie, config.plugins.SevenHD.ClockStyle.value)
+                       elif entrie == 'volume' and config.plugins.SevenHD.VolumeStyle.value == 'volumestyle-center':
+                          os.system("rm -rf /usr/share/enigma2/SevenHD/%s/*.*; rm -rf /usr/share/enigma2/SevenHD/%s" % (str(entrie), str(entrie)))
+                          self.download_tgz(entrie, config.plugins.SevenHD.VolumeStyle.value)
+                       elif entrie == 'icons':
+                          os.system("rm -rf /usr/share/enigma2/SevenHD/%s/*.*; rm -rf /usr/share/enigma2/SevenHD/%s" % (str(entrie), str(entrie)))
+                          self.download_tgz(entrie, config.plugins.SevenHD.IconStyle.value)
+                       elif config.plugins.SevenHD.Progress.value == "progress" and entrie == 'progress':
+                          os.system("rm -rf /usr/share/enigma2/SevenHD/%s/*.*; rm -rf /usr/share/enigma2/SevenHD/%s" % (str(entrie), str(entrie)))
+                          self.download_tgz('progress', config.plugins.SevenHD.Progress.value)
+                       elif config.plugins.SevenHD.ProgressVol.value == "progressvol" and entrie == 'progressvol':
+                          os.system("rm -rf /usr/share/enigma2/SevenHD/%s/*.*; rm -rf /usr/share/enigma2/SevenHD/%s" % (str(entrie), str(entrie)))
+                          self.download_tgz('progress', config.plugins.SevenHD.ProgressVol.value)
+                       elif config.plugins.SevenHD.ProgressIB.value == "progressib" and entrie == 'progressib':
+                          os.system("rm -rf /usr/share/enigma2/SevenHD/%s/*.*; rm -rf /usr/share/enigma2/SevenHD/%s" % (str(entrie), str(entrie)))
+                          self.download_tgz('progress', config.plugins.SevenHD.ProgressIB.value)
+                       elif config.plugins.SevenHD.ProgressCS.value == "progresscs" and entrie == 'progresscs':
+                          os.system("rm -rf /usr/share/enigma2/SevenHD/%s/*.*; rm -rf /usr/share/enigma2/SevenHD/%s" % (str(entrie), str(entrie)))
+                          self.download_tgz('progress', config.plugins.SevenHD.ProgressCS.value)
+                       elif config.plugins.SevenHD.ProgressListCS.value == "progresslistcs" and entrie == 'progresslistcs':
+                          os.system("rm -rf /usr/share/enigma2/SevenHD/%s/*.*; rm -rf /usr/share/enigma2/SevenHD/%s" % (str(entrie), str(entrie)))
+                          self.download_tgz('progress', config.plugins.SevenHD.ProgressListCS.value)
+                       
                 
                 if config.plugins.SevenHD.skin_mode.value == '1' or '2' or '3':
                    #background only in HD Mode
 		   eConsole().ePopen("rm -rf /usr/share/enigma2/SevenHD/back/*.*; rm -rf /usr/share/enigma2/SevenHD/back")
                 
                    if self.Background.startswith('back'):
-		      eConsole().ePopen("wget -q http://www.gigablue-support.org/skins/%s/back/%s.tar.gz -O /tmp/%s.tar.gz; tar xf /tmp/%s.tar.gz -C /usr/share/enigma2/SevenHD/" % (str(self.server_dir), str(self.Background), str(self.Background), str(self.Background)))
+		      self.download_tgz('back', str(self.Background))
                    if self.BackgroundRight.startswith('back'):
-                      eConsole().ePopen("wget -q http://www.gigablue-support.org/skins/%s/back/%s.tar.gz -O /tmp/%s.tar.gz; tar xf /tmp/%s.tar.gz -C /usr/share/enigma2/SevenHD/" % (str(self.server_dir), str(self.BackgroundRight), str(self.BackgroundRight), str(self.BackgroundRight)))
+                      self.download_tgz('back', str(self.BackgroundRight))
 		   if self.BackgroundIB1.startswith('back'):
-		      eConsole().ePopen("wget -q http://www.gigablue-support.org/skins/%s/back/%s.tar.gz -O /tmp/%s.tar.gz; tar xf /tmp/%s.tar.gz -C /usr/share/enigma2/SevenHD/" % (str(self.server_dir), str(self.BackgroundIB1), str(self.BackgroundIB1), str(self.BackgroundIB1)))
+		      self.download_tgz('back', str(self.BackgroundIB1))
 		   if self.BackgroundIB2.startswith('back'):
-		      eConsole().ePopen("wget -q http://www.gigablue-support.org/skins/%s/back/%s.tar.gz -O /tmp/%s.tar.gz; tar xf /tmp/%s.tar.gz -C /usr/share/enigma2/SevenHD/" % (str(self.server_dir), str(self.BackgroundIB2), str(self.BackgroundIB2), str(self.BackgroundIB2)))
+		      self.download_tgz('back', str(self.BackgroundIB2))
 		   if self.ChannelBack1.startswith('back'):
-		      eConsole().ePopen("wget -q http://www.gigablue-support.org/skins/%s/back/%s.tar.gz -O /tmp/%s.tar.gz; tar xf /tmp/%s.tar.gz -C /usr/share/enigma2/SevenHD/" % (str(self.server_dir), str(self.ChannelBack1), str(self.ChannelBack1), str(self.ChannelBack1)))
+		      self.download_tgz('back', str(self.ChannelBack1))
 		   if self.ChannelBack2.startswith('back'):
-		      eConsole().ePopen("wget -q http://www.gigablue-support.org/skins/%s/back/%s.tar.gz -O /tmp/%s.tar.gz; tar xf /tmp/%s.tar.gz -C /usr/share/enigma2/SevenHD/" % (str(self.server_dir), str(self.ChannelBack2), str(self.ChannelBack2), str(self.ChannelBack2)))
-		   if self.ChannelBack3.startswith('back'):
-		      eConsole().ePopen("wget -q http://www.gigablue-support.org/skins/%s/back/%s.tar.gz -O /tmp/%s.tar.gz; tar xf /tmp/%s.tar.gz -C /usr/share/enigma2/SevenHD/" % (str(self.server_dir), str(self.ChannelBack3), str(self.ChannelBack3), str(self.ChannelBack3)))
-                
+		      self.download_tgz('back', str(self.ChannelBack2))
+                   if self.ChannelBack3.startswith('back'):
+		      self.download_tgz('back', str(self.ChannelBack3))
+                      
                 self.debug('download tgz complett')	
         
         except:
@@ -843,6 +855,35 @@ class SevenHD(Screen):
 
         self.reboot(_("GUI needs a restart to download files and apply a new skin.\nDo you want to Restart the GUI now?"))
 
+    def unpack(self):
+        os.system("rm -rf /usr/share/enigma2/SevenHD/*; rm -rf /usr/share/enigma2/SevenHD")
+        
+        url = DOWNLOAD_URL + self.server_dir + '/SevenHD.tar.gz'
+        self.debug('URL: ' + url)
+        res = requests.request('get', url)
+        
+        tar_gz = open('/tmp/SevenHD.tar.gz','w')
+        tar_gz.write(res.content)
+        tar_gz.close()
+        
+        sub = subprocess.Popen("tar xf /tmp/SevenHD.tar.gz -C /usr/share/enigma2/", shell=True)
+        sub.wait()
+        
+        remove('/tmp/SevenHD.tar.gz')
+
+    def download_tgz(self, who, what):
+        
+        url = DOWNLOAD_URL + self.server_dir + '/' + who + '/' + what + '.tar.gz'
+        res = requests.request('get', url)
+        
+        tar_gz = open('/tmp/%s.tar.gz' % what,'w')
+        tar_gz.write(res.content)
+        tar_gz.close()
+        
+        sub = subprocess.Popen("tar xf /tmp/%s.tar.gz -C /usr/share/enigma2/SevenHD/" % str(what), shell=True)
+        sub.wait()
+        os.remove('/tmp/%s.tar.gz' % str(what))
+        
     def appendSkinFile(self, appendFileName, skinPartSearchAndReplace=None):
         """
         add skin file to main skin content
@@ -909,7 +950,7 @@ class SevenHD(Screen):
            
         options.extend(((_("Share my Skin"), boundFunction(self.Share_Skin)),))
         options.extend(((_("ChangeLog"), boundFunction(self.ChangeLog)),))
-        options.extend(((_("Information"), boundFunction(self.send_to_msg_box, "Team Kraven\n\xc3\xb6rlgrey, TBX, stony272, thomele, Philipswalther and Kraven")),))
+        options.extend(((_("About Team"), boundFunction(self.send_to_msg_box, "Team Kraven\n\xc3\xb6rlgrey, TBX, stony272, thomele, Philipswalther and Kraven")),))
         if fileExists(FILE):
            options.extend(((_("About Skin"), boundFunction(self.About)),))
         options.extend(((_("Version"), boundFunction(self.do_version)),))
@@ -923,11 +964,14 @@ class SevenHD(Screen):
         ret and ret[1]()
     
     def show_faq(self):
-        from Plugins.SystemPlugins.MPHelp import PluginHelp, XMLHelpReader
-        reader = XMLHelpReader(resolveFilename(SCOPE_PLUGINS, "Extensions/SevenHD/data/faq.xml"))
-        Faq = PluginHelp(*reader)
-        Faq.open(self.session)
-    
+        if fileExists(resolveFilename(SCOPE_PLUGINS, "Extensions/SevenHD/faq/faq_%s.xml" % str(config.plugins.SevenHD.faq_language.value))):
+           from Plugins.SystemPlugins.MPHelp import PluginHelp, XMLHelpReader
+           reader = XMLHelpReader(resolveFilename(SCOPE_PLUGINS, "Extensions/SevenHD/faq/faq_%s.xml" % str(config.plugins.SevenHD.faq_language.value)))
+           Faq = PluginHelp(*reader)
+           Faq.open(self.session)
+        else:
+           self.session.open(MessageBox,_('The FAQ is not in your Language available.'), MessageBox.TYPE_INFO)
+           
     def install_systemfonts(self):
         ttf_dir = os.popen('find / -name *.ttf').read().split('\n')
         for ttf in ttf_dir:
@@ -973,11 +1017,10 @@ class SevenHD(Screen):
         f.close()
         self.session.open(Console, _("About Skin"), cmdlist=[("cat /tmp/about_skin.txt")])
     
-    def ChangeLog(self):
-	os.popen("wget 'http://www.gigablue-support.org/skins/SevenHD/update/SevenHDChangeLog.txt' -O /tmp/SevenHDChangeLog.txt")
-        if fileExists("/tmp/SevenHDChangeLog.txt"): 
-           self.session.open(Console, _("Show Debug Log"), cmdlist=[("cat /tmp/SevenHDChangeLog.txt")])
-	
+    def ChangeLog(self):                          
+	res = requests.request('get', DOWNLOAD_UPDATE_URL)
+        self.session.open(Console, _("Show Debug Log"), cmdlist=[("echo '%s'" % res.text)])
+        
     def send_to_msg_box(self, my_msg):
         self.session.open(MessageBox,_('%s' % str(my_msg)), MessageBox.TYPE_INFO)
     
@@ -1043,7 +1086,7 @@ class SevenHD(Screen):
     def __selectionChanged(self):
         self.ShowPicture()
         
-    def debug(self, what):
+    def debug(self, what, error=None):
         if config.plugins.SevenHD.msgdebug.value:
            try:
               self.session.open(MessageBox, _('[PluginScreen]\n' + str(what)), MessageBox.TYPE_INFO)
@@ -1052,7 +1095,10 @@ class SevenHD(Screen):
            
         if config.plugins.SevenHD.debug.value:
            f = open('/tmp/kraven_debug.txt', 'a+')
-           f.write('[PluginScreen]' + str(what) + '\n')
+           if error != None:
+              f.write('[PluginScreen]' + str(what) + ' error: ' + str(error) + '\n')
+           else:
+              f.write('[PluginScreen]' + str(what) + '\n')
            f.close()    
 ################################################################################        
 def main(session, **kwargs):
