@@ -481,8 +481,93 @@
     <widget backgroundColor="SevenFontBackground" scrollbarMode="showNever" itemHeight="25" name="filedata" position="70,144" size="1165,462" transparent="1" />
     <panel name="template_menu_full_button" />
     <panel name="template_colorkey_text_source" />
-    <ePixmap pixmap="SevenHD/buttons/key_info.png" position="1075,668" size="32,32" backgroundColor="SevenFontBackgroundRight" alphatest="blend" />
+    <ePixmap pixmap="SevenHD/buttons/key_info.png" position="1075,668" size="32,32" backgroundColor="SevenFontBackRightCS" alphatest="blend" />
     <widget font="Regular; 18" halign="left" source="key_info" render="Label" position="1112,672" size="150,24" backgroundColor="SevenFontBackground" transparent="1" zPosition="1" />
   </screen>
+  <!-- Package  Manager -->
+<screen name="InfopanelManagerScreen" title="Package Manager For NFR" position="0,0" size="1280,720" backgroundColor="transparent" flags="wfNoBorder">
+  <widget source="menu" render="Listbox" backgroundColor="SevenFontBackground" scrollbarMode="showNever" position="70,80" size="708,555" transparent="1">
+		<convert type="TemplatedMultiContent">{"template": [
+				MultiContentEntryText(pos = (120, 2), size = (580, 28), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 2 is the Menu Titel
+				MultiContentEntryText(pos = (120, 32), size = (580, 18), font=1, flags = RT_HALIGN_LEFT, text = 2), # index 3 is the Description
+				MultiContentEntryPixmapAlphaTest(pos = (5, 5), size = (100, 100), png = 3), # index 4 is the pixmap
+				],
+				"fonts": [gFont("Regular", 23),gFont("Regular", 16)],
+				"itemHeight": 110
+				}</convert>
+</widget>
+  <panel name="template_menu_left_button" />
+  <panel name="template_colorkey_text_source" />
+</screen> 
+<screen name="InstallTarGZ" title="Package Manager For NFR" position="0,0" size="1280,720" backgroundColor="transparent" flags="wfNoBorder">
+  <widget source="menu" render="Listbox" backgroundColor="SevenFontBackground" scrollbarMode="showNever" position="70,80" size="708,485" transparent="1">
+		<convert type="TemplatedMultiContent">{"template": [
+				MultiContentEntryText(pos = (70, 2), size = (630, 25), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 2 is the Menu Titel
+				MultiContentEntryText(pos = (80, 29), size = (630, 18), font=1, flags = RT_HALIGN_LEFT, text = 1), # index 3 is the Description
+				MultiContentEntryPixmapAlphaTest(pos = (5, 5), size = (50, 50), png = 2), # index 4 is the pixmap
+				],
+				"fonts": [gFont("Regular", 23),gFont("Regular", 16)],
+				"itemHeight": 60
+		}</convert>
+</widget>
+  <panel name="template_menu_left_button" />
+  <panel name="template_colorkey_text_source" />
+</screen>
+<screen name="InstallIpk" title="Package Manager For NFR" position="0,0" size="1280,720" backgroundColor="transparent" flags="wfNoBorder">
+  <widget source="menu" render="Listbox" backgroundColor="SevenFontBackground" scrollbarMode="showNever" position="70,80" size="708,485" transparent="1">
+		<convert type="TemplatedMultiContent">{"template": [
+				MultiContentEntryText(pos = (70, 2), size = (630, 25), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 2 is the Menu Titel
+				MultiContentEntryText(pos = (80, 29), size = (630, 18), font=1, flags = RT_HALIGN_LEFT, text = 1), # index 3 is the Description
+				MultiContentEntryPixmapAlphaTest(pos = (5, 5), size = (50, 50), png = 2), # index 4 is the pixmap
+				],
+				"fonts": [gFont("Regular", 23),gFont("Regular", 16)],
+				"itemHeight": 60
+		}</convert>
+</widget>
+  <panel name="template_menu_left_button" />
+  <panel name="template_colorkey_text_source" />
+</screen>
+<screen name="InstallZip" title="Package Manager For NFR" position="0,0" size="1280,720" backgroundColor="transparent" flags="wfNoBorder">
+  <widget source="menu" render="Listbox" backgroundColor="SevenFontBackground" scrollbarMode="showNever" position="70,80" size="708,485" transparent="1">
+		<convert type="TemplatedMultiContent">{"template": [
+				MultiContentEntryText(pos = (70, 2), size = (630, 25), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 2 is the Menu Titel
+				MultiContentEntryText(pos = (80, 29), size = (630, 18), font=1, flags = RT_HALIGN_LEFT, text = 1), # index 3 is the Description
+				MultiContentEntryPixmapAlphaTest(pos = (5, 5), size = (50, 50), png = 2), # index 4 is the pixmap
+				],
+				"fonts": [gFont("Regular", 23),gFont("Regular", 16)],
+				"itemHeight": 60
+		}</convert>
+</widget>
+  <panel name="template_menu_left_button" />
+  <panel name="template_colorkey_text_source" />
+</screen>
+<screen name="AdvInstallIpk" title="Package Manager For NFR" position="0,0" size="1280,720" backgroundColor="transparent" flags="wfNoBorder">
+  <widget source="menu" render="Listbox" backgroundColor="SevenFontBackground" scrollbarMode="showNever" position="70,80" size="708,485" transparent="1">
+		<convert type="TemplatedMultiContent">{"template": [
+				MultiContentEntryText(pos = (70, 2), size = (630, 25), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 2 is the Menu Titel
+				MultiContentEntryText(pos = (80, 29), size = (630, 18), font=1, flags = RT_HALIGN_LEFT, text = 1), # index 3 is the Description
+				MultiContentEntryPixmapAlphaTest(pos = (5, 5), size = (50, 50), png = 2), # index 4 is the pixmap
+				],
+				"fonts": [gFont("Regular", 23),gFont("Regular", 16)],
+				"itemHeight": 60
+		}</convert>
+</widget>
+  <panel name="template_menu_left_button" />
+  <panel name="template_colorkey_text_source" />
+</screen>
+<screen name="InstallRar" title="Package Manager For NFR" position="0,0" size="1280,720" backgroundColor="transparent" flags="wfNoBorder">
+  <widget source="menu" render="Listbox" backgroundColor="SevenFontBackground" scrollbarMode="showNever" position="70,80" size="708,485" transparent="1">
+		<convert type="TemplatedMultiContent">{"template": [
+				MultiContentEntryText(pos = (70, 2), size = (630, 25), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 2 is the Menu Titel
+				MultiContentEntryText(pos = (80, 29), size = (630, 18), font=1, flags = RT_HALIGN_LEFT, text = 1), # index 3 is the Description
+				MultiContentEntryPixmapAlphaTest(pos = (5, 5), size = (50, 50), png = 2), # index 4 is the pixmap
+				],
+				"fonts": [gFont("Regular", 23),gFont("Regular", 16)],
+				"itemHeight": 60
+		}</convert>
+</widget>
+  <panel name="template_menu_left_button" />
+  <panel name="template_colorkey_text_source" />
+</screen>
   <!-- main-custom-nfr */ -->
   
