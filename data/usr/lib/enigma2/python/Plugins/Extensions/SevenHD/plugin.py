@@ -457,6 +457,16 @@ class SevenHD(Screen):
                       self.skinSearchAndReplace.append(['convert  type="SevenHDWeather_msn">Day_3,MeteoIcon', 'convert  type="SevenHDWeather_msn">Day_3,MeteoFont'])
                       self.skinSearchAndReplace.append(['convert  type="SevenHDWeather_msn">Day_4,MeteoIcon', 'convert  type="SevenHDWeather_msn">Day_4,MeteoFont'])    
                       self.skinSearchAndReplace.append(['convert  type="SevenHDWeather_msn">Day_5,MeteoIcon', 'convert  type="SevenHDWeather_msn">Day_5,MeteoFont'])
+                elif config.plugins.SevenHD.AutoWoeIDServer.value == '_accu':
+                   if config.plugins.SevenHD.WeatherView.value == "meteo":
+                      self.skinSearchAndReplace.append(['size="50,50" path="WetterIcons" render="SevenHDWetterPicon" alphatest="blend"', 'size="50,50" render="Label" font="Meteo3; 45" halign="center" valign="center" foregroundColor="SevenMeteoFont" backgroundColor="SevenFontBackgroundIB1" noWrap="1"'])
+                      self.skinSearchAndReplace.append(['size="70,70" render="SevenHDWetterPicon" alphatest="blend" path="WetterIcons"', 'size="70,70" render="Label" font="Meteo3; 70" halign="center" valign="center" foregroundColor="SevenMeteoFont" backgroundColor="SevenFontBackgroundIB1" noWrap="1"'])
+                      self.skinSearchAndReplace.append(['convert  type="SevenHDWeather_accu">Day_0,MeteoIcon', 'convert  type="SevenHDWeather_accu">Day_0,MeteoFont'])
+                      self.skinSearchAndReplace.append(['convert  type="SevenHDWeather_accu">Day_1,MeteoIcon', 'convert  type="SevenHDWeather_accu">Day_1,MeteoFont'])
+                      self.skinSearchAndReplace.append(['convert  type="SevenHDWeather_accu">Day_2,MeteoIcon', 'convert  type="SevenHDWeather_accu">Day_2,MeteoFont'])
+                      self.skinSearchAndReplace.append(['convert  type="SevenHDWeather_accu">Day_3,MeteoIcon', 'convert  type="SevenHDWeather_accu">Day_3,MeteoFont'])    
+                      self.skinSearchAndReplace.append(['convert  type="SevenHDWeather_accu">Day_4,MeteoIcon', 'convert  type="SevenHDWeather_accu">Day_4,MeteoFont'])
+                      
                       
                 ### Progress
                 if config.plugins.SevenHD.Progress.value == "progress":

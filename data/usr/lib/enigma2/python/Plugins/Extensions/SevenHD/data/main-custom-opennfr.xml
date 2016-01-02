@@ -1,4 +1,3 @@
- 
 <!-- /* main-custom-nfr -->
   <!-- About -->
   <screen name="About" position="0,0" size="1280,720" title="About" flags="wfNoBorder" backgroundColor="transparent">
@@ -40,7 +39,7 @@
     <panel name="template_menu_left" />
   </screen>
   <!-- QuickMenu -->
- <screen name="QuickMenu" position="0,0" size="1280,720" backgroundColor="transparent" flags="wfNoBorder">
+  <screen name="QuickMenu" position="0,0" size="1280,720" backgroundColor="transparent" flags="wfNoBorder">
     <widget name="list" position="70,80" size="330,400" backgroundColor="SevenFontBackground" itemHeight="50" transparent="1" />
     <widget name="description" position="70,525" size="718,110" zPosition="1" font="Regular2;22" foregroundColor="SevenFont2" halign="center" backgroundColor="SevenFontBackground" transparent="1" />
     <widget name="sublist" position="448,80" size="350,400" backgroundColor="SevenFontBackground" itemHeight="50" transparent="1" />
@@ -70,9 +69,9 @@
     <panel name="template_menu_left" />
   </screen>
   <!-- Softwarepanel -->
-<screen name="SoftwarePanel" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
-  <widget source="list" render="Listbox" position="70,90" size="708,520" backgroundColor="SevenFontBackground" scrollbarMode="showNever" itemHeight="50" alphatest="blend" transparent="1">
-    <convert type="TemplatedMultiContent">
+  <screen name="SoftwarePanel" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
+    <widget source="list" render="Listbox" position="70,90" size="708,520" backgroundColor="SevenFontBackground" scrollbarMode="showNever" itemHeight="50" alphatest="blend" transparent="1">
+      <convert type="TemplatedMultiContent">
 			{"template": [
 					MultiContentEntryText(pos = (6, 2), size = (540, 28), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 0 is the name
 					MultiContentEntryText(pos = (6, 28), size = (540, 20), font=1, flags = RT_HALIGN_LEFT, text = 2), # index 2 is the description
@@ -83,19 +82,19 @@
 			"itemHeight": 52
 			}
 		</convert>
-  </widget>
-  <widget name="packagetext" position="918,391" size="250,30" zPosition="1" font="Regular2; 25" halign="right" transparent="1" backgroundColor="SevenFontBackgroundRight" foregroundColor="SevenFont2" />
-  <widget name="packagenr" position="1181,391" size="50,30" zPosition="1" font="Regular2; 25" halign="right" transparent="1" backgroundColor="SevenFontBackgroundRight" foregroundColor="SevenFont2" />
-  <widget name="feedstatusRED" position="997,557" size="200,30" zPosition="1" font="Regular;25" halign="left" backgroundColor="SevenFontBackgroundRight" foregroundColor="SevenFont1" transparent="1" />
-  <widget name="feedstatusYELLOW" position="997,587" size="200,30" zPosition="1" font="Regular;25" halign="left" backgroundColor="SevenFontBackgroundRight" foregroundColor="SevenFont1" transparent="1" />
-  <widget name="feedstatusGREEN" position="997,617" size="200,30" zPosition="1" font="Regular;25" halign="left" backgroundColor="SevenFontBackgroundRight" foregroundColor="SevenFont1" transparent="1" />
-  <widget name="a_off" pixmap="/usr/share/enigma2/skin_default/icons/aoff.png" position="954,551" zPosition="1" size="36,97" alphatest="on" />
-  <widget name="a_red" pixmap="/usr/share/enigma2/skin_default/icons/ared.png" position="954,551" zPosition="1" size="36,97" alphatest="on" />
-  <widget name="a_yellow" pixmap="/usr/share/enigma2/skin_default/icons/ayellow.png" position="954,551" zPosition="1" size="36,97" alphatest="on" />
-  <widget name="a_green" pixmap="/usr/share/enigma2/skin_default/icons/agreen.png" position="954,551" zPosition="1" size="36,97" alphatest="on" />
-  <panel name="template_colorkey_text" />
-  <panel name="template_menu_left_right_button" />
-</screen>
+    </widget>
+    <widget name="packagetext" position="918,391" size="250,30" zPosition="1" font="Regular2; 25" halign="right" transparent="1" backgroundColor="SevenFontBackgroundRight" foregroundColor="SevenFont2" />
+    <widget name="packagenr" position="1181,391" size="50,30" zPosition="1" font="Regular2; 25" halign="right" transparent="1" backgroundColor="SevenFontBackgroundRight" foregroundColor="SevenFont2" />
+    <widget name="feedstatusRED" position="997,557" size="200,30" zPosition="1" font="Regular;25" halign="left" backgroundColor="SevenFontBackgroundRight" foregroundColor="SevenFont1" transparent="1" />
+    <widget name="feedstatusYELLOW" position="997,587" size="200,30" zPosition="1" font="Regular;25" halign="left" backgroundColor="SevenFontBackgroundRight" foregroundColor="SevenFont1" transparent="1" />
+    <widget name="feedstatusGREEN" position="997,617" size="200,30" zPosition="1" font="Regular;25" halign="left" backgroundColor="SevenFontBackgroundRight" foregroundColor="SevenFont1" transparent="1" />
+    <widget name="a_off" pixmap="/usr/share/enigma2/skin_default/icons/aoff.png" position="954,551" zPosition="1" size="36,97" alphatest="on" />
+    <widget name="a_red" pixmap="/usr/share/enigma2/skin_default/icons/ared.png" position="954,551" zPosition="1" size="36,97" alphatest="on" />
+    <widget name="a_yellow" pixmap="/usr/share/enigma2/skin_default/icons/ayellow.png" position="954,551" zPosition="1" size="36,97" alphatest="on" />
+    <widget name="a_green" pixmap="/usr/share/enigma2/skin_default/icons/agreen.png" position="954,551" zPosition="1" size="36,97" alphatest="on" />
+    <panel name="template_colorkey_text" />
+    <panel name="template_menu_left_right_button" />
+  </screen>
   <!-- DevicePanelConf -->
   <screen name="DevicePanelConf" position="0,0" size="1280,720" title="DevicePanelConf" backgroundColor="transparent" flags="wfNoBorder">
     <widget name="config" position="70,120" size="700,371" enableWrapAround="1" backgroundColor="SevenFontBackground" transparent="1" />
@@ -139,8 +138,8 @@
   </screen>
   <!-- HddSetup -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="HddSetup" position="0,0" size="1280,720" title="Hard Drive Setup">
-  <widget source="menu" render="Listbox" position="70,80" size="708,540" backgroundColor="SevenFontBackground" itemHeight="50" transparent="1">
-		<convert type="TemplatedMultiContent">{"template": [
+    <widget source="menu" render="Listbox" position="70,80" size="708,540" backgroundColor="SevenFontBackground" itemHeight="50" transparent="1">
+      <convert type="TemplatedMultiContent">{"template": [
 					MultiContentEntryPixmapAlphaTest(pos = (5, 0), size = (48, 48), png = 0),
 					MultiContentEntryText(pos = (70, 3), size = (430, 38), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_TOP, text = 1),
 					MultiContentEntryText(pos = (515, 3), size = (135, 38), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_TOP, text = 2),
@@ -148,10 +147,10 @@
 					"fonts": [gFont("Regular", 22)],
 					"itemHeight": 52
 		}</convert>
-</widget>
-  <panel name="template_menu_left_button" />
-  <panel name="template_colorkey_text_source" />
-</screen>
+    </widget>
+    <panel name="template_menu_left_button" />
+    <panel name="template_colorkey_text_source" />
+  </screen>
   <!-- HddPartitions -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="HddPartitions" position="0,0" size="1280,720" title="Hard Drive Partitions">
     <widget name="label_disk" position="70,79" font="Regular2; 26" size="708,30" halign="center" valign="center" backgroundColor="SevenFontBackground" transparent="1" foregroundColor="SevenFont2" />
@@ -238,7 +237,7 @@
     <panel name="template_menu_left_button" />
   </screen>
   <!-- NFRCamManager -->
-<screen name="NFRCamManager" position="0,0" size="1280,720" title="NFR SoftCam Manager" flags="wfNoBorder" backgroundColor="transparent">
+  <screen name="NFRCamManager" position="0,0" size="1280,720" title="NFR SoftCam Manager" flags="wfNoBorder" backgroundColor="transparent">
     <widget source="list" render="Listbox" position="70,80" size="705,270" transparent="1" foregroundColor="SevenFont1" backgroundColor="SevenFontBackground" scrollbarMode="showNever">
       <convert type="TemplatedMultiContent">
 				{"template": [
@@ -290,7 +289,7 @@
     <panel name="template_colorkey_text" />
   </screen>
   <!-- NFR4XChooseOnLineImage-->
-<screen name="NFR4XChooseOnLineImage" title="NFR4XBoot - Download OnLine Images" position="0,0" size="1280,720" backgroundColor="transparent" flags="wfNoBorder">
+  <screen name="NFR4XChooseOnLineImage" title="NFR4XBoot - Download OnLine Images" position="0,0" size="1280,720" backgroundColor="transparent" flags="wfNoBorder">
     <widget source="list" render="Listbox" position="70,80" size="1108,520" scrollbarMode="showNever" backgroundColor="SevenFontBackground" transparent="1">
       <convert type="TemplatedMultiContent">
 {"template": [
@@ -313,7 +312,7 @@
     <panel name="template_colorkey_text" />
   </screen>
   <!-- NFR4XBootImageChoose-->
-<screen name="NFR4XBootImageChoose" title="NFR4XBoot - Image Choose" position="0,0" size="1280,720" backgroundColor="transparent" flags="wfNoBorder">
+  <screen name="NFR4XBootImageChoose" title="NFR4XBoot - Image Choose" position="0,0" size="1280,720" backgroundColor="transparent" flags="wfNoBorder">
     <widget name="label2" position="163,98" size="300,30" zPosition="1" font="Regular;20" backgroundColor="SevenFontBackground" transparent="1" foregroundColor="yellow" />
     <widget name="label3" position="163,150" size="300,30" zPosition="1" font="Regular;20" backgroundColor="SevenFontBackground" transparent="1" foregroundColor="yellow" />
     <widget name="label4" position="163,188" size="357,30" zPosition="1" font="Regular;20" backgroundColor="SevenFontBackground" transparent="1" foregroundColor="yellow" />
@@ -340,78 +339,74 @@
     <panel name="template_colorkey_text" />
   </screen>
   <!-- SpinnerSelection-->
-<screen backgroundColor="transparent" flags="wfNoBorder" name="SpinnerSelectionBox" position="0,0" size="1280,720" title="SpinnerSelection">
-  <widget position="70,80" name="list" itemHeight="30" font="Regular;20" foregroundColor="SevenFont1" backgroundColor="SevenFontBackground" size="708,504" transparent="1" />
-  <widget name="bild" position="1005,264" size="150,150" backgroundColor="SevenFontBackground" transparent="1" />
-  <widget name="text" position="895,193" size="365,60" font="Regular2;20" backgroundColor="SevenFontBackgroundRight" foregroundColor="SevenFont2" halign="center" transparent="1" />
-<panel name="template_menu_left_right" />
-</screen>
+  <screen backgroundColor="transparent" flags="wfNoBorder" name="SpinnerSelectionBox" position="0,0" size="1280,720" title="SpinnerSelection">
+    <widget position="70,80" name="list" itemHeight="30" font="Regular;20" foregroundColor="SevenFont1" backgroundColor="SevenFontBackground" size="708,504" transparent="1" />
+    <widget name="bild" position="1005,264" size="150,150" backgroundColor="SevenFontBackground" transparent="1" />
+    <widget name="text" position="895,193" size="365,60" font="Regular2;20" backgroundColor="SevenFontBackgroundRight" foregroundColor="SevenFont2" halign="center" transparent="1" />
+    <panel name="template_menu_left_right" />
+  </screen>
   <!-- RadiologoSelection-->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="RadiologoSetupScreen" position="0,0" size="1280,720" title="Info Panel">
-  <widget position="70,80" name="Mlist" font="Regular;20" foregroundColor="SevenFont1" backgroundColor="SevenFontBackground" size="708,504" transparent="1" />
-  <widget name="label1" position="70,599" size="708,40" font="Regular2;20" backgroundColor="SevenFontBackground" foregroundColor="SevenFont2" transparent="1" />
-<panel name="template_menu_left" />
-</screen>
+    <widget position="70,80" name="Mlist" font="Regular;20" foregroundColor="SevenFont1" backgroundColor="SevenFontBackground" size="708,504" transparent="1" />
+    <widget name="label1" position="70,599" size="708,40" font="Regular2;20" backgroundColor="SevenFontBackground" foregroundColor="SevenFont2" transparent="1" />
+    <panel name="template_menu_left" />
+  </screen>
   <!-- BootlogoSelection-->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="BootlogoSetupScreen" position="0,0" size="1280,720" title="Info Panel">
-  <widget position="70,80" name="Mlist" font="Regular;20" foregroundColor="SevenFont1" backgroundColor="SevenFontBackground" size="708,504" transparent="1" />
-  <widget name="label1" position="70,599" size="708,40" font="Regular2;20" backgroundColor="SevenFontBackground" foregroundColor="SevenFont2" transparent="1" />
-<panel name="template_menu_left" />
-</screen>
-<!-- Sortable Menu-->
-<screen name="SortableMenu" backgroundColor="transparent" flags="wfNoBorder" position="0,0" size="1280,720" title="Sortable Menu">
-<widget backgroundColor="SevenFontBackground" foregroundColor="SevenFont1" name="menu" position="70,80" size="708,504" font="Regular; 20" halign="left" valign="top" transparent="1" />
-<panel name="template_menu_left" />
-</screen>
-<!-- Disk Speed-->
-<screen name="Disk_Speed" position="0,0" size="1280,720" backgroundColor="transparent" title="Disk Speed Test">
-  <widget name="label1" position="25,80" size="800,30" zPosition="1" halign="center" font="Regular;25" backgroundColor="SevenFontBackground" foregroundColor="SevenFont1" transparent="1" />
-  <widget name="label2" position="25,130" size="800,290" zPosition="1" halign="center" font="Regular;20" backgroundColor="SevenFontBackground" foregroundColor="SevenFont1" transparent="1" />
-  <widget name="config" position="25,440" size="800,200" scrollbarMode="showNever" backgroundColor="SevenFontBackground" foregroundColor="SevenFont1" enableWrapAround="1" transparent="1" />
-  <panel name="template_menu_left_button" />
-  <panel name="template_colorkey_text" />
-</screen>
-<!-- Disk Test-->
-<screen name="Disk_Test" position="0,0" size="1280,720" backgroundColor="transparent" title="Disk Speed Test">
-  <widget name="label1" position="25,80" size="800,40" zPosition="1" halign="center" font="Regular;25" backgroundColor="SevenFontBackground" foregroundColor="SevenFont1" transparent="1" />
-  <widget name="label2" position="25,131" size="800,120" zPosition="1" halign="center" font="Regular;20" backgroundColor="SevenFontBackground" foregroundColor="SevenFont1" transparent="1" />
-  <eLabel name="spaceused" text=" 1 SD" position="25,335" size="40,20" font="Regular; 14" halign="left" backgroundColor="SevenFontBackground" foregroundColor="SevenFont2" transparent="1" zPosition="5" />
-  <eLabel name="spaceused1" text=" 1 HD" position="71,335" size="40,20" font="Regular; 14" halign="left" backgroundColor="SevenFontBackground" foregroundColor="SevenFont2" transparent="1" zPosition="5" />
-  <eLabel name="spaceused2" text=" 2 HD" position="117,335" size="40,20" font="Regular; 14" halign="left" backgroundColor="SevenFontBackground" foregroundColor="SevenFont2" transparent="1" zPosition="5" />
-  <eLabel name="spaceused3" text=" More then 2 HD" position="396,335" size="120,20" font="Regular; 14" halign="left" backgroundColor="SevenFontBackground" foregroundColor="SevenFont2" transparent="1" zPosition="5" />
-  <widget name="spaceused" position="25,304" size="800,20" backgroundColor="SevenFontBackground" borderWidth="2" borderColor="SevenBorder" foregroundColor="SevenFont2" zPosition="3" transparent="1" />
-  <panel name="template_menu_left_button" />
-  <panel name="template_colorkey_text" />
-</screen>
-
-  
-<screen name="HarddiskWait" backgroundColor="transparent" flags="wfNoBorder" position="0,0" size="1280,720" title="Harddisk Wait">
-<widget backgroundColor="SevenFontBackground" foregroundColor="SevenFont1" name="wait" position="70,80" size="708,504" font="Regular; 20" halign="left" valign="top" transparent="1" />
-<panel name="template_menu_left" />
-</screen>
-
-<screen name="HarddiskSetup" backgroundColor="transparent" flags="wfNoBorder" position="0,0" size="1280,720" title="Harddisk">
-  <widget font="Regular;20" name="model" position="70,150" backgroundColor="SevenFontBackground" foregroundColor="SevenFont1" size="700,35" transparent="1" />
-  <widget font="Regular;20" name="capacity" position="70,215" backgroundColor="SevenFontBackground" foregroundColor="SevenFont1" size="700,35" transparent="1" />
-  <widget font="Regular;20" name="bus" position="70,280" backgroundColor="SevenFontBackground" foregroundColor="SevenFont1" size="700,35" transparent="1" />
-<widget font="Regular; 18" halign="left" valign="center" name="initializetext" position="64,662" size="148,48" backgroundColor="black" foregroundColor="SevenButtonText" transparent="1" zPosition="1" />
-<panel name="template_menu_left_button" />
-</screen>
-
-<screen name="HarddiskSelection" backgroundColor="transparent" flags="wfNoBorder" position="0,0" size="1280,720" title="Select HDD">
-<widget backgroundColor="SevenFontBackground" foregroundColor="SevenFont1" name="hddlist" position="70,80" size="708,504" font="Regular; 20" halign="left" valign="top" transparent="1" />
-<panel name="template_menu_left" />
-</screen>
+    <widget position="70,80" name="Mlist" font="Regular;20" foregroundColor="SevenFont1" backgroundColor="SevenFontBackground" size="708,504" transparent="1" />
+    <widget name="label1" position="70,599" size="708,40" font="Regular2;20" backgroundColor="SevenFontBackground" foregroundColor="SevenFont2" transparent="1" />
+    <panel name="template_menu_left" />
+  </screen>
+  <!-- Sortable Menu-->
+  <screen name="SortableMenu" backgroundColor="transparent" flags="wfNoBorder" position="0,0" size="1280,720" title="Sortable Menu">
+    <widget backgroundColor="SevenFontBackground" foregroundColor="SevenFont1" name="menu" position="70,80" size="708,504" font="Regular; 20" halign="left" valign="top" transparent="1" />
+    <panel name="template_menu_left" />
+  </screen>
+  <!-- Disk Speed-->
+  <screen name="Disk_Speed" position="0,0" size="1280,720" backgroundColor="transparent" title="Disk Speed Test">
+    <widget name="label1" position="25,80" size="800,30" zPosition="1" halign="center" font="Regular;25" backgroundColor="SevenFontBackground" foregroundColor="SevenFont1" transparent="1" />
+    <widget name="label2" position="25,130" size="800,290" zPosition="1" halign="center" font="Regular;20" backgroundColor="SevenFontBackground" foregroundColor="SevenFont1" transparent="1" />
+    <widget name="config" position="25,440" size="800,200" scrollbarMode="showNever" backgroundColor="SevenFontBackground" foregroundColor="SevenFont1" enableWrapAround="1" transparent="1" />
+    <panel name="template_menu_left_button" />
+    <panel name="template_colorkey_text" />
+  </screen>
+  <!-- Disk Test-->
+  <screen name="Disk_Test" position="0,0" size="1280,720" backgroundColor="transparent" title="Disk Speed Test">
+    <widget name="label1" position="25,80" size="800,40" zPosition="1" halign="center" font="Regular;25" backgroundColor="SevenFontBackground" foregroundColor="SevenFont1" transparent="1" />
+    <widget name="label2" position="25,131" size="800,120" zPosition="1" halign="center" font="Regular;20" backgroundColor="SevenFontBackground" foregroundColor="SevenFont1" transparent="1" />
+    <eLabel name="spaceused" text=" 1 SD" position="25,335" size="40,20" font="Regular; 14" halign="left" backgroundColor="SevenFontBackground" foregroundColor="SevenFont2" transparent="1" zPosition="5" />
+    <eLabel name="spaceused1" text=" 1 HD" position="71,335" size="40,20" font="Regular; 14" halign="left" backgroundColor="SevenFontBackground" foregroundColor="SevenFont2" transparent="1" zPosition="5" />
+    <eLabel name="spaceused2" text=" 2 HD" position="117,335" size="40,20" font="Regular; 14" halign="left" backgroundColor="SevenFontBackground" foregroundColor="SevenFont2" transparent="1" zPosition="5" />
+    <eLabel name="spaceused3" text=" More then 2 HD" position="396,335" size="120,20" font="Regular; 14" halign="left" backgroundColor="SevenFontBackground" foregroundColor="SevenFont2" transparent="1" zPosition="5" />
+    <widget name="spaceused" position="25,304" size="800,20" backgroundColor="SevenFontBackground" borderWidth="2" borderColor="SevenBorder" foregroundColor="SevenFont2" zPosition="3" transparent="1" />
+    <panel name="template_menu_left_button" />
+    <panel name="template_colorkey_text" />
+  </screen>
+  <screen name="HarddiskWait" backgroundColor="transparent" flags="wfNoBorder" position="0,0" size="1280,720" title="Harddisk Wait">
+    <widget backgroundColor="SevenFontBackground" foregroundColor="SevenFont1" name="wait" position="70,80" size="708,504" font="Regular; 20" halign="left" valign="top" transparent="1" />
+    <panel name="template_menu_left" />
+  </screen>
+  <screen name="HarddiskSetup" backgroundColor="transparent" flags="wfNoBorder" position="0,0" size="1280,720" title="Harddisk">
+    <widget font="Regular;20" name="model" position="70,150" backgroundColor="SevenFontBackground" foregroundColor="SevenFont1" size="700,35" transparent="1" />
+    <widget font="Regular;20" name="capacity" position="70,215" backgroundColor="SevenFontBackground" foregroundColor="SevenFont1" size="700,35" transparent="1" />
+    <widget font="Regular;20" name="bus" position="70,280" backgroundColor="SevenFontBackground" foregroundColor="SevenFont1" size="700,35" transparent="1" />
+    <widget font="Regular; 18" halign="left" valign="center" name="initializetext" position="64,662" size="148,48" backgroundColor="black" foregroundColor="SevenButtonText" transparent="1" zPosition="1" />
+    <panel name="template_menu_left_button" />
+  </screen>
+  <screen name="HarddiskSelection" backgroundColor="transparent" flags="wfNoBorder" position="0,0" size="1280,720" title="Select HDD">
+    <widget backgroundColor="SevenFontBackground" foregroundColor="SevenFont1" name="hddlist" position="70,80" size="708,504" font="Regular; 20" halign="left" valign="top" transparent="1" />
+    <panel name="template_menu_left" />
+  </screen>
   <!-- AdapterSetup -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="AdapterSetup" position="0,0" size="1280,720" title="Network Setup">
     <widget backgroundColor="SevenFontBackground" font="Regular2;24" foregroundColor="SevenFont2" position="70,80" render="Label" size="495,30" source="Adapter" transparent="1" />
     <widget backgroundColor="SevenFontBackground" enableWrapAround="1" itemHeight="30" name="config" position="70,130" size="708,249" transparent="1" />
     <widget backgroundColor="SevenFontBackground" font="Regular2;24" foregroundColor="SevenFont2" halign="center" position="70,600" render="Label" size="708,30" source="introduction2" transparent="1" />
     <eLabel backgroundColor="SevenLine" position="192,388" size="445,2" zPosition="2" />
-        <eLabel backgroundColor="SevenLine" position="192,553" size="445,2" zPosition="2" />
-<eLabel backgroundColor="SevenLine" position="636,388" size="2,167" zPosition="2" />
-<eLabel backgroundColor="SevenLine" position="192,388" size="2,165" zPosition="2" />
-	<widget source="IPtext" render="Label" position="200,400" size="210,24" font="Regular;20" halign="right" foregroundColor="SevenFont1" backgroundColor="SevenFontBackground" transparent="1" />
+    <eLabel backgroundColor="SevenLine" position="192,553" size="445,2" zPosition="2" />
+    <eLabel backgroundColor="SevenLine" position="636,388" size="2,167" zPosition="2" />
+    <eLabel backgroundColor="SevenLine" position="192,388" size="2,165" zPosition="2" />
+    <widget source="IPtext" render="Label" position="200,400" size="210,24" font="Regular;20" halign="right" foregroundColor="SevenFont1" backgroundColor="SevenFontBackground" transparent="1" />
     <widget source="Netmasktext" render="Label" position="200,430" size="210,24" font="Regular;20" halign="right" foregroundColor="SevenFont1" backgroundColor="SevenFontBackground" transparent="1" />
     <widget source="Gatewaytext" render="Label" position="200,460" size="210,24" font="Regular;20" halign="right" foregroundColor="SevenFont1" backgroundColor="SevenFontBackground" transparent="1" />
     <widget source="DNS1text" render="Label" position="200,490" size="210,24" font="Regular;20" halign="right" foregroundColor="SevenFont1" backgroundColor="SevenFontBackground" transparent="1" />
@@ -426,57 +421,57 @@
   </screen>
   <!-- Auto Pin -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="AutoPin" position="0,0" size="1280,720" title="Auto Pin">
-  <widget name="config" position="70,80" size="708,540" backgroundColor="SevenFontBackground" itemHeight="50" transparent="1" />
-  <panel name="template_menu_left_button" />
-  <panel name="template_colorkey_text_button" />
-</screen>
-<!-- NFRPasswordScreen -->
-<screen backgroundColor="transparent" flags="wfNoBorder" name="NFRPasswdScreen" position="0,0" size="1280,720" title="Change root password">
-  <widget name="passwd" position="70,80" size="708,540" backgroundColor="SevenFontBackground" itemHeight="50" transparent="1" />
-  <panel name="template_menu_left_button" />
-  <panel name="template_colorkey_text_source" />
-</screen>
-<!-- UserMainMenuConfig -->
-              <screen backgroundColor="transparent" flags="wfNoBorder" name="UserMainMenuConfig" position="0,0" size="1280,720" title="openNFR UserMainMenu">
-  <widget source="menu" render="Listbox" position="70,80" size="708,575" enableWrapAround="1" backgroundColor="SevenFontBackground" scrollbarMode="showNever" transparent="1">
-  <convert type="TemplatedMultiContent" transparent="0">{"template": [
+    <widget name="config" position="70,80" size="708,540" backgroundColor="SevenFontBackground" itemHeight="50" transparent="1" />
+    <panel name="template_menu_left_button" />
+    <panel name="template_colorkey_text_button" />
+  </screen>
+  <!-- NFRPasswordScreen -->
+  <screen backgroundColor="transparent" flags="wfNoBorder" name="NFRPasswdScreen" position="0,0" size="1280,720" title="Change root password">
+    <widget name="passwd" position="70,80" size="708,540" backgroundColor="SevenFontBackground" itemHeight="50" transparent="1" />
+    <panel name="template_menu_left_button" />
+    <panel name="template_colorkey_text_source" />
+  </screen>
+  <!-- UserMainMenuConfig -->
+  <screen backgroundColor="transparent" flags="wfNoBorder" name="UserMainMenuConfig" position="0,0" size="1280,720" title="openNFR UserMainMenu">
+    <widget source="menu" render="Listbox" position="70,80" size="708,575" enableWrapAround="1" backgroundColor="SevenFontBackground" scrollbarMode="showNever" transparent="1">
+      <convert type="TemplatedMultiContent" transparent="0">{"template": [
 		  MultiContentEntryPixmapAlphaTest(pos = (4, 2), size = (48, 48), png = 2),
 		  MultiContentEntryText(pos = (60, 12), size = (500, 26), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 0),
 		  ],
 		  "fonts": [gFont("Regular", 22),gFont("Regular", 16)],
 		  "itemHeight": 52
 	  }</convert>
-</widget>
-  <panel name="template_menu_left_button" />
-  <panel name="template_colorkey_text_source" />
-</screen>
-<!-- Move Plugins -->
-<screen backgroundColor="transparent" flags="wfNoBorder" name="MovePlugins_ext" position="0,0" size="1280,720" title="Move Plugins to HDD/USB">
-  <widget name="config" position="70,155" size="708,455" font="Regular;25" enableWrapAround="1" backgroundColor="SevenFontBackground" scrollbarMode="showNever" transparent="1" />
-  <eLabel text="Move Plugins to HDD/USB" position="70,80" size="708,40" zPosition="1" font="Regular;26" backgroundColor="SevenFontBackground" transparent="1" />
-  <widget name="introduction" position="123,408" size="600,200" font="Regular;26" transparent="1" backgroundColor="SevenFontBackground" alphatest="blend" zPosition="2" />
-  <eLabel name="spaceused" text="% Flash Used..." position="160,625" size="150,20" font="Regular;19" halign="left" backgroundColor="SevenFontBackground" transparent="1" zPosition="5" />
-  <widget name="spaceused" position="320,625" size="370,20" backgroundColor="SevenFontBackground" borderWidth="2" borderColor="SevenBorder" foregroundColor="SevenFont2" zPosition="3" />
-  <panel name="template_menu_left_button" />
-  <panel name="template_colorkey_text_source" />
-</screen>
-<screen backgroundColor="transparent" flags="wfNoBorder" name="MovePlugins_int" position="0,0" size="1280,720" title="Move Plugins back to Flash">
-  <widget name="config" position="70,155" size="708,455" font="Regular;25" enableWrapAround="1" backgroundColor="SevenFontBackground" scrollbarMode="showNever" transparent="1" />
-  <eLabel text="Move Plugins back to Flash" position="70,80" size="708,40" zPosition="1" font="Regular;26" backgroundColor="SevenFontBackground" transparent="1" />
-  <widget name="introduction" position="123,408" size="600,200" font="Regular;26" transparent="1" backgroundColor="SevenFontBackground" alphatest="blend" zPosition="2" />
-  <eLabel name="spaceused" text="% Flash Used..." position="160,625" size="150,20" font="Regular;19" halign="left" backgroundColor="SevenFontBackground" transparent="1" zPosition="5" />
-  <widget name="spaceused" position="320,625" size="370,20" backgroundColor="SevenFontBackground" borderWidth="2" borderColor="SevenBorder" foregroundColor="SevenFont2" zPosition="3" />
-  <panel name="template_menu_left_button" />
-  <panel name="template_colorkey_text_source" />
-</screen>
-<!-- Telnet Command -->
-<screen backgroundColor="transparent" flags="wfNoBorder" name="TelnetCommand" position="0,0" size="1280,720" title="TelnetCommand">
-  <widget name="config" position="70,80" size="708,565" enableWrapAround="1" backgroundColor="SevenFontBackground" scrollbarMode="showNever" transparent="1" />
-  <panel name="template_menu_left_button" />
-  <panel name="template_colorkey_text" />
-</screen>
-<!-- Net Test -->
-<screen backgroundColor="transparent" flags="wfNoBorder" name="Net_test" position="0,0" size="1280,720" title="Iperf-Net_test">
+    </widget>
+    <panel name="template_menu_left_button" />
+    <panel name="template_colorkey_text_source" />
+  </screen>
+  <!-- Move Plugins -->
+  <screen backgroundColor="transparent" flags="wfNoBorder" name="MovePlugins_ext" position="0,0" size="1280,720" title="Move Plugins to HDD/USB">
+    <widget name="config" position="70,155" size="708,455" font="Regular;25" enableWrapAround="1" backgroundColor="SevenFontBackground" scrollbarMode="showNever" transparent="1" />
+    <eLabel text="Move Plugins to HDD/USB" position="70,80" size="708,40" zPosition="1" font="Regular;26" backgroundColor="SevenFontBackground" transparent="1" />
+    <widget name="introduction" position="123,408" size="600,200" font="Regular;26" transparent="1" backgroundColor="SevenFontBackground" alphatest="blend" zPosition="2" />
+    <eLabel name="spaceused" text="% Flash Used..." position="160,625" size="150,20" font="Regular;19" halign="left" backgroundColor="SevenFontBackground" transparent="1" zPosition="5" />
+    <widget name="spaceused" position="320,625" size="370,20" backgroundColor="SevenFontBackground" borderWidth="2" borderColor="SevenBorder" foregroundColor="SevenFont2" zPosition="3" />
+    <panel name="template_menu_left_button" />
+    <panel name="template_colorkey_text_source" />
+  </screen>
+  <screen backgroundColor="transparent" flags="wfNoBorder" name="MovePlugins_int" position="0,0" size="1280,720" title="Move Plugins back to Flash">
+    <widget name="config" position="70,155" size="708,455" font="Regular;25" enableWrapAround="1" backgroundColor="SevenFontBackground" scrollbarMode="showNever" transparent="1" />
+    <eLabel text="Move Plugins back to Flash" position="70,80" size="708,40" zPosition="1" font="Regular;26" backgroundColor="SevenFontBackground" transparent="1" />
+    <widget name="introduction" position="123,408" size="600,200" font="Regular;26" transparent="1" backgroundColor="SevenFontBackground" alphatest="blend" zPosition="2" />
+    <eLabel name="spaceused" text="% Flash Used..." position="160,625" size="150,20" font="Regular;19" halign="left" backgroundColor="SevenFontBackground" transparent="1" zPosition="5" />
+    <widget name="spaceused" position="320,625" size="370,20" backgroundColor="SevenFontBackground" borderWidth="2" borderColor="SevenBorder" foregroundColor="SevenFont2" zPosition="3" />
+    <panel name="template_menu_left_button" />
+    <panel name="template_colorkey_text_source" />
+  </screen>
+  <!-- Telnet Command -->
+  <screen backgroundColor="transparent" flags="wfNoBorder" name="TelnetCommand" position="0,0" size="1280,720" title="TelnetCommand">
+    <widget name="config" position="70,80" size="708,565" enableWrapAround="1" backgroundColor="SevenFontBackground" scrollbarMode="showNever" transparent="1" />
+    <panel name="template_menu_left_button" />
+    <panel name="template_colorkey_text" />
+  </screen>
+  <!-- Net Test -->
+  <screen backgroundColor="transparent" flags="wfNoBorder" name="Net_test" position="0,0" size="1280,720" title="Iperf-Net_test">
     <widget source="Title" render="Label" backgroundColor="SevenFontBackground" font="RegularLight;30" position="70,82" size="800,43" transparent="1" />
     <widget backgroundColor="SevenFontBackground" scrollbarMode="showNever" itemHeight="25" name="filedata" position="70,144" size="1165,462" transparent="1" />
     <panel name="template_menu_full_button" />
@@ -485,9 +480,9 @@
     <widget font="Regular; 18" halign="left" source="key_info" render="Label" position="1112,672" size="150,24" backgroundColor="SevenFontBackground" transparent="1" zPosition="1" />
   </screen>
   <!-- Package  Manager -->
-<screen name="InfopanelManagerScreen" title="Package Manager For NFR" position="0,0" size="1280,720" backgroundColor="transparent" flags="wfNoBorder">
-  <widget source="menu" render="Listbox" backgroundColor="SevenFontBackground" scrollbarMode="showNever" position="70,80" size="708,555" transparent="1">
-		<convert type="TemplatedMultiContent">{"template": [
+  <screen name="InfopanelManagerScreen" title="Package Manager For NFR" position="0,0" size="1280,720" backgroundColor="transparent" flags="wfNoBorder">
+    <widget source="menu" render="Listbox" backgroundColor="SevenFontBackground" scrollbarMode="showNever" position="70,80" size="708,555" transparent="1">
+      <convert type="TemplatedMultiContent">{"template": [
 				MultiContentEntryText(pos = (120, 2), size = (580, 28), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 2 is the Menu Titel
 				MultiContentEntryText(pos = (120, 32), size = (580, 18), font=1, flags = RT_HALIGN_LEFT, text = 2), # index 3 is the Description
 				MultiContentEntryPixmapAlphaTest(pos = (5, 5), size = (100, 100), png = 3), # index 4 is the pixmap
@@ -495,13 +490,13 @@
 				"fonts": [gFont("Regular", 23),gFont("Regular", 16)],
 				"itemHeight": 110
 				}</convert>
-</widget>
-  <panel name="template_menu_left_button" />
-  <panel name="template_colorkey_text_source" />
-</screen> 
-<screen name="InstallTarGZ" title="Package Manager For NFR" position="0,0" size="1280,720" backgroundColor="transparent" flags="wfNoBorder">
-  <widget source="menu" render="Listbox" backgroundColor="SevenFontBackground" scrollbarMode="showNever" position="70,80" size="708,485" transparent="1">
-		<convert type="TemplatedMultiContent">{"template": [
+    </widget>
+    <panel name="template_menu_left_button" />
+    <panel name="template_colorkey_text_source" />
+  </screen>
+  <screen name="InstallTarGZ" title="Package Manager For NFR" position="0,0" size="1280,720" backgroundColor="transparent" flags="wfNoBorder">
+    <widget source="menu" render="Listbox" backgroundColor="SevenFontBackground" scrollbarMode="showNever" position="70,80" size="708,485" transparent="1">
+      <convert type="TemplatedMultiContent">{"template": [
 				MultiContentEntryText(pos = (70, 2), size = (630, 25), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 2 is the Menu Titel
 				MultiContentEntryText(pos = (80, 29), size = (630, 18), font=1, flags = RT_HALIGN_LEFT, text = 1), # index 3 is the Description
 				MultiContentEntryPixmapAlphaTest(pos = (5, 5), size = (50, 50), png = 2), # index 4 is the pixmap
@@ -509,13 +504,13 @@
 				"fonts": [gFont("Regular", 23),gFont("Regular", 16)],
 				"itemHeight": 60
 		}</convert>
-</widget>
-  <panel name="template_menu_left_button" />
-  <panel name="template_colorkey_text_source" />
-</screen>
-<screen name="InstallIpk" title="Package Manager For NFR" position="0,0" size="1280,720" backgroundColor="transparent" flags="wfNoBorder">
-  <widget source="menu" render="Listbox" backgroundColor="SevenFontBackground" scrollbarMode="showNever" position="70,80" size="708,485" transparent="1">
-		<convert type="TemplatedMultiContent">{"template": [
+    </widget>
+    <panel name="template_menu_left_button" />
+    <panel name="template_colorkey_text_source" />
+  </screen>
+  <screen name="InstallIpk" title="Package Manager For NFR" position="0,0" size="1280,720" backgroundColor="transparent" flags="wfNoBorder">
+    <widget source="menu" render="Listbox" backgroundColor="SevenFontBackground" scrollbarMode="showNever" position="70,80" size="708,485" transparent="1">
+      <convert type="TemplatedMultiContent">{"template": [
 				MultiContentEntryText(pos = (70, 2), size = (630, 25), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 2 is the Menu Titel
 				MultiContentEntryText(pos = (80, 29), size = (630, 18), font=1, flags = RT_HALIGN_LEFT, text = 1), # index 3 is the Description
 				MultiContentEntryPixmapAlphaTest(pos = (5, 5), size = (50, 50), png = 2), # index 4 is the pixmap
@@ -523,13 +518,13 @@
 				"fonts": [gFont("Regular", 23),gFont("Regular", 16)],
 				"itemHeight": 60
 		}</convert>
-</widget>
-  <panel name="template_menu_left_button" />
-  <panel name="template_colorkey_text_source" />
-</screen>
-<screen name="InstallZip" title="Package Manager For NFR" position="0,0" size="1280,720" backgroundColor="transparent" flags="wfNoBorder">
-  <widget source="menu" render="Listbox" backgroundColor="SevenFontBackground" scrollbarMode="showNever" position="70,80" size="708,485" transparent="1">
-		<convert type="TemplatedMultiContent">{"template": [
+    </widget>
+    <panel name="template_menu_left_button" />
+    <panel name="template_colorkey_text_source" />
+  </screen>
+  <screen name="InstallZip" title="Package Manager For NFR" position="0,0" size="1280,720" backgroundColor="transparent" flags="wfNoBorder">
+    <widget source="menu" render="Listbox" backgroundColor="SevenFontBackground" scrollbarMode="showNever" position="70,80" size="708,485" transparent="1">
+      <convert type="TemplatedMultiContent">{"template": [
 				MultiContentEntryText(pos = (70, 2), size = (630, 25), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 2 is the Menu Titel
 				MultiContentEntryText(pos = (80, 29), size = (630, 18), font=1, flags = RT_HALIGN_LEFT, text = 1), # index 3 is the Description
 				MultiContentEntryPixmapAlphaTest(pos = (5, 5), size = (50, 50), png = 2), # index 4 is the pixmap
@@ -537,13 +532,13 @@
 				"fonts": [gFont("Regular", 23),gFont("Regular", 16)],
 				"itemHeight": 60
 		}</convert>
-</widget>
-  <panel name="template_menu_left_button" />
-  <panel name="template_colorkey_text_source" />
-</screen>
-<screen name="AdvInstallIpk" title="Package Manager For NFR" position="0,0" size="1280,720" backgroundColor="transparent" flags="wfNoBorder">
-  <widget source="menu" render="Listbox" backgroundColor="SevenFontBackground" scrollbarMode="showNever" position="70,80" size="708,485" transparent="1">
-		<convert type="TemplatedMultiContent">{"template": [
+    </widget>
+    <panel name="template_menu_left_button" />
+    <panel name="template_colorkey_text_source" />
+  </screen>
+  <screen name="AdvInstallIpk" title="Package Manager For NFR" position="0,0" size="1280,720" backgroundColor="transparent" flags="wfNoBorder">
+    <widget source="menu" render="Listbox" backgroundColor="SevenFontBackground" scrollbarMode="showNever" position="70,80" size="708,485" transparent="1">
+      <convert type="TemplatedMultiContent">{"template": [
 				MultiContentEntryText(pos = (70, 2), size = (630, 25), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 2 is the Menu Titel
 				MultiContentEntryText(pos = (80, 29), size = (630, 18), font=1, flags = RT_HALIGN_LEFT, text = 1), # index 3 is the Description
 				MultiContentEntryPixmapAlphaTest(pos = (5, 5), size = (50, 50), png = 2), # index 4 is the pixmap
@@ -551,13 +546,13 @@
 				"fonts": [gFont("Regular", 23),gFont("Regular", 16)],
 				"itemHeight": 60
 		}</convert>
-</widget>
-  <panel name="template_menu_left_button" />
-  <panel name="template_colorkey_text_source" />
-</screen>
-<screen name="InstallRar" title="Package Manager For NFR" position="0,0" size="1280,720" backgroundColor="transparent" flags="wfNoBorder">
-  <widget source="menu" render="Listbox" backgroundColor="SevenFontBackground" scrollbarMode="showNever" position="70,80" size="708,485" transparent="1">
-		<convert type="TemplatedMultiContent">{"template": [
+    </widget>
+    <panel name="template_menu_left_button" />
+    <panel name="template_colorkey_text_source" />
+  </screen>
+  <screen name="InstallRar" title="Package Manager For NFR" position="0,0" size="1280,720" backgroundColor="transparent" flags="wfNoBorder">
+    <widget source="menu" render="Listbox" backgroundColor="SevenFontBackground" scrollbarMode="showNever" position="70,80" size="708,485" transparent="1">
+      <convert type="TemplatedMultiContent">{"template": [
 				MultiContentEntryText(pos = (70, 2), size = (630, 25), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 2 is the Menu Titel
 				MultiContentEntryText(pos = (80, 29), size = (630, 18), font=1, flags = RT_HALIGN_LEFT, text = 1), # index 3 is the Description
 				MultiContentEntryPixmapAlphaTest(pos = (5, 5), size = (50, 50), png = 2), # index 4 is the pixmap
@@ -565,9 +560,43 @@
 				"fonts": [gFont("Regular", 23),gFont("Regular", 16)],
 				"itemHeight": 60
 		}</convert>
-</widget>
-  <panel name="template_menu_left_button" />
+    </widget>
+    <panel name="template_menu_left_button" />
+    <panel name="template_colorkey_text_source" />
+  </screen>
+  <!-- PluginBrowser -->
+  <screen backgroundColor="transparent" flags="wfNoBorder" name="PluginBrowser" position="0,0" size="1280,720" title="Plugin browser">
+    <widget backgroundColor="SevenFontBackground" enableWrapAround="1" name="list" font="Regular;18" position="70,80" size="708,550" transparent="1" />
+    <ePixmap pixmap="SevenHD/buttons/key_red1.png" position="20,670" size="32,37" backgroundColor="SevenFontBackground" alphatest="blend" />
+    <ePixmap pixmap="SevenHD/buttons/key_green1.png" position="212,670" size="32,37" backgroundColor="SevenFontBackground" alphatest="blend" />
+    <ePixmap pixmap="SevenHD/buttons/key_yellow1.png" position="374,670" size="32,37" backgroundColor="SevenFontBackground" alphatest="blend" />
+    <ePixmap pixmap="SevenHD/buttons/key_blue1.png" position="588,669" size="32,37" backgroundColor="SevenFontBackground" alphatest="blend" />
+    <widget source="key_yellow" render="Label" backgroundColor="SevenFontBackground" font="Regular;18" foregroundColor="SevenButtonText" halign="left" valign="center" position="412,662" size="170,48" transparent="1" zPosition="1" />
+    <widget source="key_red" render="Label" backgroundColor="SevenFontBackground" font="Regular;18" foregroundColor="SevenButtonText" halign="left" valign="center" position="58,662" size="148,48" transparent="1" zPosition="1" />
+    <widget source="key_green" render="Label" backgroundColor="SevenFontBackground" font="Regular;18" foregroundColor="SevenButtonText" halign="left" valign="center" position="250,662" size="128,48" transparent="1" zPosition="1" />
+    <widget source="key_blue" render="Label" backgroundColor="SevenFontBackground" font="Regular;18" foregroundColor="SevenButtonText" halign="left" valign="center" position="626,662" size="180,48" transparent="1" zPosition="1" />
+    <panel name="template_menu_left" />
+  </screen>
+  <!-- PluginInstall -->
+  <screen name="PluginInstall" position="0,0" size="1280,720" title="Installiere Plugins" flags="wfNoBorder" backgroundColor="transparent">
+    <widget name="list" position="26,76" size="587,558" itemHeight="50" foregroundColor="SevenFont1" backgroundColor="SevenFontBackground" transparent="1" scrollbarMode="showOnDemand" zPosition="2" enableWrapAround="1" />
+    <widget name="status" position="659,116" size="590,450" scrollbarMode="showNever" font="Regular;16" halign="center" backgroundColor="SevenFontBackground" noWrap="1" transparent="1" />
+    <eLabel name="" position="714,75" size="465,30" font="Regular2; 26" text="Liste der zu Installierenden Plugins" zPosition="3" halign="center" transparent="1" />
+    <widget name="text" position="658,581" size="590,60" zPosition="1" font="Regular;20" halign="center" valign="center" foregroundColor="SevenFont1" backgroundColor="SevenFontBackground" transparent="1" />
+    <eLabel name="spaceused" text="% Flash Used..." position="837,677" size="150,20" font="Regular;19" halign="left" foregroundColor="SevenFont1" backgroundColor="SevenFontBackground" transparent="1" zPosition="5" />
+    <widget name="spaceused" position="987,677" size="275,20" foregroundColor="SevenFont1" flags="wfBorder" BorderColor="SevenFont1" backgroundColor="SevenFontBackground" zPosition="3" />
+    <panel name="template_menu_full_button" />
+    <panel name="template_colorkey_text_source" />
+  </screen>
+  <!-- PluginDeinstall -->
+  <screen name="PluginDeinstall" position="0,0" size="1280,720" title="Deinstalliere Plugins" flags="wfNoBorder" backgroundColor="transparent">
+  <widget name="list" position="26,76" size="587,558" itemHeight="50" foregroundColor="SevenFont1" backgroundColor="SevenFontBackground" transparent="1" scrollbarMode="showOnDemand" zPosition="2" enableWrapAround="1" />
+  <widget name="status" position="659,116" size="590,450" scrollbarMode="showNever" font="Regular;16" halign="center" backgroundColor="SevenFontBackground" noWrap="1" transparent="1" />
+  <eLabel name="" position="714,75" size="500,30" font="Regular2; 26" text="Liste der zu Deinstallierenden Plugins" zPosition="3" halign="center" transparent="1" />
+  <widget name="text" position="658,581" size="590,60" zPosition="1" font="Regular;20" halign="center" valign="center" foregroundColor="SevenFont1" backgroundColor="SevenFontBackground" transparent="1" />
+  <eLabel name="spaceused" text="% Flash Used..." position="837,677" size="150,20" font="Regular;19" halign="left" foregroundColor="SevenFont1" backgroundColor="SevenFontBackground" transparent="1" zPosition="5" />
+  <widget name="spaceused" position="987,677" size="275,20" foregroundColor="SevenFont1" flags="wfBorder" BorderColor="SevenFont1" backgroundColor="SevenFontBackground" zPosition="3" />
+  <panel name="template_menu_full_button" />
   <panel name="template_colorkey_text_source" />
 </screen>
   <!-- main-custom-nfr */ -->
-  

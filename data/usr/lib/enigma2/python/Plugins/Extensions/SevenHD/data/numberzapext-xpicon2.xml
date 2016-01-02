@@ -4,7 +4,7 @@
   <eLabel backgroundColor="SevenBackgroundIB1" position="0,0" size="1280,720" transparent="0" zPosition="-9" />
   <widget name="chPicon" position="739,255" size="220,132" transparent="1" zPosition="1" alphatest="blend" />
   <widget name="chName" position="270,335" size="450,60" halign="center" backgroundColor="SevenFontBackground" foregroundColor="SevenFont2" font="Regular;50" noWrap="1" transparent="1" />
-  <widget name="chNum" position="270,245" size="450,60" halign="center" backgroundColor="SevenFontBackground" foregroundColor="SevenFont1" font="Regular;50" transparent="1" />
+  <widget name="chNum" position="270,245" size="450,60" halign="center" backgroundColor="SevenFontBackground" foregroundColor="SevenFont1" font="Regular;30" transparent="1" />
   <eLabel backgroundColor="SevenLine" foregroundColor="SevenLine" name="new eLabel" position="273,320" size="440,2" />
 </screen>
 <!-- NumberZapExt */-->

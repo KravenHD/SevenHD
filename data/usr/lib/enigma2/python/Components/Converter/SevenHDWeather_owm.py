@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 #
-#  Weather Info
+#  OpenWeatherMap Weather Info
 #
 #  Coded by TBX for Kraven Skins (c) 2015
 #
@@ -21,7 +21,7 @@ from Components.Language import language
 from Components.Element import cached
 from Components.config import config
 from enigma import eTimer
-import requests, json, time, os, gettext
+import requests, time, os, gettext
 
 lang = language.getLanguage()
 os.environ["LANGUAGE"] = lang[:2]
@@ -79,7 +79,7 @@ class SevenHDWeather_owm(Converter, object):
 	
         def get_Data(self):
             res = requests.request('get', URL)
-            self.data = json.loads(res.text)
+            self.data = res.json()
             timeout = int(config.plugins.SevenHD.refreshInterval.value) * 1000.0 * 60.0
             self.timer.start(int(timeout), True)
             

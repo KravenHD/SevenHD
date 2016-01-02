@@ -1,4 +1,4 @@
-#version = '3.6.49'
+#version = '3.6.50'
 import os
 try:
    opkg_info = os.popen("opkg list-installed enigma2-plugin-skins-sevenhd | cut -d ' ' -f3").read()
@@ -536,7 +536,8 @@ config.plugins.SevenHD.weather_lat_lon = ConfigText(default = 'lat=51.3452&lon=1
 config.plugins.SevenHD.AutoWoeIDServer = ConfigSelection(default="_owm", choices = [
 				("_yahoo", _("Yahoo")),
 				("_owm", _("OpenWeatherMap")),
-				("_msn", _("MSN"))
+				("_msn", _("MSN")),
+				("_accu", _("Accuweather"))
                                 ])
 
 config.plugins.SevenHD.WeatherView = ConfigSelection(default="icon", choices = [

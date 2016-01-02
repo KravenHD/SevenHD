@@ -352,6 +352,14 @@ class InfobarExtraSettings(ConfigListScreen, Screen):
         config.plugins.SevenHD.weather_lat_lon.value = 'lat=%s&lon=%s&units=metric&lang=%s' % (str(lat[0]),str(lon[0]),str(config.plugins.SevenHD.weather_language.value))
         config.plugins.SevenHD.weather_lat_lon.save()
         
+        if config.plugins.SevenHD.AutoWoeIDServer.value in '_accu _realtek':
+           config.plugins.SevenHD.weather_lat_lon.value = 'lat=%s&lon=%s&metric=1&language=%s' % (str(lat[0]),str(lon[0]),str(config.plugins.SevenHD.weather_language.value))
+           config.plugins.SevenHD.weather_lat_lon.save()
+           res = requests.request('get', 'http://realtek.accu-weather.com/widget/realtek/weather-data.asp?%s' % config.plugins.SevenHD.weather_lat_lon.value)
+           location = re.search('cityId>(.+?)</cityId', str(res.text)).groups(1)
+           config.plugins.SevenHD.weather_locationcode.value = str(location[0])
+           config.plugins.SevenHD.weather_locationcode.save()
+        
         self.debug('LocationCode :' + str(config.plugins.SevenHD.weather_locationcode.value))
         self.debug('lat/long :' + str(lat[0]) + ' - ' + str(lon[0]) + '\n%s' % config.plugins.SevenHD.weather_lat_lon.value)
         
