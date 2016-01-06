@@ -453,6 +453,7 @@ class SevenHD(Screen):
                       self.skinSearchAndReplace.append(['size="50,50" path="WetterIcons" render="SevenHDWetterPicon" alphatest="blend"', 'size="50,50" render="Label" font="Meteo; 45" halign="center" valign="center" foregroundColor="SevenMeteoFont" backgroundColor="SevenFontBackgroundIB1" noWrap="1"'])
                       self.skinSearchAndReplace.append(['size="70,70" render="SevenHDWetterPicon" alphatest="blend" path="WetterIcons"', 'size="70,70" render="Label" font="Meteo; 70" halign="center" valign="center" foregroundColor="SevenMeteoFont" backgroundColor="SevenFontBackgroundIB1" noWrap="1"'])
                       self.skinSearchAndReplace.append(['convert  type="SevenHDWeather_msn">Day_0,MeteoIcon', 'convert  type="SevenHDWeather_msn">Day_0,MeteoFont'])
+                      self.skinSearchAndReplace.append(['convert  type="SevenHDWeather_msn">Day_1,MeteoIcon', 'convert  type="SevenHDWeather_msn">Day_1,MeteoFont'])
                       self.skinSearchAndReplace.append(['convert  type="SevenHDWeather_msn">Day_2,MeteoIcon', 'convert  type="SevenHDWeather_msn">Day_2,MeteoFont'])
                       self.skinSearchAndReplace.append(['convert  type="SevenHDWeather_msn">Day_3,MeteoIcon', 'convert  type="SevenHDWeather_msn">Day_3,MeteoFont'])
                       self.skinSearchAndReplace.append(['convert  type="SevenHDWeather_msn">Day_4,MeteoIcon', 'convert  type="SevenHDWeather_msn">Day_4,MeteoFont'])    
@@ -466,8 +467,17 @@ class SevenHD(Screen):
                       self.skinSearchAndReplace.append(['convert  type="SevenHDWeather_accu">Day_2,MeteoIcon', 'convert  type="SevenHDWeather_accu">Day_2,MeteoFont'])
                       self.skinSearchAndReplace.append(['convert  type="SevenHDWeather_accu">Day_3,MeteoIcon', 'convert  type="SevenHDWeather_accu">Day_3,MeteoFont'])    
                       self.skinSearchAndReplace.append(['convert  type="SevenHDWeather_accu">Day_4,MeteoIcon', 'convert  type="SevenHDWeather_accu">Day_4,MeteoFont'])
-                      
-                      
+                elif config.plugins.SevenHD.AutoWoeIDServer.value == '_realtek':
+                   if config.plugins.SevenHD.WeatherView.value == "meteo":
+                      self.skinSearchAndReplace.append(['size="50,50" path="WetterIcons" render="SevenHDWetterPicon" alphatest="blend"', 'size="50,50" render="Label" font="Meteo3; 45" halign="center" valign="center" foregroundColor="SevenMeteoFont" backgroundColor="SevenFontBackgroundIB1" noWrap="1"'])
+                      self.skinSearchAndReplace.append(['size="70,70" render="SevenHDWetterPicon" alphatest="blend" path="WetterIcons"', 'size="70,70" render="Label" font="Meteo3; 70" halign="center" valign="center" foregroundColor="SevenMeteoFont" backgroundColor="SevenFontBackgroundIB1" noWrap="1"'])
+                      self.skinSearchAndReplace.append(['convert  type="SevenHDWeather_realtek">Day_0,MeteoIcon', 'convert  type="SevenHDWeather_realtek">Day_0,MeteoFont'])
+                      self.skinSearchAndReplace.append(['convert  type="SevenHDWeather_realtek">Day_1,MeteoIcon', 'convert  type="SevenHDWeather_realtek">Day_1,MeteoFont'])
+                      self.skinSearchAndReplace.append(['convert  type="SevenHDWeather_realtek">Day_2,MeteoIcon', 'convert  type="SevenHDWeather_realtek">Day_2,MeteoFont'])
+                      self.skinSearchAndReplace.append(['convert  type="SevenHDWeather_realtek">Day_3,MeteoIcon', 'convert  type="SevenHDWeather_realtek">Day_3,MeteoFont'])    
+                      self.skinSearchAndReplace.append(['convert  type="SevenHDWeather_realtek">Day_4,MeteoIcon', 'convert  type="SevenHDWeather_realtek">Day_4,MeteoFont'])
+                      self.skinSearchAndReplace.append(['convert  type="SevenHDWeather_realtek">Day_5,MeteoIcon', 'convert  type="SevenHDWeather_realtek">Day_5,MeteoFont'])
+      
                 ### Progress
                 if config.plugins.SevenHD.Progress.value == "progress":
                    self.skinSearchAndReplace.append(["SevenHD/progress/progress52.png","SevenHD/progress/progress52_1.png"])
@@ -809,12 +819,17 @@ class SevenHD(Screen):
                        elif entrie == 'vkeys':
                           os.system("rm -rf /usr/share/enigma2/SevenHD/buttons/vkey*")
                           self.download_tgz('buttons', entrie)
-                       elif entrie == 'WetterIcons':
+                       elif entrie == 'WetterIcons' and config.plugins.SevenHD.WeatherStyle.value != 'none':
                           os.system("rm -rf /usr/share/enigma2/SevenHD/%s/*.*; rm -rf /usr/share/enigma2/SevenHD/%s" % (str(entrie), str(entrie)))
-                          self.download_tgz('weather', config.plugins.SevenHD.WeatherStyle.value)
+                          self.download_tgz('weather', 'weather' + config.plugins.SevenHD.AutoWoeIDServer.value)
                        elif entrie == 'clock' and config.plugins.SevenHD.ClockStyle.value in 'clock-analog clock-android clock-weather':
                           os.system("rm -rf /usr/share/enigma2/SevenHD/%s/*.*; rm -rf /usr/share/enigma2/SevenHD/%s" % (str(entrie), str(entrie)))
-                          self.download_tgz(entrie, config.plugins.SevenHD.ClockStyle.value)
+                          if config.plugins.SevenHD.ClockStyle.value == 'clock-weather':  # !! clock-weather <-> weather_xxx
+                             self.download_tgz('weather', 'weather' + config.plugins.SevenHD.AutoWoeIDServer.value)
+                          elif config.plugins.SevenHD.ClockStyle.value == 'clock-android':   
+                             self.download_tgz(entrie, config.plugins.SevenHD.ClockStyle.value + config.plugins.SevenHD.AutoWoeIDServer.value)
+                          else:
+                             self.download_tgz(entrie, config.plugins.SevenHD.ClockStyle.value)
                        elif entrie == 'volume' and config.plugins.SevenHD.VolumeStyle.value == 'volumestyle-center':
                           os.system("rm -rf /usr/share/enigma2/SevenHD/%s/*.*; rm -rf /usr/share/enigma2/SevenHD/%s" % (str(entrie), str(entrie)))
                           self.download_tgz(entrie, config.plugins.SevenHD.VolumeStyle.value)
@@ -1028,7 +1043,7 @@ class SevenHD(Screen):
         self.session.open(Console, _("About Skin"), cmdlist=[("cat /tmp/about_skin.txt")])
     
     def ChangeLog(self):                          
-	res = requests.request('get', DOWNLOAD_UPDATE_URL)
+	res = requests.request('get', DOWNLOAD_UPDATE_URL + 'SevenHDChangeLog.txt')
         self.session.open(Console, _("Show Debug Log"), cmdlist=[("echo '%s'" % res.text)])
         
     def send_to_msg_box(self, my_msg):

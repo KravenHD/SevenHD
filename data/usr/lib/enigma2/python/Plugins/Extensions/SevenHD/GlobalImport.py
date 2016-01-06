@@ -1,10 +1,10 @@
-#version = '3.6.50'
+#version = '3.6.51'
 import os
 try:
    opkg_info = os.popen("opkg list-installed enigma2-plugin-skins-sevenhd | cut -d ' ' -f3").read()
    version = str(opkg_info.strip().split('+')[0])
 except:
-   version = '3.6.47'
+   version = '3.6.51'
 import re
 import time
 import math
@@ -537,7 +537,8 @@ config.plugins.SevenHD.AutoWoeIDServer = ConfigSelection(default="_owm", choices
 				("_yahoo", _("Yahoo")),
 				("_owm", _("OpenWeatherMap")),
 				("_msn", _("MSN")),
-				("_accu", _("Accuweather"))
+				("_accu", _("Accuweather")),
+				("_realtek", _("RealTek"))
                                 ])
 
 config.plugins.SevenHD.WeatherView = ConfigSelection(default="icon", choices = [
@@ -579,12 +580,13 @@ config.plugins.SevenHD.ChannelSelectionStyle = ConfigSelection(default="channels
 				("channelselection-twocolumns3", _("two columns 3")),
 				("channelselection-twocolumns4", _("two columns 4")),
 				("channelselection-twocolumns5", _("two columns 5")),
+				("channelselection-twocolumns6", _("two columns 6")),
+				("channelselection-minitv1", _("two columns 7 (miniTV)")),
+				("channelselection-minitvx", _("two columns 8 (miniTV/Picon)")),
+				("channelselection-pip", _("two columns 9 (miniTV/preview)")),
+				("channelselection-preview", _("two columns 10 (preview)")),
 				("channelselection-threecolumns", _("three columns")),
-				("channelselection-threecolumnsminitv", _("three columns/miniTV")),
-				("channelselection-minitv1", _("miniTV")),
-				("channelselection-minitvx", _("miniTV/Picon")),
-				("channelselection-pip", _("miniTV/preview")),
-				("channelselection-preview", _("preview"))
+				("channelselection-threecolumnsminitv", _("three columns (miniTV)"))
 				])
 
 ChannelBack1List = []

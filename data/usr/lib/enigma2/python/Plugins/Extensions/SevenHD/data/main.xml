@@ -1393,11 +1393,12 @@
     <widget name="end" position="508,150" size="72,35" font="Regular;25" foregroundColor="SevenFont1" transparent="1" />
     <widget name="apply" position="10,240" size="250,35" transparent="1" foregroundColor="SevenFont1" />
   </screen>
-  <!-- RecordTimerQuestion -->
-  <screen name="RecordTimerQuestion" position="center,center" backgroundColor="SevenBackground" size="380,70" zPosition="5" flags="wfNoBorder">
-    <!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="RecordTimerQuestion" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
-    <widget name="text" position="0,0" size="0,0" font="Regular2;22" foregroundColor="SevenFont2" transparent="1" zPosition="5" />
-    <widget name="list" position="10,10" size="360,50" enableWrapAround="1" transparent="1" zPosition="5" />
+  <!-- RecordTimerQuestion */-->
+  <screen name="RecordTimerQuestion" position="0,0" size="372,82" zPosition="99" flags="wfNoBorder" backgroundColor="transparent">
+  <!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="RecordTimerQuestion" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
+    <eLabel position="1,1" size="370,80" backgroundColor="SevenBackground" zPosition="-1" transparent="0" />
+    <eLabel position="0,0" size="372,82" backgroundColor="SevenBackground" zPosition="-2" transparent="0" />
+    <widget name="list" position="11,11" size="350,60" itemHeight="30" font="Regular;22" scrollbarMode="showOnDemand" enableWrapAround="1" foregroundColorSelected="SevenSelFont" backgroundColor="SevenBackground" foregroundColor="SevenButtonText" transparent="1" />
   </screen>
   <!-- CronTimers -->
   <screen name="CronTimers" position="0,0" size="1280,720" title="CronManager" flags="wfNoBorder" backgroundColor="transparent">
@@ -2294,8 +2295,8 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,orgpos.y()))
     <!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="UpdatePlugin" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
     <widget name="list" position="70,135" size="725,387" font="Regular; 29" zPosition="3" itemHeight="35" scrollbarMode="showOnDemand" foregroundColor="SevenFont1" backgroundColor="SevenFontBackground" transparent="1" />
     <widget name="activityslider" flags="wfBorder" borderWidth="2" borderColor="SevenBorder" position="110,160" size="655,15" foregroundColor="SevenFont1" backgroundColor="SevenFontBackground" transparent="1" />
-    <widget source="package" flags="wfBorder" borderWidth="2" borderColor="SevenBorder" render="Label" position="110,190" size="655,30" font="Regular;20" foregroundColor="SevenFont1" backgroundColor="SevenFontBackground" transparent="1" />
-    <widget source="status" flags="wfBorder" borderWidth="2" borderColor="SevenBorder" render="Label" position="110,230" size="655,30" font="Regular;20" foregroundColor="SevenFont1" backgroundColor="SevenFontBackground" transparent="1" />
+    <widget source="package" render="Label" position="110,190" size="655,30" font="Regular;20" foregroundColor="SevenFont1" backgroundColor="SevenFontBackground" transparent="1" />
+    <widget source="status"  render="Label" position="110,230" size="655,30" font="Regular;20" foregroundColor="SevenFont1" backgroundColor="SevenFontBackground" transparent="1" />
     <widget name="slider" flags="wfBorder" borderWidth="2" borderColor="SevenBorder" position="110,402" size="655,20" transparent="1" />
     <panel name="template_menu_left" />
   </screen>

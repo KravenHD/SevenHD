@@ -5,7 +5,7 @@
   <widget position="83,10" size="50,50" path="WetterIcons" render="SevenHDWetterPicon" alphatest="blend" source="session.CurrentService" transparent="1" zPosition="8">
     <convert  type="SevenHDWeather_accu">Day_0,MeteoIcon</convert>
   </widget>
-  <widget Wrap="1" backgroundColor="SevenFontBackgroundIB1" font="Regular2; 16" foregroundColor="SevenNextIB" render="Label" position="50,60" size="118,38" source="session.CurrentService" halign="center" transparent="1" zPosition="8" valign="center">
+  <widget Wrap="1" backgroundColor="SevenFontBackgroundIB1" font="Regular2; 16" foregroundColor="SevenNextIB" render="Label" position="22,60" size="171,41" source="session.CurrentService" halign="center" transparent="1" zPosition="8" valign="center">
     <convert type="SevenHDWeather_accu">Day_0,Description</convert>
   </widget>
   <widget noWrap="1" backgroundColor="SevenFontBackgroundIB1" font="Regular; 18" foregroundColor="SevenNowIB" render="Label" position="133,10" size="60,25" source="session.CurrentService" zPosition="8" halign="center" transparent="1">
@@ -20,7 +20,7 @@
   <widget position="83,110" size="50,50" path="WetterIcons" render="SevenHDWetterPicon" alphatest="blend" source="session.CurrentService" transparent="1" zPosition="5">
     <convert  type="SevenHDWeather_accu">Day_1,MeteoIcon</convert>
   </widget>
-  <widget Wrap="1" backgroundColor="SevenFontBackgroundIB1" font="Regular2; 16" foregroundColor="SevenNextIB" render="Label" position="50,160" size="118,38" source="session.CurrentService" halign="center" transparent="1" zPosition="8" valign="center">
+  <widget Wrap="1" backgroundColor="SevenFontBackgroundIB1" font="Regular2; 16" foregroundColor="SevenNextIB" render="Label" position="22,160" size="171,41" source="session.CurrentService" halign="center" transparent="1" zPosition="8" valign="center">
     <convert type="SevenHDWeather_accu">Day_1,Description</convert>
   </widget>
   <widget noWrap="1" backgroundColor="SevenFontBackgroundIB1" font="Regular; 18" foregroundColor="SevenNowIB" render="Label" position="133,110" size="60,25" source="session.CurrentService" zPosition="8" halign="center" transparent="1">
@@ -35,7 +35,7 @@
   <widget position="83,210" size="50,50" path="WetterIcons" render="SevenHDWetterPicon" alphatest="blend" source="session.CurrentService" transparent="1" zPosition="5">
     <convert  type="SevenHDWeather_accu">Day_2,MeteoIcon</convert>
   </widget>
-  <widget Wrap="1" backgroundColor="SevenFontBackgroundIB1" font="Regular2; 16" foregroundColor="SevenNextIB" render="Label" position="50,260" size="118,38" source="session.CurrentService" halign="center" transparent="1" zPosition="8" valign="center">
+  <widget Wrap="1" backgroundColor="SevenFontBackgroundIB1" font="Regular2; 16" foregroundColor="SevenNextIB" render="Label" position="22,260" size="171,41" source="session.CurrentService" halign="center" transparent="1" zPosition="8" valign="center">
     <convert type="SevenHDWeather_accu">Day_2,Description</convert>
   </widget>
   <widget noWrap="1" backgroundColor="SevenFontBackgroundIB1" font="Regular; 18" foregroundColor="SevenNowIB" render="Label" position="133,210" size="60,25" source="session.CurrentService" zPosition="8" halign="center" transparent="1">
@@ -50,7 +50,7 @@
   <widget position="83,310" size="50,50" path="WetterIcons" render="SevenHDWetterPicon" alphatest="blend" source="session.CurrentService" transparent="1" zPosition="5">
     <convert  type="SevenHDWeather_accu">Day_3,MeteoIcon</convert>
   </widget>
-  <widget Wrap="1" backgroundColor="SevenFontBackgroundIB1" font="Regular2; 16" foregroundColor="SevenNextIB" render="Label" position="50,360" size="118,38" source="session.CurrentService" halign="center" transparent="1" zPosition="8" valign="center">
+  <widget Wrap="1" backgroundColor="SevenFontBackgroundIB1" font="Regular2; 16" foregroundColor="SevenNextIB" render="Label" position="22,360" size="171,41" source="session.CurrentService" halign="center" transparent="1" zPosition="8" valign="center">
     <convert type="SevenHDWeather_accu">Day_3,Description</convert>
   </widget>
   <widget noWrap="1" backgroundColor="SevenFontBackgroundIB1" font="Regular; 18" foregroundColor="SevenNowIB" render="Label" position="133,310" size="60,25" source="session.CurrentService" zPosition="8" halign="center" transparent="1">
@@ -59,5 +59,10 @@
   <widget noWrap="1" backgroundColor="SevenFontBackgroundIB1" font="Regular; 18" foregroundColor="SevenNowIB" render="Label" position="133,335" size="60,25" source="session.CurrentService" zPosition="8" halign="center" transparent="1">
     <convert type="SevenHDWeather_accu">Day_3,MinTemp</convert>
   </widget>
+
+ <eLabel text="Temp.:" position="50,415" size="66,22" zPosition="5" halign="left" font="Regular2; 18" backgroundColor="SevenFontBackgroundIB1" transparent="1" foregroundColor="SevenNowIB" />
+<widget noWrap="1" backgroundColor="SevenFontBackgroundIB1" font="Regular; 18" foregroundColor="SevenNowIB" render="Label" position="116,415" size="56,22" source="session.CurrentService" zPosition="3" halign="left" transparent="1">
+   <convert type="SevenHDWeather_accu">Day_0,DayTemp</convert>
+  </widget> 
 <panel name="template_weather_left" />
 <!-- Weather */-->

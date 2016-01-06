@@ -151,10 +151,12 @@ class ChannelSettings(ConfigListScreen, Screen):
         list.append(getConfigListEntry(_("bouquet name"),                 config.plugins.SevenHD.ChannelColorBouquet,        'Stellt die Farbe des Bouquetnamen ein. ',                         '4',       'bouquetname'))
         if not ChannelSelectionStyle.startswith('channelselection-twocolumns4'):
            list.append(getConfigListEntry(_("program name"),              config.plugins.SevenHD.ChannelColorProgram,        'Stellt die Farbe des aktuellen Programmes ein.',                  '4',       'programname'))
-        if not ChannelSelectionStyle.startswith('channelselection-twocolumns4'):
+        if  ChannelSelectionStyle.startswith('channelselection-twocolumns4') or ChannelSelectionStyle.endswith('6'):
+           pass
+        else:
            list.append(getConfigListEntry(_("next events"),               config.plugins.SevenHD.ChannelColorNext,           'Stellt die Farbe der n\xc3\xa4chsten Sendungen ein.',             '4',       'nextevents'))
         list.append(getConfigListEntry(_("runtime"),                      config.plugins.SevenHD.ChannelColorRuntime,        'Stellt die Farbe der Laufzeit ein.',                              '4',       'runtime'))
-        if ChannelSelectionStyle.startswith('channelselection-threecolumns') or ChannelSelectionStyle.endswith('2') or ChannelSelectionStyle.endswith('3'):
+        if ChannelSelectionStyle.startswith('channelselection-threecolumns') or ChannelSelectionStyle.endswith('2') or ChannelSelectionStyle.endswith('3') or ChannelSelectionStyle.startswith('channelselection-twocolumns6'):
            list.append(getConfigListEntry(_("channel name"),              config.plugins.SevenHD.ChannelColorChannel,        'Stellt die Farbe des aktuellen Sender auf der linken Seite ein.', '4',       'channelnamecs'))
         if not ChannelSelectionStyle.startswith('channelselection-threecolumns'):
            list.append(getConfigListEntry(_("time"),                      config.plugins.SevenHD.ChannelColorTimeCS,         'Stellt die Farbe der Zeit oben rechts ein.',                      '4',       'time'))
@@ -163,7 +165,7 @@ class ChannelSettings(ConfigListScreen, Screen):
         else:
            list.append(getConfigListEntry(_("prime time"),                config.plugins.SevenHD.ChannelColorPrimeTime,      'Stellt die Farbe der PrimeTime ein.',                             '4',       'primetime'))
         list.append(getConfigListEntry(_("program description now"),      config.plugins.SevenHD.ChannelColorDesciption,     'Stellt die Farbe der aktuellen Sendung ein.',                     '4',       'descriptionnow'))
-        if ChannelSelectionStyle.startswith('channelselection-threecolumns') or ChannelSelectionStyle.startswith('channelselection-twocolumns4'):
+        if ChannelSelectionStyle.startswith('channelselection-threecolumns') or ChannelSelectionStyle.startswith('channelselection-twocolumns4') or ChannelSelectionStyle.startswith('channelselection-twocolumns6'):
            list.append(getConfigListEntry(_("program description next"),  config.plugins.SevenHD.ChannelColorDesciptionNext, 'Stellt die Farbe der kommenden Sendung ein.',                     '4',       'descriptionnext'))
         if ChannelSelectionStyle.startswith('channelselection-twocolumns4'):
            list.append(getConfigListEntry(_("program description later"), config.plugins.SevenHD.ChannelColorDesciptionLater,'Stellt die Farbe der folgenden Sendungen ein.',                   '4',       'descriptionlater'))

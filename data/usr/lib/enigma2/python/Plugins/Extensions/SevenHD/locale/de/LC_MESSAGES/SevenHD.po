@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: SevenHD\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-10-26 18:55+0100\n"
-"PO-Revision-Date: 2015-12-31 15:27+0100\n"
+"PO-Revision-Date: 2016-01-03 14:01+0100\n"
 "Last-Translator: mike99 <mike99@mail.to>\n"
 "Language-Team: kraven & mike99\n"
 "Language: de\n"
@@ -734,17 +734,28 @@ msgstr "zwei Spalten (4)"
 msgid "two columns 5"
 msgstr "zwei Spalten (5)"
 
+msgid "two columns 7 (miniTV)"
+msgstr "zwei Spalten (7) (miniTV)"
+
+msgid "two columns 8 (miniTV/Picon)"
+msgstr "zwei Spalten (8) (miniTV/Picon)"
+
+msgid "two columns 9 (miniTV/preview)"
+msgstr "zwei Spalten (9)(miniTV/Vorschau)"
+
+msgid "two columns 10 (preview)"
+msgstr "zwei Spalten (10) (Vorschau)"
+
+msgid "two columns 6"
+msgstr "zwei Spalten (6)"
+
 #: GlobalImport.py:451
 msgid "three columns"
 msgstr "drei Spalten"
 
 #: GlobalImport.py:452
-msgid "three columns/miniTV"
-msgstr "drei Spalten/miniTV"
-
-#: GlobalImport.py:462
-msgid "miniTV/PiP"
-msgstr ""
+msgid "three columns (miniTV)"
+msgstr "drei Spalten (miniTV)"
 
 #: GlobalImport.py:549
 msgid "picon"
@@ -1658,12 +1669,6 @@ msgstr "Stil 9"
 
 msgid "Style 10"
 msgstr "Stil 10"
-
-msgid "preview"
-msgstr "Vorschau"
-
-msgid "miniTV/preview"
-msgstr "miniTV/Vorschau"
 
 msgid "weather icon"
 msgstr "Wetter Icon"

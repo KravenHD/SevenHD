@@ -549,14 +549,14 @@
   <!-- EPGRefreshServiceEditor -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="EPGRefreshServiceEditor" position="0,0" size="1280,720" title="Edit Services to refresh">
 <!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="EPGRefreshServiceEditor" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
-    <widget backgroundColor="SevenFontBackground" enableWrapAround="1" itemHeight="30" name="config" position="70,80" size="708,540" transparent="1" />
+    <widget backgroundColor="SevenFontBackground" enableWrapAround="1" font="Regular;22" itemHeight="30" name="config" position="70,80" size="708,540" transparent="1" />
     <panel name="template_menu_left_button" />
     <panel name="template_colorkey_text_source" />
   </screen>
   <!-- EPGRefreshConfiguration -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="EPGRefreshConfiguration" position="0,0" size="1280,720" title="Configure EPGRefresh">
 <!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="EPGRefreshConfiguration" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
-    <widget backgroundColor="SevenFontBackground" enableWrapAround="1" itemHeight="30" name="config" position="70,80" size="708,510" transparent="1" />
+    <widget backgroundColor="SevenFontBackground" enableWrapAround="1" itemHeight="30" font="Regular;22" name="config" position="70,80" size="708,510" transparent="1" />
     <widget backgroundColor="SevenFontBackground" font="Regular2;20" position="70,600" render="Label" size="708,50" source="help" transparent="1" foregroundColor="SevenFont2" />
     <panel name="template_menu_left_button" />
     <panel name="template_colorkey_text_source" />
@@ -572,8 +572,8 @@
   <!-- FilebrowserScreen -->
   <screen backgroundColor="transparent" flags="wfNoBorder" name="FilebrowserScreen" position="0,0" size="1280,720" title="">
 <!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="FilebrowserScreen" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
-    <widget backgroundColor="SevenFontBackground" itemHeight="30" name="list_left" position=" 70,115" size="550,510" transparent="1" />
-    <widget backgroundColor="SevenFontBackground" itemHeight="30" name="list_right" position="660,115" size="550,510" transparent="1" />
+    <widget backgroundColor="SevenFontBackground" itemHeight="30" font="Regular;22" name="list_left" position=" 70,115" size="550,510" transparent="1" />
+    <widget backgroundColor="SevenFontBackground" itemHeight="30" font="Regular;22" name="list_right" position="660,115" size="550,510" transparent="1" />
     <panel name="template_menu_full_button" />
   <eLabel backgroundColor="SevenFontBackground" font="Regular;18" foregroundColor="SevenButtonText" halign="left" valign="center" text="Löschen" position="64,662" size="148,48" transparent="1" zPosition="1" />
   <eLabel backgroundColor="SevenFontBackground" font="Regular;18" foregroundColor="SevenButtonText" halign="left" valign="center" text="Verschieben" position="264,662" size="148,48" transparent="1" zPosition="1" />
@@ -2322,5 +2322,6 @@
     <panel name="template_menu_left_button" />
     <panel name="template_colorkey_text_source" />
   </screen> 
+
   <!-- plugins -->
   
