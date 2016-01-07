@@ -16,10 +16,10 @@ A: Du hast wahrscheinlich Overscan an Deinem TV eingeschaltet. Diese Funktion sc
 	</page>
 
         <page title="FAQ"><text value="Q: Ich habe zu viel verstellt und ich weiß nicht mehr was ich alles geändert habe. Gibt es dort eine Möglichkeit alles auf Anfang zu stellen wie bei der Installation?\n\n\n
-A: JA, in jedem Einstellungs Screen wird Dir mit der gelben Tatse die Möglichkeit gegeben alle Werte auf Null/Default zu stellen."/>
+A: JA, in jedem Einstellungs Screen wird Dir mit der gelben Taste die Möglichkeit gegeben alle Werte auf Null/Default zu stellen."/>
 	</page>
 
-        <page title="FAQ"><text value="Q: Es werden keine Picons angezeigt?\n\n\n
+        <page title="FAQ"><text value="Q: Es werden keine Picons angezeigt.\n\n\n
 A: Der Ordner mit deinen Picons hat den falschen Namen. Benenne den Ordner, in dem Deine Picons gespeichert sind, in 'picon' um."/>
 	</page>
 
