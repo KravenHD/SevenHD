@@ -1,6 +1,14 @@
 #!/bin/sh
 echo "Checking for previous installations..."
 
+if [ -f /usr/lib/enigma2/python/Plugins/Extensions/SevenHD/user/user_color.txt ]; then
+    cp /usr/lib/enigma2/python/Plugins/Extensions/SevenHD/user/user_color.txt /tmp
+fi
+
+if [ -f /usr/lib/enigma2/python/Plugins/Extensions/SevenHD/data/skin-user.xml ]; then
+    cp /usr/lib/enigma2/python/Plugins/Extensions/SevenHD/data/skin-user.xml /tmp
+fi
+
 if [ -f /usr/lib/enigma2/python/Plugins/Extensions/SevenHD/plugin.py ]; then
     rm -rf /usr/lib/enigma2/python/Plugins/Extensions/SevenHD
     rm -rf /usr/lib/enigma2/python/Components/Converter/SevenHD*
@@ -10,7 +18,6 @@ if [ -f /usr/lib/enigma2/python/Plugins/Extensions/SevenHD/plugin.py ]; then
     echo "              was found and removed!                       "
     echo "                                                           "
 fi
-
 
 echo "                                                           "
 echo "         The Skin SevenHD is now being installed...        "
