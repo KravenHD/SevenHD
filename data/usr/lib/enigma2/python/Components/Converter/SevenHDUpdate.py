@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 import os
-import requests
+from twisted.web.client import getPage
 from enigma import eTimer
 from Components.config import config
 from Components.Element import cached
@@ -43,11 +43,11 @@ class SevenHDUpdate(Converter, object):
 	boolean = property(getBoolean)
 
         def get(self):
-            try:
-                res = requests.request('get', URL)
-                self.git_version = str(res.text)
-            except:
-            	print 'SevenHD Update Request Fails'
+            getPage(URL).addCallback(self.put).addErrback(self.debug)
+        
+        def put(self, what):
+            self.git_version = str(what)
+            self.check_timer.start(30000, True)    
         
         def look(self, what):
             if self.git_version == '0.0.0.0':
@@ -86,3 +86,10 @@ class SevenHDUpdate(Converter, object):
             
         def changed(self, what):
 	    Converter.changed(self, (self.CHANGED_POLL,))
+        
+        def debug(self, what):
+            if config.plugins.SevenHD.debug.value:
+               f = open('/tmp/kraven_debug.txt', 'a+')
+               f.write('[OnlineUpdateConverter]' + str(what) + '\n')
+               f.close()
+            print 'SevenHD Update Request Fails' 

@@ -1,10 +1,10 @@
-#version = '3.6.51'
+#version = '3.6.52'
 import os
 try:
    opkg_info = os.popen("opkg list-installed enigma2-plugin-skins-sevenhd | cut -d ' ' -f3").read()
    version = str(opkg_info.strip().split('+')[0])
 except:
-   version = '3.6.51'
+   version = '3.6.52'
 import re
 import time
 import math
@@ -221,8 +221,8 @@ ColorList.append(("00647687", _("steel")))
 ColorList.append(("00262C33", _("steel dark")))
 ColorList.append(("006C0AAB", _("violet")))
 ColorList.append(("001F0333", _("violet dark")))
-ColorList.append(("00FFBE00", _("yellow dark")))
 ColorList.append(("00FFF006", _("yellow")))
+ColorList.append(("00FFBE00", _("yellow dark")))
 ColorList += UserList
    
 TransList = [] 
@@ -340,6 +340,8 @@ ProgressVolList = [("progressvol", _("bunt"))]
 ProgressVolList = ColorList + ProgressVolList
 config.plugins.SevenHD.ProgressVol = ConfigSelection(default="00ffffff", choices = ProgressVolList)
 
+################################################################################################################################################################
+# PluginScreen
 config.plugins.SevenHD.CoolTVGuide = ConfigSelection(default="cooltv-minitv", choices = [
 				("cooltv-minitv", _("miniTV")),
 				("cooltv-picon", _("picon"))
@@ -360,8 +362,12 @@ config.plugins.SevenHD.MovieSelectionStyle = ConfigSelection(default="movieselec
 				("movieselectionbigcover", _("big cover")),
 				("movieselectionminitv", _("miniTV"))
 				])
+config.plugins.SevenHD.MSNWeather = ConfigSelection(default="standard", choices = [
+				("msn-standard", _("standard")),
+				("msn-icon", _("alternative icons"))
+				])
 ################################################################################################################################################################
-# MenuPluginScreen
+# MenuScreen
 
 BackgroundList = []
 for x in BackList:
@@ -434,7 +440,8 @@ config.plugins.SevenHD.SIB = ConfigSelection(default="-top", choices = [
 				("-left", _("Style 2")),
 				("-full", _("Style 3")),
 				("-minitv", _("Style 4")),
-				("-right", _("Style 5"))
+				("-right", _("Style 5")),
+				("-minitv2", _("Style 6"))
 				])				
 
 BackgroundIB1List = []

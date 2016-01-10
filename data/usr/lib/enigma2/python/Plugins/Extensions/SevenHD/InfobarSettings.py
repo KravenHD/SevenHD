@@ -130,6 +130,8 @@ class InfobarSettings(ConfigListScreen, Screen):
            list.append(getConfigListEntry(_("second infobar"),       config.plugins.SevenHD.SIB,               'W\xc3\xa4hle den Stil der zweiten Infobar',                                                            '4',       'SIB4'))
         if config.plugins.SevenHD.SIB.value == '-right':
            list.append(getConfigListEntry(_("second infobar"),       config.plugins.SevenHD.SIB,               'W\xc3\xa4hle den Stil der zweiten Infobar',                                                            '4',       'SIB5'))
+        if config.plugins.SevenHD.SIB.value == '-minitv2':
+           list.append(getConfigListEntry(_("second infobar"),       config.plugins.SevenHD.SIB,               'W\xc3\xa4hle den Stil der zweiten Infobar',                                                            '4',       'SIB6'))
         #list.append(getConfigListEntry(_("progress-/volumebar"), config.plugins.SevenHD.ProgressInfobar, 'ProgressInfobar'))
         list.append(getConfigListEntry(_('_____________________________background________________________________________'), ))
         list.append(getConfigListEntry(_("primary color"),            config.plugins.SevenHD.BackgroundIB1,     'Stellt die Farbe der linken Seite sowie den unteren Bereich der Infobar ein.',                         '4',       'Color1'))

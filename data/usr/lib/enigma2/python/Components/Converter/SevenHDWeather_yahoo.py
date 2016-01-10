@@ -34,9 +34,9 @@ def _(txt):
 	t = gettext.dgettext("SevenHD", txt)
 	if t == txt:
 		t = gettext.gettext(txt)
-	return t
+	return t                              
 
-URL = 'http://weather.yahooapis.com/forecastrss?w=' + str(config.plugins.SevenHD.weather_locationcode.value) + '&u=c'
+URL = 'http://weather.yahooapis.com/forecastrss?w=' + str(config.plugins.SevenHD.weather_city.value) + '&u=c'
 
 class SevenHDWeather_yahoo(Converter, object):
 	def __init__(self, type):
@@ -89,6 +89,7 @@ class SevenHDWeather_yahoo(Converter, object):
             res = requests.request('get', URL)
             root = parseString(res.text)
             
+            self.data['Day_%s' % str(index)] = {}
             self.data['Day_%s' % str(index)]['feelslike'] = root.getElementsByTagName('yweather:wind')[0].getAttributeNode('chill').nodeValue
             self.data['Day_%s' % str(index)]['winddisplay'] = root.getElementsByTagName('yweather:wind')[0].getAttributeNode('direction').nodeValue
             self.data['Day_%s' % str(index)]['windspeed'] = root.getElementsByTagName('yweather:wind')[0].getAttributeNode('speed').nodeValue
@@ -96,19 +97,20 @@ class SevenHDWeather_yahoo(Converter, object):
             self.data['Day_%s' % str(index)]['temp'] = root.getElementsByTagName('yweather:condition')[0].getAttributeNode('temp').nodeValue
             self.data['Day_%s' % str(index)]['skytextday'] = root.getElementsByTagName('yweather:condition')[0].getAttributeNode('text').nodeValue
             self.data['Day_%s' % str(index)]['skycodeday'] = root.getElementsByTagName('yweather:condition')[0].getAttributeNode('code').nodeValue
-            self.data['Day_%s' % str(index)]['shortday'] = root.getElementsByTagName('yweather:condition')[0].getAttributeNode('date').nodeValue.split(',')[0]
+            self.data['Day_%s' % str(index)]['shortday'] = _(root.getElementsByTagName('yweather:condition')[0].getAttributeNode('date').nodeValue.split(',')[0])
             
             for x in range(5):
                 index += 1
-                self.data['Day_%s' % str(index)]['shortday'] = root.getElementsByTagName('yweather:forecast')[x].getAttributeNode('day').nodeValue
-                self.data['Day_%s' % str(index)]['low'] = root.getElementsByTagName('yweather:forecast')[x].getAttributeNode('low').nodeValue
-                self.data['Day_%s' % str(index)]['high'] = root.getElementsByTagName('yweather:forecast')[x].getAttributeNode('high').nodeValue
-                self.data['Day_%s' % str(index)]['skytextday'] = root.getElementsByTagName('yweather:forecast')[x].getAttributeNode('text').nodeValue
-                self.data['Day_%s' % str(index)]['skycodeday'] = root.getElementsByTagName('yweather:forecast')[x].getAttributeNode('code').nodeValue
-                       
+                self.data['Day_%s' % str(index)] = {}
+                self.data['Day_%s' % str(index)]['shortday'] = _(root.getElementsByTagName('yweather:forecast')[int(x)].getAttributeNode('day').nodeValue)
+                self.data['Day_%s' % str(index)]['low'] = root.getElementsByTagName('yweather:forecast')[int(x)].getAttributeNode('low').nodeValue
+                self.data['Day_%s' % str(index)]['high'] = root.getElementsByTagName('yweather:forecast')[int(x)].getAttributeNode('high').nodeValue
+                self.data['Day_%s' % str(index)]['skytextday'] = root.getElementsByTagName('yweather:forecast')[int(x)].getAttributeNode('text').nodeValue
+                self.data['Day_%s' % str(index)]['skycodeday'] = root.getElementsByTagName('yweather:forecast')[int(x)].getAttributeNode('code').nodeValue
+                           
             timeout = int(config.plugins.SevenHD.refreshInterval.value) * 1000.0 * 60.0
             self.timer.start(int(timeout), True)
-            
+        
         def getMinTemp(self, day):
             temp = self.data['Day_%s' % str(day)]['low']
             return str(temp) + '°C'
@@ -145,7 +147,7 @@ class SevenHDWeather_yahoo(Converter, object):
         def getCompWind(self):
             wind = self.getWind()
             speed = self.data['Day_0']['windspeed']
-            return str(speed) + _(" from ") + str(wind)
+            return str(speed) + _(" km/h") + _(" from ") + str(wind)
             
         def getHumidity(self):
             humi = self.data['Day_0']['humidity']
@@ -153,6 +155,8 @@ class SevenHDWeather_yahoo(Converter, object):
             
         def getWind(self):
             direct = self.data['Day_0']['winddisplay']
+            direct = int(direct)
+            
             if direct >= 0 and direct <= 20:
                wdirect = _('N')
             elif direct >= 21 and direct <= 35:
@@ -192,10 +196,10 @@ class SevenHDWeather_yahoo(Converter, object):
             return wdirect
         
         def getMeteoFont(self, day):
-            
             weathercode = self.data['Day_%s' % str(day)]['skycodeday']
             weathercode = int(weathercode)
-	    if weathercode == 0 or weathercode == 1 or weathercode == 2:
+	    
+            if weathercode == 0 or weathercode == 1 or weathercode == 2:
 	                weatherfont = "S"
 	    elif weathercode == 3 or weathercode == 4:
 			weatherfont = "Z"
@@ -234,7 +238,8 @@ class SevenHDWeather_yahoo(Converter, object):
 	    return str(weatherfont)
         
         def description(self, what):
-        
+            what = int(what)
+            
             if what == 0:
                return _('Tornado')
 	    elif what == 1:

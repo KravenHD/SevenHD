@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: SevenHD\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-10-26 18:55+0100\n"
-"PO-Revision-Date: 2016-01-03 14:01+0100\n"
+"PO-Revision-Date: 2016-01-08 16:40+0100\n"
 "Last-Translator: mike99 <mike99@mail.to>\n"
 "Language-Team: kraven & mike99\n"
 "Language: de\n"
@@ -1720,3 +1720,12 @@ msgstr "Signalstärke"
 
 msgid "language"
 msgstr "Sprache"
+
+msgid "menu setting"
+msgstr "Menüeinstellungen"
+
+msgid "plugin setting"
+msgstr "Plugineinstellungen"
+
+msgid "alternative icons"
+msgstr "Alternative Icons"

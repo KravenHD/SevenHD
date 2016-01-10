@@ -33,7 +33,7 @@ def translateBlock(block):
 			block = block.replace(x[0], x[1])
 	return block
 ########################################################################
-class MenuPluginSettings(ConfigListScreen, Screen):
+class MenuSettings(ConfigListScreen, Screen):
     skin = """
                   <screen name="SevenHD" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
                          <eLabel font="Regular; 20" foregroundColor="#00f23d21" backgroundColor="#00000000" halign="left" valign="center" position="64,662" size="148,48" text="Cancel" transparent="1" />
@@ -132,26 +132,6 @@ class MenuPluginSettings(ConfigListScreen, Screen):
         list.append(getConfigListEntry(_("primary font"),       config.plugins.SevenHD.Font1,                  'Stellt die Schriftfarbe der Liste ein.',                     '4',     'Font1'))
         list.append(getConfigListEntry(_("secondary font"),     config.plugins.SevenHD.Font2,                  'Stellt die Schriftfarbe der Beschreibung ein.',              '4',     'Font2'))
         list.append(getConfigListEntry(_("button text"),        config.plugins.SevenHD.ButtonText,             'Stellt die Schriftfarbe der Farbtastenbeschreibung ein.',    '4',     'Buttontext'))
-        list.append(getConfigListEntry(_('_______________________________plugins__________________________________________'), ))                                           
-        list.append(getConfigListEntry(_("Movie Selection"),    config.plugins.SevenHD.MovieSelectionStyle,    'Auswahl der Covergr\xc3\xb6\xc3\x9fe.',                      '1',     ''))
-        if not fileExists(PLUGIN_PATH + "/Extensions/EnhancedMovieCenter/plugin.pyo"):
-           list.append(getConfigListEntry(_('{:<114}{:>1}'.format('EnhancedMovieCenter','not installed')), ))
-        else:   
-           list.append(getConfigListEntry(_("EMC"),             config.plugins.SevenHD.EMCStyle,               'Auswahl der Covergr\xc3\xb6\xc3\x9fe.',                      '1',     ''))
-           config.EMC.skin_able.value = True
-           config.EMC.skin_able.save()
-        if config.plugins.SevenHD.NumberZapExtImport.value:
-           if fileExists(PLUGIN_PATH + "/SystemPlugins/NumberZapExt/NumberZapExt.pyo"):
-              list.append(getConfigListEntry(_("ExtNumberZap"), config.plugins.SevenHD.NumberZapExt,           'Auswahl der Darstellung beim Senderwechsel per Nummertaste.','1',     ''))
-           else:
-              list.append(getConfigListEntry(_('{:<121}{:>1}'.format('ExtNumberZap','not installed')), ))                   
-        else:
-           list.append(getConfigListEntry(_('{:<121}{:>1}'.format('ExtNumberZap','not installed')), ))
-           
-        if not fileExists(PLUGIN_PATH + "/Extensions/CoolTVGuide/plugin.pyo"):
-           list.append(getConfigListEntry(_('{:<124}{:>1}'.format('CoolTVGuide','not installed')), ))
-        else:
-           list.append(getConfigListEntry(_("CoolTVGuide"),     config.plugins.SevenHD.CoolTVGuide,            'Auswahl der Darstellung bei langen INFO Tsatendruck.',       '1',     ''))
         return list
 
     def __selectionChanged(self):
@@ -207,15 +187,7 @@ class MenuPluginSettings(ConfigListScreen, Screen):
         self["colorthump"].instance.show()
         preview = ''
         
-        if returnValue == config.plugins.SevenHD.MovieSelectionStyle:
-              self["colorthump"].instance.hide()
-        elif returnValue == config.plugins.SevenHD.EMCStyle:
-              self["colorthump"].instance.hide()
-        elif returnValue == config.plugins.SevenHD.NumberZapExt:
-              self["colorthump"].instance.hide()
-        elif returnValue == config.plugins.SevenHD.CoolTVGuide:
-              self["colorthump"].instance.hide()
-        elif returnValue == config.plugins.SevenHD.Line:
+        if returnValue == config.plugins.SevenHD.Line:
               preview = self.generate(config.plugins.SevenHD.Line.value)
         elif returnValue == config.plugins.SevenHD.LineRight:
               preview = self.generate(config.plugins.SevenHD.LineRight.value)
@@ -300,10 +272,6 @@ class MenuPluginSettings(ConfigListScreen, Screen):
         self.setInputToDefault(config.plugins.SevenHD.ButtonText)
         self.setInputToDefault(config.plugins.SevenHD.ProgressLinePlug)
         self.setInputToDefault(config.plugins.SevenHD.Progress)
-        self.setInputToDefault(config.plugins.SevenHD.NumberZapExt)
-        self.setInputToDefault(config.plugins.SevenHD.EMCStyle)
-        self.setInputToDefault(config.plugins.SevenHD.MovieSelectionStyle)
-        self.setInputToDefault(config.plugins.SevenHD.CoolTVGuide)
         self.save()
 
     def setInputToDefault(self, configItem):
@@ -313,20 +281,6 @@ class MenuPluginSettings(ConfigListScreen, Screen):
         self.session.open(MessageBox, _("Information"), MessageBox.TYPE_INFO)
 
     def save(self):
-        
-        if fileExists(PLUGIN_PATH + "/Extensions/EnhancedMovieCenter/plugin.pyo"):
-           if config.plugins.SevenHD.EMCStyle.value != 'emcnocover':
-              config.EMC.movie_cover.value = True         
-           else:
-              config.EMC.movie_cover.value = False
-           config.EMC.movie_cover.save()
-        
-        if CREATOR != 'OpenMips':
-           if config.plugins.SevenHD.MovieSelectionStyle.value == 'movieselectionbigcover':
-              config.movielist.itemsperpage.value = '10'
-           else:
-              self.setInputToDefault(config.movielist.itemsperpage)
-           config.movielist.itemsperpage.save()
         
         if config.plugins.SevenHD.skin_mode.value > '3':
            if 'back' in config.plugins.SevenHD.Background.value:
@@ -356,11 +310,11 @@ class MenuPluginSettings(ConfigListScreen, Screen):
     def debug(self, what):
         if config.plugins.SevenHD.msgdebug.value:
            try:
-              self.session.open(MessageBox, _('[MenuPluginSettings]\n' + str(what)), MessageBox.TYPE_INFO)
+              self.session.open(MessageBox, _('[MenuSettings]\n' + str(what)), MessageBox.TYPE_INFO)
            except:
               pass
               
         if config.plugins.SevenHD.debug.value:
            f = open('/tmp/kraven_debug.txt', 'a+')
-           f.write('[MenuPluginSettings]' + str(what) + '\n')
+           f.write('[MenuSettings]' + str(what) + '\n')
            f.close() 

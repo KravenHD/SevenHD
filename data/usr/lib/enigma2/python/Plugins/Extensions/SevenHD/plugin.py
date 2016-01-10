@@ -17,7 +17,8 @@ from GlobalImport import *
 from OnlineUpdate import *
 from ChangeSkin import *
 from MainSettings import MainSettings
-from MenuPluginSettings import MenuPluginSettings
+from MenuSettings import MenuSettings
+from PluginSettings import PluginSettings
 from InfobarSettings import InfobarSettings
 from InfobarExtraSettings import InfobarExtraSettings
 from ChannelSettings import ChannelSettings
@@ -134,7 +135,8 @@ class SevenHD(Screen):
            
         list = []
         list.append(MenuEntryItem(_("main setting"), "MainSettings"))
-        list.append(MenuEntryItem(_("menu and plugins"), "MenuPluginSettings"))
+        list.append(MenuEntryItem(_("menu setting"), "MenuSettings"))
+        list.append(MenuEntryItem(_("plugin setting"), "PluginSettings"))
         list.append(MenuEntryItem(_("infobar and second infobar"), "InfobarSettings"))
         list.append(MenuEntryItem(_("infobar extras"), "InfobarExtraSettings"))
         list.append(MenuEntryItem(_("channel selection"), "ChannelSettings"))
@@ -172,8 +174,10 @@ class SevenHD(Screen):
             self.debug('def ShowPicture\nneed: ' + MAIN_IMAGE_PATH + str(selectedKey) + '.jpg\n')
             if selectedKey == "MainSettings":
                imageUrl = MAIN_IMAGE_PATH + str("MAINSETTINGS.jpg")
-            elif selectedKey == "MenuPluginSettings":
+            elif selectedKey == "MenuSettings":
                imageUrl = MAIN_IMAGE_PATH + str("MENU.jpg")
+            elif selectedKey == "PluginSettings":
+               imageUrl = MAIN_IMAGE_PATH + str("PLUGIN.jpg")
             elif selectedKey == "InfobarSettings":
                imageUrl = MAIN_IMAGE_PATH + str("IB.jpg")
             elif selectedKey == "InfobarExtraSettings":
@@ -205,8 +209,10 @@ class SevenHD(Screen):
             
             if selectedKey == "MainSettings":
                 self.session.open(MainSettings)
-            elif selectedKey == "MenuPluginSettings":
-                self.session.open(MenuPluginSettings)
+            elif selectedKey == "MenuSettings":
+                self.session.open(MenuSettings)
+            elif selectedKey == "PluginSettings":
+                self.session.open(PluginSettings)
             elif selectedKey == "InfobarSettings":
                 self.session.open(InfobarSettings)
             elif selectedKey == "InfobarExtraSettings":
@@ -430,53 +436,23 @@ class SevenHD(Screen):
 		self.skinSearchAndReplace.append(["SevenProgram_List", config.plugins.SevenHD.ChannelColorEvent.value])
 		
 		# Weather Font
-                if config.plugins.SevenHD.AutoWoeIDServer.value == '_yahoo':
-                   if config.plugins.SevenHD.WeatherView.value == "meteo":
-                      self.skinSearchAndReplace.append(['size="50,50" path="WetterIcons" render="SevenHDWetterPicon" alphatest="blend"', 'size="50,50" render="Label" font="Meteo; 45" halign="center" valign="center" foregroundColor="SevenMeteoFont" backgroundColor="SevenFontBackgroundIB1" noWrap="1"'])
-                      self.skinSearchAndReplace.append(['size="70,70" render="SevenHDWetterPicon" alphatest="blend" path="WetterIcons"', 'size="70,70" render="Label" font="Meteo; 70" halign="center" valign="center" foregroundColor="SevenMeteoFont" backgroundColor="SevenFontBackgroundIB1" noWrap="1"'])
-                      self.skinSearchAndReplace.append(['convert  type="SevenHDWeather">currentWeatherPicon', 'convert  type="SevenHDWeather">currentWeatherCode'])
-                      self.skinSearchAndReplace.append(['convert  type="SevenHDWeather">forecastTomorrowPicon', 'convert  type="SevenHDWeather">forecastTomorrowCode'])
-                      self.skinSearchAndReplace.append(['convert  type="SevenHDWeather">forecastTomorrow1Picon', 'convert  type="SevenHDWeather">forecastTomorrow1Code'])
-                      self.skinSearchAndReplace.append(['convert  type="SevenHDWeather">forecastTomorrow2Picon', 'convert  type="SevenHDWeather">forecastTomorrow2Code'])
-                      self.skinSearchAndReplace.append(['convert  type="SevenHDWeather">forecastTomorrow3Picon', 'convert  type="SevenHDWeather">forecastTomorrow3Code'])
-                elif config.plugins.SevenHD.AutoWoeIDServer.value == '_owm':
-                   if config.plugins.SevenHD.WeatherView.value == "meteo":
-                      self.skinSearchAndReplace.append(['size="50,50" path="WetterIcons" render="SevenHDWetterPicon" alphatest="blend"', 'size="50,50" render="Label" font="Meteo2; 45" halign="center" valign="center" foregroundColor="SevenMeteoFont" backgroundColor="SevenFontBackgroundIB1" noWrap="1"'])
-                      self.skinSearchAndReplace.append(['size="70,70" render="SevenHDWetterPicon" alphatest="blend" path="WetterIcons"', 'size="70,70" render="Label" font="Meteo2; 70" halign="center" valign="center" foregroundColor="SevenMeteoFont" backgroundColor="SevenFontBackgroundIB1" noWrap="1"'])
-                      self.skinSearchAndReplace.append(['convert  type="SevenHDWeather_owm">Day_0,MeteoIcon', 'convert  type="SevenHDWeather_owm">Day_0,MeteoFont'])
-                      self.skinSearchAndReplace.append(['convert  type="SevenHDWeather_owm">Day_1,MeteoIcon', 'convert  type="SevenHDWeather_owm">Day_1,MeteoFont'])
-                      self.skinSearchAndReplace.append(['convert  type="SevenHDWeather_owm">Day_2,MeteoIcon', 'convert  type="SevenHDWeather_owm">Day_2,MeteoFont'])
-                      self.skinSearchAndReplace.append(['convert  type="SevenHDWeather_owm">Day_3,MeteoIcon', 'convert  type="SevenHDWeather_owm">Day_3,MeteoFont'])
-                      self.skinSearchAndReplace.append(['convert  type="SevenHDWeather_owm">Day_4,MeteoIcon', 'convert  type="SevenHDWeather_owm">Day_4,MeteoFont'])    
-                elif config.plugins.SevenHD.AutoWoeIDServer.value == '_msn':
-                   if config.plugins.SevenHD.WeatherView.value == "meteo":
-                      self.skinSearchAndReplace.append(['size="50,50" path="WetterIcons" render="SevenHDWetterPicon" alphatest="blend"', 'size="50,50" render="Label" font="Meteo; 45" halign="center" valign="center" foregroundColor="SevenMeteoFont" backgroundColor="SevenFontBackgroundIB1" noWrap="1"'])
-                      self.skinSearchAndReplace.append(['size="70,70" render="SevenHDWetterPicon" alphatest="blend" path="WetterIcons"', 'size="70,70" render="Label" font="Meteo; 70" halign="center" valign="center" foregroundColor="SevenMeteoFont" backgroundColor="SevenFontBackgroundIB1" noWrap="1"'])
-                      self.skinSearchAndReplace.append(['convert  type="SevenHDWeather_msn">Day_0,MeteoIcon', 'convert  type="SevenHDWeather_msn">Day_0,MeteoFont'])
-                      self.skinSearchAndReplace.append(['convert  type="SevenHDWeather_msn">Day_1,MeteoIcon', 'convert  type="SevenHDWeather_msn">Day_1,MeteoFont'])
-                      self.skinSearchAndReplace.append(['convert  type="SevenHDWeather_msn">Day_2,MeteoIcon', 'convert  type="SevenHDWeather_msn">Day_2,MeteoFont'])
-                      self.skinSearchAndReplace.append(['convert  type="SevenHDWeather_msn">Day_3,MeteoIcon', 'convert  type="SevenHDWeather_msn">Day_3,MeteoFont'])
-                      self.skinSearchAndReplace.append(['convert  type="SevenHDWeather_msn">Day_4,MeteoIcon', 'convert  type="SevenHDWeather_msn">Day_4,MeteoFont'])    
-                      self.skinSearchAndReplace.append(['convert  type="SevenHDWeather_msn">Day_5,MeteoIcon', 'convert  type="SevenHDWeather_msn">Day_5,MeteoFont'])
-                elif config.plugins.SevenHD.AutoWoeIDServer.value == '_accu':
-                   if config.plugins.SevenHD.WeatherView.value == "meteo":
-                      self.skinSearchAndReplace.append(['size="50,50" path="WetterIcons" render="SevenHDWetterPicon" alphatest="blend"', 'size="50,50" render="Label" font="Meteo3; 45" halign="center" valign="center" foregroundColor="SevenMeteoFont" backgroundColor="SevenFontBackgroundIB1" noWrap="1"'])
-                      self.skinSearchAndReplace.append(['size="70,70" render="SevenHDWetterPicon" alphatest="blend" path="WetterIcons"', 'size="70,70" render="Label" font="Meteo3; 70" halign="center" valign="center" foregroundColor="SevenMeteoFont" backgroundColor="SevenFontBackgroundIB1" noWrap="1"'])
-                      self.skinSearchAndReplace.append(['convert  type="SevenHDWeather_accu">Day_0,MeteoIcon', 'convert  type="SevenHDWeather_accu">Day_0,MeteoFont'])
-                      self.skinSearchAndReplace.append(['convert  type="SevenHDWeather_accu">Day_1,MeteoIcon', 'convert  type="SevenHDWeather_accu">Day_1,MeteoFont'])
-                      self.skinSearchAndReplace.append(['convert  type="SevenHDWeather_accu">Day_2,MeteoIcon', 'convert  type="SevenHDWeather_accu">Day_2,MeteoFont'])
-                      self.skinSearchAndReplace.append(['convert  type="SevenHDWeather_accu">Day_3,MeteoIcon', 'convert  type="SevenHDWeather_accu">Day_3,MeteoFont'])    
-                      self.skinSearchAndReplace.append(['convert  type="SevenHDWeather_accu">Day_4,MeteoIcon', 'convert  type="SevenHDWeather_accu">Day_4,MeteoFont'])
-                elif config.plugins.SevenHD.AutoWoeIDServer.value == '_realtek':
-                   if config.plugins.SevenHD.WeatherView.value == "meteo":
-                      self.skinSearchAndReplace.append(['size="50,50" path="WetterIcons" render="SevenHDWetterPicon" alphatest="blend"', 'size="50,50" render="Label" font="Meteo3; 45" halign="center" valign="center" foregroundColor="SevenMeteoFont" backgroundColor="SevenFontBackgroundIB1" noWrap="1"'])
-                      self.skinSearchAndReplace.append(['size="70,70" render="SevenHDWetterPicon" alphatest="blend" path="WetterIcons"', 'size="70,70" render="Label" font="Meteo3; 70" halign="center" valign="center" foregroundColor="SevenMeteoFont" backgroundColor="SevenFontBackgroundIB1" noWrap="1"'])
-                      self.skinSearchAndReplace.append(['convert  type="SevenHDWeather_realtek">Day_0,MeteoIcon', 'convert  type="SevenHDWeather_realtek">Day_0,MeteoFont'])
-                      self.skinSearchAndReplace.append(['convert  type="SevenHDWeather_realtek">Day_1,MeteoIcon', 'convert  type="SevenHDWeather_realtek">Day_1,MeteoFont'])
-                      self.skinSearchAndReplace.append(['convert  type="SevenHDWeather_realtek">Day_2,MeteoIcon', 'convert  type="SevenHDWeather_realtek">Day_2,MeteoFont'])
-                      self.skinSearchAndReplace.append(['convert  type="SevenHDWeather_realtek">Day_3,MeteoIcon', 'convert  type="SevenHDWeather_realtek">Day_3,MeteoFont'])    
-                      self.skinSearchAndReplace.append(['convert  type="SevenHDWeather_realtek">Day_4,MeteoIcon', 'convert  type="SevenHDWeather_realtek">Day_4,MeteoFont'])
-                      self.skinSearchAndReplace.append(['convert  type="SevenHDWeather_realtek">Day_5,MeteoIcon', 'convert  type="SevenHDWeather_realtek">Day_5,MeteoFont'])
+                provider = config.plugins.SevenHD.AutoWoeIDServer.value
+                if provider == '_yahoo' or provider == '_msn':
+                   font = 'Meteo'   
+                elif provider == '_owm':
+                   font = 'Meteo2'          
+                elif provider == '_accu' or provider == '_realtek':
+                   font = 'Meteo3'
+                
+                if config.plugins.SevenHD.WeatherView.value == "meteo": 
+                   self.skinSearchAndReplace.append(['size="50,50" path="WetterIcons" render="SevenHDWetterPicon" alphatest="blend"', 'size="50,50" render="Label" font="%s; 45" halign="center" valign="center" foregroundColor="SevenMeteoFont" backgroundColor="SevenFontBackgroundIB1" noWrap="1"' % font])
+                   self.skinSearchAndReplace.append(['size="70,70" render="SevenHDWetterPicon" alphatest="blend" path="WetterIcons"', 'size="70,70" render="Label" font="%s; 70" halign="center" valign="center" foregroundColor="SevenMeteoFont" backgroundColor="SevenFontBackgroundIB1" noWrap="1"' % font])  
+                   self.skinSearchAndReplace.append(['convert  type="SevenHDWeather%s">Day_0,MeteoIcon' % str(provider), 'convert  type="SevenHDWeather%s">Day_0,MeteoFont' % str(provider)])
+                   self.skinSearchAndReplace.append(['convert  type="SevenHDWeather%s">Day_1,MeteoIcon' % str(provider), 'convert  type="SevenHDWeather%s">Day_1,MeteoFont' % str(provider)])
+                   self.skinSearchAndReplace.append(['convert  type="SevenHDWeather%s">Day_2,MeteoIcon' % str(provider), 'convert  type="SevenHDWeather%s">Day_2,MeteoFont' % str(provider)])
+                   self.skinSearchAndReplace.append(['convert  type="SevenHDWeather%s">Day_3,MeteoIcon' % str(provider), 'convert  type="SevenHDWeather%s">Day_3,MeteoFont' % str(provider)])
+                   self.skinSearchAndReplace.append(['convert  type="SevenHDWeather%s">Day_4,MeteoIcon' % str(provider), 'convert  type="SevenHDWeather%s">Day_4,MeteoFont' % str(provider)])    
+                   self.skinSearchAndReplace.append(['convert  type="SevenHDWeather%s">Day_5,MeteoIcon' % str(provider), 'convert  type="SevenHDWeather%s">Day_5,MeteoFont' % str(provider)])     
       
                 ### Progress
                 if config.plugins.SevenHD.Progress.value == "progress":
@@ -677,7 +653,7 @@ class SevenHD(Screen):
                 self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.InfobarStyle.value + "-middle.xml")         
                 
                 ###Channelname 2nd Infobar
-                if config.plugins.SevenHD.SIB.value != '-right':
+                if not config.plugins.SevenHD.SIB.value in ('-minitv2','-right'):
                    if config.plugins.SevenHD.InfobarChannelName.value == "none":
                       self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.InfobarChannelName.value + XML)
                       self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.InfobarChannelName.value + XML) 
@@ -692,7 +668,7 @@ class SevenHD(Screen):
                       self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.InfobarStyle.value + "-ICNameandNumber.xml") 
                 
                 ###clock-style xml 2nd Infobar
-		if config.plugins.SevenHD.SIB.value != '-right':
+		if not config.plugins.SevenHD.SIB.value in ('-minitv2','-right'):
                    if config.plugins.SevenHD.ClockStyle.value == 'clock-weather':
                       self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.ClockStyle.value + str(config.plugins.SevenHD.AutoWoeIDServer.value) + XML)
                       self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.ClockStyle.value + str(config.plugins.SevenHD.AutoWoeIDServer.value) + XML)
@@ -730,13 +706,18 @@ class SevenHD(Screen):
 		self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.NumberZapExt.value + XML)
                 self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.NumberZapExt.value + XML)       
                 
-                ###custom-main XML
-		self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.Image.value + XML)
-                self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.Image.value + XML)        
-                
+                #MSNWeatherPlugin
+		if fileExists(PLUGIN_PATH + "/Extensions/WeatherPlugin/plugin.pyo"):
+			self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.MSNWeather.value + XML)
+			self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.MSNWeather.value + XML)         
+               
                 ###cooltv XML
 		self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.CoolTVGuide.value + XML)
                 self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.CoolTVGuide.value + XML)      
+                
+                ###custom-main XML
+		self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.Image.value + XML)
+                self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.Image.value + XML)        
                 
                 ###skin-user
 		try:
@@ -871,7 +852,12 @@ class SevenHD(Screen):
 		      self.download_tgz('back', str(self.ChannelBack2))
                    if self.ChannelBack3.startswith('back'):
 		      self.download_tgz('back', str(self.ChannelBack3))
-                      
+                
+                if fileExists(PLUGIN_PATH + "/Extensions/WeatherPlugin/plugin.pyo") and config.plugins.SevenHD.MSNWeather.value == 'msn-icon':
+                   self.download_tgz('msn', 'msn-icon')
+                #elif fileExists(PLUGIN_PATH + "/Extensions/WeatherPlugin/plugin.pyo") and config.plugins.SevenHD.MSNWeather.value == 'msn-standard':      
+                #   self.download_tgz('msn', 'msn-standard')
+                   
                 self.debug('download tgz complett')	
         
         except:
