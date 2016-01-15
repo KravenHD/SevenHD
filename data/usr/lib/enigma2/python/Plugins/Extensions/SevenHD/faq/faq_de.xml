@@ -8,7 +8,7 @@ A: SevenHD muss erst erzeugt werden. Rufe das Plugin SevenHD auf, setze Deine Ei
 	</page>
 
         <page title="FAQ"><text value="Q: Ich habe alles eingestellt aber nach einem GUI Neustart startet immer nur das Default Skin.\n\n\n
-A: Wenn du deine Einstellungen getätigt hast, musst Du IMMER mit der grünen Taste das Plugin verlassen."/>
+A: Wenn Du deine Einstellungen getätigt hast, musst Du IMMER mit der grünen Taste das Plugin verlassen."/>
 	</page>
 
         <page title="FAQ"><text value="Q: Warum ist der Skin an den Rändern abgeschnitten?\n\n\n
@@ -61,5 +61,18 @@ A: Unter 'Sonstige Einstellungen' die Option 'ScreenName' auf JA stellen,\ndann 
 
         <page title="FAQ"><text value="Q: Irgendwie scheint das Skin bei mir nicht zu funktionieren woran kann das liegen?\n\n\n
 A: Schau bitte das Dein Image auf einen aktuellen Stand ist, da das SevenHD jeweils mit einem aktuellen Image erstellt und getestet wird."/>
+	</page>
+	
+        <page title="FAQ"><text value="Q: Ich wurde aufgefordert den debug.log hochzuladen, wei? aber nicht wie ich vorgehen soll und wo der ist?\n\n\n
+A: Geh in das Plugin und schalte unter Sonstige Einstellungen den Punkt Debug Mode auf ja und speichere mit Grün den Vorgang ab.
+Ab sofort wird alles, was für die Fehleranalyse gebraucht wird, in den debug.log gespeichert.\n\n\n
+
+1.) Der debug.log befindet sich unter /tmp/kraven_debug.log\n\n
+2.) Wenn Du einen Fehler hast, dann geh wie folgt vor.\n\n
+2.a) Öffne das Plugin und nimm Deine Einstellungen vor wie gewohnt.\n\n
+2.b) Speichere jeden Vorgang mit der grünen Taste.\n\n
+2.c) Jetzt kommt der Punkt, wo das Skin generiert wird und die Frage des GUI Neustart kommt, den Du nat. mit JA bestätigst.\n\n
+3.) Falls beim generieren ein Fehler aufgetreten ist, gehst Du jetzt in das /tmp Verzeichniss und kopierst die kraven_debug.log auf Deinen PC.
+Keinesfalls ins Plugin gehen!! Bei jedem Aufruf des Plugin, wird die /tmp/kraven_debug.log gelöscht und Du darfst alles nochmal machen."/>
 	</page>
 </mphelp>

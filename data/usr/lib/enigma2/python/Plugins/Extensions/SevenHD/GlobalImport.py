@@ -1,10 +1,10 @@
-#version = '3.6.53'
+#version = '3.6.54'
 import os
 try:
    opkg_info = os.popen("opkg list-installed enigma2-plugin-skins-sevenhd | cut -d ' ' -f3").read()
    version = str(opkg_info.strip().split('+')[0])
 except:
-   version = '3.6.53'
+   version = '3.6.54'
 import re
 import time
 import math
@@ -370,7 +370,7 @@ config.plugins.SevenHD.MovieSelectionStyle = ConfigSelection(default="movieselec
 				("movieselectionbigcover", _("big cover")),
 				("movieselectionminitv", _("miniTV"))
 				])
-config.plugins.SevenHD.MSNWeather = ConfigSelection(default="standard", choices = [
+config.plugins.SevenHD.MSNWeather = ConfigSelection(default="msn-standard", choices = [
 				("msn-standard", _("standard")),
 				("msn-icon", _("alternative icons"))
 				])
