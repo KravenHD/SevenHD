@@ -2,7 +2,9 @@
 if [ -f /tmp/user_color.txt ]; then
     cp /tmp/user_color.txt /usr/lib/enigma2/python/Plugins/Extensions/SevenHD/user
 fi
-
+if [ -f /tmp/user_font.txt ]; then
+    cp /tmp/user_font.txt /usr/lib/enigma2/python/Plugins/Extensions/SevenHD/user
+fi
 if [ -f /tmp/skin-user.xml ]; then
     cp /tmp/skin-user.xml /usr/lib/enigma2/python/Plugins/Extensions/SevenHD/data
 fi
