@@ -37,6 +37,7 @@ def _(txt):
 	return t
 
 URL = 'http://weather.service.msn.com/data.aspx?src=outlook&culture=' + str(config.plugins.SevenHD.weather_language.value) + '&weadegreetype=C&wealocations=wc:' + str(config.plugins.SevenHD.weather_locationcode.value)
+WEATHER_DATA = None
 
 class SevenHDWeather_msn(Converter, object):
 	def __init__(self, type):
@@ -46,6 +47,7 @@ class SevenHDWeather_msn(Converter, object):
                 self.what = type[1]
                 self.data = {}
                 self.timer = eTimer()
+                self.timer.callback.append(self.reset)
 		self.timer.callback.append(self.get_Data)
 		self.get_Data()
 		 
@@ -77,90 +79,140 @@ class SevenHDWeather_msn(Converter, object):
                self.info = self.getCompWind()	
             elif self.what == 'Humidity':
                self.info = self.getHumidity()
+            elif self.what == 'RainPrecent':
+               self.info = self.getRainPrecent(int(day))
             elif self.what == 'City':
                self.info = str(config.plugins.SevenHD.weather_cityname.getValue())
                
             return str(self.info)
 	text = property(getText)
 	
+	def reset(self):
+	    global WEATHER_DATA
+            WEATHER_DATA = None
+            
         def get_Data(self):
+            global WEATHER_DATA
+            if WEATHER_DATA is None:
+
+               self.data = {}
+               index = 0
             
-            self.data = {}
-            index = 0
+               res = requests.request('get', URL)
+               root = fromstring(res.text)
             
-            res = requests.request('get', URL)
-            root = fromstring(res.text)
-            
-            for childs in root:
-                for items in childs:
-                    if items.tag == 'current':
-                       self.data['Day_%s' % str(index)] = {}
-                       self.data['Day_%s' % str(index)]['temp'] = items.attrib.get('temperature').encode('utf-8', 'ignore')
-                       self.data['Day_%s' % str(index)]['skytextday'] = items.attrib.get('skytext').encode('utf-8', 'ignore')
-                       self.data['Day_%s' % str(index)]['humidity'] = items.attrib.get('humidity').encode('utf-8', 'ignore')
-                       self.data['Day_%s' % str(index)]['winddisplay'] = items.attrib.get('winddisplay').encode('utf-8', 'ignore')
-                       self.data['Day_%s' % str(index)]['feelslike'] = items.attrib.get('feelslike').encode('utf-8', 'ignore')
-                       self.data['Day_%s' % str(index)]['skycodeday'] = items.attrib.get('skycode').encode('utf-8', 'ignore')
-                       self.data['Day_%s' % str(index)]['shortday'] = items.attrib.get('shortday').encode('utf-8', 'ignore')
-                       self.data['Day_%s' % str(index)]['longday'] = items.attrib.get('day').encode('utf-8', 'ignore')
-                       self.data['Day_%s' % str(index)]['observationpoint'] = items.attrib.get('observationpoint').encode('utf-8', 'ignore')
-                    elif items.tag == 'forecast':
-                       index += 1
-                       self.data['Day_%s' % str(index)] = {}
-                       self.data['Day_%s' % str(index)]['low'] = items.attrib.get('low').encode('utf-8', 'ignore')
-                       self.data['Day_%s' % str(index)]['high'] = items.attrib.get('high').encode('utf-8', 'ignore')
-                       self.data['Day_%s' % str(index)]['skycodeday'] = items.attrib.get('skycodeday').encode('utf-8', 'ignore')
-                       self.data['Day_%s' % str(index)]['skytextday'] = items.attrib.get('skytextday').encode('utf-8', 'ignore')
-                       self.data['Day_%s' % str(index)]['shortday'] = items.attrib.get('shortday').encode('utf-8', 'ignore')          
-                       self.data['Day_%s' % str(index)]['longday'] = items.attrib.get('day').encode('utf-8', 'ignore')
-                       
-            timeout = int(config.plugins.SevenHD.refreshInterval.value) * 1000.0 * 60.0
-            self.timer.start(int(timeout), True)
-            
+               for childs in root:
+                   for items in childs:
+                       if items.tag == 'current':
+                          self.data['Day_%s' % str(index)] = {}
+                          self.data['Day_%s' % str(index)]['temp'] = items.attrib.get('temperature').encode('utf-8', 'ignore')
+                          self.data['Day_%s' % str(index)]['skytextday'] = items.attrib.get('skytext').encode('utf-8', 'ignore')
+                          self.data['Day_%s' % str(index)]['humidity'] = items.attrib.get('humidity').encode('utf-8', 'ignore')
+                          self.data['Day_%s' % str(index)]['winddisplay'] = items.attrib.get('winddisplay').encode('utf-8', 'ignore')
+                          self.data['Day_%s' % str(index)]['feelslike'] = items.attrib.get('feelslike').encode('utf-8', 'ignore')
+                          self.data['Day_%s' % str(index)]['skycodeday'] = items.attrib.get('skycode').encode('utf-8', 'ignore')
+                          self.data['Day_%s' % str(index)]['shortday'] = items.attrib.get('shortday').encode('utf-8', 'ignore')
+                          self.data['Day_%s' % str(index)]['longday'] = items.attrib.get('day').encode('utf-8', 'ignore')
+                          self.data['Day_%s' % str(index)]['observationpoint'] = items.attrib.get('observationpoint').encode('utf-8', 'ignore')
+                       elif items.tag == 'forecast':
+                          index += 1
+                          self.data['Day_%s' % str(index)] = {}
+                          self.data['Day_%s' % str(index)]['low'] = items.attrib.get('low').encode('utf-8', 'ignore')
+                          self.data['Day_%s' % str(index)]['high'] = items.attrib.get('high').encode('utf-8', 'ignore')
+                          self.data['Day_%s' % str(index)]['skycodeday'] = items.attrib.get('skycodeday').encode('utf-8', 'ignore')
+                          self.data['Day_%s' % str(index)]['skytextday'] = items.attrib.get('skytextday').encode('utf-8', 'ignore')
+                          self.data['Day_%s' % str(index)]['shortday'] = items.attrib.get('shortday').encode('utf-8', 'ignore')          
+                          self.data['Day_%s' % str(index)]['longday'] = items.attrib.get('day').encode('utf-8', 'ignore')
+                          self.data['Day_%s' % str(index)]['precip'] = items.attrib.get('precip').encode('utf-8', 'ignore')
+                          
+               WEATHER_DATA = self.data
+               timeout = int(config.plugins.SevenHD.refreshInterval.value) * 1000.0 * 60.0
+               self.timer.start(int(timeout), True)
+               
+            else:
+               self.data = WEATHER_DATA
+               
         def getMinTemp(self, day):
-            temp = self.data['Day_%s' % str(day)]['low']
-            if temp == '':
-               temp = 'N/A'
-            return str(temp) + '°C'
+            try:
+               temp = self.data['Day_%s' % str(day)]['low']
+               if temp == '':
+                  temp = 'N/A'
+               return str(temp) + '°C'
+            except:
+               return 'N/A'
             
         def getMaxTemp(self, day):
-            temp = self.data['Day_%s' % str(day)]['high']
-            if temp == '':
-               temp = 'N/A'
-            return str(temp) + '°C'
-        
+            try:
+               temp = self.data['Day_%s' % str(day)]['high']
+               if temp == '':
+                  temp = 'N/A'
+               return str(temp) + '°C'
+            except:
+               return 'N/A'
+            
         def getFeelTemp(self):
-            temp = self.data['Day_0']['temp']
-            feels = self.data['Day_0']['feelslike']
-            return str(temp) + '°C' + _(", feels ") + str(feels) + '°C'
-        
+            try:
+               temp = self.data['Day_0']['temp']
+               feels = self.data['Day_0']['feelslike']
+               return str(temp) + '°C' + _(", feels ") + str(feels) + '°C'
+            except:
+               return 'N/A'
+            
         def getDayTemp(self):
-            temp = self.data['Day_0']['temp']
-            return str(temp) + '°C'
+            try:
+               temp = self.data['Day_0']['temp']
+               return str(temp) + '°C'
+            except:
+               return 'N/A'
             
         def getWeatherDes(self, day):
-            weather = self.data['Day_%s' % str(day)]['skytextday']
-            return str(weather)
+            try:
+               weather = self.data['Day_%s' % str(day)]['skytextday']
+               return str(weather)
+            except:
+               return 'N/A'
             
         def getWeatherIcon(self, day):
-            weathericon = self.data['Day_%s' % str(day)]['skycodeday']
-            return str(weathericon)
+            try:
+               weathericon = self.data['Day_%s' % str(day)]['skycodeday']
+               return str(weathericon)
+            except:
+               return 'N/A'
             
         def getShortDay(self, day):
-            weather_dayname = self.data['Day_%s' % str(day)]['shortday']
-            return str(weather_dayname)
+            try:
+               weather_dayname = self.data['Day_%s' % str(day)]['shortday']
+               return str(weather_dayname)
+            except:
+               return 'N/A'
             
         def getLongDay(self, day):
-            weather_dayname = self.data['Day_%s' % str(day)]['longday']
-            return str(weather_dayname)
+            try:
+               weather_dayname = self.data['Day_%s' % str(day)]['longday']
+               return str(weather_dayname)
+            except:
+               return 'N/A'
             
         def getCompWind(self):
-            wind = self.data['Day_0']['winddisplay']
-            return str(wind)
-            
+            try:
+               wind = self.data['Day_0']['winddisplay']
+               return str(wind)
+            except:
+               return 'N/A'
+        
+        def getRainPrecent(self, day):
+            try:
+               rainprobability = self.data['Day_%s' % str(day)]['precip']
+               return str(float(rainprobability)) + ' %'
+            except:
+               return 'N/A'    
+        
         def getHumidity(self):
-            humi = self.data['Day_0']['humidity']
-            return str(humi) + _('% humidity')
+            try:
+               humi = self.data['Day_0']['humidity']
+               return str(humi) + _('% humidity')
+            except:
+               return 'N/A'
             
         def getMeteoFont(self, day):
             

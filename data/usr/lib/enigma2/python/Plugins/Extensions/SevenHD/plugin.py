@@ -16,6 +16,7 @@
 from GlobalImport import *
 from OnlineUpdate import *
 from ChangeSkin import *
+from FontSettings import FontSettings
 from MainSettings import MainSettings
 from MenuSettings import MenuSettings
 from PluginSettings import PluginSettings
@@ -75,7 +76,7 @@ class SevenHD(Screen):
                          <eLabel font="Regular; 20" foregroundColor="#00389416" backgroundColor="#00000000" halign="left" valign="center" position="264,662" size="148,48" text="Save" transparent="1" />
                          <eLabel font="Regular; 20" foregroundColor="#00e5b243" backgroundColor="#00000000" halign="left" valign="center" position="464,662" size="148,48" text="Defaults" transparent="1" />
                          <eLabel font="Regular; 20" foregroundColor="#000064c7" backgroundColor="#00000000" halign="left" valign="center" position="664,662" size="148,48" text="Extras/FAQ" transparent="1" />
-                         <widget name="menuList" position="18,72" size="816,575" scrollbarMode="showOnDemand" transparent="1" zPosition="1" backgroundColor="#00000000" />
+                         <widget name="menuList" position="18,72" size="816,575" itemHeight="36" scrollbarMode="showOnDemand" transparent="1" zPosition="1" backgroundColor="#00000000" />
                          <eLabel position="70,12" size="708,46" text="SevenHD" font="Regular; 35" valign="center" halign="center" transparent="1" backgroundColor="#00000000" foregroundColor="#00ffffff" name="," />
                          <widget name="helperimage" position="891,274" size="372,209" zPosition="1" backgroundColor="#00000000" />
                          <widget backgroundColor="#00000000" font="Regular2; 34" foregroundColor="#00ffffff" position="70,12" render="Label" size="708,46" source="Title" transparent="1" halign="center" valign="center" noWrap="1" />
@@ -133,13 +134,15 @@ class SevenHD(Screen):
                 
             }, -1)	
            
-        list = []
+        list = []  
         list.append(MenuEntryItem(_("main setting"), "MainSettings"))
         list.append(MenuEntryItem(_("menu setting"), "MenuSettings"))
         list.append(MenuEntryItem(_("plugin setting"), "PluginSettings"))
         list.append(MenuEntryItem(_("infobar and second infobar"), "InfobarSettings"))
         list.append(MenuEntryItem(_("infobar extras"), "InfobarExtraSettings"))
         list.append(MenuEntryItem(_("channel selection"), "ChannelSettings"))
+        if fileExists(MAIN_SKIN_PATH + 'skin.xml'):
+           list.append(MenuEntryItem(_("font setting"), "FontSettings"))
         list.append(MenuEntryItem(_("other settings"), "SonstigeSettings"))
         list.append(MenuEntryItem(_("system osd settings"), "SystemOSDSettings"))
         if CREATOR != 'OpenMips':
@@ -169,11 +172,13 @@ class SevenHD(Screen):
 
         cur = self["menuList"].getCurrent()
 
-        if cur:
+        if cur:                
             selectedKey = cur[0][1]
             self.debug('def ShowPicture\nneed: ' + MAIN_IMAGE_PATH + str(selectedKey) + '.jpg\n')
             if selectedKey == "MainSettings":
                imageUrl = MAIN_IMAGE_PATH + str("MAINSETTINGS.jpg")
+            elif selectedKey == "FontSettings":
+               imageUrl = MAIN_IMAGE_PATH + str("MENU.jpg")
             elif selectedKey == "MenuSettings":
                imageUrl = MAIN_IMAGE_PATH + str("MENU.jpg")
             elif selectedKey == "PluginSettings":
@@ -206,9 +211,11 @@ class SevenHD(Screen):
         if cur:
             selectedKey = cur[0][1]
             self.debug('def ok\ntry open: "' + selectedKey + '" Screen\n')
-            
+                               
             if selectedKey == "MainSettings":
                 self.session.open(MainSettings)
+            elif selectedKey == "FontSettings":
+                self.session.open(FontSettings)
             elif selectedKey == "MenuSettings":
                 self.session.open(MenuSettings)
             elif selectedKey == "PluginSettings":
@@ -234,21 +241,27 @@ class SevenHD(Screen):
     def ask_for_save(self):
         if config.plugins.SevenHD.skin_mode.value == '1':
            self.server_dir = 'SevenHD'
+           self.value = float(1)
         if config.plugins.SevenHD.skin_mode.value == '2':
            self.server_dir = 'SevenFHD'
+           self.value = float(1.5)
         if config.plugins.SevenHD.skin_mode.value >= '3':
            if config.plugins.SevenHD.skin_mode.value == '3': 
               msg_text = '3840x2160 for UHD'
               self.server_dir = 'SevenUHD'
+              self.value = float(3)
            if config.plugins.SevenHD.skin_mode.value == '4':
               msg_text = '4096x2160 for 4k'
               self.server_dir = 'Seven4k'
+              self.value = float(3)
            if config.plugins.SevenHD.skin_mode.value == '5':
               msg_text = '7680x4320 for FUHD'
               self.server_dir = 'SevenFUHD'
+              self.value = float(4.5)
            if config.plugins.SevenHD.skin_mode.value == '6':
               msg_text = '8192x4320 for 8k'
-              self.server_dir = 'Seven8k'     
+              self.server_dir = 'Seven8k'
+              self.value = float(4.5)     
            if config.plugins.SevenHD.skin_mode.value == '7':
               msg_text = '%sx%s' % (str(int(config.plugins.SevenHD.skin_mode_x.value)), str(int(config.plugins.SevenHD.skin_mode_y.value)))
               if str(config.plugins.SevenHD.skin_mode_x.value) >= '1280':
@@ -707,7 +720,7 @@ class SevenHD(Screen):
                 self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.NumberZapExt.value + XML)       
                 
                 #MSNWeatherPlugin
-		if fileExists(PLUGIN_PATH + "/Extensions/WeatherPlugin/plugin.pyo"):
+		if fileExists(PLUGIN_PATH + "Extensions/WeatherPlugin/plugin.pyo"):
 			self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.MSNWeather.value + XML)
 			self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.MSNWeather.value + XML)         
                
@@ -786,6 +799,9 @@ class SevenHD(Screen):
                       rename(TMPFILE, FILE)
                       self.debug('rename : ' + TMPFILE + ' to ' + FILE + "\n")
 		
+                # user_font
+                if fileExists(MAIN_USER_PATH + 'user_font.txt'):
+                   os.system('python /usr/lib/enigma2/python/Plugins/Extensions/SevenHD/ChangeFont.py %s' % str(self.value))
                 
                 self.debug('Console')	
 		
@@ -853,7 +869,7 @@ class SevenHD(Screen):
                    if self.ChannelBack3.startswith('back'):
 		      self.download_tgz('back', str(self.ChannelBack3))
                 
-                if fileExists(PLUGIN_PATH + "/Extensions/WeatherPlugin/plugin.pyo") and config.plugins.SevenHD.MSNWeather.value == 'msn-icon':
+                if fileExists(PLUGIN_PATH + "Extensions/WeatherPlugin/plugin.pyo") and config.plugins.SevenHD.MSNWeather.value == 'msn-icon':
                    self.download_tgz('msn', 'msn-icon')
                 #elif fileExists(PLUGIN_PATH + "/Extensions/WeatherPlugin/plugin.pyo") and config.plugins.SevenHD.MSNWeather.value == 'msn-standard':      
                 #   self.download_tgz('msn', 'msn-standard')
@@ -944,7 +960,7 @@ class SevenHD(Screen):
            options.extend(((_("Install EnhancedMovieCenter?"), boundFunction(self.Open_Setup, "enigma2-plugin-extensions-enhancedmoviecenter")),))
         
         if config.plugins.SevenHD.NumberZapExtImport.value:
-           if fileExists(PLUGIN_PATH + "/SystemPlugins/NumberZapExt/NumberZapExt.pyo"):
+           if fileExists(PLUGIN_PATH + "SystemPlugins/NumberZapExt/NumberZapExt.pyo"):
               options.extend(((_("Open NumberZapExt Setup"), boundFunction(self.Open_NumberExt)),))
            else:
               options.extend(((_("Install NumberZapExt?"), boundFunction(self.Open_Setup, "enigma2-plugin-systemplugins-extnumberzap")),))
@@ -958,22 +974,33 @@ class SevenHD(Screen):
            options.extend(((_("Install SystemFonts"), boundFunction(self.install_systemfonts)),))
         else:
            options.extend(((_("Refresh SystemFonts"), boundFunction(self.install_systemfonts)),))
-           
+        
+        if fileExists(MAIN_USER_PATH + "user_font.txt"):
+           options.extend(((_("Reset UserFont Height"), boundFunction(self.reset_font_height)),))   
+        
         options.extend(((_("Share my Skin"), boundFunction(self.Share_Skin)),))
         options.extend(((_("ChangeLog"), boundFunction(self.ChangeLog)),))
         options.extend(((_("About Team"), boundFunction(self.send_to_msg_box, "Team Kraven\n\xc3\xb6rlgrey, TBX, stony272, thomele, Philipswalther and Kraven")),))
+        
         if fileExists(FILE):
            options.extend(((_("About Skin"), boundFunction(self.About)),))
+        
         options.extend(((_("Version"), boundFunction(self.do_version)),))
+        
         if fileExists(PLUGIN_PATH + "SystemPlugins/MPHelp/plugin.pyo"):
            options.extend(((_("FAQ"), boundFunction(self.show_faq)),))
         else:
            options.extend(((_("FAQ"), boundFunction(self.send_to_msg_box, "No MPHelp Plugin installed")),))
+        
         self.session.openWithCallback(self.menuCallback, ChoiceBox,list = options)
             
     def menuCallback(self, ret):
         ret and ret[1]()
     
+    def reset_font_height(self):
+        os.system('rm -f ' + MAIN_USER_PATH + 'user_font.txt')
+        self.session.open(MessageBox,_('user_font.txt removed'), MessageBox.TYPE_INFO, timeout = 5)
+        
     def show_faq(self):
         if fileExists(resolveFilename(SCOPE_PLUGINS, "Extensions/SevenHD/faq/faq_%s.xml" % str(config.plugins.SevenHD.faq_language.value))):
            from Plugins.SystemPlugins.MPHelp import PluginHelp, XMLHelpReader
@@ -981,7 +1008,7 @@ class SevenHD(Screen):
            Faq = PluginHelp(*reader)
            Faq.open(self.session)
         else:
-           self.session.open(MessageBox,_('The FAQ is not in your Language available.'), MessageBox.TYPE_INFO)
+           self.session.open(MessageBox,_('The FAQ is not in your Language available.'), MessageBox.TYPE_INFO, timeout = 5)
            
     def install_systemfonts(self):
         ttf_dir = os.popen('find / -name *.ttf').read().split('\n')
@@ -1005,7 +1032,7 @@ class SevenHD(Screen):
     def do_version(self):
         config.plugins.SevenHD.version.setValue(str(version))
         config.plugins.SevenHD.version.save()
-        self.session.open(MessageBox,_('Youre Version is %s' % str(config.plugins.SevenHD.version.getValue())), MessageBox.TYPE_INFO)
+        self.session.open(MessageBox,_('Youre Version is %s' % str(config.plugins.SevenHD.version.getValue())), MessageBox.TYPE_INFO, timeout = 5)
         
     def About(self):
         with open(FILE, 'r') as xFile:
@@ -1056,15 +1083,15 @@ class SevenHD(Screen):
         
         if what == 'share':
            if answer:
-              self.session.open(MessageBox,_('Youre Skin Config is ready to share.\nLook in /tmp for youre Skin File.'), MessageBox.TYPE_INFO)
+              self.session.open(MessageBox,_('Youre Skin Config is ready to share.\nLook in /tmp for youre Skin File.'), MessageBox.TYPE_INFO, timeout = 5)
            else:
-              self.session.open(MessageBox,_('Anything goes wrong.'), MessageBox.TYPE_INFO)
+              self.session.open(MessageBox,_('Anything goes wrong.'), MessageBox.TYPE_INFO, timeout = 5)
         else:
            if answer:
               self.save()
-              self.session.open(MessageBox,_('New Skin Config is load.'), MessageBox.TYPE_INFO)
+              self.session.open(MessageBox,_('New Skin Config is load.'), MessageBox.TYPE_INFO, timeout = 5)
            else:
-              self.session.open(MessageBox,_('Skin Config is wrong.'), MessageBox.TYPE_INFO)
+              self.session.open(MessageBox,_('Skin Config is wrong.'), MessageBox.TYPE_INFO, timeout = 5)
               
     def Open_Setup(self, what):
         self.reboot("GUI needs a restart after download Plugin.\nDo you want to Restart the GUI now?")

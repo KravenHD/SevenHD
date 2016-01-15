@@ -1,10 +1,8 @@
-
- <!-- Clock Seconds */-->
-<widget source="global.CurrentTime" position="1090,572" size="148,36" font="Regular; 22" render="Label" halign="center" zPosition="12" backgroundColor="SevenFontBackgroundIB1" foregroundColor="SevenClockDate" transparent="1">
-    <convert type="SevenHDClockToText">Format:%d.%m.%Y</convert>
-  </widget>
-  <widget source="global.CurrentTime" position="1090,636" size="148,36" font="Regular2; 24" render="Label" halign="center" zPosition="12" backgroundColor="SevenFontBackgroundIB1" foregroundColor="SevenClockTime" transparent="1">
-    <convert type="SevenHDClockToText">WithSeconds</convert>
-  </widget>
-<!-- Clock Seconds */-->
-
+		<!-- Clock Seconds */-->
+		<widget source="global.CurrentTime" position="1090,572" size="148,36" font="Regular; 22" render="Label" halign="center" zPosition="12" backgroundColor="SevenFontBackgroundIB1" foregroundColor="SevenClockDate" transparent="1">
+			<convert type="SevenHDClockToText">Format:%d.%m.%Y</convert>
+		</widget>
+		<widget source="global.CurrentTime" position="1090,636" size="148,36" font="Regular2; 24" render="Label" halign="center" zPosition="12" backgroundColor="SevenFontBackgroundIB1" foregroundColor="SevenClockTime" transparent="1">
+			<convert type="SevenHDClockToText">WithSeconds</convert>
+		</widget>
+		<!-- Clock Seconds */-->

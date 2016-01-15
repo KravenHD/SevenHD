@@ -38,6 +38,9 @@ def _(txt):
 URL = 'http://api.accuweather.com/forecasts/v1/daily/5day/' + str(config.plugins.SevenHD.weather_locationcode.value) + '?apikey=srRLeAmTroxPinDG8Aus3Ikl6tLGJd94&metric=true&details=true&language=' + str(config.plugins.SevenHD.weather_language.value)
 URL2 = 'http://api.accuweather.com/currentconditions/v1/' + str(config.plugins.SevenHD.weather_locationcode.value) + '?apikey=srRLeAmTroxPinDG8Aus3Ikl6tLGJd94&metric=true&details=true&language=' + str(config.plugins.SevenHD.weather_language.value)
 
+WEATHER_DATA1 = None
+WEATHER_DATA2 = None
+
 class SevenHDWeather_accu(Converter, object):
 	def __init__(self, type):
                 Converter.__init__(self, type)
@@ -45,6 +48,7 @@ class SevenHDWeather_accu(Converter, object):
                 self.day_value = type[0]
                 self.what = type[1]
                 self.timer = eTimer()
+                self.timer.callback.append(self.reset)
 		self.timer.callback.append(self.get_Data)
                 self.get_Data()
 		 
@@ -72,64 +76,133 @@ class SevenHDWeather_accu(Converter, object):
                self.info = self.getCompWind()	
             elif self.what == 'Humidity':
                self.info = self.getHumidity()
+            elif self.what == 'RainMM':
+               self.info = self.getRainMM()
+            elif self.what == 'RainPrecent':
+               self.info = self.getRainPrecent(int(day))
             elif self.what == 'City':
                self.info = str(config.plugins.SevenHD.weather_cityname.getValue()) 
             return str(self.info)
 	text = property(getText)
 	
-        def get_Data(self):
-            res = requests.request('get', URL)
-            self.data = res.json()
-            res2 = requests.request('get', URL2)
-            self.data2 = res2.json()
-            timeout = int(config.plugins.SevenHD.refreshInterval.value) * 1000.0 * 60.0
-            self.timer.start(int(timeout), True)
+	def reset(self):
+	    global WEATHER_DATA1
+	    global WEATHER_DATA2
+            WEATHER_DATA1 = None
+            WEATHER_DATA2 = None
             
+        def get_Data(self):
+            global WEATHER_DATA1
+            global WEATHER_DATA2
+            if WEATHER_DATA1 is None or WEATHER_DATA2 is None:
+            
+               res = requests.request('get', URL)
+               self.data = res.json()
+               WEATHER_DATA1 = self.data
+               
+               res2 = requests.request('get', URL2)
+               self.data2 = res2.json()
+               WEATHER_DATA2 = self.data2
+               
+               timeout = int(config.plugins.SevenHD.refreshInterval.value) * 1000.0 * 60.0
+               self.timer.start(int(timeout), True)
+               
+            else:
+               self.data = WEATHER_DATA1
+               self.data2 = WEATHER_DATA2
+               
         def getMinTemp(self, day):
-            temp = self.data['DailyForecasts'][day]['Temperature']['Minimum']['Value']
-            return str(float(temp)) + '°C'
+            try:
+               temp = self.data['DailyForecasts'][day]['Temperature']['Minimum']['Value']
+               return str(float(temp)) + '°C'
+            except:
+               return 'N/A'
             
         def getMaxTemp(self, day):
-            temp = self.data['DailyForecasts'][day]['Temperature']['Maximum']['Value']
-            return str(float(temp)) + '°C'
-        
+            try:
+               temp = self.data['DailyForecasts'][day]['Temperature']['Maximum']['Value']
+               return str(float(temp)) + '°C'
+            except:
+               return 'N/A'
+            
         def getDayTemp(self):
-            temp = self.data2[0]['Temperature']['Metric']['Value']
-            return str(float(temp)) + '°C'
+            try:
+               temp = self.data2[0]['Temperature']['Metric']['Value']
+               return str(float(temp)) + '°C'
+            except:
+               return 'N/A'
             
         def getWeatherDes(self, day):
-            weather = self.data['DailyForecasts'][day]['Day']['IconPhrase']
-            return str(weather)
+            try:
+               weather = self.data['DailyForecasts'][day]['Day']['IconPhrase']
+               return str(weather)
+            except:
+               return 'N/A'
             
         def getWeatherIcon(self, day):
-            weathericon = self.data['DailyForecasts'][day]['Day']['Icon']
-            return str(weathericon)
-            
+            try:
+               weathericon = self.data['DailyForecasts'][day]['Day']['Icon']
+               return str(weathericon)
+            except:
+               return 'N/A'  
+        
+        def getRainPrecent(self, day):
+            try:
+               rainprobability = self.data['DailyForecasts'][day]['Day']['RainProbability']
+               return str(rainprobability) + ' %'
+            except:
+               return 'N/A'    
+        
         def getWeatherDate(self, day):
-            weather_epoch_date = self.data['DailyForecasts'][day]['EpochDate']
-            weather_dayname = time.strftime('%a', time.localtime(weather_epoch_date))
-            return str(weather_dayname)
-        
+            try:
+               weather_epoch_date = self.data['DailyForecasts'][day]['EpochDate']
+               weather_dayname = time.strftime('%a', time.localtime(weather_epoch_date))
+               return str(weather_dayname)
+            except:
+               return 'N/A'
+               
         def getCompWind(self):
-            wind = self.data['DailyForecasts'][0]['Day']['Wind']['Direction']['Localized']
-            speed = self.getSpeed()
-            return str(speed) + _(" from ") + str(wind)
-        
+            try:
+               wind = self.data['DailyForecasts'][0]['Day']['Wind']['Direction']['Localized']
+               speed = self.getSpeed()
+               return str(speed) + _(" from ") + str(wind)
+            except:
+               return 'N/A'
+            
         def getSpeed(self):
-            windspeed = self.data['DailyForecasts'][0]['Day']['Wind']['Speed']['Value']
-            return str(float(windspeed)) + ' km/h'
+            try:
+               windspeed = self.data['DailyForecasts'][0]['Day']['Wind']['Speed']['Value']
+               return str(float(windspeed)) + ' km/h'
+            except:
+               return 'N/A'
             
         def getHumidity(self):
-            humi = self.data2[0]['RelativeHumidity']
-            return str(humi) + _('% humidity')
-        
+            try:
+               humi = self.data2[0]['RelativeHumidity']
+               return str(humi) + _('% humidity')
+            except:
+               return 'N/A'
+            
         def getFeelTemp(self):
-            temp = self.data2[0]['Temperature']['Metric']['Value']
-            feels = self.data2[0]['RealFeelTemperature']['Metric']['Value']
-            return str(temp) + '°C' + _(", feels ") + str(feels) + '°C'
-        
+            try:
+               temp = self.data2[0]['Temperature']['Metric']['Value']
+               feels = self.data2[0]['RealFeelTemperature']['Metric']['Value']
+               return str(temp) + '°C' + _(", feels ") + str(feels) + '°C'
+            except:
+               return 'N/A'
+            
         def getMeteoFont(self, day):
-            font = self.data['DailyForecasts'][day]['Day']['Icon']
-            font_icon = '0x' + str(20 + font)
-            weather_font_icon = unichr(int(font_icon, 16)).encode('utf-8')
-            return str(weather_font_icon)
+            try:
+               font = self.data['DailyForecasts'][day]['Day']['Icon']
+               font_icon = '0x' + str(20 + font)
+               weather_font_icon = unichr(int(font_icon, 16)).encode('utf-8')
+               return str(weather_font_icon)
+            except:
+               return 'N/A'
+               
+        def getRainMM(self, day):
+            try:
+               rain = self.data['DailyForecasts'][day]['Day']['Rain']['Value']
+               return str(float(rain)) + ' mm'
+            except:
+               return 'N/A'

@@ -1,34 +1,33 @@
-<!-- /* ChannelSelection Preview -->
-<screen backgroundColor="transparent" flags="wfNoBorder" name="ChannelSelection" position="0,0" size="1280,720" title="Channel Selection">
-<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="ChannelSelection" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
-  <widget backgroundColor="SevenFontBackCS" foregroundColor="SevenNameList" scrollbarMode="showNever" picServiceEventProgressbar="SevenHD/progresslistcs/progresslistcs52.png" colorEventProgressbar="SevenProgressListCS" colorEventProgressbarSelected="SevenProgressListCS" foregroundColorMarkedSelected="green" colorEventProgressbarBorder="SevenProgressBorderCS" colorEventProgressbarBorderSelected="SevenProgressBorderCS" colorServiceDescription="SevenProgramList" colorServiceDescriptionSelected="SevenSelFont" colorServiceRecording="red" foregroundColorServiceNotAvail="yellow" itemHeight="50" name="list" position="591,74" serviceInfoFont="Regular2;22" serviceItemHeight="37" serviceNameFont="Regular;26" serviceNumberFont="Regular;26" size="662,564" transparent="1" />
-  <widget font="Regular; 22" foregroundColor="SevenDestcriptionCS" position="30,402" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,steptime=90,wrap=1,always=0,repeat=2,oneshot=1" size="505,164" source="ServiceEvent" valign="top" backgroundColor="SevenFontBackCS" zPosition="1" transparent="1">
-    <convert type="SevenHDEventName">BothDescriptionsFiltered</convert>
-  </widget>
-  <widget font="Regular; 30" foregroundColor="SevenProgramCS" position="30,16" halign="center" render="SevenHDRunningText" options="movetype=running,startpoint=0,startdelay=2000,steptime=90,wrap=0,always=0,repeat=2,oneshot=1" size="505,40" source="ServiceEvent" backgroundColor="SevenFontBackCS" zPosition="1" valign="bottom" noWrap="1" transparent="1">
-    <convert type="SevenHDEventName">Name</convert>
-  </widget>
-  <widget source="ServiceEvent" render="SevenHDMiniTV" position="30,109" size="505,282" backgroundColor="transparent" zPosition="2">
-    <convert type="SevenHDMiniTVDisplay" />
-    </widget>
-  <widget backgroundColor="SevenFontBackCS" font="Regular; 18" halign="right" position="459,80" render="Label" size="77,25" source="ServiceEvent" transparent="1" valign="center" zPosition="1" foregroundColor="SevenRuntimeCS">
-    <convert type="SevenHDEventTime">Remaining</convert>
-    <convert type="SevenHDRemainingToText">InMinutes</convert>
-  </widget>
-  <eLabel position="30,93" size="426,1" backgroundColor="SevenProgressLineCS" />
-  <widget source="ServiceEvent" render="Progress" position="30,91" size="426,5" borderWidth="0" backgroundColor="SevenFontBackCS" foregroundColor="SevenProgressCS" transparent="1" zPosition="1" pixmap="SevenHD/progresscs/progresscs426.png">
-  <convert type="SevenHDEventTime">Progress</convert>
-</widget>
-  <widget source="ServiceEvent" render="SevenHDSingleEpgList" position="30,574" size="505,50" font="Regular2;19" backgroundColor="SevenFontBackCS" foregroundColor="SevenNextCS" transparent="1" noWrap="1">
-  </widget>
-  <panel name="template_menu_cs4_button" />
-  <widget backgroundColor="SevenFontBackCS" font="Regular;22" foregroundColor="SevenPrimeCS" position="30,628" render="Label" size="505,30" source="ServiceEvent" transparent="1" zPosition="5" noWrap="1">
-    <convert type="SevenHDNextEvents">PrimeTime,noDuration</convert>
-  </widget>
-
-<eLabel backgroundColor="SevenBorderCS" position="30,387" size="505,4" zPosition="5" />
-<eLabel backgroundColor="SevenBorderCS" position="30,108" size="505,4" zPosition="5" />
-<eLabel backgroundColor="SevenBorderCS" position="531,108" size="4,282" zPosition="5" />
-<eLabel backgroundColor="SevenBorderCS" position="30,108" size="4,282" zPosition="5" />
-</screen>
-<!-- ChannelSelection Preview */-->
+		<!-- /* ChannelSelection Preview -->
+	<screen backgroundColor="transparent" flags="wfNoBorder" name="ChannelSelection" position="0,0" size="1280,720" title="Channel Selection">
+		<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="ChannelSelection" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
+		<widget backgroundColor="SevenFontBackCS" foregroundColor="SevenNameList" scrollbarMode="showNever" picServiceEventProgressbar="SevenHD/progresslistcs/progresslistcs52.png" colorEventProgressbar="SevenProgressListCS" colorEventProgressbarSelected="SevenProgressListCS" foregroundColorMarkedSelected="green" colorEventProgressbarBorder="SevenProgressBorderCS" colorEventProgressbarBorderSelected="SevenProgressBorderCS" colorServiceDescription="SevenProgramList" colorServiceDescriptionSelected="SevenSelFont" colorServiceRecording="red" foregroundColorServiceNotAvail="yellow" itemHeight="50" name="list" position="591,74" serviceInfoFont="Regular2;22" serviceItemHeight="37" serviceNameFont="Regular;26" serviceNumberFont="Regular;26" size="662,564" transparent="1" />
+		<widget font="Regular; 22" foregroundColor="SevenDestcriptionCS" position="30,402" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,steptime=90,wrap=1,always=0,repeat=2,oneshot=1" size="505,164" source="ServiceEvent" valign="top" backgroundColor="SevenFontBackCS" zPosition="1" transparent="1">
+			<convert type="SevenHDEventName">BothDescriptionsFiltered</convert>
+		</widget>
+		<widget font="Regular; 30" foregroundColor="SevenProgramCS" position="30,16" halign="center" render="SevenHDRunningText" options="movetype=running,startpoint=0,startdelay=2000,steptime=90,wrap=0,always=0,repeat=2,oneshot=1" size="505,40" source="ServiceEvent" backgroundColor="SevenFontBackCS" zPosition="1" valign="bottom" noWrap="1" transparent="1">
+			<convert type="SevenHDEventName">Name</convert>
+		</widget>
+		<widget source="ServiceEvent" render="SevenHDMiniTV" position="30,109" size="505,282" backgroundColor="transparent" zPosition="2">
+			<convert type="SevenHDMiniTVDisplay" />
+		</widget>
+		<widget backgroundColor="SevenFontBackCS" font="Regular; 18" halign="right" position="459,80" render="Label" size="77,25" source="ServiceEvent" transparent="1" valign="center" zPosition="1" foregroundColor="SevenRuntimeCS">
+			<convert type="SevenHDEventTime">Remaining</convert>
+			<convert type="SevenHDRemainingToText">InMinutes</convert>
+		</widget>
+		<eLabel position="30,93" size="426,1" backgroundColor="SevenProgressLineCS" />
+		<widget source="ServiceEvent" render="Progress" position="30,91" size="426,5" borderWidth="0" backgroundColor="SevenFontBackCS" foregroundColor="SevenProgressCS" transparent="1" zPosition="1" pixmap="SevenHD/progresscs/progresscs426.png">
+			<convert type="SevenHDEventTime">Progress</convert>
+		</widget>
+		<widget source="ServiceEvent" render="SevenHDSingleEpgList" position="30,574" size="505,50" font="Regular2;19" backgroundColor="SevenFontBackCS" foregroundColor="SevenNextCS" transparent="1" noWrap="1">
+		</widget>
+		<panel name="template_menu_cs4_button" />
+		<widget backgroundColor="SevenFontBackCS" font="Regular;22" foregroundColor="SevenPrimeCS" position="30,628" render="Label" size="505,30" source="ServiceEvent" transparent="1" zPosition="5" noWrap="1">
+			<convert type="SevenHDNextEvents">PrimeTime,noDuration</convert>
+		</widget>
+		<eLabel backgroundColor="SevenBorderCS" position="30,387" size="505,4" zPosition="5" />
+		<eLabel backgroundColor="SevenBorderCS" position="30,108" size="505,4" zPosition="5" />
+		<eLabel backgroundColor="SevenBorderCS" position="531,108" size="4,282" zPosition="5" />
+		<eLabel backgroundColor="SevenBorderCS" position="30,108" size="4,282" zPosition="5" />
+	</screen>
+		<!-- ChannelSelection Preview */-->

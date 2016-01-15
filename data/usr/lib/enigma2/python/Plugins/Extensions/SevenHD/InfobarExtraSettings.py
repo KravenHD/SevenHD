@@ -41,7 +41,7 @@ class InfobarExtraSettings(ConfigListScreen, Screen):
                          <eLabel font="Regular; 20" foregroundColor="#00e5b243" backgroundColor="#00000000" halign="left" valign="center" position="464,662" size="148,48" text="Defaults" transparent="1" />
                          <widget name="blue" font="Regular; 20" foregroundColor="#000064c7" backgroundColor="#00000000" halign="left" valign="center" position="664,662" size="148,48" transparent="1" />
                          <widget name="config" position="18,72" size="816,575" scrollbarMode="showOnDemand" transparent="1" zPosition="1" backgroundColor="#00000000" />
-                         <eLabel position="70,12" size="708,46" text="SevenHD" font="Regular; 35" valign="center" halign="center" transparent="1" backgroundColor="#00000000" foregroundColor="#00ffffff" name="," />
+                         <eLabel position="70,12" size="708,46" text="Infobar Extra Settings" font="Regular; 35" valign="center" halign="center" transparent="1" backgroundColor="#00000000" foregroundColor="#00ffffff" name="," />
                          <widget name="colorthump" position="891,220" size="372,30" zPosition="1" backgroundColor="#00000000" alphatest="blend" />
                          <widget name="helperimage" position="891,274" size="372,209" zPosition="1" backgroundColor="#00000000" />
                          <widget name="description" position="891,490" size="372,200" font="Regular; 22" valign="center" halign="center" transparent="1" backgroundColor="#00000000" foregroundColor="#00ffffff" />
@@ -111,7 +111,6 @@ class InfobarExtraSettings(ConfigListScreen, Screen):
             "yellow": self.defaults,
             "green": self.save,
             "blue": self.grab_png,
-            "ok": self.rawinput,
             "cancel": self.exit
         }, -1)
 
@@ -149,7 +148,9 @@ class InfobarExtraSettings(ConfigListScreen, Screen):
         return list
 
     def __selectionChanged(self):
-        self["config"].setList(self.getMenuItemList())
+        returnValue = self["config"].getCurrent()[4]
+        if returnValue != 'WOEID':
+           self["config"].setList(self.getMenuItemList())
 
     def GetPicturePath(self):
         returnValue = self["config"].getCurrent()[3]
@@ -218,17 +219,11 @@ class InfobarExtraSettings(ConfigListScreen, Screen):
     def keyLeft(self):
         ConfigListScreen.keyLeft(self)
         self.ShowPicture()
-        returnValue = self["config"].getCurrent()[4]
-        if returnValue == 'WOEID': 
-           self.session.openWithCallback(self.do_search, VirtualKeyBoard, title = _("Enter youre WOEID"))
         self.ShowColor()
     
     def keyRight(self):
         ConfigListScreen.keyRight(self)
         self.ShowPicture()
-        returnValue = self["config"].getCurrent()[4]
-        if returnValue == 'WOEID': 
-           self.session.openWithCallback(self.do_search, VirtualKeyBoard, title = _("Enter youre WOEID"))
         self.ShowColor()
            
     def keyDown(self):
@@ -240,19 +235,6 @@ class InfobarExtraSettings(ConfigListScreen, Screen):
         self["config"].instance.moveSelection(self["config"].instance.moveUp)
         self.ShowPicture()
         self.ShowColor()
-        
-    def rawinput(self):
-        returnValue = self["config"].getCurrent()[4]
-        if returnValue == 'WOEID': 
-           self.session.openWithCallback(self.do_search, VirtualKeyBoard, title = _("Enter youre WOEID"))
-    
-    def do_search(self, number = None):
-        try:
-           if int(number):
-	      config.plugins.SevenHD.weather_city.value = str(number)
-	except:
-           config.plugins.SevenHD.weather_city.value = "924938"
-           self.session.open(MessageBox, _('Only Numbers allowed!\n'), MessageBox.TYPE_INFO)
     
     def grab_png(self):
         if config.plugins.SevenHD.grabdebug.value:
@@ -322,10 +304,10 @@ class InfobarExtraSettings(ConfigListScreen, Screen):
                         config.plugins.SevenHD.weather_cityname.value = str(city)
                         config.plugins.SevenHD.weather_cityname.save()
                         
-                        config.plugins.SevenHD.weather_city.value = woeid
+                        config.plugins.SevenHD.weather_city.value = str(woeid)
                         config.plugins.SevenHD.weather_city.save()
                         
-                        self.session.open(MessageBox, _(str(city) + ' is detected and set as your Location.\nIf that should not be right then set\nAuto Weather ID Function to "OFF".'), MessageBox.TYPE_INFO)
+                        self.session.open(MessageBox, _(str(city) + ' is detected and set as your Location.\nIf that should not be right then set\nAuto Weather ID Function to "OFF".'), MessageBox.TYPE_INFO, timeout = 5)
       
         except:
                     self.debug('Anything goes wrong \n')
@@ -337,12 +319,43 @@ class InfobarExtraSettings(ConfigListScreen, Screen):
         config.plugins.SevenHD.AutoWoeID.value = False
     
     def getlatlon(self):
-        res = requests.request('get', 'http://weather.yahooapis.com/forecastrss?w=%s&u=c' % str(config.plugins.SevenHD.weather_city.value))
-        city = re.search('city="(.+?)" region', str(res.text)).groups(1)
-        lat = re.search('geo:lat>(.+?)</geo:lat', str(res.text)).groups(1)
-        lon = re.search('geo:long>(.+?)</geo:long', str(res.text)).groups(1)
-        location = re.search('/forecast/(.+?)_c.html', str(res.text)).groups(1)
+       
+        try:
+       
+           try:
+             res = requests.request('get', 'http://weather.yahooapis.com/forecastrss?w=%s&u=c' % str(config.plugins.SevenHD.weather_city.value))
+             city = re.search('city="(.+?)" region', str(res.text)).groups(1)
+             lat = re.search('geo:lat.+>(.+?)</geo:lat', str(res.text)).groups(1)
+             lon = re.search('geo:long.+>(.+?)</geo:long', str(res.text)).groups(1)
+             location = re.search('/forecast/(.+?)_c.html', str(res.text)).groups(1)
+           
+           except:     
+             res = requests.request('get', 'http://query.yahooapis.com/v1/public/yql?format=json&q=select%20*%20from%20geo.places.parent%20where%20child_woeid%20=%20%22' + str(config.plugins.SevenHD.weather_city.value) + '%22&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys')
+             data = res.json()
+             city_name = str(data['query']['results']['place']['admin3']['content'])
+             
+             data = {}
+             res = requests.request('get', 'http://weather.service.msn.com/find.aspx?src=outlook&weadegreetype=C&culture=%s&weasearchstr=%s' % (str(config.plugins.SevenHD.weather_language.value),str(city_name)))
+             root = fromstring(res.text)
+             
+             for childs in root:
+                 if childs.tag == 'weather':
+                    data['city'] = childs.attrib.get('weatherlocationname').encode('utf-8', 'ignore') 
+                    data['lat'] = childs.attrib.get('lat').encode('utf-8', 'ignore') 
+                    data['lon'] = childs.attrib.get('long').encode('utf-8', 'ignore') 
+                    data['location'] = childs.attrib.get('weatherlocationcode').encode('utf-8', 'ignore') 
+             
+             city = [data['city'].split(',')[0]]
+             lat = [data['lat'].replace(',','.')]
+             lon = [data['lon'].replace(',','.')]
+             location = [data['location'].split(':')[1]]
+             self.debug(str(city) + ' ' + str(lat) + ' ' + str(lon) + ' ' + str(location))
         
+        except:
+           self.session.open(MessageBox, _('No City found with this WoeID, try another Service.'), MessageBox.TYPE_INFO)
+           self.debug('WoeID and CityName search dont work !!!')
+           return 
+              
         config.plugins.SevenHD.weather_locationcode.value = str(location[0])
         config.plugins.SevenHD.weather_locationcode.save()
         
@@ -360,8 +373,8 @@ class InfobarExtraSettings(ConfigListScreen, Screen):
            config.plugins.SevenHD.weather_locationcode.value = str(location[0])
            config.plugins.SevenHD.weather_locationcode.save()
         
-        self.debug('LocationCode :' + str(config.plugins.SevenHD.weather_locationcode.value))
-        self.debug('lat/long :' + str(lat[0]) + ' - ' + str(lon[0]) + '\n%s' % config.plugins.SevenHD.weather_lat_lon.value)
+        self.debug('LocationCode: ' + str(config.plugins.SevenHD.weather_locationcode.value))
+        self.debug('lat/long: ' + str(lat[0]) + ' - ' + str(lon[0]) + '\n%s' % config.plugins.SevenHD.weather_lat_lon.value)
         
     def debug(self, what):
         if config.plugins.SevenHD.msgdebug.value:

@@ -1,6 +1,5 @@
-</screen>
-<!-- /* InfoBar Original -->
-<!--/* SecondInfoBar Original -->
-<screen backgroundColor="transparent" flags="wfNoBorder" name="SecondInfoBar" position="0,0" size="1280,720" title="SecondInfoBar">
-<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="SecondInfoBar" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
-
+	</screen>
+		<!-- /* InfoBar Original -->
+		<!--/* SecondInfoBar Original -->
+	<screen backgroundColor="transparent" flags="wfNoBorder" name="SecondInfoBar" position="0,0" size="1280,720" title="SecondInfoBar">
+		<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="SecondInfoBar" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->

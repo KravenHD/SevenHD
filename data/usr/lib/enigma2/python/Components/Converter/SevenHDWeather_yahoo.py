@@ -37,6 +37,7 @@ def _(txt):
 	return t                              
 
 URL = 'http://weather.yahooapis.com/forecastrss?w=' + str(config.plugins.SevenHD.weather_city.value) + '&u=c'
+WEATHER_DATA = None
 
 class SevenHDWeather_yahoo(Converter, object):
 	def __init__(self, type):
@@ -46,7 +47,8 @@ class SevenHDWeather_yahoo(Converter, object):
                 self.what = type[1]
                 self.data = {}
                 self.timer = eTimer()
-		self.timer.callback.append(self.get_Data)
+		self.timer.callback.append(self.reset)
+                self.timer.callback.append(self.get_Data)
 		self.get_Data()
 		 
 	@cached
@@ -81,77 +83,120 @@ class SevenHDWeather_yahoo(Converter, object):
             return str(self.info)
 	text = property(getText)
 	
+	def reset(self):
+	    global WEATHER_DATA
+            WEATHER_DATA = None
+	    
         def get_Data(self):
+            global WEATHER_DATA
+            if WEATHER_DATA is None:
+               
+               self.data = {}
+               index = 0
             
-            self.data = {}
-            index = 0
+               try:
+                 res = requests.request('get', URL)
+                 root = parseString(res.text)
+                 
+                 self.data['Day_%s' % str(index)] = {}
+                 self.data['Day_%s' % str(index)]['feelslike'] = root.getElementsByTagName('yweather:wind')[0].getAttributeNode('chill').nodeValue
+                 self.data['Day_%s' % str(index)]['winddisplay'] = root.getElementsByTagName('yweather:wind')[0].getAttributeNode('direction').nodeValue
+                 self.data['Day_%s' % str(index)]['windspeed'] = root.getElementsByTagName('yweather:wind')[0].getAttributeNode('speed').nodeValue
+                 self.data['Day_%s' % str(index)]['humidity'] = root.getElementsByTagName('yweather:atmosphere')[0].getAttributeNode('humidity').nodeValue
+                 self.data['Day_%s' % str(index)]['temp'] = root.getElementsByTagName('yweather:condition')[0].getAttributeNode('temp').nodeValue
+                 self.data['Day_%s' % str(index)]['skytextday'] = root.getElementsByTagName('yweather:condition')[0].getAttributeNode('text').nodeValue
+                 self.data['Day_%s' % str(index)]['skycodeday'] = root.getElementsByTagName('yweather:condition')[0].getAttributeNode('code').nodeValue
+                 self.data['Day_%s' % str(index)]['shortday'] = _(root.getElementsByTagName('yweather:condition')[0].getAttributeNode('date').nodeValue.split(',')[0])
             
-            res = requests.request('get', URL)
-            root = parseString(res.text)
-            
-            self.data['Day_%s' % str(index)] = {}
-            self.data['Day_%s' % str(index)]['feelslike'] = root.getElementsByTagName('yweather:wind')[0].getAttributeNode('chill').nodeValue
-            self.data['Day_%s' % str(index)]['winddisplay'] = root.getElementsByTagName('yweather:wind')[0].getAttributeNode('direction').nodeValue
-            self.data['Day_%s' % str(index)]['windspeed'] = root.getElementsByTagName('yweather:wind')[0].getAttributeNode('speed').nodeValue
-            self.data['Day_%s' % str(index)]['humidity'] = root.getElementsByTagName('yweather:atmosphere')[0].getAttributeNode('humidity').nodeValue
-            self.data['Day_%s' % str(index)]['temp'] = root.getElementsByTagName('yweather:condition')[0].getAttributeNode('temp').nodeValue
-            self.data['Day_%s' % str(index)]['skytextday'] = root.getElementsByTagName('yweather:condition')[0].getAttributeNode('text').nodeValue
-            self.data['Day_%s' % str(index)]['skycodeday'] = root.getElementsByTagName('yweather:condition')[0].getAttributeNode('code').nodeValue
-            self.data['Day_%s' % str(index)]['shortday'] = _(root.getElementsByTagName('yweather:condition')[0].getAttributeNode('date').nodeValue.split(',')[0])
-            
-            for x in range(5):
-                index += 1
-                self.data['Day_%s' % str(index)] = {}
-                self.data['Day_%s' % str(index)]['shortday'] = _(root.getElementsByTagName('yweather:forecast')[int(x)].getAttributeNode('day').nodeValue)
-                self.data['Day_%s' % str(index)]['low'] = root.getElementsByTagName('yweather:forecast')[int(x)].getAttributeNode('low').nodeValue
-                self.data['Day_%s' % str(index)]['high'] = root.getElementsByTagName('yweather:forecast')[int(x)].getAttributeNode('high').nodeValue
-                self.data['Day_%s' % str(index)]['skytextday'] = root.getElementsByTagName('yweather:forecast')[int(x)].getAttributeNode('text').nodeValue
-                self.data['Day_%s' % str(index)]['skycodeday'] = root.getElementsByTagName('yweather:forecast')[int(x)].getAttributeNode('code').nodeValue
-                           
-            timeout = int(config.plugins.SevenHD.refreshInterval.value) * 1000.0 * 60.0
-            self.timer.start(int(timeout), True)
-        
+                 for x in range(5):
+                     index += 1
+                     self.data['Day_%s' % str(index)] = {}
+                     self.data['Day_%s' % str(index)]['shortday'] = _(root.getElementsByTagName('yweather:forecast')[int(x)].getAttributeNode('day').nodeValue)
+                     self.data['Day_%s' % str(index)]['low'] = root.getElementsByTagName('yweather:forecast')[int(x)].getAttributeNode('low').nodeValue
+                     self.data['Day_%s' % str(index)]['high'] = root.getElementsByTagName('yweather:forecast')[int(x)].getAttributeNode('high').nodeValue
+                     self.data['Day_%s' % str(index)]['skytextday'] = root.getElementsByTagName('yweather:forecast')[int(x)].getAttributeNode('text').nodeValue
+                     self.data['Day_%s' % str(index)]['skycodeday'] = root.getElementsByTagName('yweather:forecast')[int(x)].getAttributeNode('code').nodeValue
+               except:
+                 WEATHER_DATA = self.data
+                 return
+               WEATHER_DATA = self.data            
+               timeout = int(config.plugins.SevenHD.refreshInterval.value) * 1000.0 * 60.0
+               self.timer.start(int(timeout), True)
+
+            else:
+               self.data = WEATHER_DATA
+               
         def getMinTemp(self, day):
-            temp = self.data['Day_%s' % str(day)]['low']
-            return str(temp) + '°C'
-            
+            try:
+               temp = self.data['Day_%s' % str(day)]['low']
+               return str(temp) + '°C'
+            except:
+               return 'N/A'
+               
         def getMaxTemp(self, day):
-            temp = self.data['Day_%s' % str(day)]['high']
-            return str(temp) + '°C'
-        
+            try:
+               temp = self.data['Day_%s' % str(day)]['high']
+               return str(temp) + '°C'
+            except:
+               return 'N/A'
+               
         def getFeelTemp(self):
-            temp = self.data['Day_0']['temp']
-            feels = self.data['Day_0']['feelslike']
-            return str(temp) + '°C' + _(", feels ") + str(feels) + '°C'
-        
+            try:
+               temp = self.data['Day_0']['temp']
+               feels = self.data['Day_0']['feelslike']
+               return str(temp) + '°C' + _(", feels ") + str(feels) + '°C'
+            except:
+               return 'N/A'
+            
         def getDayTemp(self):
-            temp = self.data['Day_0']['temp']
-            return str(temp) + '°C'
-        
+            try:
+               temp = self.data['Day_0']['temp']
+               return str(temp) + '°C'
+            except:
+               return 'N/A'
+            
         def getWeatherDate(self, day):
-            weather_dayname = self.data['Day_%s' % str(day)]['shortday']
-            return str(weather_dayname)
+            try:
+               weather_dayname = self.data['Day_%s' % str(day)]['shortday']
+               return str(weather_dayname)
+            except:
+               return 'N/A'
             
         def getWeatherDes(self, day):
-            weather = self.description(self.data['Day_%s' % str(day)]['skycodeday'])
-            return str(weather)
+            try:
+               weather = self.description(self.data['Day_%s' % str(day)]['skycodeday'])
+               return str(weather)
+            except:
+               return 'N/A'
             
         def getWeatherIcon(self, day):
-            weathericon = self.data['Day_%s' % str(day)]['skycodeday']
-            return str(weathericon)
+            try:
+               weathericon = self.data['Day_%s' % str(day)]['skycodeday']
+               return str(weathericon)
+            except:
+               return 'N/A'
             
         def getShortDay(self, day):
-            weather_dayname = self.data['Day_%s' % str(day)]['shortday']
-            return str(weather_dayname)
+            try:
+               weather_dayname = self.data['Day_%s' % str(day)]['shortday']
+               return str(weather_dayname)
+            except:
+               return 'N/A'
             
         def getCompWind(self):
-            wind = self.getWind()
-            speed = self.data['Day_0']['windspeed']
-            return str(speed) + _(" km/h") + _(" from ") + str(wind)
+            try:
+               wind = self.getWind()
+               speed = self.data['Day_0']['windspeed']
+               return str(speed) + _(" km/h") + _(" from ") + str(wind)
+            except:
+               return 'N/A'
             
         def getHumidity(self):
-            humi = self.data['Day_0']['humidity']
-            return str(humi) + _('% humidity')
+            try:
+               humi = self.data['Day_0']['humidity']
+               return str(humi) + _('% humidity')
+            except:
+               return 'N/A'
             
         def getWind(self):
             direct = self.data['Day_0']['winddisplay']

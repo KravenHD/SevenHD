@@ -1,46 +1,40 @@
-
-<!-- System-Info -->
-<eLabel text="Temperatur:" position="982,271" size="100,20" font="Regular;16" halign="left" valign="bottom" backgroundColor="SevenFontBackgroundIB1" transparent="1" foregroundColor="SevenNowIB" />
-  <eLabel text="CPU-Last:" position="982,291" size="100,20" font="Regular;16" halign="left" valign="bottom" backgroundColor="SevenFontBackgroundIB1" transparent="1" foregroundColor="SevenNowIB" />
-  <eLabel text="Drehzahl:" position="1132,271" size="100,20" font="Regular;16" halign="left" valign="bottom" backgroundColor="SevenFontBackgroundIB1" transparent="1" foregroundColor="SevenNowIB" />
-  <eLabel text="Systemlast:" position="1132,291" size="100,20" font="Regular;16" halign="left" valign="bottom" backgroundColor="SevenFontBackgroundIB1" transparent="1" foregroundColor="SevenNowIB" />
-  <widget source="session.CurrentService" render="Label" font="Regular;16" position="1073,271" size="40,20" halign="right" valign="bottom" backgroundColor="SevenFontBackgroundIB1" transparent="1" noWrap="1" foregroundColor="SevenNextIB">
-    <convert type="SevenHDTempFanInfo">TempInfo</convert>   
-  </widget>
-  <widget source="session.CurrentService" render="Label" font="Regular;16" position="1215,271" size="40,20" halign="right" valign="bottom" backgroundColor="SevenFontBackgroundIB1" transparent="1" noWrap="1" foregroundColor="SevenNextIB">
-    <convert type="SevenHDTempFanInfo">FanInfo</convert>
-  </widget>
-  <widget source="session.CurrentService" render="Label" font="Regular;16" position="1073,291" size="40,20" halign="right" valign="bottom" backgroundColor="SevenFontBackgroundIB1" transparent="1" noWrap="1" foregroundColor="SevenNextIB">
-    <convert type="SevenHDCpuUsage">$0</convert>   
-  </widget>
-    <widget source="session.CurrentService" render="Label" font="Regular;16" position="1215,291" size="40,20" halign="right" valign="bottom" backgroundColor="SevenFontBackgroundIB1" transparent="1" noWrap="1" foregroundColor="SevenNextIB">
-    <convert type="SevenHDLayoutInfo">LoadAvg</convert>
-  </widget>
-  <eLabel text="Flash:" position="982,322" size="100,20" font="Regular;16" halign="left" valign="bottom" backgroundColor="SevenFontBackgroundIB1" transparent="1" foregroundColor="SevenNowIB" />
-  <eLabel text="Ram:" position="982,342" size="100,20" font="Regular;16" halign="left" valign="bottom" backgroundColor="SevenFontBackgroundIB1" transparent="1" foregroundColor="SevenNowIB" />
-  <eLabel text="HDD:" position="982,362" size="100,20" font="Regular;16" halign="left" valign="bottom" backgroundColor="SevenFontBackgroundIB1" transparent="1" foregroundColor="SevenNowIB" />
-  <eLabel text="USB:" position="982,382" size="100,20" font="Regular;16" halign="left" valign="bottom" backgroundColor="SevenFontBackgroundIB1" transparent="1" foregroundColor="SevenNowIB" />
-  <widget source="session.CurrentService" render="Label" font="Regular;16" position="1035,322" size="220,20" halign="right" valign="bottom" backgroundColor="SevenFontBackgroundIB1" transparent="1" noWrap="1" foregroundColor="SevenNextIB">
-    <convert type="SevenHDLayoutInfo">FlashInfo,Genutzt</convert>
-  </widget>
-  <widget source="session.CurrentService" render="Label" font="Regular;16" position="1035,342" size="220,20" halign="right" valign="bottom" backgroundColor="SevenFontBackgroundIB1" transparent="1" noWrap="1" foregroundColor="SevenNextIB">
-    <convert type="SevenHDLayoutInfo">MemTotal,Genutzt</convert>
-  </widget>
-  <widget source="session.CurrentService" render="Label" font="Regular;16" position="1035,362" size="220,20" halign="right" valign="bottom" backgroundColor="SevenFontBackgroundIB1" transparent="1" noWrap="1" foregroundColor="SevenNextIB">
-    <convert type="SevenHDLayoutInfo">HddInfo,Frei</convert>
-  </widget>
-  <widget source="session.CurrentService" render="Label" font="Regular;16" position="1035,382" size="220,20" halign="right" valign="bottom" backgroundColor="SevenFontBackgroundIB1" transparent="1" noWrap="1" foregroundColor="SevenNextIB">
-    <convert type="SevenHDLayoutInfo">UsbInfo,Frei</convert>
-  </widget>
-
-  <eLabel backgroundColor="SevenBorderIB" position="974,264" size="290,2" zPosition="2" />
-  <eLabel backgroundColor="SevenBorderIB" position="974,264" size="2,144" zPosition="2" />
-  <eLabel backgroundColor="SevenBorderIB" position="1262,264" size="2,144" zPosition="2" />
-  <eLabel backgroundColor="SevenBorderIB" position="974,316" size="290,2" zPosition="2" />
-  <eLabel backgroundColor="SevenBorderIB" position="974,406" size="290,2" zPosition="2" />
-  <eLabel backgroundColor="SevenBackgroundIB1" position="974,265" size="290,142" transparent="0" zPosition="-10" />
-  <ePixmap pixmap="SevenHD/back/ibone.png" position="974,265" size="290,142" alphatest="blend" zPosition="-8" />
-  
-  
-  
-  
+		<!-- System-Info -->
+		<eLabel text="Temperatur:" position="982,271" size="100,20" font="Regular;16" halign="left" valign="bottom" backgroundColor="SevenFontBackgroundIB1" transparent="1" foregroundColor="SevenNowIB" />
+		<eLabel text="CPU-Last:" position="982,291" size="100,20" font="Regular;16" halign="left" valign="bottom" backgroundColor="SevenFontBackgroundIB1" transparent="1" foregroundColor="SevenNowIB" />
+		<eLabel text="Drehzahl:" position="1132,271" size="100,20" font="Regular;16" halign="left" valign="bottom" backgroundColor="SevenFontBackgroundIB1" transparent="1" foregroundColor="SevenNowIB" />
+		<eLabel text="Systemlast:" position="1132,291" size="100,20" font="Regular;16" halign="left" valign="bottom" backgroundColor="SevenFontBackgroundIB1" transparent="1" foregroundColor="SevenNowIB" />
+		<widget source="session.CurrentService" render="Label" font="Regular;16" position="1073,271" size="40,20" halign="right" valign="bottom" backgroundColor="SevenFontBackgroundIB1" transparent="1" noWrap="1" foregroundColor="SevenNextIB">
+			<convert type="SevenHDTempFanInfo">TempInfo</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Label" font="Regular;16" position="1215,271" size="40,20" halign="right" valign="bottom" backgroundColor="SevenFontBackgroundIB1" transparent="1" noWrap="1" foregroundColor="SevenNextIB">
+			<convert type="SevenHDTempFanInfo">FanInfo</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Label" font="Regular;16" position="1073,291" size="40,20" halign="right" valign="bottom" backgroundColor="SevenFontBackgroundIB1" transparent="1" noWrap="1" foregroundColor="SevenNextIB">
+			<convert type="SevenHDCpuUsage">$0</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Label" font="Regular;16" position="1215,291" size="40,20" halign="right" valign="bottom" backgroundColor="SevenFontBackgroundIB1" transparent="1" noWrap="1" foregroundColor="SevenNextIB">
+			<convert type="SevenHDLayoutInfo">LoadAvg</convert>
+		</widget>
+		<eLabel text="Flash:" position="982,322" size="100,20" font="Regular;16" halign="left" valign="bottom" backgroundColor="SevenFontBackgroundIB1" transparent="1" foregroundColor="SevenNowIB" />
+		<eLabel text="Ram:" position="982,342" size="100,20" font="Regular;16" halign="left" valign="bottom" backgroundColor="SevenFontBackgroundIB1" transparent="1" foregroundColor="SevenNowIB" />
+		<eLabel text="HDD:" position="982,362" size="100,20" font="Regular;16" halign="left" valign="bottom" backgroundColor="SevenFontBackgroundIB1" transparent="1" foregroundColor="SevenNowIB" />
+		<eLabel text="USB:" position="982,382" size="100,20" font="Regular;16" halign="left" valign="bottom" backgroundColor="SevenFontBackgroundIB1" transparent="1" foregroundColor="SevenNowIB" />
+		<widget source="session.CurrentService" render="Label" font="Regular;16" position="1035,322" size="220,20" halign="right" valign="bottom" backgroundColor="SevenFontBackgroundIB1" transparent="1" noWrap="1" foregroundColor="SevenNextIB">
+			<convert type="SevenHDLayoutInfo">FlashInfo,Genutzt</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Label" font="Regular;16" position="1035,342" size="220,20" halign="right" valign="bottom" backgroundColor="SevenFontBackgroundIB1" transparent="1" noWrap="1" foregroundColor="SevenNextIB">
+			<convert type="SevenHDLayoutInfo">MemTotal,Genutzt</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Label" font="Regular;16" position="1035,362" size="220,20" halign="right" valign="bottom" backgroundColor="SevenFontBackgroundIB1" transparent="1" noWrap="1" foregroundColor="SevenNextIB">
+			<convert type="SevenHDLayoutInfo">HddInfo,Frei</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Label" font="Regular;16" position="1035,382" size="220,20" halign="right" valign="bottom" backgroundColor="SevenFontBackgroundIB1" transparent="1" noWrap="1" foregroundColor="SevenNextIB">
+			<convert type="SevenHDLayoutInfo">UsbInfo,Frei</convert>
+		</widget>
+		<eLabel backgroundColor="SevenBorderIB" position="974,264" size="290,2" zPosition="2" />
+		<eLabel backgroundColor="SevenBorderIB" position="974,264" size="2,144" zPosition="2" />
+		<eLabel backgroundColor="SevenBorderIB" position="1262,264" size="2,144" zPosition="2" />
+		<eLabel backgroundColor="SevenBorderIB" position="974,316" size="290,2" zPosition="2" />
+		<eLabel backgroundColor="SevenBorderIB" position="974,406" size="290,2" zPosition="2" />
+		<eLabel backgroundColor="SevenBackgroundIB1" position="974,265" size="290,142" transparent="0" zPosition="-10" />
+		<ePixmap pixmap="SevenHD/back/ibone.png" position="974,265" size="290,142" alphatest="blend" zPosition="-8" />

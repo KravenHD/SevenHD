@@ -36,6 +36,7 @@ def _(txt):
 	return t
 
 URL = 'http://api.openweathermap.org/data/2.5/forecast/daily?' + config.plugins.SevenHD.weather_lat_lon.value + '&cnt=5&mode=json&lang=de&appid=89b59e4d7d07894243b5acd24e7f18a3'
+WEATHER_DATA = None
 
 class SevenHDWeather_owm(Converter, object):
 	def __init__(self, type):
@@ -44,6 +45,7 @@ class SevenHDWeather_owm(Converter, object):
                 self.day_value = type[0]
                 self.what = type[1]
                 self.timer = eTimer()
+                self.timer.callback.append(self.reset)
 		self.timer.callback.append(self.get_Data)
 		self.get_Data()
 		 
@@ -69,6 +71,8 @@ class SevenHDWeather_owm(Converter, object):
                self.info = self.getWeatherDate(int(day))
             elif self.what == 'Wind':
                self.info = self.getCompWind()	
+            elif self.what == 'RainMM':
+               self.info = self.getRainMM(int(day))
             elif self.what == 'Humidity':
                self.info = self.getHumidity()
             elif self.what == 'City':
@@ -77,66 +81,124 @@ class SevenHDWeather_owm(Converter, object):
             return str(self.info)
 	text = property(getText)
 	
+        def reset(self):
+	    global WEATHER_DATA
+            WEATHER_DATA = None
+        
         def get_Data(self):
-            res = requests.request('get', URL)
-            self.data = res.json()
-            timeout = int(config.plugins.SevenHD.refreshInterval.value) * 1000.0 * 60.0
-            self.timer.start(int(timeout), True)
-            
+            global WEATHER_DATA
+            if WEATHER_DATA is None:
+
+               res = requests.request('get', URL)
+               self.data = res.json()
+               WEATHER_DATA = self.data
+               
+               timeout = int(config.plugins.SevenHD.refreshInterval.value) * 1000.0 * 60.0
+               self.timer.start(int(timeout), True)
+               
+            else:
+               self.data = WEATHER_DATA
+               
         def getMinTemp(self, day):
-            temp = self.data['list'][day]['temp']['min']
-            return str(round(float(temp))) + '°C'
+            try:
+               temp = self.data['list'][day]['temp']['min']
+               return str(round(float(temp))) + '°C'
+            except:
+               return 'N/A'
             
         def getMaxTemp(self, day):
-            temp = self.data['list'][day]['temp']['max']
-            return str(round(float(temp))) + '°C'
-        
+            try:
+               temp = self.data['list'][day]['temp']['max']
+               return str(round(float(temp))) + '°C'
+            except:
+               return 'N/A'
+            
         def getMornTemp(self, day):
-            temp = self.data['list'][day]['temp']['morn']
-            return str(round(float(temp))) + '°C'
-        
+            try:
+               temp = self.data['list'][day]['temp']['morn']
+               return str(round(float(temp))) + '°C'
+            except:
+               return 'N/A'
+            
         def getEveTemp(self, day):
-            temp = self.data['list'][day]['temp']['eve']
-            return str(round(float(temp))) + '°C'
-        
+            try:
+               temp = self.data['list'][day]['temp']['eve']
+               return str(round(float(temp))) + '°C'
+            except:
+               return 'N/A'
+            
         def getDayTemp(self, day):
-            temp = self.data['list'][day]['temp']['day']
-            return str(round(float(temp))) + '°C'
+            try:
+               temp = self.data['list'][day]['temp']['day']
+               return str(round(float(temp))) + '°C'
+            except:
+               return 'N/A'
                 
         def getNightTemp(self, day):
-            temp = self.data['list'][day]['temp']['night']
-            return str(round(float(temp))) + '°C'
+            try:
+               temp = self.data['list'][day]['temp']['night']
+               return str(round(float(temp))) + '°C'
+            except:
+               return 'N/A'
             
         def getWeatherDes(self, day):
-            weather = self.data['list'][day]['weather'][0]['description']
-            return str(weather)
+            try:
+               weather = self.data['list'][day]['weather'][0]['description']
+               return str(weather)
+            except:
+               return 'N/A'
             
         def getWeatherIcon(self, day):
-            weathericon = self.data['list'][day]['weather'][0]['icon'][:3]
-            return str(weathericon)
-            
+            try:
+               weathericon = self.data['list'][day]['weather'][0]['icon'][:3]
+               return str(weathericon)
+            except:
+               return 'N/A'
+        
+        def getRainMM(self, day):
+            try:
+               rain = self.data['list'][day]['rain']
+               return str(float(rain)) + ' mm'
+            except:
+               return 'N/A'
+                   
         def getWeatherDate(self, day):
-            weather_epoch_date = self.data['list'][day]['dt']
-            weather_dayname = time.strftime('%a', time.localtime(weather_epoch_date))
-            return str(weather_dayname)
-        
+            try:
+               weather_epoch_date = self.data['list'][day]['dt']
+               weather_dayname = time.strftime('%a', time.localtime(weather_epoch_date))
+               return str(weather_dayname)
+            except:
+               return 'N/A'
+            
         def getCompWind(self):
-            wind = self.getWind()
-            speed = self.getSpeed()
-            return str(speed) + _(" from ") + str(wind)
-        
+            try:
+               wind = self.getWind()
+               speed = self.getSpeed()
+               return str(speed) + _(" from ") + str(wind)
+            except:
+               return 'N/A'
+            
         def getSpeed(self):
-            windspeed = self.data['list'][0]['speed']
-            speed = float(windspeed)  * 3600 / 1000
-            return str(round(float(speed))) + ' km/h'
+            try:
+               windspeed = self.data['list'][0]['speed']
+               speed = float(windspeed)  * 3600 / 1000
+               return str(round(float(speed))) + ' km/h'
+            except:
+               return 'N/A'
             
         def getHumidity(self):
-            humi = self.data['list'][0]['humidity']
-            return str(humi) + _('% humidity')
-        
+            try:
+               humi = self.data['list'][0]['humidity']
+               return str(humi) + _('% humidity')
+            except:
+               return 'N/A'
+            
         def getCity(self):
-            name = self.data['city']['name']
-            return str(name)
+            try:
+               name = self.data['city']['name']
+               return str(name)
+            except:
+               return 'N/A'
                         
         def getWind(self):
             direct = self.data['list'][0]['deg']
@@ -399,5 +461,6 @@ class SevenHDWeather_owm(Converter, object):
 
             elif weatherfont == 962:
                weatherfont = unichr(int('EE22', 16)).encode('utf-8')
-            
+            else:
+               weatherfont = 'N/A'
             return str(weatherfont)

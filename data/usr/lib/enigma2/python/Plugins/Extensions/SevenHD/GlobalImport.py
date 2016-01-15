@@ -1,10 +1,10 @@
-#version = '3.6.52'
+#version = '3.6.53'
 import os
 try:
    opkg_info = os.popen("opkg list-installed enigma2-plugin-skins-sevenhd | cut -d ' ' -f3").read()
    version = str(opkg_info.strip().split('+')[0])
 except:
-   version = '3.6.52'
+   version = '3.6.53'
 import re
 import time
 import math
@@ -46,14 +46,18 @@ from Components.Console import Console as eConsole
 from Components.Language import language
 from os import environ, listdir, remove, rename, system, popen
 from shutil import move, copy, rmtree, copytree
+from lxml import etree
 from PIL import Image
 from PIL import ImageFont
 from PIL import ImageDraw 
 from skin import parseColor
+from tempfile import mkstemp
 from urllib import urlencode
 from urllib2 import urlopen, URLError
+from xml.etree.cElementTree import fromstring
 from twisted.web.client import downloadPage, getPage
 from enigma import ePicLoad, getDesktop, eConsoleAppContainer, eListboxPythonMultiContent, gFont
+from Tools import Notifications
 from Tools.BoundFunction import boundFunction
 from Tools.Directories import fileExists, resolveFilename, SCOPE_LANGUAGE, SCOPE_PLUGINS
 ################################################################################################################################################################
@@ -64,6 +68,8 @@ MAIN_IMAGE_PATH = MAIN_PLUGIN_PATH + "images/"
 MAIN_DATA_PATH = MAIN_PLUGIN_PATH + "data/"
 MAIN_USER_PATH = MAIN_PLUGIN_PATH + "user/"
 MAIN_SKIN_PATH = "/usr/share/enigma2/SevenHD/"
+USER_FONT_FILE = MAIN_USER_PATH + 'user_font.txt'
+USER_COLOR_FILE = MAIN_USER_PATH + 'user_color.txt'
 PLUGIN_PATH = "/usr/lib/enigma2/python/Plugins/"
 FILE = MAIN_SKIN_PATH + "skin.xml"
 DEV_MODE = MAIN_PLUGIN_PATH + "dev_mode"
@@ -349,7 +355,8 @@ config.plugins.SevenHD.CoolTVGuide = ConfigSelection(default="cooltv-minitv", ch
 				
 config.plugins.SevenHD.EMCStyle = ConfigSelection(default="emcnocover", choices = [
 				("emcnocover", _("no cover")),
-				("emcsmallcover", _("small cover")),
+				("emcsmallcover", _("small cover (1)")),
+				("emcsmallcover2", _("small cover (2)")),
 				("emcbigcover", _("big cover")),
 				("emcverybigcover", _("very big cover")),
 				("emcminitv", _("miniTV (1)")),
@@ -358,7 +365,8 @@ config.plugins.SevenHD.EMCStyle = ConfigSelection(default="emcnocover", choices 
 				
 config.plugins.SevenHD.MovieSelectionStyle = ConfigSelection(default="movieselectionnocover", choices = [
 				("movieselectionnocover", _("no cover")),
-				("movieselectionsmallcover", _("small cover")),
+				("movieselectionsmallcover", _("small cover (1)")),
+				("movieselectionsmallcover2", _("small cover (2)")),
 				("movieselectionbigcover", _("big cover")),
 				("movieselectionminitv", _("miniTV"))
 				])

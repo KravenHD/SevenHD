@@ -1,0 +1,48 @@
+		<!-- /* EMC SmallCover2 -->
+	<screen name="EMCSelection" position="0,0" size="1280,720" title="Enhanced Movie Center" flags="wfNoBorder" backgroundColor="transparent">
+		<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="EMCSelection" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
+		<widget name="list" position="17,286" size="1245,360" itemHeight="30" CoolFont="Regular;20" CoolSelectFont="Regular;20" CoolDateFont="Regular;20" CoolProgressPos="50" CoolBarPos="35" CoolBarHPos="10" CoolBarSize="50,10" CoolBarSizeSa="50,10" CoolMoviePos="90" CoolMovieSize="500" CoolFolderSize="575" CoolDatePos="1137" CoolDateWidth="105" CoolPiconPos="90" CoolPiconHPos="2" CoolPiconWidth="45" CoolPiconHeight="26" CoolMoviePiconPos="140" CoolMoviePiconSize="942" CoolTitleColor="1" CoolDateColor="1" CoolHighlightColor="0" DefaultColor="SevenFont1" UnwatchedColor="SevenFont1" WatchingColor="SevenFont2" FinishedColor="green" RecordingColor="red" BackColor="SevenBackground" BackColorSel="SevenSelection" FrontColorSel="SevenSelFont" backgroundColorSelected="SevenSelection" foregroundColorSelected="SevenSelFont" backgroundColor="SevenFontBackground" foregroundColor="SevenFont1" scrollbarMode="showNever" transparent="1" />
+		<widget source="Service" render="Label" position="18,73" size="994,28" font="Regular; 22" foregroundColor="SevenFont2" backgroundColor="SevenFontBackground" transparent="1" valign="center" halign="left">
+			<convert type="SevenHDDiskSpace">path</convert>
+		</widget>
+		<widget source="Service" render="Label" position="1023,73" size="110,28" font="Regular; 22" foregroundColor="SevenFont2" backgroundColor="SevenFontBackground" transparent="1" valign="center" halign="right">
+			<convert type="SevenHDDiskSpace">free</convert>
+		</widget>
+		<widget source="Service" render="Label" position="1142,73" size="120,28" font="Regular; 22" foregroundColor="SevenFont2" backgroundColor="SevenFontBackground" transparent="1" valign="center" halign="left">
+			<convert type="SevenHDDiskSpace">size</convert>
+		</widget>
+		<widget name="wait" position="44,303" size="1198,50" zPosition="1" font="Regular; 32" foregroundColor="SevenFont1" backgroundColor="SevenFontBackground" transparent="1" halign="center" valign="center" />
+		<widget source="Service" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,steptime=90,wrap=1,always=0,repeat=2,oneshot=1" position="18,12" wrap="1" size="1123,46" font="Regular2; 34" halign="center" backgroundColor="SevenFontBackground" transparent="1">
+			<convert type="EMCEventName">Name</convert>
+		</widget>
+		<widget source="Service" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,steptime=90,wrap=1,always=0,repeat=2,oneshot=1" position="135,114" size="1128,154" font="Regular; 24" foregroundColor="SevenFont1" backgroundColor="SevenFontBackground" transparent="1" zPosition="2" halign="center" valign="top">
+			<convert type="EMCEventName">FullDescription</convert>
+		</widget>
+		<widget source="Service" render="Label" position="890,662" size="148,48" font="Regular; 18" halign="center" backgroundColor="SevenFontBackground" foregroundColor="SevenButtonText" transparent="1">
+			<convert type="EMCMovieInfo">FileSize</convert>
+		</widget>
+		<widget source="Service" render="Label" position="1114,662" size="148,48" font="Regular; 18" halign="center" backgroundColor="SevenFontBackground" transparent="1" foregroundColor="SevenButtonText">
+			<convert type="EMCServiceTime">Duration</convert>
+			<convert type="EMCClockToText">InMinutes</convert>
+		</widget>
+		<widget name="Cover" position="18,114" size="100,151" zPosition="4" backgroundColor="SevenBackgroundRight" alphatest="on" transparent="1" />
+		<eLabel backgroundColor="SevenBackground" position="6,6" size="1269,708" transparent="0" zPosition="-9" foregroundColor="SevenFont2" />
+		<ePixmap pixmap="SevenHD/back/menumain.png" position="6,6" size="1269,708" alphatest="blend" zPosition="-8" />
+		<eLabel backgroundColor="SevenBorder" position="6,6" size="1270,2" zPosition="2" />
+		<eLabel backgroundColor="SevenBorder" position="6,714" size="1270,2" zPosition="2" />
+		<eLabel backgroundColor="SevenBorder" position="6,6" size="2,708" zPosition="2" />
+		<eLabel backgroundColor="SevenLine" position="18,274" size="1245,2" zPosition="2" />
+		<eLabel backgroundColor="SevenLine" position="18,656" size="1245,2" zPosition="2" />
+		<eLabel backgroundColor="SevenLine" position="18,64" size="1245,2" zPosition="2" />
+                <eLabel backgroundColor="SevenLine" position="135,106" size="1128,2" zPosition="2" />
+		<ePixmap pixmap="SevenHD/buttons/key_red1.png" position="22,670" size="32,37" backgroundColor="SevenFontBackground" alphatest="blend" />
+		<ePixmap pixmap="SevenHD/buttons/key_green1.png" position="222,670" size="32,37" backgroundColor="SevenFontBackground" alphatest="blend" />
+		<ePixmap pixmap="SevenHD/buttons/key_yellow1.png" position="422,670" size="32,37" backgroundColor="SevenFontBackground" alphatest="blend" />
+		<ePixmap pixmap="SevenHD/buttons/key_blue1.png" position="622,670" size="32,37" backgroundColor="SevenFontBackground" alphatest="blend" />
+		<widget source="global.CurrentTime" render="Label" position="1154,16" size="100,28" font="Regular;26" halign="right" backgroundColor="SevenFontBackground" transparent="1" valign="center" foregroundColor="SevenFont1">
+			<convert type="SevenHDClockToText">Default</convert>
+		</widget>
+		<eLabel backgroundColor="SevenBorder" position="1274,6" size="2,708" zPosition="2" />
+		<panel name="template_colorkey_text" />
+	</screen>
+		<!-- EMC SmallCover2 */-->

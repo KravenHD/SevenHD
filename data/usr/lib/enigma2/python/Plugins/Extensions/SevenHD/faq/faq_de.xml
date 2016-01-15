@@ -36,7 +36,7 @@ A:\nDrücke die\nblaue Taste (Extras) --> Taste 6 (Skin Share) --> Taste 1 (Vert
 	</page> 
 
         <page title="FAQ"><text value="Q: Warum werden meine eigenen Änderungen an der skin.xml immer wieder überschrieben?\n\n\n
-A: Du musst deine Änderungen in der skin_user.xml unter /usr/lib/enigma2/python/Plugins/Extensions/SevenHD/data/ speichern,\ndann werden sie bei einem update nicht überschrieben."/>
+A: Du musst deine Änderungen in der skin-user.xml unter /usr/lib/enigma2/python/Plugins/Extensions/SevenHD/data/ speichern,\ndann werden sie bei einem update nicht überschrieben."/>
 	</page>
 
         <page title="FAQ"><text value="Q: Was bedeutet das kleine grüne Symbol unten rechts in der Infobar?\n\n\n
