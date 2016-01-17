@@ -200,7 +200,7 @@ class SevenHDWeather_realtek(Converter, object):
         
         def getRainMM(self, day):
             try:
-               rainp = self.data['Day_%s' % str(day)]['precip']
+               rain = self.data['Day_%s' % str(day)]['precip']
                return str(float(rain)) + ' %'
             except:
                return 'N/A'    
