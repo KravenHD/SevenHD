@@ -77,7 +77,7 @@ class SevenHDWeather_accu(Converter, object):
             elif self.what == 'Humidity':
                self.info = self.getHumidity()
             elif self.what == 'RainMM':
-               self.info = self.getRainMM()
+               self.info = self.getRainMM(int(day))
             elif self.what == 'RainPrecent':
                self.info = self.getRainPrecent(int(day))
             elif self.what == 'City':
