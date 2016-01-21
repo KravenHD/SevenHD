@@ -11,5 +11,5 @@
 		<widget noWrap="1" backgroundColor="SevenFontBackgroundIB1" font="Regular; 20" foregroundColor="SevenNowIB" render="Label" position="1180,58" size="50,26" source="session.CurrentService" zPosition="8" halign="center" valign="center" transparent="1">
 			<convert type="SevenHDWeather_accu">Day_0,MinTemp</convert>
 		</widget>
-		<panel name="template_weather_small" />
+		<panel name="template_weather_small" /> />
 		<!-- Weather */-->

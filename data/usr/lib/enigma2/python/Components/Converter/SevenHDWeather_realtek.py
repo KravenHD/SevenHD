@@ -37,7 +37,7 @@ def _(txt):
 		t = gettext.gettext(txt)
 	return t
 
-URL = 'http://realtek.accu-weather.com/widget/realtek/weather-data.asp?%s' % str(config.plugins.SevenHD.weather_lat_lon.value)
+URL = 'http://realtek.accu-weather.com/widget/realtek/weather-data.asp?%s' % str(config.plugins.SevenHD.weather_realtek_latlon.value)
 WEATHER_DATA = None
 
 class SevenHDWeather_realtek(Converter, object):

@@ -1397,11 +1397,11 @@
 		<widget name="apply" position="10,240" size="250,35" transparent="1" foregroundColor="SevenFont1" />
 	</screen>
 		<!-- RecordTimerQuestion */-->
-	<screen name="RecordTimerQuestion" position="0,0" size="372,82" zPosition="99" flags="wfNoBorder" backgroundColor="transparent">
+	<screen name="RecordTimerQuestion" position="0,0" size="372,122" zPosition="99" flags="wfBorder" borderWidth="2" backgroundColor="transparent">
 		<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="RecordTimerQuestion" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
-		<eLabel position="1,1" size="370,80" backgroundColor="SevenBackground" zPosition="-1" transparent="0" />
-		<eLabel position="0,0" size="372,82" backgroundColor="SevenBackground" zPosition="-2" transparent="0" />
-		<widget name="list" position="11,11" size="350,60" itemHeight="30" font="Regular;22" scrollbarMode="showOnDemand" enableWrapAround="1" foregroundColorSelected="SevenSelFont" backgroundColor="SevenBackground" foregroundColor="SevenButtonText" transparent="1" />
+		<eLabel position="0,0" size="372,122" backgroundColor="SevenBackground" zPosition="-1" transparent="0" />
+		<eLabel position="0,0" size="372,122" backgroundColor="SevenBackground" zPosition="-2" transparent="0" />
+		<widget name="list" position="11,11" size="350,100" itemHeight="30" font="Regular;20" scrollbarMode="showOnDemand" enableWrapAround="1" foregroundColorSelected="SevenSelFont" backgroundColor="SevenBackground" foregroundColor="SevenButtonText" transparent="1" />
 	</screen>
 		<!-- CronTimers -->
 	<screen name="CronTimers" position="0,0" size="1280,720" title="CronManager" flags="wfNoBorder" backgroundColor="transparent">

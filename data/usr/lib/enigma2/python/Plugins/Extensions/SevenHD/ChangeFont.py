@@ -42,8 +42,14 @@ for fontheight in lines:
                           try:
                              name = child.get('text')
                           except:
-                             name = 'NICHTS'
-                        
+                             name = None
+                    try:
+                       for sub in child:
+                          name = sub.text
+                          break
+                    except:
+                       name = name
+                    
                     if name == str(height_entrie[2]):
                        fontheight = font.split(';')
                        new_font = fontheight[0] + ';' + str(int(new_height))

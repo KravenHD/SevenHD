@@ -36,7 +36,7 @@ def _(txt):
 		t = gettext.gettext(txt)
 	return t                              
 
-URL = 'http://weather.yahooapis.com/forecastrss?w=' + str(config.plugins.SevenHD.weather_city.value) + '&u=c'
+URL = 'http://weather.yahooapis.com/forecastrss?w=' + str(config.plugins.SevenHD.weather_woe_id.value) + '&u=c'
 WEATHER_DATA = None
 
 class SevenHDWeather_yahoo(Converter, object):

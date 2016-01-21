@@ -1094,8 +1094,8 @@
 		<widget backgroundColor="SevenBackground" name="bit" position="620,290" size="160,26" font="Regular;18" foregroundColor="SevenFont1" transparent="1" zPosition="1" halign="left" />
 		<widget backgroundColor="SevenBackground" name="spiconname" position="80,321" size="690,26" font="Regular;18" foregroundColor="SevenFont1" transparent="1" zPosition="1" halign="left" />
 		<widget backgroundColor="SevenBackground" name="spicon" position="240,320" size="690,26" font="Regular;18" foregroundColor="SevenFont1" transparent="1" zPosition="1" halign="left" />
-		<widget backgroundColor="SevenBackground" flags="wfBorder" borderColor="SevenBorder" borderWidth="1" name="piconslider" position="340,234" size="180,20" zPosition="2" transparent="1" />
-		<widget backgroundColor="SevenBackground" name="picon" position="798,80" size="400,240" zPosition="4" transparent="0" borderWidth="0" borderColor="black" alphatest="blend" />
+		<widget backgroundColor="SevenBackground" flags="wfBorder" borderColor="SevenLine" borderWidth="1" name="piconslider" position="340,234" size="180,20" zPosition="2" transparent="1" />
+		<widget backgroundColor="SevenBackground" name="picon" position="798,80" size="400,240" zPosition="4" transparent="0" borderWidth="0" borderColor="SevenLine" alphatest="blend" />
 		<widget backgroundColor="SevenBackground" name="list" position="70,370" size="1130,270" itemHeight="30" zPosition="1" foregroundColor="SevenFont1" foregroundColorSelected="SevenSelFont" scrollbarWidth="5" scrollbarSliderForegroundColor="grey" scrollbarSliderBorderColor="grey" scrollbarSliderBorderWidth="1" transparent="1" />
 		<panel name="template_colorkey_text" />
 		<panel name="template_menu_full_button" />
@@ -1826,6 +1826,7 @@
 		<widget name="helperimage" position="891,274" size="372,209" zPosition="1" backgroundColor="SevenFontBackground" />
 		<widget name="description" position="891,490" size="372,200" font="Regular; 22" valign="center" halign="center" transparent="1" backgroundColor="SevenFontBackgroundRight" foregroundColor="SevenFont2" />
 		<widget name="colorthump" position="891,220" size="372,30" zPosition="1" backgroundColor="SevenFontBackgroundRight" alphatest="blend" />
+		<widget name="preview" position="891,274" size="372,209" font="Regular; 22" valign="center" halign="center" transparent="1" backgroundColor="SevenFontBackgroundRight" foregroundColor="SevenFont1" zPosition="2" />
 		<widget backgroundColor="SevenFontBackground" font="Regular2; 34" position="70,12" render="Label" size="708,46" source="Title" transparent="1" halign="center" valign="center" foregroundColor="SevenFont1" noWrap="1" />
 		<eLabel backgroundColor="SevenBackground" position="6,6" size="842,708" transparent="0" zPosition="-9" />
 		<eLabel backgroundColor="SevenBorder" position="6,6" size="842,2" zPosition="2" />
@@ -2500,4 +2501,88 @@
 		<panel name="template_colorkey_text_kp" />
 	</screen>
 		<!-- Kashmir Plugins */-->
+		<!-- NetatmoBar_V1 */-->
+	<screen backgroundColor="transparent" flags="wfNoBorder" name="NetatmoBar_V1" position="371,107" size="537,65" title="NetatmoBar">
+		<widget backgroundColor="SevenBackgroundIB1" font="Regular;17" foregroundColor="SevenNowIB" halign="center" position="5,6" render="Label" size="80,25" source="session.CurrentService" transparent="1" zPosition="10">
+			<convert type="Netatmo">station.name</convert>
+		</widget>
+		<widget backgroundColor="SevenBackgroundIB1" font="Regular;17" foregroundColor="SevenNowIB" halign="center" position="98,9" render="Label" size="100,25" source="session.CurrentService" transparent="1" zPosition="10">
+			<convert type="Netatmo">indoor.module_name</convert>
+		</widget>
+		<eLabel text="Temp:" position="200,9" size="50,25" zPosition="5" halign="left" font="Regular; 17" backgroundColor="SevenBackgroundIB1" transparent="1" foregroundColor="SevenNextIB" />
+		<widget backgroundColor="SevenBackgroundIB1" font="Regular;17" foregroundColor="SevenNowIB" position="257,9" render="Label" size="60,30" source="session.CurrentService" transparent="1" zPosition="10">
+			<convert type="Netatmo">indoor.temperature</convert>
+		</widget>
+		<eLabel text="Luftf:" position="317,9" size="55,25" zPosition="5" halign="left" font="Regular; 17" backgroundColor="SevenBackgroundIB1" transparent="1" foregroundColor="SevenNextIB" />
+		<widget backgroundColor="SevenBackgroundIB1" font="Regular;17" foregroundColor="SevenNowIB" position="367,9" render="Label" size="40,30" source="session.CurrentService" transparent="1" zPosition="10">
+			<convert type="Netatmo">indoor.humidity</convert>
+		</widget>
+		<widget backgroundColor="SevenBackgroundIB1" font="Regular;17" foregroundColor="SevenNowIB" halign="center" position="98,35" render="Label" size="100,25" source="session.CurrentService" transparent="1" zPosition="10">
+			<convert type="Netatmo">outdoor.module_name</convert>
+		</widget>
+		<eLabel text="Temp:" position="200,35" size="50,25" zPosition="5" halign="left" font="Regular; 17" backgroundColor="SevenBackgroundIB1" transparent="1" foregroundColor="SevenNextIB" />
+		<widget backgroundColor="SevenBackgroundIB1" font="Regular;17" foregroundColor="SevenNowIB" position="257,35" render="Label" size="60,25" source="session.CurrentService" transparent="1" zPosition="10">
+			<convert type="Netatmo">outdoor.temperature</convert>
+		</widget>
+		<eLabel text="Luftf:" position="317,35" size="50,25" zPosition="5" halign="left" font="Regular; 17" backgroundColor="SevenBackgroundIB1" transparent="1" foregroundColor="SevenNextIB" />
+		<widget backgroundColor="SevenBackgroundIB1" font="Regular;17" foregroundColor="SevenNowIB" position="367,35" render="Label" size="40,25" source="session.CurrentService" transparent="1" zPosition="10">
+			<convert type="Netatmo">outdoor.humidity</convert>
+		</widget>
+		<widget alphatest="blend" pixmaps="co2_1.png,co2_2.png,co2_3.png,co2_4.png,co2_5.png,co2_6.png,co2_7.png,co2_8.png,co2_9.png,co2_10.png" pixtype="co2" plugin_pixmaps="images" position="58,31" render="NetatmoPixmap" size="30,30" source="session.CurrentService" zPosition="10">
+		</widget>
+		<widget alphatest="blend" pixmaps="wifi_unknown.png,wifi_low.png,wifi_medium.png,wifi_high.png,wifi_full.png" pixtype="wifi_status" plugin_pixmaps="images" position="10,31" render="NetatmoPixmap" size="42,30" source="session.CurrentService" zPosition="10">
+		</widget>
+		<widget alphatest="blend" pixmaps="signal_unknown.png,signal_verylow.png,signal_low.png,signal_medium.png,signal_high.png,signal_full.png" pixtype="rf_status" plugin_pixmaps="images" position="428,26" render="NetatmoPixmap" size="50,30" source="session.CurrentService" zPosition="10">
+		</widget>
+		<widget alphatest="blend" pixmaps="battery_unknown.png,battery_verylow.png,battery_low.png,battery_medium.png,battery_high.png,battery_full.png" pixtype="battery_vp" plugin_pixmaps="images" position="482,26" render="NetatmoPixmap" size="50,30" source="session.CurrentService" zPosition="10">
+		</widget>
+		<eLabel backgroundColor="SevenBorderIB" position="534,1" size="2,62" zPosition="2" />
+		<eLabel backgroundColor="SevenBorderIB" position="1,1" size="2,62" zPosition="2" />
+		<eLabel backgroundColor="SevenBorderIB" position="1,1" size="535,2" zPosition="2" />
+		<eLabel backgroundColor="SevenBorderIB" position="1,62" size="535,2" zPosition="2" />
+		<eLabel backgroundColor="SevenBackgroundIB1" position="1,1" size="535,62" zPosition="-9" />
+		<ePixmap pixmap="SevenHD/back/ibone.png" position="1,1" size="535,62" alphatest="blend" zPosition="-8" />
+	</screen>
+		<!-- NetatmoBar_V5 */-->
+	<screen backgroundColor="transparent" flags="wfNoBorder" name="NetatmoBar_V5" position="371,107" size="537,65" title="NetatmoBar">
+		<widget backgroundColor="SevenBackgroundIB1" font="Regular;17" foregroundColor="SevenNowIB" halign="center" position="5,6" render="Label" size="80,25" source="session.CurrentService" transparent="1" zPosition="10">
+			<convert type="Netatmo">station.name</convert>
+		</widget>
+		<widget backgroundColor="SevenBackgroundIB1" font="Regular;17" foregroundColor="SevenNowIB" halign="center" position="98,9" render="Label" size="100,25" source="session.CurrentService" transparent="1" zPosition="10">
+			<convert type="Netatmo">indoor.module_name</convert>
+		</widget>
+		<eLabel text="Temp:" position="200,9" size="50,25" zPosition="5" halign="left" font="Regular; 17" backgroundColor="SevenBackgroundIB1" transparent="1" foregroundColor="SevenNextIB" />
+		<widget backgroundColor="SevenBackgroundIB1" font="Regular;17" foregroundColor="SevenNowIB" position="257,9" render="Label" size="60,30" source="session.CurrentService" transparent="1" zPosition="10">
+			<convert type="Netatmo">indoor.temperature</convert>
+		</widget>
+		<eLabel text="Luftf:" position="317,9" size="55,25" zPosition="5" halign="left" font="Regular; 17" backgroundColor="SevenBackgroundIB1" transparent="1" foregroundColor="SevenNextIB" />
+		<widget backgroundColor="SevenBackgroundIB1" font="Regular;17" foregroundColor="SevenNowIB" position="367,9" render="Label" size="40,30" source="session.CurrentService" transparent="1" zPosition="10">
+			<convert type="Netatmo">indoor.humidity</convert>
+		</widget>
+		<widget backgroundColor="SevenBackgroundIB1" font="Regular;17" foregroundColor="SevenNowIB" halign="center" position="98,35" render="Label" size="100,25" source="session.CurrentService" transparent="1" zPosition="10">
+			<convert type="Netatmo">outdoor.module_name</convert>
+		</widget>
+		<eLabel text="Temp:" position="200,35" size="50,25" zPosition="5" halign="left" font="Regular; 17" backgroundColor="SevenBackgroundIB1" transparent="1" foregroundColor="SevenNextIB" />
+		<widget backgroundColor="SevenBackgroundIB1" font="Regular;17" foregroundColor="SevenNowIB" position="257,35" render="Label" size="60,25" source="session.CurrentService" transparent="1" zPosition="10">
+			<convert type="Netatmo">outdoor.temperature</convert>
+		</widget>
+		<eLabel text="Luftf:" position="317,35" size="50,25" zPosition="5" halign="left" font="Regular; 17" backgroundColor="SevenBackgroundIB1" transparent="1" foregroundColor="SevenNextIB" />
+		<widget backgroundColor="SevenBackgroundIB1" font="Regular;17" foregroundColor="SevenNowIB" position="367,35" render="Label" size="40,25" source="session.CurrentService" transparent="1" zPosition="10">
+			<convert type="Netatmo">outdoor.humidity</convert>
+		</widget>
+		<widget alphatest="blend" pixmaps="co2_1.png,co2_2.png,co2_3.png,co2_4.png,co2_5.png,co2_6.png,co2_7.png,co2_8.png,co2_9.png,co2_10.png" pixtype="co2" plugin_pixmaps="images" position="58,31" render="NetatmoPixmap" size="30,30" source="session.CurrentService" zPosition="10">
+		</widget>
+		<widget alphatest="blend" pixmaps="wifi_unknown.png,wifi_low.png,wifi_medium.png,wifi_high.png,wifi_full.png" pixtype="wifi_status" plugin_pixmaps="images" position="10,31" render="NetatmoPixmap" size="42,30" source="session.CurrentService" zPosition="10">
+		</widget>
+		<widget alphatest="blend" pixmaps="signal_unknown.png,signal_verylow.png,signal_low.png,signal_medium.png,signal_high.png,signal_full.png" pixtype="rf_status" plugin_pixmaps="images" position="428,26" render="NetatmoPixmap" size="50,30" source="session.CurrentService" zPosition="10">
+		</widget>
+		<widget alphatest="blend" pixmaps="battery_unknown.png,battery_verylow.png,battery_low.png,battery_medium.png,battery_high.png,battery_full.png" pixtype="battery_vp" plugin_pixmaps="images" position="482,26" render="NetatmoPixmap" size="50,30" source="session.CurrentService" zPosition="10">
+		</widget>
+		<eLabel backgroundColor="SevenBorderIB" position="534,1" size="2,62" zPosition="2" />
+		<eLabel backgroundColor="SevenBorderIB" position="1,1" size="2,62" zPosition="2" />
+		<eLabel backgroundColor="SevenBorderIB" position="1,1" size="535,2" zPosition="2" />
+		<eLabel backgroundColor="SevenBorderIB" position="1,62" size="535,2" zPosition="2" />
+		<eLabel backgroundColor="SevenBackgroundIB1" position="1,1" size="535,62" zPosition="-9" />
+		<ePixmap pixmap="SevenHD/back/ibone.png" position="1,1" size="535,62" alphatest="blend" zPosition="-8" />
+	</screen>
 		<!-- plugins -->

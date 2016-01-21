@@ -156,10 +156,17 @@ class FontSettings(Screen):
                               try:
                                  name = child.get('text')
                               except:
-                                 name = 'nothing to see'
-                        
-                        if name != 'nothing to see':
+                                 name = None
+                        try:
+                            for sub in child:
+                                name = sub.text
+                                break
+                        except:
+                            name = name
+                            
+                        if name != None:
                            fontheight = font.split(';')
+                           
                            if len(screenname) >= 15:
                               self.screen_tab = '\t'
                            else:
@@ -173,7 +180,9 @@ class FontSettings(Screen):
                    
                    except:
                       pass
+        
         list.sort()
+        self.debug(len(list))
         self["menuList"].setList(list)
 
     def keyBlue(self):

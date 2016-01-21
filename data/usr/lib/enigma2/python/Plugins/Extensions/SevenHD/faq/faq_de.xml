@@ -40,7 +40,7 @@ A: Du musst deine Änderungen in der skin-user.xml unter /usr/lib/enigma2/python
 	</page>
 
         <page title="FAQ"><text value="Q: Was bedeutet das kleine grüne Symbol unten rechts in der Infobar?\n\n\n
-A: Das bedeutet, dass ein Update des SevenHD Plugin verfügbar ist.\nDas Update bekommst du, wenn Du das SevenHD Plugin aufrufst.\nDie Einstellungen für Updates findes Du unter Sonstige Einstellungen."/>
+A: Das bedeutet, dass ein Update des SevenHD Plugin verfügbar ist.\nDas Update bekommst du, wenn Du das SevenHD Plugin aufrufst.\nDie Einstellungen für Updates findes Du unter Sonstige Einstellungen.\n\n\n\n\nQ: Kann ich das auch ausblenden?\n\nA: Ja im Plugin unter 'Sonstige Einstellungen' den Punkt 'Updateinformationen in Infobar' auf Nein stellen."/>
 	</page>
 
         <page title="FAQ"><text value="Q: Kann ich eigene Farben zu der Farbauswahl hinzufügen?\n\n\n
@@ -63,16 +63,16 @@ A: Unter 'Sonstige Einstellungen' die Option 'ScreenName' auf JA stellen,\ndann 
 A: Schau bitte das Dein Image auf einen aktuellen Stand ist, da das SevenHD jeweils mit einem aktuellen Image erstellt und getestet wird."/>
 	</page>
 	
-        <page title="FAQ"><text value="Q: Ich wurde aufgefordert den debug.log hochzuladen, wei? aber nicht wie ich vorgehen soll und wo der ist?\n\n\n
-A: Geh in das Plugin und schalte unter Sonstige Einstellungen den Punkt Debug Mode auf ja und speichere mit Grün den Vorgang ab.
+        <page title="FAQ"><text value="Q: Ich wurde aufgefordert den debug.log hochzuladen, weiß aber nicht wie ich vorgehen soll und wo der ist?\n\n\n
+A: Geh in das Plugin und schalte unter 'Sonstige Einstellungen' den Punkt 'Debug Mode' auf JA und speichere mit Grün den Vorgang ab.
 Ab sofort wird alles, was für die Fehleranalyse gebraucht wird, in den debug.log gespeichert.\n\n\n
-
-1.) Der debug.log befindet sich unter /tmp/kraven_debug.log\n\n
-2.) Wenn Du einen Fehler hast, dann geh wie folgt vor.\n\n
-2.a) Öffne das Plugin und nimm Deine Einstellungen vor wie gewohnt.\n\n
-2.b) Speichere jeden Vorgang mit der grünen Taste.\n\n
-2.c) Jetzt kommt der Punkt, wo das Skin generiert wird und die Frage des GUI Neustart kommt, den Du nat. mit JA bestätigst.\n\n
-3.) Falls beim generieren ein Fehler aufgetreten ist, gehst Du jetzt in das /tmp Verzeichniss und kopierst die kraven_debug.log auf Deinen PC.
-Keinesfalls ins Plugin gehen!! Bei jedem Aufruf des Plugin, wird die /tmp/kraven_debug.log gelöscht und Du darfst alles nochmal machen."/>
+1.) Der debug.log befindet sich unter /tmp/kraven_debug.log\n\n\n!!!! HINWEIS !!!!\n\nBei jedem Aufruf des Plugin, wird die /tmp/kraven_debug.log gelöscht."/>
+	</page>
+        <page title="FAQ"><text value="Q: Das generieren des Skin, endet immer mit 'Error creating Skin, ....'\n\n\n
+A: Wenn Du einen Fehler hast, dann geh wie folgt vor.\n\n\n
+1) Öffne das Plugin und nimm Deine Einstellungen vor wie gewohnt.\n\n
+2) Speichere jeden Vorgang mit der grünen Taste.\n\n
+3.a) Jetzt kommt der Punkt, wo das Skin generiert wird und die Frage des GUI Neustart kommt, den Du nat. mit JA bestätigst.\n\n
+3.b) Falls beim generieren ein Fehler aufgetreten ist, gehst Du jetzt,\nin das /tmp Verzeichniss und kopierst die kraven_debug.log auf deinen PC.\n\n\n\n!!!! HINWEIS !!!!\n\nBei jedem Aufruf des Plugin, wird die /tmp/kraven_debug.log gelöscht."/>
 	</page>
 </mphelp>

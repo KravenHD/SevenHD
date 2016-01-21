@@ -117,16 +117,30 @@ class PluginSettings(ConfigListScreen, Screen):
         
         list = []
         list.append(getConfigListEntry(_('_______________________________plugins__________________________________________'), ))                                           
-        list.append(getConfigListEntry(_("Movie Selection"),    config.plugins.SevenHD.MovieSelectionStyle,    'Auswahl der Covergr\xc3\xb6\xc3\x9fe.',                      '1',     ''))
+        list.append(getConfigListEntry(_("Movie Selection"),     config.plugins.SevenHD.MovieSelectionStyle,    'Auswahl der Covergr\xc3\xb6\xc3\x9fe.',                      '1',     ''))
         if not fileExists(PLUGIN_PATH + "/Extensions/EnhancedMovieCenter/plugin.pyo"):
            list.append(getConfigListEntry(_('{:<114}{:>1}'.format('EnhancedMovieCenter','not installed')), ))
         else:   
-           list.append(getConfigListEntry(_("EMC"),             config.plugins.SevenHD.EMCStyle,               'Auswahl der Covergr\xc3\xb6\xc3\x9fe.',                      '1',     ''))
+           list.append(getConfigListEntry(_("EMC"),              config.plugins.SevenHD.EMCStyle,               'Auswahl der Covergr\xc3\xb6\xc3\x9fe.',                      '1',     ''))
            config.EMC.skin_able.value = True
            config.EMC.skin_able.save()
+        if os.path.isdir(PLUGIN_PATH + "Extensions/Albatros") :
+           if config.plugins.SevenHD.use_alba_skin.value:
+              list.append(getConfigListEntry(_("Use Albatros Skin"),   config.plugins.SevenHD.use_alba_skin,    'Wenn ja wird das SevenHD Skin für Albatros installiert.',    '1',     ''))
+           else:
+              list.append(getConfigListEntry(_("Use Albatros Skin"),   config.plugins.SevenHD.use_alba_skin,    'Wenn ja wird das SevenHD Skin für Albatros installiert.',    '4',     'none'))
+        else:
+           list.append(getConfigListEntry(_('{:<121}{:>1}'.format('Albatros','not installed')), )) 
+        if os.path.isdir(PLUGIN_PATH + "Extensions/MediaPortal") :
+           if config.plugins.SevenHD.use_mp_skin.value:
+              list.append(getConfigListEntry(_("Use MediaPortal Skin"),config.plugins.SevenHD.use_mp_skin,      'Wenn ja wird das SevenHD Skin für MediaPortal installiert.', '1',     ''))
+           else:
+              list.append(getConfigListEntry(_("Use MediaPortal Skin"),config.plugins.SevenHD.use_mp_skin,      'Wenn ja wird das SevenHD Skin für MediaPortal installiert.', '4',     'none'))
+        else:
+           list.append(getConfigListEntry(_('{:<121}{:>1}'.format('MediaPortal','not installed')), )) 
         if config.plugins.SevenHD.NumberZapExtImport.value:
            if fileExists(PLUGIN_PATH + "/SystemPlugins/NumberZapExt/NumberZapExt.pyo"):
-              list.append(getConfigListEntry(_("ExtNumberZap"), config.plugins.SevenHD.NumberZapExt,           'Auswahl der Darstellung beim Senderwechsel per Nummertaste.','1',     ''))
+              list.append(getConfigListEntry(_("ExtNumberZap"),  config.plugins.SevenHD.NumberZapExt,           'Auswahl der Darstellung beim Senderwechsel per Nummertaste.','1',     ''))
            else:
               list.append(getConfigListEntry(_('{:<121}{:>1}'.format('ExtNumberZap','not installed')), ))                   
         else:
@@ -135,11 +149,11 @@ class PluginSettings(ConfigListScreen, Screen):
         if not fileExists(PLUGIN_PATH + "/Extensions/CoolTVGuide/plugin.pyo"):
            list.append(getConfigListEntry(_('{:<124}{:>1}'.format('CoolTVGuide','not installed')), ))
         else:
-           list.append(getConfigListEntry(_("CoolTVGuide"),     config.plugins.SevenHD.CoolTVGuide,            'Auswahl der Darstellung von CoolTVGuide.',       '1',     ''))
+           list.append(getConfigListEntry(_("CoolTVGuide"),      config.plugins.SevenHD.CoolTVGuide,            'Auswahl der Darstellung von CoolTVGuide.',                   '1',     ''))
         if not fileExists(PLUGIN_PATH + "/Extensions/WeatherPlugin/plugin.pyo"):
            list.append(getConfigListEntry(_('{:<124}{:>1}'.format('MSN Weather','not installed')), ))
         else:
-           list.append(getConfigListEntry(_("MSN Weather"),     config.plugins.SevenHD.MSNWeather,             'Auswahl der Darstellung von MSN Weather Plugin.',                                  '1',     ''))
+           list.append(getConfigListEntry(_("MSN Weather"),      config.plugins.SevenHD.MSNWeather,             'Auswahl der Darstellung von MSN Weather Plugin.',            '1',     ''))
         return list
 
     def __selectionChanged(self):
@@ -202,6 +216,8 @@ class PluginSettings(ConfigListScreen, Screen):
         self.setInputToDefault(config.plugins.SevenHD.EMCStyle)
         self.setInputToDefault(config.plugins.SevenHD.MovieSelectionStyle)
         self.setInputToDefault(config.plugins.SevenHD.CoolTVGuide)
+        self.setInputToDefault(config.plugins.SevenHD.use_alba_skin)
+        self.setInputToDefault(config.plugins.SevenHD.use_mp_skin)
         self.save()
 
     def setInputToDefault(self, configItem):

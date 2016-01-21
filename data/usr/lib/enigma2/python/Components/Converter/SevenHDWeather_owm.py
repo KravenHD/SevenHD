@@ -35,7 +35,7 @@ def _(txt):
 		t = gettext.gettext(txt)
 	return t
 
-URL = 'http://api.openweathermap.org/data/2.5/forecast/daily?' + config.plugins.SevenHD.weather_lat_lon.value + '&cnt=5&mode=json&lang=de&appid=89b59e4d7d07894243b5acd24e7f18a3'
+URL = 'http://api.openweathermap.org/data/2.5/forecast/daily?' + config.plugins.SevenHD.weather_owm_latlon.value + '&cnt=5&mode=json&lang=de&appid=89b59e4d7d07894243b5acd24e7f18a3'
 WEATHER_DATA = None
 
 class SevenHDWeather_owm(Converter, object):

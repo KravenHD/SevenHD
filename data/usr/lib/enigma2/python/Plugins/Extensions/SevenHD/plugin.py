@@ -449,7 +449,7 @@ class SevenHD(Screen):
 		self.skinSearchAndReplace.append(["SevenProgram_List", config.plugins.SevenHD.ChannelColorEvent.value])
 		
 		# Weather Font
-                provider = config.plugins.SevenHD.AutoWoeIDServer.value
+                provider = config.plugins.SevenHD.weather_server.value
                 if provider == '_yahoo' or provider == '_msn':
                    font = 'Meteo'   
                 elif provider == '_owm':
@@ -633,14 +633,14 @@ class SevenHD(Screen):
                 
                 ###clock-style xml Infobar
 		if config.plugins.SevenHD.ClockStyle.value == 'clock-weather':
-                   self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.ClockStyle.value + str(config.plugins.SevenHD.AutoWoeIDServer.value) + XML)
-                   self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.ClockStyle.value + str(config.plugins.SevenHD.AutoWoeIDServer.value) + XML)
+                   self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.ClockStyle.value + str(config.plugins.SevenHD.weather_server.value) + XML)
+                   self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.ClockStyle.value + str(config.plugins.SevenHD.weather_server.value) + XML)
                 elif config.plugins.SevenHD.ClockStyle.value == 'clock-weather-meteo':
-                   self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.ClockStyle.value + str(config.plugins.SevenHD.AutoWoeIDServer.value) + XML)
-                   self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.ClockStyle.value + str(config.plugins.SevenHD.AutoWoeIDServer.value) + XML)
+                   self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.ClockStyle.value + str(config.plugins.SevenHD.weather_server.value) + XML)
+                   self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.ClockStyle.value + str(config.plugins.SevenHD.weather_server.value) + XML)
                 elif config.plugins.SevenHD.ClockStyle.value == 'clock-android':
-                   self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.ClockStyle.value + str(config.plugins.SevenHD.AutoWoeIDServer.value) + XML)
-                   self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.ClockStyle.value + str(config.plugins.SevenHD.AutoWoeIDServer.value) + XML)
+                   self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.ClockStyle.value + str(config.plugins.SevenHD.weather_server.value) + XML)
+                   self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.ClockStyle.value + str(config.plugins.SevenHD.weather_server.value) + XML)
                 else:
                    self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.ClockStyle.value + XML)
                    self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.ClockStyle.value + XML)
@@ -653,20 +653,28 @@ class SevenHD(Screen):
 		self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.SysInfo.value + XML)
                 self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.SysInfo.value + XML)        
                 
-                ###weather-style
-                if config.plugins.SevenHD.WeatherStyle.value != 'none':
-                   self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.WeatherStyle.value + str(config.plugins.SevenHD.AutoWoeIDServer.value) + XML)
-                   self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.WeatherStyle.value + str(config.plugins.SevenHD.AutoWoeIDServer.value) + XML)
+                ###weather-style_1 Infobar
+                if config.plugins.SevenHD.WeatherStyle_1.value != 'none':
+                   self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.WeatherStyle_1.value + str(config.plugins.SevenHD.weather_server.value) + XML)
+                   self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.WeatherStyle_1.value + str(config.plugins.SevenHD.weather_server.value) + XML)
                 else:
-                   self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.WeatherStyle.value + XML)
-                   self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.WeatherStyle.value + XML)      
+                   self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.WeatherStyle_1.value + XML)
+                   self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.WeatherStyle_1.value + XML)      
+                
+                ###weather-style_2 Infobar
+                   if config.plugins.SevenHD.WeatherStyle_2.value != 'none':
+                      self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.WeatherStyle_2.value + str(config.plugins.SevenHD.weather_server.value) + XML)
+                      self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.WeatherStyle_2.value + str(config.plugins.SevenHD.weather_server.value) + XML)
+                   else:
+                      self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.WeatherStyle_2.value + XML)
+                      self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.WeatherStyle_2.value + XML) 
                 
                 ###Infobar_middle
 		self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.InfobarStyle.value + "-middle.xml")
                 self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.InfobarStyle.value + "-middle.xml")         
                 
                 ###Channelname 2nd Infobar
-                if not config.plugins.SevenHD.SIB.value in ('-minitv2','-right'):
+                if not config.plugins.SevenHD.SIB.value in ('-minitv2','-right','-picon'):
                    if config.plugins.SevenHD.InfobarChannelName.value == "none":
                       self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.InfobarChannelName.value + XML)
                       self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.InfobarChannelName.value + XML) 
@@ -681,19 +689,29 @@ class SevenHD(Screen):
                       self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.InfobarStyle.value + "-ICNameandNumber.xml") 
                 
                 ###clock-style xml 2nd Infobar
-		if not config.plugins.SevenHD.SIB.value in ('-minitv2','-right'):
+		if not config.plugins.SevenHD.SIB.value in ('-minitv2','-right','-picon'):
                    if config.plugins.SevenHD.ClockStyle.value == 'clock-weather':
-                      self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.ClockStyle.value + str(config.plugins.SevenHD.AutoWoeIDServer.value) + XML)
-                      self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.ClockStyle.value + str(config.plugins.SevenHD.AutoWoeIDServer.value) + XML)
+                      self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.ClockStyle.value + str(config.plugins.SevenHD.weahter_server.value) + XML)
+                      self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.ClockStyle.value + str(config.plugins.SevenHD.weather_server.value) + XML)
                    elif config.plugins.SevenHD.ClockStyle.value == 'clock-weather-meteo':
-                      self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.ClockStyle.value + str(config.plugins.SevenHD.AutoWoeIDServer.value) + XML)
-                      self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.ClockStyle.value + str(config.plugins.SevenHD.AutoWoeIDServer.value) + XML)
+                      self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.ClockStyle.value + str(config.plugins.SevenHD.weather_server.value) + XML)
+                      self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.ClockStyle.value + str(config.plugins.SevenHD.weather_server.value) + XML)
                    elif config.plugins.SevenHD.ClockStyle.value == 'clock-android':
-                      self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.ClockStyle.value + str(config.plugins.SevenHD.AutoWoeIDServer.value) + XML)
-                      self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.ClockStyle.value + str(config.plugins.SevenHD.AutoWoeIDServer.value) + XML)
+                      self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.ClockStyle.value + str(config.plugins.SevenHD.weather_server.value) + XML)
+                      self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.ClockStyle.value + str(config.plugins.SevenHD.weather_server.value) + XML)
                    else:
                       self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.ClockStyle.value + XML)
                       self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.ClockStyle.value + XML)       
+                
+                ###weather-style 2nd Infobar
+                if config.plugins.SevenHD.InfobarStyle.value == 'infobar-style-xpicon8':
+                   if not config.plugins.SevenHD.SIB.value in ('-minitv2','-right','-picon'):
+                      if config.plugins.SevenHD.WeatherStyle_2.value != 'none':
+                         self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.WeatherStyle_2.value + str(config.plugins.SevenHD.weather_server.value) + XML)
+                         self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.WeatherStyle_2.value + str(config.plugins.SevenHD.weather_server.value) + XML)
+                      else:
+                         self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.WeatherStyle_2.value + XML)
+                         self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.WeatherStyle_2.value + XML)
                 
                 ###Infobar_end
 		self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.InfobarStyle.value + config.plugins.SevenHD.SIB.value + XML)
@@ -816,15 +834,15 @@ class SevenHD(Screen):
                        elif entrie == 'vkeys':
                           os.system("rm -rf /usr/share/enigma2/SevenHD/buttons/vkey*")
                           self.download_tgz('buttons', entrie)
-                       elif entrie == 'WetterIcons' and config.plugins.SevenHD.WeatherStyle.value != 'none':
+                       elif entrie == 'WetterIcons' and (config.plugins.SevenHD.WeatherStyle_1.value != 'none' or config.plugins.SevenHD.WeatherStyle_2.value != 'none'):
                           os.system("rm -rf /usr/share/enigma2/SevenHD/%s/*.*; rm -rf /usr/share/enigma2/SevenHD/%s" % (str(entrie), str(entrie)))
-                          self.download_tgz('weather', 'weather' + config.plugins.SevenHD.AutoWoeIDServer.value)
-                       elif entrie == 'clock' and config.plugins.SevenHD.ClockStyle.value in 'clock-analog clock-android clock-weather':
+                          self.download_tgz('weather', 'weather' + config.plugins.SevenHD.weather_server.value)
+                       elif entrie == 'clock' and config.plugins.SevenHD.ClockStyle.value in 'clock-analog clock-android clock-weather clock-flip':
                           os.system("rm -rf /usr/share/enigma2/SevenHD/%s/*.*; rm -rf /usr/share/enigma2/SevenHD/%s" % (str(entrie), str(entrie)))
                           if config.plugins.SevenHD.ClockStyle.value == 'clock-weather':  # !! clock-weather <-> weather_xxx
-                             self.download_tgz('weather', 'weather' + config.plugins.SevenHD.AutoWoeIDServer.value)
+                             self.download_tgz('weather', 'weather' + config.plugins.SevenHD.weather_server.value)
                           elif config.plugins.SevenHD.ClockStyle.value == 'clock-android':   
-                             self.download_tgz(entrie, config.plugins.SevenHD.ClockStyle.value + config.plugins.SevenHD.AutoWoeIDServer.value)
+                             self.download_tgz(entrie, config.plugins.SevenHD.ClockStyle.value + config.plugins.SevenHD.weather_server.value)
                           else:
                              self.download_tgz(entrie, config.plugins.SevenHD.ClockStyle.value)
                        elif entrie == 'volume' and config.plugins.SevenHD.VolumeStyle.value == 'volumestyle-center':
@@ -871,17 +889,51 @@ class SevenHD(Screen):
                 
                 if fileExists(PLUGIN_PATH + "Extensions/WeatherPlugin/plugin.pyo") and config.plugins.SevenHD.MSNWeather.value == 'msn-icon':
                    self.download_tgz('msn', 'msn-icon')
-                #elif fileExists(PLUGIN_PATH + "/Extensions/WeatherPlugin/plugin.pyo") and config.plugins.SevenHD.MSNWeather.value == 'msn-standard':      
-                #   self.download_tgz('msn', 'msn-standard')
+                
+                if config.plugins.SevenHD.use_alba_skin.value == True and os.path.isdir(PLUGIN_PATH + "Extensions/Albatros") :
+                   #if not fileExists(PLUGIN_PATH + "/Extensions/Albatros/skin/haupt_Screen.xml"):
+                      url = DOWNLOAD_URL + 'Plugins/Albatros.tar.gz'
+                      self.debug('URL: ' + url)
+                      res = requests.request('get', url)
                    
-                self.debug('download tgz complett')	
+                      tar_gz = open('/tmp/Albatros.tar.gz','w')
+                      tar_gz.write(res.content)
+                      tar_gz.close()
         
+                      sub = subprocess.Popen("tar xf /tmp/Albatros.tar.gz -C /usr/lib/enigma2/python/Plugins/Extensions/Albatros/skin/", shell=True)
+                      sub.wait()
+        
+                      remove('/tmp/Albatros.tar.gz')
+                
+                
+                if config.plugins.SevenHD.use_mp_skin.value == True and os.path.isdir(PLUGIN_PATH + "Extensions/MediaPortal") :
+                   #if not fileExists(PLUGIN_PATH + "/Extensions/MediaPortal/skins_1080/SevenHD/skin.xml"):
+                      url = DOWNLOAD_URL + 'Plugins/MediaPortal.tar.gz'
+                      self.debug('URL: ' + url)
+                      res = requests.request('get', url)
+                   
+                      tar_gz = open('/tmp/MediaPortal.tar.gz','w')
+                      tar_gz.write(res.content)
+                      tar_gz.close()
+        
+                      sub = subprocess.Popen("tar xf /tmp/MediaPortal.tar.gz -C /usr/lib/enigma2/python/Plugins/Extensions/MediaPortal", shell=True)
+                      sub.wait()
+        
+                      remove('/tmp/MediaPortal.tar.gz')
+                
+                
+                self.debug('download tgz complett')	
+                self.skin_ok = True
         except:
-           self.debug('error on "def save()"\n')
-           self.session.open(MessageBox, _("Error creating Skin!"), MessageBox.TYPE_ERROR)
-
-        self.reboot(_("GUI needs a restart to download files and apply a new skin.\nDo you want to Restart the GUI now?"))
-
+           config.plugins.SevenHD.debug.setValue(True)
+           self.debug('Error creating Skin!')
+           self.skin_ok = False
+           
+        if self.skin_ok:   
+           self.reboot(_("GUI needs a restart to download files and apply a new skin.\nDo you want to Restart the GUI now?"))
+        else:
+           self.session.open(MessageBox, _("Error creating Skin, contact Kraven Team\nand send /tmp/kraven_debug.log for help!"), MessageBox.TYPE_ERROR)
+           
     def unpack(self):
         os.system("rm -rf /usr/share/enigma2/SevenHD/*; rm -rf /usr/share/enigma2/SevenHD")
         

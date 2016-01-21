@@ -44,6 +44,7 @@ class InfobarExtraSettings(ConfigListScreen, Screen):
                          <eLabel position="70,12" size="708,46" text="Infobar Extra Settings" font="Regular; 35" valign="center" halign="center" transparent="1" backgroundColor="#00000000" foregroundColor="#00ffffff" name="," />
                          <widget name="colorthump" position="891,220" size="372,30" zPosition="1" backgroundColor="#00000000" alphatest="blend" />
                          <widget name="helperimage" position="891,274" size="372,209" zPosition="1" backgroundColor="#00000000" />
+                         <widget name="preview" position="891,274" size="372,209" font="Regular; 22" valign="center" halign="center" transparent="1" backgroundColor="#00000000" foregroundColor="#00ffffff" zPosition="2" />
                          <widget name="description" position="891,490" size="372,200" font="Regular; 22" valign="center" halign="center" transparent="1" backgroundColor="#00000000" foregroundColor="#00ffffff" />
                          <widget backgroundColor="#00000000" font="Regular2; 34" foregroundColor="#00ffffff" position="70,12" render="Label" size="708,46" source="Title" transparent="1" halign="center" valign="center" noWrap="1" />
                          <eLabel backgroundColor="#00000000" position="6,6" size="842,708" transparent="0" zPosition="-9" foregroundColor="#00ffffff" />
@@ -83,11 +84,17 @@ class InfobarExtraSettings(ConfigListScreen, Screen):
         self["colorthump"] = Pixmap()
         self["helperimage"] = Pixmap()
         self["description"] = Label()
+        self["preview"] = Label()
         self["blue"] = Label()
         
         if config.plugins.SevenHD.grabdebug.value:
            self["blue"].setText('Screenshot')
-           
+        else:
+           self["blue"].setText('Preview Result')
+        
+        self.preview = False
+        self["preview"].hide()      
+        
         ConfigListScreen.__init__(
             self,
             self.getMenuItemList(),
@@ -110,7 +117,7 @@ class InfobarExtraSettings(ConfigListScreen, Screen):
             "red": self.exit,
             "yellow": self.defaults,
             "green": self.save,
-            "blue": self.grab_png,
+            "blue": self.keyBlue,
             "cancel": self.exit
         }, -1)
 
@@ -124,34 +131,50 @@ class InfobarExtraSettings(ConfigListScreen, Screen):
         list.append(getConfigListEntry(_("ECM information"),                  config.plugins.SevenHD.ECMInfo,         'Zeigt die ECM Informationen im unteren Bereich der Infobar an.',              '1',        ''))
         list.append(getConfigListEntry(_("signal strengh"),                   config.plugins.SevenHD.FrontInfo,       'Zeigt die Anzeige in SNR oder dB an.',                                        '1',        'SNRdB'))
         list.append(getConfigListEntry(_('________________________________weather____________________________________________'), ))
-        if config.plugins.SevenHD.WeatherStyle.value == 'none':
-           list.append(getConfigListEntry(_("weather"),                       config.plugins.SevenHD.WeatherStyle,    'Zeigt das Wetter an.',                                                        '4',        'none'))
-        else:
-           list.append(getConfigListEntry(_("weather"),                       config.plugins.SevenHD.WeatherStyle,    'Zeigt das Wetter an.',                                                        '1',        ''))
         
-        if config.plugins.SevenHD.WeatherStyle.value != 'none' or config.plugins.SevenHD.ClockStyle.value == "clock-android" or config.plugins.SevenHD.ClockStyle.value == "clock-weather":
-           list.append(getConfigListEntry(_("Server"),                        config.plugins.SevenHD.AutoWoeIDServer, 'Stellt den Server ein, wor\xc3\xbcber die Wetterdaten gesucht werden sollen.','4',        'server'))
-           if config.plugins.SevenHD.AutoWoeIDServer.value != '_yahoo':
+        if config.plugins.SevenHD.InfobarStyle.value != 'infobar-style-xpicon8':
+           if config.plugins.SevenHD.WeatherStyle_1.value == 'none':
+              list.append(getConfigListEntry(_("weather"),                       config.plugins.SevenHD.WeatherStyle_1,    'Zeigt das Wetter an.',                                                        '4',        'none'))
+           else:
+              list.append(getConfigListEntry(_("weather"),                       config.plugins.SevenHD.WeatherStyle_1,    'Zeigt das Wetter an.',                                                        '1',        ''))
+           config.plugins.SevenHD.WeatherStyle_2.setValue('none')
+        else:
+           if config.plugins.SevenHD.WeatherStyle_2.value == 'none':
+              list.append(getConfigListEntry(_("weather"),                       config.plugins.SevenHD.WeatherStyle_2,    'Zeigt das Wetter an.',                                                        '4',        'none'))
+           else:
+              list.append(getConfigListEntry(_("weather"),                       config.plugins.SevenHD.WeatherStyle_2,    'Zeigt das Wetter an.',                                                        '1',        ''))
+           config.plugins.SevenHD.WeatherStyle_1.setValue('none')
+           
+        if config.plugins.SevenHD.WeatherStyle_1.value != 'none' or config.plugins.SevenHD.WeatherStyle_2.value != 'none' or config.plugins.SevenHD.ClockStyle.value == "clock-android" or config.plugins.SevenHD.ClockStyle.value == "clock-weather":
+           
+           list.append(getConfigListEntry(_("Server"),                        config.plugins.SevenHD.weather_server,  'Stellt den Server ein, wor\xc3\xbcber die Wetterdaten gesucht werden sollen.','4',        'server'))
+           list.append(getConfigListEntry(_("Search by"),                     config.plugins.SevenHD.weather_search_over,'Stell hier ein, wie gesucht werden sollen.',                               '4',        'server'))
+           
+           if config.plugins.SevenHD.weather_search_over.value == 'name':
+              list.append(getConfigListEntry(_("Cityname"),                   config.plugins.SevenHD.weather_cityname,'Gib hier deinen Ort ein.',                                                    '4',        'cityname'))
+           elif config.plugins.SevenHD.weather_search_over.value == 'woeid':
+              list.append(getConfigListEntry(_("Woe ID"),                     config.plugins.SevenHD.weather_woe_id,  'Gib hier deine WoeID ein.',                                                   '4',        'woeid'))
+           elif config.plugins.SevenHD.weather_search_over.value == 'gmcode':
+              list.append(getConfigListEntry(_("GM Code"),                    config.plugins.SevenHD.weather_gmcode,  'Gib hier deinen GM Code ein.\neine Liste findet ihr auf http://weather.codes','4',        'gmcode'))
+           elif config.plugins.SevenHD.weather_search_over.value == 'latlon':
+              list.append(getConfigListEntry(_("Latitude"),                   config.plugins.SevenHD.weather_lat,     'Gib hier deinen Latitude ein.\nBsp. 51.3452',                                 '4',        'latlon'))
+              list.append(getConfigListEntry(_("Longitude"),                  config.plugins.SevenHD.weather_lon,     'Gib hier deinen Longitude ein.\nBsp. 12.38594',                               '4',        'latlon'))
+           
+           if config.plugins.SevenHD.weather_server.value != '_yahoo':
               list.append(getConfigListEntry(_("Language for Weather"),       config.plugins.SevenHD.weather_language,'Stellt die Ausgabesprache ein.',                                              '4',        'language'))
            
            list.append(getConfigListEntry(_("Weather Style"),                 config.plugins.SevenHD.WeatherView,     'W\xc3\xa4hle zwischen Wetter Icon oder Meteo.',                               '1',        ''))
            if config.plugins.SevenHD.WeatherView.value == 'meteo':
               list.append(getConfigListEntry(_("Meteo Color"),                config.plugins.SevenHD.MeteoColor,      'Stellt die Farbe des MeteoIcon ein.',                                         '4',        'MeteoColor'))
            list.append(getConfigListEntry(_("Refresh interval (in minutes)"), config.plugins.SevenHD.refreshInterval, 'Stellt die Abfragezeit des Wetter ein.',                                      '4',        'MeteoColor'))
-           if config.plugins.SevenHD.AutoWoeID.value == True:
-              list.append(getConfigListEntry(_("auto weather ID"),            config.plugins.SevenHD.AutoWoeID,       'Auf JA, wird deine Stadt automatisch gesucht und eingestellt.',               '4',        'True'))
-           else:
-              list.append(getConfigListEntry(_("auto weather ID"),            config.plugins.SevenHD.AutoWoeID,       'Auf JA, wird deine Stadt automatisch gesucht und eingestellt.',               '4',        'none'))
-           if config.plugins.SevenHD.AutoWoeID.value == False:
-              list.append(getConfigListEntry(_("weather ID"),                 config.plugins.SevenHD.weather_city,    'Gib hier deine WoeID ein.',                                                   '4',        'WOEID'))
            
         return list
 
     def __selectionChanged(self):
         returnValue = self["config"].getCurrent()[4]
-        if returnValue != 'WOEID':
+        if not returnValue in 'woeid latlon gmcode cityname' or returnValue == '':
            self["config"].setList(self.getMenuItemList())
-
+                 
     def GetPicturePath(self):
         returnValue = self["config"].getCurrent()[3]
            		
@@ -220,12 +243,12 @@ class InfobarExtraSettings(ConfigListScreen, Screen):
         ConfigListScreen.keyLeft(self)
         self.ShowPicture()
         self.ShowColor()
-    
+        
     def keyRight(self):
         ConfigListScreen.keyRight(self)
         self.ShowPicture()
         self.ShowColor()
-           
+         
     def keyDown(self):
         self["config"].instance.moveSelection(self["config"].instance.moveDown)
         self.ShowPicture()
@@ -235,21 +258,32 @@ class InfobarExtraSettings(ConfigListScreen, Screen):
         self["config"].instance.moveSelection(self["config"].instance.moveUp)
         self.ShowPicture()
         self.ShowColor()
-    
-    def grab_png(self):
+        
+    def keyBlue(self):
         if config.plugins.SevenHD.grabdebug.value:
            os.system('grab -p /tmp/kraven_debug.png')
            self.session.open(MessageBox, _('Debug Picture\n"kraven_debug.png" saved in /tmp\n'), MessageBox.TYPE_INFO)
-           
+        else:
+           self.preview = True
+           self.get_weather_data()
+              
     def defaults(self):
-        self.setInputToDefault(config.plugins.SevenHD.WeatherStyle)
-        self.setInputToDefault(config.plugins.SevenHD.AutoWoeIDServer)
-        self.setInputToDefault(config.plugins.SevenHD.AutoWoeID)
-        self.setInputToDefault(config.plugins.SevenHD.weather_city)
+        
+        self.setInputToDefault(config.plugins.SevenHD.WeatherStyle_1)
+        self.setInputToDefault(config.plugins.SevenHD.WeatherStyle_2)
+        self.setInputToDefault(config.plugins.SevenHD.weather_owm_latlon)
+        self.setInputToDefault(config.plugins.SevenHD.weather_accu_latlon)
+        self.setInputToDefault(config.plugins.SevenHD.weather_realtek_latlon)
+        self.setInputToDefault(config.plugins.SevenHD.weather_woe_id)
+        self.setInputToDefault(config.plugins.SevenHD.weather_accu_id)
+        self.setInputToDefault(config.plugins.SevenHD.weather_msn_id)
+        self.setInputToDefault(config.plugins.SevenHD.weather_lat)
+        self.setInputToDefault(config.plugins.SevenHD.weather_lon)
+        self.setInputToDefault(config.plugins.SevenHD.weather_gmcode)
         self.setInputToDefault(config.plugins.SevenHD.weather_cityname)
+        self.setInputToDefault(config.plugins.SevenHD.weather_server)
+        self.setInputToDefault(config.plugins.SevenHD.weather_search_over)
         self.setInputToDefault(config.plugins.SevenHD.weather_language)
-        self.setInputToDefault(config.plugins.SevenHD.weather_lat_lon)
-        self.setInputToDefault(config.plugins.SevenHD.weather_locationcode)
         self.setInputToDefault(config.plugins.SevenHD.WeatherView)
         self.setInputToDefault(config.plugins.SevenHD.MeteoColor)
         self.setInputToDefault(config.plugins.SevenHD.SatInfo)
@@ -257,18 +291,15 @@ class InfobarExtraSettings(ConfigListScreen, Screen):
         self.setInputToDefault(config.plugins.SevenHD.ECMInfo)
         self.setInputToDefault(config.plugins.SevenHD.FrontInfo)
         self.save()
-
+        
     def setInputToDefault(self, configItem):
         configItem.setValue(configItem.default)
-
+    
     def save(self):
         
-        if config.plugins.SevenHD.WeatherStyle.value != 'none' or config.plugins.SevenHD.ClockStyle.value == "clock-android" or config.plugins.SevenHD.ClockStyle.value == "clock-weather":
-           if config.plugins.SevenHD.AutoWoeID.value == True:
-              self.getgeo()
-        
-           if config.plugins.SevenHD.AutoWoeIDServer.value != '_yahoo':
-              self.getlatlon()
+        if config.plugins.SevenHD.WeatherStyle_1.value != 'none' or config.plugins.SevenHD.WeatherStyle_2.value != 'none' or config.plugins.SevenHD.ClockStyle.value == "clock-android" or config.plugins.SevenHD.ClockStyle.value == "clock-weather":
+           self.preview = False
+           self.get_weather_data()
            
         for x in self["config"].list:
             if len(x) > 1:
@@ -287,95 +318,214 @@ class InfobarExtraSettings(ConfigListScreen, Screen):
                     pass
         self.close()
     
-    def getgeo(self):
-        #            Auto Weather ID Function by .:TBX:.
-       	#               for MyMetrix or Kraven Skins
-	        
-        try:                
-                        res = requests.request('get', 'https://de.yahoo.com')
-                        d = re.search('currentLoc":{"woeid":"(.+?)","city":"(.+?)"', str(res.text)).groups(1)
-                        
-                        city = str(d[1])
-                        woeid = d[0]
-                        
-                        self.debug('Founded WoeID: ' + str(woeid))
-                        self.debug('Founded City: ' + str(city) + '\n')
-                        
-                        config.plugins.SevenHD.weather_cityname.value = str(city)
-                        config.plugins.SevenHD.weather_cityname.save()
-                        
-                        config.plugins.SevenHD.weather_city.value = str(woeid)
-                        config.plugins.SevenHD.weather_city.save()
-                        
-                        self.session.open(MessageBox, _(str(city) + ' is detected and set as your Location.\nIf that should not be right then set\nAuto Weather ID Function to "OFF".'), MessageBox.TYPE_INFO, timeout = 5)
-      
-        except:
-                    self.debug('Anything goes wrong \n')
-                    self.an_error()
-                               
-    def an_error(self):
-        self.debug('ServerError WoeID')
-        config.plugins.SevenHD.weather_city.value = "924938"
-        config.plugins.SevenHD.AutoWoeID.value = False
-    
-    def getlatlon(self):
-       
-        try:
-       
-           try:
-             res = requests.request('get', 'http://weather.yahooapis.com/forecastrss?w=%s&u=c' % str(config.plugins.SevenHD.weather_city.value))
-             city = re.search('city="(.+?)" region', str(res.text)).groups(1)
-             lat = re.search('geo:lat.+>(.+?)</geo:lat', str(res.text)).groups(1)
-             lon = re.search('geo:long.+>(.+?)</geo:long', str(res.text)).groups(1)
-             location = re.search('/forecast/(.+?)_c.html', str(res.text)).groups(1)
+    def get_weather_data(self):
            
-           except:     
-             res = requests.request('get', 'http://query.yahooapis.com/v1/public/yql?format=json&q=select%20*%20from%20geo.places.parent%20where%20child_woeid%20=%20%22' + str(config.plugins.SevenHD.weather_city.value) + '%22&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys')
-             data = res.json()
-             city_name = str(data['query']['results']['place']['admin3']['content'])
-             
-             data = {}
-             res = requests.request('get', 'http://weather.service.msn.com/find.aspx?src=outlook&weadegreetype=C&culture=%s&weasearchstr=%s' % (str(config.plugins.SevenHD.weather_language.value),str(city_name)))
-             root = fromstring(res.text)
-             
-             for childs in root:
-                 if childs.tag == 'weather':
-                    data['city'] = childs.attrib.get('weatherlocationname').encode('utf-8', 'ignore') 
-                    data['lat'] = childs.attrib.get('lat').encode('utf-8', 'ignore') 
-                    data['lon'] = childs.attrib.get('long').encode('utf-8', 'ignore') 
-                    data['location'] = childs.attrib.get('weatherlocationcode').encode('utf-8', 'ignore') 
-             
-             city = [data['city'].split(',')[0]]
-             lat = [data['lat'].replace(',','.')]
-             lon = [data['lon'].replace(',','.')]
-             location = [data['location'].split(':')[1]]
-             self.debug(str(city) + ' ' + str(lat) + ' ' + str(lon) + ' ' + str(location))
-        
+           self.city = ''
+           self.lat = ''
+           self.lon = ''
+           self.zipcode = ''
+           self.msn_id = ''
+           self.accu_id = ''
+           self.woe_id = ''
+           self.gm_code = ''
+           self.preview_text = ''
+           
+           if config.plugins.SevenHD.weather_search_over.value == 'ip':
+              self.get_latlon_by_ip()
+           elif config.plugins.SevenHD.weather_search_over.value == 'name':
+              self.get_latlon_by_name()
+           elif config.plugins.SevenHD.weather_search_over.value == 'woeid':
+              self.get_latlon_by_woeid()
+           elif config.plugins.SevenHD.weather_search_over.value == 'gmcode':
+              self.get_latlon_by_gmcode()
+           elif config.plugins.SevenHD.weather_search_over.value == 'latlon':
+              self.get_latlon_by_latlon() 
+           elif config.plugins.SevenHD.weather_search_over.value == 'auto':
+              self.get_latlon_by_homepage()
+           
+           if config.plugins.SevenHD.weather_server.value == '_yahoo':
+              self.get_woe_id_by_latlon()
+           elif config.plugins.SevenHD.weather_server.value == '_owm':
+              self.generate_owm_accu_realtek_string()
+           elif config.plugins.SevenHD.weather_server.value == '_msn':
+              self.get_msn_id_by_latlon()
+           elif config.plugins.SevenHD.weather_server.value == '_accu':
+              self.get_accu_id_by_latlon()
+           elif config.plugins.SevenHD.weather_server.value == '_realtek':
+              self.generate_owm_accu_realtek_string()
+    
+           if self.preview:
+              self["helperimage"].hide()
+              self["preview"].show()
+              self["preview"].setText(str(self.preview_text))
+              self.preview = False
+    
+    def get_latlon_by_ip(self):
+        try:
+           res = requests.request('get', 'http://api.wunderground.com/api/2b0d6572c90d3e4a/geolookup/q/autoip.json')
+           data = res.json()
+           
+           self.city = data['location']['city']
+           self.lat = data['location']['lat'] 
+           self.lon = data['location']['lon']
+           
+           self.preview_text = 'City: ' + str(self.city) + '\nLati: ' + str(self.lat) + '\nLong: ' + str(self.lon)
         except:
-           self.session.open(MessageBox, _('No City found with this WoeID, try another Service.'), MessageBox.TYPE_INFO)
-           self.debug('WoeID and CityName search dont work !!!')
-           return 
-              
-        config.plugins.SevenHD.weather_locationcode.value = str(location[0])
-        config.plugins.SevenHD.weather_locationcode.save()
-        
-        config.plugins.SevenHD.weather_cityname.value = str(city[0])
-        config.plugins.SevenHD.weather_cityname.save()
-        
-        config.plugins.SevenHD.weather_lat_lon.value = 'lat=%s&lon=%s&units=metric&lang=%s' % (str(lat[0]),str(lon[0]),str(config.plugins.SevenHD.weather_language.value))
-        config.plugins.SevenHD.weather_lat_lon.save()
-        
-        if config.plugins.SevenHD.AutoWoeIDServer.value in '_accu _realtek':
-           config.plugins.SevenHD.weather_lat_lon.value = 'lat=%s&lon=%s&metric=1&language=%s' % (str(lat[0]),str(lon[0]),str(config.plugins.SevenHD.weather_language.value))
-           config.plugins.SevenHD.weather_lat_lon.save() #htc2 androiddoes
-           res = requests.request('get', 'http://realtek.accu-weather.com/widget/realtek/weather-data.asp?%s' % config.plugins.SevenHD.weather_lat_lon.value)
-           location = re.search('cityId>(.+?)</cityId', str(res.text)).groups(1)
-           config.plugins.SevenHD.weather_locationcode.value = str(location[0])
-           config.plugins.SevenHD.weather_locationcode.save()
-        
-        self.debug('LocationCode: ' + str(config.plugins.SevenHD.weather_locationcode.value))
-        self.debug('lat/long: ' + str(lat[0]) + ' - ' + str(lon[0]) + '\n%s' % config.plugins.SevenHD.weather_lat_lon.value)
-        
+           self.session.open(MessageBox, _('No Data for IP'), MessageBox.TYPE_INFO, timeout = 5)
+           
+    def get_latlon_by_name(self):
+        try:
+           name = config.plugins.SevenHD.weather_cityname.getValue()
+           res = requests.request('get', 'http://maps.googleapis.com/maps/api/geocode/json?address=%s&sensor=true' % str(name))
+           data = res.json()
+           
+           for info in data['results'][0]['address_components'][0]['types']:
+              if 'locality' in info:
+                 self.city = data['results'][0]['address_components'][0]['long_name']
+           
+           self.lat = data['results'][0]['geometry']['location']['lat']
+           self.lon = data['results'][0]['geometry']['location']['lng']
+           
+           self.preview_text = 'City: ' + str(self.city) + '\nLati: ' + str(self.lat) + '\nLong: ' + str(self.lon)
+        except:
+           self.get_latlon_by_ip()
+           self.session.open(MessageBox, _('No Data on Name, fallback over IP'), MessageBox.TYPE_INFO, timeout = 5)
+    
+    def get_latlon_by_gmcode(self):
+        try:        
+           gmcode = config.plugins.SevenHD.weather_gmcode.value
+           res = requests.request('get', 'http://wxdata.weather.com/wxdata/weather/local/%s?cc=*' % str(gmcode))
+           data = fromstring(res.text)
+           
+           self.city = data[1][0].text.split(',')[0]
+           self.lat = data[1][2].text
+           self.lon = data[1][3].text
+           
+           self.preview_text = 'City: ' + str(self.city) + '\nLati: ' + str(self.lat) + '\nLong: ' + str(self.lon)
+        except:
+           self.get_latlon_by_ip()
+           self.session.open(MessageBox, _('No Data on GM Code, fallback over IP'), MessageBox.TYPE_INFO, timeout = 5)
+       
+    def get_latlon_by_woeid(self):
+        try:
+           res = requests.request('get', 'http://query.yahooapis.com/v1/public/yql?format=json&q=select%20*%20from%20geo.places%20where%20woeid%20=%20%s' % str(config.plugins.SevenHD.weather_woeid.value))
+           data = res.json()              
+           
+           self.city = data['query']['results']['place']['name']
+           self.lat = data['query']['results']['place']['centroid']['latitude']
+           self.lon = data['query']['results']['place']['centroid']['longitude']
+           
+           self.preview_text = 'City: ' + str(self.city) + '\nLati: ' + str(self.lat) + '\nLong: ' + str(self.lon)
+        except:    
+           self.get_latlon_by_rss()
+           self.session.open(MessageBox, _('No Data by WOEID, try RSS'), MessageBox.TYPE_INFO, timeout = 5)
+           
+    def get_latlon_by_rss(self):
+        try:
+           res = requests.request('get', 'http://weather.yahooapis.com/forecastrss?w=%s&u=c' % str(config.plugins.SevenHD.weather_woeid.value))
+           
+           self.city = re.search('city="(.+?)" region', str(res.text)).groups(1)
+           self.lat = re.search('geo:lat.+>(.+?)</geo:lat', str(res.text)).groups(1)
+           self.lon = re.search('geo:long.+>(.+?)</geo:long', str(res.text)).groups(1)
+           self.gm_code = re.search('/forecast/(.+?)_c.html', str(res.text)).groups(1)
+           
+           config.plugins.SevenHD.weather_gmcode.value = str(self.gm_code)
+           self.preview_text = 'City: ' + str(self.city) + '\nLati: ' + str(self.lat) + '\nLong: ' + str(self.lon)
+        except:
+           self.get_latlon_by_ip()
+           self.session.open(MessageBox, _('No Data on RSS, fallback over IP'), MessageBox.TYPE_INFO, timeout = 5)
+
+    def get_latlon_by_latlon(self):
+        try:
+           lat = config.plugins.SevenHD.weather_lat.getValue()
+           lon = config.plugins.SevenHD.weather_lon.getValue()
+           
+           res = requests.request('get', 'http://maps.googleapis.com/maps/api/geocode/json?address=' + str(lat) + ',' + str(lon) + '&sensor=true')
+           data = res.json()
+           
+           for info in data['results'][0]['address_components']:
+              if 'locality' in info['types']:
+                 self.city = info['long_name']
+           
+           self.lat = data['results'][0]['geometry']['location']['lat']
+           self.lon = data['results'][0]['geometry']['location']['lng']
+           
+           self.preview_text = 'City: ' + str(self.city) + '\nLati: ' + str(self.lat) + '\nLong: ' + str(self.lon)
+        except:
+           self.get_latlon_by_ip()
+           self.session.open(MessageBox, _('No Data on Lat/Lon, fallback over IP'), MessageBox.TYPE_INFO, timeout = 5)
+    
+    def get_latlon_by_homepage(self):
+        try:
+           res = requests.request('get', 'https://de.yahoo.com')
+           d = re.search('currentLoc":{"woeid":"(.+?)","city":"(.+?)"', str(res.text)).groups(1)
+                        
+           self.city = str(d[1])
+           self.woe_id = str(d[0])
+           
+           config.plugins.SevenHD.weather_woe_id.value = str(self.woe_id)
+           self.get_latlon_by_woeid()
+        except:
+           self.get_latlon_by_ip()
+           self.session.open(MessageBox, _('No Data on Homepage, fallback over IP'), MessageBox.TYPE_INFO, timeout = 5)
+           
+    def get_msn_id_by_latlon(self):
+        try:
+           res = requests.request('get', 'http://weather.service.msn.com/find.aspx?src=outlook&weadegreetype=C&culture=%s&weasearchstr=%s,%s' % (str(config.plugins.SevenHD.weather_language.value), str(self.lat), str(self.lon)))
+           data = fromstring(res.text.encode('utf-8'))
+           
+           for child in data:
+               self.city = child.attrib.get('weatherlocationname').split(',')[0]
+               self.zipcode = child.attrib.get('zipcode')
+               self.lat = child.attrib.get('lat').replace(',','.')
+               self.lon = child.attrib.get('long').replace(',','.')
+               self.msn_id = child.attrib.get('entityid')
+           
+           config.plugins.SevenHD.weather_msn_id.value = str(self.msn_id)
+           self.preview_text = 'City: ' + str(self.city) + '\nLati: ' + str(self.lat) + '\nLong: ' + str(self.lon) + '\nMSN ID: ' + str(self.msn_id)    
+        except:
+           self.session.open(MessageBox, _('No MSN Id found'), MessageBox.TYPE_INFO, timeout = 5)
+           
+    def get_accu_id_by_latlon(self):
+        try:
+           self.generate_owm_accu_realtek_string()    #htc2 androiddoes
+           res = requests.request('get', 'http://realtek.accu-weather.com/widget/realtek/weather-data.asp?%s' % config.plugins.SevenHD.weather_realtek_latlon.value)
+           
+           cityId = re.search('cityId>(.+?)</cityId', str(res.text)).groups(1)
+           city = re.search('city>(.+?)</city', str(res.text)).groups(1)
+           lat = re.search('lat>(.+?)</lat', str(res.text)).groups(1)
+           lon = re.search('lon>(.+?)</lon', str(res.text)).groups(1)
+           
+           self.city = str(city[0])
+           self.accu_id = str(cityId[0])
+           self.lat = str(lat[0])
+           self.lon = str(lon[0])
+           
+           config.plugins.SevenHD.weather_accu_id.value = str(self.accu_id)
+           self.preview_text = 'City: ' + str(self.city) + '\nLati: ' + str(self.lat) + '\nLong: ' + str(self.lon) + '\nAccu ID: ' + str(self.accu_id)
+        except:
+           self.session.open(MessageBox, _('No Accu Id found'), MessageBox.TYPE_INFO, timeout = 5)
+    
+    def get_woe_id_by_latlon(self):
+        try:
+           res = requests.request('get', 'http://query.yahooapis.com/v1/public/yql?q=select * from geo.placefinder where text = "%s,%s" and gflags = "R"&format=json' % (str(self.lat), str(self.lon)))
+           data = res.json()
+           
+           self.woe_id = data['query']['results']['Result']['woeid']
+           self.city = data['query']['results']['Result']['city']
+           self.lat = data['query']['results']['Result']['latitude']
+           self.lon = data['query']['results']['Result']['longitude']
+           
+           config.plugins.SevenHD.weather_woe_id.value = str(self.woe_id)
+           self.preview_text = 'City: ' + str(self.city) + '\nLati: ' + str(self.lat) + '\nLong: ' + str(self.lon) + '\nWOE ID: ' + str(self.woe_id)
+        except:
+           self.session.open(MessageBox, _('No WOE Id found'), MessageBox.TYPE_INFO, timeout = 5)
+           
+    def generate_owm_accu_realtek_string(self):
+        config.plugins.SevenHD.weather_owm_latlon.value = 'lat=%s&lon=%s&units=metric&lang=%s' % (str(self.lat),str(self.lon),str(config.plugins.SevenHD.weather_language.value))
+        config.plugins.SevenHD.weather_accu_latlon.value = 'lat=%s&lon=%s&metric=1&language=%s' % (str(self.lat), str(self.lon), str(config.plugins.SevenHD.weather_language.value))
+        config.plugins.SevenHD.weather_realtek_latlon.value = 'lat=%s&lon=%s&metric=1&language=%s' % (str(self.lat), str(self.lon), str(config.plugins.SevenHD.weather_language.value))
+               
     def debug(self, what):
         if config.plugins.SevenHD.msgdebug.value:
            try:

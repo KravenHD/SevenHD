@@ -1,10 +1,10 @@
-#version = '3.6.54'
+#version = '3.6.57'
 import os
 try:
    opkg_info = os.popen("opkg list-installed enigma2-plugin-skins-sevenhd | cut -d ' ' -f3").read()
    version = str(opkg_info.strip().split('+')[0])
 except:
-   version = '3.6.54'
+   version = '3.6.57'
 import re
 import time
 import math
@@ -229,6 +229,8 @@ ColorList.append(("006C0AAB", _("violet")))
 ColorList.append(("001F0333", _("violet dark")))
 ColorList.append(("00FFF006", _("yellow")))
 ColorList.append(("00FFBE00", _("yellow dark")))
+ColorList.append(("00A19181", _("Kraven")))
+ColorList.append(("0028150B", _("Kraven dark")))
 ColorList += UserList
    
 TransList = [] 
@@ -370,10 +372,15 @@ config.plugins.SevenHD.MovieSelectionStyle = ConfigSelection(default="movieselec
 				("movieselectionbigcover", _("big cover")),
 				("movieselectionminitv", _("miniTV"))
 				])
+				
 config.plugins.SevenHD.MSNWeather = ConfigSelection(default="msn-standard", choices = [
 				("msn-standard", _("standard")),
 				("msn-icon", _("alternative icons"))
 				])
+				
+config.plugins.SevenHD.use_alba_skin = ConfigYesNo(default = False)
+
+config.plugins.SevenHD.use_mp_skin = ConfigYesNo(default= False)				
 ################################################################################################################################################################
 # MenuScreen
 
@@ -440,7 +447,8 @@ config.plugins.SevenHD.InfobarStyle = ConfigSelection(default="infobar-style-ori
 				("infobar-style-xpicon4", _("Style 7")),
 				("infobar-style-xpicon5", _("Style 8")),
 				("infobar-style-xpicon6", _("Style 9")),
-				("infobar-style-xpicon7", _("Style 10"))
+				("infobar-style-xpicon7", _("Style 10")),
+				("infobar-style-xpicon8", _("Style 11"))
 				])
 				
 config.plugins.SevenHD.SIB = ConfigSelection(default="-top", choices = [
@@ -449,7 +457,8 @@ config.plugins.SevenHD.SIB = ConfigSelection(default="-top", choices = [
 				("-full", _("Style 3")),
 				("-minitv", _("Style 4")),
 				("-right", _("Style 5")),
-				("-minitv2", _("Style 6"))
+				("-minitv2", _("Style 6")),
+				("-picon", _("Style 7"))
 				])				
 
 BackgroundIB1List = []
@@ -505,7 +514,8 @@ config.plugins.SevenHD.ClockStyle = ConfigSelection(default="clock-standard", ch
 				("clock-analog", _("analog")),
 				("clock-weather", _("weather icon")),
 				("clock-weather-meteo", _("weather meteo")),
-				("clock-android", _("android"))
+				("clock-android", _("android")),
+				("clock-flip", _("flip"))
 				])
 
 config.plugins.SevenHD.AnalogStyle = ConfigSelection(default="00ffffff", choices = ColorList)
@@ -522,40 +532,56 @@ config.plugins.SevenHD.ClockTime = ConfigSelection(default="00ffffff", choices =
 
 config.plugins.SevenHD.ClockWeek = ConfigSelection(default="00ffffff", choices = ColorList)
 
-config.plugins.SevenHD.WeatherStyle = ConfigSelection(default="none", choices = [
-				("none", _("off")),
-				("weather-big", _("big")),
-				("weather-slim", _("slim")),
-				("weather-left-side", _("left")),
-				("weather-small", _("small"))
-				])
-                                				
-config.plugins.SevenHD.weather_language = ConfigSelection(default="de", choices = LanguageList)
+WeatherList_1 = []
+WeatherList_1.append(("none", _("off")))
+WeatherList_1.append(("weather-big", _("big")))
+WeatherList_1.append(("weather-small", _("small")))
+WeatherList_1.append(("weather-slim", _("slim")))
+WeatherList_1.append(("weather-left-side", _("left")))
 
+WeatherList_2 = []
+WeatherList_2.append(("none", _("off")))
+WeatherList_2.append(("weather-tiny", _("on")))                              
+
+config.plugins.SevenHD.WeatherStyle_1 = ConfigSelection(default="none", choices = WeatherList_1)
+
+config.plugins.SevenHD.WeatherStyle_2 = ConfigSelection(default="none", choices = WeatherList_2)
+                                
 config.plugins.SevenHD.faq_language = ConfigSelection(default="de", choices = LanguageList)
 				
 config.plugins.SevenHD.refreshInterval = ConfigSelectionNumber(0, 480, 15, default = 15, wraparound = True)
 
-config.plugins.SevenHD.AutoWoeID = ConfigYesNo(default= True)
-
 config.plugins.SevenHD.ClockWeather = ConfigSelection(default="00ffffff", choices = ColorList)
 
-config.plugins.SevenHD.weather_cityname = ConfigText(default = 'N/A')
-
-config.plugins.SevenHD.weather_city = ConfigNumber(default="671072")
-
-config.plugins.SevenHD.weather_locationcode = ConfigText(default="GMXX0072")
-                                                                  
-config.plugins.SevenHD.weather_lat_lon = ConfigText(default = 'lat=51.3452&lon=12.38594&units=metric&lang=de') 
-
-config.plugins.SevenHD.AutoWoeIDServer = ConfigSelection(default="_owm", choices = [
+##################################
+# weahter
+config.plugins.SevenHD.weather_owm_latlon = ConfigText(default = 'lat=51.3452&lon=12.38594&units=metric&lang=de') 
+config.plugins.SevenHD.weather_accu_latlon = ConfigText(default = 'lat=51.3452&lon=12.38594&metric=1&language=de')
+config.plugins.SevenHD.weather_realtek_latlon = ConfigText(default = 'lat=51.3452&lon=12.38594&metric=1&language=de')
+config.plugins.SevenHD.weather_woe_id = ConfigNumber(default="671072") 
+config.plugins.SevenHD.weather_accu_id = ConfigNumber(default="171240")
+config.plugins.SevenHD.weather_msn_id = ConfigNumber(default="18374")
+config.plugins.SevenHD.weather_lat = ConfigText(default = '51.3452') 
+config.plugins.SevenHD.weather_lon = ConfigText(default = '12.38594') 
+config.plugins.SevenHD.weather_gmcode = ConfigText(default="GMXX0072")
+config.plugins.SevenHD.weather_cityname = ConfigText(default = 'Leipzig')
+config.plugins.SevenHD.weather_language = ConfigSelection(default="de", choices = LanguageList)
+config.plugins.SevenHD.weather_server = ConfigSelection(default="_owm", choices = [
 				("_yahoo", _("Yahoo")),
 				("_owm", _("OpenWeatherMap")),
 				("_msn", _("MSN")),
 				("_accu", _("Accuweather")),
 				("_realtek", _("RealTek"))
                                 ])
-
+config.plugins.SevenHD.weather_search_over = ConfigSelection(default="auto", choices = [
+				("auto", _("Auto")),
+				("ip", _("IP")),
+				("name", _("Name")),
+				("woeid", _("WoeID")),
+				("gmcode", _("GM Code")),
+				("latlon", _("Lat/Long"))
+                                ])
+#############################
 config.plugins.SevenHD.WeatherView = ConfigSelection(default="icon", choices = [
 				("icon", _("Icon")),
 				("meteo", _("Meteo"))
@@ -750,7 +776,8 @@ myConfigList = [('config.plugins.SevenHD.Image.value = "' + str(config.plugins.S
                 ('config.plugins.SevenHD.ClockTimes.value = "' + str(config.plugins.SevenHD.ClockTimes.value) + '"'),
                 ('config.plugins.SevenHD.ClockTime.value = "' + str(config.plugins.SevenHD.ClockTime.value) + '"'),
                 ('config.plugins.SevenHD.ClockWeek.value = "' + str(config.plugins.SevenHD.ClockWeek.value) + '"'),
-                ('config.plugins.SevenHD.WeatherStyle.value = "' + str(config.plugins.SevenHD.WeatherStyle.value) + '"'),
+                ('config.plugins.SevenHD.WeatherStyle_1.value = "' + str(config.plugins.SevenHD.WeatherStyle_1.value) + '"'),
+                ('config.plugins.SevenHD.WeatherStyle_2.value = "' + str(config.plugins.SevenHD.WeatherStyle_2.value) + '"'),
                 ('config.plugins.SevenHD.WeatherView.value = "' + str(config.plugins.SevenHD.WeatherView.value) + '"'),
                 ('config.plugins.SevenHD.MeteoColor.value = "' + str(config.plugins.SevenHD.MeteoColor.value) + '"'),
                 ('config.plugins.SevenHD.ClockWeather.value = "' + str(config.plugins.SevenHD.ClockWeather.value) + '"'),

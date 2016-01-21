@@ -36,7 +36,7 @@ def _(txt):
 		t = gettext.gettext(txt)
 	return t
 
-URL = 'http://weather.service.msn.com/data.aspx?src=outlook&culture=' + str(config.plugins.SevenHD.weather_language.value) + '&weadegreetype=C&wealocations=wc:' + str(config.plugins.SevenHD.weather_locationcode.value)
+URL = 'http://weather.service.msn.com/data.aspx?src=outlook&culture=' + str(config.plugins.SevenHD.weather_language.value) + '&weadegreetype=C&wealocations=wc:' + str(config.plugins.SevenHD.weather_msn_id.value)
 WEATHER_DATA = None
 
 class SevenHDWeather_msn(Converter, object):

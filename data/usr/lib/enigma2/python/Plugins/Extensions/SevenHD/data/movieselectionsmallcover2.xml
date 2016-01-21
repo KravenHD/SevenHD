@@ -7,11 +7,11 @@
 		<widget backgroundColor="SevenFontBackground" font="Regular; 34" foregroundColor="SevenFont1" position="18,12" render="Label" size="1123,46" source="Service" transparent="1" zPosition="1">
 			<convert type="SevenHDEventName">Name</convert>
 		</widget>
-		<widget backgroundColor="SevenFontBackground" font="Regular; 18" foregroundColor="SevenButtonText" halign="center" position="888,662" render="Label" size="148,48" source="Service" transparent="1" zPosition="1">
+		<widget backgroundColor="SevenFontBackground" font="Regular; 18" foregroundColor="SevenButtonText" halign="center" valign="center" position="888,662" render="Label" size="148,48" source="Service" transparent="1" zPosition="1">
 			<convert type="ServiceTime">Duration</convert>
 			<convert type="SevenHDClockToText">AsLength</convert>
 		</widget>
-		<widget backgroundColor="SevenFontBackground" font="Regular; 18" foregroundColor="SevenButtonText" halign="center" position="1110,662" render="Label" size="148,48" source="Service" transparent="1" zPosition="1">
+		<widget backgroundColor="SevenFontBackground" font="Regular; 18" foregroundColor="SevenButtonText" halign="center" valign="center" position="1110,662" render="Label" size="148,48" source="Service" transparent="1" zPosition="1">
 			<convert type="MovieInfo">FileSize</convert>
 		</widget>
 		<widget backgroundColor="SevenFontBackground" font="Regular;19" foregroundColor="SevenFont1" position="135,114" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,steptime=90,wrap=1,always=0,repeat=2,oneshot=1" size="1128,153" source="Service" transparent="1" valign="top">

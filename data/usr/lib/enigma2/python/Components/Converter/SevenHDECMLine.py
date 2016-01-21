@@ -159,7 +159,7 @@ class SevenHDECMLine(Poll, Converter, object):
                                       if ((caid>='1800') and (caid<='18FF')):
 					     system = 'System: NAGRA'
                                       
-                                      ecmline = 'Slot ' + str(i) + ': ' + str(appname) + ' nCaid: ' + str(caid.lower()) + ' ' + str(system)
+                                      ecmline = 'Slot ' + str(i) + ': ' + str(appname) + ' Caid: ' + str(caid.lower()) + ' ' + str(system)
                                       
                                    else:
 				      ecmline = _('No CICam/Card/EMU available')
