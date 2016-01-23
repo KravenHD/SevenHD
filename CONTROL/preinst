@@ -2,7 +2,8 @@
 echo "Checking for previous installations..."
 
 if [ -d /usr/lib/enigma2/python/Plugins/Extensions/SevenHD/user ]; then
-    cp -r /usr/lib/enigma2/python/Plugins/Extensions/SevenHD/user/* /tmp
+    mkdir -p /tmp/user 
+    cp -r /usr/lib/enigma2/python/Plugins/Extensions/SevenHD/user/* /tmp/user
 fi
 
 if [ -f /usr/lib/enigma2/python/Plugins/Extensions/SevenHD/data/skin-user.xml ]; then
