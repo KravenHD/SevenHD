@@ -1,12 +1,10 @@
 #!/bin/sh
 echo "Checking for previous installations..."
 
-if [ -f /usr/lib/enigma2/python/Plugins/Extensions/SevenHD/user/user_color.txt ]; then
-    cp /usr/lib/enigma2/python/Plugins/Extensions/SevenHD/user/user_color.txt /tmp
+if [ -d /usr/lib/enigma2/python/Plugins/Extensions/SevenHD/user ]; then
+    cp -r /usr/lib/enigma2/python/Plugins/Extensions/SevenHD/user/* /tmp
 fi
-if [ -f /usr/lib/enigma2/python/Plugins/Extensions/SevenHD/user/user_font.txt ]; then
-    cp /usr/lib/enigma2/python/Plugins/Extensions/SevenHD/user/user_font.txt /tmp
-fi
+
 if [ -f /usr/lib/enigma2/python/Plugins/Extensions/SevenHD/data/skin-user.xml ]; then
     cp /usr/lib/enigma2/python/Plugins/Extensions/SevenHD/data/skin-user.xml /tmp
 fi
