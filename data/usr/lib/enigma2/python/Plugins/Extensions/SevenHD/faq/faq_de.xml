@@ -76,6 +76,6 @@ A: Wenn Du einen Fehler hast, dann geh wie folgt vor.\n\n\n
 3.b) Falls beim generieren ein Fehler aufgetreten ist, gehst Du jetzt,\nin das /tmp Verzeichniss und kopierst die kraven_debug.log auf deinen PC.\n\n\n\n!!!! HINWEIS !!!!\n\nBei jedem Aufruf des Plugin, wird die /tmp/kraven_debug.log gelöscht."/>
 	</page>
 	<page title="FAQ"><text value="Q: Gibt es ein ChangeLog von den Versionen/Updates?\n\n\n
-A: Ja, unter 'Extras' findet ihr den Punkt 'ChangeLog'. "/>
+A: Ja, unter 'Extras' findet Ihr den Punkt 'ChangeLog'. "/>
 	</page>
 </mphelp>

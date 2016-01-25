@@ -1,0 +1,8 @@
+		<!-- Clock Circle */-->
+		<widget source="global.CurrentTime" position="1086,607" size="150,22" font="Regular2; 18" render="Label" halign="center" valign="top" zPosition="12" backgroundColor="SevenFontBackgroundIB1" foregroundColor="SevenClockDate" transparent="1">
+			<convert type="SevenHDClockToText">Format:%d.%m. %Y</convert>
+		</widget>
+		<widget source="global.CurrentTime" render="SevenHDCircleClock" position="1086,543" zPosition="4" size="150,150" alphatest="blend" transparent="1">
+			<convert type="SevenHDClockToText">Format:%I %M %S</convert>
+		</widget>
+		<!-- Clock Circle */-->

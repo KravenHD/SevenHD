@@ -1,4 +1,51 @@
 		<!-- /* InfoBar Original -->
 	<screen backgroundColor="transparent" flags="wfNoBorder" name="InfoBar" position="0,0" size="1280,720" title="InfoBar">
 		<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="InfoBar" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
-		<panel name="template_menu_ib1" />
+		<widget source="session.CurrentService" render="Pixmap" pixmap="SevenHD/update.png" position="1240,679" size="20,20" zPosition="3" alphatest="blend">
+			<convert type="SevenHDUpdate">Update</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<eLabel backgroundColor="SevenBackgroundIB1" position="14,533" size="1250,168" zPosition="-9" />
+		<eLabel backgroundColor="SevenBorderIB" position="1262,533" size="2,170" zPosition="2" />
+		<eLabel backgroundColor="SevenBorderIB" position="14,533" size="2,170" zPosition="2" />
+		<eLabel backgroundColor="SevenBorderIB" position="14,533" size="1250,2" zPosition="2" />
+		<eLabel backgroundColor="SevenBorderIB" position="14,701" size="1250,2" zPosition="2" />
+		<eLabel backgroundColor="SevenProgressLineIB" position="14,516" size="1250,2" zPosition="2" />
+		<widget position="14,514" backgroundColor="SevenFontBackgroundIB1" render="Progress" size="1250,6" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgressIB" pixmap="SevenHD/progressib/progressib1280.png">
+			<convert type="SevenHDEventTime">Progress</convert>
+		</widget>
+		<widget font="Regular2; 24" halign="right" position="1145,476" render="Label" size="120,36" source="session.Event_Now" transparent="1" valign="center" zPosition="1" foregroundColor="SevenSNRIB" alphatest="blend">
+			<convert type="SevenHDEventTime">Remaining</convert>
+			<convert type="SevenHDRemainingToText">InMinutes</convert>
+		</widget>
+		<widget alphatest="blend" position="14,450" render="SevenHDXPicon" size="100,60" source="session.CurrentService" transparent="1" zPosition="4">
+			<convert type="ServiceName">Reference</convert>
+		</widget>
+		<widget alphatest="blend" pixmap="SevenHD/buttons/ico_rec_on.png" position="1228,537" render="Pixmap" size="32,32" source="session.RecordState" zPosition="5" transparent="1">
+			<convert type="ConditionalShowHide">Blink</convert>
+		</widget>
+		<widget backgroundColor="SevenFontBackgroundIB1" font="Regular;24" halign="right" noWrap="1" position="32,572" render="Label" size="76,36" source="session.Event_Now" transparent="1" valign="center" zPosition="1" foregroundColor="SevenNowIB">
+			<convert type="SevenHDEventTime">StartTime</convert>
+			<convert type="SevenHDClockToText">Default</convert>
+		</widget>
+		<eLabel backgroundColor="SevenFontBackgroundIB1" font="Regular;24" halign="center" noWrap="1" position="108,572" size="16,36" text="-" transparent="1" valign="center" zPosition="1" foregroundColor="SevenNowIB" />
+		<widget backgroundColor="SevenFontBackgroundIB1" font="Regular;24" halign="left" noWrap="1" position="124,572" render="Label" size="76,36" source="session.Event_Now" transparent="1" valign="center" zPosition="1" foregroundColor="SevenNowIB">
+			<convert type="SevenHDEventTime">EndTime</convert>
+			<convert type="SevenHDClockToText">Default</convert>
+		</widget>
+		<widget font="Regular;48" halign="center" valign="center" noWrap="1" position="215,558" render="SevenHDRunningText" options="movetype=running,startpoint=0,startdelay=2000,steptime=90,wrap=0,always=0,repeat=2,oneshot=1" size="850,64" source="session.Event_Now" backgroundColor="SevenFontBackgroundIB1" transparent="1" zPosition="1" foregroundColor="SevenNowIB">
+			<convert type="SevenHDEventName">Name</convert>
+		</widget>
+		<widget backgroundColor="SevenFontBackgroundIB1" foregroundColor="SevenNextIB" font="Regular2; 22" halign="right" noWrap="1" position="36,636" render="Label" size="72,36" source="session.Event_Next" transparent="1" valign="center" zPosition="1">
+			<convert type="SevenHDEventTime">StartTime</convert>
+			<convert type="SevenHDClockToText">Default</convert>
+		</widget>
+		<eLabel backgroundColor="SevenFontBackgroundIB1" foregroundColor="SevenNextIB" font="Regular2;22" halign="center" noWrap="1" position="108,636" size="16,36" text="-" transparent="1" valign="center" zPosition="1" />
+		<widget backgroundColor="SevenFontBackgroundIB1" font="Regular2; 22" foregroundColor="SevenNextIB" halign="left" noWrap="1" position="124,636" render="Label" size="72,36" source="session.Event_Next" transparent="1" valign="center" zPosition="1">
+			<convert type="SevenHDEventTime">EndTime</convert>
+			<convert type="SevenHDClockToText">Default</convert>
+		</widget>
+		<widget font="Regular2;36" halign="center" valign="center" noWrap="1" position="215,630" render="SevenHDRunningText" options="movetype=running,startpoint=0,startdelay=2000,steptime=90,wrap=0,always=0,repeat=2,oneshot=1" size="850,48" source="session.Event_Next" backgroundColor="SevenFontBackgroundIB1" transparent="1" zPosition="1" foregroundColor="SevenNextIB">
+			<convert type="SevenHDEventName">Name</convert>
+		</widget>
+		<ePixmap pixmap="SevenHD/back/ibone.png" position="14,533" size="1250,170" alphatest="blend" zPosition="-8" />

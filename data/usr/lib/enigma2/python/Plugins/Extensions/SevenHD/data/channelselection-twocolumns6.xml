@@ -36,16 +36,16 @@
 		<widget font="Regular; 20" foregroundColor="SevenDestcriptionCS" position="891,365" halign="center" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,steptime=90,wrap=1,always=0,repeat=2,oneshot=1" size="362,132" source="ServiceEvent" valign="top" backgroundColor="SevenFontBackRightCS" transparent="1" zPosition="0">
 			<convert type="SevenHDNextEvents">Event0,ExtendedDescription</convert>
 		</widget>
-		<widget backgroundColor="SevenFontBackRightCS" font="Regular; 16" foregroundColor="SevenChannelCS" halign="center" position="891,290" render="Label" size="362,30" source="session.CurrentService" transparent="1" valign="center">
+		<widget backgroundColor="SevenFontBackRightCS" font="Regular; 16" foregroundColor="SevenChannelCS" halign="center" position="891,290" render="Label" size="362,30" source="ServiceEvent" transparent="1" valign="center">
 			<convert type="SevenHDServiceName2">%O  %s  %F %p %Y %f %M %b</convert>
 		</widget>
-		<widget backgroundColor="SevenFontBackRightCS" font="Regular2; 20" foregroundColor="SevenChannelCS" halign="center" position="891,257" render="Label" size="362,30" source="session.CurrentService" transparent="1" valign="center">
+		<widget backgroundColor="SevenFontBackRightCS" font="Regular2; 20" foregroundColor="SevenChannelCS" halign="center" position="891,257" render="Label" size="362,30" source="ServiceEvent" transparent="1" valign="center">
 			<convert type="SevenHDServiceName2">Reference</convert>
 		</widget>
 		<widget source="ServiceEvent" render="Label" position="891,185" size="362,35" font="Regular2; 25" halign="center" foregroundColor="SevenChannelCS" backgroundColor="SevenFontBackRightCS" transparent="1" noWrap="1">
 			<convert type="ServiceName">Name</convert>
 		</widget>
-		<widget backgroundColor="SevenFontBackRightCS" font="Regular;20" foregroundColor="SevenChannelCS" halign="center" position="891,224" render="Label" size="362,30" source="session.CurrentService" transparent="1" valign="center">
+		<widget backgroundColor="SevenFontBackRightCS" font="Regular;20" foregroundColor="SevenChannelCS" halign="center" position="891,224" render="Label" size="362,30" source="ServiceEvent" transparent="1" valign="center">
 			<convert type="SevenHDServiceName2">Provider</convert>
 		</widget>
 		<panel name="template_menu_cs2_button" />

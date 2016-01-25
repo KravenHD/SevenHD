@@ -104,14 +104,16 @@ class FontSettings(Screen):
                 "OkCancelActions",
                 "DirectionActions",
                 "InputActions",
-                "ColorActions"
+                "ColorActions",
+                "MenuActions"
             ],
             {
                 "cancel": self.exit,
                 "red": self.exit,
                 "green": self.keyGreen,
                 "yellow": self.keyYellow,
-                "blue": self.keyBlue
+                "blue": self.keyBlue,
+                "menu": self.keyMenu
                 
             }, -1)	
            
@@ -132,6 +134,7 @@ class FontSettings(Screen):
         
         tree = etree.parse(FILE)
         root = tree.getroot()
+        self.root_backup = root
         
         for screen in root.findall('screen'):   
             screenname = screen.attrib['name']
@@ -214,8 +217,6 @@ class FontSettings(Screen):
                 with open(USER_FONT_FILE, 'r') as user_file:
                      for line in user_file:
                          if not search_string in line:
-                         #   pass
-                         #else:
                             tmp_file.write(line)
         
            remove(USER_FONT_FILE)
@@ -229,6 +230,43 @@ class FontSettings(Screen):
         
         self.has_change = True
         self.list_init()
+        
+    def keyMenu(self):
+        self.curSN = self["menuList"].getCurrent()[1]
+        options = []
+        options.extend(((_("%s als Screen Part extrahieren?" % str(self.curSN)), boundFunction(self.extract_screen)),))
+        self.session.openWithCallback(self.menuCallback, ChoiceBox, list = options)
+    
+    def menuCallback(self, ret):
+        ret and ret[1]()    
+    
+    def extract_screen(self):
+        
+        for screen in self.root_backup.findall('screen'):   
+            screenname = screen.attrib['name']
+            if screenname.startswith(str(self.curSN)):
+               self.screen_part = etree.tostring(screen, encoding='utf-8', pretty_print=True)
+               break
+        
+        self.skin_part_file = MAIN_USER_PATH + 'screen_' + str(self.curSN) + '.part'
+        if fileExists(self.skin_part_file):
+           message = str(self.skin_part_file) + '\nist schon vorhanden soll die vorhandene ersetzt werden?'
+           self.session.openWithCallback(self.ask_for_extract, MessageBox, message, MessageBox.TYPE_YESNO)
+        else:
+           self.extract_screen_part()
+    
+    def ask_for_extract(self, answer):
+        if answer is True:
+            self.extract_screen_part()
+        else:
+            pass       
+    
+    def extract_screen_part(self):       
+        
+        f = open(self.skin_part_file,'w')
+        f.write(str(self.screen_part))
+        f.close 
+        self.session.open(MessageBox, _("Der " + str(self.curSN) + " Screen wurde als Screen Part in /user erstellt."), MessageBox.TYPE_INFO, timeout=5)
         
     def exit(self):
         if self.has_change:

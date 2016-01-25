@@ -1096,7 +1096,7 @@
 		<widget backgroundColor="SevenBackground" name="spicon" position="240,320" size="690,26" font="Regular;18" foregroundColor="SevenFont1" transparent="1" zPosition="1" halign="left" />
 		<widget backgroundColor="SevenBackground" flags="wfBorder" borderColor="SevenLine" borderWidth="1" name="piconslider" position="340,234" size="180,20" zPosition="2" transparent="1" />
 		<widget backgroundColor="SevenBackground" name="picon" position="798,80" size="400,240" zPosition="4" transparent="0" borderWidth="0" borderColor="SevenLine" alphatest="blend" />
-		<widget backgroundColor="SevenBackground" name="list" position="70,370" size="1130,270" itemHeight="30" zPosition="1" foregroundColor="SevenFont1" foregroundColorSelected="SevenSelFont" scrollbarWidth="5" scrollbarSliderForegroundColor="grey" scrollbarSliderBorderColor="grey" scrollbarSliderBorderWidth="1" transparent="1" />
+		<widget backgroundColor="SevenBackground" name="list" position="70,370" size="1130,270" itemHeight="30" font="Regular;18" zPosition="1" foregroundColor="SevenFont1" foregroundColorSelected="SevenSelFont" transparent="1" />
 		<panel name="template_colorkey_text" />
 		<panel name="template_menu_full_button" />
 	</screen>
@@ -2171,6 +2171,7 @@
 	</screen>
 		<!-- SerienRecorder3.0 -->
 	<screen name="SerienRecorder3.0" position="0,0" size="1280,720" title="Serien Recorder" flags="wfNoBorder" backgroundColor="transparent">
+		<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="SerienRecorder3.0" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
 		<widget name="title" position="20,50" size="880,55" backgroundColor="SevenBackground" foregroundColor="SevenFont1" transparent="1" font="Regular;26" valign="center" halign="center" />
 		<widget name="headline" position="20,50" size="860,55" backgroundColor="SevenBackground" foregroundColor="SevenFont1" transparent="1" font="Regular;26" valign="center" halign="center" />
 		<widget backgroundColor="SevenBackground" name="headline" position="20,20" size="880,40" transparent="1" font="Regular;26" valign="center" halign="center" />
@@ -2283,6 +2284,7 @@
 		<!--/* TMDb - The Movie Database -->
 		<!-- TMDb -->
 	<screen name="tmdbScreen" position="0,0" size="1280,720" title="TMDb - The Movie Database" flags="wfNoBorder" backgroundColor="transparent">
+		<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="tmdbScreen" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
 		<widget name="searchinfo" position="70,80" size="700,60" itemHeight="30" font="Regular; 24" enableWrapAround="1" backgroundColor="SevenBackground" transparent="1" />
 		<widget name="list" position="70,140" size="700,500" itemHeight="30" enableWrapAround="1" backgroundColor="SevenBackground" transparent="1" />
 		<widget name="cover" position="825,90" size="380,530" itemHeight="30" enableWrapAround="1" backgroundColor="SevenBackground" transparent="1" />
@@ -2291,6 +2293,7 @@
 	</screen>
 		<!-- TMDb Setup -->
 	<screen name="tmdbConfigScreen" position="0,0" size="1280,720" title="TMDb - The Movie Database" flags="wfNoBorder" backgroundColor="transparent">
+		<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="tmdbConfigScreen" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
 		<widget name="info" position="70,80" size="708,540" itemHeight="30" font="Regular; 24" enableWrapAround="1" backgroundColor="SevenBackground" transparent="1" />
 		<widget name="config" position="70,120" size="708,540" itemHeight="30" enableWrapAround="1" backgroundColor="SevenBackground" transparent="1" />
 		<panel name="template_menu_left_button" />
@@ -2298,6 +2301,7 @@
 	</screen>
 		<!-- TMDb Movie -->
 	<screen name="tmdbScreenMovie" position="0,0" size="1280,720" title="TMDb - The Movie Database" flags="wfNoBorder" backgroundColor="transparent">
+		<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="tmdbScreenMovie" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
 		<widget name="searchinfo" position="70,80" size="560,60" itemHeight="30" enableWrapAround="1" backgroundColor="SevenBackground" transparent="1" font="Regular; 24" />
 		<widget name="fulldescription" position="70,130" size="560,490" itemHeight="30" font="Regular; 24" backgroundColor="SevenBackground" transparent="1" />
 		<widget name="cover" position="930,92" size="250,320" alphatest="blend" />
@@ -2326,6 +2330,7 @@
 	</screen>
 		<!-- TMDb Movie EMC -->
 	<screen name="MovieInfoTMDb" position="0,0" size="1280,720" title="Movie Information TMDb" flags="wfNoBorder" backgroundColor="transparent">
+		<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="MovieInfoTMDb" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
 		<widget name="movie_name" position="20,75" size="1191,42" zPosition="0" font="Regular2;24" valign="center" halign="center" transparent="1" foregroundColor="SevenFont1" backgroundColor="SevenBackground" />
 		<widget name="previewlist" position="290,132" size="600,500" itemHeight="30" font="Regular; 24" enableWrapAround="1" scrollbarMode="showOnDemand" scrollbarWidth="5" backgroundColor="SevenBackground" transparent="1" />
 		<widget name="previewcover" position="20,132" size="254,345" alphatest="blend" zPosition="2" />
@@ -2350,6 +2355,7 @@
 		<!-- ********** Menusort ********** -->
 		<!-- Menusort */-->
 	<screen backgroundColor="transparent" flags="wfNoBorder" name="SortableMenu" position="0,0" size="1280,720" title="Menusort">
+		<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="SortableMenu" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
 		<widget name="menu" position="70,90" size="708,400" itemHeight="30" font="Regular;22" foregroundColor="SevenFont1" backgroundColor="SevenBackground" transparent="1" />
 		<eLabel font="Regular; 20" halign="left" valign="center" text="Hidden" position="664,662" size="148,48" render="Label" backgroundColor="SevenBackground" foregroundColor="SevenButtonText" transparent="1" zPosition="1" />
 		<panel name="template_menu_left_button" />
@@ -2357,6 +2363,7 @@
 		<!-- ********** OpenAirPlay ********** -->
 		<!-- OpenAirPlay */-->
 	<screen backgroundColor="transparent" flags="wfNoBorder" name="OpenAirPlayConfig" position="0,0" size="1280,720" title="OpenAirPlay Configuration">
+		<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="OpenAirPlayConfig" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
 		<widget name="config" position="70,80" size="708,120" itemHeight="30" font="Regular;22" foregroundColor="SevenFont1" backgroundColor="SevenFontBackground" transparent="1" />
 		<panel name="template_menu_left_button" />
 		<panel name="template_colorkey_text_source" />
@@ -2364,6 +2371,7 @@
 		<!-- ********** Kashmir Plugins ********** -->
 		<!-- BILD Online */-->
 	<screen backgroundColor="transparent" flags="wfNoBorder" name="bildConfig" position="0,0" size="1280,720" title="BILD Online Setup">
+		<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="bildConfig" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
 		<widget name="config" position="70,80" size="708,220" itemHeight="25" font="Regular;18" foregroundColor="SevenFont1" backgroundColor="transparent" transparent="1" />
 		<widget name="plugin" position="70,260" size="708,400" alphatest="blend" transparent="1" />
 		<panel name="template_menu_left_button" />
@@ -2371,6 +2379,7 @@
 	</screen>
 		<!-- Blu-ray and PS3 Database */-->
 	<screen backgroundColor="transparent" flags="wfNoBorder" name="blurayConfig" position="0,0" size="1280,720" title="Blu-ray &amp; PS3 Database Setup">
+		<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="blurayConfig" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
 		<widget name="config" position="70,80" size="708,220" itemHeight="30" font="Regular;22" foregroundColor="SevenFont1" backgroundColor="SevenFontBackground" transparent="1" />
 		<widget name="plugin" position="70,300" size="708,400" alphatest="blend" transparent="1" />
 		<panel name="template_menu_left_button" />
@@ -2378,6 +2387,7 @@
 	</screen>
 		<!-- Chefkoch */-->
 	<screen backgroundColor="transparent" flags="wfNoBorder" name="chefkochConfig" position="0,0" size="1280,720" title="Chefkoch Setup">
+		<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="chefkochConfig" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
 		<widget name="config" position="70,80" size="608,500" itemHeight="30" font="Regular;22" foregroundColor="SevenFont1" backgroundColor="SevenFontBackground" transparent="1" />
 		<widget name="plugin" position="700,200" size="600,400" alphatest="blend" transparent="1" />
 		<panel name="template_menu_full_button" />
@@ -2385,30 +2395,35 @@
 	</screen>
 		<!-- clever-tanken.de */-->
 	<screen backgroundColor="transparent" flags="wfNoBorder" name="tankenConfig" position="0,0" size="1280,720" title="clever-tanken.de Setup">
+		<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="tankenConfig" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
 		<widget name="config" position="70,80" size="708,500" itemHeight="30" font="Regular;22" foregroundColor="SevenFont1" backgroundColor="SevenFontBackground" transparent="1" />
 		<panel name="template_menu_left_button" />
 		<panel name="template_colorkey_text_kp" />
 	</screen>
 		<!-- EPG Translater */-->
 	<screen backgroundColor="transparent" flags="wfNoBorder" name="translatorConfig" position="0,0" size="1280,720" title="EPG Translator Setup">
+		<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="translatorConfig" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
 		<widget name="config" position="70,80" size="708,300" itemHeight="30" font="Regular;22" foregroundColor="SevenFont1" backgroundColor="SevenFontBackground" transparent="1" />
 		<panel name="template_menu_left_button" />
 		<panel name="template_colorkey_text_kp" />
 	</screen>
 		<!-- EPG YouTube Trailer */-->
 	<screen backgroundColor="transparent" flags="wfNoBorder" name="youtubeConfig" position="0,0" size="1280,720" title="EPG YouTube Trailer Setup">
+		<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="youtubeConfig" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
 		<widget name="config" position="70,80" size="708,300" itemHeight="30" font="Regular;22" foregroundColor="SevenFont1" backgroundColor="SevenFontBackground" transparent="1" />
 		<panel name="template_menu_left_button" />
 		<panel name="template_colorkey_text_kp" />
 	</screen>
 		<!-- Facebook */-->
 	<screen backgroundColor="transparent" flags="wfNoBorder" name="facebookConfig" position="0,0" size="1280,720" title="Facebook Setup">
+		<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="facebookConfig" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
 		<widget name="config" position="70,80" size="708,500" itemHeight="30" font="Regular;22" foregroundColor="SevenFont1" backgroundColor="SevenFontBackground" transparent="1" />
 		<panel name="template_menu_left_button" />
 		<panel name="template_colorkey_text_kp" />
 	</screen>
 		<!-- FOCUS Online */-->
 	<screen backgroundColor="transparent" flags="wfNoBorder" name="focusConfig" position="0,0" size="1280,720" title="FOCUS Online Setup">
+		<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="focusConfig" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
 		<widget name="config" position="70,80" size="708,220" itemHeight="26" font="Regular;19" foregroundColor="SevenFont1" backgroundColor="SevenFontBackground" transparent="1" />
 		<widget name="plugin" position="70,250" size="708,400" alphatest="blend" transparent="1" />
 		<panel name="template_menu_left_button" />
@@ -2416,6 +2431,7 @@
 	</screen>
 		<!-- Frag Mutti */-->
 	<screen backgroundColor="transparent" flags="wfNoBorder" name="fragmuttiConfig" position="0,0" size="1280,720" title="Frag Mutti Setup">
+		<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="fragmuttiConfig" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
 		<widget name="config" position="70,80" size="608,500" itemHeight="30" font="Regular;22" foregroundColor="SevenFont1" backgroundColor="SevenFontBackground" transparent="1" />
 		<widget name="plugin" position="700,200" size="600,400" alphatest="blend" transparent="1" />
 		<panel name="template_menu_full_button" />
@@ -2423,6 +2439,7 @@
 	</screen>
 		<!-- Kicker Online */-->
 	<screen backgroundColor="transparent" flags="wfNoBorder" name="kickerConfig" position="0,0" size="1280,720" title="kicker Setup">
+		<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="kickerConfig" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
 		<widget name="config" position="70,80" size="708,220" itemHeight="30" font="Regular;22" foregroundColor="SevenFont1" backgroundColor="SevenFontBackground" transparent="1" />
 		<widget name="plugin" position="70,260" size="708,400" alphatest="blend" transparent="1" />
 		<panel name="template_menu_left_button" />
@@ -2430,12 +2447,14 @@
 	</screen>
 		<!-- KINO.de */-->
 	<screen backgroundColor="transparent" flags="wfNoBorder" name="kinoConfig" position="0,0" size="1280,720" title="KINO.de Setup">
+		<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="kinoConfig" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
 		<widget name="config" position="70,80" size="708,500" itemHeight="30" font="Regular;22" foregroundColor="SevenFont1" backgroundColor="SevenFontBackground" transparent="1" />
 		<panel name="template_menu_left_button" />
 		<panel name="template_colorkey_text_kp" />
 	</screen>
 		<!-- MP3 Browser */-->
 	<screen backgroundColor="transparent" flags="wfNoBorder" name="mp3BrowserConfig" position="0,0" size="1280,720" title="MP3 Browser Setup">
+		<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="mp3BrowserConfig" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
 		<widget name="config" position="70,80" size="608,540" scrollbarMode="showOnDemand" itemHeight="30" font="Regular;22" foregroundColor="SevenFont1" backgroundColor="SevenFontBackground" transparent="1" />
 		<widget name="plugin" position="700,200" size="600,400" alphatest="blend" transparent="1" />
 		<panel name="template_menu_full_button" />
@@ -2443,12 +2462,14 @@
 	</screen>
 		<!-- MUZU.TV */-->
 	<screen backgroundColor="transparent" flags="wfNoBorder" name="muzuConfig" position="0,0" size="1280,720" title="MUZU.TV Setup">
+		<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="muzuConfig" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
 		<widget name="config" position="70,80" size="708,500" itemHeight="30" font="Regular;22" foregroundColor="SevenFont1" backgroundColor="SevenFontBackground" transparent="1" />
 		<panel name="template_menu_left_button" />
 		<panel name="template_colorkey_text_kp" />
 	</screen>
 		<!-- Movie Browser */-->
 	<screen backgroundColor="transparent" flags="wfNoBorder" name="movieBrowserConfig" position="0,0" size="1280,720" title="Movie Browser Setup">
+		<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="movieBrowserConfig" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
 		<widget name="config" position="70,80" size="608,540" scrollbarMode="showOnDemand" itemHeight="30" font="Regular;22" foregroundColor="SevenFont1" backgroundColor="SevenFontBackground" transparent="1" />
 		<widget name="plugin" position="700,200" size="600,400" alphatest="blend" transparent="1" />
 		<panel name="template_menu_full_button" />
@@ -2456,12 +2477,14 @@
 	</screen>
 		<!-- OSCam Status View */-->
 	<screen backgroundColor="transparent" flags="wfNoBorder" name="oscamConfig" position="0,0" size="1280,720" title="OSCam Status View Setup">
+		<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="oscamConfig" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
 		<widget name="config" position="70,80" size="708,300" itemHeight="30" font="Regular;22" foregroundColor="SevenFont1" backgroundColor="SevenFontBackground" transparent="1" />
 		<panel name="template_menu_left_button" />
 		<panel name="template_colorkey_text_kp" />
 	</screen>
 		<!-- SPIEGEL Online */-->
 	<screen backgroundColor="transparent" flags="wfNoBorder" name="spiegelConfig" position="0,0" size="1280,720" title="SPIEGEL Online Setup">
+		<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="spiegelConfig" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
 		<widget name="config" position="70,80" size="708,220" itemHeight="25" font="Regular;18" foregroundColor="SevenFont1" backgroundColor="SevenFontBackground" transparent="1" />
 		<widget name="plugin" position="70,270" size="708,400" alphatest="blend" transparent="1" />
 		<panel name="template_menu_full_button" />
@@ -2469,6 +2492,7 @@
 	</screen>
 		<!-- Ticker Online */-->
 	<screen backgroundColor="transparent" flags="wfNoBorder" name="tickerConfig" position="0,0" size="1280,720" title="Ticker Setup">
+		<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="tickerConfig" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
 		<widget name="config" position="70,80" size="708,425" itemHeight="30" font="Regular;22" foregroundColor="SevenFont1" backgroundColor="SevenFontBackground" transparent="1" />
 		<widget name="ticker" position="70,500" size="708,200" alphatest="blend" transparent="1" />
 		<panel name="template_menu_left_button" />
@@ -2476,6 +2500,7 @@
 	</screen>
 		<!-- TV Spielfilm */-->
 	<screen backgroundColor="transparent" flags="wfNoBorder" name="tvsConfig" position="0,0" size="1280,720" title="TV Spielfilm Setup">
+		<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="tvsConfig" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
 		<widget name="config" position="70,80" size="608,540" scrollbarMode="showOnDemand" itemHeight="30" font="Regular;22" foregroundColor="SevenFont1" backgroundColor="SevenFontBackground" transparent="1" />
 		<widget name="plugin" position="700,200" size="600,400" alphatest="blend" transparent="1" />
 		<panel name="template_menu_full_button" />
@@ -2483,12 +2508,14 @@
 	</screen>
 		<!-- verkehrsinfo.de */-->
 	<screen backgroundColor="transparent" flags="wfNoBorder" name="verkehrsConfig" position="0,0" size="1280,720" title="verkehrsinfo.de Setup">
+		<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="verkehrsConfig" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
 		<widget name="config" position="70,80" size="708,300" itemHeight="30" font="Regular;22" foregroundColor="SevenFont1" backgroundColor="SevenFontBackground" transparent="1" />
 		<panel name="template_menu_left_button" />
 		<panel name="template_colorkey_text_kp" />
 	</screen>
 		<!-- Wikipedia */-->
 	<screen backgroundColor="transparent" flags="wfNoBorder" name="wikiConfig" position="0,0" size="1280,720" title="Wikipedia Setup">
+		<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="wikiConfig" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
 		<widget name="config" position="70,80" size="708,200" itemHeight="30" font="Regular;22" foregroundColor="SevenFont1" backgroundColor="SevenFontBackground" transparent="1" />
 		<widget name="plugin" position="70,230" size="708,400" alphatest="blend" transparent="1" />
 		<panel name="template_menu_left_button" />
@@ -2496,6 +2523,7 @@
 	</screen>
 		<!-- xbmcWetter */-->
 	<screen backgroundColor="transparent" flags="wfNoBorder" name="xbmcWetterConfig" position="0,0" size="1280,720" title="xbmcWetter Setup">
+		<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="xbmcWetterConfig" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
 		<widget name="config" position="70,80" size="708,500" itemHeight="30" font="Regular;22" foregroundColor="SevenFont1" backgroundColor="SevenFontBackground" transparent="1" />
 		<panel name="template_menu_left_button" />
 		<panel name="template_colorkey_text_kp" />
@@ -2503,6 +2531,7 @@
 		<!-- Kashmir Plugins */-->
 		<!-- NetatmoBar_V1 */-->
 	<screen backgroundColor="transparent" flags="wfNoBorder" name="NetatmoBar_V1" position="371,107" size="537,65" title="NetatmoBar">
+		<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="NetatmoBar_V1" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
 		<widget backgroundColor="SevenBackgroundIB1" font="Regular;17" foregroundColor="SevenNowIB" halign="center" position="5,6" render="Label" size="80,25" source="session.CurrentService" transparent="1" zPosition="10">
 			<convert type="Netatmo">station.name</convert>
 		</widget>
@@ -2545,6 +2574,7 @@
 	</screen>
 		<!-- NetatmoBar_V5 */-->
 	<screen backgroundColor="transparent" flags="wfNoBorder" name="NetatmoBar_V5" position="371,107" size="537,65" title="NetatmoBar">
+		<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="NetatmoBar_V5" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
 		<widget backgroundColor="SevenBackgroundIB1" font="Regular;17" foregroundColor="SevenNowIB" halign="center" position="5,6" render="Label" size="80,25" source="session.CurrentService" transparent="1" zPosition="10">
 			<convert type="Netatmo">station.name</convert>
 		</widget>
@@ -2584,5 +2614,166 @@
 		<eLabel backgroundColor="SevenBorderIB" position="1,62" size="535,2" zPosition="2" />
 		<eLabel backgroundColor="SevenBackgroundIB1" position="1,1" size="535,62" zPosition="-9" />
 		<ePixmap pixmap="SevenHD/back/ibone.png" position="1,1" size="535,62" alphatest="blend" zPosition="-8" />
+	</screen>
+		<!-- CrossEPG_Setup */-->
+	<screen backgroundColor="transparent" flags="wfNoBorder" name="CrossEPG_Setup" position="0,0" size="1280,720" title="CrossEPG_Setup">
+		<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="CrossEPG_Setup" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
+		<widget name="config" position="70,80" size="708,540" scrollbarMode="showOnDemand" itemHeight="30" font="Regular;22" foregroundColor="SevenFont1" backgroundColor="SevenFontBackground" transparent="1" />
+		<widget name="information" position="70,450" size="550,200" halign="center" valign="center" font="Regular;22" foregroundColor="SevenFont1" backgroundColor="SevenFontBackground" transparent="1" />
+		<panel name="template_menu_left_button" />
+		<panel name="template_colorkey_text" />
+	</screen>
+	<screen name="CrossEPG_Menu" position="0,0" size="1280,720" title="CrossEPG_Menu" zposition="6" flags="wfNoBorder" backgroundColor="transparent">
+		<widget source="list" render="Listbox" position="70,80" size="708,540" backgroundColor="SevenFontBackground" transparent="1">
+		<convert type="TemplatedMultiContent">
+			{"template": [
+				MultiContentEntryPixmapAlphaTest(pos = (12, 4), size = (32, 32), png = 0),
+				MultiContentEntryText(pos = (58, 5), size = (440, 38), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_TOP, text = 1),
+				],
+				"fonts": [gFont("Regular", 22)],
+				"itemHeight": 40
+			}
+		</convert>
+		</widget>
+		<panel name="template_menu_left_button" />
+		<panel name="template_colorkey_text" />
+	</screen>
+	<screen name="CrossEPG_Providers" position="0,0" size="1280,720" title="CrossEPG_Providers" zposition="6" flags="wfNoBorder" backgroundColor="transparent">
+		<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="CrossEPG_Providers" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
+		<widget source="list" render="Listbox" position="70,80" size="708,540" backgroundColor="SevenFontBackground" transparent="1">
+		<convert type="TemplatedMultiContent">
+			{"template": [
+				MultiContentEntryText(pos = (12, 1), size = (440, 32), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_TOP, text = 0),
+				MultiContentEntryPixmapAlphaTest(pos = (480, 0), size = (40, 40), png = 1),
+				],
+				"fonts": [gFont("Regular", 22)],
+				"itemHeight": 40
+			}
+		</convert>
+		</widget>
+		<panel name="template_menu_left_button" />
+		<panel name="template_colorkey_text" />	
+	</screen>
+	<screen name="CrossEPG_Ordering" position="0,0" size="1280,720" title="CrossEPG_Ordering" zposition="6" flags="wfNoBorder" backgroundColor="transparent">
+		<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="CrossEPG_Ordering" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
+		<widget source="list" render="Listbox" position="70,80" size="708,540" backgroundColor="SevenFontBackground" transparent="1">
+		<convert type="TemplatedMultiContent">
+			{"template": [
+				MultiContentEntryText(pos = (12, 1), size = (440, 32), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_TOP, text = 0),
+				MultiContentEntryPixmapAlphaTest(pos = (480, 0), size = (40, 40), png = 1),
+				],
+				"fonts": [gFont("Regular", 22)],
+				"itemHeight": 40
+			}
+		</convert>
+		</widget>
+		<panel name="template_menu_left_button" />
+		<panel name="template_colorkey_text" />	
+	</screen>
+	<screen backgroundColor="transparent" flags="wfNoBorder" name="CrossEPG_Ordering" position="0,0" size="1280,720" title="CrossEPG_Loader">
+		<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="CrossEPG_Ordering" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
+		<widget name="config" position="39,80" size="608,540" scrollbarMode="showOnDemand" itemHeight="30" font="Regular;22" foregroundColor="SevenFont1" backgroundColor="SevenFontBackground" transparent="1" />
+		<widget name="plugin" position="665,200" size="600,400" alphatest="blend" backgroundColor="SevenFontBackground" transparent="1" />
+		<panel name="template_menu_full_button" />
+		<panel name="template_colorkey_text" />
+	</screen>
+	<screen backgroundColor="transparent" flags="wfNoBorder" name="CrossEPG_Downloader" position="0,0" size="1280,720" title="CrossEPG_Downloader">
+		<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="CrossEPG_Downloader" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
+		<widget name="action" halign="center" valign="center" position="70,120" size="520,20" font="Regular;16" transparent="1" />
+		<widget name="status" halign="center" valign="center" position="70,170" size="520,20" font="Regular;16" transparent="1" />
+		<widget name="progress" position="70,80" size="520,5" borderWidth="1" />
+		<panel name="template_menu_left_button" />
+		<panel name="template_colorkey_text" />
+	</screen>
+	<screen backgroundColor="transparent" flags="wfNoBorder" name="CrossEPG_About" position="0,0" size="1280,720" title="CrossEPG_About">
+		<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="CrossEPG_About" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
+		<widget name="about" position="80,80" size="660,360" font="Regular;15" foregroundColor="SevenFont1" backgroundColor="SevenFontBackground" transparent="1" />
+		<widget name="rytec_pix" position="480,200" size="70,70" foregroundColor="SevenFont1" backgroundColor="SevenFontBackground" transparent="1" />
+		<widget name="krkadoni_pix" position="480,290" size="70,22" foregroundColor="SevenFont1" backgroundColor="SevenFontBackground" transparent="1" />
+		<panel name="template_menu_left_button" />
+		<panel name="template_colorkey_text" />
+	</screen>
+	<screen backgroundColor="transparent" flags="wfNoBorder" name="CrossEPG_Info" position="0,0" size="1280,720" title="CrossEPG_Info">
+		<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="CrossEPG_Info" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
+		<widget name="version" position="80,80" size="540,25" font="Regular;20" foregroundColor="SevenFont1" backgroundColor="SevenFontBackground" transparent="1" />
+		<widget name="create" position="80,110" size="540,25" font="Regular;20" foregroundColor="SevenFont1" backgroundColor="SevenFontBackground" transparent="1" />
+		<widget name="last_update" position="80,140" size="540,25" font="Regular;20" foregroundColor="SevenFont1" backgroundColor="SevenFontBackground" transparent="1" />
+		<widget name="headersdb_size" position="80,170" size="540,25" font="Regular;20" foregroundColor="SevenFont1" backgroundColor="SevenFontBackground" transparent="1" />
+		<widget name="descriptorsdb_size" position="80,200" size="540,25" font="Regular;20" foregroundColor="SevenFont1" backgroundColor="SevenFontBackground" transparent="1" />
+		<widget name="indexesdb_size" position="80,230" size="540,25" font="Regular;20" foregroundColor="SevenFont1" backgroundColor="SevenFontBackground" transparent="1" />
+		<widget name="aliasesdb_size" position="80,260" size="540,25" font="Regular;20" foregroundColor="SevenFont1" backgroundColor="SevenFontBackground" transparent="1" />
+		<widget name="total_size" position="80,290" size="540,25" font="Regular;20" foregroundColor="SevenFont1" backgroundColor="SevenFontBackground" transparent="1" />
+		<widget name="channels_count" position="80,320" size="540,25" font="Regular;20" foregroundColor="SevenFont1" backgroundColor="SevenFontBackground" transparent="1" />
+		<widget name="events_count" position="80,350" size="540,25" font="Regular;20" foregroundColor="SevenFont1" backgroundColor="SevenFontBackground" transparent="1" />
+		<widget name="hashes_count" position="80,380" size="540,25" font="Regular;20" foregroundColor="SevenFont1" backgroundColor="SevenFontBackground" transparent="1" />
+		<panel name="template_menu_left_button" />
+		<panel name="template_colorkey_text" />
+	</screen>
+		<!-- YampConfigScreen */-->
+	<screen backgroundColor="transparent" flags="wfNoBorder" name="YampConfigScreen" position="0,0" size="1280,720" title="YampConfigScreen">
+		<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="YampConfigScreen" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
+		<widget name="config" position="70,80" size="608,540" scrollbarMode="showOnDemand" itemHeight="30" font="Regular;22" foregroundColor="SevenFont1" backgroundColor="SevenBackground" transparent="1" />
+		<panel name="template_menu_left_button" />
+		<panel name="template_colorkey_text_kp" />
+	</screen>
+		<!-- TranscodingSetup */-->
+	<screen name="TranscodingSetup" backgroundColor="transparent" position="center,center" size="1280,720">
+		<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="TranscodingSetup" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
+		<widget name="config" position="70,80" size="608,540" scrollbarMode="showOnDemand" itemHeight="30" font="Regular;22" foregroundColor="SevenFont1" backgroundColor="SevenBackground" transparent="1" />
+		<widget name="description" position="70,450" size="550,200" halign="center" valign="center" font="Regular;22" foregroundColor="SevenFont1" backgroundColor="SevenBackground" transparent="1" />
+		<widget name="HelpTextHeader1" position="70,300" size="880,22" font="Regular;22" foregroundColor="SevenFont1" backgroundColor="SevenBackground" transparent="1" />
+		<widget name="HelpText1" position="70,330" size="880,110" font="Regular;20" foregroundColor="SevenFont1" backgroundColor="SevenBackground" transparent="1" />
+		<widget name="HelpTextHeader2" position="70,440" size="880,22" font="Regular;22" foregroundColor="SevenFont1" backgroundColor="SevenBackground" transparent="1" />
+		<widget name="HelpText2" position="70,470" size="880,20" font="Regular;20" foregroundColor="SevenFont1" backgroundColor="SevenBackground" transparent="1" />
+		<panel name="template_menu_full_button" />
+		<panel name="template_colorkey_text_kp" />
+	</screen>
+			<!-- SeriesPlugin */-->
+	<screen name="SeriesPluginConfiguration" backgroundColor="transparent" position="center,center" size="1280,720">
+		<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="SeriesPluginConfiguration" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
+		<widget name="config" position="70,80" size="908,540" scrollbarMode="showOnDemand" itemHeight="30" font="Regular;22" foregroundColor="SevenFont1" backgroundColor="SevenBackground" transparent="1" />
+		<panel name="template_menu_full_button" />
+		<panel name="template_colorkey_text" />
+	</screen>
+	<screen name="SeriesPluginChannelEditor" backgroundColor="transparent" position="center,center" size="1280,720">
+		<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="SeriesPluginChannelEditor" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
+		<widget name="list" position="70,80" size="608,540" itemHeight="30" font="Regular;35" backgroundColor="SevenBackground" transparent="1" />
+		<panel name="template_menu_left_button" />
+		<panel name="template_colorkey_text" />
+	</screen>
+	<screen name="SeriesPluginInfoScreen" backgroundColor="transparent" position="center,center" size="1280,720" title="SeriesPlugin">
+		<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="SeriesPluginInfoScreen" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
+		<widget name="logo" position="70,80" size="400,64" alphatest="on" />
+		<widget name="cover" position="500,80" size="540,80" alphatest="on" />
+		<widget name="state" position="580,80" size="540,80" alphatest="on" />
+		<widget name="event_title" position="70,160" size="540,35" font="Regular;22" backgroundColor="SevenFontBackground" transparent="1" />
+		<widget name="event_episode" position="70,190" size="540,60" font="Regular;22" backgroundColor="SevenFontBackground" transparent="1" />
+		<widget name="event_description" position="70,270" size="1040,320" font="Regular;22" backgroundColor="SevenFontBackground" transparent="1" />
+		<widget name="datetime" position="70,600" size="400,25" font="Regular;22" backgroundColor="SevenFontBackground" transparent="1" />
+		<widget name="duration" position="310,600" size="480,25" font="Regular;22" backgroundColor="SevenFontBackground" transparent="1" />
+		<widget name="channel" position="390,600" size="460,25" font="Regular;22" backgroundColor="SevenFontBackground" transparent="1" />
+		<panel name="template_menu_full_button" />
+		<panel name="template_colorkey_text" />
+	</screen>
+			<!-- XMLTVImport */-->
+	<screen name="EPGMainSetup" position="0,0" title="EPG Main Setup" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
+		<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="EPGMainSetup" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
+		<widget name="config" position="70,80" size="708,490" backgroundColor="SevenFontBackground" itemHeight="30" font="Regular;18" transparent="1" />  
+		<widget name="statusbar" position="70,630" size="708,20" backgroundColor="SevenFontBackground" font="Regular;18" />
+		<widget name="status" position="70,580" size="708,40" backgroundColor="SevenFontBackground" font="Regular;20" />
+		<panel name="template_menu_left_button" />
+		<panel name="template_colorkey_text" />
+	</screen>
+	<screen name="XMLTVImportSources" position="0,0" title="XMLTVImport Sources" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
+		<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="XMLTVImportSources" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
+		<widget name="list" position="70,80" size="708,540" backgroundColor="SevenFontBackground" itemHeight="30" font="Regular;18" transparent="1" />
+		<panel name="template_menu_left_button" />
+		<panel name="template_colorkey_text" />
+	</screen>
+	<screen name="XMLTVImportLog" position="0,0" title="XMLTVImport Log" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
+		<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="XMLTVImportLog" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
+		<widget name="list" position="70,80" size="708,540" backgroundColor="SevenFontBackground" itemHeight="30" font="Regular;18" transparent="1" />
+		<panel name="template_menu_left_button" />
+		<panel name="template_colorkey_text" />
 	</screen>
 		<!-- plugins -->

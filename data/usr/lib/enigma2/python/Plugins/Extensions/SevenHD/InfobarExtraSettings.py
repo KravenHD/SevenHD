@@ -148,17 +148,17 @@ class InfobarExtraSettings(ConfigListScreen, Screen):
         if config.plugins.SevenHD.WeatherStyle_1.value != 'none' or config.plugins.SevenHD.WeatherStyle_2.value != 'none' or config.plugins.SevenHD.ClockStyle.value == "clock-android" or config.plugins.SevenHD.ClockStyle.value == "clock-weather":
            
            list.append(getConfigListEntry(_("Server"),                        config.plugins.SevenHD.weather_server,  'Stellt den Server ein, wor\xc3\xbcber die Wetterdaten gesucht werden sollen.','4',        'server'))
-           list.append(getConfigListEntry(_("Search by"),                     config.plugins.SevenHD.weather_search_over,'Stell hier ein, wie gesucht werden sollen.',                               '4',        'server'))
+           list.append(getConfigListEntry(_("Search by"),                     config.plugins.SevenHD.weather_search_over,'Stell hier ein, wie gesucht werden sollen.',                               '4',        'search'))
            
            if config.plugins.SevenHD.weather_search_over.value == 'name':
-              list.append(getConfigListEntry(_("Cityname"),                   config.plugins.SevenHD.weather_cityname,'Gib hier deinen Ort ein.',                                                    '4',        'cityname'))
+              list.append(getConfigListEntry(_("Cityname"),                   config.plugins.SevenHD.weather_cityname,'Gib hier deinen Ort ein.',                                                    '4',        'search'))
            elif config.plugins.SevenHD.weather_search_over.value == 'woeid':
-              list.append(getConfigListEntry(_("Woe ID"),                     config.plugins.SevenHD.weather_woe_id,  'Gib hier deine WoeID ein.',                                                   '4',        'woeid'))
+              list.append(getConfigListEntry(_("Woe ID"),                     config.plugins.SevenHD.weather_woe_id,  'Gib hier deine WoeID ein.',                                                   '4',        'search'))
            elif config.plugins.SevenHD.weather_search_over.value == 'gmcode':
-              list.append(getConfigListEntry(_("GM Code"),                    config.plugins.SevenHD.weather_gmcode,  'Gib hier deinen GM Code ein.\neine Liste findet ihr auf http://weather.codes','4',        'gmcode'))
+              list.append(getConfigListEntry(_("GM Code"),                    config.plugins.SevenHD.weather_gmcode,  'Gib hier deinen GM Code ein.\neine Liste findet ihr auf http://weather.codes','4',        'search'))
            elif config.plugins.SevenHD.weather_search_over.value == 'latlon':
-              list.append(getConfigListEntry(_("Latitude"),                   config.plugins.SevenHD.weather_lat,     'Gib hier deinen Latitude ein.\nBsp. 51.3452',                                 '4',        'latlon'))
-              list.append(getConfigListEntry(_("Longitude"),                  config.plugins.SevenHD.weather_lon,     'Gib hier deinen Longitude ein.\nBsp. 12.38594',                               '4',        'latlon'))
+              list.append(getConfigListEntry(_("Latitude"),                   config.plugins.SevenHD.weather_lat,     'Gib hier deinen Latitude ein.\nBsp. 51.3452',                                 '4',        'search'))
+              list.append(getConfigListEntry(_("Longitude"),                  config.plugins.SevenHD.weather_lon,     'Gib hier deinen Longitude ein.\nBsp. 12.38594',                               '4',        'search'))
            
            if config.plugins.SevenHD.weather_server.value != '_yahoo':
               list.append(getConfigListEntry(_("Language for Weather"),       config.plugins.SevenHD.weather_language,'Stellt die Ausgabesprache ein.',                                              '4',        'language'))
@@ -408,7 +408,7 @@ class InfobarExtraSettings(ConfigListScreen, Screen):
        
     def get_latlon_by_woeid(self):
         try:
-           res = requests.request('get', 'http://query.yahooapis.com/v1/public/yql?format=json&q=select%20*%20from%20geo.places%20where%20woeid%20=%20%s' % str(config.plugins.SevenHD.weather_woeid.value))
+           res = requests.request('get', 'http://query.yahooapis.com/v1/public/yql?format=json&q=select * from geo.places where woeid = "%s"' % str(config.plugins.SevenHD.weather_woe_id.value))
            data = res.json()              
            
            self.city = data['query']['results']['place']['name']
@@ -422,7 +422,7 @@ class InfobarExtraSettings(ConfigListScreen, Screen):
            
     def get_latlon_by_rss(self):
         try:
-           res = requests.request('get', 'http://weather.yahooapis.com/forecastrss?w=%s&u=c' % str(config.plugins.SevenHD.weather_woeid.value))
+           res = requests.request('get', 'http://weather.yahooapis.com/forecastrss?w=%s&u=c' % str(config.plugins.SevenHD.weather_woe_id.value))
            
            self.city = re.search('city="(.+?)" region', str(res.text)).groups(1)
            self.lat = re.search('geo:lat.+>(.+?)</geo:lat', str(res.text)).groups(1)

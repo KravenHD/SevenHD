@@ -15,4 +15,4 @@
 		<widget source="global.CurrentTime" render="SevenHDFlipClock" position="1207,583" zPosition="4" size="25,47" alphatest="blend" transparent="1">
 			<convert type="SevenHDClockToText">Format:M2 %M</convert>
 		</widget>
-                <!-- Clock Flip */-->
+		<!-- Clock Flip */-->

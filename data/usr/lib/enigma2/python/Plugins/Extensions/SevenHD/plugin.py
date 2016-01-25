@@ -603,14 +603,14 @@ class SevenHD(Screen):
                 
                 ### Volume
                 self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.VolumeStyle.value + XML)
-		self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.VolumeStyle.value + XML)	
+                self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.VolumeStyle.value + XML)	
                 
                 ###ChannelSelection
-		self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.ChannelSelectionStyle.value + XML)
+                self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.ChannelSelectionStyle.value + XML)
                 self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.ChannelSelectionStyle.value + XML)    
                 
                 ###Infobar_main
-		self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.InfobarStyle.value + "-main.xml")
+                self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.InfobarStyle.value + "-main.xml")
                 self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.InfobarStyle.value + "-main.xml")       
                 
                 ###Channelname Infobar
@@ -626,13 +626,13 @@ class SevenHD(Screen):
                 if config.plugins.SevenHD.InfobarChannelName.value == "-ICNameandNumber":
                    self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.InfobarStyle.value + "-ICNameandNumber.xml")
                    self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.InfobarStyle.value + "-ICNameandNumber.xml") 
-		
+                
                 ###ecm-info
-		self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.ECMInfo.value + XML)
+                self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.ECMInfo.value + XML)
                 self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.ECMInfo.value + XML)        
                 
                 ###clock-style xml Infobar
-		if config.plugins.SevenHD.ClockStyle.value == 'clock-weather':
+                if config.plugins.SevenHD.ClockStyle.value == 'clock-weather':
                    self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.ClockStyle.value + str(config.plugins.SevenHD.weather_server.value) + XML)
                    self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.ClockStyle.value + str(config.plugins.SevenHD.weather_server.value) + XML)
                 elif config.plugins.SevenHD.ClockStyle.value == 'clock-weather-meteo':
@@ -646,11 +646,11 @@ class SevenHD(Screen):
                    self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.ClockStyle.value + XML)
                 
                 ###sat-info
-		self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.SatInfo.value + XML)
+                self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.SatInfo.value + XML)
                 self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.SatInfo.value + XML)        
                 
                 ###sys-info
-		self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.SysInfo.value + XML)
+                self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.SysInfo.value + XML)
                 self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.SysInfo.value + XML)        
                 
                 ###weather-style_1 Infobar
@@ -670,7 +670,7 @@ class SevenHD(Screen):
                       self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.WeatherStyle_2.value + XML) 
                 
                 ###Infobar_middle
-		self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.InfobarStyle.value + "-middle.xml")
+                self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.InfobarStyle.value + "-middle.xml")
                 self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.InfobarStyle.value + "-middle.xml")         
                 
                 ###Channelname 2nd Infobar
@@ -689,9 +689,9 @@ class SevenHD(Screen):
                       self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.InfobarStyle.value + "-ICNameandNumber.xml") 
                 
                 ###clock-style xml 2nd Infobar
-		if not config.plugins.SevenHD.SIB.value in ('-minitv2','-right','-picon'):
+                if not config.plugins.SevenHD.SIB.value in ('-minitv2','-right','-picon'):
                    if config.plugins.SevenHD.ClockStyle.value == 'clock-weather':
-                      self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.ClockStyle.value + str(config.plugins.SevenHD.weahter_server.value) + XML)
+                      self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.ClockStyle.value + str(config.plugins.SevenHD.weather_server.value) + XML)
                       self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.ClockStyle.value + str(config.plugins.SevenHD.weather_server.value) + XML)
                    elif config.plugins.SevenHD.ClockStyle.value == 'clock-weather-meteo':
                       self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.ClockStyle.value + str(config.plugins.SevenHD.weather_server.value) + XML)
@@ -712,6 +712,12 @@ class SevenHD(Screen):
                       else:
                          self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.WeatherStyle_2.value + XML)
                          self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.WeatherStyle_2.value + XML)
+                
+                ###ecm-info
+                if config.plugins.SevenHD.InfobarStyle.value == 'infobar-style-xpicon8' or config.plugins.SevenHD.InfobarStyle.value == 'infobar-style-xpicon9':
+                   if not config.plugins.SevenHD.SIB.value in ('-minitv2','-right','-picon'):
+                          self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.ECMInfo.value + XML)
+                          self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.ECMInfo.value + XML)        
                 
                 ###Infobar_end
 		self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.InfobarStyle.value + config.plugins.SevenHD.SIB.value + XML)

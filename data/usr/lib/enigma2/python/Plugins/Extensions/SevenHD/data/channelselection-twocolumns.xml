@@ -32,6 +32,9 @@
 			<convert type="EventTime">EndTime</convert>
 			<convert type="ClockToText">Format:%H:%M</convert>
 		</widget>
+		<widget source="ServiceEvent" render="Label" position="891,16" size="100,28" font="Regular;26" halign="left" backgroundColor="SevenFontBackRightCS" transparent="1" valign="center" foregroundColor="SevenTimeCS">
+			<convert type="SevenHDServiceName2">OrbitalPos</convert>
+		</widget>
 		<panel name="template_menu_cs_button" />
 	</screen>
 		<!-- /* ChannelSelection Two Columns -->

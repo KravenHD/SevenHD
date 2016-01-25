@@ -135,8 +135,8 @@ class InfobarSettings(ConfigListScreen, Screen):
         if config.plugins.SevenHD.SIB.value == '-picon':
            list.append(getConfigListEntry(_("second infobar"),       config.plugins.SevenHD.SIB,               'W\xc3\xa4hle den Stil der zweiten Infobar',                                                            '4',       'SIB7'))
         list.append(getConfigListEntry(_('_____________________________background________________________________________'), ))
-        list.append(getConfigListEntry(_("primary color"),            config.plugins.SevenHD.BackgroundIB1,     'Stellt die Farbe der linken Seite sowie den unteren Bereich der Infobar ein.',                         '4',       'Color1'))
-        list.append(getConfigListEntry(_("secondary color"),          config.plugins.SevenHD.BackgroundIB2,     'Stellt die Farbe der rechten Seite sowie den mittigen Bereich der Infobar ein.',                       '4',       'Color2'))
+        list.append(getConfigListEntry(_("primary color"),            config.plugins.SevenHD.BackgroundIB1,     'Stellt die Farbe der linken Seite sowie den unteren Bereich der Infobar ein.',                        '4',       'Color1'))
+        list.append(getConfigListEntry(_("secondary color"),          config.plugins.SevenHD.BackgroundIB2,     'Stellt die Farbe der rechten Seite sowie den mittigen Bereich der Infobar ein.',                      '4',       'Color2'))
         list.append(getConfigListEntry(_('_____________________________color lines_______________________________________'), ))
         list.append(getConfigListEntry(_("line"),                    config.plugins.SevenHD.InfobarLine,       'Stellt die Farbe der Linie unter dem Fortschrittsbalken in der Infobar ein.',                          '4',       'InfobarLine'))
         list.append(getConfigListEntry(_("border"),                  config.plugins.SevenHD.InfobarBorder,     'Stellt die Rahmenfarbe der Infobar ein.',                                                              '4',       'InfobarBorder'))
@@ -173,6 +173,17 @@ class InfobarSettings(ConfigListScreen, Screen):
 	   list.append(getConfigListEntry(_("color weather"),        config.plugins.SevenHD.ClockWeather,      'Stellt die Farbe von der Temperatur ein.',                                                             '4',       'ClockWeather'))
         if config.plugins.SevenHD.ClockStyle.value == "clock-android":
 	   list.append(getConfigListEntry(_("color date"),           config.plugins.SevenHD.ClockDate,         'Stellt die Farbe des Datum ein.',                                                                      '4',       'ClockDate'))
+        if config.plugins.SevenHD.ClockStyle.value == "clock-flip":
+           list.append(getConfigListEntry(_("color date"),           config.plugins.SevenHD.ClockDate,         'Stellt die Farbe des Datum ein.',                                                                      '4',       'ClockDate'))
+        if config.plugins.SevenHD.ClockStyle.value == "clock-circle":
+           list.append(getConfigListEntry(_("color hour"),           config.plugins.SevenHD.ClockTimeh,        'Stellt die Farbe der Stunde ein.',                                                                     '4',       'ClockCricleh'))
+           list.append(getConfigListEntry(_("color minute"),         config.plugins.SevenHD.ClockTimem,        'Stellt die Farbe der Minute ein.',                                                                     '4',       'ClockCriclem'))
+           list.append(getConfigListEntry(_("color date"),           config.plugins.SevenHD.ClockDate,         'Stellt die Farbe des Datum ein.',                                                                      '4',       'ClockDate'))
+        if config.plugins.SevenHD.ClockStyle.value == "clock-circle-second":
+           list.append(getConfigListEntry(_("color hour"),           config.plugins.SevenHD.ClockTimeh,        'Stellt die Farbe der Stunden ein.',                                                                     '4',       'ClockCricleh'))
+           list.append(getConfigListEntry(_("color minute"),         config.plugins.SevenHD.ClockTimem,        'Stellt die Farbe der Minuten ein.',                                                                     '4',       'ClockCriclem'))
+           list.append(getConfigListEntry(_("color seconde"),        config.plugins.SevenHD.ClockTimes,        'Stellt die Farbe der Sekunden ein.',                                                                    '4',       'ClockCricles'))
+           list.append(getConfigListEntry(_("color date"),           config.plugins.SevenHD.ClockDate,         'Stellt die Farbe des Datum ein.',                                                                      '4',       'ClockDate'))
         return list
 
     def __selectionChanged(self):

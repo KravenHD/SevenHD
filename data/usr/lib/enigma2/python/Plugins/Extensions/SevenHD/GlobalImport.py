@@ -1,10 +1,10 @@
-#version = '3.6.57'
+#version = '3.6.60'
 import os
 try:
    opkg_info = os.popen("opkg list-installed enigma2-plugin-skins-sevenhd | cut -d ' ' -f3").read()
    version = str(opkg_info.strip().split('+')[0])
 except:
-   version = '3.6.57'
+   version = '3.6.60'
 import re
 import time
 import math
@@ -448,7 +448,8 @@ config.plugins.SevenHD.InfobarStyle = ConfigSelection(default="infobar-style-ori
 				("infobar-style-xpicon5", _("Style 8")),
 				("infobar-style-xpicon6", _("Style 9")),
 				("infobar-style-xpicon7", _("Style 10")),
-				("infobar-style-xpicon8", _("Style 11"))
+				("infobar-style-xpicon8", _("Style 11")),
+				("infobar-style-xpicon9", _("Style 12"))
 				])
 				
 config.plugins.SevenHD.SIB = ConfigSelection(default="-top", choices = [
@@ -515,7 +516,9 @@ config.plugins.SevenHD.ClockStyle = ConfigSelection(default="clock-standard", ch
 				("clock-weather", _("weather icon")),
 				("clock-weather-meteo", _("weather meteo")),
 				("clock-android", _("android")),
-				("clock-flip", _("flip"))
+				("clock-flip", _("flip")),
+				("clock-circle", _("circle")),
+				("clock-circle-second", _("circle seconds"))
 				])
 
 config.plugins.SevenHD.AnalogStyle = ConfigSelection(default="00ffffff", choices = ColorList)
@@ -622,12 +625,13 @@ config.plugins.SevenHD.ChannelSelectionStyle = ConfigSelection(default="channels
 				("channelselection-twocolumns4", _("two columns 4")),
 				("channelselection-twocolumns5", _("two columns 5")),
 				("channelselection-twocolumns6", _("two columns 6")),
-				("channelselection-minitv1", _("two columns 7 (miniTV)")),
-				("channelselection-minitvx", _("two columns 8 (miniTV/Picon)")),
-				("channelselection-pip", _("two columns 9 (miniTV/preview)")),
-				("channelselection-preview", _("two columns 10 (preview)")),
-				("channelselection-threecolumns", _("three columns")),
-				("channelselection-threecolumnsminitv", _("three columns (miniTV)"))
+				("channelselection-twocolumns7", _("two columns 7")),
+				("channelselection-minitv1", _("two columns 8")),
+				("channelselection-minitvx", _("two columns 9")),
+				("channelselection-pip", _("two columns 10")),
+				("channelselection-preview", _("two columns 11 (preview)")),
+				("channelselection-threecolumns", _("three columns 1")),
+				("channelselection-threecolumnsminitv", _("three columns 2"))
 				])
 
 ChannelBack1List = []

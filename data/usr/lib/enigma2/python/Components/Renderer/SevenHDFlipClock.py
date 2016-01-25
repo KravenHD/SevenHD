@@ -15,7 +15,7 @@
 # along with this program. If not, see <http://www.gnu.org/licenses/>.
 #
 from Renderer import Renderer
-from enigma import ePixmap, eTimer
+from enigma import ePixmap, eTimer, eDVBVolumecontrol
 from Components.config import config
 
 class SevenHDFlipClock(Renderer):
@@ -59,5 +59,5 @@ class SevenHDFlipClock(Renderer):
     def debug(self, what):
         if config.plugins.SevenHD.debug.value:
                f = open('/tmp/kraven_debug.txt', 'a+')
-               f.write('[SevenHD_FlipClock_Render] ' + str(what) + '\n')
+               f.write('[FlipClock]' + str(what) + '\n')
                f.close() 
