@@ -108,8 +108,10 @@ class Update():
                
         def reboot(self, answer):
                if answer is True:
-                  self.session.open(TryQuitMainloop, 3)	
-                  
+                  try:
+                     self.session.open(TryQuitMainloop, 3)	
+                  except:
+                     os.system('reboot -f')
 
         def Error(self, error):
                 if not self.session.in_exec:
