@@ -148,7 +148,7 @@ class InfobarExtraSettings(ConfigListScreen, Screen):
         if config.plugins.SevenHD.WeatherStyle_1.value != 'none' or config.plugins.SevenHD.WeatherStyle_2.value != 'none' or config.plugins.SevenHD.ClockStyle.value == "clock-android" or config.plugins.SevenHD.ClockStyle.value == "clock-weather":
            
            list.append(getConfigListEntry(_("Server"),                        config.plugins.SevenHD.weather_server,  'Stellt den Server ein, wor\xc3\xbcber die Wetterdaten gesucht werden sollen.','4',        'server'))
-           list.append(getConfigListEntry(_("Search by"),                     config.plugins.SevenHD.weather_search_over,'Stell hier ein, wie gesucht werden sollen.',                               '4',        'search'))
+           list.append(getConfigListEntry(_("Search by"),                     config.plugins.SevenHD.weather_search_over,'Stell hier ein, wie gesucht werden sollen.',                               '4',        'server'))
            
            if config.plugins.SevenHD.weather_search_over.value == 'name':
               list.append(getConfigListEntry(_("Cityname"),                   config.plugins.SevenHD.weather_cityname,'Gib hier deinen Ort ein.',                                                    '4',        'search'))
@@ -172,7 +172,8 @@ class InfobarExtraSettings(ConfigListScreen, Screen):
 
     def __selectionChanged(self):
         returnValue = self["config"].getCurrent()[4]
-        if not returnValue in 'woeid latlon gmcode cityname' or returnValue == '':
+        #if not returnValue in 'woeid latlon gmcode cityname' or returnValue == '':
+        if returnValue != 'search' or returnValue == '':
            self["config"].setList(self.getMenuItemList())
                  
     def GetPicturePath(self):

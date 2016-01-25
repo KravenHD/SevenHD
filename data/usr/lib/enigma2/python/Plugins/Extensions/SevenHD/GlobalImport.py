@@ -558,16 +558,16 @@ config.plugins.SevenHD.ClockWeather = ConfigSelection(default="00ffffff", choice
 
 ##################################
 # weahter
-config.plugins.SevenHD.weather_owm_latlon = ConfigText(default = 'lat=51.3452&lon=12.38594&units=metric&lang=de') 
-config.plugins.SevenHD.weather_accu_latlon = ConfigText(default = 'lat=51.3452&lon=12.38594&metric=1&language=de')
-config.plugins.SevenHD.weather_realtek_latlon = ConfigText(default = 'lat=51.3452&lon=12.38594&metric=1&language=de')
+config.plugins.SevenHD.weather_owm_latlon = ConfigText(default = 'lat=51.3452&lon=12.38594&units=metric&lang=de', fixed_size = False) 
+config.plugins.SevenHD.weather_accu_latlon = ConfigText(default = 'lat=51.3452&lon=12.38594&metric=1&language=de', fixed_size = False)
+config.plugins.SevenHD.weather_realtek_latlon = ConfigText(default = 'lat=51.3452&lon=12.38594&metric=1&language=de', fixed_size = False)
 config.plugins.SevenHD.weather_woe_id = ConfigNumber(default="671072") 
 config.plugins.SevenHD.weather_accu_id = ConfigNumber(default="171240")
 config.plugins.SevenHD.weather_msn_id = ConfigNumber(default="18374")
-config.plugins.SevenHD.weather_lat = ConfigText(default = '51.3452') 
-config.plugins.SevenHD.weather_lon = ConfigText(default = '12.38594') 
-config.plugins.SevenHD.weather_gmcode = ConfigText(default="GMXX0072")
-config.plugins.SevenHD.weather_cityname = ConfigText(default = 'Leipzig')
+config.plugins.SevenHD.weather_lat = ConfigText(default = '51.3452', fixed_size = False) 
+config.plugins.SevenHD.weather_lon = ConfigText(default = '12.38594', fixed_size = False) 
+config.plugins.SevenHD.weather_gmcode = ConfigText(default="GMXX0072", fixed_size = False)
+config.plugins.SevenHD.weather_cityname = ConfigText(default = 'Leipzig', fixed_size = False)
 config.plugins.SevenHD.weather_language = ConfigSelection(default="de", choices = LanguageList)
 config.plugins.SevenHD.weather_server = ConfigSelection(default="_owm", choices = [
 				("_yahoo", _("Yahoo")),
