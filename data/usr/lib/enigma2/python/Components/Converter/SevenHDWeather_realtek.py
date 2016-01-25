@@ -114,8 +114,8 @@ class SevenHDWeather_realtek(Converter, object):
                            index += 1
                            self.data['Day_%s' % str(index)] = {}
                            self.data['Day_%s' % str(index)]['day'] = item.find('obsdate').text
-                           self.data['Day_%s' % str(index)]['low'] = entrie.find('hightemperature').text
-                           self.data['Day_%s' % str(index)]['high'] = entrie.find('lowtemperature').text
+                           self.data['Day_%s' % str(index)]['high'] = entrie.find('hightemperature').text
+                           self.data['Day_%s' % str(index)]['low'] = entrie.find('lowtemperature').text
                            self.data['Day_%s' % str(index)]['skycodeday'] = entrie.find('weathericon').text                                
                            self.data['Day_%s' % str(index)]['skytextday'] = entrie.find('txtshort').text  
                            self.data['Day_%s' % str(index)]['precip'] = entrie.find('rainamount').text
