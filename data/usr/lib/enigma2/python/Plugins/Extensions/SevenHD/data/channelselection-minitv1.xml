@@ -22,8 +22,8 @@
 		<widget backgroundColor="SevenFontBackCS" font="Regular;22" foregroundColor="SevenPrimeCS" position="30,628" render="Label" size="505,30" source="ServiceEvent" transparent="1" zPosition="5" noWrap="1">
 			<convert type="SevenHDNextEvents">PrimeTime,noDuration</convert>
 		</widget>
-		<eLabel backgroundColor="SevenBorderCS" position="30,387" size="505,4" zPosition="5" />
-		<eLabel backgroundColor="SevenBorderCS" position="30,108" size="505,4" zPosition="5" />
-		<eLabel backgroundColor="SevenBorderCS" position="531,108" size="4,282" zPosition="5" />
-		<eLabel backgroundColor="SevenBorderCS" position="30,108" size="4,282" zPosition="5" />
+		<eLabel backgroundColor="SevenLineCS" position="30,387" size="505,4" zPosition="5" />
+		<eLabel backgroundColor="SevenLineCS" position="30,108" size="505,4" zPosition="5" />
+		<eLabel backgroundColor="SevenLineCS" position="531,108" size="4,282" zPosition="5" />
+		<eLabel backgroundColor="SevenLineCS" position="30,108" size="4,282" zPosition="5" />
 	</screen>

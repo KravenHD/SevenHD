@@ -31,13 +31,13 @@
 			<convert type="SevenHDNextEvents">PrimeTime,noDuration</convert>
 		</widget>
 		<panel name="template_menu_cs7_button" />
-		<eLabel backgroundColor="SevenBorderCS" position="90,528" size="404,4" zPosition="5" />
-		<eLabel backgroundColor="SevenBorderCS" position="90,310" size="404,4" zPosition="5" />
-		<eLabel backgroundColor="SevenBorderCS" position="490,310" size="4,222" zPosition="5" />
-		<eLabel backgroundColor="SevenBorderCS" position="90,71" size="4,222" zPosition="5" />
-		<eLabel backgroundColor="SevenBorderCS" position="90,289" size="404,4" zPosition="5" />
-		<eLabel backgroundColor="SevenBorderCS" position="90,71" size="404,4" zPosition="5" />
-		<eLabel backgroundColor="SevenBorderCS" position="490,71" size="4,222" zPosition="5" />
-		<eLabel backgroundColor="SevenBorderCS" position="90,310" size="4,222" zPosition="5" />
+		<eLabel backgroundColor="SevenLineCS" position="90,528" size="404,4" zPosition="5" />
+		<eLabel backgroundColor="SevenLineCS" position="90,310" size="404,4" zPosition="5" />
+		<eLabel backgroundColor="SevenLineCS" position="490,310" size="4,222" zPosition="5" />
+		<eLabel backgroundColor="SevenLineCS" position="90,71" size="4,222" zPosition="5" />
+		<eLabel backgroundColor="SevenLineCS" position="90,289" size="404,4" zPosition="5" />
+		<eLabel backgroundColor="SevenLineCS" position="90,71" size="404,4" zPosition="5" />
+		<eLabel backgroundColor="SevenLineCS" position="490,71" size="4,222" zPosition="5" />
+		<eLabel backgroundColor="SevenLineCS" position="90,310" size="4,222" zPosition="5" />
 	</screen>
 		<!-- ChannelSelection Pip */-->

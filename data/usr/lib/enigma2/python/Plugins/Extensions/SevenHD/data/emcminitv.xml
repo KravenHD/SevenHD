@@ -34,9 +34,9 @@
 		<widget name="Cover" position="730,108" size="100,151" zPosition="4" backgroundColor="SevenBackground" alphatest="on" transparent="1" />
 		<panel name="template_emc2" />
 		<panel name="template_colorkey_text" />
-		<eLabel backgroundColor="SevenBorder" position="49,328" size="402,4" zPosition="5" />
-		<eLabel backgroundColor="SevenBorder" position="47,106" size="404,4" zPosition="5" />
-		<eLabel backgroundColor="SevenBorder" position="448,106" size="4,226" zPosition="5" />
-		<eLabel backgroundColor="SevenBorder" position="47,106" size="4,226" zPosition="5" />
+		<eLabel backgroundColor="SevenLine" position="49,328" size="402,4" zPosition="5" />
+		<eLabel backgroundColor="SevenLine" position="47,106" size="404,4" zPosition="5" />
+		<eLabel backgroundColor="SevenLine" position="448,106" size="4,226" zPosition="5" />
+		<eLabel backgroundColor="SevenLine" position="47,106" size="4,226" zPosition="5" />
 	</screen>
 		<!-- EMC MiniTV */-->

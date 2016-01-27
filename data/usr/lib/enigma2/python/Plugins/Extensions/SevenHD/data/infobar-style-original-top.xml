@@ -4,10 +4,10 @@
 		<eLabel backgroundColor="SevenBorderIB" position="14,533" size="1250,2" zPosition="2" />
 		<eLabel backgroundColor="SevenBorderIB" position="14,701" size="1250,2" zPosition="2" />
 		<eLabel backgroundColor="SevenBackgroundIB2" position="14,2" size="1250,70" zPosition="-9" />
-		<eLabel backgroundColor="SevenBorderIB" position="14,70" size="1250,2" zPosition="2" />
-		<eLabel backgroundColor="SevenBorderIB" position="14,1" size="1250,2" zPosition="2" />
-		<eLabel backgroundColor="SevenBorderIB" position="14,1" size="2,70" zPosition="2" />
-		<eLabel backgroundColor="SevenBorderIB" position="1262,1" size="2,70" zPosition="2" />
+		<eLabel backgroundColor="SevenBorderIB2" position="14,70" size="1250,2" zPosition="2" />
+		<eLabel backgroundColor="SevenBorderIB2" position="14,1" size="1250,2" zPosition="2" />
+		<eLabel backgroundColor="SevenBorderIB2" position="14,1" size="2,70" zPosition="2" />
+		<eLabel backgroundColor="SevenBorderIB2" position="1262,1" size="2,70" zPosition="2" />
 		<eLabel backgroundColor="SevenBackgroundIB1" position="14,77" size="1250,364" zPosition="-9" />
 		<eLabel backgroundColor="SevenBorderIB" position="14,441" size="1250,2" zPosition="2" />
 		<eLabel backgroundColor="SevenBorderIB" position="14,75" size="1250,2" zPosition="2" />

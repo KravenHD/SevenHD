@@ -4,10 +4,10 @@
 		<eLabel backgroundColor="SevenBorderIB" position="14,533" size="1250,2" zPosition="2" />
 		<eLabel backgroundColor="SevenBorderIB" position="14,701" size="1250,2" zPosition="2" />
 		<eLabel backgroundColor="SevenBackgroundIB2" position="14,2" size="1250,70" zPosition="-9" />
-		<eLabel backgroundColor="SevenBorderIB" position="14,70" size="1250,2" zPosition="2" />
-		<eLabel backgroundColor="SevenBorderIB" position="14,1" size="1250,2" zPosition="2" />
-		<eLabel backgroundColor="SevenBorderIB" position="14,1" size="2,70" zPosition="2" />
-		<eLabel backgroundColor="SevenBorderIB" position="1262,1" size="2,70" zPosition="2" />
+		<eLabel backgroundColor="SevenBorderIB2" position="14,70" size="1250,2" zPosition="2" />
+		<eLabel backgroundColor="SevenBorderIB2" position="14,1" size="1250,2" zPosition="2" />
+		<eLabel backgroundColor="SevenBorderIB2" position="14,1" size="2,70" zPosition="2" />
+		<eLabel backgroundColor="SevenBorderIB2" position="1262,1" size="2,70" zPosition="2" />
 		<eLabel backgroundColor="SevenProgressLineIB" position="14,516" size="1250,2" zPosition="2" />
 		<widget source="session.CurrentService" position="37,10" size="500,22" font="Regular2;12" render="Label" halign="left" valign="bottom" foregroundColor="SevenSNRIB" backgroundColor="SevenFontBackgroundIB2" transparent="1" zPosition="1">
 			<convert type="SevenHDECMLine">ShortReader,FTAVisible</convert>

@@ -1,0 +1,27 @@
+
+	<screen backgroundColor="transparent" flags="wfNoBorder" name="EventView" position="0,0" size="1280,720" title="Eventview">
+		<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="EventView" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
+		<widget backgroundColor="SevenFontBackground" scrollbarMode="showNever" font="Regular2; 26" name="epg_description" position="70,234" size="1165,362" transparent="1" />
+		<widget alphatest="blend" pixmap="SevenHD/buttons/ico_dolby_on.png" position="63,615" render="Pixmap" size="32,32" source="session.CurrentService" zPosition="2">
+			<convert type="SevenHDServiceInfo">IsMultichannel</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget alphatest="blend" pixmap="SevenHD/buttons/ico_format_on.png" position="113,615" render="Pixmap" size="32,32" source="session.CurrentService" zPosition="2">
+			<convert type="SevenHDServiceInfo">IsWidescreen</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget alphatest="blend" pixmap="SevenHD/buttons/ico_hd_on.png" position="163,615" render="Pixmap" size="32,32" source="session.CurrentService" zPosition="2">
+			<convert type="SevenHDServiceInfo">VideoWidth</convert>
+			<convert type="SevenHDValueRange">721,1980</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget backgroundColor="SevenFontBackground" foregroundColor="SevenFont2" font="Regular2; 35" halign="left" name="channel" position="70,85" size="854,60" transparent="1" />
+		<widget backgroundColor="SevenFontBackground" font="Regular; 28" halign="left" name="datetime" position="70,163" size="307,40" transparent="1" valign="center" />
+		<widget backgroundColor="SevenFontBackground" font="Regular; 24" halign="right" name="duration" position="965,610" size="270,40" transparent="1" />
+		<widget alphatest="blend" position="1015,85" render="SevenHDXPicon" size="220,132" source="Service" transparent="1" zPosition="4">
+			<convert type="ServiceName">Reference</convert>
+		</widget>
+		<panel name="template_menu_full_button" />
+		<panel name="template_colorkey_text" />
+	</screen>
+

@@ -441,8 +441,8 @@
 		<!-- EnhancedMovieCenterMenu -->
 	<screen name="EnhancedMovieCenterMenu" position="0,0" size="1280,720" title="EnhancedMovieCenterMenu" flags="wfNoBorder" backgroundColor="transparent">
 		<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="EnhancedMovieCenterMenu" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
-		<widget name="config" position="70,80" size="708,375" enableWrapAround="1" backgroundColor="SevenFontBackground" transparent="1" itemHeight="27" font="Regular;22" />
-		<widget source="help" render="Label" position="70,492" size="708,108" font="Regular2;20" foregroundColor="SevenFont2" backgroundColor="SevenFontBackground" transparent="1" />
+		<widget name="config" position="70,80" size="708,425" enableWrapAround="1" backgroundColor="SevenFontBackground" transparent="1" itemHeight="30" font="Regular;22" />
+		<widget source="help" render="Label" position="70,539" size="708,108" font="Regular2;20" foregroundColor="SevenFont2" backgroundColor="SevenFontBackground" transparent="1" />
 		<panel name="template_menu_left_button" />
 		<panel name="template_colorkey_text_source" />
 	</screen>

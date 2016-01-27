@@ -41,8 +41,8 @@
 		<ePixmap pixmap="SevenHD/back/menumain.png" position="6,6" size="842,708" alphatest="blend" zPosition="-8" />
 		<ePixmap pixmap="SevenHD/back/menuright.png" position="878,6" size="396,708" alphatest="blend" zPosition="-8" />
 		<panel name="template_colorkey_text" />
-		<eLabel backgroundColor="SevenBorderRight" position="887,372" size="380,4" zPosition="5" />
-		<eLabel backgroundColor="SevenBorderRight" position="887,166" size="380,4" zPosition="5" />
-		<eLabel backgroundColor="SevenBorderRight" position="1263,166" size="4,210" zPosition="5" />
-		<eLabel backgroundColor="SevenBorderRight" position="887,166" size="4,210" zPosition="5" />
+		<eLabel backgroundColor="SevenLineRight" position="887,372" size="380,4" zPosition="5" />
+		<eLabel backgroundColor="SevenLineRight" position="887,166" size="380,4" zPosition="5" />
+		<eLabel backgroundColor="SevenLineRight" position="1263,166" size="4,210" zPosition="5" />
+		<eLabel backgroundColor="SevenLineRight" position="887,166" size="4,210" zPosition="5" />
 	</screen>

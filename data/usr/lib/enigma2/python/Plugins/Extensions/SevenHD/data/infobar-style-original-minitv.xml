@@ -1,8 +1,8 @@
 		<eLabel backgroundColor="SevenBackgroundIB2" position="14,2" size="1250,70" zPosition="-9" />
-		<eLabel backgroundColor="SevenBorderIB" position="14,70" size="1250,2" zPosition="2" />
-		<eLabel backgroundColor="SevenBorderIB" position="14,1" size="1250,2" zPosition="2" />
-		<eLabel backgroundColor="SevenBorderIB" position="14,1" size="2,70" zPosition="2" />
-		<eLabel backgroundColor="SevenBorderIB" position="1262,1" size="2,70" zPosition="2" />
+  <eLabel backgroundColor="SevenBorderIB2" position="14,70" size="1250,2" zPosition="2" />
+  <eLabel backgroundColor="SevenBorderIB2" position="14,1" size="1250,2" zPosition="2" />
+  <eLabel backgroundColor="SevenBorderIB2" position="14,1" size="2,70" zPosition="2" />
+  <eLabel backgroundColor="SevenBorderIB2" position="1262,1" size="2,70" zPosition="2" />
 		<eLabel backgroundColor="SevenBackgroundIB1" position="14,77" size="1250,364" zPosition="-9" />
 		<eLabel backgroundColor="SevenBorderIB" position="14,441" size="1250,2" zPosition="2" />
 		<eLabel backgroundColor="SevenBorderIB" position="14,75" size="1250,2" zPosition="2" />
@@ -158,9 +158,9 @@
 			<convert type="SevenHDEventName">Name</convert>
 		</widget>
 		<ePixmap pixmap="SevenHD/back/ibone.png" position="14,533" size="1250,170" alphatest="blend" zPosition="-8" />
-		<eLabel backgroundColor="SevenBorderIB" position="28,401" size="510,4" zPosition="5" />
-		<eLabel backgroundColor="SevenBorderIB" position="28,119" size="510,4" zPosition="5" />
-		<eLabel backgroundColor="SevenBorderIB" position="534,119" size="4,286" zPosition="5" />
-		<eLabel backgroundColor="SevenBorderIB" position="28,119" size="4,286" zPosition="5" />
+		<eLabel backgroundColor="SevenLineIB" position="28,401" size="510,4" zPosition="5" />
+		<eLabel backgroundColor="SevenLineIB" position="28,119" size="510,4" zPosition="5" />
+		<eLabel backgroundColor="SevenLineIB" position="534,119" size="4,286" zPosition="5" />
+		<eLabel backgroundColor="SevenLineIB" position="28,119" size="4,286" zPosition="5" />
 	</screen>
 		<!-- SecondInfobar Original */-->

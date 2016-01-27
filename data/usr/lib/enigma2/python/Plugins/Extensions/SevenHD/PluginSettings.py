@@ -117,6 +117,7 @@ class PluginSettings(ConfigListScreen, Screen):
         
         list = []
         list.append(getConfigListEntry(_('_______________________________plugins__________________________________________'), ))                                           
+        list.append(getConfigListEntry(_("Event View"),          config.plugins.SevenHD.EventView,              'Auswahl der Darstellung von Event View.',                    '1',     ''))
         list.append(getConfigListEntry(_("Movie Selection"),     config.plugins.SevenHD.MovieSelectionStyle,    'Auswahl der Covergr\xc3\xb6\xc3\x9fe.',                      '1',     ''))
         if not fileExists(PLUGIN_PATH + "/Extensions/EnhancedMovieCenter/plugin.pyo"):
            list.append(getConfigListEntry(_('{:<114}{:>1}'.format('EnhancedMovieCenter','not installed')), ))
@@ -215,6 +216,7 @@ class PluginSettings(ConfigListScreen, Screen):
         self.setInputToDefault(config.plugins.SevenHD.NumberZapExt)
         self.setInputToDefault(config.plugins.SevenHD.EMCStyle)
         self.setInputToDefault(config.plugins.SevenHD.MovieSelectionStyle)
+        self.setInputToDefault(config.plugins.SevenHD.EventView)
         self.setInputToDefault(config.plugins.SevenHD.CoolTVGuide)
         self.setInputToDefault(config.plugins.SevenHD.use_alba_skin)
         self.setInputToDefault(config.plugins.SevenHD.use_mp_skin)

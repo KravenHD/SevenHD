@@ -130,6 +130,11 @@ class ChannelSettings(ConfigListScreen, Screen):
         if ChannelSelectionStyle.startswith('channelselection-threecolumns'):
            list.append(getConfigListEntry(_("color middle"),              config.plugins.SevenHD.ChannelBack3,               'Stellt den Hinergrund der mittleren Spalte ein',                  '4',       'colormiddlecs'))
         list.append(getConfigListEntry(_("color right"),                  config.plugins.SevenHD.ChannelBack2,               'Stellt den Hintergrund der rechten Spalte ein.',                  '4',       'colorrightcs'))
+        list.append(getConfigListEntry(_('__________________________________transparency_____________________________________________'), ))
+        list.append(getConfigListEntry(_("left window"),                  config.plugins.SevenHD.CSLeftColorTrans,           'Stellt die Transparenz des linken Fenster ein.',                  '4',       'csleft'))
+        if ChannelSelectionStyle.startswith('channelselection-threecolumns'):
+           list.append(getConfigListEntry(_("middle window"),                config.plugins.SevenHD.CSMiddleColorTrans,         'Stellt die Transparenz des mittleren Fenster ein.',               '4',       'csmiddle'))
+        list.append(getConfigListEntry(_("right window"),                 config.plugins.SevenHD.CSRightColorTrans,          'Stellt die Transparenz des rechten Fenster ein.',                 '4',       'csright'))
         list.append(getConfigListEntry(_('_____________________________color lines_______________________________________'), ))
         list.append(getConfigListEntry(_("line leftside"),                config.plugins.SevenHD.ChannelLine,                'Stellt die Farbe der Linie der linken Spalte ein.',               '4',       'linecs'))
         if ChannelSelectionStyle.startswith('channelselection-threecolumns'):
@@ -367,6 +372,9 @@ class ChannelSettings(ConfigListScreen, Screen):
         self.setInputToDefault(config.plugins.SevenHD.ProgressLineCS)
         self.setInputToDefault(config.plugins.SevenHD.ProgressCS)
         self.setInputToDefault(config.plugins.SevenHD.ProgressListCS)
+        self.setInputToDefault(config.plugins.SevenHD.CSLeftColorTrans)
+        self.setInputToDefault(config.plugins.SevenHD.CSMiddleColorTrans)
+        self.setInputToDefault(config.plugins.SevenHD.CSRightColorTrans)
         self.save()
 
     def setInputToDefault(self, configItem):

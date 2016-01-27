@@ -126,10 +126,10 @@
 		<widget backgroundColor="SevenFontBackgroundIB2" font="Regular; 19" halign="center" position="990,27" render="Label" size="200,25" source="session.CurrentService" text="Dolby Digital" foregroundColor="SevenSNRIB" transparent="1" valign="center" zPosition="3">
 			<convert type="SevenHDExtraInfo2">AudioCodec</convert>
 		</widget>
-		<eLabel backgroundColor="SevenBorderIB" position="1262,4" size="2,73" zPosition="2" />
-		<eLabel backgroundColor="SevenBorderIB" position="580,4" size="684,2" zPosition="2" />
+		<eLabel backgroundColor="SevenBorderIB2" position="1262,4" size="2,73" zPosition="2" />
+		<eLabel backgroundColor="SevenBorderIB2" position="580,4" size="684,2" zPosition="2" />
 		<eLabel backgroundColor="SevenBorderIB" position="580,75" size="684,2" zPosition="2" />
-		<eLabel backgroundColor="SevenBorderIB" position="580,4" size="2,73" zPosition="2" />
+		<eLabel backgroundColor="SevenBorderIB2" position="580,4" size="2,73" zPosition="2" />
 		<eLabel backgroundColor="SevenBackgroundIB2" position="580,4" size="684,73" zPosition="-9" />
 		<ePixmap pixmap="SevenHD/back/ibtwo.png" position="580,4" size="684,73" alphatest="blend" zPosition="-8" />
 		<eLabel backgroundColor="SevenBackgroundIB1" position="14,77" size="620,364" zPosition="-9" />

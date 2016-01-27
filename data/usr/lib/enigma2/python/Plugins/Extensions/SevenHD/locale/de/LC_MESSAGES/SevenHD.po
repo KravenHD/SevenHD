@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: SevenHD\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-10-26 18:55+0100\n"
-"PO-Revision-Date: 2016-01-25 13:36+0100\n"
+"PO-Revision-Date: 2016-01-26 23:05+0100\n"
 "Last-Translator: mike99 <mike99@mail.to>\n"
 "Language-Team: kraven & mike99\n"
 "Language: de\n"
@@ -1002,7 +1002,7 @@ msgid "main window"
 msgstr "Hauptfenster"
 
 #: MainSettings.py:133 MenuPluginSettings.py:121
-msgid "right window"
+msgid "main window right"
 msgstr "Hauptfenster Rechts"
 
 #: MainSettings.py:136
@@ -1776,3 +1776,30 @@ msgstr "Farbe Minuten"
 
 msgid "color seconde"
 msgstr "Farbe Sekunden"
+
+msgid "primary transparency"
+msgstr "Primäre Transparenz"
+
+msgid "secondary transparency"
+msgstr "Sekundäre Transparenz"
+
+msgid "left window"
+msgstr "Linkes Fenster"
+
+msgid "middle window"
+msgstr "Mittleres Fenster"
+
+msgid "right window"
+msgstr "Rechtes Fenster"
+
+msgid "primary border"
+msgstr "Primärer Rahmen"
+
+msgid "secondary border"
+msgstr "Sekundärer Rahmen"
+
+msgid "primary line"
+msgstr "Primäre Linien"
+
+msgid "secondary line"
+msgstr "Sekundäre Linien"

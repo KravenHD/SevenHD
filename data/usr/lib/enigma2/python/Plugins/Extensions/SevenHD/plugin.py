@@ -340,7 +340,7 @@ class SevenHD(Screen):
                 if self.BackgroundIB1.startswith('back'):
                    self.skinSearchAndReplace.append(["SevenHD/back/ibone.png","SevenHD/back/ibone_1.png"])
                 else:
-                   self.skinSearchAndReplace.append(['name="SevenBackgroundIB1" value="#00000000"', 'name="SevenBackgroundIB1" value="#%s%s"' % (config.plugins.SevenHD.BackgroundColorTrans.value, self.BackgroundIB1[2:8])])
+                   self.skinSearchAndReplace.append(['name="SevenBackgroundIB1" value="#00000000"', 'name="SevenBackgroundIB1" value="#%s%s"' % (config.plugins.SevenHD.IB1ColorTrans.value, self.BackgroundIB1[2:8])])
                    self.skinSearchAndReplace.append(['name="SevenFontBackgroundIB1" value="#00000000"', 'name="SevenFontBackgroundIB1" value="#%s%s"' % (config.plugins.SevenHD.BackgroundColorTrans.value, self.BackgroundIB1[2:8])])
                    self.skinSearchAndReplace.append(['pixmap="SevenHD/back/ibone.png"',""])
                 
@@ -348,7 +348,7 @@ class SevenHD(Screen):
                 if self.BackgroundIB2.startswith('back'):
                    self.skinSearchAndReplace.append(["SevenHD/back/ibtwo.png","SevenHD/back/ibtwo_1.png"])
                 else:
-                   self.skinSearchAndReplace.append(['name="SevenBackgroundIB2" value="#00000000"', 'name="SevenBackgroundIB2" value="#%s%s"' % (config.plugins.SevenHD.BackgroundColorTrans.value, self.BackgroundIB2[2:8])])
+                   self.skinSearchAndReplace.append(['name="SevenBackgroundIB2" value="#00000000"', 'name="SevenBackgroundIB2" value="#%s%s"' % (config.plugins.SevenHD.IB2ColorTrans.value, self.BackgroundIB2[2:8])])
                    self.skinSearchAndReplace.append(['name="SevenFontBackgroundIB2" value="#00000000"', 'name="SevenFontBackgroundIB2" value="#%s%s"' % (config.plugins.SevenHD.BackgroundColorTrans.value, self.BackgroundIB2[2:8])])
                    self.skinSearchAndReplace.append(['pixmap="SevenHD/back/ibtwo.png"',""])
                 
@@ -356,7 +356,7 @@ class SevenHD(Screen):
                 if self.ChannelBack1.startswith('back'):
                    self.skinSearchAndReplace.append(["SevenHD/back/csleft.png","SevenHD/back/csleft_1.png"])
                 else:
-                   self.skinSearchAndReplace.append(['name="SevenBackCS" value="#00000000"', 'name="SevenBackCS" value="#%s%s"' % (config.plugins.SevenHD.BackgroundColorTrans.value, self.ChannelBack1[2:8])])
+                   self.skinSearchAndReplace.append(['name="SevenBackCS" value="#00000000"', 'name="SevenBackCS" value="#%s%s"' % (config.plugins.SevenHD.CSLeftColorTrans.value, self.ChannelBack1[2:8])])
                    self.skinSearchAndReplace.append(['name="SevenFontBackCS" value="#00000000"', 'name="SevenFontBackCS" value="#%s%s"' % (config.plugins.SevenHD.BackgroundColorTrans.value, self.ChannelBack1[2:8])])
                    self.skinSearchAndReplace.append(['pixmap="SevenHD/back/csleft.png"',""])
                 
@@ -364,7 +364,7 @@ class SevenHD(Screen):
                 if self.ChannelBack2.startswith('back'):
                    self.skinSearchAndReplace.append(["SevenHD/back/csright.png","SevenHD/back/csright_1.png"])
                 else:
-                   self.skinSearchAndReplace.append(['name="SevenBackRightCS" value="#00000000"', 'name="SevenBackRightCS" value="#%s%s"' % (config.plugins.SevenHD.BackgroundRightColorTrans.value, self.ChannelBack2[2:8])])
+                   self.skinSearchAndReplace.append(['name="SevenBackRightCS" value="#00000000"', 'name="SevenBackRightCS" value="#%s%s"' % (config.plugins.SevenHD.CSRightColorTrans.value, self.ChannelBack2[2:8])])
                    self.skinSearchAndReplace.append(['name="SevenFontBackRightCS" value="#00000000"', 'name="SevenFontBackRightCS" value="#%s%s"' % (config.plugins.SevenHD.BackgroundColorTrans.value, self.ChannelBack2[2:8])])
                    self.skinSearchAndReplace.append(['pixmap="SevenHD/back/csright.png"',""])
                 
@@ -372,7 +372,7 @@ class SevenHD(Screen):
                 if self.ChannelBack3.startswith('back'):
                    self.skinSearchAndReplace.append(["SevenHD/back/csmiddle.png","SevenHD/back/csmiddle_1.png"])
                 else:
-                   self.skinSearchAndReplace.append(['name="SevenBackMiddleCS" value="#00000000"', 'name="SevenBackMiddleCS" value="#%s%s"' % (config.plugins.SevenHD.BackgroundColorTrans.value, self.ChannelBack3[2:8])])
+                   self.skinSearchAndReplace.append(['name="SevenBackMiddleCS" value="#00000000"', 'name="SevenBackMiddleCS" value="#%s%s"' % (config.plugins.SevenHD.CSMiddleColorTrans.value, self.ChannelBack3[2:8])])
                    self.skinSearchAndReplace.append(['name="SevenFontBackMiddleCS" value="#00000000"', 'name="SevenFontBackMiddleCS" value="#%s%s"' % (config.plugins.SevenHD.BackgroundColorTrans.value, self.ChannelBack3[2:8])])
                    self.skinSearchAndReplace.append(['pixmap="SevenHD/back/csmiddle.png"',""])
                 
@@ -412,6 +412,8 @@ class SevenHD(Screen):
 
 		self.skinSearchAndReplace.append(["SevenBorder_IB", config.plugins.SevenHD.InfobarBorder.value])
 		self.skinSearchAndReplace.append(["SevenLine_IB", config.plugins.SevenHD.InfobarLine.value])
+		self.skinSearchAndReplace.append(["SevenBorder2_IB", config.plugins.SevenHD.InfobarBorder2.value])
+		self.skinSearchAndReplace.append(["SevenLine2_IB", config.plugins.SevenHD.InfobarLine2.value])
 		self.skinSearchAndReplace.append(["SevenNext_IB", config.plugins.SevenHD.NextEvent.value])
 		self.skinSearchAndReplace.append(["SevenNow_IB", config.plugins.SevenHD.NowEvent.value])
 		self.skinSearchAndReplace.append(["SevenSNR_IB", config.plugins.SevenHD.SNR.value])
@@ -751,6 +753,10 @@ class SevenHD(Screen):
                 ###cooltv XML
 		self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.CoolTVGuide.value + XML)
                 self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.CoolTVGuide.value + XML)      
+                
+                ###eventview XML
+		self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.EventView.value + XML)
+                self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.EventView.value + XML)      
                 
                 ###custom-main XML
 		self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.Image.value + XML)

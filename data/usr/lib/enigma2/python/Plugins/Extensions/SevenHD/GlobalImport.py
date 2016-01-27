@@ -1,10 +1,10 @@
-#version = '3.6.61'
+#version = '3.6.62'
 import os
 try:
    opkg_info = os.popen("opkg list-installed enigma2-plugin-skins-sevenhd | cut -d ' ' -f3").read()
    version = str(opkg_info.strip().split('+')[0])
 except:
-   version = '3.6.61'
+   version = '3.6.62'
 import re
 import time
 import math
@@ -324,12 +324,12 @@ config.plugins.SevenHD.Startdelay = ConfigSelectionNumber(default = 20, stepwidt
 config.plugins.SevenHD.Steptime = ConfigSelectionNumber(default = 100, stepwidth = 25, min = 25, max = 325, wraparound = True)
 
 config.plugins.SevenHD.VolumeStyle = ConfigSelection(default="volumestyle-original", choices = [
-				("volumestyle-original", _("original")),
-				("volumestyle-left-side", _("left")),
-				("volumestyle-right-side", _("right")),
-				("volumestyle-top-side", _("top")),
-				("volumestyle-number", _("number")),
-				("volumestyle-center", _("center"))
+				("volumestyle-original", _("Style 1")),
+				("volumestyle-left-side", _("Style 2")),
+				("volumestyle-right-side", _("Style 3")),
+				("volumestyle-top-side", _("Style 4")),
+				("volumestyle-number", _("Style 5")),
+				("volumestyle-center", _("Style 6"))
 				])
 
 config.plugins.SevenHD.Volume = ConfigSelection(default="00000000", choices = ColorList)
@@ -351,31 +351,38 @@ config.plugins.SevenHD.ProgressVol = ConfigSelection(default="00ffffff", choices
 ################################################################################################################################################################
 # PluginScreen
 config.plugins.SevenHD.CoolTVGuide = ConfigSelection(default="cooltv-minitv", choices = [
-				("cooltv-minitv", _("miniTV")),
-				("cooltv-picon", _("picon"))
+				("cooltv-minitv", _("Style 1")),
+				("cooltv-picon", _("Style 2"))
 				])
 				
 config.plugins.SevenHD.EMCStyle = ConfigSelection(default="emcnocover", choices = [
-				("emcnocover", _("no cover")),
-				("emcsmallcover", _("small cover (1)")),
-				("emcsmallcover2", _("small cover (2)")),
-				("emcbigcover", _("big cover")),
-				("emcverybigcover", _("very big cover")),
-				("emcminitv", _("miniTV (1)")),
-				("emcminitv2", _("miniTV (2)"))
+				("emcnocover", _("Style 1")),
+				("emcsmallcover", _("Style 2")),
+				("emcsmallcover2", _("Style 3")),
+				("emcbigcover", _("Style 4")),
+				("emcverybigcover", _("Style 5")),
+				("emcminitv", _("Style 6")),
+				("emcminitv2", _("Style 7"))
 				])
 				
 config.plugins.SevenHD.MovieSelectionStyle = ConfigSelection(default="movieselectionnocover", choices = [
-				("movieselectionnocover", _("no cover")),
-				("movieselectionsmallcover", _("small cover (1)")),
-				("movieselectionsmallcover2", _("small cover (2)")),
-				("movieselectionbigcover", _("big cover")),
-				("movieselectionminitv", _("miniTV"))
+				("movieselectionnocover", _("Style 1")),
+				("movieselectionsmallcover", _("Style 2")),
+				("movieselectionsmallcover2", _("Style 3")),
+				("movieselectionbigcover", _("Style 4")),
+				("movieselectionminitv", _("Style 5"))
 				])
 				
 config.plugins.SevenHD.MSNWeather = ConfigSelection(default="msn-standard", choices = [
 				("msn-standard", _("standard")),
 				("msn-icon", _("alternative icons"))
+				])
+				
+config.plugins.SevenHD.EventView = ConfigSelection(default="eventviewnopicon", choices = [
+				("eventviewnopicon", _("Style 1")),
+				("eventviewpicon", _("Style 2")),
+				("eventviewthumb", _("Style 3")),
+				("eventviewminitv", _("Style 4"))
 				])
 				
 config.plugins.SevenHD.use_alba_skin = ConfigYesNo(default = False)
@@ -468,10 +475,6 @@ for x in BackList:
 BackgroundIB1List = ColorList + BackgroundIB1List
 config.plugins.SevenHD.BackgroundIB1 = ConfigSelection(default="00000000", choices = BackgroundIB1List)
 
-config.plugins.SevenHD.BackgroundIB1Trans = ConfigSelection(default="0a", choices = TransList)
-
-config.plugins.SevenHD.BackgroundIB2Trans = ConfigSelection(default="0a", choices = TransList)
-
 BackgroundIB2List = []
 for x in BackList:
     BackgroundIB2List.append(("back_%s_ib2" % x, _("%s" % x)))
@@ -480,9 +483,15 @@ config.plugins.SevenHD.BackgroundIB2 = ConfigSelection(default="00000000", choic
 
 config.plugins.SevenHD.InfobarLine = ConfigSelection(default="00ffffff", choices = ColorList)
 
+config.plugins.SevenHD.InfobarLine2 = ConfigSelection(default="00ffffff", choices = ColorList)
+
 BorderList = [("ff000000", _("off"))]
 BorderList = ColorList + BorderList
 config.plugins.SevenHD.InfobarBorder = ConfigSelection(default="00ffffff", choices = BorderList)
+
+BorderList = [("ff000000", _("off"))]
+BorderList = ColorList + BorderList
+config.plugins.SevenHD.InfobarBorder2 = ConfigSelection(default="00ffffff", choices = BorderList)
 
 config.plugins.SevenHD.InfobarChannelName = ConfigSelection(default="none", choices = [
 				("none", _("off")),
@@ -504,6 +513,10 @@ config.plugins.SevenHD.ProgressLineIB = ConfigSelection(default="00ffffff", choi
 ProgressIBList = [("progressib", _("bunt"))]
 ProgressIBList = ColorList + ProgressIBList
 config.plugins.SevenHD.ProgressIB = ConfigSelection(default="00ffffff", choices = ProgressIBList)
+
+config.plugins.SevenHD.IB1ColorTrans = ConfigSelection(default="0a", choices = TransList)
+
+config.plugins.SevenHD.IB2ColorTrans = ConfigSelection(default="0a", choices = TransList)
 
 ################################################################################################################################################################
 # InfobarExtraScreen
@@ -716,6 +729,11 @@ ProgressListCSList = [("progresslistcs", _("bunt"))]
 ProgressListCSList = ColorList + ProgressListCSList
 config.plugins.SevenHD.ProgressListCS = ConfigSelection(default="00ffffff", choices = ProgressListCSList)
 
+config.plugins.SevenHD.CSLeftColorTrans = ConfigSelection(default="0a", choices = TransList)
+
+config.plugins.SevenHD.CSMiddleColorTrans = ConfigSelection(default="0a", choices = TransList)
+
+config.plugins.SevenHD.CSRightColorTrans = ConfigSelection(default="0a", choices = TransList)
 ################################################################################################################################################################
 # SonstigesScreen
 				
@@ -744,6 +762,11 @@ myConfigList = [('config.plugins.SevenHD.Image.value = "' + str(config.plugins.S
                 ('config.plugins.SevenHD.BackgroundColorTrans.value = "' + str(config.plugins.SevenHD.BackgroundColorTrans.value) + '"'),
                 ('config.plugins.SevenHD.BackgroundRight.value = "' + str(config.plugins.SevenHD.BackgroundRight.value) + '"'),
                 ('config.plugins.SevenHD.BackgroundRightColorTrans.value = "' + str(config.plugins.SevenHD.BackgroundRightColorTrans.value) + '"'),
+                ('config.plugins.SevenHD.IB1ColorTrans.value = "' + str(config.plugins.SevenHD.IB1ColorTrans.value) + '"'),
+                ('config.plugins.SevenHD.IB2ColorTrans.value = "' + str(config.plugins.SevenHD.IB2ColorTrans.value) + '"'),
+                ('config.plugins.SevenHD.CSLeftColorTrans.value = "' + str(config.plugins.SevenHD.CSLeftColorTrans.value) + '"'),
+                ('config.plugins.SevenHD.CSMiddleColorTrans.value = "' + str(config.plugins.SevenHD.CSMiddleColorTrans.value) + '"'),
+                ('config.plugins.SevenHD.CSRightColorTrans.value = "' + str(config.plugins.SevenHD.CSRightColorTrans.value) + '"'),
                 ('config.plugins.SevenHD.Line.value = "' + str(config.plugins.SevenHD.Line.value) + '"'),
                 ('config.plugins.SevenHD.Border.value = "' + str(config.plugins.SevenHD.Border.value) + '"'),
                 ('config.plugins.SevenHD.LineRight.value = "' + str(config.plugins.SevenHD.LineRight.value) + '"'),
@@ -762,8 +785,6 @@ myConfigList = [('config.plugins.SevenHD.Image.value = "' + str(config.plugins.S
                 ('config.plugins.SevenHD.InfobarStyle.value = "' + str(config.plugins.SevenHD.InfobarStyle.value) + '"'),
                 ('config.plugins.SevenHD.SIB.value = "' + str(config.plugins.SevenHD.SIB.value) + '"'),
                 ('config.plugins.SevenHD.BackgroundIB1.value = "' + str(config.plugins.SevenHD.BackgroundIB1.value) + '"'),
-                ('config.plugins.SevenHD.BackgroundIB1Trans.value = "' + str(config.plugins.SevenHD.BackgroundIB1Trans.value) + '"'),
-                ('config.plugins.SevenHD.BackgroundIB1Trans.value = "' + str(config.plugins.SevenHD.BackgroundIB1Trans.value) + '"'),
                 ('config.plugins.SevenHD.BackgroundIB2.value = "' + str(config.plugins.SevenHD.BackgroundIB2.value) + '"'),
                 ('config.plugins.SevenHD.InfobarLine.value = "' + str(config.plugins.SevenHD.InfobarLine.value) + '"'),
                 ('config.plugins.SevenHD.InfobarBorder.value = "' + str(config.plugins.SevenHD.InfobarBorder.value) + '"'),
@@ -816,6 +837,7 @@ myConfigList = [('config.plugins.SevenHD.Image.value = "' + str(config.plugins.S
                 ('config.plugins.SevenHD.ChannelColorEvent.value = "' + str(config.plugins.SevenHD.ChannelColorEvent.value) + '"'),
                 ('config.plugins.SevenHD.CoolTVGuide.value = "' + str(config.plugins.SevenHD.CoolTVGuide.value) + '"'),
                 ('config.plugins.SevenHD.EMCStyle.value = "' + str(config.plugins.SevenHD.EMCStyle.value) + '"'),
+                ('config.plugins.SevenHD.EventView.value = "' + str(config.plugins.SevenHD.EventView.value) + '"'),
                 ('config.plugins.SevenHD.MovieSelectionStyle.value = "' + str(config.plugins.SevenHD.MovieSelectionStyle.value) + '"'),
                 ('config.plugins.SevenHD.ProgressLinePlug.value = "' + str(config.plugins.SevenHD.ProgressLinePlug.value) + '"'),
                 ('config.plugins.SevenHD.ProgressLineIB.value = "' + str(config.plugins.SevenHD.ProgressLineIB.value) + '"'),

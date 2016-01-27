@@ -539,16 +539,18 @@
 		<ePixmap pixmap="SevenHD/buttons/key_blue1.png" position="622,669" size="32,37" backgroundColor="black" alphatest="blend" />
 	</screen>
 	<screen name="template_weather_big">
-		<eLabel backgroundColor="SevenBorderIB" position="1262,4" size="2,102" zPosition="2" />
+		<eLabel backgroundColor="SevenBorderIB2" position="1262,4" size="2,102" zPosition="2" />
 		<eLabel backgroundColor="SevenBorderIB" position="14,4" size="2,102" zPosition="2" />
-		<eLabel backgroundColor="SevenBorderIB" position="14,4" size="1250,2" zPosition="2" />
-		<eLabel backgroundColor="SevenBorderIB" position="14,105" size="1250,2" zPosition="2" />
+		<eLabel backgroundColor="SevenBorderIB2" position="974,4" size="290,2" zPosition="1" />
+		<eLabel backgroundColor="SevenBorderIB2" position="974,105" size="290,2" zPosition="1" />
 		<eLabel backgroundColor="SevenBackgroundIB1" position="15,4" size="960,103" zPosition="-9" />
 		<ePixmap pixmap="SevenHD/back/ibone.png" position="15,4" size="960,103" alphatest="blend" zPosition="-8" />
-		<eLabel backgroundColor="SevenBorderIB" position="974,4" size="2,102" zPosition="2" />
+		<eLabel backgroundColor="SevenBorderIB" position="974,4" size="2,103" zPosition="2" />
 		<eLabel backgroundColor="SevenBackgroundIB2" position="976,4" size="287,103" zPosition="-9" />
 		<ePixmap pixmap="SevenHD/back/ibtwo.png" position="976,4" size="287,103" alphatest="blend" zPosition="-8" />
-	</screen>
+		<eLabel backgroundColor="SevenBorderIB" position="14,105" size="962,2" zPosition="2" />
+	<eLabel backgroundColor="SevenBorderIB" position="14,4" size="962,2" zPosition="2" />
+</screen>
 	<screen name="template_weather_slim">
 		<eLabel backgroundColor="SevenBorderIB" position="1262,4" size="2,68" zPosition="2" />
 		<eLabel backgroundColor="SevenBorderIB" position="14,4" size="2,68" zPosition="2" />

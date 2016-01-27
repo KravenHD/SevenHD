@@ -35,9 +35,9 @@
 		</widget>
 		<widget source="session.VideoPicture" render="Pig" position="42,73" size="391,220" zPosition="3" backgroundColor="transparent" />
 		<panel name="template_menu_cs6_button" />
-		<eLabel backgroundColor="SevenBorderCS" position="41,292" size="394,4" zPosition="5" />
-		<eLabel backgroundColor="SevenBorderCS" position="41,70" size="394,4" zPosition="5" />
-		<eLabel backgroundColor="SevenBorderCS" position="432,70" size="4,226" zPosition="5" />
-		<eLabel backgroundColor="SevenBorderCS" position="41,70" size="4,226" zPosition="5" />
+		<eLabel backgroundColor="SevenLineCS" position="41,292" size="394,4" zPosition="5" />
+		<eLabel backgroundColor="SevenLineCS" position="41,70" size="394,4" zPosition="5" />
+		<eLabel backgroundColor="SevenLineCS" position="432,70" size="4,226" zPosition="5" />
+		<eLabel backgroundColor="SevenLineCS" position="41,70" size="4,226" zPosition="5" />
 	</screen>
 		<!-- ChannelSelection Three Columns Mini TV */-->

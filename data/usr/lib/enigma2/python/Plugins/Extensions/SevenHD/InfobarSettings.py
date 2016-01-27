@@ -135,13 +135,18 @@ class InfobarSettings(ConfigListScreen, Screen):
         if config.plugins.SevenHD.SIB.value == '-picon':
            list.append(getConfigListEntry(_("second infobar"),       config.plugins.SevenHD.SIB,               'W\xc3\xa4hle den Stil der zweiten Infobar',                                                            '4',       'SIB7'))
         list.append(getConfigListEntry(_('_____________________________background________________________________________'), ))
-        list.append(getConfigListEntry(_("primary color"),            config.plugins.SevenHD.BackgroundIB1,     'Stellt die Farbe der linken Seite sowie den unteren Bereich der Infobar ein.',                        '4',       'Color1'))
-        list.append(getConfigListEntry(_("secondary color"),          config.plugins.SevenHD.BackgroundIB2,     'Stellt die Farbe der rechten Seite sowie den mittigen Bereich der Infobar ein.',                      '4',       'Color2'))
+        list.append(getConfigListEntry(_("primary color"),           config.plugins.SevenHD.BackgroundIB1,     'Stellt die Farbe der linken Seite sowie den unteren Bereich der Infobar ein.',                        '4',       'Color1'))
+        list.append(getConfigListEntry(_("secondary color"),         config.plugins.SevenHD.BackgroundIB2,     'Stellt die Farbe der rechten Seite sowie den mittigen Bereich der Infobar ein.',                      '4',       'Color2'))
+        list.append(getConfigListEntry(_('__________________________________transparency_____________________________________________'), ))
+        list.append(getConfigListEntry(_("primary transparency"),    config.plugins.SevenHD.IB1ColorTrans,     'Stellt die Transparenz der linken Seite sowie den unteren Bereich der Infobar ein.',                  '4',       'ib1'))
+        list.append(getConfigListEntry(_("secondary transparency"),  config.plugins.SevenHD.IB2ColorTrans,     'Stellt die Transparenz der rechten Seite sowie den unteren Bereich der Infobar ein.',                 '4',       'ib2'))
         list.append(getConfigListEntry(_('_____________________________color lines_______________________________________'), ))
-        list.append(getConfigListEntry(_("line"),                    config.plugins.SevenHD.InfobarLine,       'Stellt die Farbe der Linie unter dem Fortschrittsbalken in der Infobar ein.',                          '4',       'InfobarLine'))
-        list.append(getConfigListEntry(_("border"),                  config.plugins.SevenHD.InfobarBorder,     'Stellt die Rahmenfarbe der Infobar ein.',                                                              '4',       'InfobarBorder'))
-        list.append(getConfigListEntry(_("progressbar"),             config.plugins.SevenHD.ProgressIB,        'Stellt die Farbe des Sendungsforschritt in der Infobar ein.',                                          '4',       'progressib'))
-        list.append(getConfigListEntry(_("progressbar line"),        config.plugins.SevenHD.ProgressLineIB,    'Stellt die Farbe der Linie unter dem Fortschrittsbalken in der Infobar ein.',                          '4',       'progresslineib'))
+        list.append(getConfigListEntry(_("primary line"),            config.plugins.SevenHD.InfobarLine,       'Stellt die Farbe der prim\xc3\xa4ren Linien in der Infobar ein.',                                     '4',       'InfobarLine'))
+        list.append(getConfigListEntry(_("primary border"),          config.plugins.SevenHD.InfobarBorder,     'Stellt die Farbe prim\xc3\xa4ren Rahmen in der Infobar ein.',                                         '4',       'InfobarBorder'))
+        list.append(getConfigListEntry(_("secondary line"),          config.plugins.SevenHD.InfobarLine2,      'Stellt die Farbe der sekund\xc3\xa4ren Linien in der Infobar ein.',                                   '4',       'InfobarLine'))
+        list.append(getConfigListEntry(_("secondary border"),        config.plugins.SevenHD.InfobarBorder2,    'Stellt die Farbe sekund\xc3\xa4ren Rahmen in der Infobar ein.',                                       '4',       'InfobarBorder'))
+        list.append(getConfigListEntry(_("progressbar"),             config.plugins.SevenHD.ProgressIB,        'Stellt die Farbe des Sendungsforschritt in der Infobar ein.',                                         '4',       'progressib'))
+        list.append(getConfigListEntry(_("progressbar line"),        config.plugins.SevenHD.ProgressLineIB,    'Stellt die Farbe der Linie unter dem Fortschrittsbalken in der Infobar ein.',                         '4',       'progresslineib'))
         list.append(getConfigListEntry(_('______________________________color font________________________________________'), ))
         if config.plugins.SevenHD.InfobarChannelName.value == 'none':
            list.append(getConfigListEntry(_("channelname"),          config.plugins.SevenHD.InfobarChannelName,'Auswahl zwischen der Anzeige Name, Nummer, Name und Nummer oder Aus, wenn die Infobar angezeigt wird.','4',       'none'))
@@ -252,6 +257,10 @@ class InfobarSettings(ConfigListScreen, Screen):
               preview = self.generate(config.plugins.SevenHD.InfobarLine.value)
         elif returnValue == config.plugins.SevenHD.InfobarBorder:
               preview = self.generate(config.plugins.SevenHD.InfobarBorder.value)
+        elif returnValue == config.plugins.SevenHD.InfobarLine2:
+              preview = self.generate(config.plugins.SevenHD.InfobarLine2.value)
+        elif returnValue == config.plugins.SevenHD.InfobarBorder2:
+              preview = self.generate(config.plugins.SevenHD.InfobarBorder2.value)
         elif returnValue == config.plugins.SevenHD.ProgressLineIB:
               preview = self.generate(config.plugins.SevenHD.ProgressLineIB.value)
         elif returnValue == config.plugins.SevenHD.ProgressIB:
@@ -340,6 +349,8 @@ class InfobarSettings(ConfigListScreen, Screen):
         self.setInputToDefault(config.plugins.SevenHD.BackgroundIB2)
         self.setInputToDefault(config.plugins.SevenHD.InfobarLine)
         self.setInputToDefault(config.plugins.SevenHD.InfobarBorder)
+        self.setInputToDefault(config.plugins.SevenHD.InfobarLine2)
+        self.setInputToDefault(config.plugins.SevenHD.InfobarBorder2)
         self.setInputToDefault(config.plugins.SevenHD.InfobarChannelName)
         self.setInputToDefault(config.plugins.SevenHD.FontCN)
         self.setInputToDefault(config.plugins.SevenHD.NowEvent)
@@ -356,6 +367,8 @@ class InfobarSettings(ConfigListScreen, Screen):
         self.setInputToDefault(config.plugins.SevenHD.ClockWeather)
         self.setInputToDefault(config.plugins.SevenHD.ProgressLineIB)
         self.setInputToDefault(config.plugins.SevenHD.ProgressIB)
+        self.setInputToDefault(config.plugins.SevenHD.IB1ColorTrans)
+        self.setInputToDefault(config.plugins.SevenHD.IB2ColorTrans)
         self.save()
 
     def setInputToDefault(self, configItem):

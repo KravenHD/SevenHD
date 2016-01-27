@@ -146,9 +146,6 @@ class MainSettings(ConfigListScreen, Screen):
         if config.plugins.SevenHD.RunningText.value == 'running':
            list.append(getConfigListEntry(_("startdelay"),             config.plugins.SevenHD.Startdelay,                'Stellt die Startzeit ein, nach wieviel Sek. der Text anfangen soll sich zu bewegen.',                '4',                'Delay'))
            list.append(getConfigListEntry(_("steptime"),               config.plugins.SevenHD.Steptime,                  'Stellt die Laufgeschwindigkeit ein. Je h\xc3\xb6her der Wert, desto langsamger die Geschwindigkeit', '4',                'Delay'))
-        list.append(getConfigListEntry(_('__________________________________transparency_____________________________________________'), ))
-        list.append(getConfigListEntry(_("main window"),               config.plugins.SevenHD.BackgroundColorTrans,      'Stellt die Transparenz des linken Fenster ein.',                                                     '4',                'transparency'))
-        list.append(getConfigListEntry(_("right window"),              config.plugins.SevenHD.BackgroundRightColorTrans, 'Stellt die Transparenz des rechten Fenster ein.',                                                    '4',                'transparency'))
         
         return list
 
@@ -315,8 +312,6 @@ class MainSettings(ConfigListScreen, Screen):
         self.setInputToDefault(config.plugins.SevenHD.Startdelay)
         self.setInputToDefault(config.plugins.SevenHD.Steptime)
         self.setInputToDefault(config.plugins.SevenHD.Volume)
-        self.setInputToDefault(config.plugins.SevenHD.BackgroundColorTrans)
-        self.setInputToDefault(config.plugins.SevenHD.BackgroundRightColorTrans)
         self.setInputToDefault(config.plugins.SevenHD.ProgressVol)
         self.setInputToDefault(config.plugins.SevenHD.SelectionBackground)
         self.setInputToDefault(config.plugins.SevenHD.SelectionBorder)

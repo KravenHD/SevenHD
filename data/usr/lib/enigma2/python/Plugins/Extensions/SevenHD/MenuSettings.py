@@ -121,7 +121,10 @@ class MenuSettings(ConfigListScreen, Screen):
         list = []
         list.append(getConfigListEntry(_('_____________________________background________________________________________'), ))
         list.append(getConfigListEntry(_("main window"),        config.plugins.SevenHD.Background,             'Stellt die Farbe des linken Fenster ein.',                   '4',     'Main'))
-        list.append(getConfigListEntry(_("right window"),       config.plugins.SevenHD.BackgroundRight,        'Stellt die Farbe des rechten Fenster ein.',                  '4',     'Right'))
+        list.append(getConfigListEntry(_("main window right"),       config.plugins.SevenHD.BackgroundRight,        'Stellt die Farbe des rechten Fenster ein.',                  '4',     'Right'))
+        list.append(getConfigListEntry(_('__________________________________transparency_____________________________________________'), ))
+        list.append(getConfigListEntry(_("main window"),        config.plugins.SevenHD.BackgroundColorTrans,      'Stellt die Transparenz des linken Fenster ein.',          '4',      'transparency'))
+        list.append(getConfigListEntry(_("main window right"),       config.plugins.SevenHD.BackgroundRightColorTrans, 'Stellt die Transparenz des rechten Fenster ein.',         '4',      'transparencyright'))
         list.append(getConfigListEntry(_('_____________________________color lines_______________________________________'), ))
         list.append(getConfigListEntry(_("line leftside"),      config.plugins.SevenHD.Line,                   'Stellt die Farbe der Linie f\xc3\xbcr die linke Seite ein.', '4',     'Line'))
         list.append(getConfigListEntry(_("line rightside"),     config.plugins.SevenHD.LineRight,              'Stellt die Farbe der Linie f\xc3\xbcr die rechte Seite ein.','4',     'Line'))
@@ -272,6 +275,8 @@ class MenuSettings(ConfigListScreen, Screen):
         self.setInputToDefault(config.plugins.SevenHD.ButtonText)
         self.setInputToDefault(config.plugins.SevenHD.ProgressLinePlug)
         self.setInputToDefault(config.plugins.SevenHD.Progress)
+        self.setInputToDefault(config.plugins.SevenHD.BackgroundColorTrans)
+        self.setInputToDefault(config.plugins.SevenHD.BackgroundRightColorTrans)
         self.save()
 
     def setInputToDefault(self, configItem):
