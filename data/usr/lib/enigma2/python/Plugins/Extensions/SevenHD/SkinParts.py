@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 #######################################################################
 #
-# FontHeightManager by .:TBX:.
+# SkinPartManager by .:TBX:.
 #   for KravenSkin (c) 2016
 #
 #######################################################################
@@ -25,9 +25,9 @@ def translateBlock(block):
 			block = block.replace(x[0], x[1])
 	return block
 #############################################################
-class FontSettings(Screen):
+class SkinParts(Screen):
     skin =  """
-                  <screen name="SevenHD-Setup" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
+                  <screen name="SkinParts" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
                          <widget name="buttonRed" font="Regular; 20" foregroundColor="#00f23d21" backgroundColor="#00000000" halign="left" valign="center" position="64,662" size="148,48" transparent="1" />
                          <widget name="buttonGreen" font="Regular; 20" foregroundColor="#00389416" backgroundColor="#00000000" halign="left" valign="center" position="264,662" size="148,48" transparent="1" />
                          <widget name="buttonYellow" font="Regular; 20" foregroundColor="#00e5b243" backgroundColor="#00000000" halign="left" valign="center" position="464,662" size="148,48" transparent="1" />
@@ -76,38 +76,11 @@ class FontSettings(Screen):
         self["buttonBlue"] = Label()
         self["titel"] = Label()
         self["buttonRed"].setText(_("Cancel"))
-        self["buttonGreen"].setText(_("Save"))
-        self["buttonYellow"].setText(_("-"))
-        self["buttonBlue"] = Label("+")
-        self["titel"].setText(_("Font Settings"))
-        self.has_change = False
+        self["buttonGreen"].setText(_("Delete Screen"))
+        self["buttonYellow"].setText(_("Extract Screen"))
+        self["buttonBlue"].setText(_("Show Preview"))
+        self["titel"].setText(_("Skin Parts"))
         
-        try:
-           with open(FILE, 'r') as oldFile:
-              old_skin = oldFile.readlines()
-           for old_res in old_skin:
-               if 'resolution bpp="32" xres="' in old_res:
-                  old_skin_resolution = re.search('resolution bpp="32" xres="(.+?)" yres="(.+?)"', str(old_res)).groups(1)
-                  break
-           old_resolution = old_skin_resolution[0]
-        except:
-           old_resolution = '1280'
-                
-        if str(old_resolution) == str('1280'):
-           self.value = float(1)
-        elif str(old_resolution) == str('1920'):
-           self.value = float(1.5)
-        elif str(old_resolution) == str('3840'):
-           self.value = float(3)
-        elif str(old_resolution) == str('4096'):
-           self.value = float(3)
-        elif str(old_resolution) == str('7680'):
-           self.value = float(4.5)
-        elif str(old_resolution) == str('8192'):
-           self.value = float(4.5)
-        else:
-           self.value = float(1)
-                
         self["actions"] = ActionMap(
             [
                 "OkCancelActions",
@@ -128,140 +101,126 @@ class FontSettings(Screen):
         self.list_init()
         
         if not self.__selectionChanged in self["menuList"].onSelectionChanged:
-            self["menuList"].onSelectionChanged.append(self.__selectionChanged)
+           self["menuList"].onSelectionChanged.append(self.__selectionChanged)
 
         self.onChangedEntry = []
         self.onLayoutFinish.append(self.__selectionChanged)
 
     def __del__(self):
         self["menuList"].onSelectionChanged.remove(self.__selectionChanged)
-        
+
     def list_init(self):
         list = []
-        
+
         tree = etree.parse(FILE)
         root = tree.getroot()
         self.root_backup = root
-        
+
         for screen in root.findall('screen'):   
             screenname = screen.attrib['name']
-            if not screenname.startswith('template'):
-               for child in screen:
-                   try:
-                     font = child.get('font')
-                     if ';' in font:
-                        # really tricky
-                        # child dont except the "except"
-                        try:
-                           name = child.get('source')
-                        except:
-                           name = None
-                        if name == None:   
-                           try:
-                             name = child.get('name')
-                           except:
-                             name = None
-                        
-                           if name == None:
-                              try:
-                                 name = child.get('text')
-                              except:
-                                 name = None
-                        try:
-                            for sub in child:
-                                name = sub.text
-                                break
-                        except:
-                            name = name
-                            
-                        if name != None:
-                           fontheight = font.split(';')
-                           
-                           if len(screenname) >= 15:
-                              self.screen_tab = '\t'
-                           else:
-                              self.screen_tab = '\t\t'
-                           if len(name) >= 15:
-                              self.name_tab = '\t'
-                           else:
-                              self.name_tab = '\t\t'
-                           
-                           list.append((_(str(screenname) + self.screen_tab + str(name) + self.name_tab + str(fontheight[1])), str(screenname), str(name), str(fontheight[1]), str(font)))
-                   
-                   except:
-                      pass
-        
+            list.append((_(str(screenname)), str(screenname)))
+
         list.sort()
         self.debug(len(list))
         self["menuList"].setList(list)
 
-    def keyBlue(self):
-        self.curFH = int(self.curFH) + 1
-        self.new_height = self.curFH
-        self["description"].setText('Aktuelle Gr\xc3\xb6\xc3\x9fe: ' + str(self.new_height) + '\nzum anwenden Speichern')       
-    
-    def keyYellow(self):
-        self.curFH = int(self.curFH) - 1
-        self.new_height = self.curFH
-        self["description"].setText('Aktuelle Gr\xc3\xb6\xc3\x9fe: ' + str(self.new_height) + '\nzum anwenden Speichern')
-    
     def keyGreen(self):
-        if fileExists(FILE):
-           copy(FILE, TMPFILE)
-           self.debug('cp : ' + FILE + ' to ' + TMPFILE + "\n")
+        options = []
+        d = os.listdir(MAIN_USER_PATH)
+        try:
+           for xml in d:
+              if xml.endswith('.part'):
+                 options.extend(((_(str(xml)), boundFunction(self.delete_screen, str(xml))),))
+           self.session.openWithCallback(self.menuCallback, ChoiceBox, list = options, title = "L\xc3\xb6sche part.Datei")
+        except:
+           self.session.open(MessageBox, _("Keine part.Dateien gefunden"), MessageBox.TYPE_INFO, timeout=5)
+
+    def keyYellow(self):
+        self.curSN = self["menuList"].getCurrent()[1]    
+        for screen in self.root_backup.findall('screen'):   
+            screenname = screen.attrib['name']
+            if screenname.startswith(str(self.curSN)):
+               self.screen_part = etree.tostring(screen, encoding='utf-8', pretty_print=True)
+               break
         
-        cur = self["menuList"].getCurrent()
-        curSN = self["menuList"].getCurrent()[1]
-        curCN = self["menuList"].getCurrent()[2]
+        self.skin_part_file = MAIN_USER_PATH + 'screen_' + str(self.curSN) + '.part'
+        if fileExists(self.skin_part_file):
+           message = str(self.skin_part_file) + '\nist schon vorhanden soll die vorhandene ersetzt werden?'
+           self.session.openWithCallback(self.ask_for_extract, MessageBox, message, MessageBox.TYPE_YESNO)
+        else:
+           self.extract_screen_part()
+
+    def keyBlue(self):
+        self.curSN = self["menuList"].getCurrent()[1]
+        options = []
+        d = os.listdir(MAIN_USER_PATH)
+        try:
+           for xml in d:
+              if xml.endswith('.part'):
+                 options.extend(((_(str(xml)), boundFunction(self.show_screen, str(xml))),))
+           self.session.openWithCallback(self.menuCallback, ChoiceBox, list = options, title = "Zeige part.Datei")
+        except:
+           self.session.open(MessageBox, _("Keine part.Dateien gefunden"), MessageBox.TYPE_INFO, timeout=5)
+           
+    def menuCallback(self, ret):
+        ret and ret[1]()    
+
+    def delete_screen(self, what):
+        os.remove(MAIN_USER_PATH + str(what))
+        self.session.open(MessageBox, _(str(what) + " wurde entfernt."), MessageBox.TYPE_INFO, timeout=5)
+    
+    def show_screen(self, what):
+        self.session.open(PartPreview, str(what))
         
-        list_entrie = str(cur)
-        self.hd_height = round(float(self.new_height) / float(self.value))
-        
-        if fileExists(USER_FONT_FILE):
-           fh, tmp_file_path = mkstemp()
-           search_string = "'" + curSN + "', '" + curCN + "',"
-           with open(tmp_file_path, 'w') as tmp_file:
-                with open(USER_FONT_FILE, 'r') as user_file:
-                     for line in user_file:
-                         if not search_string in line:
-                            tmp_file.write(line)
-        
-           remove(USER_FONT_FILE)
-           move(tmp_file_path, USER_FONT_FILE)
-        
-        f = open(USER_FONT_FILE, 'a+')
-        f.write(str(list_entrie.replace(")", ", '%s')" % int(self.hd_height))) + '\n')
-        f.close()
-        
-        os.system('python /usr/lib/enigma2/python/Plugins/Extensions/SevenHD/ChangeFont.py %s' % str(self.value))
-        
-        self.has_change = True
-        self.list_init()
+    def ask_for_extract(self, answer):
+        if answer is True:
+            self.extract_screen_part()
+        else:
+            pass       
+    
+    def extract_screen_part(self):       
+        f = open(self.skin_part_file,'w')
+        f.write(str(self.screen_part))
+        f.close 
+        self.session.open(MessageBox, _("Der " + str(self.curSN) + " Screen wurde als Screen Part in /user erstellt."), MessageBox.TYPE_INFO, timeout=5)
         
     def exit(self):
-        if self.has_change:
-           self.session.open(MessageBox, _("Deine skin.xml wurde ge\xc3\xa4ndert.\nBitte einen GUI Neustart machen."), MessageBox.TYPE_INFO, timeout=5)
-        
         self["menuList"].onSelectionChanged.remove(self.__selectionChanged)
         self.close()
 
     def __selectionChanged(self):
-        self["description"].setText('Zum \xc3\xa4ndern GELB/BLAU dr\xc3\xbccken')
-        curFH = self["menuList"].getCurrent()[3]
-        self.curFH = self["menuList"].getCurrent()[3]
-        self.new_height = int(curFH)
+        pass
         
     def debug(self, what, error=None):
         if config.plugins.SevenHD.msgdebug.value:
            try:
-              self.session.open(MessageBox, _('[FontSettings]\n' + str(what)), MessageBox.TYPE_INFO)
+              self.session.open(MessageBox, _('[SkinParts]\n' + str(what)), MessageBox.TYPE_INFO)
            except:
               pass
            
         if config.plugins.SevenHD.debug.value:
            f = open('/tmp/kraven_debug.txt', 'a+')
            if error != None:
-              f.write('[FontSettings]' + str(what) + ' error: ' + str(error) + '\n')
+              f.write('[SkinParts]' + str(what) + ' error: ' + str(error) + '\n')
            else:
-              f.write('[FontSettings]' + str(what) + '\n')
+              f.write('[SkinParts]' + str(what) + '\n')
            f.close()
+           
+class PartPreview(Screen):
+    def __init__(self, session, what):
+        self.session = session
+        f = open(MAIN_USER_PATH + str(what), 'r')
+        self.skin = f.read()
+        f.close()
+        Screen.__init__(self, session)
+        self["actions"] = ActionMap(
+            [
+                "OkCancelActions"
+            ],
+            {
+                "cancel": self.close
+            }, -1)
+        self.onLayoutFinish.append(self.hello)
+        
+    def hello(self):
+        print 'here i am'

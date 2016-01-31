@@ -1,0 +1,7 @@
+		<!-- TimerEditList -->
+	<screen backgroundColor="transparent" flags="wfNoBorder" name="TimerEditList" position="0,0" size="1280,720" title="Timer Editor">
+		<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="TimerEditList" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
+		<widget name="timerlist" rowSplit="26" iconMargin="5" satPosLeft="160" itemHeight="50" setFont="Regular;18" setEventNameFont="Regular;20" setServiceNameFont="Regular;20" position="45,79" size="766,550" backgroundColor="SevenFontBackground" enableWrapAround="1" transparent="1" />
+		<panel name="template_menu_left_button" />
+		<panel name="template_colorkey_text" />
+	</screen>

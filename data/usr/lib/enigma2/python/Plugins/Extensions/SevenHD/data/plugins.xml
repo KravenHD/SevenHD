@@ -1641,15 +1641,14 @@
 		<!-- SevenHD-Setup -->
 	<screen name="MainSettings" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
 		<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="MainSettings" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
-		<eLabel font="Regular; 18" foregroundColor="SevenButtonText" backgroundColor="SevenFontBackground" halign="left" valign="center" position="64,662" size="148,48" text="Cancel" transparent="1" />
-		<eLabel font="Regular; 18" foregroundColor="SevenButtonText" backgroundColor="SevenFontBackground" halign="left" valign="center" position="264,662" size="148,48" text="Save" transparent="1" />
-		<eLabel font="Regular; 18" foregroundColor="SevenButtonText" backgroundColor="SevenFontBackground" halign="left" valign="center" position="464,662" size="148,48" text="Defaults" transparent="1" />
-		<widget name="blue" font="Regular; 18" foregroundColor="SevenButtonText" backgroundColor="SevenFontBackground" halign="left" valign="center" position="664,662" size="148,48" transparent="1" />
-		<widget name="config" position="18,72" size="816,575" backgroundColor="SevenFontBackground" enableWrapAround="1" transparent="1" />
-		<eLabel position="70,12" size="708,46" text="Main Settings" font="Regular2; 35" valign="center" halign="center" transparent="1" backgroundColor="SevenFontBackground" />
+		<widget name="buttonRed" font="Regular; 20" foregroundColor="SevenButtonText" backgroundColor="SevenFontBackground" halign="left" valign="center" position="64,662" size="148,48" transparent="1" />
+		<widget name="buttonGreen" font="Regular; 20" foregroundColor="SevenButtonText" backgroundColor="SevenFontBackground" halign="left" valign="center" position="264,662" size="148,48" transparent="1" />
+		<widget name="buttonYellow" font="Regular; 20" foregroundColor="SevenButtonText" backgroundColor="SevenFontBackground" halign="left" valign="center" position="464,662" size="148,48" transparent="1" />
+		<widget name="buttonBlue" font="Regular; 20" foregroundColor="SevenButtonText" backgroundColor="SevenFontBackground" halign="left" valign="center" position="664,662" size="148,48" transparent="1" />
+		<widget name="config" position="18,72" size="816,575" scrollbarMode="showOnDemand" transparent="1" zPosition="1" backgroundColor="SevenFontBackground" />
+		<widget name="titel" position="70,12" size="708,46" font="Regular; 35" valign="center" halign="center" transparent="1" backgroundColor="SevenFontBackground" foregroundColor="SevenFont1" />
 		<widget name="helperimage" position="891,274" size="372,209" zPosition="1" backgroundColor="SevenFontBackground" />
 		<widget name="description" position="891,490" size="372,200" font="Regular; 22" valign="center" halign="center" transparent="1" backgroundColor="SevenFontBackgroundRight" foregroundColor="SevenFont2" />
-		<widget backgroundColor="SevenFontBackground" font="Regular2; 34" position="70,12" render="Label" size="708,46" source="Title" transparent="1" halign="center" valign="center" foregroundColor="SevenFont1" noWrap="1" />
 		<widget name="colorthump" position="891,220" size="372,30" zPosition="1" backgroundColor="SevenFontBackgroundRight" alphatest="blend" />
 		<eLabel backgroundColor="SevenBackground" position="6,6" size="842,708" transparent="0" zPosition="-9" />
 		<eLabel backgroundColor="SevenBorder" position="6,6" size="842,2" zPosition="2" />
@@ -1685,16 +1684,15 @@
 	</screen>
 	<screen name="MenuSettings" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
 		<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="MenuSettings" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
-		<eLabel font="Regular; 18" foregroundColor="SevenButtonText" backgroundColor="SevenFontBackground" halign="left" valign="center" position="64,662" size="148,48" text="Cancel" transparent="1" />
-		<eLabel font="Regular; 18" foregroundColor="SevenButtonText" backgroundColor="SevenFontBackground" halign="left" valign="center" position="264,662" size="148,48" text="Save" transparent="1" />
-		<eLabel font="Regular; 18" foregroundColor="SevenButtonText" backgroundColor="SevenFontBackground" halign="left" valign="center" position="464,662" size="148,48" text="Defaults" transparent="1" />
-		<widget name="blue" font="Regular; 18" foregroundColor="SevenButtonText" backgroundColor="SevenFontBackground" halign="left" valign="center" position="664,662" size="148,48" transparent="1" />
-		<widget name="config" position="18,72" size="816,575" backgroundColor="SevenFontBackground" enableWrapAround="1" transparent="1" />
-		<eLabel position="70,12" size="708,46" text="Menu Settings" font="Regular2; 35" valign="center" halign="center" transparent="1" backgroundColor="SevenFontBackground" />
+		<widget name="buttonRed" font="Regular; 20" foregroundColor="SevenButtonText" backgroundColor="SevenFontBackground" halign="left" valign="center" position="64,662" size="148,48" transparent="1" />
+		<widget name="buttonGreen" font="Regular; 20" foregroundColor="SevenButtonText" backgroundColor="SevenFontBackground" halign="left" valign="center" position="264,662" size="148,48" transparent="1" />
+		<widget name="buttonYellow" font="Regular; 20" foregroundColor="SevenButtonText" backgroundColor="SevenFontBackground" halign="left" valign="center" position="464,662" size="148,48" transparent="1" />
+		<widget name="buttonBlue" font="Regular; 20" foregroundColor="SevenButtonText" backgroundColor="SevenFontBackground" halign="left" valign="center" position="664,662" size="148,48" transparent="1" />
+		<widget name="config" position="18,72" size="816,575" scrollbarMode="showOnDemand" transparent="1" zPosition="1" backgroundColor="SevenFontBackground" />
+		<widget name="titel" position="70,12" size="708,46" font="Regular; 35" valign="center" halign="center" transparent="1" backgroundColor="SevenFontBackground" foregroundColor="SevenFont1" />
 		<widget name="helperimage" position="891,274" size="372,209" zPosition="1" backgroundColor="SevenFontBackground" />
 		<widget name="description" position="891,490" size="372,200" font="Regular; 22" valign="center" halign="center" transparent="1" backgroundColor="SevenFontBackgroundRight" foregroundColor="SevenFont2" />
 		<widget name="colorthump" position="891,220" size="372,30" zPosition="1" backgroundColor="SevenFontBackgroundRight" alphatest="blend" />
-		<widget backgroundColor="SevenFontBackground" font="Regular2; 34" position="70,12" render="Label" size="708,46" source="Title" transparent="1" halign="center" valign="center" foregroundColor="SevenFont1" noWrap="1" />
 		<eLabel backgroundColor="SevenBackground" position="6,6" size="842,708" transparent="0" zPosition="-9" />
 		<eLabel backgroundColor="SevenBorder" position="6,6" size="842,2" zPosition="2" />
 		<eLabel backgroundColor="SevenBorder" position="6,714" size="844,2" zPosition="2" />
@@ -1729,16 +1727,15 @@
 	</screen>
 	<screen name="PluginSettings" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
 		<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="PluginSettings" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
-		<eLabel font="Regular; 18" foregroundColor="SevenButtonText" backgroundColor="SevenFontBackground" halign="left" valign="center" position="64,662" size="148,48" text="Cancel" transparent="1" />
-		<eLabel font="Regular; 18" foregroundColor="SevenButtonText" backgroundColor="SevenFontBackground" halign="left" valign="center" position="264,662" size="148,48" text="Save" transparent="1" />
-		<eLabel font="Regular; 18" foregroundColor="SevenButtonText" backgroundColor="SevenFontBackground" halign="left" valign="center" position="464,662" size="148,48" text="Defaults" transparent="1" />
-		<widget name="blue" font="Regular; 18" foregroundColor="SevenButtonText" backgroundColor="SevenFontBackground" halign="left" valign="center" position="664,662" size="148,48" transparent="1" />
-		<widget name="config" position="18,72" size="816,575" backgroundColor="SevenFontBackground" enableWrapAround="1" transparent="1" />
-		<eLabel position="70,12" size="708,46" text="Plugin Settings" font="Regular2; 35" valign="center" halign="center" transparent="1" backgroundColor="SevenFontBackground" />
+		<widget name="buttonRed" font="Regular; 20" foregroundColor="SevenButtonText" backgroundColor="SevenFontBackground" halign="left" valign="center" position="64,662" size="148,48" transparent="1" />
+		<widget name="buttonGreen" font="Regular; 20" foregroundColor="SevenButtonText" backgroundColor="SevenFontBackground" halign="left" valign="center" position="264,662" size="148,48" transparent="1" />
+		<widget name="buttonYellow" font="Regular; 20" foregroundColor="SevenButtonText" backgroundColor="SevenFontBackground" halign="left" valign="center" position="464,662" size="148,48" transparent="1" />
+		<widget name="buttonBlue" font="Regular; 20" foregroundColor="SevenButtonText" backgroundColor="SevenFontBackground" halign="left" valign="center" position="664,662" size="148,48" transparent="1" />
+		<widget name="config" position="18,72" size="816,575" scrollbarMode="showOnDemand" transparent="1" zPosition="1" backgroundColor="SevenFontBackground" />
+		<widget name="titel" position="70,12" size="708,46" font="Regular; 35" valign="center" halign="center" transparent="1" backgroundColor="SevenFontBackground" foregroundColor="SevenFont1" />
 		<widget name="helperimage" position="891,274" size="372,209" zPosition="1" backgroundColor="SevenFontBackground" />
 		<widget name="description" position="891,490" size="372,200" font="Regular; 22" valign="center" halign="center" transparent="1" backgroundColor="SevenFontBackgroundRight" foregroundColor="SevenFont2" />
 		<widget name="colorthump" position="891,220" size="372,30" zPosition="1" backgroundColor="SevenFontBackgroundRight" alphatest="blend" />
-		<widget backgroundColor="SevenFontBackground" font="Regular2; 34" position="70,12" render="Label" size="708,46" source="Title" transparent="1" halign="center" valign="center" foregroundColor="SevenFont1" noWrap="1" />
 		<eLabel backgroundColor="SevenBackground" position="6,6" size="842,708" transparent="0" zPosition="-9" />
 		<eLabel backgroundColor="SevenBorder" position="6,6" size="842,2" zPosition="2" />
 		<eLabel backgroundColor="SevenBorder" position="6,714" size="844,2" zPosition="2" />
@@ -1773,16 +1770,15 @@
 	</screen>
 	<screen name="ChannelSettings" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
 		<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="ChannelSettings" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
-		<eLabel font="Regular; 18" foregroundColor="SevenButtonText" backgroundColor="SevenFontBackground" halign="left" valign="center" position="64,662" size="148,48" text="Cancel" transparent="1" />
-		<eLabel font="Regular; 18" foregroundColor="SevenButtonText" backgroundColor="SevenFontBackground" halign="left" valign="center" position="264,662" size="148,48" text="Save" transparent="1" />
-		<eLabel font="Regular; 18" foregroundColor="SevenButtonText" backgroundColor="SevenFontBackground" halign="left" valign="center" position="464,662" size="148,48" text="Defaults" transparent="1" />
-		<widget name="blue" font="Regular; 18" foregroundColor="SevenButtonText" backgroundColor="SevenFontBackground" halign="left" valign="center" position="664,662" size="148,48" transparent="1" />
-		<widget name="config" position="18,72" scrollbarMode="showOnDemand" size="816,575" backgroundColor="SevenFontBackground" enableWrapAround="1" transparent="1" />
-		<eLabel position="70,12" size="708,46" text="Channel Settings" font="Regular2; 35" valign="center" halign="center" transparent="1" backgroundColor="SevenFontBackground" />
+		<widget name="buttonRed" font="Regular; 20" foregroundColor="SevenButtonText" backgroundColor="SevenFontBackground" halign="left" valign="center" position="64,662" size="148,48" transparent="1" />
+		<widget name="buttonGreen" font="Regular; 20" foregroundColor="SevenButtonText" backgroundColor="SevenFontBackground" halign="left" valign="center" position="264,662" size="148,48" transparent="1" />
+		<widget name="buttonYellow" font="Regular; 20" foregroundColor="SevenButtonText" backgroundColor="SevenFontBackground" halign="left" valign="center" position="464,662" size="148,48" transparent="1" />
+		<widget name="buttonBlue" font="Regular; 20" foregroundColor="SevenButtonText" backgroundColor="SevenFontBackground" halign="left" valign="center" position="664,662" size="148,48" transparent="1" />
+		<widget name="config" position="18,72" size="816,575" scrollbarMode="showOnDemand" transparent="1" zPosition="1" backgroundColor="SevenFontBackground" />
+		<widget name="titel" position="70,12" size="708,46" font="Regular; 35" valign="center" halign="center" transparent="1" backgroundColor="SevenFontBackground" foregroundColor="SevenFont1" />
 		<widget name="helperimage" position="891,274" size="372,209" zPosition="1" backgroundColor="SevenFontBackground" />
 		<widget name="description" position="891,490" size="372,200" font="Regular; 22" valign="center" halign="center" transparent="1" backgroundColor="SevenFontBackgroundRight" foregroundColor="SevenFont2" />
 		<widget name="colorthump" position="891,220" size="372,30" zPosition="1" backgroundColor="SevenFontBackgroundRight" alphatest="blend" />
-		<widget backgroundColor="SevenFontBackground" font="Regular2; 34" position="70,12" render="Label" size="708,46" source="Title" transparent="1" halign="center" valign="center" foregroundColor="SevenFont1" noWrap="1" />
 		<eLabel backgroundColor="SevenBackground" position="6,6" size="842,708" transparent="0" zPosition="-9" />
 		<eLabel backgroundColor="SevenBorder" position="6,6" size="842,2" zPosition="2" />
 		<eLabel backgroundColor="SevenBorder" position="6,714" size="844,2" zPosition="2" />
@@ -1817,17 +1813,16 @@
 	</screen>
 	<screen name="InfobarExtraSettings" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
 		<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="InfobarExtraSettings" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
-		<eLabel font="Regular; 18" foregroundColor="SevenButtonText" backgroundColor="SevenFontBackground" halign="left" valign="center" position="64,662" size="148,48" text="Cancel" transparent="1" />
-		<eLabel font="Regular; 18" foregroundColor="SevenButtonText" backgroundColor="SevenFontBackground" halign="left" valign="center" position="264,662" size="148,48" text="Save" transparent="1" />
-		<eLabel font="Regular; 18" foregroundColor="SevenButtonText" backgroundColor="SevenFontBackground" halign="left" valign="center" position="464,662" size="148,48" text="Defaults" transparent="1" />
-		<widget name="blue" font="Regular; 18" foregroundColor="SevenButtonText" backgroundColor="SevenFontBackground" halign="left" valign="center" position="664,662" size="148,48" transparent="1" />
-		<widget name="config" position="18,72" size="816,575" backgroundColor="SevenFontBackground" enableWrapAround="1" transparent="1" />
-		<eLabel position="70,12" size="708,46" text="Infobar Extra Settings" font="Regular2; 35" valign="center" halign="center" transparent="1" backgroundColor="SevenFontBackground" />
+		<widget name="buttonRed" font="Regular; 20" foregroundColor="SevenButtonText" backgroundColor="SevenFontBackground" halign="left" valign="center" position="64,662" size="148,48" transparent="1" />
+		<widget name="buttonGreen" font="Regular; 20" foregroundColor="SevenButtonText" backgroundColor="SevenFontBackground" halign="left" valign="center" position="264,662" size="148,48" transparent="1" />
+		<widget name="buttonYellow" font="Regular; 20" foregroundColor="SevenButtonText" backgroundColor="SevenFontBackground" halign="left" valign="center" position="464,662" size="148,48" transparent="1" />
+		<widget name="buttonBlue" font="Regular; 20" foregroundColor="SevenButtonText" backgroundColor="SevenFontBackground" halign="left" valign="center" position="664,662" size="148,48" transparent="1" />
+		<widget name="config" position="18,72" size="816,575" scrollbarMode="showOnDemand" transparent="1" zPosition="1" backgroundColor="SevenFontBackground" />
+		<widget name="titel" position="70,12" size="708,46" font="Regular; 35" valign="center" halign="center" transparent="1" backgroundColor="SevenFontBackground" foregroundColor="SevenFont1" />
 		<widget name="helperimage" position="891,274" size="372,209" zPosition="1" backgroundColor="SevenFontBackground" />
 		<widget name="description" position="891,490" size="372,200" font="Regular; 22" valign="center" halign="center" transparent="1" backgroundColor="SevenFontBackgroundRight" foregroundColor="SevenFont2" />
 		<widget name="colorthump" position="891,220" size="372,30" zPosition="1" backgroundColor="SevenFontBackgroundRight" alphatest="blend" />
 		<widget name="preview" position="891,274" size="372,209" font="Regular; 22" valign="center" halign="center" transparent="1" backgroundColor="SevenFontBackgroundRight" foregroundColor="SevenFont1" zPosition="2" />
-		<widget backgroundColor="SevenFontBackground" font="Regular2; 34" position="70,12" render="Label" size="708,46" source="Title" transparent="1" halign="center" valign="center" foregroundColor="SevenFont1" noWrap="1" />
 		<eLabel backgroundColor="SevenBackground" position="6,6" size="842,708" transparent="0" zPosition="-9" />
 		<eLabel backgroundColor="SevenBorder" position="6,6" size="842,2" zPosition="2" />
 		<eLabel backgroundColor="SevenBorder" position="6,714" size="844,2" zPosition="2" />
@@ -1862,16 +1857,15 @@
 	</screen>
 	<screen name="InfobarSettings" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
 		<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="InfobarSettings" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
-		<eLabel font="Regular; 18" foregroundColor="SevenButtonText" backgroundColor="SevenFontBackground" halign="left" valign="center" position="64,662" size="148,48" text="Cancel" transparent="1" />
-		<eLabel font="Regular; 18" foregroundColor="SevenButtonText" backgroundColor="SevenFontBackground" halign="left" valign="center" position="264,662" size="148,48" text="Save" transparent="1" />
-		<eLabel font="Regular; 18" foregroundColor="SevenButtonText" backgroundColor="SevenFontBackground" halign="left" valign="center" position="464,662" size="148,48" text="Defaults" transparent="1" />
-		<widget name="blue" font="Regular; 18" foregroundColor="SevenButtonText" backgroundColor="SevenFontBackground" halign="left" valign="center" position="664,662" size="148,48" transparent="1" />
-		<widget name="config" position="18,72" size="816,575" backgroundColor="SevenFontBackground" enableWrapAround="1" transparent="1" />
-		<eLabel position="70,12" size="708,46" text="Infobar Settings" font="Regular2; 35" valign="center" halign="center" transparent="1" backgroundColor="SevenFontBackground" />
+		<widget name="buttonRed" font="Regular; 20" foregroundColor="SevenButtonText" backgroundColor="SevenFontBackground" halign="left" valign="center" position="64,662" size="148,48" transparent="1" />
+		<widget name="buttonGreen" font="Regular; 20" foregroundColor="SevenButtonText" backgroundColor="SevenFontBackground" halign="left" valign="center" position="264,662" size="148,48" transparent="1" />
+		<widget name="buttonYellow" font="Regular; 20" foregroundColor="SevenButtonText" backgroundColor="SevenFontBackground" halign="left" valign="center" position="464,662" size="148,48" transparent="1" />
+		<widget name="buttonBlue" font="Regular; 20" foregroundColor="SevenButtonText" backgroundColor="SevenFontBackground" halign="left" valign="center" position="664,662" size="148,48" transparent="1" />
+		<widget name="config" position="18,72" size="816,575" scrollbarMode="showOnDemand" transparent="1" zPosition="1" backgroundColor="SevenFontBackground" />
+		<widget name="titel" position="70,12" size="708,46" font="Regular; 35" valign="center" halign="center" transparent="1" backgroundColor="SevenFontBackground" foregroundColor="SevenFont1" />
 		<widget name="helperimage" position="891,274" size="372,209" zPosition="1" backgroundColor="SevenFontBackground" />
 		<widget name="description" position="891,490" size="372,200" font="Regular; 22" valign="center" halign="center" transparent="1" backgroundColor="SevenFontBackgroundRight" foregroundColor="SevenFont2" />
 		<widget name="colorthump" position="891,220" size="372,30" zPosition="1" backgroundColor="SevenFontBackgroundRight" alphatest="blend" />
-		<widget backgroundColor="SevenFontBackground" font="Regular2; 34" position="70,12" render="Label" size="708,46" source="Title" transparent="1" halign="center" valign="center" foregroundColor="SevenFont1" noWrap="1" />
 		<eLabel backgroundColor="SevenBackground" position="6,6" size="842,708" transparent="0" zPosition="-9" />
 		<eLabel backgroundColor="SevenBorder" position="6,6" size="842,2" zPosition="2" />
 		<eLabel backgroundColor="SevenBorder" position="6,714" size="844,2" zPosition="2" />
@@ -1906,16 +1900,16 @@
 	</screen>
 	<screen name="SecondInfobarSettings" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
 		<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="SecondInfobarSettings" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
-		<eLabel font="Regular; 18" foregroundColor="SevenButtonText" backgroundColor="SevenFontBackground" halign="left" valign="center" position="64,662" size="148,48" text="Cancel" transparent="1" />
-		<eLabel font="Regular; 18" foregroundColor="SevenButtonText" backgroundColor="SevenFontBackground" halign="left" valign="center" position="264,662" size="148,48" text="Save" transparent="1" />
-		<eLabel font="Regular; 18" foregroundColor="SevenButtonText" backgroundColor="SevenFontBackground" halign="left" valign="center" position="464,662" size="148,48" text="Defaults" transparent="1" />
-		<widget name="blue" font="Regular; 18" foregroundColor="SevenButtonText" backgroundColor="SevenFontBackground" halign="left" valign="center" position="664,662" size="148,48" transparent="1" />
-		<widget name="config" position="18,72" size="816,575" backgroundColor="SevenFontBackground" enableWrapAround="1" transparent="1" />
+		<widget name="buttonRed" font="Regular; 20" foregroundColor="SevenButtonText" backgroundColor="SevenFontBackground" halign="left" valign="center" position="64,662" size="148,48" transparent="1" />
+		<widget name="buttonGreen" font="Regular; 20" foregroundColor="SevenButtonText" backgroundColor="SevenFontBackground" halign="left" valign="center" position="264,662" size="148,48" transparent="1" />
+		<widget name="buttonYellow" font="Regular; 20" foregroundColor="SevenButtonText" backgroundColor="SevenFontBackground" halign="left" valign="center" position="464,662" size="148,48" transparent="1" />
+		<widget name="buttonBlue" font="Regular; 20" foregroundColor="SevenButtonText" backgroundColor="SevenFontBackground" halign="left" valign="center" position="664,662" size="148,48" transparent="1" />
+		<widget name="config" position="18,72" size="816,575" scrollbarMode="showOnDemand" transparent="1" zPosition="1" backgroundColor="SevenFontBackground" />
+		<widget name="titel" position="70,12" size="708,46" font="Regular; 35" valign="center" halign="center" transparent="1" backgroundColor="SevenFontBackground" foregroundColor="SevenFont1" />
 		<eLabel position="70,12" size="708,46" text="SecondInfobar Settings" font="Regular2; 35" valign="center" halign="center" transparent="1" backgroundColor="SevenFontBackground" />
 		<widget name="helperimage" position="891,274" size="372,209" zPosition="1" backgroundColor="SevenFontBackground" />
 		<widget name="description" position="891,490" size="372,200" font="Regular; 22" valign="center" halign="center" transparent="1" backgroundColor="SevenFontBackgroundRight" foregroundColor="SevenFont2" />
 		<widget name="colorthump" position="891,220" size="372,30" zPosition="1" backgroundColor="SevenFontBackgroundRight" alphatest="blend" />
-		<widget backgroundColor="SevenFontBackground" font="Regular2; 34" position="70,12" render="Label" size="708,46" source="Title" transparent="1" halign="center" valign="center" foregroundColor="SevenFont1" noWrap="1" />
 		<eLabel backgroundColor="SevenBackground" position="6,6" size="842,708" transparent="0" zPosition="-9" />
 		<eLabel backgroundColor="SevenBorder" position="6,6" size="842,2" zPosition="2" />
 		<eLabel backgroundColor="SevenBorder" position="6,714" size="844,2" zPosition="2" />
@@ -1950,15 +1944,14 @@
 	</screen>
 	<screen name="SonstigeSettings" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
 		<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="SonstigeSettings" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
-		<eLabel font="Regular; 18" foregroundColor="SevenButtonText" backgroundColor="SevenFontBackground" halign="left" valign="center" position="64,662" size="148,48" text="Cancel" transparent="1" />
-		<eLabel font="Regular; 18" foregroundColor="SevenButtonText" backgroundColor="SevenFontBackground" halign="left" valign="center" position="264,662" size="148,48" text="Save" transparent="1" />
-		<eLabel font="Regular; 18" foregroundColor="SevenButtonText" backgroundColor="SevenFontBackground" halign="left" valign="center" position="464,662" size="148,48" text="Defaults" transparent="1" />
-		<widget name="blue" font="Regular; 18" foregroundColor="SevenButtonText" backgroundColor="SevenFontBackground" halign="left" valign="center" position="664,662" size="148,48" transparent="1" />
-		<widget name="config" position="18,72" size="816,575" backgroundColor="SevenFontBackground" enableWrapAround="1" transparent="1" />
-		<eLabel position="70,12" size="708,46" text="Other Settings" font="Regular2; 35" valign="center" halign="center" transparent="1" backgroundColor="SevenFontBackground" />
+		<widget name="buttonRed" font="Regular; 20" foregroundColor="SevenButtonText" backgroundColor="SevenFontBackground" halign="left" valign="center" position="64,662" size="148,48" transparent="1" />
+		<widget name="buttonGreen" font="Regular; 20" foregroundColor="SevenButtonText" backgroundColor="SevenFontBackground" halign="left" valign="center" position="264,662" size="148,48" transparent="1" />
+		<widget name="buttonYellow" font="Regular; 20" foregroundColor="SevenButtonText" backgroundColor="SevenFontBackground" halign="left" valign="center" position="464,662" size="148,48" transparent="1" />
+		<widget name="buttonBlue" font="Regular; 20" foregroundColor="SevenButtonText" backgroundColor="SevenFontBackground" halign="left" valign="center" position="664,662" size="148,48" transparent="1" />
+		<widget name="config" position="18,72" size="816,575" scrollbarMode="showOnDemand" transparent="1" zPosition="1" backgroundColor="SevenFontBackground" />
+		<widget name="titel" position="70,12" size="708,46" font="Regular; 35" valign="center" halign="center" transparent="1" backgroundColor="SevenFontBackground" foregroundColor="SevenFont1" />
 		<widget name="helperimage" position="891,274" size="372,209" zPosition="1" backgroundColor="SevenFontBackground" />
 		<widget name="description" position="891,490" size="372,200" font="Regular; 22" valign="center" halign="center" transparent="1" backgroundColor="SevenFontBackgroundRight" foregroundColor="SevenFont2" />
-		<widget backgroundColor="SevenFontBackground" font="Regular2; 34" position="70,12" render="Label" size="708,46" source="Title" transparent="1" halign="center" valign="center" foregroundColor="SevenFont1" noWrap="1" />
 		<eLabel backgroundColor="SevenBackground" position="6,6" size="842,708" transparent="0" zPosition="-9" />
 		<eLabel backgroundColor="SevenBorder" position="6,6" size="842,2" zPosition="2" />
 		<eLabel backgroundColor="SevenBorder" position="6,714" size="844,2" zPosition="2" />
@@ -1993,15 +1986,14 @@
 	</screen>
 	<screen name="SevenHD" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
 		<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="SevenHD" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
-		<eLabel font="Regular; 18" foregroundColor="SevenButtonText" backgroundColor="SevenFontBackground" halign="left" valign="center" position="64,662" size="148,48" text="Cancel" transparent="1" />
-		<eLabel font="Regular; 18" foregroundColor="SevenButtonText" backgroundColor="SevenFontBackground" halign="left" valign="center" position="264,662" size="148,48" text="Save" transparent="1" />
-		<eLabel font="Regular; 18" foregroundColor="SevenButtonText" backgroundColor="SevenFontBackground" halign="left" valign="center" position="464,662" size="148,48" text="Reboot" transparent="1" />
-		<eLabel font="Regular; 18" foregroundColor="SevenButtonText" backgroundColor="SevenFontBackground" halign="left" valign="center" position="664,662" size="148,48" text="Extras/FAQ" transparent="1" />
+		<widget name="buttonRed" font="Regular; 20" foregroundColor="SevenButtonText" backgroundColor="SevenFontBackground" halign="left" valign="center" position="64,662" size="148,48" transparent="1" />
+		<widget name="buttonGreen" font="Regular; 20" foregroundColor="SevenButtonText" backgroundColor="SevenFontBackground" halign="left" valign="center" position="264,662" size="148,48" transparent="1" />
+		<widget name="buttonYellow" font="Regular; 20" foregroundColor="SevenButtonText" backgroundColor="SevenFontBackground" halign="left" valign="center" position="464,662" size="148,48" transparent="1" />
+		<widget name="buttonBlue" font="Regular; 20" foregroundColor="SevenButtonText" backgroundColor="SevenFontBackground" halign="left" valign="center" position="664,662" size="148,48" transparent="1" />
 		<widget name="menuList" position="18,72" size="816,575" itemHeight="36" backgroundColor="SevenFontBackground" enableWrapAround="1" transparent="1" />
-		<eLabel position="70,12" size="708,46" text="SevenHD" font="Regular2; 35" valign="center" halign="center" transparent="1" backgroundColor="SevenFontBackground" />
+		<widget name="titel" position="70,12" size="708,46" font="Regular; 35" valign="center" halign="center" transparent="1" backgroundColor="SevenFontBackground" foregroundColor="SevenFont1" />
 		<widget name="helperimage" position="891,274" size="372,209" zPosition="1" backgroundColor="SevenFontBackground" />
 		<widget name="description" position="891,490" size="372,200" font="Regular; 22" valign="center" halign="center" transparent="1" backgroundColor="SevenFontBackgroundRight" foregroundColor="SevenFont2" />
-		<widget backgroundColor="SevenFontBackground" font="Regular2; 34" position="70,12" render="Label" size="708,46" source="Title" transparent="1" halign="center" valign="center" foregroundColor="SevenFont1" noWrap="1" />
 		<eLabel backgroundColor="SevenBackground" position="6,6" size="842,708" transparent="0" zPosition="-9" />
 		<eLabel backgroundColor="SevenBorder" position="6,6" size="842,2" zPosition="2" />
 		<eLabel backgroundColor="SevenBorder" position="6,714" size="844,2" zPosition="2" />
@@ -2036,13 +2028,50 @@
 	</screen>
 	<screen name="FontSettings" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
 		<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="FontSettings" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
-		<eLabel font="Regular; 18" foregroundColor="SevenButtonText" backgroundColor="SevenFontBackground" halign="left" valign="center" position="64,662" size="148,48" text="Cancel" transparent="1" />
-		<eLabel font="Regular; 18" foregroundColor="SevenButtonText" backgroundColor="SevenFontBackground" halign="left" valign="center" position="264,662" size="148,48" text="Save" transparent="1" />
-		<eLabel font="Regular; 18" foregroundColor="SevenButtonText" backgroundColor="SevenFontBackground" halign="left" valign="center" position="464,662" size="148,48" text=" - " transparent="1" />
-		<eLabel font="Regular; 18" foregroundColor="SevenButtonText" backgroundColor="SevenFontBackground" halign="left" valign="center" position="664,662" size="148,48" text=" + " transparent="1" />
+		<widget name="buttonRed" font="Regular; 20" foregroundColor="SevenButtonText" backgroundColor="SevenFontBackground" halign="left" valign="center" position="64,662" size="148,48" transparent="1" />
+		<widget name="buttonGreen" font="Regular; 20" foregroundColor="SevenButtonText" backgroundColor="SevenFontBackground" halign="left" valign="center" position="264,662" size="148,48" transparent="1" />
+		<widget name="buttonYellow" font="Regular; 20" foregroundColor="SevenButtonText" backgroundColor="SevenFontBackground" halign="left" valign="center" position="464,662" size="148,48" transparent="1" />
+		<widget name="buttonBlue" font="Regular; 20" foregroundColor="SevenButtonText" backgroundColor="SevenFontBackground" halign="left" valign="center" position="664,662" size="148,48" transparent="1" />
+		<widget name="titel" position="70,12" size="708,46" font="Regular; 35" valign="center" halign="center" transparent="1" backgroundColor="SevenFontBackground" foregroundColor="SevenFont1" />
 		<widget name="menuList" position="18,72" size="816,575" font="Regular; 19" itemHeight="30" scrollbarMode="showOnDemand" transparent="1" zPosition="1" enableWrapAround="1" backgroundColor="SevenFontBackground" />
 		<widget name="description" position="891,278" size="372,200" font="Regular; 22" valign="center" halign="center" transparent="1" backgroundColor="SevenFontBackgroundRight" foregroundColor="SevenFont2" />
-		<eLabel position="70,12" size="708,46" text="Font Settings" font="Regular2; 35" valign="center" halign="center" transparent="1" backgroundColor="SevenFontBackground" foregroundColor="SevenFont1" name="," />
+		<eLabel backgroundColor="SevenBackground" position="6,6" size="842,708" transparent="0" zPosition="-9" />
+		<eLabel backgroundColor="SevenBorder" position="6,6" size="842,2" zPosition="2" />
+		<eLabel backgroundColor="SevenBorder" position="6,714" size="844,2" zPosition="2" />
+		<eLabel backgroundColor="SevenBorder" position="6,6" size="2,708" zPosition="2" />
+		<eLabel backgroundColor="SevenBorder" position="848,6" size="2,708" zPosition="2" />
+		<eLabel backgroundColor="SevenLine" position="18,64" size="816,2" zPosition="2" />
+		<eLabel backgroundColor="SevenLine" foregroundColor="SevenLine" position="18,656" size="816,2" zPosition="2" />
+		<ePixmap pixmap="SevenHD/buttons/key_red1.png" position="22,670" size="32,32" backgroundColor="SevenFontBackground" alphatest="blend" />
+		<ePixmap pixmap="SevenHD/buttons/key_green1.png" position="222,670" size="32,32" backgroundColor="SevenFontBackground" alphatest="blend" />
+		<ePixmap pixmap="SevenHD/buttons/key_yellow1.png" position="422,670" size="32,32" backgroundColor="SevenFontBackground" alphatest="blend" />
+		<ePixmap pixmap="SevenHD/buttons/key_blue1.png" position="622,670" size="32,32" backgroundColor="SevenFontBackground" alphatest="blend" />
+		<widget source="global.CurrentTime" render="Label" position="1154,16" size="100,28" font="Regular;26" halign="right" backgroundColor="SevenFontBackgroundRight" transparent="1" valign="center">
+			<convert type="ClockToText">Default</convert>
+		</widget>
+		<eLabel backgroundColor="SevenBackgroundRight" position="878,6" size="396,708" transparent="0" zPosition="-9" />
+		<eLabel backgroundColor="SevenBorderRight" position="878,6" size="396,2" zPosition="2" />
+		<eLabel backgroundColor="SevenBorderRight" position="878,714" size="398,2" zPosition="2" />
+		<eLabel backgroundColor="SevenBorderRight" position="878,6" size="2,708" zPosition="2" />
+		<eLabel backgroundColor="SevenBorderRight" position="1274,6" size="2,708" zPosition="2" />
+		<widget source="session.CurrentService" render="Label" position="891,88" size="372,46" font="Regular2;35" halign="center" backgroundColor="SevenFontBackgroundRight" transparent="1" valign="center" foregroundColor="SevenFont2">
+			<convert type="SevenHDUpdate">Version</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Label" position="891,134" size="372,28" font="Regular;26" halign="center" backgroundColor="SevenFontBackgroundRight" transparent="1" valign="center" foregroundColor="SevenFont1">
+			<convert type="SevenHDUpdate">Update</convert>
+		</widget>
+		<ePixmap pixmap="SevenHD/back/menumain.png" position="6,6" size="842,708" alphatest="blend" zPosition="-8" />
+		<ePixmap pixmap="SevenHD/back/menuright.png" position="878,6" size="396,708" alphatest="blend" zPosition="-8" />
+	</screen>
+	<screen name="SkinParts" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
+		<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="SkinParts" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
+		<widget name="buttonRed" font="Regular; 20" foregroundColor="SevenButtonText" backgroundColor="SevenFontBackground" halign="left" valign="center" position="64,662" size="148,48" transparent="1" />
+		<widget name="buttonGreen" font="Regular; 20" foregroundColor="SevenButtonText" backgroundColor="SevenFontBackground" halign="left" valign="center" position="264,662" size="148,48" transparent="1" />
+		<widget name="buttonYellow" font="Regular; 20" foregroundColor="SevenButtonText" backgroundColor="SevenFontBackground" halign="left" valign="center" position="464,662" size="148,48" transparent="1" />
+		<widget name="buttonBlue" font="Regular; 20" foregroundColor="SevenButtonText" backgroundColor="SevenFontBackground" halign="left" valign="center" position="664,662" size="148,48" transparent="1" />
+		<widget name="titel" position="70,12" size="708,46" font="Regular; 35" valign="center" halign="center" transparent="1" backgroundColor="SevenFontBackground" foregroundColor="SevenFont1" />
+		<widget name="menuList" position="18,72" size="816,575" font="Regular; 19" itemHeight="30" scrollbarMode="showOnDemand" transparent="1" zPosition="1" enableWrapAround="1" backgroundColor="SevenFontBackground" />
+		<widget name="description" position="891,278" size="372,200" font="Regular; 22" valign="center" halign="center" transparent="1" backgroundColor="SevenFontBackgroundRight" foregroundColor="SevenFont2" />
 		<eLabel backgroundColor="SevenBackground" position="6,6" size="842,708" transparent="0" zPosition="-9" />
 		<eLabel backgroundColor="SevenBorder" position="6,6" size="842,2" zPosition="2" />
 		<eLabel backgroundColor="SevenBorder" position="6,714" size="844,2" zPosition="2" />
@@ -2776,4 +2805,13 @@
 		<panel name="template_menu_left_button" />
 		<panel name="template_colorkey_text" />
 	</screen>
+			<!-- NamezapSetup */-->
+	<screen backgroundColor="transparent" flags="wfNoBorder" name="NamezapSetup" position="0,0" size="1280,720" title="Namezap Setup">
+		<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="NamezapSetup" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
+		<widget name="config" position="70,120" size="708,455" transparent="1" zPosition="2" backgroundColor="SevenFontBackground" foregroundColor="SevenFont1" />
+		<widget font="Regular2; 18" halign="center" name="help" position="70,585" size="708,40" valign="center" backgroundColor="SevenFontBackground" foregroundColor="SevenFont2" transparent="1" />
+		<panel name="template_menu_left_button" />
+		<panel name="template_colorkey_text" />
+	</screen>
+			
 		<!-- plugins -->

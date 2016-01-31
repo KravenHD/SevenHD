@@ -30,8 +30,8 @@
 		<widget backgroundColor="SevenFontBackRightCS" font="Regular2; 22" foregroundColor="SevenPrimeCS" position="805,626" render="Label" size="453,30" source="ServiceEvent" transparent="1" zPosition="5" noWrap="1" halign="left">
 			<convert type="SevenHDNextEvents">PrimeTime,noDuration</convert>
 		</widget>
-		<widget backgroundColor="SevenFontBackCS" font="Regular;22" foregroundColor="SevenDestcriptionCS" halign="center" position="18,626" render="Label" size="530,30" source="session.CurrentService" transparent="1" valign="center">
-			<convert type="SevenHDExtraInfo">TransponderInfo</convert>
+		<widget backgroundColor="SevenFontBackCS" font="Regular;22" foregroundColor="SevenDestcriptionCS" halign="center" position="18,626" render="Label" size="530,30" source="ServiceEvent" transparent="1" valign="center">
+			<convert type="SevenHDServiceName2">%O  %s  %F %p %Y %f %M %b</convert>
 		</widget>
 		<eLabel backgroundColor="SevenLineCS" position="18,623" size="530,2" zPosition="2" />
 		<panel name="template_menu_cs9_button" />

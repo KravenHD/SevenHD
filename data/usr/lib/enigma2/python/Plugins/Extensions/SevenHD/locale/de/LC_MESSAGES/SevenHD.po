@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: SevenHD\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-10-26 18:55+0100\n"
-"PO-Revision-Date: 2016-01-26 23:05+0100\n"
+"PO-Revision-Date: 2016-01-28 16:06+0100\n"
 "Last-Translator: mike99 <mike99@mail.to>\n"
 "Language-Team: kraven & mike99\n"
 "Language: de\n"
@@ -1747,9 +1747,6 @@ msgstr "Stadt/PLZ"
 msgid "Search by"
 msgstr "Suchen über"
 
-msgid "Preview Result"
-msgstr "Zeige Egebnisse"
-
 msgid "Kraven dark"
 msgstr "Kraven Dunkel"
 
@@ -1803,3 +1800,54 @@ msgstr "Primäre Linien"
 
 msgid "secondary line"
 msgstr "Sekundäre Linien"
+
+msgid "skinpart setting"
+msgstr "Skinpart-Einstellungen"
+
+msgid "Delete Screen"
+msgstr "Screen löschen"
+
+msgid "Extract Screen"
+msgstr "Screen extrahieren"
+
+msgid "Show Preview"
+msgstr "Vorschau"
+
+msgid "Menu Settings"
+msgstr "Menü-Einstellungen"
+
+msgid "Main Settings"
+msgstr "Haupt-Einstellungen"
+
+msgid "Plugin Settings"
+msgstr "Plugin-Einstellungen"
+
+msgid "Infobar Settings"
+msgstr "Infobar-Einstellungen"
+
+msgid "Infobar Extra Settings"
+msgstr "Infobar-Extra-Einstellungen"
+
+msgid "Channel Settings"
+msgstr "Kanalauswahl-Einstellungen"
+
+msgid "Font Settings"
+msgstr "Schrift-Einstellungen"
+
+msgid "Skin Part"
+msgstr "SkinPart-Einstellungen"
+
+msgid "Other Settings"
+msgstr "Sonstige-Einstellungen"
+
+msgid "Preview Result"
+msgstr "Zeige Resultate"
+
+msgid "Defaults"
+msgstr "Zurücksetzen"
+
+msgid "_____________________________skinparts_____________________________________"
+msgstr "_____________________________SkinParts_____________________________________"
+
+msgid "use own skinparts"
+msgstr "Nutze eigene SkinParts"

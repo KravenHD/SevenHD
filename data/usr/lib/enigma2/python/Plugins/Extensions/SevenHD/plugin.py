@@ -16,6 +16,7 @@
 from GlobalImport import *
 from OnlineUpdate import *
 from ChangeSkin import *
+from SkinParts import SkinParts
 from FontSettings import FontSettings
 from MainSettings import MainSettings
 from MenuSettings import MenuSettings
@@ -72,12 +73,12 @@ def translateBlock(block):
 class SevenHD(Screen):
     skin =  """
                   <screen name="SevenHD-Setup" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
-                         <eLabel font="Regular; 20" foregroundColor="#00f23d21" backgroundColor="#00000000" halign="left" valign="center" position="64,662" size="148,48" text="Cancel" transparent="1" />
-                         <eLabel font="Regular; 20" foregroundColor="#00389416" backgroundColor="#00000000" halign="left" valign="center" position="264,662" size="148,48" text="Save" transparent="1" />
-                         <eLabel font="Regular; 20" foregroundColor="#00e5b243" backgroundColor="#00000000" halign="left" valign="center" position="464,662" size="148,48" text="Defaults" transparent="1" />
-                         <eLabel font="Regular; 20" foregroundColor="#000064c7" backgroundColor="#00000000" halign="left" valign="center" position="664,662" size="148,48" text="Extras/FAQ" transparent="1" />
+                         <widget name="buttonRed" font="Regular; 20" foregroundColor="#00f23d21" backgroundColor="#00000000" halign="left" valign="center" position="64,662" size="148,48" transparent="1" />
+                         <widget name="buttonGreen" font="Regular; 20" foregroundColor="#00389416" backgroundColor="#00000000" halign="left" valign="center" position="264,662" size="148,48" transparent="1" />
+                         <widget name="buttonYellow" font="Regular; 20" foregroundColor="#00e5b243" backgroundColor="#00000000" halign="left" valign="center" position="464,662" size="148,48" transparent="1" />
+                         <widget name="buttonBlue" font="Regular; 20" foregroundColor="#000064c7" backgroundColor="#00000000" halign="left" valign="center" position="664,662" size="148,48" transparent="1" />
                          <widget name="menuList" position="18,72" size="816,575" itemHeight="36" scrollbarMode="showOnDemand" transparent="1" zPosition="1" backgroundColor="#00000000" />
-                         <eLabel position="70,12" size="708,46" text="SevenHD" font="Regular; 35" valign="center" halign="center" transparent="1" backgroundColor="#00000000" foregroundColor="#00ffffff" name="," />
+                         <widget name="titel" position="70,12" size="708,46" font="Regular; 35" valign="center" halign="center" transparent="1" backgroundColor="#00000000" foregroundColor="#00ffffff" />
                          <widget name="helperimage" position="891,274" size="372,209" zPosition="1" backgroundColor="#00000000" />
                          <widget backgroundColor="#00000000" font="Regular2; 34" foregroundColor="#00ffffff" position="70,12" render="Label" size="708,46" source="Title" transparent="1" halign="center" valign="center" noWrap="1" />
                          <eLabel backgroundColor="#00000000" position="6,6" size="842,708" transparent="0" zPosition="-9" foregroundColor="#00ffffff" />
@@ -116,6 +117,16 @@ class SevenHD(Screen):
         self.Scale = AVSwitch().getFramebufferScale()
         self.PicLoad = ePicLoad()
         self["helperimage"] = Pixmap()
+        self["buttonRed"] = Label()
+        self["buttonGreen"] = Label()
+        self["buttonYellow"] = Label()
+        self["buttonBlue"] = Label()
+        self["titel"] = Label()
+        self["buttonRed"].setText(_("Cancel"))
+        self["buttonGreen"].setText(_("Save"))
+        self["buttonYellow"].setText(_("Restart"))
+        self["buttonBlue"] = Label("Extras/FAQ")
+        self["titel"].setText(_("SevenHD"))
 
         self["actions"] = ActionMap(
             [
@@ -143,6 +154,8 @@ class SevenHD(Screen):
         list.append(MenuEntryItem(_("channel selection"), "ChannelSettings"))
         if fileExists(MAIN_SKIN_PATH + 'skin.xml'):
            list.append(MenuEntryItem(_("font setting"), "FontSettings"))
+        if config.plugins.SevenHD.skin_mode.value == '1':
+           list.append(MenuEntryItem(_("skinpart setting"), "SkinParts"))
         list.append(MenuEntryItem(_("other settings"), "SonstigeSettings"))
         list.append(MenuEntryItem(_("system osd settings"), "SystemOSDSettings"))
         if CREATOR != 'OpenMips':
@@ -192,9 +205,11 @@ class SevenHD(Screen):
             elif selectedKey == "SonstigeSettings":
                imageUrl = MAIN_IMAGE_PATH + str("OTHER.jpg")
             elif selectedKey == "SystemOSDSettings":
-               imageUrl = MAIN_IMAGE_PATH + str("OSD.jpg")
+               imageUrl = MAIN_IMAGE_PATH + str("OSD.jpg") 
             elif selectedKey == "SystemChannelSettings":
                imageUrl = MAIN_IMAGE_PATH + str("SCS.jpg")
+            elif selectedKey == "SkinParts":
+               imageUrl = MAIN_IMAGE_PATH + str("SP.jpg")
             elif selectedKey == "OSDPositionSetup":
                imageUrl = MAIN_IMAGE_PATH + str("OSDPositionSetup.jpg")
                            
@@ -229,9 +244,11 @@ class SevenHD(Screen):
             elif selectedKey == "SonstigeSettings":
                 self.session.open(SonstigeSettings)
             elif selectedKey == "SystemOSDSettings":
-                self.session.open(Setup, "userinterface")
+                self.session.open(Setup, "userinterface")   
             elif selectedKey == "SystemChannelSettings":
                 self.session.open(Setup, "channelselection")
+            elif selectedKey == "SkinParts":
+                self.session.open(SkinParts)
             elif selectedKey == "OSDPositionSetup":
                 if OSDScreenPosition_plugin:
                    self.session.open(OSDScreenPosition)
@@ -750,24 +767,42 @@ class SevenHD(Screen):
 			self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.MSNWeather.value + XML)
 			self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.MSNWeather.value + XML)         
                
-                ###cooltv XML
+                ###cooltv
 		self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.CoolTVGuide.value + XML)
                 self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.CoolTVGuide.value + XML)      
                 
-                ###eventview XML
+                ###eventview
 		self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.EventView.value + XML)
                 self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.EventView.value + XML)      
+                
+                ###epgselection
+		self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.EPGSelection.value + XML)
+                self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.EPGSelection.value + XML)      
+                
+                ###timeredit
+		self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.TimerEdit.value + XML)
+                self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.TimerEdit.value + XML)      
                 
                 ###custom-main XML
 		self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.Image.value + XML)
                 self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.Image.value + XML)        
                 
                 ###skin-user
-		try:
-		   self.appendSkinFile(MAIN_DATA_PATH + "skin-user.xml")
-		except:
-		   pass
-		
+		if config.plugins.SevenHD.use_skin_parts.value != 'none':
+                   if config.plugins.SevenHD.use_skin_parts.value == 'skin_user':
+                      try:
+		         self.appendSkinFile(MAIN_DATA_PATH + "skin-user.xml")
+		      except:
+		         pass
+                   else:
+		       try:
+                          list_dir = os.listdir(MAIN_USER_PATH)
+                          for part in list_dir:
+                             if part.endswith('.part'): 
+                                self.appendSkinFile(MAIN_USER_PATH + part)
+                       except:
+		           pass
+		           
                 ###skin-end
 		self.appendSkinFile(MAIN_DATA_PATH + "skin-end.xml")
                 self.debug(MAIN_DATA_PATH + "skin-end.xml")       

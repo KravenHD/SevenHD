@@ -36,12 +36,12 @@ def translateBlock(block):
 class SonstigeSettings(ConfigListScreen, Screen):
     skin = """
                   <screen name="SevenHD" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
-                         <eLabel font="Regular; 20" foregroundColor="#00f23d21" backgroundColor="#00000000" halign="left" valign="center" position="64,662" size="148,48" text="Cancel" transparent="1" />
-                         <eLabel font="Regular; 20" foregroundColor="#00389416" backgroundColor="#00000000" halign="left" valign="center" position="264,662" size="148,48" text="Save" transparent="1" />
-                         <eLabel font="Regular; 20" foregroundColor="#00e5b243" backgroundColor="#00000000" halign="left" valign="center" position="464,662" size="148,48" text="Defaults" transparent="1" />
-                         <widget name="blue" font="Regular; 20" foregroundColor="#000064c7" backgroundColor="#00000000" halign="left" valign="center" position="664,662" size="148,48" transparent="1" />
+                         <widget name="buttonRed" font="Regular; 20" foregroundColor="#00f23d21" backgroundColor="#00000000" halign="left" valign="center" position="64,662" size="148,48" transparent="1" />
+                         <widget name="buttonGreen" font="Regular; 20" foregroundColor="#00389416" backgroundColor="#00000000" halign="left" valign="center" position="264,662" size="148,48" transparent="1" />
+                         <widget name="buttonYellow" font="Regular; 20" foregroundColor="#00e5b243" backgroundColor="#00000000" halign="left" valign="center" position="464,662" size="148,48" transparent="1" />
+                         <widget name="buttonBlue" font="Regular; 20" foregroundColor="#000064c7" backgroundColor="#00000000" halign="left" valign="center" position="664,662" size="148,48" transparent="1" />
                          <widget name="config" position="18,72" size="816,575" scrollbarMode="showOnDemand" transparent="1" zPosition="1" backgroundColor="#00000000" />
-                         <eLabel position="70,12" size="708,46" text="Other Settings" font="Regular; 35" valign="center" halign="center" transparent="1" backgroundColor="#00000000" foregroundColor="#00ffffff" name="," />
+                         <widget name="titel" position="70,12" size="708,46" font="Regular; 35" valign="center" halign="center" transparent="1" backgroundColor="#00000000" foregroundColor="#00ffffff" />
                          <widget name="helperimage" position="891,274" size="372,209" zPosition="1" backgroundColor="#00000000" />
                          <widget name="description" position="891,490" size="372,200" font="Regular; 22" valign="center" halign="center" transparent="1" backgroundColor="#00000000" foregroundColor="#00ffffff" />
                          <widget backgroundColor="#00000000" font="Regular2; 34" foregroundColor="#00ffffff" position="70,12" render="Label" size="708,46" source="Title" transparent="1" halign="center" valign="center" noWrap="1" />
@@ -80,10 +80,18 @@ class SonstigeSettings(ConfigListScreen, Screen):
         self.PicLoad = ePicLoad()
         self["helperimage"] = Pixmap()
         self["description"] = Label()
-        self["blue"] = Label()
+        self["buttonRed"] = Label()
+        self["buttonGreen"] = Label()
+        self["buttonYellow"] = Label()
+        self["buttonBlue"] = Label()
+        self["titel"] = Label()
+        self["buttonRed"].setText(_("Cancel"))
+        self["buttonGreen"].setText(_("Save"))
+        self["buttonYellow"].setText(_("Defaults"))
+        self["titel"].setText(_("Other Settings"))
         
         if config.plugins.SevenHD.grabdebug.value:
-           self["blue"].setText('Screenshot')
+           self["buttonBlue"].setText('Screenshot')
            
         ConfigListScreen.__init__(
             self,
@@ -146,8 +154,13 @@ class SonstigeSettings(ConfigListScreen, Screen):
            list.append(getConfigListEntry(_("autoupdate plugin startinfo"),                config.plugins.SevenHD.AutoUpdatePluginStart, 'Fragt beim PluginStart ob ein neues Update installiert werden soll.',                   '4', 'True'))
         else:
            list.append(getConfigListEntry(_("autoupdate plugin startinfo"),                config.plugins.SevenHD.AutoUpdatePluginStart, 'Fragt beim PluginStart ob ein neues Update installiert werden soll.',                   '4', 'none'))
+        list.append(getConfigListEntry(_('_____________________________skinparts_____________________________________'), ))
+        if config.plugins.SevenHD.use_skin_parts.value == 'none':
+           list.append(getConfigListEntry(_("use own skinparts"),                          config.plugins.SevenHD.use_skin_parts,        'Auswahl ob die skin-user.xml oder screen_xxxxx.part ins Image einflie\xc3\x9fen soll.', '4', 'none'))
+        else:
+           list.append(getConfigListEntry(_("use own skinparts"),                          config.plugins.SevenHD.use_skin_parts,        'Auswahl ob die skin-user.xml oder screen_xxxxx.part ins Image einflie\xc3\x9fen soll.', '4', 'True'))
         list.append(getConfigListEntry(_('_____________________________FAQ___________________________________________'), ))
-        list.append(getConfigListEntry(_("language"),                                           config.plugins.SevenHD.faq_language,          'Stellt die Ausgabesprache der FAQ ein.',                                                '4', 'language'))
+        list.append(getConfigListEntry(_("language"),                                      config.plugins.SevenHD.faq_language,          'Stellt die Ausgabesprache der FAQ ein.',                                                '4', 'language'))
         return list
 
     def __selectionChanged(self):
@@ -215,6 +228,7 @@ class SonstigeSettings(ConfigListScreen, Screen):
         self.setInputToDefault(config.plugins.SevenHD.AutoUpdateInfo)
         self.setInputToDefault(config.plugins.SevenHD.AutoUpdatePluginStart)
         self.setInputToDefault(config.plugins.SevenHD.faq_language)
+        self.setInputToDefault(config.plugins.SevenHD.use_skin_parts)
         self.save()
 
     def setInputToDefault(self, configItem):

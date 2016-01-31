@@ -1,6 +1,6 @@
 from Components.VariableText import VariableText
 from Renderer import Renderer
-from enigma import eLabel, eEPGCache
+from enigma import eLabel, eEPGCache, eTimer
 from time import localtime
 
 class SevenHDNextEvents(VariableText, Renderer):
@@ -9,7 +9,9 @@ class SevenHDNextEvents(VariableText, Renderer):
 		Renderer.__init__(self)
 		VariableText.__init__(self)
 		self.epgcache = eEPGCache.getInstance()
-
+                self.timer = eTimer()
+		self.timer.callback.append(self.refresh)
+		
 	def applySkin(self, desktop, parent):
 		self.number = 0
 		attribs = [ ]
@@ -26,15 +28,18 @@ class SevenHDNextEvents(VariableText, Renderer):
 
 	GUI_WIDGET = eLabel
 
-	def connect(self, source):
-		Renderer.connect(self, source)
-		self.changed((self.CHANGED_DEFAULT,))
-
+	def refresh(self):
+            self.changed((self.CHANGED_DEFAULT,))
+            return
+        
+        def onShow(self):
+		self.timer.start(200)
+    
 	def changed(self, what):
 		if what[0] == self.CHANGED_CLEAR:
 			self.text = ""
 		else:
-			list = self.epgcache.lookupEvent([ 'BDT', (self.source.text, 0, -1, 360) ])
+                	list = self.epgcache.lookupEvent([ 'BDT', (self.source.text, 0, -1, 360) ])
 			text = ""
 			if len(list):
 				if self.lines:
@@ -59,7 +64,7 @@ class SevenHDNextEvents(VariableText, Renderer):
 						i += 1
 						if i > 7:
 							break
-			self.text = text
+		        self.text = text
 
 	def build_eventstr(self, event):
 		begin = localtime(event[0])

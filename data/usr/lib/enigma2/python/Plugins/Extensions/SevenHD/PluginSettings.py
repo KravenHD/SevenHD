@@ -36,12 +36,12 @@ def translateBlock(block):
 class PluginSettings(ConfigListScreen, Screen):
     skin = """
                   <screen name="SevenHD" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
-                         <eLabel font="Regular; 20" foregroundColor="#00f23d21" backgroundColor="#00000000" halign="left" valign="center" position="64,662" size="148,48" text="Cancel" transparent="1" />
-                         <eLabel font="Regular; 20" foregroundColor="#00389416" backgroundColor="#00000000" halign="left" valign="center" position="264,662" size="148,48" text="Save" transparent="1" />
-                         <eLabel font="Regular; 20" foregroundColor="#00e5b243" backgroundColor="#00000000" halign="left" valign="center" position="464,662" size="148,48" text="Defaults" transparent="1" />
-                         <widget name="blue" font="Regular; 20" foregroundColor="#000064c7" backgroundColor="#00000000" halign="left" valign="center" position="664,662" size="148,48" transparent="1" />
+                         <widget name="buttonRed" font="Regular; 20" foregroundColor="#00f23d21" backgroundColor="#00000000" halign="left" valign="center" position="64,662" size="148,48" transparent="1" />
+                         <widget name="buttonGreen" font="Regular; 20" foregroundColor="#00389416" backgroundColor="#00000000" halign="left" valign="center" position="264,662" size="148,48" transparent="1" />
+                         <widget name="buttonYellow" font="Regular; 20" foregroundColor="#00e5b243" backgroundColor="#00000000" halign="left" valign="center" position="464,662" size="148,48" transparent="1" />
+                         <widget name="buttonBlue" font="Regular; 20" foregroundColor="#000064c7" backgroundColor="#00000000" halign="left" valign="center" position="664,662" size="148,48" transparent="1" />
                          <widget name="config" position="18,72" size="816,575" scrollbarMode="showOnDemand" transparent="1" zPosition="1" backgroundColor="#00000000" />
-                         <eLabel position="70,12" size="708,46" text="Plugin Settings" font="Regular; 35" valign="center" halign="center" transparent="1" backgroundColor="#00000000" foregroundColor="#00ffffff" name="," />
+                         <widget name="titel" position="70,12" size="708,46" font="Regular; 35" valign="center" halign="center" transparent="1" backgroundColor="#00000000" foregroundColor="#00ffffff" />
                          <widget name="helperimage" position="891,274" size="372,209" zPosition="1" backgroundColor="#00000000" />
                          <widget name="description" position="891,490" size="372,200" font="Regular; 22" valign="center" halign="center" transparent="1" backgroundColor="#00000000" foregroundColor="#00ffffff" />
                          <widget backgroundColor="#00000000" font="Regular2; 34" foregroundColor="#00ffffff" position="70,12" render="Label" size="708,46" source="Title" transparent="1" halign="center" valign="center" noWrap="1" />
@@ -80,7 +80,15 @@ class PluginSettings(ConfigListScreen, Screen):
         self.PicLoad = ePicLoad()
         self["helperimage"] = Pixmap()
         self["description"] = Label()
-        self["blue"] = Label()
+        self["buttonRed"] = Label()
+        self["buttonGreen"] = Label()
+        self["buttonYellow"] = Label()
+        self["buttonBlue"] = Label()
+        self["titel"] = Label()
+        self["buttonRed"].setText(_("Cancel"))
+        self["buttonGreen"].setText(_("Save"))
+        self["buttonYellow"].setText(_("Defaults"))
+        self["titel"].setText(_("Plugin Settings"))
         
         if config.plugins.SevenHD.grabdebug.value:
            self["blue"].setText('Screenshot')
@@ -118,6 +126,8 @@ class PluginSettings(ConfigListScreen, Screen):
         list = []
         list.append(getConfigListEntry(_('_______________________________plugins__________________________________________'), ))                                           
         list.append(getConfigListEntry(_("Event View"),          config.plugins.SevenHD.EventView,              'Auswahl der Darstellung von Event View.',                    '1',     ''))
+        list.append(getConfigListEntry(_("EPG Selection"),       config.plugins.SevenHD.EPGSelection,           'Auswahl der Darstellung von EPG Selection.',                 '1',     ''))
+        list.append(getConfigListEntry(_("Timer Edit"),          config.plugins.SevenHD.TimerEdit,              'Auswahl der Darstellung von Timer Edit.',                    '1',     ''))
         list.append(getConfigListEntry(_("Movie Selection"),     config.plugins.SevenHD.MovieSelectionStyle,    'Auswahl der Covergr\xc3\xb6\xc3\x9fe.',                      '1',     ''))
         if not fileExists(PLUGIN_PATH + "/Extensions/EnhancedMovieCenter/plugin.pyo"):
            list.append(getConfigListEntry(_('{:<114}{:>1}'.format('EnhancedMovieCenter','not installed')), ))
@@ -216,7 +226,9 @@ class PluginSettings(ConfigListScreen, Screen):
         self.setInputToDefault(config.plugins.SevenHD.NumberZapExt)
         self.setInputToDefault(config.plugins.SevenHD.EMCStyle)
         self.setInputToDefault(config.plugins.SevenHD.MovieSelectionStyle)
+        self.setInputToDefault(config.plugins.SevenHD.EPGSelection)
         self.setInputToDefault(config.plugins.SevenHD.EventView)
+        self.setInputToDefault(config.plugins.SevenHD.TimerEdit)
         self.setInputToDefault(config.plugins.SevenHD.CoolTVGuide)
         self.setInputToDefault(config.plugins.SevenHD.use_alba_skin)
         self.setInputToDefault(config.plugins.SevenHD.use_mp_skin)

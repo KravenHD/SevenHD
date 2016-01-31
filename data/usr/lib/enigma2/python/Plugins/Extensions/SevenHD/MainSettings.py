@@ -36,12 +36,12 @@ def translateBlock(block):
 class MainSettings(ConfigListScreen, Screen):
     skin = """
                   <screen name="SevenHD" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
-                         <eLabel font="Regular; 20" foregroundColor="#00f23d21" backgroundColor="#00000000" halign="left" valign="center" position="64,662" size="148,48" text="Cancel" transparent="1" />
-                         <eLabel font="Regular; 20" foregroundColor="#00389416" backgroundColor="#00000000" halign="left" valign="center" position="264,662" size="148,48" text="Save" transparent="1" />
-                         <eLabel font="Regular; 20" foregroundColor="#00e5b243" backgroundColor="#00000000" halign="left" valign="center" position="464,662" size="148,48" text="Defaults" transparent="1" />
-                         <widget name="blue" font="Regular; 20" foregroundColor="#000064c7" backgroundColor="#00000000" halign="left" valign="center" position="664,662" size="148,48" transparent="1" />
+                         <widget name="buttonRed" font="Regular; 20" foregroundColor="#00f23d21" backgroundColor="#00000000" halign="left" valign="center" position="64,662" size="148,48" transparent="1" />
+                         <widget name="buttonGreen" font="Regular; 20" foregroundColor="#00389416" backgroundColor="#00000000" halign="left" valign="center" position="264,662" size="148,48" transparent="1" />
+                         <widget name="buttonYellow" font="Regular; 20" foregroundColor="#00e5b243" backgroundColor="#00000000" halign="left" valign="center" position="464,662" size="148,48" transparent="1" />
+                         <widget name="buttonBlue" font="Regular; 20" foregroundColor="#000064c7" backgroundColor="#00000000" halign="left" valign="center" position="664,662" size="148,48" transparent="1" />
                          <widget name="config" position="18,72" size="816,575" scrollbarMode="showOnDemand" transparent="1" zPosition="1" backgroundColor="#00000000" />
-                         <eLabel position="70,12" size="708,46" text="Main Settings" font="Regular; 35" valign="center" halign="center" transparent="1" backgroundColor="#00000000" foregroundColor="#00ffffff" name="," />
+                         <widget name="titel" position="70,12" size="708,46" font="Regular; 35" valign="center" halign="center" transparent="1" backgroundColor="#00000000" foregroundColor="#00ffffff" />
                          <widget name="colorthump" position="891,220" size="372,30" zPosition="1" backgroundColor="#00000000" alphatest="blend" />
                          <widget name="helperimage" position="891,274" size="372,209" zPosition="1" backgroundColor="#00000000" />
                          <widget name="description" position="891,490" size="372,200" font="Regular; 22" valign="center" halign="center" transparent="1" backgroundColor="#00000000" foregroundColor="#00ffffff" />
@@ -83,10 +83,19 @@ class MainSettings(ConfigListScreen, Screen):
         self["colorthump"] = Pixmap()
         self["helperimage"] = Pixmap()
         self["description"] = Label()
-        self["blue"] = Label()
+        self["buttonRed"] = Label()
+        self["buttonGreen"] = Label()
+        self["buttonYellow"] = Label()
+        self["buttonBlue"] = Label()
+        self["titel"] = Label()
+        self["buttonRed"].setText(_("Cancel"))
+        self["buttonGreen"].setText(_("Save"))
+        self["buttonYellow"].setText(_("Defaults"))
+        self["titel"].setText(_("Main Settings"))
+        self["buttonBlue"] = Label()
         
         if config.plugins.SevenHD.grabdebug.value:
-           self["blue"].setText('Screenshot')
+           self["buttonBlue"].setText('Screenshot')
         
         ConfigListScreen.__init__(
             self,

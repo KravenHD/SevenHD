@@ -1,0 +1,13 @@
+		<!-- TimerEditList -->
+	<screen backgroundColor="transparent" flags="wfNoBorder" name="TimerEditList" position="0,0" size="1280,720" title="Timer Editor">
+		<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="TimerEditList" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
+		<widget name="timerlist" rowSplit="26" iconMargin="5" satPosLeft="160" itemHeight="50" setFont="Regular;18" setEventNameFont="Regular;20" setServiceNameFont="Regular;20" position="496,80" size="766,550" backgroundColor="SevenFontBackground" enableWrapAround="1" transparent="1" />
+		<widget name="description" position="71,315" size="400,315" font="Regular2; 22" foregroundColor="SevenFont2" halign="center" backgroundColor="SevenFontBackground" valign="center" transparent="1" />
+		<widget source="session.VideoPicture" render="Pig" position="72,78" size="400,220" backgroundColor="transparent" zPosition="2" />
+		<eLabel backgroundColor="SevenLine" position="73,294" size="396,4" zPosition="5" />
+		<eLabel backgroundColor="SevenLine" position="75,76" size="396,4" zPosition="5" />
+		<eLabel backgroundColor="SevenLine" position="468,76" size="4,222" zPosition="5" />
+		<eLabel backgroundColor="SevenLine" position="72,76" size="4,222" zPosition="5" />
+		<panel name="template_menu_full_button" />
+		<panel name="template_colorkey_text" />
+	</screen>

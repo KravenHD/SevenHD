@@ -1,10 +1,10 @@
-#version = '3.6.62'
+#version = '3.6.63'
 import os
 try:
    opkg_info = os.popen("opkg list-installed enigma2-plugin-skins-sevenhd | cut -d ' ' -f3").read()
    version = str(opkg_info.strip().split('+')[0])
 except:
-   version = '3.6.62'
+   version = '3.6.63'
 import re
 import time
 import math
@@ -385,6 +385,19 @@ config.plugins.SevenHD.EventView = ConfigSelection(default="eventviewnopicon", c
 				("eventviewminitv", _("Style 4"))
 				])
 				
+config.plugins.SevenHD.EPGSelection = ConfigSelection(default="epgselectionnopicon", choices = [
+				("epgselectionnopicon", _("Style 1")),
+				("epgselectionpicon", _("Style 2")),
+				("epgselectionthumb", _("Style 3")),
+				("epgselectionminitv", _("Style 4"))
+				])
+				
+config.plugins.SevenHD.TimerEdit = ConfigSelection(default="timereditleft", choices = [
+				("timereditleft", _("Style 1")),
+				("timereditright", _("Style 2")),
+				("timereditminitv", _("Style 3"))
+				])
+				
 config.plugins.SevenHD.use_alba_skin = ConfigYesNo(default = False)
 
 config.plugins.SevenHD.use_mp_skin = ConfigYesNo(default= False)				
@@ -735,6 +748,13 @@ config.plugins.SevenHD.CSMiddleColorTrans = ConfigSelection(default="0a", choice
 
 config.plugins.SevenHD.CSRightColorTrans = ConfigSelection(default="0a", choices = TransList)
 ################################################################################################################################################################
+# SkinParts
+config.plugins.SevenHD.use_skin_parts = ConfigSelection(default="none", choices = [
+				("none", _("off")),
+				("skin_user", _("skin-user.xml")),
+				("skinparts", _("screen_xxxxx.part"))
+				])
+################################################################################################################################################################
 # SonstigesScreen
 				
 config.plugins.SevenHD.debug = ConfigYesNo(default = True)
@@ -838,6 +858,8 @@ myConfigList = [('config.plugins.SevenHD.Image.value = "' + str(config.plugins.S
                 ('config.plugins.SevenHD.CoolTVGuide.value = "' + str(config.plugins.SevenHD.CoolTVGuide.value) + '"'),
                 ('config.plugins.SevenHD.EMCStyle.value = "' + str(config.plugins.SevenHD.EMCStyle.value) + '"'),
                 ('config.plugins.SevenHD.EventView.value = "' + str(config.plugins.SevenHD.EventView.value) + '"'),
+                ('config.plugins.SevenHD.TimerEdit.value = "' + str(config.plugins.SevenHD.TimerEdit.value) + '"'),
+                ('config.plugins.SevenHD.EPGSelection.value = "' + str(config.plugins.SevenHD.EPGSelection.value) + '"'),
                 ('config.plugins.SevenHD.MovieSelectionStyle.value = "' + str(config.plugins.SevenHD.MovieSelectionStyle.value) + '"'),
                 ('config.plugins.SevenHD.ProgressLinePlug.value = "' + str(config.plugins.SevenHD.ProgressLinePlug.value) + '"'),
                 ('config.plugins.SevenHD.ProgressLineIB.value = "' + str(config.plugins.SevenHD.ProgressLineIB.value) + '"'),
