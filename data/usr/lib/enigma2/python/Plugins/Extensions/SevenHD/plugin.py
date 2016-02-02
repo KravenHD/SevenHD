@@ -546,11 +546,13 @@ class SevenHD(Screen):
                    self.skinSearchAndReplace.append(["SevenHD/progresscs/progresscs52.png","SevenHD/progresscs/progresscs52_1.png"])
                    self.skinSearchAndReplace.append(["SevenHD/progresscs/progresscs362.png","SevenHD/progresscs/progresscs362_1.png"])
                    self.skinSearchAndReplace.append(["SevenHD/progresscs/progresscs426.png","SevenHD/progresscs/progresscs426_1.png"])
+                   self.skinSearchAndReplace.append(["SevenHD/progresscs/progresscs514.png","SevenHD/progresscs/progresscs514_1.png"])
                 else:
                    self.skinSearchAndReplace.append(["00fffff4", config.plugins.SevenHD.ProgressCS.value])
                    self.skinSearchAndReplace.append(['picServiceEventProgressbar="SevenHD/progresscs/progresscs52.png"',""])
                    self.skinSearchAndReplace.append(['pixmap="SevenHD/progresscs/progresscs362.png"',""])
                    self.skinSearchAndReplace.append(['pixmap="SevenHD/progresscs/progresscs426.png"',""])
+                   self.skinSearchAndReplace.append(['pixmap="SevenHD/progresscs/progresscs514.png"',""])
                        
                 ### ProgressListCS
                 if config.plugins.SevenHD.ProgressListCS.value == "progresslistcs":
@@ -693,7 +695,7 @@ class SevenHD(Screen):
                 self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.InfobarStyle.value + "-middle.xml")         
                 
                 ###Channelname 2nd Infobar
-                if not config.plugins.SevenHD.SIB.value in ('-minitv2','-right','-picon'):
+                if not config.plugins.SevenHD.SIB.value in ('-minitv2','-right','-picon','-double'):
                    if config.plugins.SevenHD.InfobarChannelName.value == "none":
                       self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.InfobarChannelName.value + XML)
                       self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.InfobarChannelName.value + XML) 
@@ -708,7 +710,7 @@ class SevenHD(Screen):
                       self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.InfobarStyle.value + "-ICNameandNumber.xml") 
                 
                 ###clock-style xml 2nd Infobar
-                if not config.plugins.SevenHD.SIB.value in ('-minitv2','-right','-picon'):
+                if not config.plugins.SevenHD.SIB.value in ('-minitv2','-right','-picon','-double'):
                    if config.plugins.SevenHD.ClockStyle.value == 'clock-weather':
                       self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.ClockStyle.value + str(config.plugins.SevenHD.weather_server.value) + XML)
                       self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.ClockStyle.value + str(config.plugins.SevenHD.weather_server.value) + XML)

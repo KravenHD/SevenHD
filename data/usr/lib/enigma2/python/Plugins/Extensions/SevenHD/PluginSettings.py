@@ -91,7 +91,7 @@ class PluginSettings(ConfigListScreen, Screen):
         self["titel"].setText(_("Plugin Settings"))
         
         if config.plugins.SevenHD.grabdebug.value:
-           self["blue"].setText('Screenshot')
+           self["buttonBlue"].setText('Screenshot')
            
         ConfigListScreen.__init__(
             self,
@@ -125,33 +125,38 @@ class PluginSettings(ConfigListScreen, Screen):
         
         list = []
         list.append(getConfigListEntry(_('_______________________________plugins__________________________________________'), ))                                           
-        list.append(getConfigListEntry(_("Event View"),          config.plugins.SevenHD.EventView,              'Auswahl der Darstellung von Event View.',                    '1',     ''))
-        list.append(getConfigListEntry(_("EPG Selection"),       config.plugins.SevenHD.EPGSelection,           'Auswahl der Darstellung von EPG Selection.',                 '1',     ''))
-        list.append(getConfigListEntry(_("Timer Edit"),          config.plugins.SevenHD.TimerEdit,              'Auswahl der Darstellung von Timer Edit.',                    '1',     ''))
-        list.append(getConfigListEntry(_("Movie Selection"),     config.plugins.SevenHD.MovieSelectionStyle,    'Auswahl der Covergr\xc3\xb6\xc3\x9fe.',                      '1',     ''))
+        list.append(getConfigListEntry(_("Event View"),                config.plugins.SevenHD.EventView,              'Auswahl der Darstellung von Event View.',                    '1',     ''))
+        list.append(getConfigListEntry(_("EPG Selection"),             config.plugins.SevenHD.EPGSelection,           'Auswahl der Darstellung von EPG Selection.',                 '1',     ''))
+        if config.plugins.SevenHD.use_epg_thumb.value:
+           list.append(getConfigListEntry(_("graphical epg preview"),  config.plugins.SevenHD.use_epg_thumb,          'EPG Vorschau',                                               '4', 'Preview'))
+           list.append(getConfigListEntry(_("graphical epg cache"),    config.plugins.SevenHD.epg_thumb_cache,        'EPG Vorschau Speicherort',                                   '4', 'PreviewSave'))
+        else:
+           list.append(getConfigListEntry(_("graphical epg preview"),  config.plugins.SevenHD.use_epg_thumb,          'EPG Vorschau',                                               '4', 'PreviewNone'))
+        list.append(getConfigListEntry(_("Timer Edit"),                config.plugins.SevenHD.TimerEdit,              'Auswahl der Darstellung von Timer Edit.',                    '1',     ''))
+        list.append(getConfigListEntry(_("Movie Selection"),           config.plugins.SevenHD.MovieSelectionStyle,    'Auswahl der Covergr\xc3\xb6\xc3\x9fe.',                      '1',     ''))
         if not fileExists(PLUGIN_PATH + "/Extensions/EnhancedMovieCenter/plugin.pyo"):
            list.append(getConfigListEntry(_('{:<114}{:>1}'.format('EnhancedMovieCenter','not installed')), ))
         else:   
-           list.append(getConfigListEntry(_("EMC"),              config.plugins.SevenHD.EMCStyle,               'Auswahl der Covergr\xc3\xb6\xc3\x9fe.',                      '1',     ''))
+           list.append(getConfigListEntry(_("EMC"),                    config.plugins.SevenHD.EMCStyle,               'Auswahl der Covergr\xc3\xb6\xc3\x9fe.',                      '1',     ''))
            config.EMC.skin_able.value = True
            config.EMC.skin_able.save()
         if os.path.isdir(PLUGIN_PATH + "Extensions/Albatros") :
            if config.plugins.SevenHD.use_alba_skin.value:
-              list.append(getConfigListEntry(_("Use Albatros Skin"),   config.plugins.SevenHD.use_alba_skin,    'Wenn ja wird das SevenHD Skin für Albatros installiert.',    '1',     ''))
+              list.append(getConfigListEntry(_("Use Albatros Skin"),   config.plugins.SevenHD.use_alba_skin,          'Wenn ja wird das SevenHD Skin für Albatros installiert.',    '1',     ''))
            else:
-              list.append(getConfigListEntry(_("Use Albatros Skin"),   config.plugins.SevenHD.use_alba_skin,    'Wenn ja wird das SevenHD Skin für Albatros installiert.',    '4',     'none'))
+              list.append(getConfigListEntry(_("Use Albatros Skin"),   config.plugins.SevenHD.use_alba_skin,          'Wenn ja wird das SevenHD Skin für Albatros installiert.',    '4',     'none'))
         else:
            list.append(getConfigListEntry(_('{:<121}{:>1}'.format('Albatros','not installed')), )) 
         if os.path.isdir(PLUGIN_PATH + "Extensions/MediaPortal") :
            if config.plugins.SevenHD.use_mp_skin.value:
-              list.append(getConfigListEntry(_("Use MediaPortal Skin"),config.plugins.SevenHD.use_mp_skin,      'Wenn ja wird das SevenHD Skin für MediaPortal installiert.', '1',     ''))
+              list.append(getConfigListEntry(_("Use MediaPortal Skin"),config.plugins.SevenHD.use_mp_skin,            'Wenn ja wird das SevenHD Skin für MediaPortal installiert.', '1',     ''))
            else:
-              list.append(getConfigListEntry(_("Use MediaPortal Skin"),config.plugins.SevenHD.use_mp_skin,      'Wenn ja wird das SevenHD Skin für MediaPortal installiert.', '4',     'none'))
+              list.append(getConfigListEntry(_("Use MediaPortal Skin"),config.plugins.SevenHD.use_mp_skin,            'Wenn ja wird das SevenHD Skin für MediaPortal installiert.', '4',     'none'))
         else:
            list.append(getConfigListEntry(_('{:<121}{:>1}'.format('MediaPortal','not installed')), )) 
         if config.plugins.SevenHD.NumberZapExtImport.value:
            if fileExists(PLUGIN_PATH + "/SystemPlugins/NumberZapExt/NumberZapExt.pyo"):
-              list.append(getConfigListEntry(_("ExtNumberZap"),  config.plugins.SevenHD.NumberZapExt,           'Auswahl der Darstellung beim Senderwechsel per Nummertaste.','1',     ''))
+              list.append(getConfigListEntry(_("ExtNumberZap"),        config.plugins.SevenHD.NumberZapExt,           'Auswahl der Darstellung beim Senderwechsel per Nummertaste.','1',     ''))
            else:
               list.append(getConfigListEntry(_('{:<121}{:>1}'.format('ExtNumberZap','not installed')), ))                   
         else:
@@ -160,11 +165,11 @@ class PluginSettings(ConfigListScreen, Screen):
         if not fileExists(PLUGIN_PATH + "/Extensions/CoolTVGuide/plugin.pyo"):
            list.append(getConfigListEntry(_('{:<124}{:>1}'.format('CoolTVGuide','not installed')), ))
         else:
-           list.append(getConfigListEntry(_("CoolTVGuide"),      config.plugins.SevenHD.CoolTVGuide,            'Auswahl der Darstellung von CoolTVGuide.',                   '1',     ''))
+           list.append(getConfigListEntry(_("CoolTVGuide"),            config.plugins.SevenHD.CoolTVGuide,            'Auswahl der Darstellung von CoolTVGuide.',                   '1',     ''))
         if not fileExists(PLUGIN_PATH + "/Extensions/WeatherPlugin/plugin.pyo"):
            list.append(getConfigListEntry(_('{:<124}{:>1}'.format('MSN Weather','not installed')), ))
         else:
-           list.append(getConfigListEntry(_("MSN Weather"),      config.plugins.SevenHD.MSNWeather,             'Auswahl der Darstellung von MSN Weather Plugin.',            '1',     ''))
+           list.append(getConfigListEntry(_("MSN Weather"),            config.plugins.SevenHD.MSNWeather,             'Auswahl der Darstellung von MSN Weather Plugin.',            '1',     ''))
         return list
 
     def __selectionChanged(self):
@@ -232,6 +237,8 @@ class PluginSettings(ConfigListScreen, Screen):
         self.setInputToDefault(config.plugins.SevenHD.CoolTVGuide)
         self.setInputToDefault(config.plugins.SevenHD.use_alba_skin)
         self.setInputToDefault(config.plugins.SevenHD.use_mp_skin)
+        self.setInputToDefault(config.plugins.SevenHD.use_epg_thumb)
+        self.setInputToDefault(config.plugins.SevenHD.epg_thumb_cache)
         self.save()
 
     def setInputToDefault(self, configItem):
@@ -240,7 +247,59 @@ class PluginSettings(ConfigListScreen, Screen):
     def showInfo(self):
         self.session.open(MessageBox, _("Information"), MessageBox.TYPE_INFO)
 
+    def error(self, error):
+        self.session.open(MessageBox, _('Fehler bei der EPG Vorschau!'), MessageBox.TYPE_INFO)
+        config.plugins.SevenHD.use_epg_thumb.setValue(False)
+    
+    def dl_finish(self, filename):         
+        if self.rename:
+           os.system('cd /tmp; cp -rf /usr/lib/enigma2/python/Plugins/Extensions/SevenHD/epglist.diff /tmp/epglist.diff; mv /usr/lib/enigma2/python/Components/EpgList.pyo /usr/lib/enigma2/python/Components/EpgList.pyo_original; patch EpgList.py < epglist.diff; cp -rf /tmp/EpgList.py /usr/lib/enigma2/python/Components/EpgList.py; cd ..')
+        else:
+           os.system('cd /tmp; cp -rf /usr/lib/enigma2/python/Plugins/Extensions/SevenHD/epglist.diff /tmp/epglist.diff; patch EpgList.py < epglist.diff; cp -rf /tmp/EpgList.py /usr/lib/enigma2/python/Components/EpgList.py; cd ..')
+        self.session.open(MessageBox, _('Wait'), MessageBox.TYPE_INFO, timeout=5)
+        
     def save(self):
+        
+        if not fileExists("/usr/lib/enigma2/python/Components/EpgList.pyo_original"):
+           if config.plugins.SevenHD.use_epg_thumb.value:
+              team_image = config.plugins.SevenHD.Image.value
+              team = team_image.split('-')[2]
+              if team == 'openatv':
+                 dl_url = 'https://raw.githubusercontent.com/openatv/enigma2/master/lib/python/Components/EpgList.py'
+              elif team == 'openhdf':
+                 dl_url = 'https://raw.githubusercontent.com/openhdf/enigma2/master/lib/python/Components/EpgList.py'
+              else:
+                 self.session.open(MessageBox, _('Dein Image unterst\xc3\xbctzt die EPG Vorschau Funktion nicht!'), MessageBox.TYPE_INFO)
+                 config.plugins.SevenHD.use_epg_thumb.setValue(False)
+               
+              if team in 'openatv openhdf':
+                 self.rename = True
+              
+                 filename = '/tmp/EpgList.py'
+                 if fileExists(filename):
+                    os.remove(filename)
+                 downloadPage(dl_url, filename).addCallback(self.dl_finish).addErrback(self.error)
+                 self.dl_finish('fake')
+        else:      
+           if config.plugins.SevenHD.use_epg_thumb.value:
+              team_image = config.plugins.SevenHD.Image.value
+              team = team_image.split('-')[2]
+              if team == 'openatv':
+                 dl_url = 'https://raw.githubusercontent.com/openatv/enigma2/master/lib/python/Components/EpgList.py'
+              elif team == 'openhdf':
+                 dl_url = 'https://raw.githubusercontent.com/openhdf/enigma2/master/lib/python/Components/EpgList.py'
+              else:
+                 self.session.open(MessageBox, _('Dein Image unterst\xc3\xbctzt die EPG Vorschau Funktion nicht!'), MessageBox.TYPE_INFO)
+                 config.plugins.SevenHD.use_epg_thumb.setValue(False)
+
+              if team in 'openatv openhdf':
+                 self.rename = False
+              
+                 filename = '/tmp/EpgList.py'
+                 if fileExists(filename):
+                    os.remove(filename)
+                 downloadPage(dl_url, filename).addCallback(self.dl_finish).addErrback(self.error)   
+                 self.dl_finish('fake')
         
         if fileExists(PLUGIN_PATH + "/Extensions/EnhancedMovieCenter/plugin.pyo"):
            if config.plugins.SevenHD.EMCStyle.value != 'emcnocover':

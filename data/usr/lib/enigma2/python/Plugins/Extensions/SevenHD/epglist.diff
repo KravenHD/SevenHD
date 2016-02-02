@@ -1,0 +1,116 @@
+--- /home/EpgList.py
++++ /home/EpgList1.py
+@@ -13,6 +13,10 @@
+ from ServiceReference import ServiceReference
+ from Tools.Directories import resolveFilename, SCOPE_ACTIVE_SKIN
+ 
++# epglist patch by .:TBX:.
++import os
++import requests 
++from PIL import Image
+ 
+ EPG_TYPE_SINGLE = 0
+ EPG_TYPE_MULTI = 1
+@@ -941,7 +945,60 @@
+ 				duration = ev[3]
+ 				xpos, ewidth = self.calcEntryPosAndWidthHelper(stime, duration, start, end, width)
+ 				clock_types = self.getPixmapForEntry(service, ev[0], stime, duration)
+-				if self.eventNameAlign.lower() == 'left':
++				
++				# epglist patch by .:TBX:. 
++				if config.skin.primary_skin.value == 'SevenHD/skin.xml':
++                                   if config.plugins.SevenHD.use_epg_thumb.value:
++                                
++                                      evH = height - 2 * self.eventBorderWidth
++                                      self.thumb_w = int(round((evH * 0.3) + evH))
++                                      self.thumb_h = int(round(evH))
++                                   
++                                      event_title = ev[1]
++                                      epg_thumb_dir = str(config.plugins.SevenHD.epg_thumb_cache.value) + '/epg_thumb'
++                                   
++                                      thumb_title = event_title.encode('utf-8').replace('&', '').replace(' ', '_').replace("'", '').replace('`', '')
++                                   
++                                      image_name = str(epg_thumb_dir + '/%s.jpg' % str(thumb_title))
++                                      new_image_name = str(epg_thumb_dir + '/%s.png' % str(thumb_title))
++                                      
++                                      if not os.path.isdir(epg_thumb_dir):
++                                         os.mkdir(epg_thumb_dir)
++                                   
++                                      if not os.path.isfile(new_image_name):
++                                         try:
++                                            resonse = requests.request('get','http://ajax.googleapis.com/ajax/services/search/video?v=1.0&q=%s' % str(event_title.replace('&', '').replace("'", '').replace('`', '')))
++                                            data = resonse.json()
++                                        
++                                            jpg_url = data['responseData']['results'][0]['tbUrl'].split('?')[0]
++                                            os.system('wget "%s" -O %s' % (str(jpg_url.replace('https','http').replace('default','hqdefault')), str(image_name)))
++                                         
++                                            foreground = Image.open(str(image_name))
++                                            foreground.thumbnail((self.thumb_w, self.thumb_h))
++                                            foreground.save(new_image_name, 'png')
++                                        
++                                            self.selInfoPix = loadPNG(new_image_name)
++                                            self.InfoPix = loadPNG(new_image_name)
++                                         
++                                         except:
++                                            self.InfoPix = loadPNG(resolveFilename(SCOPE_ACTIVE_SKIN, 'epg/information.png'))
++  			                    self.selInfoPix = loadPNG(resolveFilename(SCOPE_ACTIVE_SKIN, 'epg/information.png'))
++                                   
++                                      else:
++                                         
++                                         test_size = Image.open(str(new_image_name)) 
++                                         loaded_width, loaded_height = test_size.size
++                                         
++                                         if str(int(self.thumb_w)) != str(int(loaded_width)):
++                                            
++                                            foreground = Image.open(str(image_name)) 
++                                            foreground.thumbnail((self.thumb_w, self.thumb_h))
++                                            foreground.save(new_image_name, 'png')
++                                      
++                                         self.selInfoPix = loadPNG(new_image_name)
++                                         self.InfoPix = loadPNG(new_image_name)
++                                        
++                                if self.eventNameAlign.lower() == 'left':
+ 					if self.eventNameWrap.lower() == 'yes':
+ 						alignnment = RT_HALIGN_LEFT | RT_VALIGN_CENTER | RT_WRAP
+ 					else:
+@@ -1044,13 +1101,33 @@
+ 						pos = (evX, evY), size = (evW, evH),
+ 						png = infoPix))
+ 				else:
+-					res.append(MultiContentEntryText(
+-						pos = (evX, evY), size = (evW, evH),
+-						font = 1, flags = alignnment,
+-						text = ev[1],
+-						color = foreColor, color_sel = foreColorSel,
+-						backcolor = backColor, backcolor_sel = backColorSel))
+-
++					# epglist patch by .:TBX:.
++                                        if config.skin.primary_skin.value == 'SevenHD/skin.xml':
++                                           if config.plugins.SevenHD.use_epg_thumb.value:
++                                        
++                                              res.append(MultiContentEntryPixmapAlphaBlend(
++					  	      pos = (evX, evY), size = (self.thumb_w, self.thumb_h),
++						      png = infoPix))
++                                              res.append(MultiContentEntryText(
++					  	      pos = (evX + self.thumb_w + 5, evY), size = (evW - self.thumb_w - 5, evH),
++						      font = 1, flags = alignnment,
++						      text = ev[1],
++						      color = foreColor, color_sel = foreColorSel,
++						      backcolor = backColor, backcolor_sel = backColorSel))
++                                           else:
++                                              res.append(MultiContentEntryText(
++					  	      pos = (evX, evY), size = (evW, evH),
++						      font = 1, flags = alignnment,
++						      text = ev[1],
++						      color = foreColor, color_sel = foreColorSel,
++						      backcolor = backColor, backcolor_sel = backColorSel))
++                                        else:
++                                              res.append(MultiContentEntryText(
++					  	      pos = (evX, evY), size = (evW, evH),
++						      font = 1, flags = alignnment,
++						      text = ev[1],
++						      color = foreColor, color_sel = foreColorSel,
++						      backcolor = backColor, backcolor_sel = backColorSel))
+ 				# event box borders
+ 				if borderTopPix is not None and self.graphic:
+ 					res.append(MultiContentEntryPixmapAlphaTest(

@@ -280,7 +280,7 @@
 			<convert type="SevenHDEventTime">EndTime</convert>
 			<convert type="SevenHDClockToText">Format:%H:%M</convert>
 		</widget>
-		<widget source="Event" render="Progress" position="101,117" size="990,5" borderWidth="0" backgroundColor="SevenFontBackground" foregroundColor="SevenProgress" transparent="1" zPosition="1">
+		<widget source="Event" render="Progress" position="101,117" size="990,5" borderWidth="0" backgroundColor="SevenFontBackground" foregroundColor="SevenProgress" transparent="1" zPosition="1" pixmap="SevenHD/progress/progress990.png">
 			<convert type="SevenHDEventTime">Progress</convert>
 		</widget>
 		<widget backgroundColor="SevenFontBackground" font="Regular2; 21" position="25,139" render="Label" size="1230,126" source="Event" valign="top" zPosition="1" foregroundColor="SevenFont2" transparent="1">

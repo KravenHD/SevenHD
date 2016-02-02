@@ -91,6 +91,7 @@ class Update():
                 
         def download_ipk(self, answer):
             if answer is True:
+               os.system('opkg update')
                self.save_old_dirs()
                self.debug('Try to download and install new Version')
                downloadPage(self.ipk_url, self.filename).addCallback(self.on_finish).addErrback(self.Error)

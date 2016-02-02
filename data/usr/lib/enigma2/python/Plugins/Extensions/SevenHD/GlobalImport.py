@@ -1,10 +1,10 @@
-#version = '3.6.63'
+#version = '3.6.64'
 import os
 try:
    opkg_info = os.popen("opkg list-installed enigma2-plugin-skins-sevenhd | cut -d ' ' -f3").read()
    version = str(opkg_info.strip().split('+')[0])
 except:
-   version = '3.6.63'
+   version = '3.6.64'
 import re
 import time
 import math
@@ -479,7 +479,8 @@ config.plugins.SevenHD.SIB = ConfigSelection(default="-top", choices = [
 				("-minitv", _("Style 4")),
 				("-right", _("Style 5")),
 				("-minitv2", _("Style 6")),
-				("-picon", _("Style 7"))
+				("-double", _("Style 7")),
+				("-picon", _("Style 8"))
 				])				
 
 BackgroundIB1List = []
@@ -652,10 +653,12 @@ config.plugins.SevenHD.ChannelSelectionStyle = ConfigSelection(default="channels
 				("channelselection-twocolumns5", _("two columns 5")),
 				("channelselection-twocolumns6", _("two columns 6")),
 				("channelselection-twocolumns7", _("two columns 7")),
-				("channelselection-minitv1", _("two columns 8")),
-				("channelselection-minitvx", _("two columns 9")),
-				("channelselection-pip", _("two columns 10")),
-				("channelselection-preview", _("two columns 11 (preview)")),
+				("channelselection-twocolumns8", _("two columns 8")),
+				("channelselection-twocolumns9", _("two columns 9")),
+				("channelselection-minitv1", _("two columns 10")),
+				("channelselection-minitvx", _("two columns 11")),
+				("channelselection-pip", _("two columns 12")),
+				("channelselection-preview", _("two columns 13 (preview)")),
 				("channelselection-threecolumns", _("three columns 1")),
 				("channelselection-threecolumnsminitv", _("three columns 2"))
 				])
@@ -764,7 +767,19 @@ config.plugins.SevenHD.debug_screen_names = ConfigYesNo(default = False)
 config.plugins.SevenHD.msgdebug = ConfigYesNo(default = False)
 
 config.plugins.SevenHD.grabdebug = ConfigYesNo(default= False)	
-			
+
+config.plugins.SevenHD.use_epg_thumb = ConfigYesNo(default= False)
+
+PathList = []
+if os.path.isdir("/media/hdd"):
+   PathList.append(("/media/hdd", _("/media/hdd")))
+if os.path.isdir("/media/usb"):
+   PathList.append(("/media/usb", _("/media/usb")))
+if os.path.isdir("/media/cf"):
+   PathList.append(("/media/cf", _("/media/cf")))
+PathList.append(("/tmp", _("/tmp")))
+
+config.plugins.SevenHD.epg_thumb_cache = ConfigSelection(default="/tmp", choices = PathList)			
 ################################################################################################################################################################
 # ConfigList
 

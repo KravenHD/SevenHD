@@ -1,0 +1,40 @@
+		<!-- /* ChannelSelection Two Columns-->
+	<screen backgroundColor="transparent" flags="wfNoBorder" name="ChannelSelection" position="0,0" size="1280,720" title="Channel Selection">
+		<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="ChannelSelection" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
+		<widget backgroundColor="SevenFontBackCS" scrollbarMode="showNever" picServiceEventProgressbar="SevenHD/progresslistcs/progresslistcs52.png" colorEventProgressbar="SevenProgressListCS" colorEventProgressbarSelected="SevenProgressListCS" foregroundColorMarkedSelected="green" foregroundColor="SevenNameList" colorEventProgressbarBorder="SevenProgressBorderCS" colorEventProgressbarBorderSelected="SevenProgressBorderCS" colorServiceDescription="SevenProgramList" colorServiceDescriptionSelected="SevenSelFont" colorServiceRecording="red" foregroundColorServiceNotAvail="yellow" itemHeight="50" name="list" position="17,78" serviceInfoFont="Regular;23" serviceItemHeight="35" serviceNameFont="Regular2;25" serviceNumberFont="Regular;25" size="689,564" transparent="1" />
+		<widget source="ServiceEvent" render="SevenHDSingleEpgList" position="739,546" size="514,56" noWrap="1" font="Regular2;22" foregroundColor="SevenNextCS" backgroundColor="SevenFontBackRightCS" transparent="1">
+		</widget>
+		<widget source="ServiceEvent" render="Progress" position="739,220" size="514,3" borderWidth="0" backgroundColor="SevenFontBackRightCS" foregroundColor="SevenProgressCS" transparent="1" zPosition="1" pixmap="SevenHD/progresscs/progresscs514.png">
+			<convert type="SevenHDEventTime">Progress</convert>
+		</widget>
+		<eLabel position="739,221" size="514,1" backgroundColor="SevenProgressLineCS" />
+		<widget font="Regular; 24" foregroundColor="SevenDestcriptionCS" position="739,260" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,steptime=90,wrap=1,always=0,repeat=2,oneshot=1" size="514,276" source="ServiceEvent" valign="top" backgroundColor="SevenFontBackRightCS" transparent="1" zPosition="0">
+			<convert type="SevenHDEventName">BothDescriptionsFiltered</convert>
+		</widget>
+		<widget font="Regular2; 30" foregroundColor="SevenProgramCS" position="739,175" halign="center" render="SevenHDRunningText" options="movetype=running,startpoint=0,startdelay=2000,steptime=90,wrap=0,always=0,repeat=2,oneshot=1" size="514,40" source="ServiceEvent" backgroundColor="SevenFontBackRightCS" transparent="1" zPosition="0" valign="left" noWrap="1">
+			<convert type="SevenHDEventName">Name</convert>
+		</widget>
+		<widget source="ServiceEvent" render="Label" position="739,225" size="77,25" font="Regular; 20" backgroundColor="SevenFontBackRightCS" transparent="1" foregroundColor="SevenRuntimeCS">
+			<convert type="EventTime">StartTime</convert>
+			<convert type="ClockToText">Format:%H:%M</convert>
+		</widget>
+		<widget source="ServiceEvent" render="Label" position="1176,225" size="77,25" font="Regular; 20" backgroundColor="SevenFontBackRightCS" transparent="1" foregroundColor="SevenRuntimeCS" halign="right">
+			<convert type="EventTime">EndTime</convert>
+			<convert type="ClockToText">Format:%H:%M</convert>
+		</widget>
+		<widget alphatest="blend" position="886,15" render="SevenHDXPicon" size="220,132" source="ServiceEvent" transparent="1" zPosition="4">
+			<convert type="SevenHDRefString">ServicelistRef</convert>
+		</widget>
+		<widget backgroundColor="SevenFontBackRightCS" font="Regular;22" foregroundColor="SevenPrimeCS" position="739,608" render="Label" size="514,30" source="ServiceEvent" transparent="1" zPosition="5" noWrap="1">
+			<convert type="SevenHDNextEvents">PrimeTime,noDuration</convert>
+		</widget>
+			<widget backgroundColor="SevenFontBackRightCS" font="Regular2; 34" foregroundColor="SevenBouquetCS" position="32,13" render="Label" size="802,46" source="Title" transparent="1" halign="center" valign="center" noWrap="1" />
+		<widget source="global.CurrentTime" render="Label" position="1153,90" size="100,28" font="Regular; 26" halign="right" backgroundColor="SevenFontBackRightCS" transparent="1" valign="center" foregroundColor="SevenTimeCS">
+			<convert type="SevenHDClockToText">Default</convert>
+		</widget>
+		<widget source="ServiceEvent" render="Label" position="739,90" size="100,28" font="Regular;26" halign="left" backgroundColor="SevenFontBackRightCS" transparent="1" valign="center" foregroundColor="SevenTimeCS">
+			<convert type="SevenHDServiceName2">OrbitalPos</convert>
+		</widget>
+		<panel name="template_menu_cs11_button" />
+	</screen>
+		<!-- /* ChannelSelection Two Columns -->

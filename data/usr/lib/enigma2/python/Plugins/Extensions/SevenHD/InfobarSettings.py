@@ -140,8 +140,10 @@ class InfobarSettings(ConfigListScreen, Screen):
            list.append(getConfigListEntry(_("second infobar"),       config.plugins.SevenHD.SIB,               'W\xc3\xa4hle den Stil der zweiten Infobar',                                                            '4',       'SIB5'))
         if config.plugins.SevenHD.SIB.value == '-minitv2':
            list.append(getConfigListEntry(_("second infobar"),       config.plugins.SevenHD.SIB,               'W\xc3\xa4hle den Stil der zweiten Infobar',                                                            '4',       'SIB6'))
-        if config.plugins.SevenHD.SIB.value == '-picon':
+        if config.plugins.SevenHD.SIB.value == '-double':
            list.append(getConfigListEntry(_("second infobar"),       config.plugins.SevenHD.SIB,               'W\xc3\xa4hle den Stil der zweiten Infobar',                                                            '4',       'SIB7'))
+        if config.plugins.SevenHD.SIB.value == '-picon':
+           list.append(getConfigListEntry(_("second infobar"),       config.plugins.SevenHD.SIB,               'W\xc3\xa4hle den Stil der zweiten Infobar',                                                            '4',       'SIB8'))
         list.append(getConfigListEntry(_('_____________________________background________________________________________'), ))
         list.append(getConfigListEntry(_("primary color"),           config.plugins.SevenHD.BackgroundIB1,     'Stellt die Farbe der linken Seite sowie den unteren Bereich der Infobar ein.',                        '4',       'Color1'))
         list.append(getConfigListEntry(_("secondary color"),         config.plugins.SevenHD.BackgroundIB2,     'Stellt die Farbe der rechten Seite sowie den mittigen Bereich der Infobar ein.',                      '4',       'Color2'))
