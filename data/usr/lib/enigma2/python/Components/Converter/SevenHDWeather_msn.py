@@ -23,6 +23,7 @@ from Components.config import config
 from xml.etree.cElementTree import fromstring
 from enigma import eTimer
 import os, gettext, requests
+from Poll import Poll
 
 lang = language.getLanguage()
 os.environ["LANGUAGE"] = lang[:2]
@@ -39,9 +40,12 @@ def _(txt):
 URL = 'http://weather.service.msn.com/data.aspx?src=outlook&culture=' + str(config.plugins.SevenHD.weather_language.value) + '&weadegreetype=C&wealocations=wc:' + str(config.plugins.SevenHD.weather_msn_id.value)
 WEATHER_DATA = None
 
-class SevenHDWeather_msn(Converter, object):
+class SevenHDWeather_msn(Poll, Converter, object):
 	def __init__(self, type):
+                Poll.__init__(self)
                 Converter.__init__(self, type)
+                self.poll_interval = 60000
+                self.poll_enabled = True
                 type = type.split(',')                
                 self.day_value = type[0]
                 self.what = type[1]
@@ -53,7 +57,8 @@ class SevenHDWeather_msn(Converter, object):
 		 
 	@cached
 	def getText(self):
-	    
+	    global WEATHER_DATA
+            self.data = WEATHER_DATA
 	    day = self.day_value.split('_')[1]
             if self.what == 'DayTemp':
                self.info = self.getDayTemp()	
@@ -90,6 +95,7 @@ class SevenHDWeather_msn(Converter, object):
 	def reset(self):
 	    global WEATHER_DATA
             WEATHER_DATA = None
+            self.timer.stop()
             
         def get_Data(self):
             global WEATHER_DATA
@@ -127,7 +133,7 @@ class SevenHDWeather_msn(Converter, object):
                           
                WEATHER_DATA = self.data
                timeout = int(config.plugins.SevenHD.refreshInterval.value) * 1000.0 * 60.0
-               self.timer.start(int(timeout), True)
+               self.timer.start(int(timeout), 1)
                
             else:
                self.data = WEATHER_DATA

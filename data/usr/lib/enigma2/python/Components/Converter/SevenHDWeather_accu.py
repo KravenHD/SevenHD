@@ -22,6 +22,7 @@ from Components.Element import cached
 from Components.config import config
 from enigma import eTimer
 import requests, time, os, gettext
+from Poll import Poll
 
 lang = language.getLanguage()
 os.environ["LANGUAGE"] = lang[:2]
@@ -41,9 +42,12 @@ URL2 = 'http://api.accuweather.com/currentconditions/v1/' + str(config.plugins.S
 WEATHER_DATA1 = None
 WEATHER_DATA2 = None
 
-class SevenHDWeather_accu(Converter, object):
+class SevenHDWeather_accu(Poll, Converter, object):
 	def __init__(self, type):
+                Poll.__init__(self)
                 Converter.__init__(self, type)
+                self.poll_interval = 60000
+                self.poll_enabled = True
                 type = type.split(',')                
                 self.day_value = type[0]
                 self.what = type[1]
@@ -54,7 +58,10 @@ class SevenHDWeather_accu(Converter, object):
 		 
 	@cached
 	def getText(self):
-	    
+	    global WEATHER_DATA1
+            self.data = WEATHER_DATA1
+            global WEATHER_DATA2
+            self.data2 = WEATHER_DATA2
 	    day = self.day_value.split('_')[1]
             if self.what == 'DayTemp':
                self.info = self.getDayTemp()	
@@ -90,6 +97,7 @@ class SevenHDWeather_accu(Converter, object):
 	    global WEATHER_DATA2
             WEATHER_DATA1 = None
             WEATHER_DATA2 = None
+            self.timer.stop()
             
         def get_Data(self):
             global WEATHER_DATA1
@@ -105,7 +113,7 @@ class SevenHDWeather_accu(Converter, object):
                WEATHER_DATA2 = self.data2
                
                timeout = int(config.plugins.SevenHD.refreshInterval.value) * 1000.0 * 60.0
-               self.timer.start(int(timeout), True)
+               self.timer.start(int(timeout), 1)
                
             else:
                self.data = WEATHER_DATA1
@@ -114,21 +122,21 @@ class SevenHDWeather_accu(Converter, object):
         def getMinTemp(self, day):
             try:
                temp = self.data['DailyForecasts'][day]['Temperature']['Minimum']['Value']
-               return str(float(temp)) + '°C'
+               return str(int(round(float(temp)))) + '°C'
             except:
                return 'N/A'
             
         def getMaxTemp(self, day):
             try:
                temp = self.data['DailyForecasts'][day]['Temperature']['Maximum']['Value']
-               return str(float(temp)) + '°C'
+               return str(int(round(float(temp)))) + '°C'
             except:
                return 'N/A'
             
         def getDayTemp(self):
             try:
                temp = self.data2[0]['Temperature']['Metric']['Value']
-               return str(float(temp)) + '°C'
+               return str(int(round(float(temp)))) + '°C'
             except:
                return 'N/A'
             

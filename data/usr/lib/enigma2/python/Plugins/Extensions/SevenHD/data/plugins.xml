@@ -2796,9 +2796,9 @@
 			<!-- XMLTVImport */-->
 	<screen name="EPGMainSetup" position="0,0" title="EPG Main Setup" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
 		<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="EPGMainSetup" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
-		<widget name="config" position="70,80" size="708,490" backgroundColor="SevenFontBackground" itemHeight="30" font="Regular;18" transparent="1" />  
-		<widget name="statusbar" position="70,630" size="708,20" backgroundColor="SevenFontBackground" font="Regular;18" />
-		<widget name="status" position="70,580" size="708,40" backgroundColor="SevenFontBackground" font="Regular;20" />
+		<widget name="config" position="70,80" size="708,415" backgroundColor="SevenFontBackground" itemHeight="30" font="Regular;18" transparent="1" />  
+		<widget name="statusbar" position="70,610" size="708,40" backgroundColor="SevenFontBackground" font="Regular;18" />
+		<widget name="status" position="70,560" size="708,40" backgroundColor="SevenFontBackground" font="Regular;20" />
 		<panel name="template_menu_left_button" />
 		<panel name="template_colorkey_text" />
 	</screen>

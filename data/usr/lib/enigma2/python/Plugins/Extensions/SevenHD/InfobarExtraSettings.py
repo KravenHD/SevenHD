@@ -532,8 +532,11 @@ class InfobarExtraSettings(ConfigListScreen, Screen):
            
     def generate_owm_accu_realtek_string(self):
         config.plugins.SevenHD.weather_owm_latlon.value = 'lat=%s&lon=%s&units=metric&lang=%s' % (str(self.lat),str(self.lon),str(config.plugins.SevenHD.weather_language.value))
+        config.plugins.SevenHD.weather_owm_latlon.save()
         config.plugins.SevenHD.weather_accu_latlon.value = 'lat=%s&lon=%s&metric=1&language=%s' % (str(self.lat), str(self.lon), str(config.plugins.SevenHD.weather_language.value))
+        config.plugins.SevenHD.weather_accu_latlon.save()
         config.plugins.SevenHD.weather_realtek_latlon.value = 'lat=%s&lon=%s&metric=1&language=%s' % (str(self.lat), str(self.lon), str(config.plugins.SevenHD.weather_language.value))
+        config.plugins.SevenHD.weather_realtek_latlon.save()
                
     def debug(self, what):
         if config.plugins.SevenHD.msgdebug.value:

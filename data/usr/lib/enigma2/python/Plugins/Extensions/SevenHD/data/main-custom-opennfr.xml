@@ -241,10 +241,9 @@
 		<widget source="list" render="Listbox" position="70,80" size="705,270" transparent="1" foregroundColor="SevenFont1" backgroundColor="SevenFontBackground" scrollbarMode="showNever">
 			<convert type="TemplatedMultiContent">
 				{"template": [
-						MultiContentEntryText(pos = (5, 1), size = (540, 28), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 0 is the name
-						MultiContentEntryText(pos = (5, 26), size = (540, 20), font=1, flags = RT_HALIGN_LEFT, text = 2), # index 2 is the description
-						MultiContentEntryPixmapAlphaTest(pos = (545, 2), size = (48, 48), png = 4), # index 4 is the status pixmap
-						MultiContentEntryPixmapAlphaTest(pos = (5, 50), size = (510, 2), png = 5), # index 4 is the div pixmap
+						MultiContentEntryText(pos = (120, 10), size = (540, 28), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 0 is the name
+						MultiContentEntryText(pos = (10, 33), size = (540, 20), font=1, flags = RT_HALIGN_LEFT, text = 2), # index 2 is the description
+						MultiContentEntryPixmapAlphaTest(pos = (0, 0), size = (100, 50), png = 1), # index 4 is the div pixmap
 					],
 				"fonts": [gFont("Regular", 22),gFont("Regular", 14)],
 				"itemHeight": 52

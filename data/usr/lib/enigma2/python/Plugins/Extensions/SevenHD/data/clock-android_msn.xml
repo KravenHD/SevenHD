@@ -11,7 +11,7 @@
 		<widget alphatest="blend" render="SevenHDWetterPicon" position="1080,558" size="180,110" source="session.CurrentService" path="clock" transparent="0" zPosition="1">
 			<convert type="SevenHDWeather_msn">Day_0,MeteoIcon</convert>
 		</widget>
-		<widget noWrap="1" backgroundColor="black" font="Regular; 15" foregroundColor="black" render="Label" position="1190,632" size="60,25" source="session.CurrentService" zPosition="2" halign="center" valign="center" transparent="1">
+		<widget noWrap="1" backgroundColor="#00666666" font="Regular; 15" foregroundColor="SevenClockWeather" render="Label" position="1190,632" size="60,25" source="session.CurrentService" zPosition="2" halign="center" valign="center" transparent="1">
 			<convert type="SevenHDWeather_msn">Day_0,DayTemp</convert>
 		</widget>
 		<!--Clock */-->

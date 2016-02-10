@@ -1,10 +1,10 @@
-#version = '3.6.64'
+#version = '3.6.69'
 import os
 try:
    opkg_info = os.popen("opkg list-installed enigma2-plugin-skins-sevenhd | cut -d ' ' -f3").read()
    version = str(opkg_info.strip().split('+')[0])
 except:
-   version = '3.6.64'
+   version = '3.6.69'
 import re
 import time
 import math
@@ -60,6 +60,7 @@ from enigma import ePicLoad, getDesktop, eConsoleAppContainer, eListboxPythonMul
 from Tools import Notifications
 from Tools.BoundFunction import boundFunction
 from Tools.Directories import fileExists, resolveFilename, SCOPE_LANGUAGE, SCOPE_PLUGINS
+from Components.SystemInfo import SystemInfo
 ################################################################################################################################################################
 DOWNLOAD_URL = 'https://raw.githubusercontent.com/KravenHD/SevenHD-Daten/master/'
 DOWNLOAD_UPDATE_URL = DOWNLOAD_URL + 'update/'
@@ -121,6 +122,7 @@ config.plugins.SevenHD.version = ConfigText(default=version, fixed_size=False)
 config.plugins.SevenHD.AutoUpdate = ConfigYesNo(default = False)
 config.plugins.SevenHD.AutoUpdateInfo = ConfigYesNo(default = False)
 config.plugins.SevenHD.AutoUpdatePluginStart = ConfigYesNo(default = False)
+config.plugins.SevenHD.fanart_url = ConfigText(default = '', fixed_size = False)
 ################# bmeminfo ##############################
 if fileExists('/proc/bmeminfo'):
    entrie = os.popen('cat /proc/bmeminfo').read()
@@ -370,7 +372,8 @@ config.plugins.SevenHD.MovieSelectionStyle = ConfigSelection(default="movieselec
 				("movieselectionsmallcover", _("Style 2")),
 				("movieselectionsmallcover2", _("Style 3")),
 				("movieselectionbigcover", _("Style 4")),
-				("movieselectionminitv", _("Style 5"))
+				("movieselectionminitv", _("Style 5")),
+				("movieselectiononecolumn", _("Style 6"))
 				])
 				
 config.plugins.SevenHD.MSNWeather = ConfigSelection(default="msn-standard", choices = [
@@ -389,7 +392,8 @@ config.plugins.SevenHD.EPGSelection = ConfigSelection(default="epgselectionnopic
 				("epgselectionnopicon", _("Style 1")),
 				("epgselectionpicon", _("Style 2")),
 				("epgselectionthumb", _("Style 3")),
-				("epgselectionminitv", _("Style 4"))
+				("epgselectionminitv", _("Style 4")),
+				("epgselectiononecolumn", _("Style 5"))
 				])
 				
 config.plugins.SevenHD.TimerEdit = ConfigSelection(default="timereditleft", choices = [
@@ -469,7 +473,8 @@ config.plugins.SevenHD.InfobarStyle = ConfigSelection(default="infobar-style-ori
 				("infobar-style-xpicon6", _("Style 9")),
 				("infobar-style-xpicon7", _("Style 10")),
 				("infobar-style-xpicon8", _("Style 11")),
-				("infobar-style-xpicon9", _("Style 12"))
+				("infobar-style-xpicon9", _("Style 12")),
+				("infobar-style-xpicon10", _("Style 13"))
 				])
 				
 config.plugins.SevenHD.SIB = ConfigSelection(default="-top", choices = [
@@ -509,9 +514,24 @@ config.plugins.SevenHD.InfobarBorder2 = ConfigSelection(default="00ffffff", choi
 
 config.plugins.SevenHD.InfobarChannelName = ConfigSelection(default="none", choices = [
 				("none", _("off")),
-				("-ICN", _("name")),
-				("-ICNumber", _("number")),
-				("-ICNameandNumber", _("number and name"))
+				("-fanart", _("Fanart")),
+				("-fanartname", _("Fanart and channelname")),
+				("-fanartnumber", _("Fanart and channelnumber")),
+				("-fanartnamenumber", _("Fanart, channelname and channelnumber")),
+				("-thumb", _("MovieThumb")),
+				("-thumbname", _("MovieThumb and channelname")),
+				("-thumbnumber", _("MovieThumb and channelnumber")),
+				("-thumbnamenumber", _("MovieThumb, channelname and channelnumber")),
+				("-ICN", _("channelname")),
+				("-ICNumber", _("channelnumber")),
+				("-ICNameandNumber", _("channelnumber and channelname"))
+				])
+				
+config.plugins.SevenHD.SIBChannelName = ConfigSelection(default="none", choices = [
+				("none", _("off")),
+				("-ICN", _("channelname")),
+				("-ICNumber", _("channelnumber")),
+				("-ICNameandNumber", _("channelnumber and channelname"))
 				])
 
 config.plugins.SevenHD.FontCN = ConfigSelection(default="00ffffff", choices = ColorList)
@@ -645,23 +665,41 @@ config.plugins.SevenHD.FrontInfo = ConfigSelection(default="snr", choices = [
 ################################################################################################################################################################
 # ChannelScreen
 
-config.plugins.SevenHD.ChannelSelectionStyle = ConfigSelection(default="channelselection-twocolumns", choices = [
-				("channelselection-twocolumns", _("two columns 1")),
-				("channelselection-twocolumns2", _("two columns 2")),
-				("channelselection-twocolumns3", _("two columns 3")),
-				("channelselection-twocolumns4", _("two columns 4")),
-				("channelselection-twocolumns5", _("two columns 5")),
-				("channelselection-twocolumns6", _("two columns 6")),
-				("channelselection-twocolumns7", _("two columns 7")),
-				("channelselection-twocolumns8", _("two columns 8")),
-				("channelselection-twocolumns9", _("two columns 9")),
-				("channelselection-minitv1", _("two columns 10")),
-				("channelselection-minitvx", _("two columns 11")),
-				("channelselection-pip", _("two columns 12")),
-				("channelselection-preview", _("two columns 13 (preview)")),
-				("channelselection-threecolumns", _("three columns 1")),
-				("channelselection-threecolumnsminitv", _("three columns 2"))
-				])
+### changed by tomele for SevenHDPig
+
+CSList = [
+	("channelselection-twocolumns", _("two columns 1")),
+	("channelselection-twocolumns2", _("two columns 2")),
+	("channelselection-twocolumns3", _("two columns 3")),
+	("channelselection-twocolumns4", _("two columns 4")),
+	("channelselection-twocolumns5", _("two columns 5")),
+	("channelselection-twocolumns6", _("two columns 6")),
+	("channelselection-twocolumns7", _("two columns 7")),
+	("channelselection-twocolumns8", _("two columns 8")),
+	("channelselection-twocolumns9", _("two columns 9")),
+	("channelselection-minitv1", _("two columns 10")),
+	("channelselection-minitvright", _("two columns 11")),
+	("channelselection-minitvx", _("two columns 12")),
+	("channelselection-minitvxright", _("two columns 13"))
+	]
+	
+if SystemInfo.get("NumVideoDecoders",1)>1:
+	CSList.append(("channelselection-pip", _("two columns 14")))
+	CSList.append(("channelselection-preview", _("two columns 15 (preview)")))
+	CSList.append(("channelselection-previewright", _("two columns 16 (preview)")))
+	CSList.append(("channelselection-ext", _("two columns 17 (extended preview)")))
+	CSList.append(("channelselection-extright", _("two columns 18 (extended preview)")))
+	
+CSList.append(("channelselection-threecolumns", _("three columns 1")))
+CSList.append(("channelselection-threecolumnsminitv", _("three columns 2")))
+CSList.append(("channelselection-onecolumn", _("one column 1")))
+
+config.plugins.SevenHD.ChannelSelectionStyle = ConfigSelection(default="channelselection-twocolumns", choices = CSList)
+
+config.plugins.SevenHD.PigStyle=ConfigText(default="")
+config.plugins.SevenHD.PigMenuActive=ConfigYesNo(default=False)
+
+### end of change
 
 ChannelBack1List = []
 for x in BackList:
@@ -824,6 +862,7 @@ myConfigList = [('config.plugins.SevenHD.Image.value = "' + str(config.plugins.S
                 ('config.plugins.SevenHD.InfobarLine.value = "' + str(config.plugins.SevenHD.InfobarLine.value) + '"'),
                 ('config.plugins.SevenHD.InfobarBorder.value = "' + str(config.plugins.SevenHD.InfobarBorder.value) + '"'),
                 ('config.plugins.SevenHD.InfobarChannelName.value = "' + str(config.plugins.SevenHD.InfobarChannelName.value) + '"'),
+                ('config.plugins.SevenHD.SIBChannelName.value = "' + str(config.plugins.SevenHD.SIBChannelName.value) + '"'),
                 ('config.plugins.SevenHD.FontCN.value = "' + str(config.plugins.SevenHD.FontCN.value) + '"'),
                 ('config.plugins.SevenHD.NextEvent.value = "' + str(config.plugins.SevenHD.NextEvent.value) + '"'),
                 ('config.plugins.SevenHD.NowEvent.value = "' + str(config.plugins.SevenHD.NowEvent.value) + '"'),

@@ -1,0 +1,37 @@
+		<!-- /* ChannelSelection Two Columns-->
+	<screen backgroundColor="transparent" flags="wfNoBorder" name="ChannelSelection" position="0,0" size="1280,720" title="Channel Selection">
+		<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="ChannelSelection" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
+		<widget backgroundColor="SevenFontBackCS" scrollbarMode="showNever" picServiceEventProgressbar="SevenHD/progresslistcs/progresslistcs52.png" colorEventProgressbar="SevenProgressListCS" colorEventProgressbarSelected="SevenProgressListCS" foregroundColorMarkedSelected="green" foregroundColor="SevenNameList" colorEventProgressbarBorder="SevenProgressBorderCS" colorEventProgressbarBorderSelected="SevenProgressBorderCS" colorServiceDescription="SevenProgramList" colorServiceDescriptionSelected="SevenSelFont" colorServiceRecording="red" foregroundColorServiceNotAvail="yellow" itemHeight="50" name="list" position="17,80" serviceInfoFont="Regular;23" serviceItemHeight="35" serviceNameFont="Regular2;25" serviceNumberFont="Regular;25" size="816,564" transparent="1" />
+		<widget source="ServiceEvent" render="SevenHDSingleEpgList" position="891,496" size="362,113" noWrap="1" font="Regular2;22" foregroundColor="SevenNextCS" backgroundColor="SevenFontBackCS" transparent="1">
+		</widget>
+		<widget alphatest="blend" position="891,125" render="SevenHDXPicon" size="67,40" source="ServiceEvent" transparent="1" zPosition="4">
+			<convert type="SevenHDRefString">ServicelistRef</convert>
+		</widget>
+		<widget backgroundColor="SevenFontBackCS" font="Regular; 20" halign="right" position="1153,143" render="Label" size="100,25" source="ServiceEvent" transparent="1" valign="center" zPosition="1" foregroundColor="SevenRuntimeCS">
+			<convert type="SevenHDEventTime">Remaining</convert>
+			<convert type="SevenHDRemainingToText">InMinutes</convert>
+		</widget>
+		<widget source="ServiceEvent" render="Progress" position="891,170" size="362,3" borderWidth="0" backgroundColor="SevenFontBackCS" foregroundColor="SevenProgressCS" transparent="1" zPosition="1" pixmap="SevenHD/progresscs/progresscs362.png">
+			<convert type="SevenHDEventTime">Progress</convert>
+		</widget>
+		<eLabel position="891,171" size="362,1" backgroundColor="SevenProgressLineCS" />
+		<widget font="Regular; 24" foregroundColor="SevenDestcriptionCS" position="891,206" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,steptime=90,wrap=1,always=0,repeat=2,oneshot=1" size="362,276" source="ServiceEvent" valign="top" backgroundColor="SevenFontBackCS" transparent="1" zPosition="0">
+			<convert type="SevenHDEventName">BothDescriptionsFiltered</convert>
+		</widget>
+		<widget font="Regular2; 30" foregroundColor="SevenProgramCS" position="891,80" halign="center" render="SevenHDRunningText" options="movetype=running,startpoint=0,startdelay=2000,steptime=90,wrap=0,always=0,repeat=2,oneshot=1" size="362,40" source="ServiceEvent" backgroundColor="SevenFontBackCS" transparent="1" zPosition="0" valign="left" noWrap="1">
+			<convert type="SevenHDEventName">Name</convert>
+		</widget>
+		<widget backgroundColor="SevenFontBackCS" font="Regular;22" foregroundColor="SevenPrimeCS" position="891,614" render="Label" size="362,30" source="ServiceEvent" transparent="1" zPosition="5" noWrap="1">
+			<convert type="SevenHDNextEvents">PrimeTime,noDuration</convert>
+		</widget>
+		<widget source="ServiceEvent" render="Label" position="891,175" size="77,25" font="Regular; 20" backgroundColor="SevenFontBackCS" transparent="1" foregroundColor="SevenRuntimeCS">
+			<convert type="EventTime">StartTime</convert>
+			<convert type="ClockToText">Format:%H:%M</convert>
+		</widget>
+		<widget source="ServiceEvent" render="Label" position="1176,175" size="77,25" font="Regular; 20" backgroundColor="SevenFontBackCS" transparent="1" foregroundColor="SevenRuntimeCS" halign="right">
+			<convert type="EventTime">EndTime</convert>
+			<convert type="ClockToText">Format:%H:%M</convert>
+		</widget>
+		<panel name="template_menu_cs12_button" />
+	</screen>
+		<!-- /* ChannelSelection Two Columns -->

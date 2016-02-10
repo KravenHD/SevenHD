@@ -137,21 +137,25 @@ class ChannelSettings(ConfigListScreen, Screen):
         list.append(getConfigListEntry(_("color left"),                   config.plugins.SevenHD.ChannelBack1,               'Stellt den Hintergrund der linken Spalte ein.',                   '4',       'colorleftcs'))
         if ChannelSelectionStyle.startswith('channelselection-threecolumns'):
            list.append(getConfigListEntry(_("color middle"),              config.plugins.SevenHD.ChannelBack3,               'Stellt den Hinergrund der mittleren Spalte ein',                  '4',       'colormiddlecs'))
-        list.append(getConfigListEntry(_("color right"),                  config.plugins.SevenHD.ChannelBack2,               'Stellt den Hintergrund der rechten Spalte ein.',                  '4',       'colorrightcs'))
+        if not ChannelSelectionStyle.startswith('channelselection-onecolumn'):
+           list.append(getConfigListEntry(_("color right"),                  config.plugins.SevenHD.ChannelBack2,               'Stellt den Hintergrund der rechten Spalte ein.',                  '4',       'colorrightcs'))
         list.append(getConfigListEntry(_('__________________________________transparency_____________________________________________'), ))
         list.append(getConfigListEntry(_("left window"),                  config.plugins.SevenHD.CSLeftColorTrans,           'Stellt die Transparenz des linken Fenster ein.',                  '4',       'csleft'))
         if ChannelSelectionStyle.startswith('channelselection-threecolumns'):
            list.append(getConfigListEntry(_("middle window"),                config.plugins.SevenHD.CSMiddleColorTrans,         'Stellt die Transparenz des mittleren Fenster ein.',               '4',       'csmiddle'))
-        list.append(getConfigListEntry(_("right window"),                 config.plugins.SevenHD.CSRightColorTrans,          'Stellt die Transparenz des rechten Fenster ein.',                 '4',       'csright'))
+        if not ChannelSelectionStyle.startswith('channelselection-onecolumn'):
+           list.append(getConfigListEntry(_("right window"),                 config.plugins.SevenHD.CSRightColorTrans,          'Stellt die Transparenz des rechten Fenster ein.',                 '4',       'csright'))
         list.append(getConfigListEntry(_('_____________________________color lines_______________________________________'), ))
         list.append(getConfigListEntry(_("line leftside"),                config.plugins.SevenHD.ChannelLine,                'Stellt die Farbe der Linie der linken Spalte ein.',               '4',       'linecs'))
         if ChannelSelectionStyle.startswith('channelselection-threecolumns'):
            list.append(getConfigListEntry(_("line middle"),               config.plugins.SevenHD.ChannelLineMiddle,          'Stellt die Farbe der Linie der mittleren Spalte ein.',            '4',       'linecs'))
-        list.append(getConfigListEntry(_("line rightside"),               config.plugins.SevenHD.ChannelLineRight,           'Stellt die Farbe der Linie der rechten Spalte ein.',              '4',       'linecs'))
+        if not ChannelSelectionStyle.startswith('channelselection-onecolumn'):
+           list.append(getConfigListEntry(_("line rightside"),               config.plugins.SevenHD.ChannelLineRight,           'Stellt die Farbe der Linie der rechten Spalte ein.',              '4',       'linecs'))
         list.append(getConfigListEntry(_("border leftside"),              config.plugins.SevenHD.ChannelBorder,              'Stellt die Farbe des Rahmen der linken Spalte ein.',              '4',       'bordercs'))
         if ChannelSelectionStyle.startswith('channelselection-threecolumns'):
            list.append(getConfigListEntry(_("border middle"),             config.plugins.SevenHD.ChannelBorderMiddle,        'Stellt die Farbe des Rahmen der mittleren Spalte ein.',           '4',       'bordercs'))
-        list.append(getConfigListEntry(_("border rightside"),             config.plugins.SevenHD.ChannelBorderRight,         'Stellt die Farbe des Rahmen der rechten Spalte ein.',             '4',       'bordercs'))
+        if not ChannelSelectionStyle.startswith('channelselection-onecolumn'):
+           list.append(getConfigListEntry(_("border rightside"),             config.plugins.SevenHD.ChannelBorderRight,         'Stellt die Farbe des Rahmen der rechten Spalte ein.',             '4',       'bordercs'))
         if ChannelSelectionStyle.endswith('2') or ChannelSelectionStyle.endswith('3'):
            pass
         else:
@@ -403,6 +407,18 @@ class ChannelSettings(ConfigListScreen, Screen):
                  self.session.open(MessageBox, _('Sorry, only Colors allowed.'), MessageBox.TYPE_INFO)
               else:
                  self.setInputToDefault(config.plugins.SevenHD.ChannelBack3)
+        
+        
+        ### changed by tomele for SevenHDPig
+        if config.plugins.SevenHD.ChannelSelectionStyle.value == "channelselection-preview":
+        	config.plugins.SevenHD.PigStyle.value = "Preview"
+        elif config.plugins.SevenHD.ChannelSelectionStyle.value == "channelselection-pip":
+        	config.plugins.SevenHD.PigStyle.value = "DualTV"
+        elif config.plugins.SevenHD.ChannelSelectionStyle.value == "channelselection-ext":
+        	config.plugins.SevenHD.PigStyle.value = "ExtPreview"
+        config.plugins.SevenHD.PigStyle.save()
+        ### end of change
+
                  
         for x in self["config"].list:
             if len(x) > 1:

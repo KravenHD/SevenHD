@@ -239,6 +239,8 @@ class PluginSettings(ConfigListScreen, Screen):
         self.setInputToDefault(config.plugins.SevenHD.use_mp_skin)
         self.setInputToDefault(config.plugins.SevenHD.use_epg_thumb)
         self.setInputToDefault(config.plugins.SevenHD.epg_thumb_cache)
+        if os.path.isdir(PLUGIN_PATH + "Extensions/MediaPortal") :
+           self.setInputToDefault(config.mediaportal.skin)
         self.save()
 
     def setInputToDefault(self, configItem):
@@ -315,7 +317,11 @@ class PluginSettings(ConfigListScreen, Screen):
               self.setInputToDefault(config.movielist.itemsperpage)
            config.movielist.itemsperpage.save()
 
-        
+        if os.path.isdir(PLUGIN_PATH + "Extensions/MediaPortal") :
+           if config.plugins.SevenHD.use_mp_skin.value:
+              config.mediaportal.skin.value = 'SevenHD'
+              config.mediaportal.skin.save()
+              
         for x in self["config"].list:
             if len(x) > 1:
                 x[1].save()

@@ -157,12 +157,18 @@ class InfobarSettings(ConfigListScreen, Screen):
         list.append(getConfigListEntry(_("secondary border"),        config.plugins.SevenHD.InfobarBorder2,    'Stellt die Farbe sekund\xc3\xa4ren Rahmen in der Infobar ein.',                                       '4',       'InfobarBorder'))
         list.append(getConfigListEntry(_("progressbar"),             config.plugins.SevenHD.ProgressIB,        'Stellt die Farbe des Sendungsforschritt in der Infobar ein.',                                         '4',       'progressib'))
         list.append(getConfigListEntry(_("progressbar line"),        config.plugins.SevenHD.ProgressLineIB,    'Stellt die Farbe der Linie unter dem Fortschrittsbalken in der Infobar ein.',                         '4',       'progresslineib'))
-        list.append(getConfigListEntry(_('______________________________color font________________________________________'), ))
+        list.append(getConfigListEntry(_('______________________________extra info________________________________________'), ))
         if config.plugins.SevenHD.InfobarChannelName.value == 'none':
-           list.append(getConfigListEntry(_("channelname"),          config.plugins.SevenHD.InfobarChannelName,'Auswahl zwischen der Anzeige Name, Nummer, Name und Nummer oder Aus, wenn die Infobar angezeigt wird.','4',       'none'))
+           list.append(getConfigListEntry(_("infobar"),          config.plugins.SevenHD.InfobarChannelName,'Auswahl zwischen der Anzeige Fanart, MovieThumb, Sendername und Sendernummer wenn die Infobar angezeigt wird.','4',       'none'))
         else:
-           list.append(getConfigListEntry(_("channelname"),          config.plugins.SevenHD.InfobarChannelName,'Auswahl zwischen der Anzeige Name, Nummer, Name und Nummer oder Aus, wenn die Infobar angezeigt wird.','4',       'channelname'))
-        if config.plugins.SevenHD.InfobarChannelName.value != 'none':
+           list.append(getConfigListEntry(_("infobar"),          config.plugins.SevenHD.InfobarChannelName,'Auswahl zwischen der Anzeige Fanart, MovieThumb, Sendername und Sendernummer wenn die Infobar angezeigt wird.','1',       ''))
+        if config.plugins.SevenHD.SIBChannelName.value == 'none':
+           list.append(getConfigListEntry(_("second infobar"),          config.plugins.SevenHD.SIBChannelName,'Auswahl zwischen der Anzeige Sendername und Sendernummer wenn die SecondInfobar angezeigt wird.','4',       'none'))
+        else:
+           list.append(getConfigListEntry(_("second infobar"),          config.plugins.SevenHD.SIBChannelName,'Auswahl zwischen der Anzeige Sendername und Sendernummer wenn die SecondInfobar angezeigt wird.','4',       'channelname'))
+        list.append(getConfigListEntry(_('______________________________color font________________________________________'), ))
+        #if config.plugins.SevenHD.InfobarChannelName.value in ('none','-ICN','-ICNumber','-ICNameandNumber') or config.plugins.SevenHD.InfobarChannelName.value == 'none':
+        if config.plugins.SevenHD.InfobarChannelName.value in ('-ICN','-ICNumber','-ICNameandNumber','-fanartname','-fanartnumber','-fanartnamenumber','-thumbname','-thumbnumber','-thumbnamenumber') or config.plugins.SevenHD.SIBChannelName.value in ('-ICN','-ICNumber','-ICNameandNumber'):
            list.append(getConfigListEntry(_("color channelname"),    config.plugins.SevenHD.FontCN,            'Stellt die Farbe des Sendernamen ein.',                                                                '4',       'ColorCN'))
         list.append(getConfigListEntry(_("now event"),               config.plugins.SevenHD.NowEvent,          'Stellt die Farbe der aktuellen Programmbeschreibung ein.',                                             '4',       'NowEvent'))
         list.append(getConfigListEntry(_("next event"),              config.plugins.SevenHD.NextEvent,         'Stellt die Farbe der n\xc3\xa4chsten Programmbeschreibung ein.',                                       '4',       'NextEvent'))
@@ -188,6 +194,7 @@ class InfobarSettings(ConfigListScreen, Screen):
 	   list.append(getConfigListEntry(_("color weather"),        config.plugins.SevenHD.ClockWeather,      'Stellt die Farbe von der Temperatur ein.',                                                             '4',       'ClockWeather'))
         if config.plugins.SevenHD.ClockStyle.value == "clock-android":
 	   list.append(getConfigListEntry(_("color date"),           config.plugins.SevenHD.ClockDate,         'Stellt die Farbe des Datum ein.',                                                                      '4',       'ClockDate'))
+	   list.append(getConfigListEntry(_("color weather"),        config.plugins.SevenHD.ClockWeather,      'Stellt die Farbe von der Temperatur ein.',                                                             '4',       'ClockWeather'))
         if config.plugins.SevenHD.ClockStyle.value == "clock-flip":
            list.append(getConfigListEntry(_("color date"),           config.plugins.SevenHD.ClockDate,         'Stellt die Farbe des Datum ein.',                                                                      '4',       'ClockDate'))
         if config.plugins.SevenHD.ClockStyle.value == "clock-circle":

@@ -30,7 +30,6 @@ class SevenHDFlipClock(Renderer):
     def changed(self, what):
         if not self.suspended:
             value = self.source.text
-            self.debug(str(value))
             
             if 'H1' in value:
                value = value[3:4]
@@ -55,9 +54,3 @@ class SevenHDFlipClock(Renderer):
     def onHide(self):
         self.suspended = True
         self.timer.stop()
-        
-    def debug(self, what):
-        if config.plugins.SevenHD.debug.value:
-               f = open('/tmp/kraven_debug.txt', 'a+')
-               f.write('[FlipClock]' + str(what) + '\n')
-               f.close() 

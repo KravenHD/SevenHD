@@ -53,7 +53,7 @@ class SevenHDMovieThumb(Renderer):
             data = res.json()
             
             jpg_url = data['responseData']['results'][0]['tbUrl'].split('?')[0]
-            downloadPage(str(jpg_url), self.jpg_name).addCallback(self.on_finish).addErrback(self.Error)
+            downloadPage(str(jpg_url.replace('default','hqdefault')), self.jpg_name).addCallback(self.on_finish).addErrback(self.Error)
         
         except:
             self.instance.hide()

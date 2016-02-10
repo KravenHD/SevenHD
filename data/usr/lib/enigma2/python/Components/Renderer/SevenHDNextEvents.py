@@ -67,6 +67,9 @@ class SevenHDNextEvents(VariableText, Renderer):
 		        self.text = text
 
 	def build_eventstr(self, event):
-		begin = localtime(event[0])
-		end = localtime(event[0]+event[1])
-		return("%02d:%02d - %02d:%02d %s\n" % (begin[3],begin[4],end[3],end[4], event[2]))
+		try:
+                   begin = localtime(event[0])
+		   end = localtime(event[0]+event[1])
+		   return("%02d:%02d - %02d:%02d %s\n" % (begin[3],begin[4],end[3],end[4], event[2]))
+                except:
+                   return(' - \n')

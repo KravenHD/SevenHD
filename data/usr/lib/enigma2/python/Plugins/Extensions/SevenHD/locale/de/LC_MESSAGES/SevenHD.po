@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: SevenHD\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-10-26 18:55+0100\n"
-"PO-Revision-Date: 2016-02-02 00:55+0100\n"
+"PO-Revision-Date: 2016-02-07 22:31+0100\n"
 "Last-Translator: mike99 <mike99@mail.to>\n"
 "Language-Team: kraven & mike99\n"
 "Language: de\n"
@@ -752,8 +752,23 @@ msgstr "zwei Spalten (11)"
 msgid "two columns 12"
 msgstr "zwei Spalten (12)"
 
-msgid "two columns 13 (preview)"
-msgstr "zwei Spalten (13) (Vorschau)"
+msgid "two columns 13"
+msgstr "zwei Spalten (13)"
+
+msgid "two columns 14"
+msgstr "zwei Spalten (14)"
+
+msgid "two columns 15 (preview)"
+msgstr "zwei Spalten (15) (Vorschau)"
+
+msgid "two columns 16 (preview)"
+msgstr "zwei Spalten (16) (Vorschau)"
+
+msgid "two columns 17 (extended preview)"
+msgstr "zwei Spalten (17) (Erweiterte Vorschau)"
+
+msgid "two columns 18 (extended preview)"
+msgstr "zwei Spalten (18) (Erweiterte Vorschau)"
 
 msgid "two columns 6"
 msgstr "zwei Spalten (6)"
@@ -761,6 +776,9 @@ msgstr "zwei Spalten (6)"
 #: GlobalImport.py:451
 msgid "three columns 1"
 msgstr "drei Spalten (1)"
+
+msgid "one column 1"
+msgstr "eine Spalte (1)"
 
 #: GlobalImport.py:452
 msgid "three columns 2"
@@ -1863,3 +1881,30 @@ msgstr "Vorschau Grafischer EPG"
 
 msgid "graphical epg cache"
 msgstr "Speicherort Grafischer EPG"
+
+msgid "______________________________extra info________________________________________"
+msgstr "______________________________Extra Infos________________________________________"
+
+msgid "channelnumber"
+msgstr "Sendernummer"
+
+msgid "channelnumber and channelname"
+msgstr "Sendername und Sendernummer"
+
+msgid "Fanart and channelname"
+msgstr "Fanart und Sendername"
+
+msgid "Fanart and channelnumber"
+msgstr "Fanart und Sendernummer"
+
+msgid "Fanart, channelname and channelnumber"
+msgstr "Fanart, Sendername und Sendernummer"
+
+msgid "MovieThumb and channelname"
+msgstr "MovieThumb und Sendername"
+
+msgid "MovieThumb and channelnumber"
+msgstr "MovieThumb und Sendernummer"
+
+msgid "MovieThumb, channelname and channelnumber"
+msgstr "Moviethumb, Sendername und Sendernummer"

@@ -1,0 +1,4 @@
+
+		<widget position="14,318" render="SevenHDFanartThumb" size="276,159" source="session.CurrentService" transparent="1" zPosition="14">
+			<convert type="SevenHDServiceNameEventNobile">NameAndEvent</convert>
+		</widget>

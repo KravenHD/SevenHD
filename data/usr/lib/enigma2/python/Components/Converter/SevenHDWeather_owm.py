@@ -22,6 +22,7 @@ from Components.Element import cached
 from Components.config import config
 from enigma import eTimer
 import requests, time, os, gettext
+from Poll import Poll
 
 lang = language.getLanguage()
 os.environ["LANGUAGE"] = lang[:2]
@@ -38,20 +39,24 @@ def _(txt):
 URL = 'http://api.openweathermap.org/data/2.5/forecast/daily?' + config.plugins.SevenHD.weather_owm_latlon.value + '&cnt=5&mode=json&lang=de&appid=89b59e4d7d07894243b5acd24e7f18a3'
 WEATHER_DATA = None
 
-class SevenHDWeather_owm(Converter, object):
+class SevenHDWeather_owm(Poll, Converter, object):
 	def __init__(self, type):
+                Poll.__init__(self)
                 Converter.__init__(self, type)
+                self.poll_interval = 60000
+                self.poll_enabled = True
                 type = type.split(',')                
                 self.day_value = type[0]
                 self.what = type[1]
                 self.timer = eTimer()
                 self.timer.callback.append(self.reset)
 		self.timer.callback.append(self.get_Data)
-		self.get_Data()
+                self.get_Data()
 		 
 	@cached
 	def getText(self):
-	    
+	    global WEATHER_DATA
+            self.data = WEATHER_DATA
 	    day = self.day_value.split('_')[1]
             if self.what == 'DayTemp':
                self.info = self.getDayTemp(int(day))	
@@ -84,7 +89,8 @@ class SevenHDWeather_owm(Converter, object):
         def reset(self):
 	    global WEATHER_DATA
             WEATHER_DATA = None
-        
+            self.timer.stop()
+                
         def get_Data(self):
             global WEATHER_DATA
             if WEATHER_DATA is None:
@@ -94,7 +100,7 @@ class SevenHDWeather_owm(Converter, object):
                WEATHER_DATA = self.data
                
                timeout = int(config.plugins.SevenHD.refreshInterval.value) * 1000.0 * 60.0
-               self.timer.start(int(timeout), True)
+               self.timer.start(int(timeout), 1)
                
             else:
                self.data = WEATHER_DATA
@@ -102,42 +108,42 @@ class SevenHDWeather_owm(Converter, object):
         def getMinTemp(self, day):
             try:
                temp = self.data['list'][day]['temp']['min']
-               return str(round(float(temp))) + '°C'
+               return str(int(round(float(temp)))) + '°C'
             except:
                return 'N/A'
             
         def getMaxTemp(self, day):
             try:
                temp = self.data['list'][day]['temp']['max']
-               return str(round(float(temp))) + '°C'
+               return str(int(round(float(temp)))) + '°C'
             except:
                return 'N/A'
             
         def getMornTemp(self, day):
             try:
                temp = self.data['list'][day]['temp']['morn']
-               return str(round(float(temp))) + '°C'
+               return str(int(round(float(temp)))) + '°C'
             except:
                return 'N/A'
             
         def getEveTemp(self, day):
             try:
                temp = self.data['list'][day]['temp']['eve']
-               return str(round(float(temp))) + '°C'
+               return str(int(round(float(temp)))) + '°C'
             except:
                return 'N/A'
             
         def getDayTemp(self, day):
             try:
                temp = self.data['list'][day]['temp']['day']
-               return str(round(float(temp))) + '°C'
+               return str(int(round(float(temp)))) + '°C'
             except:
                return 'N/A'
                 
         def getNightTemp(self, day):
             try:
                temp = self.data['list'][day]['temp']['night']
-               return str(round(float(temp))) + '°C'
+               return str(int(round(float(temp)))) + '°C'
             except:
                return 'N/A'
             

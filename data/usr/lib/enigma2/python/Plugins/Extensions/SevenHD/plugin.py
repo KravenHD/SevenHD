@@ -154,8 +154,8 @@ class SevenHD(Screen):
         list.append(MenuEntryItem(_("channel selection"), "ChannelSettings"))
         if fileExists(MAIN_SKIN_PATH + 'skin.xml'):
            list.append(MenuEntryItem(_("font setting"), "FontSettings"))
-        if config.plugins.SevenHD.skin_mode.value == '1':
-           list.append(MenuEntryItem(_("skinpart setting"), "SkinParts"))
+           if config.plugins.SevenHD.skin_mode.value == '1':
+              list.append(MenuEntryItem(_("skinpart setting"), "SkinParts"))
         list.append(MenuEntryItem(_("other settings"), "SonstigeSettings"))
         list.append(MenuEntryItem(_("system osd settings"), "SystemOSDSettings"))
         if CREATOR != 'OpenMips':
@@ -646,7 +646,31 @@ class SevenHD(Screen):
                    self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.InfobarStyle.value + "-ICNumber.xml") 
                 if config.plugins.SevenHD.InfobarChannelName.value == "-ICNameandNumber":
                    self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.InfobarStyle.value + "-ICNameandNumber.xml")
-                   self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.InfobarStyle.value + "-ICNameandNumber.xml") 
+                   self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.InfobarStyle.value + "-ICNameandNumber.xml")
+                if config.plugins.SevenHD.InfobarChannelName.value == "-fanart":
+                   self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.InfobarStyle.value + "-fanart.xml")
+                   self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.InfobarStyle.value + "-fanart.xml")
+                if config.plugins.SevenHD.InfobarChannelName.value == "-fanartname":
+                   self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.InfobarStyle.value + "-fanartname.xml")
+                   self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.InfobarStyle.value + "-fanartname.xml")
+                if config.plugins.SevenHD.InfobarChannelName.value == "-fanartnumber":
+                   self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.InfobarStyle.value + "-fanartnumber.xml")
+                   self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.InfobarStyle.value + "-fanartnumber.xml")
+                if config.plugins.SevenHD.InfobarChannelName.value == "-fanartnamenumber":
+                   self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.InfobarStyle.value + "-fanartnamenumber.xml")
+                   self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.InfobarStyle.value + "-fanartnamenumber.xml")
+                if config.plugins.SevenHD.InfobarChannelName.value == "-thumb":
+                   self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.InfobarStyle.value + "-thumb.xml")
+                   self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.InfobarStyle.value + "-thumb.xml") 
+                if config.plugins.SevenHD.InfobarChannelName.value == "-thumbname":
+                   self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.InfobarStyle.value + "-thumbname.xml")
+                   self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.InfobarStyle.value + "-thumbname.xml") 
+                if config.plugins.SevenHD.InfobarChannelName.value == "-thumbnumber":
+                   self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.InfobarStyle.value + "-thumbnumber.xml")
+                   self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.InfobarStyle.value + "-thumbnumber.xml")    
+                if config.plugins.SevenHD.InfobarChannelName.value == "-thumbnamenumber":
+                   self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.InfobarStyle.value + "-thumbnamenumber.xml")
+                   self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.InfobarStyle.value + "-thumbnamenumber.xml")    
                 
                 ###ecm-info
                 self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.ECMInfo.value + XML)
@@ -694,21 +718,6 @@ class SevenHD(Screen):
                 self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.InfobarStyle.value + "-middle.xml")
                 self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.InfobarStyle.value + "-middle.xml")         
                 
-                ###Channelname 2nd Infobar
-                if not config.plugins.SevenHD.SIB.value in ('-minitv2','-right','-picon','-double'):
-                   if config.plugins.SevenHD.InfobarChannelName.value == "none":
-                      self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.InfobarChannelName.value + XML)
-                      self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.InfobarChannelName.value + XML) 
-                   if config.plugins.SevenHD.InfobarChannelName.value == "-ICN":
-                      self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.InfobarStyle.value + "-ICN.xml")
-                      self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.InfobarStyle.value + "-ICN.xml")    
-                   if config.plugins.SevenHD.InfobarChannelName.value == "-ICNumber":
-                      self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.InfobarStyle.value + "-ICNumber.xml")
-                      self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.InfobarStyle.value + "-ICNumber.xml") 
-                   if config.plugins.SevenHD.InfobarChannelName.value == "-ICNameandNumber":
-                      self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.InfobarStyle.value + "-ICNameandNumber.xml")
-                      self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.InfobarStyle.value + "-ICNameandNumber.xml") 
-                
                 ###clock-style xml 2nd Infobar
                 if not config.plugins.SevenHD.SIB.value in ('-minitv2','-right','-picon','-double'):
                    if config.plugins.SevenHD.ClockStyle.value == 'clock-weather':
@@ -723,6 +732,21 @@ class SevenHD(Screen):
                    else:
                       self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.ClockStyle.value + XML)
                       self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.ClockStyle.value + XML)       
+                
+                ###Channelname 2nd Infobar
+                if not config.plugins.SevenHD.SIB.value in ('-minitv2','-right','-picon'):
+                   if config.plugins.SevenHD.SIBChannelName.value == "none":
+                      self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.SIBChannelName.value + XML)
+                      self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.InfobarChannelName.value + XML) 
+                   if config.plugins.SevenHD.SIBChannelName.value == "-ICN":
+                      self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.InfobarStyle.value + "-ICN.xml")
+                      self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.InfobarStyle.value + "-ICN.xml")    
+                   if config.plugins.SevenHD.SIBChannelName.value == "-ICNumber":
+                      self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.InfobarStyle.value + "-ICNumber.xml")
+                      self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.InfobarStyle.value + "-ICNumber.xml") 
+                   if config.plugins.SevenHD.SIBChannelName.value == "-ICNameandNumber":
+                      self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.InfobarStyle.value + "-ICNameandNumber.xml")
+                      self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.InfobarStyle.value + "-ICNameandNumber.xml")
                 
                 ###weather-style 2nd Infobar
                 if config.plugins.SevenHD.InfobarStyle.value == 'infobar-style-xpicon8':

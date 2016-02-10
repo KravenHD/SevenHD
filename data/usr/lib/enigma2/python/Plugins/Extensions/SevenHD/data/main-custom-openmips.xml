@@ -288,7 +288,7 @@
 		</widget>
 		<eLabel backgroundColor="SevenFont1" position="101,119" size="990,1" />
 		<widget name="timeline_text" position="25,273" selectionDisabled="1" size="1230,25" transparent="1" />
-		<widget EntrybackgroundColor="SevenFontBackground" EntryBackgroundColorSelected="SevenFont1" EntryBorderColor="SevenFont1" itemHeight="60" name="list" position="25,300" size="1230,345" transparent="1" />
+		<widget itemHeight="60" name="list" position="25,300" size="1230,345" transparent="1" ServiceForegroundColor="#00ffffff" ServiceForegroundColorNow="#00ffffff" ServiceBackgroundColor="#00000000" ServiceBackgroundColorNow="#00707070" EntryForegroundColor="#00ffffff" EntryForegroundColorSelected="#00ffffff" EntryBackgroundColor="#00000000" EntryBackgroundColorSelected="#004169e1" EntryBackgroundColorNow="#00707070" EntryBackgroundColorNowSelected="#004169e1" EntryForegroundColorNow="#00ffffff" EntryForegroundColorNowSelected="#00ffffff" ServiceBorderColor="#00ffffff" EntryBorderColor="#00ffffff" RecordForegroundColor="#00ffffff" RecordForegroundColorSelected="#00ffffff" RecordBackgroundColor="#00ff0000" RecordBackgroundColorSelected="#004169e1" ZapForegroundColor="#00ffffff" ZapBackgroundColor="#008b0000" ZapForegroundColorSelected="#00ffffff" ZapBackgroundColorSelected="#004169e1" />
 		<widget name="timeline_now" position="80,297" zPosition="2" size="13,355" pixmap="SevenHD/epg/timeline-now.png" alphatest="blend" transparent="1" />
 		<eLabel position="101,119" size="990,1" backgroundColor="SevenLine" />
 		<panel name="template_menu_full_button" />

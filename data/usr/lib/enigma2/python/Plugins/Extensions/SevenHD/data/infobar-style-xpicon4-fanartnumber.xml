@@ -1,0 +1,8 @@
+
+		<widget position="14,318" render="SevenHDFanartThumb" size="276,159" source="session.CurrentService" transparent="1" zPosition="14">
+			<convert type="SevenHDServiceNameEventNobile">NameAndEvent</convert>
+		</widget>
+		<widget font="Regular2; 40" foregroundColor="SevenFontCN" halign="left" noWrap="1" position="293,472" render="Label" size="970,60" source="session.CurrentService" transparent="1" valign="center" zPosition="1" alphatest="blend">
+			<convert type="SevenHDExtServiceInfo">ServiceNumber</convert>
+		</widget>
+

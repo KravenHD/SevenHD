@@ -8,7 +8,8 @@
 		<widget font="Regular; 30" foregroundColor="SevenProgramCS" position="18,18" halign="center" render="SevenHDRunningText" options="movetype=running,startpoint=0,startdelay=2000,steptime=90,wrap=0,always=0,repeat=2,oneshot=1" size="530,40" source="ServiceEvent" backgroundColor="SevenFontBackCS" transparent="1" valign="bottom">
 			<convert type="SevenHDEventName">Name</convert>
 		</widget>
-		<widget source="session.VideoPicture" render="Pig" position="92,72" size="400,220" backgroundColor="transparent" zPosition="2" />
+		<widget source="ServiceEvent" render="SevenHDPig" position="92,72" size="400,220" backgroundColor="transparent" zPosition="2" />
+		<eLabel position="92,313" size="400,220" backgroundColor="transparent" zPosition="2" />
 		<widget source="ServiceEvent" render="Label" position="18,289" size="64,24" font="Regular; 18" foregroundColor="SevenRuntimeCS" backgroundColor="SevenFontBackCS" transparent="1" halign="right">
 			<convert type="SevenHDEventTime">StartTime</convert>
 			<convert type="SevenHDClockToText">
@@ -24,20 +25,17 @@
 		<eLabel position="86,302" size="410,1" backgroundColor="SevenProgressLineCS" />
 		<widget source="ServiceEvent" render="SevenHDSingleEpgList" halign="center" position="18,543" size="530,79" font="Regular;19" backgroundColor="SevenFontBackCS" foregroundColor="SevenNextCS" transparent="1" noWrap="1">
 		</widget>
-		<widget source="ServiceEvent" render="SevenHDMiniTV" position="92,312" size="400,220" backgroundColor="transparent" zPosition="2">
-			<convert type="SevenHDMiniTVDisplay" />
-		</widget>
 		<widget backgroundColor="SevenFontBackCS" font="Regular;22" foregroundColor="SevenPrimeCS" position="18,626" render="Label" size="530,30" source="ServiceEvent" transparent="1" zPosition="5" noWrap="1" halign="center">
 			<convert type="SevenHDNextEvents">PrimeTime,noDuration</convert>
 		</widget>
 		<panel name="template_menu_cs7_button" />
-		<eLabel backgroundColor="SevenLineCS" position="90,528" size="404,4" zPosition="5" />
-		<eLabel backgroundColor="SevenLineCS" position="90,310" size="404,4" zPosition="5" />
-		<eLabel backgroundColor="SevenLineCS" position="490,310" size="4,222" zPosition="5" />
-		<eLabel backgroundColor="SevenLineCS" position="90,71" size="4,222" zPosition="5" />
-		<eLabel backgroundColor="SevenLineCS" position="90,289" size="404,4" zPosition="5" />
-		<eLabel backgroundColor="SevenLineCS" position="90,71" size="404,4" zPosition="5" />
-		<eLabel backgroundColor="SevenLineCS" position="490,71" size="4,222" zPosition="5" />
-		<eLabel backgroundColor="SevenLineCS" position="90,310" size="4,222" zPosition="5" />
+		<eLabel backgroundColor="SevenLineCS" position="92,528" size="400,4" zPosition="5" />
+		<eLabel backgroundColor="SevenLineCS" position="92,310" size="400,4" zPosition="5" />
+		<eLabel backgroundColor="SevenLineCS" position="488,310" size="4,222" zPosition="5" />
+		<eLabel backgroundColor="SevenLineCS" position="92,71" size="4,222" zPosition="5" />
+		<eLabel backgroundColor="SevenLineCS" position="92,289" size="400,4" zPosition="5" />
+		<eLabel backgroundColor="SevenLineCS" position="92,71" size="400,4" zPosition="5" />
+		<eLabel backgroundColor="SevenLineCS" position="488,71" size="4,222" zPosition="5" />
+		<eLabel backgroundColor="SevenLineCS" position="92,310" size="4,222" zPosition="5" />
 	</screen>
 		<!-- ChannelSelection Pip */-->
