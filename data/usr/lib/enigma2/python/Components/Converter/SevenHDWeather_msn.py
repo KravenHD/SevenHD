@@ -39,6 +39,7 @@ def _(txt):
 
 URL = 'http://weather.service.msn.com/data.aspx?src=outlook&culture=' + str(config.plugins.SevenHD.weather_language.value) + '&weadegreetype=C&wealocations=wc:' + str(config.plugins.SevenHD.weather_msn_id.value)
 WEATHER_DATA = None
+TIMEOUT = 3
 
 class SevenHDWeather_msn(Poll, Converter, object):
 	def __init__(self, type):
@@ -104,34 +105,37 @@ class SevenHDWeather_msn(Poll, Converter, object):
                self.data = {}
                index = 0
             
-               res = requests.request('get', URL)
-               root = fromstring(res.text)
+               try:
+                  res = requests.request('get', URL, timeout = TIMEOUT)
+                  root = fromstring(res.text)
             
-               for childs in root:
-                   for items in childs:
-                       if items.tag == 'current':
-                          self.data['Day_%s' % str(index)] = {}
-                          self.data['Day_%s' % str(index)]['temp'] = items.attrib.get('temperature').encode('utf-8', 'ignore')
-                          self.data['Day_%s' % str(index)]['skytextday'] = items.attrib.get('skytext').encode('utf-8', 'ignore')
-                          self.data['Day_%s' % str(index)]['humidity'] = items.attrib.get('humidity').encode('utf-8', 'ignore')
-                          self.data['Day_%s' % str(index)]['winddisplay'] = items.attrib.get('winddisplay').encode('utf-8', 'ignore')
-                          self.data['Day_%s' % str(index)]['feelslike'] = items.attrib.get('feelslike').encode('utf-8', 'ignore')
-                          self.data['Day_%s' % str(index)]['skycodeday'] = items.attrib.get('skycode').encode('utf-8', 'ignore')
-                          self.data['Day_%s' % str(index)]['shortday'] = items.attrib.get('shortday').encode('utf-8', 'ignore')
-                          self.data['Day_%s' % str(index)]['longday'] = items.attrib.get('day').encode('utf-8', 'ignore')
-                          self.data['Day_%s' % str(index)]['observationpoint'] = items.attrib.get('observationpoint').encode('utf-8', 'ignore')
-                       elif items.tag == 'forecast':
-                          index += 1
-                          self.data['Day_%s' % str(index)] = {}
-                          self.data['Day_%s' % str(index)]['low'] = items.attrib.get('low').encode('utf-8', 'ignore')
-                          self.data['Day_%s' % str(index)]['high'] = items.attrib.get('high').encode('utf-8', 'ignore')
-                          self.data['Day_%s' % str(index)]['skycodeday'] = items.attrib.get('skycodeday').encode('utf-8', 'ignore')
-                          self.data['Day_%s' % str(index)]['skytextday'] = items.attrib.get('skytextday').encode('utf-8', 'ignore')
-                          self.data['Day_%s' % str(index)]['shortday'] = items.attrib.get('shortday').encode('utf-8', 'ignore')          
-                          self.data['Day_%s' % str(index)]['longday'] = items.attrib.get('day').encode('utf-8', 'ignore')
-                          self.data['Day_%s' % str(index)]['precip'] = items.attrib.get('precip').encode('utf-8', 'ignore')
-                          
+                  for childs in root:
+                      for items in childs:
+                          if items.tag == 'current':
+                             self.data['Day_%s' % str(index)] = {}
+                             self.data['Day_%s' % str(index)]['temp'] = items.attrib.get('temperature').encode('utf-8', 'ignore')
+                             self.data['Day_%s' % str(index)]['skytextday'] = items.attrib.get('skytext').encode('utf-8', 'ignore')
+                             self.data['Day_%s' % str(index)]['humidity'] = items.attrib.get('humidity').encode('utf-8', 'ignore')
+                             self.data['Day_%s' % str(index)]['winddisplay'] = items.attrib.get('winddisplay').encode('utf-8', 'ignore')
+                             self.data['Day_%s' % str(index)]['feelslike'] = items.attrib.get('feelslike').encode('utf-8', 'ignore')
+                             self.data['Day_%s' % str(index)]['skycodeday'] = items.attrib.get('skycode').encode('utf-8', 'ignore')
+                             self.data['Day_%s' % str(index)]['shortday'] = items.attrib.get('shortday').encode('utf-8', 'ignore')
+                             self.data['Day_%s' % str(index)]['longday'] = items.attrib.get('day').encode('utf-8', 'ignore')
+                             self.data['Day_%s' % str(index)]['observationpoint'] = items.attrib.get('observationpoint').encode('utf-8', 'ignore')
+                          elif items.tag == 'forecast':
+                             index += 1
+                             self.data['Day_%s' % str(index)] = {}
+                             self.data['Day_%s' % str(index)]['low'] = items.attrib.get('low').encode('utf-8', 'ignore')
+                             self.data['Day_%s' % str(index)]['high'] = items.attrib.get('high').encode('utf-8', 'ignore')
+                             self.data['Day_%s' % str(index)]['skycodeday'] = items.attrib.get('skycodeday').encode('utf-8', 'ignore')
+                             self.data['Day_%s' % str(index)]['skytextday'] = items.attrib.get('skytextday').encode('utf-8', 'ignore')
+                             self.data['Day_%s' % str(index)]['shortday'] = items.attrib.get('shortday').encode('utf-8', 'ignore')          
+                             self.data['Day_%s' % str(index)]['longday'] = items.attrib.get('day').encode('utf-8', 'ignore')
+                             self.data['Day_%s' % str(index)]['precip'] = items.attrib.get('precip').encode('utf-8', 'ignore')
+               except:
+                  self.data = ""         
                WEATHER_DATA = self.data
+               
                timeout = int(config.plugins.SevenHD.refreshInterval.value) * 1000.0 * 60.0
                self.timer.start(int(timeout), 1)
                

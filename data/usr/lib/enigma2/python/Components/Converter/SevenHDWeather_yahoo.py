@@ -39,6 +39,7 @@ def _(txt):
 
 URL = 'http://weather.yahooapis.com/forecastrss?w=' + str(config.plugins.SevenHD.weather_woe_id.value) + '&u=c'
 WEATHER_DATA = None
+TIMEOUT = 3
 
 class SevenHDWeather_yahoo(Poll, Converter, object):
 	def __init__(self, type):
@@ -101,7 +102,7 @@ class SevenHDWeather_yahoo(Poll, Converter, object):
                index = 0
             
                try:
-                 res = requests.request('get', URL)
+                 res = requests.request('get', URL, timeout = TIMEOUT)
                  root = parseString(res.text)
                  
                  self.data['Day_%s' % str(index)] = {}
@@ -126,6 +127,7 @@ class SevenHDWeather_yahoo(Poll, Converter, object):
                  WEATHER_DATA = self.data
                  return
                WEATHER_DATA = self.data            
+               
                timeout = int(config.plugins.SevenHD.refreshInterval.value) * 1000.0 * 60.0
                self.timer.start(int(timeout), 1)
 

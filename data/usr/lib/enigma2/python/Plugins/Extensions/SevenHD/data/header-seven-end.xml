@@ -674,6 +674,29 @@
 		<eLabel backgroundColor="SevenBorderRightCS" position="718,6" size="555,2" zPosition="2" />
 		<eLabel backgroundColor="SevenBorderCS" position="6,6" size="706,2" zPosition="2" />
 	</screen>
+	<screen name="template_menu_cs15_button">
+		<widget backgroundColor="SevenFontBackCS" font="Regular2; 34" foregroundColor="SevenBouquetCS" position="17,12" render="Label" size="708,46" source="Title" transparent="1" halign="left" valign="center" noWrap="1" />
+		<eLabel backgroundColor="SevenBackCS" position="6,6" size="1269,708" transparent="0" zPosition="-9" foregroundColor="SevenFont2" />
+		<ePixmap pixmap="SevenHD/back/csleft.png" position="6,6" size="1269,708" alphatest="blend" zPosition="-8" />
+		<eLabel backgroundColor="SevenBorderCS" position="6,6" size="1270,2" zPosition="2" />
+		<eLabel backgroundColor="SevenBorderCS" position="6,714" size="1270,2" zPosition="2" />
+		<eLabel backgroundColor="SevenBorderCS" position="6,6" size="2,708" zPosition="2" />
+		<eLabel backgroundColor="SevenLineCS" position="18,64" size="1245,2" zPosition="2" />
+		<eLabel backgroundColor="SevenLineCS" position="18,656" size="1245,2" zPosition="2" />
+		<eLabel backgroundColor="SevenLineCS" position="18,489" size="1245,2" zPosition="2" />
+		<widget source="global.CurrentTime" render="Label" position="1154,16" size="100,28" font="Regular;26" halign="right" backgroundColor="SevenFontBackCS" transparent="1" valign="center" foregroundColor="SevenTimeCS">
+			<convert type="SevenHDClockToText">Default</convert>
+		</widget>
+		<ePixmap pixmap="SevenHD/buttons/key_red1.png" position="22,670" size="32,37" backgroundColor="SevenFontBackCS" alphatest="blend" />
+		<ePixmap pixmap="SevenHD/buttons/key_green1.png" position="222,670" size="32,37" backgroundColor="SevenFontBackCS" alphatest="blend" />
+		<ePixmap pixmap="SevenHD/buttons/key_yellow1.png" position="422,670" size="32,37" backgroundColor="SevenFontBackCS" alphatest="blend" />
+		<ePixmap pixmap="SevenHD/buttons/key_blue1.png" position="622,670" size="32,37" backgroundColor="SevenFontBackCS" alphatest="blend" />
+		<eLabel backgroundColor="SevenBorderCS" position="1274,6" size="2,708" zPosition="2" />
+		<widget font="Regular; 18" halign="left" valign="center" source="key_red" position="64,662" size="148,48" render="Label" backgroundColor="SevenFontBackCS" foregroundColor="SevenButtonsCS" transparent="1" zPosition="1" />
+		<widget font="Regular; 18" halign="left" valign="center" source="key_green" position="264,662" size="148,48" render="Label" backgroundColor="SevenFontBackCS" foregroundColor="SevenButtonsCS" transparent="1" zPosition="1" />
+		<widget font="Regular; 18" halign="left" valign="center" source="key_yellow" position="464,662" size="148,48" render="Label" backgroundColor="SevenFontBackCS" foregroundColor="SevenButtonsCS" transparent="1" zPosition="1" />
+		<widget font="Regular; 18" halign="left" valign="center" source="key_blue" position="664,662" size="148,48" render="Label" backgroundColor="SevenFontBackCS" foregroundColor="SevenButtonsCS" transparent="1" zPosition="1" />
+	</screen>
 	<screen name="template_menu_quick1">
 		<ePixmap pixmap="SevenHD/buttons/key_red1.png" position="22,669" size="32,37" backgroundColor="SevenFontBackground" alphatest="blend" />
 		<ePixmap pixmap="SevenHD/buttons/key_green1.png" position="222,669" size="32,37" backgroundColor="SevenFontBackground" alphatest="blend" />

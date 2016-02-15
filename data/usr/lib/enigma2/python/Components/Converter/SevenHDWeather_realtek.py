@@ -40,6 +40,7 @@ def _(txt):
 
 URL = 'http://realtek.accu-weather.com/widget/realtek/weather-data.asp?%s' % str(config.plugins.SevenHD.weather_realtek_latlon.value)
 WEATHER_DATA = None
+TIMEOUT = 3
 
 class SevenHDWeather_realtek(Poll, Converter, object):
 	def __init__(self, type):
@@ -100,33 +101,35 @@ class SevenHDWeather_realtek(Poll, Converter, object):
                
                self.data = {}
                index = 0
+               try:
+                  res = requests.request('get', URL, timeout = TIMEOUT)
+                  root = fromstring(res.text.replace('xmlns="http://www.accuweather.com"',''))
 
-               res = requests.request('get', URL)
-               root = fromstring(res.text.replace('xmlns="http://www.accuweather.com"',''))
+                  for child in root.findall('currentconditions'):
+                      self.data['Day_%s' % str(index)] = {}
+                      self.data['Day_%s' % str(index)]['temp'] = child.find('temperature').text
+                      self.data['Day_%s' % str(index)]['skytextday'] = child.find('weathertext').text
+                      self.data['Day_%s' % str(index)]['skycodeday'] = child.find('weathericon').text 
+                      self.data['Day_%s' % str(index)]['humidity'] = child.find('humidity').text
+                      self.data['Day_%s' % str(index)]['winddisplay'] = child.find('winddirection').text
+                      self.data['Day_%s' % str(index)]['windspeed'] = child.find('windspeed').text
+                      self.data['Day_%s' % str(index)]['feelslike'] = child.find('realfeel').text
 
-               for child in root.findall('currentconditions'):
-                   self.data['Day_%s' % str(index)] = {}
-                   self.data['Day_%s' % str(index)]['temp'] = child.find('temperature').text
-                   self.data['Day_%s' % str(index)]['skytextday'] = child.find('weathertext').text
-                   self.data['Day_%s' % str(index)]['skycodeday'] = child.find('weathericon').text 
-                   self.data['Day_%s' % str(index)]['humidity'] = child.find('humidity').text
-                   self.data['Day_%s' % str(index)]['winddisplay'] = child.find('winddirection').text
-                   self.data['Day_%s' % str(index)]['windspeed'] = child.find('windspeed').text
-                   self.data['Day_%s' % str(index)]['feelslike'] = child.find('realfeel').text
-
-               for child in root.findall('forecast'):
-                   for item in child.findall('day'):                        
-                       for entrie in item.findall('daytime'):        
-                           index += 1
-                           self.data['Day_%s' % str(index)] = {}
-                           self.data['Day_%s' % str(index)]['day'] = item.find('obsdate').text
-                           self.data['Day_%s' % str(index)]['high'] = entrie.find('hightemperature').text
-                           self.data['Day_%s' % str(index)]['low'] = entrie.find('lowtemperature').text
-                           self.data['Day_%s' % str(index)]['skycodeday'] = entrie.find('weathericon').text                                
-                           self.data['Day_%s' % str(index)]['skytextday'] = entrie.find('txtshort').text  
-                           self.data['Day_%s' % str(index)]['precip'] = entrie.find('rainamount').text
-                           
+                  for child in root.findall('forecast'):
+                      for item in child.findall('day'):                        
+                          for entrie in item.findall('daytime'):        
+                              index += 1
+                              self.data['Day_%s' % str(index)] = {}
+                              self.data['Day_%s' % str(index)]['day'] = item.find('obsdate').text
+                              self.data['Day_%s' % str(index)]['high'] = entrie.find('hightemperature').text
+                              self.data['Day_%s' % str(index)]['low'] = entrie.find('lowtemperature').text
+                              self.data['Day_%s' % str(index)]['skycodeday'] = entrie.find('weathericon').text                                
+                              self.data['Day_%s' % str(index)]['skytextday'] = entrie.find('txtshort').text  
+                              self.data['Day_%s' % str(index)]['precip'] = entrie.find('rainamount').text
+               except:
+                  self.data = ""            
                WEATHER_DATA = self.data
+               
                timeout = int(config.plugins.SevenHD.refreshInterval.value) * 1000.0 * 60.0
                self.timer.start(int(timeout), 1)
                

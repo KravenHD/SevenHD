@@ -41,19 +41,25 @@ URL2 = 'http://api.accuweather.com/currentconditions/v1/' + str(config.plugins.S
 
 WEATHER_DATA1 = None
 WEATHER_DATA2 = None
+TIMEOUT = 3
 
 class SevenHDWeather_accu(Poll, Converter, object):
 	def __init__(self, type):
                 Poll.__init__(self)
                 Converter.__init__(self, type)
+                
                 self.poll_interval = 60000
                 self.poll_enabled = True
+                
                 type = type.split(',')                
+                
                 self.day_value = type[0]
                 self.what = type[1]
+                
                 self.timer = eTimer()
                 self.timer.callback.append(self.reset)
 		self.timer.callback.append(self.get_Data)
+
                 self.get_Data()
 		 
 	@cached
@@ -104,12 +110,18 @@ class SevenHDWeather_accu(Poll, Converter, object):
             global WEATHER_DATA2
             if WEATHER_DATA1 is None or WEATHER_DATA2 is None:
             
-               res = requests.request('get', URL)
-               self.data = res.json()
+               try:
+                  res = requests.request('get', URL, timeout = TIMEOUT)
+                  self.data = res.json()
+               except:
+                  self.data = ""
                WEATHER_DATA1 = self.data
                
-               res2 = requests.request('get', URL2)
-               self.data2 = res2.json()
+               try:
+                  res2 = requests.request('get', URL2, timeout = TIMEOUT)
+                  self.data2 = res2.json()
+               except:
+                  self.data2 = ""
                WEATHER_DATA2 = self.data2
                
                timeout = int(config.plugins.SevenHD.refreshInterval.value) * 1000.0 * 60.0

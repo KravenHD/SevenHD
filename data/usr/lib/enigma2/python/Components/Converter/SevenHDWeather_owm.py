@@ -38,6 +38,7 @@ def _(txt):
 
 URL = 'http://api.openweathermap.org/data/2.5/forecast/daily?' + config.plugins.SevenHD.weather_owm_latlon.value + '&cnt=5&mode=json&lang=de&appid=89b59e4d7d07894243b5acd24e7f18a3'
 WEATHER_DATA = None
+TIMEOUT = 3
 
 class SevenHDWeather_owm(Poll, Converter, object):
 	def __init__(self, type):
@@ -95,8 +96,11 @@ class SevenHDWeather_owm(Poll, Converter, object):
             global WEATHER_DATA
             if WEATHER_DATA is None:
 
-               res = requests.request('get', URL)
-               self.data = res.json()
+               try:
+                  res = requests.request('get', URL, timeout = TIMEOUT)
+                  self.data = res.json()
+               except:
+                  self.data = ""
                WEATHER_DATA = self.data
                
                timeout = int(config.plugins.SevenHD.refreshInterval.value) * 1000.0 * 60.0

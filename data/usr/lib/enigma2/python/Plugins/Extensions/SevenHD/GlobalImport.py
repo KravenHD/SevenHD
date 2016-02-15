@@ -1,10 +1,10 @@
-#version = '3.6.69'
+#version = '3.6.70'
 import os
 try:
    opkg_info = os.popen("opkg list-installed enigma2-plugin-skins-sevenhd | cut -d ' ' -f3").read()
    version = str(opkg_info.strip().split('+')[0])
 except:
-   version = '3.6.69'
+   version = '3.6.70'
 import re
 import time
 import math
@@ -693,6 +693,7 @@ if SystemInfo.get("NumVideoDecoders",1)>1:
 CSList.append(("channelselection-threecolumns", _("three columns 1")))
 CSList.append(("channelselection-threecolumnsminitv", _("three columns 2")))
 CSList.append(("channelselection-onecolumn", _("one column 1")))
+CSList.append(("channelselection-onecolumntwo", _("one column 2")))
 
 config.plugins.SevenHD.ChannelSelectionStyle = ConfigSelection(default="channelselection-twocolumns", choices = CSList)
 

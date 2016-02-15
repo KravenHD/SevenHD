@@ -26,7 +26,7 @@ from twisted.web.client import downloadPage
 
 HEADERS = {'Content-Type': 'application/json','trakt-api-version': '2','trakt-api-key': 'd4161a7a106424551add171e5470112e4afdaf2438e6ef2fe0548edc75924868'}
 PATH = '/usr/share/enigma2/SevenHD/thumb'
-TIMEOUT = 1
+TIMEOUT = 2
 
 class SevenHDFanartThumb(Renderer):
 
@@ -35,23 +35,18 @@ class SevenHDFanartThumb(Renderer):
         if not os.path.isdir(PATH):
            os.mkdir(PATH)
         
-        self.count = 0
         self.png_name = PATH + '/default.png'  
         
         self.timer = eTimer()
         self.timer.callback.append(self.poll_my_search)
-    
-        self.re_download_timer = eTimer()
-        self.re_download_timer.callback.append(self.poll_my_thumb)
         
     GUI_WIDGET = ePixmap
-    def changed(self, what):
-        self.load = 1
+    def my_changed(self, what):
         if not self.instance:
            config.plugins.SevenHD.fanart_url.value = '-'
            config.plugins.SevenHD.fanart_url.save()
            return
-
+        
         try:
            event = str(self.source.text.split(' - ', 1)[1])
            self.new_event = str(event)
@@ -59,12 +54,16 @@ class SevenHDFanartThumb(Renderer):
            self.new_event = ''
            
         if self.new_event == '':
-           self.timer.start(2000, 1)
-        
-        if what[0] != self.CHANGED_DEFAULT:
+           self.timer.start(500, 1)
+        else:
+           self.timer.stop()
            
-            if self.count == 0:
-               return
+        if str(config.plugins.SevenHD.fanart_url.value) == str(self.new_event):
+            if os.path.isfile(self.png_name):
+               self.instance.setPixmapFromFile(self.png_name)
+               self.instance.show()
+            return
+        else:   
             
             try:
                self.url = None
@@ -110,18 +109,7 @@ class SevenHDFanartThumb(Renderer):
                 if os.path.isfile(self.png_name):
                    self.instance.setPixmapFromFile(self.png_name)
                    self.instance.show()
-            return
-
-        else:
-
-            if str(config.plugins.SevenHD.fanart_url.value) == str(self.new_event):
-                if os.path.isfile(self.png_name):
-                   self.instance.setPixmapFromFile(self.png_name)
-                   self.instance.show()
-                return
-            else:
-                self.count = 1
-        return  
+            return 
     
     def get_id(self):
         try:
@@ -260,63 +248,52 @@ class SevenHDFanartThumb(Renderer):
         
             
     def on_finish(self, what):
-
-        if self.load != 1:
-           return
            
         if os.path.isfile(self.png_name):
-           self.load = 0
            size = self.instance.size()
            
-           self.re_download_timer.start(2000, 1)
-           
            thumb = Image.open(self.png_name)
-           thumb.thumbnail((size.width(), size.height()))
-           thumb.save(self.png_name, 'png')
+           try:
+              thumb.load()
+           except:
+              config.plugins.SevenHD.fanart_url.value = str('+')
+              config.plugins.SevenHD.fanart_url.save()
+           else:
+              thumb.thumbnail((size.width(), size.height()))
+              thumb.save(self.png_name, 'png')
            
-           self.re_download_timer.stop()
+              config.plugins.SevenHD.fanart_url.value = str(self.new_event)
+              config.plugins.SevenHD.fanart_url.save()
            
-           config.plugins.SevenHD.fanart_url.value = str(self.new_event)
-           config.plugins.SevenHD.fanart_url.save()
-           
-           self.instance.setPixmapFromFile(self.png_name)
-           self.instance.show()
-           return
+              self.instance.setPixmapFromFile(self.png_name)
+              self.instance.show()
            
     def Error(self, errors):
         if str(config.plugins.SevenHD.fanart_url.value) != str(self.new_event):
            if os.path.isfile(self.png_name):
-              if self.load != 0:
                  os.remove(self.png_name)
+        
         if errors == 'Nothing Found':
               config.plugins.SevenHD.fanart_url.value = str(self.new_event)
               config.plugins.SevenHD.fanart_url.save()
               self.instance.hide()
         return
-
+    
     def onHide(self):
         self.timer.stop()
-        self.re_download_timer.stop()
         
     def onShow(self):
         if self.instance:
            self.instance.hide()
-           self.do_try(False)
-
-    def do_try(self, suspended):
-        self.count = 0
-        if not suspended:
-           self.changed((self.CHANGED_DEFAULT,))
-           if self.count == 1:
-              self.changed((self.CHANGED_CLEAR,))
-
+           self.do_try()
+           
+    def do_try(self):
+        self.my_changed(None)
+    
+    def changed(self, what):
+        if str(what) == '(3, 0)':
+           self.do_try()
+        
     def poll_my_search(self):
         self.timer.stop()
-        self.do_try(False)
-
-    def poll_my_thumb(self):
-        self.re_download_timer.stop()
-        if str(config.plugins.SevenHD.fanart_url.value) != str(self.new_event):      
-              self.load = 1
-              os.remove(self.png_name)
-              downloadPage(str(self.url), self.png_name).addCallback(self.on_finish).addErrback(self.Error)
+        self.do_try()

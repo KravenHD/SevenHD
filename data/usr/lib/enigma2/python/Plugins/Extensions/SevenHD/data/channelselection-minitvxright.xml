@@ -6,13 +6,13 @@
 			<convert type="SevenHDEventName">BothDescriptionsFiltered</convert>
 		</widget>
 		
-		<widget source="session.VideoPicture" render="Pig" position="804,71" size="400,220" backgroundColor="transparent" zPosition="2" />
+		<widget source="session.VideoPicture" render="Pig" position="797,71" size="400,220" backgroundColor="transparent" zPosition="2" />
 		<widget source="ServiceEvent" render="Label" position="730,271" size="64,24" font="Regular; 18" foregroundColor="SevenRuntimeCS" backgroundColor="SevenFontBackRightCS" transparent="1" halign="left">
 			<convert type="SevenHDEventTime">StartTime</convert>
 			<convert type="SevenHDClockToText">
 			</convert>
 		</widget>
-		<widget source="ServiceEvent" render="Label" position="1210,271" size="64,24" font="Regular; 18" foregroundColor="SevenRuntimeCS" backgroundColor="SevenFontBackRightCS" transparent="1">
+		<widget source="ServiceEvent" render="Label" position="1196,271" size="64,24" font="Regular; 18" foregroundColor="SevenRuntimeCS" backgroundColor="SevenFontBackRightCS" transparent="1" halign="right">
 			<convert type="SevenHDEventTime">EndTime</convert>
 			<convert type="SevenHDClockToText">Format:%H:%M</convert>
 		</widget>
@@ -35,10 +35,10 @@
 			<convert type="SevenHDEventName">Name</convert>
 		</widget>
 		<eLabel backgroundColor="SevenLineRightCS" position="730,623" size="530,2" zPosition="2" />
-		<eLabel backgroundColor="SevenLineCS" position="802,289" size="404,4" zPosition="5" />
-		<eLabel backgroundColor="SevenLineCS" position="802,71" size="404,4" zPosition="5" />
-		<eLabel backgroundColor="SevenLineCS" position="1202,71" size="4,222" zPosition="5" />
-		<eLabel backgroundColor="SevenLineCS" position="802,71" size="4,222" zPosition="5" />
+		<eLabel backgroundColor="SevenLineCS" position="795,289" size="404,4" zPosition="5" />
+		<eLabel backgroundColor="SevenLineCS" position="795,71" size="404,4" zPosition="5" />
+		<eLabel backgroundColor="SevenLineCS" position="1195,71" size="4,222" zPosition="5" />
+		<eLabel backgroundColor="SevenLineCS" position="795,71" size="4,222" zPosition="5" />
 		<panel name="template_menu_cs14_button" />
 	</screen>
 		<!-- ChannelSelection X/MiniTV */-->
