@@ -381,13 +381,14 @@
 				}
 			</convert>
 		</widget>
-		<panel name="template_menu_left" />
+		<panel name="template_menu_left_button" />
+		<panel name="template_colorkey_text_kp" />
 	</screen>
 		<!-- PluginBrowser -->
 	<screen backgroundColor="transparent" flags="wfNoBorder" name="PluginBrowser" position="0,0" size="1280,720" title="Plugin browser">
 		<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="PluginBrowser" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
 		<widget backgroundColor="SevenFontBackground" enableWrapAround="1" name="list" font="Regular;18" position="70,80" size="708,550" transparent="1" />
-		<panel name="template_menu_left_button" />
+		<panel name="template_title_main_button_nologo" />
 		<panel name="template_colorkey_text_source" />
 	</screen>
 		<!-- main-custom-openatv */ -->

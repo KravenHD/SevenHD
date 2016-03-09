@@ -26,6 +26,75 @@ class SevenHDWetterPicon(Renderer):
 	def __init__(self):
 		Renderer.__init__(self)
 		self.pngname = ''
+		self.userpath = "/usr/share/enigma2/Seven-user-icons/"
+		self.usericons = [
+		("01d","32"),
+		("01n","31"),
+		("02d","30"),
+		("02n","29"),
+		("03d","28"),
+		("03n","27"),
+		("04d","26"),
+		("04n","26"),
+		("09d","11"),
+		("09n","12"),
+		("10d","10"),
+		("10n","9"),
+		("11d","4"),
+		("11n","4"),
+		("13d","16"),
+		("13n","16"),
+		("50d","20"),
+		("50n","20"),
+		("01","32"),
+		("1","32"),
+		("02","34"),
+		("2","34"),
+		("03","30"),
+		("3","30"),
+		("04","30"),
+		("4","30"),
+		("05","21"),
+		("5","21"),
+		("06","28"),
+		("6","28"),
+		("07","26"),
+		("7","26"),
+		("08","26"),
+		("8","26"),
+		("11","20"),
+		("12","40"),
+		("13","39"),
+		("14","39"),
+		("15","4"),
+		("16","4"),
+		("17","4"),
+		("18","4"),
+		("19","13"),
+		("20","13"),
+		("21","13"),
+		("22","16"),
+		("23","16"),
+		("24","25"),
+		("25","18"),
+		("26","10"),
+		("29","5"),
+		("30","36"),
+		("31","25"),
+		("32","24"),
+		("33","31"),
+		("34","33"),
+		("35","29"),
+		("36","29"),
+		("37","33"),
+		("38","27"),
+		("39","12"),
+		("40","12"),
+		("41","4"),
+		("42","4"),
+		("43","13"),
+		("44","16")
+		]
 
 	def applySkin(self, desktop, parent):
 		attribs = []
@@ -42,15 +111,13 @@ class SevenHDWetterPicon(Renderer):
 	def changed(self, what):
 		if self.instance:
 			if self.path:
-                           self.pngname = '/usr/share/enigma2/SevenHD/' + self.path + '/' + str(self.source.text) + '.png'
-                           if not fileExists(self.pngname):
-                              self.debug('Missing png: ' + str(self.pngname))
-                              self.pngname = resolveFilename(SCOPE_CURRENT_SKIN, 'picon_default.png')
-                           self.instance.setScale(1)
-                           self.instance.setPixmapFromFile(self.pngname)
-
-        def debug(self, what):
-            if config.plugins.SevenHD.debug.value:
-               f = open('/tmp/kraven_debug.txt', 'a+')
-               f.write('[WetterPicon]' + str(what) + '\n')
-               f.close() 
+				for pair in self.usericons:
+					if pair[0] == str(self.source.text):
+						break
+				self.pngname = self.userpath + pair[1] + '.png'
+				if not fileExists(self.pngname):
+					self.pngname = '/usr/share/enigma2/SevenHD/' + self.path + '/' + str(self.source.text) + '.png'
+					if not fileExists(self.pngname):
+						self.pngname = resolveFilename(SCOPE_CURRENT_SKIN, 'picon_default.png')
+				self.instance.setScale(1)
+				self.instance.setPixmapFromFile(self.pngname)

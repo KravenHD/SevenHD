@@ -140,6 +140,8 @@ class PluginSettings(ConfigListScreen, Screen):
            list.append(getConfigListEntry(_("EMC"),                    config.plugins.SevenHD.EMCStyle,               'Auswahl der Covergr\xc3\xb6\xc3\x9fe.',                      '1',     ''))
            config.EMC.skin_able.value = True
            config.EMC.skin_able.save()
+           list.append(getConfigListEntry(_("EMCMediaCenter"),         config.plugins.SevenHD.EMCMedia,           'Auswahl der darstellung von EMCMediaCenter.',                    '1',     ''))
+           list.append(getConfigListEntry(_("Extra Info"),             config.plugins.SevenHD.EMCPicon,           'Anzeige von Extrainformationen im EMCMediaCenter.',              '1',     ''))
         if os.path.isdir(PLUGIN_PATH + "Extensions/Albatros") :
            if config.plugins.SevenHD.use_alba_skin.value:
               list.append(getConfigListEntry(_("Use Albatros Skin"),   config.plugins.SevenHD.use_alba_skin,          'Wenn ja wird das SevenHD Skin für Albatros installiert.',    '1',     ''))
@@ -230,6 +232,8 @@ class PluginSettings(ConfigListScreen, Screen):
     def defaults(self):
         self.setInputToDefault(config.plugins.SevenHD.NumberZapExt)
         self.setInputToDefault(config.plugins.SevenHD.EMCStyle)
+        self.setInputToDefault(config.plugins.SevenHD.EMCPicon)
+        self.setInputToDefault(config.plugins.SevenHD.EMCMedia)
         self.setInputToDefault(config.plugins.SevenHD.MovieSelectionStyle)
         self.setInputToDefault(config.plugins.SevenHD.EPGSelection)
         self.setInputToDefault(config.plugins.SevenHD.EventView)

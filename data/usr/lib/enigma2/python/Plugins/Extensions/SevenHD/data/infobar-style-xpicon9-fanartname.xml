@@ -1,7 +1,7 @@
 
-		<widget position="14,338" render="SevenHDFanartThumb" size="333,200" source="session.CurrentService" transparent="1" zPosition="14">
+		<widget position="14,312" render="SevenHDFanartThumb" size="333,200" source="session.CurrentService" transparent="1" zPosition="14">
 			<convert type="SevenHDServiceNameEventNobile">NameAndEvent</convert>
 		</widget>
-		<widget font="Regular2; 40" foregroundColor="SevenFontCN"  halign="right" noWrap="1" position="352,465" render="Label" size="910,60" source="session.CurrentService" transparent="1" valign="center" zPosition="1" alphatest="blend">
+		<widget font="Regular2; 40" foregroundColor="SevenFontCN"  halign="right" noWrap="1" position="352,439" render="Label" size="910,60" source="session.CurrentService" transparent="1" valign="center" zPosition="1" alphatest="blend">
 			<convert type="SevenHDExtServiceInfo">ServiceName</convert>
 		</widget>

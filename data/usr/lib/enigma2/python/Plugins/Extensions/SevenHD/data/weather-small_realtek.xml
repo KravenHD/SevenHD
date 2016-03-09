@@ -2,13 +2,13 @@
 		<widget position="1010,28" size="70,70" render="SevenHDWetterPicon" alphatest="blend" path="WetterIcons" source="session.CurrentService" transparent="1" zPosition="8">
 			<convert  type="SevenHDWeather_realtek">Day_1,MeteoIcon</convert>
 		</widget>
-		<widget noWrap="1" backgroundColor="SevenFontBackgroundIB1" font="Regular2; 30" foregroundColor="SevenNextIB" render="Label" position="1094,39" size="80,40" source="session.CurrentService" zPosition="3" halign="center" valign="center" transparent="1">
+		<widget noWrap="1" backgroundColor="SevenFontBackgroundIB1" font="Regular2; 30" foregroundColor="SevenWeather2" render="Label" position="1094,39" size="80,40" source="session.CurrentService" zPosition="3" halign="center" valign="center" transparent="1">
 			<convert type="SevenHDWeather_realtek">Day_1,DayTemp</convert>
 		</widget>
-		<widget noWrap="1" backgroundColor="SevenFontBackgroundIB1" font="Regular; 20" foregroundColor="SevenNowIB" render="Label" position="1180,32" size="50,26" source="session.CurrentService" zPosition="8" halign="center" valign="center" transparent="1">
+		<widget noWrap="1" backgroundColor="SevenFontBackgroundIB1" font="Regular; 20" foregroundColor="SevenWeather1" render="Label" position="1180,32" size="50,26" source="session.CurrentService" zPosition="8" halign="center" valign="center" transparent="1">
 			<convert type="SevenHDWeather_realtek">Day_1,MaxTemp</convert>
 		</widget>
-		<widget noWrap="1" backgroundColor="SevenFontBackgroundIB1" font="Regular; 20" foregroundColor="SevenNowIB" render="Label" position="1180,58" size="50,26" source="session.CurrentService" zPosition="8" halign="center" valign="center" transparent="1">
+		<widget noWrap="1" backgroundColor="SevenFontBackgroundIB1" font="Regular; 20" foregroundColor="SevenWeather1" render="Label" position="1180,58" size="50,26" source="session.CurrentService" zPosition="8" halign="center" valign="center" transparent="1">
 			<convert type="SevenHDWeather_realtek">Day_1,MinTemp</convert>
 		</widget>
 		<panel name="template_weather_small" /> />

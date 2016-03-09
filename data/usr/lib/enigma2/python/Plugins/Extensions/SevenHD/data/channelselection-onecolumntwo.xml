@@ -6,6 +6,6 @@
 			<convert type="SevenHDEventName">BothDescriptionsFiltered</convert>
 		</widget>
 		<eLabel backgroundColor="SevenLineCS" position="18,489" size="1245,2" zPosition="2" />
-		<panel name="template_menu_cs15_button" />
+		<panel name="template_menu_cs16_button" />
 	</screen>
 		<!-- /* ChannelSelection One Columns -->

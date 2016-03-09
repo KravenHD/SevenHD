@@ -121,6 +121,7 @@ class SevenHDPig(Renderer):
 					self.instance.resize(self.Size)
 				if self.Position:
 					self.instance.move(self.Position)
+			self.changed(1)
 
 	def changed(self,what):
 		if InfoBar.instance:

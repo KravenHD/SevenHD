@@ -1,5 +1,5 @@
 
-		<widget position="16,387" render="SevenHDMovieThumb" size="207,132" source="session.CurrentService" transparent="1" zPosition="14">
+		<widget position="16,361" render="SevenHDMovieThumb" size="207,132" source="session.CurrentService" transparent="1" zPosition="14">
 			<convert type="ServiceName">NameAndEvent</convert>
 		</widget>
 		<eLabel backgroundColor="SevenBorderIB" position="223,385" size="2,134" zPosition="15" />

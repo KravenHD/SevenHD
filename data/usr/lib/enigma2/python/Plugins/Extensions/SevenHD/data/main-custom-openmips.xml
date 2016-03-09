@@ -329,7 +329,7 @@
 				}
 			</convert>
 		</widget>
-		<panel name="template_menu_left" />
+		<panel name="template_menu_main_nologo" />
 	</screen>
 		<!-- AdapterSetup -->
 	<screen backgroundColor="transparent" flags="wfNoBorder" name="AdapterSetup" position="0,0" size="1280,720" title="Network Setup">
@@ -373,7 +373,7 @@
 				}
 			</convert>
 		</widget>
-		<panel name="template_menu_left" />
+		<panel name="template_menu_main_nologo" />
 	</screen>
 		<!-- menu_audio_menu -->
 	<screen backgroundColor="transparent" flags="wfNoBorder" name="menu_audio_menu" position="0,0" size="1280,720" title="Audio menu">
@@ -386,7 +386,7 @@
 				}
 			</convert>
 		</widget>
-		<panel name="template_menu_left" />
+		<panel name="template_menu_main_nologo" />
 	</screen>
 		<!-- menu_video_menu -->
 	<screen backgroundColor="transparent" flags="wfNoBorder" name="menu_video_menu" position="0,0" size="1280,720" title="Video menu">
@@ -399,7 +399,7 @@
 				}
 			</convert>
 		</widget>
-		<panel name="template_menu_left" />
+		<panel name="template_menu_main_nologo" />
 	</screen>
 		<!-- menu_frontpanel_menu -->
 	<screen backgroundColor="transparent" flags="wfNoBorder" name="menu_frontpanel_menu" position="0,0" size="1280,720" title="Frontpanel menu">
@@ -431,7 +431,7 @@
 				}
 			</convert>
 		</widget>
-		<panel name="template_menu_left" />
+		<panel name="template_menu_main_nologo" />
 	</screen>
 		<!-- menu_general_menu -->
 	<screen backgroundColor="transparent" flags="wfNoBorder" name="menu_general_menu" position="0,0" size="1280,720" title="General menu">
@@ -444,7 +444,7 @@
 				}
 			</convert>
 		</widget>
-		<panel name="template_menu_left" />
+		<panel name="template_menu_main_nologo" />
 	</screen>
 		<!-- AutoResSetupMenu -->
 	<screen backgroundColor="transparent" flags="wfNoBorder" name="AutoResSetupMenu" position="0,0" size="1280,720" title="Setup">
@@ -532,6 +532,6 @@
 		<widget source="key_red" render="Label" backgroundColor="SevenFontBackground" font="Regular;18" foregroundColor="SevenButtonText" halign="left" valign="center" position="58,662" size="148,48" transparent="1" zPosition="1" />
 		<widget source="key_green" render="Label" backgroundColor="SevenFontBackground" font="Regular;18" foregroundColor="SevenButtonText" halign="left" valign="center" position="250,662" size="128,48" transparent="1" zPosition="1" />
 		<widget source="key_blue" render="Label" backgroundColor="SevenFontBackground" font="Regular;18" foregroundColor="SevenButtonText" halign="left" valign="center" position="626,662" size="180,48" transparent="1" zPosition="1" />
-		<panel name="template_menu_left" />
+		<panel name="template_title_main_nologo" />
 	</screen>
 		<!-- main-custom-openmips */ -->

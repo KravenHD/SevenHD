@@ -411,6 +411,13 @@ class SevenHD(Screen):
 		self.skinSearchAndReplace.append(["SevenBorder_Right", config.plugins.SevenHD.BorderRight.value])
 		self.skinSearchAndReplace.append(["SevenLine_Right", config.plugins.SevenHD.LineRight.value])
 
+		self.skinSearchAndReplace.append(["SevenFont_ECM", config.plugins.SevenHD.SevenECM.value])
+		self.skinSearchAndReplace.append(["SevenFont_Sat", config.plugins.SevenHD.SevenSat.value])
+		self.skinSearchAndReplace.append(["SevenFont_Sys1", config.plugins.SevenHD.SevenSys1.value])
+		self.skinSearchAndReplace.append(["SevenFont_Sys2", config.plugins.SevenHD.SevenSys2.value])
+		self.skinSearchAndReplace.append(["SevenFont_Weather1", config.plugins.SevenHD.SevenWeather1.value])
+		self.skinSearchAndReplace.append(["SevenFont_Weather2", config.plugins.SevenHD.SevenWeather2.value])
+		self.skinSearchAndReplace.append(["SevenFont_Weather3", config.plugins.SevenHD.SevenWeather3.value])
 
 		self.skinSearchAndReplace.append(["SevenMeteo_Font", config.plugins.SevenHD.MeteoColor.value])
 
@@ -469,12 +476,10 @@ class SevenHD(Screen):
 		
 		# Weather Font
                 provider = config.plugins.SevenHD.weather_server.value
-                if provider == '_yahoo' or provider == '_msn':
+                if provider == '_accu' or provider == '_realtek':
                    font = 'Meteo'   
                 elif provider == '_owm':
-                   font = 'Meteo2'          
-                elif provider == '_accu' or provider == '_realtek':
-                   font = 'Meteo3'
+                   font = 'Meteo2'
                 
                 if config.plugins.SevenHD.WeatherView.value == "meteo": 
                    self.skinSearchAndReplace.append(['size="50,50" path="WetterIcons" render="SevenHDWetterPicon" alphatest="blend"', 'size="50,50" render="Label" font="%s; 45" halign="center" valign="center" foregroundColor="SevenMeteoFont" backgroundColor="SevenFontBackgroundIB1" noWrap="1"' % font])
@@ -610,6 +615,29 @@ class SevenHD(Screen):
 		   self.skinSearchAndReplace.append(['<ePixmap pixmap="SevenHD/buttons/d_off.png"', '<!-- ePixmap pixmap="SevenHD/buttons/d_off.png"'])
 		   self.skinSearchAndReplace.append(['size="32,32" zPosition="1" alphatest="blend" /> <!-- TunerD -->', 'size="32,32" zPosition="1" alphatest="blend" / --> <!-- TunerD -->'])
 		
+		
+		### Menu (Logo)
+		if  config.plugins.SevenHD.Logo.value == "menu-icons1":
+			self.skinSearchAndReplace.append(['<panel name="template_menu_main_nologo" />', '<panel name="template_menu_main_logo" />'])
+			self.skinSearchAndReplace.append(['<panel name="template_menu_main_button_nologo" />', '<panel name="template_menu_main_button_logo" />'])
+			self.skinSearchAndReplace.append(['<panel name="template_title_main_nologo" />', '<panel name="template_title_main_logo" />'])
+			self.skinSearchAndReplace.append(['<panel name="template_title_main_button_nologo" />', '<panel name="template_title_main_button_logo" />'])
+		elif  config.plugins.SevenHD.Logo.value == "menu-icons2":
+			self.skinSearchAndReplace.append(['<panel name="template_menu_main_nologo" />', '<panel name="template_menu_main_logo2" />'])
+			self.skinSearchAndReplace.append(['<panel name="template_menu_main_button_nologo" />', '<panel name="template_menu_main_button_logo2" />'])
+			self.skinSearchAndReplace.append(['<panel name="template_title_main_nologo" />', '<panel name="template_title_main_logo2" />'])
+			self.skinSearchAndReplace.append(['<panel name="template_title_main_button_nologo" />', '<panel name="template_title_main_button_logo2" />'])
+		elif  config.plugins.SevenHD.Logo.value == "menu-icons3":
+			self.skinSearchAndReplace.append(['<panel name="template_menu_main_nologo" />', '<panel name="template_menu_main_logo3" />'])
+			self.skinSearchAndReplace.append(['<panel name="template_menu_main_button_nologo" />', '<panel name="template_menu_main_button_logo3" />'])
+			self.skinSearchAndReplace.append(['<panel name="template_title_main_nologo" />', '<panel name="template_title_main_logo3" />'])
+			self.skinSearchAndReplace.append(['<panel name="template_title_main_button_nologo" />', '<panel name="template_title_main_button_logo3" />'])
+		elif  config.plugins.SevenHD.Logo.value == "menu-icons4":
+			self.skinSearchAndReplace.append(['<panel name="template_menu_main_nologo" />', '<panel name="template_menu_main_logo4" />'])
+			self.skinSearchAndReplace.append(['<panel name="template_menu_main_button_nologo" />', '<panel name="template_menu_main_button_logo4" />'])
+			self.skinSearchAndReplace.append(['<panel name="template_title_main_nologo" />', '<panel name="template_title_main_logo4" />'])
+			self.skinSearchAndReplace.append(['<panel name="template_title_main_button_nologo" />', '<panel name="template_title_main_button_logo4" />'])
+			
 		#Debug Screen Names in Skins
                 if config.plugins.SevenHD.debug_screen_names.value:
                    self.skinSearchAndReplace.append(['<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red"', '<eLabel backgroundColor="SevenFontBackground" font="Regular;15" foregroundColor="red"'])
@@ -673,11 +701,15 @@ class SevenHD(Screen):
                    self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.InfobarStyle.value + "-thumbnamenumber.xml")    
                 
                 ###ecm-info
-                self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.ECMInfo.value + XML)
-                self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.ECMInfo.value + XML)        
+                if config.plugins.SevenHD.InfobarStyle.value != 'infobar-style-xpicon9':
+                   self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.ECMInfo.value + XML)
+                   self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.ECMInfo.value + XML)        
                 
                 ###clock-style xml Infobar
                 if config.plugins.SevenHD.ClockStyle.value == 'clock-weather':
+                   self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.ClockStyle.value + str(config.plugins.SevenHD.weather_server.value) + XML)
+                   self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.ClockStyle.value + str(config.plugins.SevenHD.weather_server.value) + XML)
+                elif config.plugins.SevenHD.ClockStyle.value == 'clock-weather2':
                    self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.ClockStyle.value + str(config.plugins.SevenHD.weather_server.value) + XML)
                    self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.ClockStyle.value + str(config.plugins.SevenHD.weather_server.value) + XML)
                 elif config.plugins.SevenHD.ClockStyle.value == 'clock-weather-meteo':
@@ -723,6 +755,9 @@ class SevenHD(Screen):
                    if config.plugins.SevenHD.ClockStyle.value == 'clock-weather':
                       self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.ClockStyle.value + str(config.plugins.SevenHD.weather_server.value) + XML)
                       self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.ClockStyle.value + str(config.plugins.SevenHD.weather_server.value) + XML)
+                   elif config.plugins.SevenHD.ClockStyle.value == 'clock-weather2':
+                      self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.ClockStyle.value + str(config.plugins.SevenHD.weather_server.value) + XML)
+                      self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.ClockStyle.value + str(config.plugins.SevenHD.weather_server.value) + XML)
                    elif config.plugins.SevenHD.ClockStyle.value == 'clock-weather-meteo':
                       self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.ClockStyle.value + str(config.plugins.SevenHD.weather_server.value) + XML)
                       self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.ClockStyle.value + str(config.plugins.SevenHD.weather_server.value) + XML)
@@ -759,7 +794,7 @@ class SevenHD(Screen):
                          self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.WeatherStyle_2.value + XML)
                 
                 ###ecm-info
-                if config.plugins.SevenHD.InfobarStyle.value == 'infobar-style-xpicon8' or config.plugins.SevenHD.InfobarStyle.value == 'infobar-style-xpicon9':
+                if config.plugins.SevenHD.InfobarStyle.value == 'infobar-style-xpicon8' or config.plugins.SevenHD.InfobarStyle.value != 'infobar-style-xpicon9':
                    if not config.plugins.SevenHD.SIB.value in ('-minitv2','-right','-picon'):
                           self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.ECMInfo.value + XML)
                           self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.ECMInfo.value + XML)        
@@ -779,6 +814,18 @@ class SevenHD(Screen):
                 #EMCSTYLE
 		self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.EMCStyle.value + XML)
                 self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.EMCStyle.value + XML)        
+                
+                ###EMCMedia_main
+		self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.EMCMedia.value + "-main.xml")
+                self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.EMCMedia.value + "-main.xml")       
+				
+                ###picon
+		self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.EMCPicon.value + XML)
+                self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.EMCPicon.value + XML)        
+				
+                ###EMCMedia_end
+		self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.EMCMedia.value + "-end.xml")
+                self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.EMCMedia.value + "-end.xml")       
                 
                 #MOVIESELECTIONSTYLE
 		self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.MovieSelectionStyle.value + XML)
@@ -897,7 +944,7 @@ class SevenHD(Screen):
                 self.debug('Console')	
 		
                 #DOWNLOADS	
-                download_list = ['buttons', 'vkeys', 'WetterIcons', 'clock', 'volume', 'icons', 'progress', 'progressvol', 'progressib', 'progresscs', 'progresslistcs']
+                download_list = ['buttons', 'vkeys', 'WetterIcons', 'clock', 'volume', 'icons', 'progress', 'progressvol', 'progressib', 'progresscs', 'progresslistcs', 'menu-icons']
                 
                 for entrie in download_list:
                        
@@ -913,6 +960,8 @@ class SevenHD(Screen):
                        elif entrie == 'clock' and config.plugins.SevenHD.ClockStyle.value in 'clock-analog clock-android clock-weather clock-flip':
                           os.system("rm -rf /usr/share/enigma2/SevenHD/%s/*.*; rm -rf /usr/share/enigma2/SevenHD/%s" % (str(entrie), str(entrie)))
                           if config.plugins.SevenHD.ClockStyle.value == 'clock-weather':  # !! clock-weather <-> weather_xxx
+                             self.download_tgz('weather', 'weather' + config.plugins.SevenHD.weather_server.value)
+                          elif config.plugins.SevenHD.ClockStyle.value == 'clock-weather2':  # !! clock-weather <-> weather_xxx
                              self.download_tgz('weather', 'weather' + config.plugins.SevenHD.weather_server.value)
                           elif config.plugins.SevenHD.ClockStyle.value == 'clock-android':   
                              self.download_tgz(entrie, config.plugins.SevenHD.ClockStyle.value + config.plugins.SevenHD.weather_server.value)
@@ -939,6 +988,9 @@ class SevenHD(Screen):
                        elif config.plugins.SevenHD.ProgressListCS.value == "progresslistcs" and entrie == 'progresslistcs':
                           os.system("rm -rf /usr/share/enigma2/SevenHD/%s/*.*; rm -rf /usr/share/enigma2/SevenHD/%s" % (str(entrie), str(entrie)))
                           self.download_tgz('progress', config.plugins.SevenHD.ProgressListCS.value)
+                       elif entrie == 'menu-icons' and config.plugins.SevenHD.Logo.value != "menu-icons0":
+                          os.system("rm -rf /usr/share/enigma2/SevenHD/buttons/menu-icons*")
+                          self.download_tgz('menu-icons', entrie)
                        
                 
                 if config.plugins.SevenHD.skin_mode.value == '1' or '2' or '3':

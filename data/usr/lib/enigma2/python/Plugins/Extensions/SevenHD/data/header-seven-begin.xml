@@ -89,6 +89,13 @@
 		<color name="SevenProgressListCS" value="#00fffff5" />
 		<color name="SevenProgressIB" value="#00fffff2" />
 		<color name="SevenMeteoFont" value="#SevenMeteo_Font" />
+		<color name="SevenECM" value="#SevenFont_ECM" />
+		<color name="SevenSat" value="#SevenFont_Sat" />
+		<color name="SevenSys1" value="#SevenFont_Sys1" />
+		<color name="SevenSys2" value="#SevenFont_Sys2" />
+		<color name="SevenWeather1" value="#SevenFont_Weather1" />
+		<color name="SevenWeather2" value="#SevenFont_Weather2" />
+		<color name="SevenWeather3" value="#SevenFont_Weather3" />
 	</colors>
 	<fonts>
 		<font filename="lcd.ttf" name="LCD" scale="100" />
@@ -130,7 +137,6 @@
 		<parameter name="ChoicelistDash" value="0,2,650,30"/>
 		<parameter name="ChoicelistName" value="48,4,650,30"/>
 		<parameter name="ChoicelistIcon" value="10,3,30,30"/>
-		<parameter name="ConfigListSeperator" value="350"/>
 		<parameter name="FileListName" value="35,1,470,20"/>
 		<parameter name="FileListIcon" value="10,2,20,20"/>
 		<parameter name="FileListMultiName" value="55,0,470,25"/>
@@ -142,7 +148,6 @@
 		<parameter name="SelectionListDescr" value="25,3,650,30"/>
 		<parameter name="SelectionListLock" value="0,2,25,24"/>
 		<parameter name="SelectionListLockOff" value="0,2,25,24"/>
-		<parameter name="PicturePlayerThumb" value="35,190,30,200,20,14"/>
 		<parameter name="PlayListName" value="25,0,675,30"/>
 		<parameter name="PlayListIcon" value="5,7,16,16"/>
 		<parameter name="ServiceInfo" value="0,0,300,30"/>

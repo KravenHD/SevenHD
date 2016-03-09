@@ -94,8 +94,17 @@
 		<!-- HddSetup -->
 	<screen backgroundColor="transparent" flags="wfNoBorder" name="HddSetup" position="0,0" size="1280,720" title="Hard Drive Setup">
 		<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="HddSetup" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
-		<widget name="menu" position="70,80" size="708,540" backgroundColor="SevenFontBackground" scrollbarMode="showOnDemand" font="Regular; 22" itemHeight="50" transparent="1">
-		</widget>
+		<widget source="menu" render="Listbox" font="Regular;22" itemHeight="50" position="70,136" size="708,488" scrollbarMode="showOnDemand" backgroundColor="SevenBackground" transparent="1">
+			<convert type="TemplatedMultiContent">
+				{"template": [
+					MultiContentEntryPixmapAlphaTest(pos = (5, 0), size = (48, 48), png = 0),
+					MultiContentEntryText(pos = (65, 10), size = (330, 38), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_TOP, text = 1),
+					MultiContentEntryText(pos = (405, 10), size = (125, 38), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_TOP, text = 2),
+					],
+					"fonts": [gFont("Regular", 22)],
+					"itemHeight": 50
+				}
+			</convert>
 		<panel name="template_menu_left_button" />
 		<panel name="template_colorkey_text_source" />
 	</screen>
@@ -396,7 +405,8 @@
 				}
 			</convert>
 		</widget>
-		<panel name="template_menu_left" />
+		<panel name="template_menu_left_button" />
+		<panel name="template_colorkey_text_kp" />
 	</screen>
 		<!-- DeviceBrowser -->
 	<screen backgroundColor="SevenBackground" flags="wfNoBorder" name="DeviceBrowser" position="0,0" size="1280,720" >
@@ -412,7 +422,7 @@
 		<eLabel backgroundColor="SevenFontBackground" font="Regular;20" foregroundColor="SevenButtonText" halign="left" valign="center" text="Entfernen" position="64,662" size="148,48" transparent="1" zPosition="1" />
 		<eLabel backgroundColor="SevenFontBackground" font="Regular;20" foregroundColor="SevenButtonText" halign="left" valign="center" text="Installieren" position="264,662" size="148,48" transparent="1" zPosition="1" />
 		<eLabel backgroundColor="SevenFontBackground" font="Regular;20" foregroundColor="SevenButtonText" halign="left" valign="center" text="Sperren" position="664,662" size="148,48" transparent="1" zPosition="1" />
-		<panel name="template_menu_left_button" />
+		<panel name="template_title_main_buttons_nologo" />
 	</screen>
 		<!-- ShowUpdatePackages -->
 	<screen backgroundColor="transparent" flags="wfNoBorder" name="ShowUpdatePackages" position="0,0" size="1280,720" title="New Packages">

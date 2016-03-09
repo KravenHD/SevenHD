@@ -1,0 +1,9 @@
+
+		<eLabel backgroundColor="SevenBorder" position="200,715" size="880,2" zPosition="2" />
+		<eLabel backgroundColor="SevenBorder" position="200,610" size="880,2" zPosition="2" />
+		<eLabel backgroundColor="SevenBorder" position="200,610" size="2,107" zPosition="2" />
+		<eLabel backgroundColor="SevenBorder" position="1080,610" size="2,107" zPosition="2" />
+		<eLabel backgroundColor="SevenBackground" position="200,610" size="880,107" transparent="0" zPosition="-9" />
+		<ePixmap pixmap="SevenHD/back/menumain.png" position="200,610" size="880,107" alphatest="blend" zPosition="-8" />
+	</screen>
+	

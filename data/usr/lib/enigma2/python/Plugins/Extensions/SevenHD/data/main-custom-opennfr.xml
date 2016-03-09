@@ -574,7 +574,7 @@
 		<widget source="key_red" render="Label" backgroundColor="SevenFontBackground" font="Regular;18" foregroundColor="SevenButtonText" halign="left" valign="center" position="58,662" size="148,48" transparent="1" zPosition="1" />
 		<widget source="key_green" render="Label" backgroundColor="SevenFontBackground" font="Regular;18" foregroundColor="SevenButtonText" halign="left" valign="center" position="250,662" size="128,48" transparent="1" zPosition="1" />
 		<widget source="key_blue" render="Label" backgroundColor="SevenFontBackground" font="Regular;18" foregroundColor="SevenButtonText" halign="left" valign="center" position="626,662" size="180,48" transparent="1" zPosition="1" />
-		<panel name="template_menu_left" />
+		<panel name="template_title_main_nologo" />
 	</screen>
 		<!-- PluginInstall -->
 	<screen name="PluginInstall" position="0,0" size="1280,720" title="Installiere Plugins" flags="wfNoBorder" backgroundColor="transparent">

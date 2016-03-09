@@ -1,0 +1,36 @@
+
+	<screen backgroundColor="transparent" flags="wfNoBorder" name="EventView" position="0,0" size="1280,720" title="Eventview">
+		<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="EventView" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
+		<widget backgroundColor="SevenFontBackground" scrollbarMode="showNever" font="Regular2; 26" name="epg_description" position="17,78" size="689,564" transparent="1" halign="center" />
+		<widget alphatest="blend" pixmap="SevenHD/buttons/ico_dolby_on.png" position="884,154" render="Pixmap" size="32,32" source="session.CurrentService" zPosition="2">
+			<convert type="SevenHDServiceInfo">IsMultichannel</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget alphatest="blend" pixmap="SevenHD/buttons/ico_format_on.png" position="1076,154" render="Pixmap" size="32,32" source="session.CurrentService" zPosition="2">
+			<convert type="SevenHDServiceInfo">IsWidescreen</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget alphatest="blend" pixmap="SevenHD/buttons/ico_hd_on.png" position="980,154" render="Pixmap" size="32,32" source="session.CurrentService" zPosition="2">
+			<convert type="SevenHDServiceInfo">VideoWidth</convert>
+			<convert type="SevenHDValueRange">721,1980</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget backgroundColor="SevenFontBackgroundRight" foregroundColor="SevenFont2" font="Regular2; 28" halign="center" name="channel" position="739,287" size="515,40" transparent="1" />
+		<widget backgroundColor="SevenFontBackgroundRight" font="Regular; 28" halign="left" name="datetime" position="739,200" size="307,40" transparent="1" valign="center" />
+		<widget backgroundColor="SevenFontBackgroundRight" font="Regular; 28" halign="right" name="duration" position="984,200" size="270,40" transparent="1" />
+		<widget alphatest="blend" position="886,15" render="SevenHDXPicon" size="220,132" source="Service" transparent="1" zPosition="4">
+			<convert type="ServiceName">Reference</convert>
+		</widget>
+		<widget backgroundColor="SevenFontBackgroundRight" font="Regular; 25" foregroundColor="SevenFont1" halign="center" position="739,557" render="Label" size="515,40" source="session.CurrentService" transparent="1" valign="center">
+			<convert type="SevenHDServiceName2">%O  %s  %F %p %Y %f %M %b</convert>
+		</widget>
+		<widget backgroundColor="SevenFontBackgroundRight" font="Regular2; 28" foregroundColor="SevenFont2" halign="center" position="739,467" render="Label" size="515,40" source="session.CurrentService" transparent="1" valign="center">
+			<convert type="SevenHDServiceName2">Reference</convert>
+		</widget>
+		
+		<widget backgroundColor="SevenFontBackgroundRight" font="Regular; 28" foregroundColor="SevenFont1" halign="center" position="739,377" render="Label" size="515,40" source="session.CurrentService" transparent="1" valign="center">
+			<convert type="SevenHDServiceName2">Provider</convert>
+		</widget>
+		<panel name="template_menu_picon" />
+	</screen>
+

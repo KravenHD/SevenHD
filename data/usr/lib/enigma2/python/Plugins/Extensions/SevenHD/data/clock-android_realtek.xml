@@ -8,10 +8,10 @@
 		<widget backgroundColor="SevenFontBackgroundIB1" font="Regular2; 16" foregroundColor="SevenClockDate" halign="center" position="1080,669" render="Label" size="180,30" source="global.CurrentTime" transparent="1" valign="top" zPosition="2">
 			<convert type="SevenHDClockToText">Format:%A, %d.%m.%Y</convert>
 		</widget>
-		<widget alphatest="blend" render="SevenHDWetterPicon" position="1080,558" size="180,110" source="session.CurrentService" path="clock" transparent="0" zPosition="1">
+		<widget alphatest="blend" render="SevenHDAndroidPicon" position="1080,558" size="180,110" source="session.CurrentService" path="clock" transparent="0" zPosition="1">
 			<convert type="SevenHDWeather_realtek">Day_0,MeteoIcon</convert>
 		</widget>
-		<widget noWrap="1" backgroundColor="#00666666" font="Regular; 15" foregroundColor="SevenClockWeather" render="Label" position="1190,632" size="60,25" source="session.CurrentService" zPosition="2" halign="center" valign="center" transparent="1">
+		<widget noWrap="1" backgroundColor="#00666666" font="Regular2; 18" foregroundColor="SevenClockWeather" render="Label" position="1190,630" size="60,25" source="session.CurrentService" zPosition="2" halign="center" valign="center" transparent="1">
 			<convert type="SevenHDWeather_realtek">Day_0,DayTemp</convert>
 		</widget>
 		<!--Clock */-->

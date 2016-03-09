@@ -78,4 +78,10 @@ A: Wenn Du einen Fehler hast, dann geh wie folgt vor.\n\n\n
 	<page title="FAQ"><text value="Q: Gibt es ein ChangeLog von den Versionen/Updates?\n\n\n
 A: Ja, unter 'Extras' findet Ihr den Punkt 'ChangeLog'. "/>
 	</page>
+	<page title="FAQ"><text value="Q: Wie kann ich meine eigenen Wetter-Icons einfügen?\n\n\n
+A: Erstelle ein Verzeichnis /usr/share/enigma2/Seven-user-icons und kopiere Deine Icons dorthin.\nDiese Icons haben Vorrang vor den internen Icons. Es werden nur YWeather-Iconsätze unterstützt."/>
+	</page>
+	<page title="FAQ"><text value="Q: Wie kann ich meine eigenen Menü-Icons einfügen?\n\n\n
+A: Erstelle ein Verzeichnis /usr/share/enigma2/Seven-user-icons und kopiere Deine Icons dorthin.\nDiese Icons haben Vorrang vor den internen Icons."/>
+	</page>
 </mphelp>

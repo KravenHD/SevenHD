@@ -1,10 +1,10 @@
-#version = '3.6.70'
+#version = '3.6.75'
 import os
 try:
    opkg_info = os.popen("opkg list-installed enigma2-plugin-skins-sevenhd | cut -d ' ' -f3").read()
    version = str(opkg_info.strip().split('+')[0])
 except:
-   version = '3.6.70'
+   version = '3.6.75'
 import re
 import time
 import math
@@ -21,7 +21,7 @@ except ImportError:
   from Screens.UserInterfacePositioner import UserInterfacePositioner
   OSDScreenPosition_plugin = False
 try:
-  from boxbranding import getBoxType
+  from boxbranding import getBoxType,getMachineBrand
   brand = True
 except ImportError:
   brand = False
@@ -280,14 +280,37 @@ config.plugins.SevenHD.Image = ConfigSelection(default="main-custom-openatv", ch
 
 config.plugins.SevenHD.ButtonStyle = ConfigSelection(default="buttons_seven_white", choices = [
 				("buttons_seven_white", _("white")),
+				("buttons_seven_amber", _("amber")),
+				("buttons_seven_amber_dark", _("amber dark")),
 				("buttons_seven_black", _("black")),
 				("buttons_seven_blue", _("blue")),
+				("buttons_seven_blue_dark", _("blue dark")),
+				("buttons_seven_brown", _("brown")),
+				("buttons_seven_brown_dark", _("brown dark")),
+				("buttons_seven_cobalt", _("cobalt")),
+				("buttons_seven_cobalt_dark", _("cobalt dark")),
+				("buttons_seven_cyan", _("cyan")),
+				("buttons_seven_cyan_dark", _("cyan dark")),
 				("buttons_seven_green", _("green")),
+				("buttons_seven_green_dark", _("green dark")),
 				("buttons_seven_grey", _("grey")),
+				("buttons_seven_grey_dark", _("grey dark")),
 				("buttons_seven_orange", _("orange")),
+				("buttons_seven_orange_dark", _("orange dark")),
+				("buttons_seven_Kraven", _("Kraven")),
+				("buttons_seven_Kraven_dark", _("Kraven dark")),
+				("buttons_seven_olive", _("olive")),
+				("buttons_seven_olive_dark", _("olive dark")),
+				("buttons_seven_pink", _("pink")),
+				("buttons_seven_pink_dark", _("pink dark")),
 				("buttons_seven_red", _("red")),
+				("buttons_seven_red_dark", _("red dark")),
+				("buttons_seven_steel", _("steel")),
+				("buttons_seven_steel_dark", _("steel dark")),
 				("buttons_seven_violet", _("violet")),
+				("buttons_seven_violet_dark", _("violet dark")),
 				("buttons_seven_yellow", _("yellow")),
+				("buttons_seven_yellow_dark", _("yelloww dark")),
 				("buttons_seven_black_blue", _("black/blue")),
 				("buttons_seven_black_green", _("black/green")),
 				("buttons_seven_black_orange", _("black/orange")),
@@ -367,6 +390,20 @@ config.plugins.SevenHD.EMCStyle = ConfigSelection(default="emcnocover", choices 
 				("emcminitv2", _("Style 7"))
 				])
 				
+config.plugins.SevenHD.EMCMedia = ConfigSelection(default="emcmediacenter-style1", choices = [
+				("emcmediacenter-style1", _("Style 1")),
+				("emcmediacenter-style2", _("Style 2"))
+				])
+				
+config.plugins.SevenHD.EMCPicon = ConfigSelection(default="none", choices = [
+				("none", _("off")),
+				("emc-picon", _("Picon")),
+				("emc-cover", _("Cover")),
+				("emc-fanart", _("Fanart")),
+				("emc-coverpicon", _("Picon + Cover")),
+				("emc-coverpiconfanart", _("Picon + Cover + Fanart"))
+				])
+				
 config.plugins.SevenHD.MovieSelectionStyle = ConfigSelection(default="movieselectionnocover", choices = [
 				("movieselectionnocover", _("Style 1")),
 				("movieselectionsmallcover", _("Style 2")),
@@ -385,7 +422,8 @@ config.plugins.SevenHD.EventView = ConfigSelection(default="eventviewnopicon", c
 				("eventviewnopicon", _("Style 1")),
 				("eventviewpicon", _("Style 2")),
 				("eventviewthumb", _("Style 3")),
-				("eventviewminitv", _("Style 4"))
+				("eventviewminitv", _("Style 4")),
+				("eventviewpicon2", _("Style 5"))
 				])
 				
 config.plugins.SevenHD.EPGSelection = ConfigSelection(default="epgselectionnopicon", choices = [
@@ -393,7 +431,8 @@ config.plugins.SevenHD.EPGSelection = ConfigSelection(default="epgselectionnopic
 				("epgselectionpicon", _("Style 2")),
 				("epgselectionthumb", _("Style 3")),
 				("epgselectionminitv", _("Style 4")),
-				("epgselectiononecolumn", _("Style 5"))
+				("epgselectiononecolumn", _("Style 5")),
+				("epgselectionpicon2", _("Style 6"))
 				])
 				
 config.plugins.SevenHD.TimerEdit = ConfigSelection(default="timereditleft", choices = [
@@ -457,7 +496,14 @@ config.plugins.SevenHD.ButtonText = ConfigSelection(default="00ffffff", choices 
 
 config.plugins.SevenHD.ProgressLinePlug = ConfigSelection(default="00ffffff", choices = ColorList)
 
-
+config.plugins.SevenHD.Logo = ConfigSelection(default="menu-icons0", choices = [
+				("menu-icons0", _("off")),
+				("menu-icons1", _("Style 1")),
+				("menu-icons2", _("Style 2")),
+				("menu-icons3", _("Style 3")),
+				("menu-icons4", _("Style 4"))
+				])
+				
 ################################################################################################################################################################
 # InfobarScreen
 
@@ -560,7 +606,8 @@ config.plugins.SevenHD.ClockStyle = ConfigSelection(default="clock-standard", ch
 				("clock-seconds", _("with seconds")),
 				("clock-weekday", _("with weekday")),
 				("clock-analog", _("analog")),
-				("clock-weather", _("weather icon")),
+				("clock-weather", _("weather icon 1")),
+				("clock-weather2", _("weather icon 2")),
 				("clock-weather-meteo", _("weather meteo")),
 				("clock-android", _("android")),
 				("clock-flip", _("flip")),
@@ -603,6 +650,20 @@ config.plugins.SevenHD.refreshInterval = ConfigSelectionNumber(0, 480, 15, defau
 
 config.plugins.SevenHD.ClockWeather = ConfigSelection(default="00ffffff", choices = ColorList)
 
+config.plugins.SevenHD.SevenECM = ConfigSelection(default="00ffffff", choices = ColorList)
+
+config.plugins.SevenHD.SevenSat = ConfigSelection(default="00ffffff", choices = ColorList)
+
+config.plugins.SevenHD.SevenSys1 = ConfigSelection(default="00ffffff", choices = ColorList)
+
+config.plugins.SevenHD.SevenSys2 = ConfigSelection(default="00ffffff", choices = ColorList)
+
+config.plugins.SevenHD.SevenWeather1 = ConfigSelection(default="00ffffff", choices = ColorList)
+
+config.plugins.SevenHD.SevenWeather2= ConfigSelection(default="00ffffff", choices = ColorList)
+
+config.plugins.SevenHD.SevenWeather3= ConfigSelection(default="00ffffff", choices = ColorList)
+
 ##################################
 # weahter
 config.plugins.SevenHD.weather_owm_latlon = ConfigText(default = 'lat=51.3452&lon=12.38594&units=metric&lang=de', fixed_size = False) 
@@ -617,12 +678,16 @@ config.plugins.SevenHD.weather_gmcode = ConfigText(default="GMXX0072", fixed_siz
 config.plugins.SevenHD.weather_cityname = ConfigText(default = 'Leipzig', fixed_size = False)
 config.plugins.SevenHD.weather_language = ConfigSelection(default="de", choices = LanguageList)
 config.plugins.SevenHD.weather_server = ConfigSelection(default="_owm", choices = [
-				("_yahoo", _("Yahoo")),
+
+				# tomele
+				# disabled Yahoo and MSN, so Kraven and Seven can interchange converters and use minions
+				#("_yahoo", _("Yahoo")),
+				#("_msn", _("MSN")),
+
 				("_owm", _("OpenWeatherMap")),
-				("_msn", _("MSN")),
 				("_accu", _("Accuweather")),
 				("_realtek", _("RealTek"))
-                                ])
+				])
 config.plugins.SevenHD.weather_search_over = ConfigSelection(default="auto", choices = [
 				("auto", _("Auto")),
 				("ip", _("IP")),
@@ -630,7 +695,12 @@ config.plugins.SevenHD.weather_search_over = ConfigSelection(default="auto", cho
 				("woeid", _("WoeID")),
 				("gmcode", _("GM Code")),
 				("latlon", _("Lat/Long"))
-                                ])
+				])
+
+# tomele
+# added
+config.plugins.SevenHD.weather_foundcity = ConfigText(default = "")
+
 #############################
 config.plugins.SevenHD.WeatherView = ConfigSelection(default="icon", choices = [
 				("icon", _("Icon")),
@@ -684,16 +754,23 @@ CSList = [
 	]
 	
 if SystemInfo.get("NumVideoDecoders",1)>1:
-	CSList.append(("channelselection-pip", _("two columns 14")))
-	CSList.append(("channelselection-preview", _("two columns 15 (preview)")))
-	CSList.append(("channelselection-previewright", _("two columns 16 (preview)")))
-	CSList.append(("channelselection-ext", _("two columns 17 (extended preview)")))
-	CSList.append(("channelselection-extright", _("two columns 18 (extended preview)")))
+ if fileExists("/proc/stb/vmpeg/0/dst_apply") and not (brand and getMachineBrand().lower()=="gigablue"):
+  CSList.append(("channelselection-pip", _("two columns 14")))
+  CSList.append(("channelselection-preview", _("two columns 15 (preview)")))
+  CSList.append(("channelselection-previewright", _("two columns 16 (preview)")))
+  CSList.append(("channelselection-ext", _("two columns 17 (extended preview)")))
+  CSList.append(("channelselection-extright", _("two columns 18 (extended preview)")))
+ else:
+  CSList.append(("channelselection-pipgiga", _("two columns 14")))
+  CSList.append(("channelselection-previewgiga", _("two columns 15 (preview)")))
+  CSList.append(("channelselection-previewrightgiga", _("two columns 16 (preview)")))
 	
 CSList.append(("channelselection-threecolumns", _("three columns 1")))
 CSList.append(("channelselection-threecolumnsminitv", _("three columns 2")))
 CSList.append(("channelselection-onecolumn", _("one column 1")))
 CSList.append(("channelselection-onecolumntwo", _("one column 2")))
+CSList.append(("channelselection-onecolumnminitv2right", _("one column 3")))
+CSList.append(("channelselection-onecolumnminitv2left", _("one column 4")))
 
 config.plugins.SevenHD.ChannelSelectionStyle = ConfigSelection(default="channelselection-twocolumns", choices = CSList)
 
@@ -912,6 +989,8 @@ myConfigList = [('config.plugins.SevenHD.Image.value = "' + str(config.plugins.S
                 ('config.plugins.SevenHD.ChannelColorEvent.value = "' + str(config.plugins.SevenHD.ChannelColorEvent.value) + '"'),
                 ('config.plugins.SevenHD.CoolTVGuide.value = "' + str(config.plugins.SevenHD.CoolTVGuide.value) + '"'),
                 ('config.plugins.SevenHD.EMCStyle.value = "' + str(config.plugins.SevenHD.EMCStyle.value) + '"'),
+                ('config.plugins.SevenHD.EMCPicon.value = "' + str(config.plugins.SevenHD.EMCPicon.value) + '"'),
+                ('config.plugins.SevenHD.EMCMedia.value = "' + str(config.plugins.SevenHD.EMCMedia.value) + '"'),
                 ('config.plugins.SevenHD.EventView.value = "' + str(config.plugins.SevenHD.EventView.value) + '"'),
                 ('config.plugins.SevenHD.TimerEdit.value = "' + str(config.plugins.SevenHD.TimerEdit.value) + '"'),
                 ('config.plugins.SevenHD.EPGSelection.value = "' + str(config.plugins.SevenHD.EPGSelection.value) + '"'),
@@ -919,4 +998,12 @@ myConfigList = [('config.plugins.SevenHD.Image.value = "' + str(config.plugins.S
                 ('config.plugins.SevenHD.ProgressLinePlug.value = "' + str(config.plugins.SevenHD.ProgressLinePlug.value) + '"'),
                 ('config.plugins.SevenHD.ProgressLineIB.value = "' + str(config.plugins.SevenHD.ProgressLineIB.value) + '"'),
                 ('config.plugins.SevenHD.ProgressLineCS.value = "' + str(config.plugins.SevenHD.ProgressLineCS.value) + '"'),
+                ('config.plugins.SevenHD.SevenECM.value = "' + str(config.plugins.SevenHD.SevenECM.value) + '"'),
+                ('config.plugins.SevenHD.SevenSat.value = "' + str(config.plugins.SevenHD.SevenSat.value) + '"'),
+                ('config.plugins.SevenHD.SevenSys1.value = "' + str(config.plugins.SevenHD.SevenSys1.value) + '"'),
+                ('config.plugins.SevenHD.SevenSys2.value = "' + str(config.plugins.SevenHD.SevenSys2.value) + '"'),
+                ('config.plugins.SevenHD.SevenWeather1.value = "' + str(config.plugins.SevenHD.SevenWeather1.value) + '"'),
+                ('config.plugins.SevenHD.SevenWeather2.value = "' + str(config.plugins.SevenHD.SevenWeather2.value) + '"'),
+                ('config.plugins.SevenHD.SevenWeather3.value = "' + str(config.plugins.SevenHD.SevenWeather3.value) + '"'),
+                ('config.plugins.SevenHD.Logo.value = "' + str(config.plugins.SevenHD.Logo.value) + '"'),
                 ('config.plugins.SevenHD.ProgressBorderCS.value = "' + str(config.plugins.SevenHD.ProgressBorderCS.value) + '"')]

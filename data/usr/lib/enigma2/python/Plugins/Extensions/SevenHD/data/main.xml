@@ -364,7 +364,7 @@
 				}
 			</convert>
 		</widget>
-		<panel name="template_menu_left" />
+		<panel name="template_menu_main_nologo" />
 	</screen>
 		<!-- menu_setup -->
 	<screen backgroundColor="transparent" flags="wfNoBorder" name="menu_setup" position="0,0" size="1280,720" title="Main menu">
@@ -377,7 +377,7 @@
 				}
 			</convert>
 		</widget>
-		<panel name="template_menu_left" />
+		<panel name="template_menu_main_nologo" />
 	</screen>
 		<!-- menu_system -->
 	<screen backgroundColor="transparent" flags="wfNoBorder" name="menu_system" position="0,0" size="1280,720" title="Main menu">
@@ -390,7 +390,7 @@
 				}
 			</convert>
 		</widget>
-		<panel name="template_menu_left" />
+		<panel name="template_menu_main_nologo" />
 	</screen>
 		<!-- menu_information -->
 	<screen backgroundColor="transparent" flags="wfNoBorder" name="menu_information" position="0,0" size="1280,720" title="Main menu">
@@ -403,7 +403,7 @@
 				}
 			</convert>
 		</widget>
-		<panel name="template_menu_left" />
+		<panel name="template_menu_main_nologo" />
 	</screen>
 		<!-- menu_scan -->
 	<screen backgroundColor="transparent" flags="wfNoBorder" name="menu_scan" position="0,0" size="1280,720" title="Main menu">
@@ -416,7 +416,7 @@
 				}
 			</convert>
 		</widget>
-		<panel name="template_menu_left" />
+		<panel name="template_menu_main_nologo" />
 	</screen>
 		<!-- menu_mainmenu -->
 	<screen backgroundColor="transparent" flags="wfNoBorder" name="menu_mainmenu" position="0,0" size="1280,720" title="Main menu">
@@ -429,7 +429,7 @@
 				}
 			</convert>
 		</widget>
-		<panel name="template_menu_left" />
+		<panel name="template_menu_main_nologo" />
 	</screen>
 		<!-- menu_timermenu -->
 	<screen backgroundColor="transparent" flags="wfNoBorder" name="menu_timermenu" position="0,0" size="1280,720" title="Main menu">
@@ -442,7 +442,7 @@
 				}
 			</convert>
 		</widget>
-		<panel name="template_menu_left" />
+		<panel name="template_menu_main_nologo" />
 	</screen>
 		<!-- menu_shutdown -->
 	<screen backgroundColor="transparent" flags="wfNoBorder" name="menu_shutdown" position="0,0" size="1283,723" title="Main menu">
@@ -455,7 +455,7 @@
 				}
 			</convert>
 		</widget>
-		<panel name="template_menu_left" />
+		<panel name="template_menu_main_nologo" />
 	</screen>
 		<!-- ChannelContextMenu -->
 	<screen backgroundColor="transparent" flags="wfNoBorder" name="ChannelContextMenu" position="center,center" size="1280,720" title="Channellist menu">
@@ -814,8 +814,8 @@
 		<eLabel backgroundColor="SevenBorder" position="70,505" size="700,2" />
 		<widget backgroundColor="SevenFontBackground" font="Regular2;22" foregroundColors="grey,grey,#ffffff" halign="center" name="EditSettings_Text" position="470,531" size="300,34" transparent="1" valign="center" zPosition="2" />
 		<widget alphatest="blend" name="EditSettingsButton" pixmaps="SevenHD/menu/lan-seloff.png,SevenHD/menu/lan-sel300.png" position="470,530" size="300,35" zPosition="2" transparent="0" />
-		<widget font="Regular2;22" foregroundColor="SevenFont2" halign="center" name="InfoText" position="69,80" size="700,570" valign="center" zPosition="25" transparent="1" />
-		<panel name="template_menu_left_button" />
+		<widget font="Regular2;22" foregroundColor="SevenFont2" backgroundColor="SevenFontBackgroundRight" halign="center" name="InfoText" position="884,52" size="387,657" valign="center" zPosition="25" transparent="1" />
+		<panel name="template_menu_left_right_button" />
 		<panel name="template_colorkey_text_source" />
 	</screen>
 		<!-- NetworkBrowser -->
@@ -852,7 +852,7 @@
 		<!-- AutoMountManager -->
 	<screen backgroundColor="transparent" flags="wfNoBorder" name="AutoMountManager" position="0,0" size="1280,720" title="AutoMountManager">
 		<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="AutoMountManager" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
-		<widget backgroundColor="SevenFontBackground" position="70,80" render="Listbox" size="708,480" source="config" transparent="1">
+		<widget backgroundColor="SevenFontBackground" position="70,80" render="Listbox" itemHeight="85" size="708,480" source="config" transparent="1">
 			<convert type="TemplatedMultiContent">
 				{"template": [
 						MultiContentEntryText(pos = (60, 5), size = (620, 28), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 2 is the Menu Titel
@@ -1597,7 +1597,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,orgpos.y()))
 		<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="PluginDownloadBrowser" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
 		<widget backgroundColor="SevenFontBackground" name="list" position="70,80" size="708,550" transparent="1" zPosition="4" />
 		<widget font="Regular2;22" backgroundColor="SevenFontBackground" foregroundColor="SevenFont2" halign="center" name="text" position="70,662" size="708,48" transparent="1" valign="center" zPosition="1" />
-		<panel name="template_menu_left" />
+		<panel name="template_title_main_nologo" />
 	</screen>
 		<!-- ********** Channel Selection and Infobar ********** -->
 		<!-- SlimChannelSelection -->
@@ -1658,8 +1658,8 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,orgpos.y()))
 		<!-- BouquetSelector -->
 	<screen backgroundColor="transparent" flags="wfNoBorder" name="BouquetSelector" position="0,0" size="1280,720" title="Choose bouquet">
 		<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="BouquetSelector" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
-		<eLabel backgroundColor="SevenFontBackground" font="Regular2;22" foregroundColor="SevenFont2" position="70,90" size="708,28" text="Choose bouquet" transparent="1" />
-		<widget enableWrapAround="1" itemHeight="30" name="menu" backgroundColor="SevenFontBackground" position="70,130" size="708,450" transparent="1" zPosition="3" />
+		<eLabel backgroundColor="SevenFontBackground" font="Regular2;24" foregroundColor="SevenFont2" position="70,90" size="708,28" text="Choose bouquet" transparent="1" />
+		<widget enableWrapAround="1" itemHeight="30" font="Regular2;22" name="menu" backgroundColor="SevenFontBackground" position="70,130" size="708,450" transparent="1" zPosition="3" />
 		<panel name="template_menu_left" />
 	</screen>
 		<!-- InfoBarLite -->
@@ -1968,7 +1968,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,orgpos.y()))
 	<screen backgroundColor="transparent" flags="wfNoBorder" name="PositionerSetup" position="0,0" size="1280,720" title="Positioner setup...">
 		<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="PositionerSetup" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
 		<widget backgroundColor="SevenFontBackground" itemHeight="30" name="list" position="220,120" size="400,180" transparent="1" />
-		<widget backgroundColor="red" font="Regular2;20" foregroundColor="SevenFont2" halign="center" name="red" position=" 70,330" size="170,100" valign="center" alphatest="blend" />
+		<widget backgroundColor="red" font="Regular2;20" foregroundColor="SevenFont2" halign="center" name="red" position="70,330" size="170,100" valign="center" alphatest="blend" />
 		<widget backgroundColor="green" font="Regular2;20" foregroundColor="SevenFont2" halign="center" name="green" position="241,330" size="170,100" valign="center" alphatest="blend" />
 		<widget backgroundColor="yellow" font="Regular2;20" foregroundColor="SevenFont2" halign="center" name="yellow" position="410,330" size="170,100" valign="center" alphatest="blend" />
 		<widget backgroundColor="blue" font="Regular2;20" foregroundColor="SevenFont2" halign="center" name="blue" position="580,330" size="170,100" valign="center" alphatest="blend" />
@@ -2079,6 +2079,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,orgpos.y()))
 	<screen backgroundColor="transparent" flags="wfNoBorder" name="Setup" position="0,0" size="1280,720" title="Setup">
 		<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="Setup" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
 		<widget backgroundColor="SevenFontBackground" enableWrapAround="1" itemHeight="30" name="config" position="70,80" size="708,540" transparent="1" />
+		<widget name="footnote" position="300,623" size="250,30" zPosition="1" font="Regular;20" foregroundColor="SevenFont2" backgroundColor="SevenBackground" halign="center" transparent="1" valign="top" />
 		<panel name="template_menu_left_button" />
 		<panel name="template_colorkey_text_source" />
 	</screen>

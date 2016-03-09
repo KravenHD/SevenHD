@@ -135,8 +135,16 @@ class InfobarExtraSettings(ConfigListScreen, Screen):
         list = []
         list.append(getConfigListEntry(_('_____________________________infobar extras________________________________________'), ))
         list.append(getConfigListEntry(_("satellite information"),            config.plugins.SevenHD.SatInfo,         'Zeigt die Satelliten Informationen auf der rechten Seite.',                   '1',        ''))
+        if config.plugins.SevenHD.SatInfo.value != 'none':
+           list.append(getConfigListEntry(_("font color"),                    config.plugins.SevenHD.SevenSat,        'Stellt die Schriftfarbe ein.',                                                '4',       'satcolor'))
         list.append(getConfigListEntry(_("system information"),               config.plugins.SevenHD.SysInfo,         'Zeigt die System Informationen auf der rechten Seite.',                       '1',        ''))
-        list.append(getConfigListEntry(_("ECM information"),                  config.plugins.SevenHD.ECMInfo,         'Zeigt die ECM Informationen im unteren Bereich der Infobar an.',              '1',        ''))
+        if config.plugins.SevenHD.SysInfo.value != 'none':
+           list.append(getConfigListEntry(_("font 1"),                        config.plugins.SevenHD.SevenSys1,       'Stellt die Schriftfarbe ein.',                                                '4',       'syscolor1'))
+           list.append(getConfigListEntry(_("font 2"),                        config.plugins.SevenHD.SevenSys2,       'Stellt die Schriftfarbe ein.',                                                '4',       'syscolor2'))
+        if config.plugins.SevenHD.InfobarStyle.value != 'infobar-style-xpicon9':
+           list.append(getConfigListEntry(_("ECM information"),                  config.plugins.SevenHD.ECMInfo,         'Zeigt die ECM Informationen im unteren Bereich der Infobar an.',              '1',        ''))
+           if config.plugins.SevenHD.ECMInfo.value != 'none':
+              list.append(getConfigListEntry(_("font color"),                    config.plugins.SevenHD.SevenECM,        'Stellt die Schriftfarbe ein.',                                                '4',       'ecmcolor'))
         list.append(getConfigListEntry(_("signal strengh"),                   config.plugins.SevenHD.FrontInfo,       'Zeigt die Anzeige in SNR oder dB an.',                                        '1',        'SNRdB'))
         list.append(getConfigListEntry(_('________________________________weather____________________________________________'), ))
         
@@ -175,6 +183,13 @@ class InfobarExtraSettings(ConfigListScreen, Screen):
            if config.plugins.SevenHD.WeatherView.value == 'meteo':
               list.append(getConfigListEntry(_("Meteo Color"),                config.plugins.SevenHD.MeteoColor,      'Stellt die Farbe des MeteoIcon ein.',                                         '4',        'MeteoColor'))
            list.append(getConfigListEntry(_("Refresh interval (in minutes)"), config.plugins.SevenHD.refreshInterval, 'Stellt die Abfragezeit des Wetter ein.',                                      '4',        'MeteoColor'))
+
+        if config.plugins.SevenHD.WeatherStyle_1.value != 'none' or config.plugins.SevenHD.WeatherStyle_2.value != 'none':
+           list.append(getConfigListEntry(_("font 1"),                        config.plugins.SevenHD.SevenWeather1,   'Stellt die Schriftfarbe ein.',                                                '4',       'weather1'))
+           list.append(getConfigListEntry(_("font 2"),                        config.plugins.SevenHD.SevenWeather2,   'Stellt die Schriftfarbe ein.',                                                '4',       'weather2'))
+        if config.plugins.SevenHD.WeatherStyle_1.value != 'none' or config.plugins.SevenHD.WeatherStyle_2.value != 'none':
+           if config.plugins.SevenHD.WeatherStyle_1.value in ('weather-big','weather-left-side') or config.plugins.SevenHD.WeatherStyle_2.value in ('weather-big','weather-left-side'):
+              list.append(getConfigListEntry(_("font 3"),                     config.plugins.SevenHD.SevenWeather3,   'Stellt die Schriftfarbe ein.',                                                '4',       'weather3'))
            
         return list
 
@@ -233,6 +248,20 @@ class InfobarExtraSettings(ConfigListScreen, Screen):
         preview = ''
         if returnValue == config.plugins.SevenHD.MeteoColor:
               preview = self.generate(config.plugins.SevenHD.MeteoColor.value)
+        elif returnValue == config.plugins.SevenHD.SevenECM:
+              preview = self.generate(config.plugins.SevenHD.SevenECM.value)
+        elif returnValue == config.plugins.SevenHD.SevenSat:
+              preview = self.generate(config.plugins.SevenHD.SevenSat.value)
+        elif returnValue == config.plugins.SevenHD.SevenSys1:
+              preview = self.generate(config.plugins.SevenHD.SevenSys1.value)
+        elif returnValue == config.plugins.SevenHD.SevenSys2:
+              preview = self.generate(config.plugins.SevenHD.SevenSys2.value)
+        elif returnValue == config.plugins.SevenHD.SevenWeather1:
+              preview = self.generate(config.plugins.SevenHD.SevenWeather1.value)
+        elif returnValue == config.plugins.SevenHD.SevenWeather2:
+              preview = self.generate(config.plugins.SevenHD.SevenWeather2.value)
+        elif returnValue == config.plugins.SevenHD.SevenWeather3:
+              preview = self.generate(config.plugins.SevenHD.SevenWeather3.value)
         else:
               self["colorthump"].instance.hide()
         return str(preview)
@@ -299,6 +328,13 @@ class InfobarExtraSettings(ConfigListScreen, Screen):
         self.setInputToDefault(config.plugins.SevenHD.SysInfo)
         self.setInputToDefault(config.plugins.SevenHD.ECMInfo)
         self.setInputToDefault(config.plugins.SevenHD.FrontInfo)
+        self.setInputToDefault(config.plugins.SevenHD.SevenECM)
+        self.setInputToDefault(config.plugins.SevenHD.SevenSat)
+        self.setInputToDefault(config.plugins.SevenHD.SevenSys1)
+        self.setInputToDefault(config.plugins.SevenHD.SevenSys2)
+        self.setInputToDefault(config.plugins.SevenHD.SevenWeather1)
+        self.setInputToDefault(config.plugins.SevenHD.SevenWeather2)
+        self.setInputToDefault(config.plugins.SevenHD.SevenWeather3)
         self.save()
         
     def setInputToDefault(self, configItem):
@@ -363,6 +399,11 @@ class InfobarExtraSettings(ConfigListScreen, Screen):
            elif config.plugins.SevenHD.weather_server.value == '_realtek':
               self.generate_owm_accu_realtek_string()
     
+           # tomele
+           # added
+           config.plugins.SevenHD.weather_foundcity.value=self.city
+           config.plugins.SevenHD.weather_foundcity.save()
+
            if self.preview:
               self["helperimage"].hide()
               self["preview"].show()
@@ -438,7 +479,11 @@ class InfobarExtraSettings(ConfigListScreen, Screen):
            self.lon = re.search('geo:long.+>(.+?)</geo:long', str(res.text)).groups(1)
            self.gm_code = re.search('/forecast/(.+?)_c.html', str(res.text)).groups(1)
            
+           # tomele
+           # save added
            config.plugins.SevenHD.weather_gmcode.value = str(self.gm_code)
+           config.plugins.SevenHD.weather_gmcode.save()
+           
            self.preview_text = 'City: ' + str(self.city) + '\nLati: ' + str(self.lat) + '\nLong: ' + str(self.lon)
         except:
            self.get_latlon_by_ip()
@@ -472,7 +517,11 @@ class InfobarExtraSettings(ConfigListScreen, Screen):
            self.city = str(d[1])
            self.woe_id = str(d[0])
            
+           # tomele
+           # save added
            config.plugins.SevenHD.weather_woe_id.value = str(self.woe_id)
+           config.plugins.SevenHD.weather_woe_id.save()
+           
            self.get_latlon_by_woeid()
         except:
            self.get_latlon_by_ip()
@@ -490,7 +539,11 @@ class InfobarExtraSettings(ConfigListScreen, Screen):
                self.lon = child.attrib.get('long').replace(',','.')
                self.msn_id = child.attrib.get('entityid')
            
+           # tomele
+           # save added
            config.plugins.SevenHD.weather_msn_id.value = str(self.msn_id)
+           config.plugins.SevenHD.weather_msn_id.save()
+           
            self.preview_text = 'City: ' + str(self.city) + '\nLati: ' + str(self.lat) + '\nLong: ' + str(self.lon) + '\nMSN ID: ' + str(self.msn_id)    
         except:
            self.session.open(MessageBox, _('No MSN Id found'), MessageBox.TYPE_INFO, timeout = 5)
@@ -505,12 +558,20 @@ class InfobarExtraSettings(ConfigListScreen, Screen):
            lat = re.search('lat>(.+?)</lat', str(res.text)).groups(1)
            lon = re.search('lon>(.+?)</lon', str(res.text)).groups(1)
            
-           self.city = str(city[0])
+           # tomele
+           # only if needed, because of wrong encoding of umlauts at realtek
+           if self.city=='':
+               self.city = str(city[0])
+           
            self.accu_id = str(cityId[0])
            self.lat = str(lat[0])
            self.lon = str(lon[0])
            
+           # tomele
+           # save added
            config.plugins.SevenHD.weather_accu_id.value = str(self.accu_id)
+           config.plugins.SevenHD.weather_accu_id.save()
+           
            self.preview_text = 'City: ' + str(self.city) + '\nLati: ' + str(self.lat) + '\nLong: ' + str(self.lon) + '\nAccu ID: ' + str(self.accu_id)
         except:
            self.session.open(MessageBox, _('No Accu Id found'), MessageBox.TYPE_INFO, timeout = 5)
@@ -525,7 +586,11 @@ class InfobarExtraSettings(ConfigListScreen, Screen):
            self.lat = data['query']['results']['Result']['latitude']
            self.lon = data['query']['results']['Result']['longitude']
            
+           # tomele
+           # save added
            config.plugins.SevenHD.weather_woe_id.value = str(self.woe_id)
+           config.plugins.SevenHD.weather_woe_id.save()
+           
            self.preview_text = 'City: ' + str(self.city) + '\nLati: ' + str(self.lat) + '\nLong: ' + str(self.lon) + '\nWOE ID: ' + str(self.woe_id)
         except:
            self.session.open(MessageBox, _('No WOE Id found'), MessageBox.TYPE_INFO, timeout = 5)
