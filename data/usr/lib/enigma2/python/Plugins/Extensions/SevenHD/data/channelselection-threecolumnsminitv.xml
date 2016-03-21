@@ -1,6 +1,6 @@
 		<!-- /* ChannelSelection Three Columns MiniTV -->
 	<screen backgroundColor="transparent" flags="wfNoBorder" name="ChannelSelection" position="0,0" size="1280,720" title="Channel Selection">
-		<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="ChannelSelection" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
+		<!--<eLabel backgroundColor="SevenFontBackgroundLeft" font="Regular;13" foregroundColor="red" text="ChannelSelection" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
 		<widget source="global.CurrentTime" render="Label" position="814,19" size="80,30" font="Regular2; 23" foregroundColor="SevenDestcriptionCS" backgroundColor="SevenFontBackMiddleCS" transparent="1">
 			<convert type="SevenHDClockToText">Default</convert>
 		</widget>
@@ -35,9 +35,9 @@
 		</widget>
 		<widget source="session.VideoPicture" render="Pig" position="42,73" size="391,220" zPosition="3" backgroundColor="transparent" />
 		<panel name="template_menu_cs6_button" />
-		<eLabel backgroundColor="SevenLineCS" position="41,292" size="394,4" zPosition="5" />
-		<eLabel backgroundColor="SevenLineCS" position="41,70" size="394,4" zPosition="5" />
-		<eLabel backgroundColor="SevenLineCS" position="432,70" size="4,226" zPosition="5" />
-		<eLabel backgroundColor="SevenLineCS" position="41,70" size="4,226" zPosition="5" />
+		<!--<eLabel backgroundColor="SevenLineCS" position="41,292" size="394,4" zPosition="112" />-->
+		<!--<eLabel backgroundColor="SevenLineCS" position="41,70" size="394,4" zPosition="112" />-->
+		<!--<eLabel backgroundColor="SevenLineCS" position="432,70" size="4,226" zPosition="112" />-->
+		<!--<eLabel backgroundColor="SevenLineCS" position="41,70" size="4,226" zPosition="112" />-->
 	</screen>
 		<!-- ChannelSelection Three Columns Mini TV */-->

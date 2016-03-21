@@ -127,13 +127,15 @@ class PluginSettings(ConfigListScreen, Screen):
         list.append(getConfigListEntry(_('_______________________________plugins__________________________________________'), ))                                           
         list.append(getConfigListEntry(_("Event View"),                config.plugins.SevenHD.EventView,              'Auswahl der Darstellung von Event View.',                    '1',     ''))
         list.append(getConfigListEntry(_("EPG Selection"),             config.plugins.SevenHD.EPGSelection,           'Auswahl der Darstellung von EPG Selection.',                 '1',     ''))
-        if config.plugins.SevenHD.use_epg_thumb.value:
-           list.append(getConfigListEntry(_("graphical epg preview"),  config.plugins.SevenHD.use_epg_thumb,          'EPG Vorschau',                                               '4', 'Preview'))
-           list.append(getConfigListEntry(_("graphical epg cache"),    config.plugins.SevenHD.epg_thumb_cache,        'EPG Vorschau Speicherort',                                   '4', 'PreviewSave'))
-        else:
-           list.append(getConfigListEntry(_("graphical epg preview"),  config.plugins.SevenHD.use_epg_thumb,          'EPG Vorschau',                                               '4', 'PreviewNone'))
+        #if config.plugins.SevenHD.use_epg_thumb.value:
+           #list.append(getConfigListEntry(_("graphical epg preview"),  config.plugins.SevenHD.use_epg_thumb,          'EPG Vorschau',                                               '4', 'Preview'))
+           #list.append(getConfigListEntry(_("graphical epg cache"),    config.plugins.SevenHD.epg_thumb_cache,        'EPG Vorschau Speicherort',                                   '4', 'PreviewSave'))
+        #else:
+           #list.append(getConfigListEntry(_("graphical epg preview"),  config.plugins.SevenHD.use_epg_thumb,          'EPG Vorschau',                                               '4', 'PreviewNone'))
         list.append(getConfigListEntry(_("Timer Edit"),                config.plugins.SevenHD.TimerEdit,              'Auswahl der Darstellung von Timer Edit.',                    '1',     ''))
         list.append(getConfigListEntry(_("Movie Selection"),           config.plugins.SevenHD.MovieSelectionStyle,    'Auswahl der Covergr\xc3\xb6\xc3\x9fe.',                      '1',     ''))
+        list.append(getConfigListEntry(_("Movie Player"),              config.plugins.SevenHD.MoviePlayer,            'Auswahl der darstellung von MoviePlayer.',                   '1',     ''))
+        list.append(getConfigListEntry(_("Movie Player Cover"),        config.plugins.SevenHD.MoviePlayerCover,       'Auswahl der Coveranzeige im MoviePlayer.',                   '1',     ''))
         if not fileExists(PLUGIN_PATH + "/Extensions/EnhancedMovieCenter/plugin.pyo"):
            list.append(getConfigListEntry(_('{:<114}{:>1}'.format('EnhancedMovieCenter','not installed')), ))
         else:   
@@ -141,7 +143,8 @@ class PluginSettings(ConfigListScreen, Screen):
            config.EMC.skin_able.value = True
            config.EMC.skin_able.save()
            list.append(getConfigListEntry(_("EMCMediaCenter"),         config.plugins.SevenHD.EMCMedia,           'Auswahl der darstellung von EMCMediaCenter.',                    '1',     ''))
-           list.append(getConfigListEntry(_("Extra Info"),             config.plugins.SevenHD.EMCPicon,           'Anzeige von Extrainformationen im EMCMediaCenter.',              '1',     ''))
+           if config.plugins.SevenHD.EMCMedia.value=="emcmediacenter-style1":
+              list.append(getConfigListEntry(_("EMCMediaCenter Extra Info"),             config.plugins.SevenHD.EMCPicon,           'Anzeige von Extrainformationen im EMCMediaCenter.',              '1',     ''))
         if os.path.isdir(PLUGIN_PATH + "Extensions/Albatros") :
            if config.plugins.SevenHD.use_alba_skin.value:
               list.append(getConfigListEntry(_("Use Albatros Skin"),   config.plugins.SevenHD.use_alba_skin,          'Wenn ja wird das SevenHD Skin für Albatros installiert.',    '1',     ''))
@@ -234,6 +237,8 @@ class PluginSettings(ConfigListScreen, Screen):
         self.setInputToDefault(config.plugins.SevenHD.EMCStyle)
         self.setInputToDefault(config.plugins.SevenHD.EMCPicon)
         self.setInputToDefault(config.plugins.SevenHD.EMCMedia)
+        self.setInputToDefault(config.plugins.SevenHD.MoviePlayer)
+        self.setInputToDefault(config.plugins.SevenHD.MoviePlayerCover)
         self.setInputToDefault(config.plugins.SevenHD.MovieSelectionStyle)
         self.setInputToDefault(config.plugins.SevenHD.EPGSelection)
         self.setInputToDefault(config.plugins.SevenHD.EventView)

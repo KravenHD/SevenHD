@@ -1,6 +1,6 @@
 		<!-- /* ChannelSelection Three Columns -->
 	<screen backgroundColor="transparent" flags="wfNoBorder" name="ChannelSelection" position="0,0" size="1280,720" title="Channel Selection">
-		<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="ChannelSelection" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
+		<!--<eLabel backgroundColor="SevenFontBackgroundLeft" font="Regular;13" foregroundColor="red" text="ChannelSelection" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
 		<widget source="global.CurrentTime" render="Label" position="814,19" size="80,30" font="Regular2; 23" foregroundColor="SevenDestcriptionCS" backgroundColor="SevenFontBackMiddleCS" transparent="1">
 			<convert type="SevenHDClockToText">Default</convert>
 		</widget>

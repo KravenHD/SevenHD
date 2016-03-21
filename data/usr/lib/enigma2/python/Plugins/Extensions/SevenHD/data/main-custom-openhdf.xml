@@ -2,38 +2,37 @@
 		<!-- ********** openHDF ********** -->
 		<!-- About -->
 	<screen backgroundColor="transparent" flags="wfNoBorder" name="About" position="1,1" size="1280,720" title="About">
-		<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="About" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
-		<widget backgroundColor="SevenFontBackground" font="Regular2; 26" foregroundColor="SevenFont2" position="70,71" render="Label" size="700,40" source="EnigmaVersion" transparent="1" />
-		<widget backgroundColor="SevenFontBackground" font="Regular2; 26" foregroundColor="SevenFont2" position="70,111" render="Label" size="700,40" source="ImageVersion" transparent="1" />
-		<widget backgroundColor="SevenFontBackground" font="Regular2; 26" foregroundColor="SevenFont2" position="70,151" render="Label" size="700,40" source="FPVersion" transparent="1" />
-		<widget backgroundColor="SevenFontBackground" font="Regular2; 26" foregroundColor="SevenFont2" position="70,191" render="Label" size="700,40" source="TunerHeader" transparent="1" />
-		<widget backgroundColor="SevenFontBackground" font="Regular2; 24" foregroundColor="SevenFont2" position="70,231" render="Label" size="700,40" source="Tuner0" transparent="1" />
-		<widget backgroundColor="SevenFontBackground" font="Regular2; 24" foregroundColor="SevenFont2" position="70,271" render="Label" size="700,40" source="Tuner1" transparent="1" />
-		<widget backgroundColor="SevenFontBackground" font="Regular2; 24" foregroundColor="SevenFont2" position="70,311" render="Label" size="700,40" source="Tuner2" transparent="1" />
-		<widget backgroundColor="SevenFontBackground" font="Regular2; 24" foregroundColor="SevenFont2" position="70,351" render="Label" size="700,40" source="Tuner3" transparent="1" />
-		<eLabel backgroundColor="SevenFontBackground" font="Regular2; 26" foregroundColor="SevenFont2" position="69,441" size="700,40" text="Support for Image: " transparent="1" />
-		<eLabel backgroundColor="SevenFontBackground" font="Regular2; 26" foregroundColor="SevenFont2" position="69,480" size="700,40" text="www.hdfreaks.cc" transparent="1" />
-		<widget backgroundColor="SevenFontBackground" font="Regular2; 26" foregroundColor="SevenFont2" position="70,520" render="Label" size="700,40" source="HDDHeader" transparent="1" />
-		<widget backgroundColor="SevenFontBackground" font="Regular2; 24" foregroundColor="SevenFont2" position="70,560" render="Label" size="700,65" source="hddA" transparent="1" />
+		<!--<eLabel backgroundColor="SevenFontBackgroundLeft" font="Regular;13" foregroundColor="red" text="About" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
+		<widget backgroundColor="SevenFontBackgroundLeft" font="Regular2; 26" foregroundColor="SevenFont2" position="70,71" render="Label" size="700,40" source="EnigmaVersion" transparent="1" />
+		<widget backgroundColor="SevenFontBackgroundLeft" font="Regular2; 26" foregroundColor="SevenFont2" position="70,111" render="Label" size="700,40" source="ImageVersion" transparent="1" />
+		<widget backgroundColor="SevenFontBackgroundLeft" font="Regular2; 26" foregroundColor="SevenFont2" position="70,151" render="Label" size="700,40" source="FPVersion" transparent="1" />
+		<widget backgroundColor="SevenFontBackgroundLeft" font="Regular2; 26" foregroundColor="SevenFont2" position="70,191" render="Label" size="700,40" source="TunerHeader" transparent="1" />
+		<widget backgroundColor="SevenFontBackgroundLeft" font="Regular2; 24" foregroundColor="SevenFont2" position="70,231" render="Label" size="700,40" source="Tuner0" transparent="1" />
+		<widget backgroundColor="SevenFontBackgroundLeft" font="Regular2; 24" foregroundColor="SevenFont2" position="70,271" render="Label" size="700,40" source="Tuner1" transparent="1" />
+		<widget backgroundColor="SevenFontBackgroundLeft" font="Regular2; 24" foregroundColor="SevenFont2" position="70,311" render="Label" size="700,40" source="Tuner2" transparent="1" />
+		<widget backgroundColor="SevenFontBackgroundLeft" font="Regular2; 24" foregroundColor="SevenFont2" position="70,351" render="Label" size="700,40" source="Tuner3" transparent="1" />
+		<eLabel backgroundColor="SevenFontBackgroundLeft" font="Regular2; 26" foregroundColor="SevenFont2" position="69,441" size="700,40" text="Support for Image: " transparent="1" />
+		<eLabel backgroundColor="SevenFontBackgroundLeft" font="Regular2; 26" foregroundColor="SevenFont2" position="69,480" size="700,40" text="www.hdfreaks.cc" transparent="1" />
+		<widget backgroundColor="SevenFontBackgroundLeft" font="Regular2; 26" foregroundColor="SevenFont2" position="70,520" render="Label" size="700,40" source="HDDHeader" transparent="1" />
+		<widget backgroundColor="SevenFontBackgroundLeft" font="Regular2; 24" foregroundColor="SevenFont2" position="70,560" render="Label" size="700,65" source="hddA" transparent="1" />
 		<panel name="template_menu_left" />
 	</screen>
 		<!-- AboutOE -->
 	<screen name="AboutOE" position="0,0" size="1280,720" title="About" flags="wfNoBorder" backgroundColor="transparent">
-		<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="AboutOE" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
-		<widget source="lab1" render="Label" position="70,123" size="369,35" font="Regular;30" foregroundColor="SevenFont1" transparent="1" zPosition="2" backgroundColor="SevenFontBackground" />
-		<widget source="lab2" render="Label" position="70,173" size="370,25" font="Regular;19" foregroundColor="SevenFont1" transparent="1" zPosition="2" backgroundColor="SevenFontBackground" />
-		<widget source="lab3" render="Label" position="70,213" size="369,25" font="Regular;19" foregroundColor="SevenFont1" transparent="1" zPosition="1" backgroundColor="SevenFontBackground" />
-		<eLabel text="OPEN SOURCE" position="460,123" size="353,28" font="Regular2; 22" transparent="1" zPosition="1" foregroundColor="SevenFont2" backgroundColor="SevenFontBackground" />
-		<eLabel text="https://github.com/openhdf" position="460,163" size="352,28" font="Regular2; 19" transparent="1" zPosition="1" foregroundColor="SevenFont2" backgroundColor="SevenFontBackground" />
-		<eLabel text="https://github.com/oe-alliance" position="460,203" size="354,28" font="Regular2; 19" transparent="1" zPosition="1" foregroundColor="SevenFont2" backgroundColor="SevenFontBackground" />
-		<widget name="AboutScrollLabel" position="70,253" size="650,360" font="Regular;20" foregroundColor="SevenFont1" transparent="1" zPosition="1" backgroundColor="SevenFontBackground" />
+		<!--<eLabel backgroundColor="SevenFontBackgroundLeft" font="Regular;13" foregroundColor="red" text="AboutOE" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
+		<widget source="lab1" render="Label" position="70,90" size="369,35" font="Regular;30" foregroundColor="SevenFont1" transparent="1" zPosition="2" backgroundColor="SevenFontBackgroundLeft" />
+		<widget source="lab2" render="Label" position="70,143" size="370,25" font="Regular;19" foregroundColor="SevenFont1" transparent="1" zPosition="2" backgroundColor="SevenFontBackgroundLeft" />
+		<eLabel text="OPEN SOURCE" position="460,90" size="353,28" font="Regular2; 22" transparent="1" zPosition="1" foregroundColor="SevenFont2" backgroundColor="SevenFontBackgroundLeft" />
+		<eLabel text="https://github.com/openhdf" position="460,133" size="352,28" font="Regular2; 19" transparent="1" zPosition="1" foregroundColor="SevenFont2" backgroundColor="SevenFontBackgroundLeft" />
+		<eLabel text="https://github.com/oe-alliance" position="460,173" size="354,28" font="Regular2; 19" transparent="1" zPosition="1" foregroundColor="SevenFont2" backgroundColor="SevenFontBackgroundLeft" />
+		<widget name="AboutScrollLabel" position="70,223" size="650,450" font="Regular;20" foregroundColor="SevenFont1" transparent="1" zPosition="1" backgroundColor="SevenFontBackgroundLeft" />
 		<panel name="template_menu_left" />
 	</screen>
 		<!-- UpdatePluginMenu -->
 	<screen name="UpdatePluginMenu" flags="wfNoBorder" position="0,0" size="1280,720" title="Update Plugin Menu" backgroundColor="transparent">
-		<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="UpdatePluginMenu" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
-		<widget name="hdfStatusPic" position="90,500" size="100,118" backgroundColor="SevenFontBackground" transparent="1" alphatest="on" />
-		<widget source="menu" render="Listbox" position="44,134" size="370,298" backgroundColor="SevenFontBackground" transparent="1">
+		<!--<eLabel backgroundColor="SevenFontBackgroundLeft" font="Regular;13" foregroundColor="red" text="UpdatePluginMenu" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
+		<widget name="hdfStatusPic" position="90,500" size="100,118" backgroundColor="SevenFontBackgroundLeft" transparent="1" alphatest="on" />
+		<widget source="menu" render="Listbox" position="44,134" size="370,298" backgroundColor="SevenFontBackgroundLeft" transparent="1">
 			<convert type="TemplatedMultiContent">
 					{"template": [
 							MultiContentEntryText(pos = (2, 2), size = (370, 24), flags = RT_HALIGN_LEFT, text = 1), # index 0 is the MenuText,
@@ -43,7 +42,7 @@
 					}
 			</convert>
 		</widget>
-		<widget source="menu" render="Listbox" position="444,134" size="240,300" backgroundColor="SevenFontBackground" scrollbarMode="showNever" selectionDisabled="1" transparent="1">
+		<widget source="menu" render="Listbox" position="444,134" size="240,300" backgroundColor="SevenFontBackgroundLeft" scrollbarMode="showNever" selectionDisabled="1" transparent="1">
 			<convert type="TemplatedMultiContent">
 					{"template": [
 							MultiContentEntryText(pos = (2, 2), size = (240, 300), flags = RT_HALIGN_CENTER|RT_WRAP, text = 2), # index 2 is the Description,
@@ -53,9 +52,9 @@
 					}
 			</convert>
 		</widget>
-		<eLabel text="Feed-Status" position="43,451" size="191,29" zPosition="1" font="Regular; 22" foregroundColor="SevenFont1" halign="center" backgroundColor="SevenFontBackground" transparent="1" />
-		<eLabel text="Its recommend to create a Fullbackup before update!" position="239,452" size="446,20" zPosition="1" font="Regular; 16" foregroundColor="SevenFont1" halign="left" backgroundColor="SevenFontBackground" transparent="1" />
-		<eLabel text="Empfohlen wird ein Fullbackup vor dem Update!" position="239,476" size="446,20" zPosition="1" font="Regular; 16" foregroundColor="SevenFont1" halign="left" backgroundColor="SevenFontBackground" transparent="1" />
+		<eLabel text="Feed-Status" position="43,451" size="191,29" zPosition="1" font="Regular; 22" foregroundColor="SevenFont1" halign="center" backgroundColor="SevenFontBackgroundLeft" transparent="1" />
+		<eLabel text="Its recommend to create a Fullbackup before update!" position="239,452" size="446,20" zPosition="1" font="Regular; 16" foregroundColor="SevenFont1" halign="left" backgroundColor="SevenFontBackgroundLeft" transparent="1" />
+		<eLabel text="Empfohlen wird ein Fullbackup vor dem Update!" position="239,476" size="446,20" zPosition="1" font="Regular; 16" foregroundColor="SevenFont1" halign="left" backgroundColor="SevenFontBackgroundLeft" transparent="1" />
 		<eLabel text="update recommend / Alles OK!" position="202,585" size="396,25" zPosition="1" font="Regular; 20" halign="left" foregroundColor="black" backgroundColor="green" transparent="0" />
 		<eLabel text="No Update! / nicht updaten!" position="202,509" size="396,25" zPosition="1" font="Regular; 20" foregroundColor="white" halign="left" backgroundColor="red" transparent="0" />
 		<eLabel text="update at your own risk / auf eigene Gefahr!" position="202,546" size="396,25" zPosition="1" font="Regular; 18" halign="left" foregroundColor="black" backgroundColor="yellow" transparent="0" />
@@ -64,37 +63,37 @@
 	</screen>
 		<!-- Devices -->
 	<screen name="Devices" position="0,0" size="1280,720" title="SystemInfo" flags="wfNoBorder" backgroundColor="transparent">
-		<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="Devices" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
-		<widget source="TunerHeader" render="Label" position="70,121" size="708,36" font="Regular;20" foregroundColor="SevenFont1" transparent="1" zPosition="1" backgroundColor="SevenFontBackground" />
-		<widget source="nims" render="Label" position="70,162" size="708,108" font="Regular;18" foregroundColor="SevenFont1" transparent="1" zPosition="1" enableWrapAround="0" backgroundColor="SevenFontBackground" />
-		<widget source="HDDHeader" render="Label" position="70,275" size="708,36" font="Regular;20" foregroundColor="SevenFont1" transparent="1" zPosition="1" backgroundColor="SevenFontBackground" />
-		<widget source="hdd" render="Label" position="70,315" size="708,112" font="Regular;18" foregroundColor="SevenFont1" transparent="1" zPosition="1" enableWrapAround="0" backgroundColor="SevenFontBackground" />
-		<widget source="MountsHeader" render="Label" position="70,431" size="708,36" font="Regular;20" foregroundColor="SevenFont1" transparent="1" zPosition="1" backgroundColor="SevenFontBackground" />
-		<widget source="mounts" render="Label" position="70,471" size="708,143" font="Regular;18" foregroundColor="SevenFont1" transparent="1" zPosition="1" enableWrapAround="0" backgroundColor="SevenFontBackground" />
+		<!--<eLabel backgroundColor="SevenFontBackgroundLeft" font="Regular;13" foregroundColor="red" text="Devices" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
+		<widget source="TunerHeader" render="Label" position="70,121" size="708,36" font="Regular;20" foregroundColor="SevenFont1" transparent="1" zPosition="1" backgroundColor="SevenFontBackgroundLeft" />
+		<widget source="nims" render="Label" position="70,162" size="708,108" font="Regular;18" foregroundColor="SevenFont1" transparent="1" zPosition="1" enableWrapAround="0" backgroundColor="SevenFontBackgroundLeft" />
+		<widget source="HDDHeader" render="Label" position="70,275" size="708,36" font="Regular;20" foregroundColor="SevenFont1" transparent="1" zPosition="1" backgroundColor="SevenFontBackgroundLeft" />
+		<widget source="hdd" render="Label" position="70,315" size="708,112" font="Regular;18" foregroundColor="SevenFont1" transparent="1" zPosition="1" enableWrapAround="0" backgroundColor="SevenFontBackgroundLeft" />
+		<widget source="MountsHeader" render="Label" position="70,431" size="708,36" font="Regular;20" foregroundColor="SevenFont1" transparent="1" zPosition="1" backgroundColor="SevenFontBackgroundLeft" />
+		<widget source="mounts" render="Label" position="70,471" size="708,143" font="Regular;18" foregroundColor="SevenFont1" transparent="1" zPosition="1" enableWrapAround="0" backgroundColor="SevenFontBackgroundLeft" />
 		<panel name="template_menu_left" />
 	</screen>
 		<!-- HotkeySetup -->
 	<screen backgroundColor="transparent" flags="wfNoBorder" name="HotkeySetup" position="0,0" size="1280,720" title="Tasteneinstellungen">
-		<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="HotkeySetup" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
-		<widget name="list" position="40,99" size="385,529" font="Regular;22" itemHeight="28" transparent="1" foregroundColor="SevenFont1" enableWrapAround="1" backgroundColor="SevenFontBackground" zPosition="1" />
-		<widget name="choosen" position="428,99" size="385,530" font="Regular2; 22" itemHeight="28" foregroundColor="SevenFont2" backgroundColor="SevenFontBackground" zPosition="0" transparent="1" />
-		<widget name="description" position="936,228" size="302,250" font="Regular2; 16" foregroundColor="SevenFont2" valign="center" halign="center" backgroundColor="SevenFontBackgroundRight" zPosition="0" transparent="1" />
+		<!--<eLabel backgroundColor="SevenFontBackgroundLeft" font="Regular;13" foregroundColor="red" text="HotkeySetup" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
+		<widget name="list" position="40,99" size="385,529" font="Regular;22" itemHeight="28" transparent="1" foregroundColor="SevenFont1" enableWrapAround="1" backgroundColor="SevenFontBackgroundLeft" zPosition="1" />
+		<widget name="choosen" position="428,99" size="385,530" font="Regular2; 22" itemHeight="28" foregroundColor="SevenFont2" backgroundColor="SevenFontBackgroundLeft" zPosition="0" transparent="1" />
+		<widget name="description" position="936,228" size="302,250" font="Regular2; 16" foregroundColor="SevenFont2" valign="center" halign="center" backgroundColor="SevenFontBackgroundLeftRight" zPosition="0" transparent="1" />
 		<panel name="template_menu_left_right_button" />
 		<panel name="template_colorkey_text_source" />
 	</screen>
 		<!-- ButtonSetupSelect -->
 	<screen backgroundColor="transparent" flags="wfNoBorder" name="ButtonSetupSelect" position="0,0" size="1280,720" title="Tasteneinstellungen">
-		<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="ButtonSetupSelect" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
-		<widget name="list" position="40,99" size="385,529" font="Regular;22" itemHeight="28" transparent="1" foregroundColor="SevenFont1" enableWrapAround="1" backgroundColor="SevenFontBackground" zPosition="0" />
-		<widget name="choosen" position="428,99" size="385,530" font="Regular2; 22" itemHeight="28" foregroundColor="SevenFont2" backgroundColor="SevenFontBackground" zPosition="0" transparent="1" />
-		<widget name="description" position="936,228" size="302,250" font="Regular2; 16" foregroundColor="SevenFont2" valign="center" halign="center" backgroundColor="SevenFontBackgroundRight" zPosition="0" transparent="1" />
+		<!--<eLabel backgroundColor="SevenFontBackgroundLeft" font="Regular;13" foregroundColor="red" text="ButtonSetupSelect" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
+		<widget name="list" position="40,99" size="385,529" font="Regular;22" itemHeight="28" transparent="1" foregroundColor="SevenFont1" enableWrapAround="1" backgroundColor="SevenFontBackgroundLeft" zPosition="0" />
+		<widget name="choosen" position="428,99" size="385,530" font="Regular2; 22" itemHeight="28" foregroundColor="SevenFont2" backgroundColor="SevenFontBackgroundLeft" zPosition="0" transparent="1" />
+		<widget name="description" position="936,228" size="302,250" font="Regular2; 16" foregroundColor="SevenFont2" valign="center" halign="center" backgroundColor="SevenFontBackgroundLeftRight" zPosition="0" transparent="1" />
 		<panel name="template_menu_left_right_button" />
 		<panel name="template_colorkey_text_source" />
 	</screen>
 		<!-- HddSetup -->
 	<screen backgroundColor="transparent" flags="wfNoBorder" name="HddSetup" position="0,0" size="1280,720" title="Hard Drive Setup">
-		<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="HddSetup" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
-		<widget source="menu" render="Listbox" font="Regular;22" itemHeight="50" position="70,136" size="708,488" scrollbarMode="showOnDemand" backgroundColor="SevenBackground" transparent="1">
+		<!--<eLabel backgroundColor="SevenFontBackgroundLeft" font="Regular;13" foregroundColor="red" text="HddSetup" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
+		<widget source="menu" render="Listbox" font="Regular;22" itemHeight="50" position="70,136" size="708,488" scrollbarMode="showOnDemand" backgroundColor="SevenBackgroundLeft" transparent="1">
 			<convert type="TemplatedMultiContent">
 				{"template": [
 					MultiContentEntryPixmapAlphaTest(pos = (5, 0), size = (48, 48), png = 0),
@@ -105,14 +104,15 @@
 					"itemHeight": 50
 				}
 			</convert>
+		</widget>			
 		<panel name="template_menu_left_button" />
 		<panel name="template_colorkey_text_source" />
 	</screen>
 		<!-- HddPartitions -->
 	<screen backgroundColor="transparent" flags="wfNoBorder" name="HddPartitions" position="0,0" size="1280,720" title="Hard Drive Partitions">
-		<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="HddPartitions" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
-		<widget name="label_disk" position="70,80" font="Regular2; 26" size="708,30" halign="center" valign="center" backgroundColor="SevenFontBackground" transparent="1" foregroundColor="SevenFont2" />
-		<widget source="menu" render="Listbox" position="70,136" size="708,488" backgroundColor="SevenFontBackground" itemHeight="50" transparent="1">
+		<!--<eLabel backgroundColor="SevenFontBackgroundLeft" font="Regular;13" foregroundColor="red" text="HddPartitions" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
+		<widget name="label_disk" position="70,80" font="Regular2; 26" size="708,30" halign="center" valign="center" backgroundColor="SevenFontBackgroundLeft" transparent="1" foregroundColor="SevenFont2" />
+		<widget source="menu" render="Listbox" position="70,136" size="708,488" backgroundColor="SevenFontBackgroundLeft" itemHeight="50" transparent="1">
 			<convert type="TemplatedMultiContent">
 				{"template": [
 					MultiContentEntryPixmapAlphaTest(pos = (2, 0), size = (48, 48), png = 0),
@@ -129,15 +129,15 @@
 	</screen>
 		<!-- HddMounts -->
 	<screen backgroundColor="transparent" flags="wfNoBorder" name="HddMount" position="0,0" size="1280,720" title="Hard Drive Mount">
-		<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="HddMount" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
-		<widget name="menu" render="Listbox" position="70,80" size="708,540" backgroundColor="SevenFontBackground" itemHeight="50" transparent="1">
+		<!--<eLabel backgroundColor="SevenFontBackgroundLeft" font="Regular;13" foregroundColor="red" text="HddMount" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
+		<widget name="menu" render="Listbox" position="70,80" size="708,540" backgroundColor="SevenFontBackgroundLeft" font="Regular;22" itemHeight="50" transparent="1">
 			<convert type="TemplatedMultiContent">
 				{"template": [
 					MultiContentEntryPixmapAlphaTest(pos = (2, 0), size = (48, 48), png = 0),
 					MultiContentEntryText(pos = (65, 10), size = (330, 38), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_TOP, text = 1),
 					MultiContentEntryText(pos = (475, 10), size = (125, 38), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_TOP, text = 2),
 					],
-					"fonts": [gFont("Regular", 20)],
+					"fonts": [gFont("Regular", 22)],
 					"itemHeight": 50
 				}
 			</convert>
@@ -147,24 +147,24 @@
 	</screen>
 		<!-- HddInfo -->
 	<screen backgroundColor="transparent" flags="wfNoBorder" name="HddInfo" position="0,0" size="1280,720" title="Hard Drive Info">
-		<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="HddInfo" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
-		<widget name="config" position="95,237" size="585,30" itemHeight="26" font="Regular;22" backgroundColor="SevenFontBackground" transparent="1" />
-		<widget font="Regular;20" foregroundColor="SevenFont1" halign="left" name="model" position="95,320" size="580,25" valign="center" backgroundColor="SevenFontBackground" transparent="1" />
-		<widget font="Regular;20" foregroundColor="SevenFont1" halign="left" name="serial" position="95,350" size="580,25" valign="center" backgroundColor="SevenFontBackground" transparent="1" />
-		<widget font="Regular;20" foregroundColor="SevenFont1" halign="left" name="firmware" position="95,380" size="580,25" valign="center" backgroundColor="SevenFontBackground" transparent="1" />
-		<widget font="Regular;20" foregroundColor="SevenFont1" halign="left" name="cylinders" position="95,410" size="580,25" valign="center" backgroundColor="SevenFontBackground" transparent="1" />
-		<widget font="Regular;20" foregroundColor="SevenFont1" halign="left" name="heads" position="95,440" size="580,25" valign="center" backgroundColor="SevenFontBackground" transparent="1" />
-		<widget font="Regular;20" foregroundColor="SevenFont1" halign="left" name="sectors" position="95,470" size="580,25" valign="center" backgroundColor="SevenFontBackground" transparent="1" />
-		<widget font="Regular;20" foregroundColor="SevenFont1" halign="left" name="readDisk" position="95,500" size="580,25" valign="center" backgroundColor="SevenFontBackground" transparent="1" />
-		<widget font="Regular;20" foregroundColor="SevenFont1" halign="left" name="readCache" position="95,530" size="580,25" valign="center" backgroundColor="SevenFontBackground" transparent="1" />
-		<widget font="Regular;20" foregroundColor="SevenFont1" halign="left" name="temp" position="95,560" size="580,25" valign="center" backgroundColor="SevenFontBackground" transparent="1" />
+		<!--<eLabel backgroundColor="SevenFontBackgroundLeft" font="Regular;13" foregroundColor="red" text="HddInfo" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
+		<widget name="config" position="95,237" size="585,30" itemHeight="26" font="Regular;22" backgroundColor="SevenFontBackgroundLeft" transparent="1" />
+		<widget font="Regular;20" foregroundColor="SevenFont1" halign="left" name="model" position="95,320" size="580,25" valign="center" backgroundColor="SevenFontBackgroundLeft" transparent="1" />
+		<widget font="Regular;20" foregroundColor="SevenFont1" halign="left" name="serial" position="95,350" size="580,25" valign="center" backgroundColor="SevenFontBackgroundLeft" transparent="1" />
+		<widget font="Regular;20" foregroundColor="SevenFont1" halign="left" name="firmware" position="95,380" size="580,25" valign="center" backgroundColor="SevenFontBackgroundLeft" transparent="1" />
+		<widget font="Regular;20" foregroundColor="SevenFont1" halign="left" name="cylinders" position="95,410" size="580,25" valign="center" backgroundColor="SevenFontBackgroundLeft" transparent="1" />
+		<widget font="Regular;20" foregroundColor="SevenFont1" halign="left" name="heads" position="95,440" size="580,25" valign="center" backgroundColor="SevenFontBackgroundLeft" transparent="1" />
+		<widget font="Regular;20" foregroundColor="SevenFont1" halign="left" name="sectors" position="95,470" size="580,25" valign="center" backgroundColor="SevenFontBackgroundLeft" transparent="1" />
+		<widget font="Regular;20" foregroundColor="SevenFont1" halign="left" name="readDisk" position="95,500" size="580,25" valign="center" backgroundColor="SevenFontBackgroundLeft" transparent="1" />
+		<widget font="Regular;20" foregroundColor="SevenFont1" halign="left" name="readCache" position="95,530" size="580,25" valign="center" backgroundColor="SevenFontBackgroundLeft" transparent="1" />
+		<widget font="Regular;20" foregroundColor="SevenFont1" halign="left" name="temp" position="95,560" size="580,25" valign="center" backgroundColor="SevenFontBackgroundLeft" transparent="1" />
 		<panel name="template_menu_left_button" />
 		<panel name="template_colorkey_text_source" />
 	</screen>
 		<!-- HddFastRemove -->
 	<screen backgroundColor="transparent" flags="wfNoBorder" name="HddFastRemove" position="0,0" size="1280,720" title="Hard Drive Fast Umount">
-		<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="HddFastRemove" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
-		<widget name="menu" render="Listbox" position="70,80" size="708,540" itemHeight="50" backgroundColor="SevenFontBackground" transparent="1">
+		<!--<eLabel backgroundColor="SevenFontBackgroundLeft" font="Regular;13" foregroundColor="red" text="HddFastRemove" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
+		<widget name="menu" render="Listbox" position="70,80" size="708,540" itemHeight="50" backgroundColor="SevenFontBackgroundLeft" transparent="1">
 			<convert type="TemplatedMultiContent">
 				{"template": [
 					MultiContentEntryPixmapAlphaTest(pos = (2, 0), size = (48, 48), png = 0),
@@ -181,75 +181,75 @@
 	</screen>
 		<!-- HarddiskSelection -->
 	<screen backgroundColor="transparent" flags="wfNoBorder" name="HarddiskSelection" position="0,0" size="1280,720" title="Select HDD">
-		<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="HarddiskSelection" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
-		<widget itemHeight="30" name="hddlist" font="Regular;22" position="70,80" size="708,540" backgroundColor="SevenFontBackground" transparent="1" />
+		<!--<eLabel backgroundColor="SevenFontBackgroundLeft" font="Regular;13" foregroundColor="red" text="HarddiskSelection" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
+		<widget itemHeight="30" name="hddlist" font="Regular;22" position="70,80" size="708,540" backgroundColor="SevenFontBackgroundLeft" transparent="1" />
 		<panel name="template_menu_left" />
 	</screen>
 		<!-- HarddiskSetup  -->
 	<screen backgroundColor="transparent" flags="wfNoBorder" name="HarddiskSetup " position="0,0" size="1280,720" title="Harddisk">
-		<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="HarddiskSetup " position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
-		<widget font="Regular2;23" name="model" position="70,150" size="700,25" backgroundColor="SevenFontBackground" transparent="1" />
-		<widget font="Regular2;23" name="capacity" position="70,200" size="700,25" backgroundColor="SevenFontBackground" transparent="1" />
-		<widget font="Regular2;23" name="bus" position="70,250" size="700,25" backgroundColor="SevenFontBackground" transparent="1" />
-		<widget backgroundColor="SevenBackground" halign="left" valign="center" font="Regular2;20" name="initializetext" position="64,662" size="148,48" foregroundColor="SevenButtonText" transparent="1" zPosition="1" />
+		<!--<eLabel backgroundColor="SevenFontBackgroundLeft" font="Regular;13" foregroundColor="red" text="HarddiskSetup " position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
+		<widget font="Regular2;23" name="model" position="70,150" size="700,25" backgroundColor="SevenFontBackgroundLeft" transparent="1" />
+		<widget font="Regular2;23" name="capacity" position="70,200" size="700,25" backgroundColor="SevenFontBackgroundLeft" transparent="1" />
+		<widget font="Regular2;23" name="bus" position="70,250" size="700,25" backgroundColor="SevenFontBackgroundLeft" transparent="1" />
+		<widget backgroundColor="SevenBackgroundLeft" halign="left" valign="center" font="Regular2;20" name="initializetext" position="64,662" size="148,48" foregroundColor="SevenButtonText" transparent="1" zPosition="1" />
 		<panel name="template_colorkey_text" />
 		<panel name="template_menu_left_button" />
 	</screen>
 		<!-- HarddiskWait  -->
 	<screen backgroundColor="transparent" flags="wfNoBorder" name="HarddiskWait " position="0,0" size="1280,720" title="HarddiskWait ">
-		<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="HarddiskWait " position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
-		<widget name="wait" position="70,80" size="708,540" backgroundColor="SevenFontBackground" transparent="1" />
+		<!--<eLabel backgroundColor="SevenFontBackgroundLeft" font="Regular;13" foregroundColor="red" text="HarddiskWait " position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
+		<widget name="wait" position="70,80" size="708,540" backgroundColor="SevenFontBackgroundLeft" transparent="1" />
 		<panel name="template_menu_left" />
 	</screen>
 		<!-- DriverManagerFile -->
 	<screen flags="wfNoBorder" name="DriverManagerFile" position="0,0" size="1280,720" title="Select file to execute" transparent="0" backgroundColor="transparent">
-		<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="DriverManagerFile " position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
-		<widget backgroundColor="SevenBackground" font="Regular2;23" name="driverfile" position="70,74" size="708,28" transparent="1" foregroundColor="SevenFont2" />
-		<widget backgroundColor="SevenBackground" itemHeight="30" name="filelist" position="70,107" size="708,540" transparent="1" foregroundColor="SevenFont1" zPosition="3" />
+		<!--<eLabel backgroundColor="SevenFontBackgroundLeft" font="Regular;13" foregroundColor="red" text="DriverManagerFile " position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
+		<widget backgroundColor="SevenBackgroundLeft" font="Regular2;23" name="driverfile" position="70,74" size="708,28" transparent="1" foregroundColor="SevenFont2" />
+		<widget backgroundColor="SevenBackgroundLeft" itemHeight="30" name="filelist" position="70,107" size="708,540" transparent="1" foregroundColor="SevenFont1" zPosition="3" />
 		<panel name="template_colorkey_text_source" />
 		<panel name="template_menu_left_button" />
 	</screen>
 		<!-- LED_GigaSetup -->
 	<screen name="LED_GigaSetup" position="0,0" size="1280,720" title="LED Setup" backgroundColor="transparent">
-		<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="LED_GigaSetup" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
-		<widget name="config" position="70,80" size="708,540" backgroundColor="SevenFontBackground" transparent="1" />
+		<!--<eLabel backgroundColor="SevenFontBackgroundLeft" font="Regular;13" foregroundColor="red" text="LED_GigaSetup" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
+		<widget name="config" position="70,80" size="708,540" backgroundColor="SevenFontBackgroundLeft" transparent="1" />
 		<panel name="template_menu_left_button" />
 		<panel name="template_colorkey_text_source" />
 	</screen>
 		<!-- VFDSkinSelector -->
 	<screen name="VFDSkinSelector" position="0,0" size="1280,720" title="LCD Skin-Selector" backgroundColor="transparent">
-		<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="VFDSkinSelector" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
-		<widget name="lab1" position="70,111" size="250,26" zPosition="1" font="Regular2; 22" halign="left" transparent="1" backgroundColor="SevenFontBackground" foregroundColor="SevenFont2" />
-		<widget name="lab2" position="423,201" size="250,26" zPosition="1" font="Regular2; 22" halign="left" transparent="1" backgroundColor="SevenFontBackground" foregroundColor="SevenFont2" />
-		<widget name="SkinList" position="70,158" size="270,371" enableWrapAround="1" backgroundColor="SevenFontBackground" transparent="1" itemHeight="27" font="Regular;22" />
-		<widget name="Preview" position="422,261" size="280,210" zPosition="2" backgroundColor="SevenFontBackground" transparent="1" alphatest="on" itemHeight="27" font="Regular;22" />
-		<widget name="lab3" position="70,549" halign="center" size="700,26" zPosition="1" foregroundColor="SevenFont2" backgroundColor="SevenFontBackground" font="Regular2; 22" transparent="1" />
+		<!--<eLabel backgroundColor="SevenFontBackgroundLeft" font="Regular;13" foregroundColor="red" text="VFDSkinSelector" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
+		<widget name="lab1" position="70,111" size="250,26" zPosition="1" font="Regular2; 22" halign="left" transparent="1" backgroundColor="SevenFontBackgroundLeft" foregroundColor="SevenFont2" />
+		<widget name="lab2" position="423,201" size="250,26" zPosition="1" font="Regular2; 22" halign="left" transparent="1" backgroundColor="SevenFontBackgroundLeft" foregroundColor="SevenFont2" />
+		<widget name="SkinList" position="70,158" size="270,371" enableWrapAround="1" backgroundColor="SevenFontBackgroundLeft" transparent="1" itemHeight="27" font="Regular;22" />
+		<widget name="Preview" position="422,261" size="280,210" zPosition="2" backgroundColor="SevenFontBackgroundLeft" transparent="1" alphatest="on" itemHeight="27" font="Regular;22" />
+		<widget name="lab3" position="70,549" halign="center" size="700,26" zPosition="1" foregroundColor="SevenFont2" backgroundColor="SevenFontBackgroundLeft" font="Regular2; 22" transparent="1" />
 		<panel name="template_menu_left_button" />
 		<panel name="template_colorkey_text" />
 	</screen>
 		<!-- HFD Toolbox -->
 	<screen name="Fantastic" position="0,0" size="1280,720" title="HDF Toolbox" backgroundColor="transparent">
-		<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="Fantastic" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
-		<widget name="menu" position="70,100" size="510,469" itemHeight="30" font="Regular;22" backgroundColor="SevenFontBackground" transparent="1" />
+		<!--<eLabel backgroundColor="SevenFontBackgroundLeft" font="Regular;13" foregroundColor="red" text="Fantastic" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
+		<widget name="menu" position="70,100" size="510,469" itemHeight="30" font="Regular;22" backgroundColor="SevenFontBackgroundLeft" transparent="1" />
 		<ePixmap position="70,570" size="380,57" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/HDF-Toolbox/banner.png" zPosition="2" alphatest="on" />
 		<panel name="template_menu_left" />
 	</screen>
 		<!-- LogManager -->
 	<screen name="LogManager" position="0,0" size="1280,720" title="Log Manager" backgroundColor="transparent">
-		<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="LogManager" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
-		<widget name="list" position="70,80" size="708,540" font="Regular;14" foregroundColor="SevenFont1" backgroundColor="SevenFontBackground" transparent="1" />
+		<!--<eLabel backgroundColor="SevenFontBackgroundLeft" font="Regular;13" foregroundColor="red" text="LogManager" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
+		<widget name="list" position="70,80" size="708,540" font="Regular;14" foregroundColor="SevenFont1" backgroundColor="SevenFontBackgroundLeft" transparent="1" />
 		<panel name="template_menu_left_button" />
 		<panel name="template_colorkey_text" />
 	</screen>
 		<!-- DownloadMenu -->
 	<screen backgroundColor="transparent" flags="wfNoBorder" name="Hdf_Downloader" position="0,0" size="1280,720" title="Select your Download">
-		<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="Hdf_Downloader" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
-		<widget name="downloadmenu" position="68,115" size="400,315" itemHeight="26" font="Regular;22" backgroundColor="SevenFontBackground" transparent="1" />
-		<widget source="introduction" render="Label" position="12,438" size="560,30" zPosition="10" font="Regular;21" foregroundColor="SevenFont1" halign="center" valign="center" backgroundColor="SevenFontBackground" transparent="1" />
-		<widget source="size" render="Label" position="555,121" size="100,30" zPosition="10" font="Regular;15" foregroundColor="SevenFont1" halign="left" valign="top" backgroundColor="SevenFontBackground" transparent="1" />
-		<widget source="size2" render="Label" position="485,116" size="100,30" zPosition="10" font="Regular;21" foregroundColor="SevenFont1" halign="left" valign="top" backgroundColor="SevenFontBackground" transparent="1" />
-		<widget source="description" render="Label" position="485,210" size="330,150" zPosition="10" font="Regular;15" foregroundColor="SevenFont1" halign="left" valign="top" backgroundColor="SevenFontBackground" transparent="1" />
-		<widget source="description2" render="Label" position="485,168" size="150,30" zPosition="10" font="Regular;21" foregroundColor="SevenFont1" halign="left" valign="top" backgroundColor="SevenFontBackground" transparent="1" />
+		<!--<eLabel backgroundColor="SevenFontBackgroundLeft" font="Regular;13" foregroundColor="red" text="Hdf_Downloader" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
+		<widget name="downloadmenu" position="68,115" size="400,315" itemHeight="26" font="Regular;22" backgroundColor="SevenFontBackgroundLeft" transparent="1" />
+		<widget source="introduction" render="Label" position="12,438" size="560,30" zPosition="10" font="Regular;21" foregroundColor="SevenFont1" halign="center" valign="center" backgroundColor="SevenFontBackgroundLeft" transparent="1" />
+		<widget source="size" render="Label" position="555,121" size="100,30" zPosition="10" font="Regular;15" foregroundColor="SevenFont1" halign="left" valign="top" backgroundColor="SevenFontBackgroundLeft" transparent="1" />
+		<widget source="size2" render="Label" position="485,116" size="100,30" zPosition="10" font="Regular;21" foregroundColor="SevenFont1" halign="left" valign="top" backgroundColor="SevenFontBackgroundLeft" transparent="1" />
+		<widget source="description" render="Label" position="485,210" size="330,150" zPosition="10" font="Regular;15" foregroundColor="SevenFont1" halign="left" valign="top" backgroundColor="SevenFontBackgroundLeft" transparent="1" />
+		<widget source="description2" render="Label" position="485,168" size="150,30" zPosition="10" font="Regular;21" foregroundColor="SevenFont1" halign="left" valign="top" backgroundColor="SevenFontBackgroundLeft" transparent="1" />
 		<ePixmap name="1" position="1058,390" zPosition="1" size="35,25" pixmap="skin_default/buttons/key_1.png" transparent="1" alphatest="on" />
 		<widget name="key_1" position="853,385" zPosition="2" size="200,25" valign="center" halign="right" font="Regular;15" foregroundColor="SevenFont1" transparent="1" shadowColor="black" shadowOffset="-1,-1" />
 		<ePixmap name="2" position="1058,415" zPosition="1" size="35,25" pixmap="skin_default/buttons/key_2.png" transparent="1" alphatest="on" />
@@ -269,25 +269,25 @@
 	</screen>
 		<!-- Softcam Cardserver Manager -->
 	<screen backgroundColor="transparent" flags="wfNoBorder" name="ScSelection" position="0,0" size="1280,720" title="Softcam Cardserver Manager">
-		<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="ScSelection" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
-		<widget name="entries" position="68,160" size="505,310" itemHeight="26" font="Regular;22" enableWrapAround="1" backgroundColor="SevenFontBackground" transparent="1" />
-		<eLabel font="Regular;18" foregroundColor="SevenFont1" halign="left" valign="top" position="695,160" size="85,26" text="ECM:" zPosition="2" transparent="1" backgroundColor="SevenFontBackground" />
-		<widget source="session.CurrentService" render="Label" position="782,160" size="490,56" transparent="1" zPosition="2" font="Regular;18" foregroundColor="SevenFont1" valign="top" halign="left" noWrap="1" backgroundColor="SevenFontBackground">
+		<!--<eLabel backgroundColor="SevenFontBackgroundLeft" font="Regular;13" foregroundColor="red" text="ScSelection" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
+		<widget name="entries" position="68,160" size="505,310" itemHeight="26" font="Regular;22" enableWrapAround="1" backgroundColor="SevenFontBackgroundLeft" transparent="1" />
+		<eLabel font="Regular;18" foregroundColor="SevenFont1" halign="left" valign="top" position="695,160" size="85,26" text="ECM:" zPosition="2" transparent="1" backgroundColor="SevenFontBackgroundLeft" />
+		<widget source="session.CurrentService" render="Label" position="782,160" size="490,56" transparent="1" zPosition="2" font="Regular;18" foregroundColor="SevenFont1" valign="top" halign="left" noWrap="1" backgroundColor="SevenFontBackgroundLeft">
 			<convert type="CryptoInfo">VerboseInfo</convert>
 		</widget>
-		<eLabel font="Regular;18" foregroundColor="SevenFont1" halign="left" valign="top" position="695,220" size="85,26" text="Channel:" zPosition="2" transparent="1" backgroundColor="SevenFontBackground" />
-		<widget source="session.CurrentService" render="Label" position="782,220" size="480,26" transparent="1" zPosition="2" font="Regular;18" foregroundColor="SevenFont1" valign="top" halign="left" backgroundColor="SevenFontBackground">
+		<eLabel font="Regular;18" foregroundColor="SevenFont1" halign="left" valign="top" position="695,220" size="85,26" text="Channel:" zPosition="2" transparent="1" backgroundColor="SevenFontBackgroundLeft" />
+		<widget source="session.CurrentService" render="Label" position="782,220" size="480,26" transparent="1" zPosition="2" font="Regular;18" foregroundColor="SevenFont1" valign="top" halign="left" backgroundColor="SevenFontBackgroundLeft">
 			<convert type="ServiceName">All</convert>
 		</widget>
-		<widget source="session.CurrentService" render="Label" position="695,300" size="479,26" transparent="1" zPosition="2" font="Regular;18" foregroundColor="SevenFont1" valign="top" halign="left" noWrap="1" backgroundColor="SevenFontBackground">
+		<widget source="session.CurrentService" render="Label" position="695,300" size="479,26" transparent="1" zPosition="2" font="Regular;18" foregroundColor="SevenFont1" valign="top" halign="left" noWrap="1" backgroundColor="SevenFontBackgroundLeft">
 			<convert type="SevenHDExtraInfo">CryptoInfo</convert>
 		</widget>
-		<eLabel font="Regular;18" foregroundColor="SevenFont1" halign="left" valign="top" position="695,260" size="85,26" text="RES:" zPosition="2" transparent="1" backgroundColor="SevenFontBackground" />
-		<widget source="session.CurrentService" render="Label" zPosition="2" position="782,260" size="55,24" halign="left" valign="top" font="Regular;18" foregroundColor="SevenFont1" transparent="1" backgroundColor="SevenFontBackground">
+		<eLabel font="Regular;18" foregroundColor="SevenFont1" halign="left" valign="top" position="695,260" size="85,26" text="RES:" zPosition="2" transparent="1" backgroundColor="SevenFontBackgroundLeft" />
+		<widget source="session.CurrentService" render="Label" zPosition="2" position="782,260" size="55,24" halign="left" valign="top" font="Regular;18" foregroundColor="SevenFont1" transparent="1" backgroundColor="SevenFontBackgroundLeft">
 			<convert type="SevenHDServiceInfo">VideoWidth</convert>
 		</widget>
-		<eLabel text="x" zPosition="2" position="838,260" size="35,24" halign="center" valign="top" font="Regular;18" foregroundColor="SevenFont1" transparent="1" backgroundColor="SevenFontBackground" />
-		<widget source="session.CurrentService" render="Label" zPosition="2" position="874,260" size="55,24" halign="left" valign="top" font="Regular;18" foregroundColor="SevenFont1" transparent="1" backgroundColor="SevenFontBackground">
+		<eLabel text="x" zPosition="2" position="838,260" size="35,24" halign="center" valign="top" font="Regular;18" foregroundColor="SevenFont1" transparent="1" backgroundColor="SevenFontBackgroundLeft" />
+		<widget source="session.CurrentService" render="Label" zPosition="2" position="874,260" size="55,24" halign="left" valign="top" font="Regular;18" foregroundColor="SevenFont1" transparent="1" backgroundColor="SevenFontBackgroundLeft">
 			<convert type="SevenHDServiceInfo">VideoHeight</convert>
 		</widget>
 		<panel name="template_menu_full_button" />
@@ -295,49 +295,49 @@
 	</screen>
 		<!-- AdapterSetup -->
 	<screen backgroundColor="transparent" flags="wfNoBorder" name="AdapterSetup" position="0,0" size="1280,720" title="Network Setup">
-		<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="AdapterSetup" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
-		<widget backgroundColor="SevenFontBackground" font="Regular2;24" foregroundColor="SevenFont2" position="70,80" render="Label" size="495,30" source="Adapter" transparent="1" />
-		<widget backgroundColor="SevenFontBackground" enableWrapAround="1" itemHeight="30" name="config" position="70,130" size="708,249" transparent="1" />
-		<widget backgroundColor="SevenFontBackground" font="Regular2;24" foregroundColor="SevenFont2" halign="center" position="70,600" render="Label" size="708,30" source="introduction2" transparent="1" />
-		<eLabel backgroundColor="SevenLine" position="192,388" size="445,2" zPosition="2" />
-		<eLabel backgroundColor="SevenLine" position="192,553" size="445,2" zPosition="2" />
-		<eLabel backgroundColor="SevenLine" position="636,388" size="2,167" zPosition="2" />
-		<eLabel backgroundColor="SevenLine" position="192,388" size="2,165" zPosition="2" />
-		<widget source="IPtext" render="Label" position="200,400" size="210,24" font="Regular;20" halign="right" foregroundColor="SevenFont1" backgroundColor="SevenFontBackground" transparent="1" />
-		<widget source="Netmasktext" render="Label" position="200,430" size="210,24" font="Regular;20" halign="right" foregroundColor="SevenFont1" backgroundColor="SevenFontBackground" transparent="1" />
-		<widget source="Gatewaytext" render="Label" position="200,460" size="210,24" font="Regular;20" halign="right" foregroundColor="SevenFont1" backgroundColor="SevenFontBackground" transparent="1" />
-		<widget source="DNS1text" render="Label" position="200,490" size="210,24" font="Regular;20" halign="right" foregroundColor="SevenFont1" backgroundColor="SevenFontBackground" transparent="1" />
-		<widget source="DNS2text" render="Label" position="200,520" size="210,24" font="Regular;20" halign="right" foregroundColor="SevenFont1" backgroundColor="SevenFontBackground" transparent="1" />
-		<widget source="IP" render="Label" position="420,400" size="210,24" font="Regular;20" halign="left" backgroundColor="SevenFontBackground" transparent="1" />
-		<widget source="Mask" render="Label" position="420,430" size="210,24" font="Regular;20" halign="left" backgroundColor="SevenFontBackground" transparent="1" />
-		<widget source="Gateway" render="Label" position="420,460" size="210,24" font="Regular;20" halign="left" backgroundColor="SevenFontBackground" transparent="1" />
-		<widget source="DNS1" render="Label" position="420,490" size="210,24" font="Regular;20" halign="left" backgroundColor="SevenFontBackground" transparent="1" />
-		<widget source="DNS2" render="Label" position="420,520" size="210,24" font="Regular;20" halign="left" backgroundColor="SevenFontBackground" transparent="1" />
+		<!--<eLabel backgroundColor="SevenFontBackgroundLeft" font="Regular;13" foregroundColor="red" text="AdapterSetup" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
+		<widget backgroundColor="SevenFontBackgroundLeft" font="Regular2;24" foregroundColor="SevenFont2" position="70,80" render="Label" size="495,30" source="Adapter" transparent="1" />
+		<widget backgroundColor="SevenFontBackgroundLeft" enableWrapAround="1" itemHeight="30" name="config" position="70,130" size="708,249" transparent="1" />
+		<widget backgroundColor="SevenFontBackgroundLeft" font="Regular2;24" foregroundColor="SevenFont2" halign="center" position="70,600" render="Label" size="708,30" source="introduction2" transparent="1" />
+		<!--<eLabel backgroundColor="SevenLine" position="192,388" size="445,2" zPosition="108" />-->
+		<!--<eLabel backgroundColor="SevenLine" position="192,553" size="445,2" zPosition="108" />-->
+		<!--<eLabel backgroundColor="SevenLine" position="636,388" size="2,167" zPosition="108" />-->
+		<!--<eLabel backgroundColor="SevenLine" position="192,388" size="2,165" zPosition="108" />-->
+		<widget source="IPtext" render="Label" position="200,400" size="210,24" font="Regular;20" halign="right" foregroundColor="SevenFont1" backgroundColor="SevenFontBackgroundLeft" transparent="1" />
+		<widget source="Netmasktext" render="Label" position="200,430" size="210,24" font="Regular;20" halign="right" foregroundColor="SevenFont1" backgroundColor="SevenFontBackgroundLeft" transparent="1" />
+		<widget source="Gatewaytext" render="Label" position="200,460" size="210,24" font="Regular;20" halign="right" foregroundColor="SevenFont1" backgroundColor="SevenFontBackgroundLeft" transparent="1" />
+		<widget source="DNS1text" render="Label" position="200,490" size="210,24" font="Regular;20" halign="right" foregroundColor="SevenFont1" backgroundColor="SevenFontBackgroundLeft" transparent="1" />
+		<widget source="DNS2text" render="Label" position="200,520" size="210,24" font="Regular;20" halign="right" foregroundColor="SevenFont1" backgroundColor="SevenFontBackgroundLeft" transparent="1" />
+		<widget source="IP" render="Label" position="420,400" size="210,24" font="Regular;20" halign="left" backgroundColor="SevenFontBackgroundLeft" transparent="1" />
+		<widget source="Mask" render="Label" position="420,430" size="210,24" font="Regular;20" halign="left" backgroundColor="SevenFontBackgroundLeft" transparent="1" />
+		<widget source="Gateway" render="Label" position="420,460" size="210,24" font="Regular;20" halign="left" backgroundColor="SevenFontBackgroundLeft" transparent="1" />
+		<widget source="DNS1" render="Label" position="420,490" size="210,24" font="Regular;20" halign="left" backgroundColor="SevenFontBackgroundLeft" transparent="1" />
+		<widget source="DNS2" render="Label" position="420,520" size="210,24" font="Regular;20" halign="left" backgroundColor="SevenFontBackgroundLeft" transparent="1" />
 		<panel name="template_menu_left_button" />
 		<panel name="template_colorkey_text_source" />
 	</screen>
 		<!-- GraphMultiEPG -->
 	<screen backgroundColor="transparent" flags="wfNoBorder" name="GraphMultiEPG" position="0,0" size="1280,720" title="Electronic Program Guide">
-		<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="GraphMultiEPG" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
-		<widget backgroundColor="SevenFontBackground" font="Regular2; 28" position="70,90" render="Label" size="700,39" source="Event" transparent="1">
+		<!--<eLabel backgroundColor="SevenFontBackgroundLeft" font="Regular;13" foregroundColor="red" text="GraphMultiEPG" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
+		<widget backgroundColor="SevenFontBackgroundLeft" font="Regular2; 28" position="70,90" render="Label" size="700,39" source="Event" transparent="1">
 			<convert type="SevenHDEventName">Name</convert>
 		</widget>
-		<widget backgroundColor="SevenFontBackground" font="Regular; 18" halign="right" position="70,131" render="Label" size=" 65, 22" source="Event" transparent="1">
+		<widget backgroundColor="SevenFontBackgroundLeft" font="Regular; 18" halign="right" position="70,131" render="Label" size=" 65, 22" source="Event" transparent="1">
 			<convert type="SevenHDEventTime">StartTime</convert>
 			<convert type="SevenHDClockToText">Format:%H:%M </convert>
 		</widget>
-		<widget backgroundColor="SevenFontBackground" font="Regular; 18" position="1142,131" render="Label" size=" 80, 22" source="Event" transparent="1">
+		<widget backgroundColor="SevenFontBackgroundLeft" font="Regular; 18" position="1142,131" render="Label" size=" 80, 22" source="Event" transparent="1">
 			<convert type="SevenHDEventTime">EndTime</convert>
 			<convert type="SevenHDClockToText">Format:%H:%M</convert>
 		</widget>
 		<widget backgroundColor="SevenFont1" borderWidth="0" position="146,138" render="Progress" size="990,5" source="Event" transparent="1" zPosition="20" foregroundColor="SevenProgress" pixmap="SevenHD/progress/progress990.png">
 			<convert type="SevenHDEventTime">Progress</convert>
 		</widget>
-		<widget backgroundColor="SevenFontBackground" font="Regular2; 19" position="70,165" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,steptime=90,wrap=1,always=0,repeat=2,oneshot=1" size="1153,120" source="Event" valign="top" zPosition="0" foregroundColor="SevenFont2">
+		<widget backgroundColor="SevenFontBackgroundLeft" font="Regular2; 19" position="70,165" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,steptime=90,wrap=1,always=0,repeat=2,oneshot=1" size="1153,120" source="Event" valign="top" zPosition="0" foregroundColor="SevenFont2">
 			<convert type="SevenHDEventName">BothDescriptionsFiltered</convert>
 		</widget>
-		<eLabel backgroundColor="SevenLine" position="146,140" size="990,1" />
-		<widget name="timeline_text" position="0,305" selectionDisabled="1" size="1280,25" transparent="1" backgroundColor="SevenFontBackground" />
+		<eLabel backgroundColor="SevenProgressLinePlug" position="146,140" size="990,1" />
+		<widget name="timeline_text" position="0,305" selectionDisabled="1" size="1280,25" transparent="1" backgroundColor="SevenFontBackgroundLeft" />
 		<widget itemHeight="60" name="list" position="70,335" size="1160,295" transparent="1" ServiceForegroundColor="#00ffffff" ServiceForegroundColorNow="#00ffffff" ServiceBackgroundColor="#00000000" ServiceBackgroundColorNow="#00707070" EntryForegroundColor="#00ffffff" EntryForegroundColorSelected="#00ffffff" EntryBackgroundColor="#00000000" EntryBackgroundColorSelected="#004169e1" EntryBackgroundColorNow="#00707070" EntryBackgroundColorNowSelected="#004169e1" EntryForegroundColorNow="#00ffffff" EntryForegroundColorNowSelected="#00ffffff" ServiceBorderColor="#00ffffff" EntryBorderColor="#00ffffff" RecordForegroundColor="#00ffffff" RecordForegroundColorSelected="#00ffffff" RecordBackgroundColor="#00ff0000" RecordBackgroundColorSelected="#004169e1" ZapForegroundColor="#00ffffff" ZapBackgroundColor="#008b0000" ZapForegroundColorSelected="#00ffffff" ZapBackgroundColorSelected="#004169e1" />
 		<widget name="timeline0" foregroundColor="orange" position="0,398" size="1,230" zPosition="1" />
 		<widget name="timeline1" foregroundColor="orange" position="0,398" size="1,230" zPosition="1" />
@@ -351,24 +351,24 @@
 	</screen>
 		<!-- AutomaticVolumeAdjustmentConfigScreen -->
 	<screen name="AutomaticVolumeAdjustmentConfigScreen" position="0,0" size="1280,720" title="Automatic Volume Adjust" flags="wfNoBorder" backgroundColor="transparent">
-		<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="AutomaticVolumeAdjustmentConfigScreen" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
-		<widget name="config" position="70,80" size="708,450" font="Regular;21" foregroundColor="SevenFont1" backgroundColor="SevenFontBackground" transparent="1" />
+		<!--<eLabel backgroundColor="SevenFontBackgroundLeft" font="Regular;13" foregroundColor="red" text="AutomaticVolumeAdjustmentConfigScreen" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
+		<widget name="config" position="70,80" size="708,450" font="Regular;21" foregroundColor="SevenFont1" backgroundColor="SevenFontBackgroundLeft" transparent="1" />
 		<panel name="template_menu_left_button" />
 		<panel name="template_colorkey_text_source" />
 	</screen>
 		<!-- 3D AutoSwitch -->
 	<screen backgroundColor="transparent" flags="wfNoBorder" name="ThreeDSettings" position="0,0" size="1280,720" title="AutoSwitch 3D">
-		<widget name="config" position="70,80" size="708,540" foregroundColor="SevenFont1" backgroundColor="SevenFontBackground" transparent="1" zPosition="2" />
-		<widget font="Regular; 18" halign="left" valign="center" source="red" position="64,662" size="148,48" render="Label" backgroundColor="SevenFontBackground" foregroundColor="SevenButtonText" transparent="1" zPosition="1" />
-		<widget font="Regular; 18" halign="left" valign="center" source="green" position="264,662" size="148,48" render="Label" backgroundColor="SevenFontBackground" foregroundColor="SevenButtonText" transparent="1" zPosition="1" />
-		<widget font="Regular; 18" halign="left" valign="center" source="yellow" position="464,662" size="148,48" render="Label" backgroundColor="SevenFontBackground" foregroundColor="SevenButtonText" transparent="1" zPosition="1" />
-		<widget font="Regular; 18" halign="left" valign="center" source="blue" position="664,662" size="148,48" render="Label" backgroundColor="SevenFontBackground" foregroundColor="SevenButtonText" transparent="1" zPosition="1" />
+		<widget name="config" position="70,80" size="708,540" foregroundColor="SevenFont1" backgroundColor="SevenFontBackgroundLeft" transparent="1" zPosition="2" />
+		<widget font="Regular; 18" halign="left" valign="center" source="red" position="64,662" size="148,48" render="Label" backgroundColor="SevenFontBackgroundLeft" foregroundColor="SevenButtonText" transparent="1" zPosition="1" />
+		<widget font="Regular; 18" halign="left" valign="center" source="green" position="264,662" size="148,48" render="Label" backgroundColor="SevenFontBackgroundLeft" foregroundColor="SevenButtonText" transparent="1" zPosition="1" />
+		<widget font="Regular; 18" halign="left" valign="center" source="yellow" position="464,662" size="148,48" render="Label" backgroundColor="SevenFontBackgroundLeft" foregroundColor="SevenButtonText" transparent="1" zPosition="1" />
+		<widget font="Regular; 18" halign="left" valign="center" source="blue" position="664,662" size="148,48" render="Label" backgroundColor="SevenFontBackgroundLeft" foregroundColor="SevenButtonText" transparent="1" zPosition="1" />
 		<panel name="template_menu_left_button" />
 	</screen>
 		<!-- HistoryZapSelector -->
 	<screen name="HistoryZapSelector" position="0,0" size="1280,720" title="History Zap" flags="wfNoBorder" backgroundColor="transparent">
-		<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="HistoryZapSelector" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
-		<widget source="menu" render="Listbox" position="70,120" size="708,500" backgroundColor="SevenFontBackground" transparent="1">
+		<!--<eLabel backgroundColor="SevenFontBackgroundLeft" font="Regular;13" foregroundColor="red" text="HistoryZapSelector" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
+		<widget source="menu" render="Listbox" position="70,120" size="708,500" backgroundColor="SevenFontBackgroundLeft" transparent="1">
 			<convert type="TemplatedMultiContent">
 				{"template": [
 						MultiContentEntryText(pos = (60, 10), size = (10, 20), font = 2, flags = RT_HALIGN_CENTER | RT_VALIGN_CENTER, text = 1),
@@ -387,14 +387,14 @@
 	</screen>
 		<!-- HistoryZapBrowser -->
 	<screen name="ZapHistoryBrowser" position="0,0" size="1280,720" title="ZapHistoryBrowser" backgroundColor="transparent">
-		<widget name="list" position="70,80" size="708,540" scrollbarMode="showOnDemand" itemHeight="30" font="Regular;22" backgroundColor="SevenFontBackground" transparent="1" />
+		<widget name="list" position="70,80" size="708,540" scrollbarMode="showOnDemand" itemHeight="30" font="Regular;22" backgroundColor="SevenFontBackgroundLeft" transparent="1" />
 		<panel name="template_menu_left_button" />
 		<panel name="template_colorkey_text_source" />
 	</screen>
 		<!-- LanguageSelection -->
 	<screen backgroundColor="transparent" flags="wfNoBorder" name="LanguageSelection" position="0,0" size="1280,720" title="Language selection">
-		<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="LanguageSelection" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
-		<widget position="70,120" render="Listbox" backgroundColor="SevenFontBackground" size="708,420" source="languages" transparent="1" zPosition="3">
+		<!--<eLabel backgroundColor="SevenFontBackgroundLeft" font="Regular;13" foregroundColor="red" text="LanguageSelection" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
+		<widget position="70,120" render="Listbox" backgroundColor="SevenFontBackgroundLeft" size="708,420" source="languages" transparent="1" zPosition="3">
 			<convert type="TemplatedMultiContent">
 				{"template": [
 				MultiContentEntryText(pos = (130, 17), size = (550, 60), flags = RT_HALIGN_LEFT, text = 1), # index 1 is the language name,
@@ -409,25 +409,25 @@
 		<panel name="template_colorkey_text_kp" />
 	</screen>
 		<!-- DeviceBrowser -->
-	<screen backgroundColor="SevenBackground" flags="wfNoBorder" name="DeviceBrowser" position="0,0" size="1280,720" >
-		<widget source="message" render="Label" backgroundColor="SevenBackground" position="5,50" size="510,150" font="Regular;16" />
-		<widget name="filelist" backgroundColor="SevenBackground" enableWrapAround="1" position="0,80" itemHeight="30" font="Regular;22" size="708,540" scrollbarMode="showOnDemand" transparent="1" />
+	<screen backgroundColor="SevenBackgroundLeft" flags="wfNoBorder" name="DeviceBrowser" position="0,0" size="1280,720" >
+		<widget source="message" render="Label" backgroundColor="SevenBackgroundLeft" position="5,50" size="510,150" font="Regular;16" />
+		<widget name="filelist" backgroundColor="SevenBackgroundLeft" enableWrapAround="1" position="0,80" itemHeight="30" font="Regular;22" size="708,540" scrollbarMode="showOnDemand" transparent="1" />
 		<panel name="template_colorkey_text_source" />
 		<panel name="template_menu_left_button" />
 	</screen>
 		<!-- PluginBrowser -->
 	<screen backgroundColor="transparent" flags="wfNoBorder" name="PluginBrowser" position="0,0" size="1280,720" title="Plugin browser">
-		<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="PluginBrowser" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
-		<widget backgroundColor="SevenFontBackground" enableWrapAround="1" name="list" font="Regular;18" position="70,80" size="708,550" transparent="1" />
-		<eLabel backgroundColor="SevenFontBackground" font="Regular;20" foregroundColor="SevenButtonText" halign="left" valign="center" text="Entfernen" position="64,662" size="148,48" transparent="1" zPosition="1" />
-		<eLabel backgroundColor="SevenFontBackground" font="Regular;20" foregroundColor="SevenButtonText" halign="left" valign="center" text="Installieren" position="264,662" size="148,48" transparent="1" zPosition="1" />
-		<eLabel backgroundColor="SevenFontBackground" font="Regular;20" foregroundColor="SevenButtonText" halign="left" valign="center" text="Sperren" position="664,662" size="148,48" transparent="1" zPosition="1" />
-		<panel name="template_title_main_buttons_nologo" />
+		<!--<eLabel backgroundColor="SevenFontBackgroundLeft" font="Regular;13" foregroundColor="red" text="PluginBrowser" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
+		<widget backgroundColor="SevenFontBackgroundLeft" enableWrapAround="1" name="list" font="Regular;18" position="70,80" size="708,550" transparent="1" />
+		<eLabel backgroundColor="SevenFontBackgroundLeft" font="Regular;20" foregroundColor="SevenButtonText" halign="left" valign="center" text="Entfernen" position="64,662" size="148,48" transparent="1" zPosition="1" />
+		<eLabel backgroundColor="SevenFontBackgroundLeft" font="Regular;20" foregroundColor="SevenButtonText" halign="left" valign="center" text="Installieren" position="264,662" size="148,48" transparent="1" zPosition="1" />
+		<eLabel backgroundColor="SevenFontBackgroundLeft" font="Regular;20" foregroundColor="SevenButtonText" halign="left" valign="center" text="Sperren" position="664,662" size="148,48" transparent="1" zPosition="1" />
+		<panel name="template_title_main_button_nologo" />
 	</screen>
 		<!-- ShowUpdatePackages -->
 	<screen backgroundColor="transparent" flags="wfNoBorder" name="ShowUpdatePackages" position="0,0" size="1280,720" title="New Packages">
-		<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="ShowUpdatePackages" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
-		<widget source="list" render="Listbox" position="70,90" size="708,520" backgroundColor="SevenFontBackground" itemHeight="50" alphatest="blend" transparent="1">
+		<!--<eLabel backgroundColor="SevenFontBackgroundLeft" font="Regular;13" foregroundColor="red" text="ShowUpdatePackages" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
+		<widget source="list" render="Listbox" position="70,90" size="708,520" backgroundColor="SevenFontBackgroundLeft" itemHeight="50" alphatest="blend" transparent="1">
 			<convert type="TemplatedMultiContent">
 			{"template": [
 					MultiContentEntryText(pos = (6, 2), size = (540, 28), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 0 is the name
@@ -442,5 +442,22 @@
 		</widget>
 		<panel name="template_menu_left_button" />
 		<panel name="template_colorkey_text_source" />
+	</screen>
+		<!-- ExtraMessageBox -->
+	<screen backgroundColor="transparent" flags="wfNoBorder" name="ExtraMessageBox" position="0,0" size="1280,720" title=" ">
+		<!--<eLabel backgroundColor="SevenFontBackgroundLeft" font="Regular;13" foregroundColor="red" text="ExtraMessageBox" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
+		<widget name="message" backgroundColor="SevenBackgroundLeft" flags="wfNoBorder" position="70,80" size="708,30" foregroundColor="SevenFont2" font="Regular;22" />
+		<widget backgroundColor="SevenBackgroundLeft" source="menu" render="Listbox" position="70,120" size="708,480" scrollbarMode="showOnDemand">
+			<convert type="TemplatedMultiContent">
+				{"template": [
+					MultiContentEntryPixmapAlphaTest(pos = (5, 0), size = (48, 48), png = 0),
+					MultiContentEntryText(pos = (65, 10), size = (643, 38), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_TOP, text = 1),
+					],
+					"fonts": [gFont("Regular", 22)],
+					"itemHeight": 48
+				}
+			</convert>
+		</widget>
+		<panel name="template_menu_left" />
 	</screen>
 		<!-- main-custom-openhdf */ -->

@@ -345,70 +345,148 @@ class SevenHD(Screen):
                 else:
                    self.skinSearchAndReplace.append(['<font filename="SevenHD/fonts/NotoSans-Bold.ttf" name="Regular2" scale="95" />', '<font filename="SevenHD/fonts/NotoSans-Bold.ttf" name="Regular2" scale="%s" />' % str(self.FontStyleHeight_2)])
                       
-                self.Background = config.plugins.SevenHD.Background.value
-                if self.Background.startswith('back'):
+                self.BackgroundLeft = config.plugins.SevenHD.BackgroundLeft.value
+                if self.BackgroundLeft.startswith('back'):
                    self.skinSearchAndReplace.append(["SevenHD/back/menumain.png","SevenHD/back/menumain_1.png"])
+                   self.skinSearchAndReplace.append(["SevenHD/back/menuplayer.png","SevenHD/back/menuplayer_1.png"])
+                   self.skinSearchAndReplace.append(["SevenHD/back/menuplayersmall.png","SevenHD/back/menuplayersmall_1.png"])
+                   self.skinSearchAndReplace.append(["SevenHD/back/menuquick.png","SevenHD/back/menuquick_1.png"])
+                   self.skinSearchAndReplace.append(["SevenHD/back/menusmall.png","SevenHD/back/menusmall_1.png"])
+                   if self.BackgroundLeft.startswith('back_gradient'):
+                      self.skinSearchAndReplace.append(['name="SevenBackgroundLeft" value="#00000000"', 'name="SevenBackgroundLeft" value="#%s%s"' % (config.plugins.SevenHD.BackgroundLeftColorTrans.value, config.plugins.SevenHD.GradientMenuTop.value[2:8])])
+                      self.skinSearchAndReplace.append(['name="SevenFontBackgroundLeft" value="#00000000"', 'name="SevenFontBackgroundLeft" value="#%s%s"' % (config.plugins.SevenHD.BackgroundLeftColorTrans.value, config.plugins.SevenHD.GradientMenuTop.value[2:8])])
                 else:  
-                   self.skinSearchAndReplace.append(['name="SevenBackground" value="#00000000"', 'name="SevenBackground" value="#%s%s"' % (config.plugins.SevenHD.BackgroundColorTrans.value, self.Background[2:8])])
-                   self.skinSearchAndReplace.append(['name="SevenFontBackground" value="#00000000"', 'name="SevenFontBackground" value="#%s%s"' % (config.plugins.SevenHD.BackgroundColorTrans.value, self.Background[2:8])])
+                   self.skinSearchAndReplace.append(['name="SevenBackgroundLeft" value="#00000000"', 'name="SevenBackgroundLeft" value="#%s%s"' % (config.plugins.SevenHD.BackgroundLeftColorTrans.value, self.BackgroundLeft[2:8])])
+                   self.skinSearchAndReplace.append(['name="SevenFontBackgroundLeft" value="#00000000"', 'name="SevenFontBackgroundLeft" value="#%s%s"' % (config.plugins.SevenHD.BackgroundLeftColorTrans.value, self.BackgroundLeft[2:8])])
                    self.skinSearchAndReplace.append(['pixmap="SevenHD/back/menumain.png"',""])
-                
-                self.BackgroundIB1 = config.plugins.SevenHD.BackgroundIB1.value
-                if self.BackgroundIB1.startswith('back'):
-                   self.skinSearchAndReplace.append(["SevenHD/back/ibone.png","SevenHD/back/ibone_1.png"])
-                else:
-                   self.skinSearchAndReplace.append(['name="SevenBackgroundIB1" value="#00000000"', 'name="SevenBackgroundIB1" value="#%s%s"' % (config.plugins.SevenHD.IB1ColorTrans.value, self.BackgroundIB1[2:8])])
-                   self.skinSearchAndReplace.append(['name="SevenFontBackgroundIB1" value="#00000000"', 'name="SevenFontBackgroundIB1" value="#%s%s"' % (config.plugins.SevenHD.BackgroundColorTrans.value, self.BackgroundIB1[2:8])])
-                   self.skinSearchAndReplace.append(['pixmap="SevenHD/back/ibone.png"',""])
-                
-                self.BackgroundIB2 = config.plugins.SevenHD.BackgroundIB2.value
-                if self.BackgroundIB2.startswith('back'):
-                   self.skinSearchAndReplace.append(["SevenHD/back/ibtwo.png","SevenHD/back/ibtwo_1.png"])
-                else:
-                   self.skinSearchAndReplace.append(['name="SevenBackgroundIB2" value="#00000000"', 'name="SevenBackgroundIB2" value="#%s%s"' % (config.plugins.SevenHD.IB2ColorTrans.value, self.BackgroundIB2[2:8])])
-                   self.skinSearchAndReplace.append(['name="SevenFontBackgroundIB2" value="#00000000"', 'name="SevenFontBackgroundIB2" value="#%s%s"' % (config.plugins.SevenHD.BackgroundColorTrans.value, self.BackgroundIB2[2:8])])
-                   self.skinSearchAndReplace.append(['pixmap="SevenHD/back/ibtwo.png"',""])
-                
-                self.ChannelBack1 = config.plugins.SevenHD.ChannelBack1.value
-                if self.ChannelBack1.startswith('back'):
-                   self.skinSearchAndReplace.append(["SevenHD/back/csleft.png","SevenHD/back/csleft_1.png"])
-                else:
-                   self.skinSearchAndReplace.append(['name="SevenBackCS" value="#00000000"', 'name="SevenBackCS" value="#%s%s"' % (config.plugins.SevenHD.CSLeftColorTrans.value, self.ChannelBack1[2:8])])
-                   self.skinSearchAndReplace.append(['name="SevenFontBackCS" value="#00000000"', 'name="SevenFontBackCS" value="#%s%s"' % (config.plugins.SevenHD.BackgroundColorTrans.value, self.ChannelBack1[2:8])])
-                   self.skinSearchAndReplace.append(['pixmap="SevenHD/back/csleft.png"',""])
-                
-                self.ChannelBack2 = config.plugins.SevenHD.ChannelBack2.value
-                if self.ChannelBack2.startswith('back'):
-                   self.skinSearchAndReplace.append(["SevenHD/back/csright.png","SevenHD/back/csright_1.png"])
-                else:
-                   self.skinSearchAndReplace.append(['name="SevenBackRightCS" value="#00000000"', 'name="SevenBackRightCS" value="#%s%s"' % (config.plugins.SevenHD.CSRightColorTrans.value, self.ChannelBack2[2:8])])
-                   self.skinSearchAndReplace.append(['name="SevenFontBackRightCS" value="#00000000"', 'name="SevenFontBackRightCS" value="#%s%s"' % (config.plugins.SevenHD.BackgroundColorTrans.value, self.ChannelBack2[2:8])])
-                   self.skinSearchAndReplace.append(['pixmap="SevenHD/back/csright.png"',""])
-                
-                self.ChannelBack3 = config.plugins.SevenHD.ChannelBack3.value
-                if self.ChannelBack3.startswith('back'):
-                   self.skinSearchAndReplace.append(["SevenHD/back/csmiddle.png","SevenHD/back/csmiddle_1.png"])
-                else:
-                   self.skinSearchAndReplace.append(['name="SevenBackMiddleCS" value="#00000000"', 'name="SevenBackMiddleCS" value="#%s%s"' % (config.plugins.SevenHD.CSMiddleColorTrans.value, self.ChannelBack3[2:8])])
-                   self.skinSearchAndReplace.append(['name="SevenFontBackMiddleCS" value="#00000000"', 'name="SevenFontBackMiddleCS" value="#%s%s"' % (config.plugins.SevenHD.BackgroundColorTrans.value, self.ChannelBack3[2:8])])
-                   self.skinSearchAndReplace.append(['pixmap="SevenHD/back/csmiddle.png"',""])
+                   self.skinSearchAndReplace.append(['pixmap="SevenHD/back/menuplayer.png"',""])
+                   self.skinSearchAndReplace.append(['pixmap="SevenHD/back/menuplayersmall.png"',""])
+                   self.skinSearchAndReplace.append(['pixmap="SevenHD/back/menuquick.png"',""])
+                   self.skinSearchAndReplace.append(['pixmap="SevenHD/back/menusmall.png"',""])
                 
                 self.BackgroundRight = config.plugins.SevenHD.BackgroundRight.value
                 if self.BackgroundRight.startswith('back'):
                    self.skinSearchAndReplace.append(["SevenHD/back/menuright.png","SevenHD/back/menuright_1.png"])
+                   self.skinSearchAndReplace.append(["SevenHD/back/menutop.png","SevenHD/back/menutop_1.png"])
+                   self.skinSearchAndReplace.append(["SevenHD/back/menurightsmall.png","SevenHD/back/menurightsmall_1.png"])
+                   if self.BackgroundRight.startswith('back_gradient'):
+                      self.skinSearchAndReplace.append(['name="SevenBackgroundRight" value="#00000000"', 'name="SevenBackgroundRight" value="#%s%s"' % (config.plugins.SevenHD.BackgroundRightColorTrans.value, config.plugins.SevenHD.GradientMenuRightTop.value[2:8])])
+                      self.skinSearchAndReplace.append(['name="SevenFontBackgroundRight" value="#00000000"', 'name="SevenFontBackgroundRight" value="#%s%s"' % (config.plugins.SevenHD.BackgroundRightColorTrans.value, config.plugins.SevenHD.GradientMenuRightTop.value[2:8])])
                 else:
                    self.skinSearchAndReplace.append(['name="SevenBackgroundRight" value="#00000000"', 'name="SevenBackgroundRight" value="#%s%s"' % (config.plugins.SevenHD.BackgroundRightColorTrans.value, self.BackgroundRight[2:8])])
-                   self.skinSearchAndReplace.append(['name="SevenFontBackgroundRight" value="#00000000"', 'name="SevenFontBackgroundRight" value="#%s%s"' % (config.plugins.SevenHD.BackgroundColorTrans.value, self.BackgroundRight[2:8])])
+                   self.skinSearchAndReplace.append(['name="SevenFontBackgroundRight" value="#00000000"', 'name="SevenFontBackgroundRight" value="#%s%s"' % (config.plugins.SevenHD.BackgroundRightColorTrans.value, self.BackgroundRight[2:8])])
                    self.skinSearchAndReplace.append(['pixmap="SevenHD/back/menuright.png"',""])
+                   self.skinSearchAndReplace.append(['pixmap="SevenHD/back/menutop.png"',""])
+                   self.skinSearchAndReplace.append(['pixmap="SevenHD/back/menurightsmall.png"',""])
                 
+                self.BackgroundIB1 = config.plugins.SevenHD.BackgroundIB1.value
+                if self.BackgroundIB1.startswith('back'):
+                   self.skinSearchAndReplace.append(["SevenHD/back/ibone.png","SevenHD/back/ibone_1.png"])
+                   self.skinSearchAndReplace.append(["SevenHD/back/sysinfo.png","SevenHD/back/sysinfo_1.png"])
+                   self.skinSearchAndReplace.append(["SevenHD/back/ibtop.png","SevenHD/back/ibtop_1.png"])
+                   self.skinSearchAndReplace.append(["SevenHD/back/sibleft.png","SevenHD/back/sibleft_1.png"])
+                   self.skinSearchAndReplace.append(["SevenHD/back/weatherbig.png","SevenHD/back/weatherbig_1.png"])
+                   self.skinSearchAndReplace.append(["SevenHD/back/sibleftmetrix.png","SevenHD/back/sibleftmetrix_1.png"])
+                   self.skinSearchAndReplace.append(["SevenHD/back/sibleftdouble.png","SevenHD/back/sibleftdouble_1.png"])
+                   if self.BackgroundIB1.startswith('back_gradient'):
+                      self.skinSearchAndReplace.append(['name="SevenBackgroundIB1" value="#00000000"', 'name="SevenBackgroundIB1" value="#%s%s"' % (config.plugins.SevenHD.IB1ColorTrans.value, config.plugins.SevenHD.GradientIB1Top.value[2:8])])
+                      self.skinSearchAndReplace.append(['name="SevenFontBackgroundIB1" value="#00000000"', 'name="SevenFontBackgroundIB1" value="#%s%s"' % (config.plugins.SevenHD.IB1ColorTrans.value, config.plugins.SevenHD.GradientIB1Top.value[2:8])])
+                else:
+                   self.skinSearchAndReplace.append(['name="SevenBackgroundIB1" value="#00000000"', 'name="SevenBackgroundIB1" value="#%s%s"' % (config.plugins.SevenHD.IB1ColorTrans.value, self.BackgroundIB1[2:8])])
+                   self.skinSearchAndReplace.append(['name="SevenFontBackgroundIB1" value="#00000000"', 'name="SevenFontBackgroundIB1" value="#%s%s"' % (config.plugins.SevenHD.IB1ColorTrans.value, self.BackgroundIB1[2:8])])
+                   self.skinSearchAndReplace.append(['pixmap="SevenHD/back/ibone.png"',""])
+                   self.skinSearchAndReplace.append(['pixmap="SevenHD/back/sysinfo.png"',""])
+                   self.skinSearchAndReplace.append(['pixmap="SevenHD/back/ibtop.png"',""]) 
+                   self.skinSearchAndReplace.append(['pixmap="SevenHD/back/sibleft.png"',""])
+                   self.skinSearchAndReplace.append(['pixmap="SevenHD/back/weatherbig.png"',""])
+                   self.skinSearchAndReplace.append(['pixmap="SevenHD/back/sibleftmetrix.png"',""])
+                   self.skinSearchAndReplace.append(['pixmap="SevenHD/back/sibleftdouble.png"',""])
+                
+                self.BackgroundIB2 = config.plugins.SevenHD.BackgroundIB2.value
+                if self.BackgroundIB2.startswith('back'):
+                   self.skinSearchAndReplace.append(["SevenHD/back/sibtop.png","SevenHD/back/sibtop_1.png"])
+                   self.skinSearchAndReplace.append(["SevenHD/back/sibtopbig.png","SevenHD/back/sibtopbig_1.png"])
+                   self.skinSearchAndReplace.append(["SevenHD/back/sibright.png","SevenHD/back/sibright_1.png"])
+                   self.skinSearchAndReplace.append(["SevenHD/back/sibrightmetrix.png","SevenHD/back/sibrightmetrix_1.png"])
+                   self.skinSearchAndReplace.append(["SevenHD/back/sibrightdouble.png","SevenHD/back/sibrightdouble_1.png"])
+                   if self.BackgroundIB2.startswith('back_gradient'):
+                      self.skinSearchAndReplace.append(['name="SevenBackgroundIB2" value="#00000000"', 'name="SevenBackgroundIB2" value="#%s%s"' % (config.plugins.SevenHD.IB2ColorTrans.value, config.plugins.SevenHD.GradientIB2Top.value[2:8])])
+                      self.skinSearchAndReplace.append(['name="SevenFontBackgroundIB2" value="#00000000"', 'name="SevenFontBackgroundIB2" value="#%s%s"' % (config.plugins.SevenHD.IB2ColorTrans.value, config.plugins.SevenHD.GradientIB2Top.value[2:8])])
+                else:
+                   self.skinSearchAndReplace.append(['name="SevenBackgroundIB2" value="#00000000"', 'name="SevenBackgroundIB2" value="#%s%s"' % (config.plugins.SevenHD.IB2ColorTrans.value, self.BackgroundIB2[2:8])])
+                   self.skinSearchAndReplace.append(['name="SevenFontBackgroundIB2" value="#00000000"', 'name="SevenFontBackgroundIB2" value="#%s%s"' % (config.plugins.SevenHD.IB2ColorTrans.value, self.BackgroundIB2[2:8])])
+                   self.skinSearchAndReplace.append(['pixmap="SevenHD/back/sibtop.png"',""])
+                   self.skinSearchAndReplace.append(['pixmap="SevenHD/back/sibtopbig.png"',""])
+                   self.skinSearchAndReplace.append(['pixmap="SevenHD/back/sibright.png"',""])
+                   self.skinSearchAndReplace.append(['pixmap="SevenHD/back/sibrightmetric.png"',""])
+                   self.skinSearchAndReplace.append(['pixmap="SevenHD/back/sibrightdouble.png"',""])
+                
+                self.ChannelBack1 = config.plugins.SevenHD.ChannelBack1.value
+                if self.ChannelBack1.startswith('back'):
+                   self.skinSearchAndReplace.append(["SevenHD/back/csleft.png","SevenHD/back/csleft_1.png"])
+                   self.skinSearchAndReplace.append(["SevenHD/back/cssmall.png","SevenHD/back/cssmall_1.png"])
+                   if self.ChannelBack1.startswith('back_gradient'):
+                      self.skinSearchAndReplace.append(['name="SevenBackCS" value="#00000000"', 'name="SevenBackCS" value="#%s%s"' % (config.plugins.SevenHD.CSLeftColorTrans.value, config.plugins.SevenHD.GradientCSLeftTop.value[2:8])])
+                      self.skinSearchAndReplace.append(['name="SevenFontBackCS" value="#00000000"', 'name="SevenFontBackCS" value="#%s%s"' % (config.plugins.SevenHD.CSLeftColorTrans.value, config.plugins.SevenHD.GradientCSLeftTop.value[2:8])])
+                else:
+                   self.skinSearchAndReplace.append(['name="SevenBackCS" value="#00000000"', 'name="SevenBackCS" value="#%s%s"' % (config.plugins.SevenHD.CSLeftColorTrans.value, self.ChannelBack1[2:8])])
+                   self.skinSearchAndReplace.append(['name="SevenFontBackCS" value="#00000000"', 'name="SevenFontBackCS" value="#%s%s"' % (config.plugins.SevenHD.CSLeftColorTrans.value, self.ChannelBack1[2:8])])
+                   self.skinSearchAndReplace.append(['pixmap="SevenHD/back/csleft.png"',""])
+                   self.skinSearchAndReplace.append(['pixmap="SevenHD/back/cssmall.png"',""])
+                
+                self.ChannelBack2 = config.plugins.SevenHD.ChannelBack2.value
+                if self.ChannelBack2.startswith('back'):
+                   self.skinSearchAndReplace.append(["SevenHD/back/csright.png","SevenHD/back/csright_1.png"])
+                   self.skinSearchAndReplace.append(["SevenHD/back/cstop.png","SevenHD/back/cstop_1.png"])
+                   self.skinSearchAndReplace.append(["SevenHD/back/csrightsmall.png","SevenHD/back/csrightsmall_1.png"])
+                   if self.ChannelBack2.startswith('back_gradient'):
+                      self.skinSearchAndReplace.append(['name="SevenBackRightCS" value="#00000000"', 'name="SevenBackRightCS" value="#%s%s"' % (config.plugins.SevenHD.CSRightColorTrans.value, config.plugins.SevenHD.GradientCSRightTop.value[2:8])])
+                      self.skinSearchAndReplace.append(['name="SevenFontBackRightCS" value="#00000000"', 'name="SevenFontBackRightCS" value="#%s%s"' % (config.plugins.SevenHD.CSRightColorTrans.value, config.plugins.SevenHD.GradientCSRightTop.value[2:8])])
+                else:
+                   self.skinSearchAndReplace.append(['name="SevenBackRightCS" value="#00000000"', 'name="SevenBackRightCS" value="#%s%s"' % (config.plugins.SevenHD.CSRightColorTrans.value, self.ChannelBack2[2:8])])
+                   self.skinSearchAndReplace.append(['name="SevenFontBackRightCS" value="#00000000"', 'name="SevenFontBackRightCS" value="#%s%s"' % (config.plugins.SevenHD.CSRightColorTrans.value, self.ChannelBack2[2:8])])
+                   self.skinSearchAndReplace.append(['pixmap="SevenHD/back/csright.png"',""])
+                   self.skinSearchAndReplace.append(['pixmap="SevenHD/back/cstop.png"',""])
+                   self.skinSearchAndReplace.append(['pixmap="SevenHD/back/csrightsmall.png"',""])
+                
+                self.ChannelBack3 = config.plugins.SevenHD.ChannelBack3.value
+                if self.ChannelBack3.startswith('back'):
+                   self.skinSearchAndReplace.append(["SevenHD/back/csmiddle.png","SevenHD/back/csmiddle_1.png"])
+                   if self.ChannelBack3.startswith('back_gradient'):
+                      self.skinSearchAndReplace.append(['name="SevenBackMiddleCS" value="#00000000"', 'name="SevenBackMiddleCS" value="#%s%s"' % (config.plugins.SevenHD.CSMiddleColorTrans.value, config.plugins.SevenHD.GradientCSMiddleTop.value[2:8])])
+                      self.skinSearchAndReplace.append(['name="SevenFontBackMiddleCS" value="#00000000"', 'name="SevenFontBackMiddleCS" value="#%s%s"' % (config.plugins.SevenHD.CSMiddleColorTrans.value, config.plugins.SevenHD.GradientCSMiddleTop.value[2:8])])
+                else:
+                   self.skinSearchAndReplace.append(['name="SevenBackMiddleCS" value="#00000000"', 'name="SevenBackMiddleCS" value="#%s%s"' % (config.plugins.SevenHD.CSMiddleColorTrans.value, self.ChannelBack3[2:8])])
+                   self.skinSearchAndReplace.append(['name="SevenFontBackMiddleCS" value="#00000000"', 'name="SevenFontBackMiddleCS" value="#%s%s"' % (config.plugins.SevenHD.CSMiddleColorTrans.value, self.ChannelBack3[2:8])])
+                   self.skinSearchAndReplace.append(['pixmap="SevenHD/back/csmiddle.png"',""])
+                
+		self.skinSearchAndReplace.append(['name="SevenBackground" value="#00000000"', 'name="SevenBackground" value="#%s%s"' % (config.plugins.SevenHD.BackgroundColorTrans.value, config.plugins.SevenHD.Background.value[2:8])])
+		self.skinSearchAndReplace.append(['name="SevenFontBackground" value="#00000000"', 'name="SevenFontBackground" value="#%s%s"' % (config.plugins.SevenHD.BackgroundColorTrans.value, config.plugins.SevenHD.Background.value[2:8])])
+
 		self.skinSearchAndReplace.append(["Seven_Selection", config.plugins.SevenHD.SelectionBackground.value])
 		self.skinSearchAndReplace.append(["SevenFont_1", config.plugins.SevenHD.Font1.value])
 		self.skinSearchAndReplace.append(["SevenFont_2", config.plugins.SevenHD.Font2.value])
 		self.skinSearchAndReplace.append(["SevenSel_Font", config.plugins.SevenHD.SelectionFont.value])
 		self.skinSearchAndReplace.append(["SevenButton_Text", config.plugins.SevenHD.ButtonText.value])
+		if not config.plugins.SevenHD.Border.value == "ff000000":
+			self.skinSearchAndReplace.append(['<!--<eLabel backgroundColor="SevenBorder"', '<eLabel backgroundColor="SevenBorder"'])
+			self.skinSearchAndReplace.append(['zPosition="101" />-->', 'zPosition="101" />'])
+		else:
+			self.skinSearchAndReplace.append(['borderWidth="2" borderColor="SevenBorder"', ' '])
+			self.skinSearchAndReplace.append(['borderColor="SevenBorder" borderWidth="2"', ' '])
+			self.skinSearchAndReplace.append(['borderColor="SevenBorder" borderWidth="1"', ' '])
 		self.skinSearchAndReplace.append(["Seven_Border", config.plugins.SevenHD.Border.value])
+		if not config.plugins.SevenHD.Line.value == "ff000000":
+			self.skinSearchAndReplace.append(['<!--<eLabel backgroundColor="SevenLine"', '<eLabel backgroundColor="SevenLine"'])
+			self.skinSearchAndReplace.append(['zPosition="108" />-->', 'zPosition="108" />'])
 		self.skinSearchAndReplace.append(["Seven_Line", config.plugins.SevenHD.Line.value])
+		if not config.plugins.SevenHD.BorderRight.value == "ff000000":
+			self.skinSearchAndReplace.append(['<!--<eLabel backgroundColor="SevenBorderRight"', '<eLabel backgroundColor="SevenBorderRight"'])
+			self.skinSearchAndReplace.append(['zPosition="102" />-->', 'zPosition="102" />'])
 		self.skinSearchAndReplace.append(["SevenBorder_Right", config.plugins.SevenHD.BorderRight.value])
+		if not config.plugins.SevenHD.LineRight.value == "ff000000":
+			self.skinSearchAndReplace.append(['<!--<eLabel backgroundColor="SevenLineRight"', '<eLabel backgroundColor="SevenLineRight"'])
+			self.skinSearchAndReplace.append(['zPosition="109" />-->', 'zPosition="109" />'])
 		self.skinSearchAndReplace.append(["SevenLine_Right", config.plugins.SevenHD.LineRight.value])
 
 		self.skinSearchAndReplace.append(["SevenFont_ECM", config.plugins.SevenHD.SevenECM.value])
@@ -426,6 +504,7 @@ class SevenHD(Screen):
 		self.skinSearchAndReplace.append(["SevenProgress_LineCS", config.plugins.SevenHD.ProgressLineCS.value])
 		self.skinSearchAndReplace.append(["SevenProgress_LineIB", config.plugins.SevenHD.ProgressLineIB.value])
 		self.skinSearchAndReplace.append(["SevenProgress_LinePlug", config.plugins.SevenHD.ProgressLinePlug.value])
+		self.skinSearchAndReplace.append(["SevenProgress_LineVol", config.plugins.SevenHD.ProgressLineVol.value])
 
 
 		self.skinSearchAndReplace.append(["SevenProgress_IB", config.plugins.SevenHD.ProgressIB.value])
@@ -434,9 +513,27 @@ class SevenHD(Screen):
 		self.skinSearchAndReplace.append(["SevenProgress_ListCS", config.plugins.SevenHD.ProgressListCS.value])
 
 
+		self.skinSearchAndReplace.append(["SevenProgress_IB", config.plugins.SevenHD.ProgressIB.value])
+		self.skinSearchAndReplace.append(["SevenProgress_Vol", config.plugins.SevenHD.ProgressVol.value])
+
+
+		if not config.plugins.SevenHD.InfobarBorder.value == "ff000000":
+			self.skinSearchAndReplace.append(['<!--<eLabel backgroundColor="SevenBorderIB"', '<eLabel backgroundColor="SevenBorderIB"'])
+			self.skinSearchAndReplace.append(['zPosition="103" />-->', 'zPosition="103" />'])
+		else:
+			self.skinSearchAndReplace.append(['borderWidth="2" borderColor="SevenBorderIB"', ' '])
 		self.skinSearchAndReplace.append(["SevenBorder_IB", config.plugins.SevenHD.InfobarBorder.value])
+		if not config.plugins.SevenHD.InfobarLine.value == "ff000000":
+			self.skinSearchAndReplace.append(['<!--<eLabel backgroundColor="SevenLineIB"', '<eLabel backgroundColor="SevenLineIB"'])
+			self.skinSearchAndReplace.append(['zPosition="110" />-->', 'zPosition="110" />'])
 		self.skinSearchAndReplace.append(["SevenLine_IB", config.plugins.SevenHD.InfobarLine.value])
+		if not config.plugins.SevenHD.InfobarBorder2.value == "ff000000":
+			self.skinSearchAndReplace.append(['<!--<eLabel backgroundColor="SevenBorderIB2"', '<eLabel backgroundColor="SevenBorderIB2"'])
+			self.skinSearchAndReplace.append(['zPosition="104" />-->', 'zPosition="104" />'])
 		self.skinSearchAndReplace.append(["SevenBorder2_IB", config.plugins.SevenHD.InfobarBorder2.value])
+		if not config.plugins.SevenHD.InfobarLine2.value == "ff000000":
+			self.skinSearchAndReplace.append(['<!--<eLabel backgroundColor="SevenLineIB2"', '<eLabel backgroundColor="SevenLineIB2"'])
+			self.skinSearchAndReplace.append(['zPosition="111" />-->', 'zPosition="111" />'])
 		self.skinSearchAndReplace.append(["SevenLine2_IB", config.plugins.SevenHD.InfobarLine2.value])
 		self.skinSearchAndReplace.append(["SevenNext_IB", config.plugins.SevenHD.NextEvent.value])
 		self.skinSearchAndReplace.append(["SevenNow_IB", config.plugins.SevenHD.NowEvent.value])
@@ -453,11 +550,30 @@ class SevenHD(Screen):
 		self.skinSearchAndReplace.append(["SevenClock_Weekday", config.plugins.SevenHD.ClockWeek.value])
 
 
+		if not config.plugins.SevenHD.ChannelLine.value == "ff000000":
+			self.skinSearchAndReplace.append(['<!--<eLabel backgroundColor="SevenLineCS"', '<eLabel backgroundColor="SevenLineCS"'])
+			self.skinSearchAndReplace.append(['zPosition="112" />-->', 'zPosition="112" />'])
 		self.skinSearchAndReplace.append(["SevenLine_CS", config.plugins.SevenHD.ChannelLine.value])
+		if not config.plugins.SevenHD.ChannelLineRight.value == "ff000000":
+			self.skinSearchAndReplace.append(['<!--<eLabel backgroundColor="SevenLineRightCS"', '<eLabel backgroundColor="SevenLineRightCS"'])
+			self.skinSearchAndReplace.append(['zPosition="113" />-->', 'zPosition="113" />'])
 		self.skinSearchAndReplace.append(["SevenLineRight_CS", config.plugins.SevenHD.ChannelLineRight.value])
+		if not config.plugins.SevenHD.ChannelLineMiddle.value == "ff000000":
+			self.skinSearchAndReplace.append(['<!--<eLabel backgroundColor="SevenLineMiddleCS"', '<eLabel backgroundColor="SevenLineMiddleCS"'])
+			self.skinSearchAndReplace.append(['zPosition="114" />-->', 'zPosition="114" />'])
 		self.skinSearchAndReplace.append(["SevenLineMiddle_CS", config.plugins.SevenHD.ChannelLineMiddle.value])
+		if not config.plugins.SevenHD.ChannelBorder.value == "ff000000":
+			self.skinSearchAndReplace.append(['<!--<eLabel backgroundColor="SevenBorderCS"', '<eLabel backgroundColor="SevenBorderCS"'])
+			self.skinSearchAndReplace.append(['zPosition="105" />-->', 'zPosition="105" />'])
 		self.skinSearchAndReplace.append(["SevenBorder_CS", config.plugins.SevenHD.ChannelBorder.value])
+		if not config.plugins.SevenHD.ChannelBorderRight.value == "ff000000":
+			self.skinSearchAndReplace.append(['<!--<eLabel backgroundColor="SevenBorderRightCS"', '<eLabel backgroundColor="SevenBorderRightCS"'])
+			self.skinSearchAndReplace.append(['zPosition="106" />-->', 'zPosition="106" />'])
 		self.skinSearchAndReplace.append(["SevenBorderRight_CS", config.plugins.SevenHD.ChannelBorderRight.value])
+		if not config.plugins.SevenHD.ChannelBorderMiddle.value == "ff000000":
+			self.skinSearchAndReplace.append(["SevenBorderMiddle_CS", config.plugins.SevenHD.ChannelBorderMiddle.value])
+			self.skinSearchAndReplace.append(['<!--<eLabel backgroundColor="SevenBorderMiddleCS"', '<eLabel backgroundColor="SevenBorderMiddleCS"'])
+			self.skinSearchAndReplace.append(['zPosition="107" />-->', 'zPosition="107" />'])
 		self.skinSearchAndReplace.append(["SevenBorderMiddle_CS", config.plugins.SevenHD.ChannelBorderMiddle.value])
 		self.skinSearchAndReplace.append(["SevenButtons_CS", config.plugins.SevenHD.ChannelColorButton.value])
 		self.skinSearchAndReplace.append(["SevenBouquet_CS", config.plugins.SevenHD.ChannelColorBouquet.value])
@@ -640,7 +756,7 @@ class SevenHD(Screen):
 			
 		#Debug Screen Names in Skins
                 if config.plugins.SevenHD.debug_screen_names.value:
-                   self.skinSearchAndReplace.append(['<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red"', '<eLabel backgroundColor="SevenFontBackground" font="Regular;15" foregroundColor="red"'])
+                   self.skinSearchAndReplace.append(['<!--<eLabel backgroundColor="SevenFontBackgroundLeft" font="Regular;13" foregroundColor="red"', '<eLabel backgroundColor="SevenFontBackgroundLeft" font="Regular;15" foregroundColor="red"'])
 		   self.skinSearchAndReplace.append(['position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->', 'position="50,13" size="500,19" halign="left" valign="top" transparent="1" />'])
 				
                 ### Header
@@ -709,7 +825,7 @@ class SevenHD(Screen):
                 if config.plugins.SevenHD.ClockStyle.value == 'clock-weather':
                    self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.ClockStyle.value + str(config.plugins.SevenHD.weather_server.value) + XML)
                    self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.ClockStyle.value + str(config.plugins.SevenHD.weather_server.value) + XML)
-                elif config.plugins.SevenHD.ClockStyle.value == 'clock-weather2':
+                elif config.plugins.SevenHD.ClockStyle.value == 'clock-icon':
                    self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.ClockStyle.value + str(config.plugins.SevenHD.weather_server.value) + XML)
                    self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.ClockStyle.value + str(config.plugins.SevenHD.weather_server.value) + XML)
                 elif config.plugins.SevenHD.ClockStyle.value == 'clock-weather-meteo':
@@ -755,7 +871,7 @@ class SevenHD(Screen):
                    if config.plugins.SevenHD.ClockStyle.value == 'clock-weather':
                       self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.ClockStyle.value + str(config.plugins.SevenHD.weather_server.value) + XML)
                       self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.ClockStyle.value + str(config.plugins.SevenHD.weather_server.value) + XML)
-                   elif config.plugins.SevenHD.ClockStyle.value == 'clock-weather2':
+                   elif config.plugins.SevenHD.ClockStyle.value == 'clock-icon':
                       self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.ClockStyle.value + str(config.plugins.SevenHD.weather_server.value) + XML)
                       self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.ClockStyle.value + str(config.plugins.SevenHD.weather_server.value) + XML)
                    elif config.plugins.SevenHD.ClockStyle.value == 'clock-weather-meteo':
@@ -830,6 +946,18 @@ class SevenHD(Screen):
                 #MOVIESELECTIONSTYLE
 		self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.MovieSelectionStyle.value + XML)
                 self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.MovieSelectionStyle.value + XML)        
+                 
+                ###MoviePlayer_main
+		self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.MoviePlayer.value + "-main.xml")
+                self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.MoviePlayer.value + "-main.xml")       
+                
+                ###picon
+		self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.MoviePlayerCover.value + XML)
+                self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.MoviePlayerCover.value + XML)        
+                
+                ###MoviePlayer_end
+		self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.MoviePlayer.value + "-end.xml")
+                self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.MoviePlayer.value + "-end.xml")       
                 
                 #NumberZapExtStyle
 		self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.NumberZapExt.value + XML)
@@ -957,11 +1085,11 @@ class SevenHD(Screen):
                        elif entrie == 'WetterIcons' and (config.plugins.SevenHD.WeatherStyle_1.value != 'none' or config.plugins.SevenHD.WeatherStyle_2.value != 'none'):
                           os.system("rm -rf /usr/share/enigma2/SevenHD/%s/*.*; rm -rf /usr/share/enigma2/SevenHD/%s" % (str(entrie), str(entrie)))
                           self.download_tgz('weather', 'weather' + config.plugins.SevenHD.weather_server.value)
-                       elif entrie == 'clock' and config.plugins.SevenHD.ClockStyle.value in 'clock-analog clock-android clock-weather clock-flip':
+                       elif entrie == 'clock' and config.plugins.SevenHD.ClockStyle.value in 'clock-analog clock-android clock-weather clock-icon clock-flip':
                           os.system("rm -rf /usr/share/enigma2/SevenHD/%s/*.*; rm -rf /usr/share/enigma2/SevenHD/%s" % (str(entrie), str(entrie)))
                           if config.plugins.SevenHD.ClockStyle.value == 'clock-weather':  # !! clock-weather <-> weather_xxx
                              self.download_tgz('weather', 'weather' + config.plugins.SevenHD.weather_server.value)
-                          elif config.plugins.SevenHD.ClockStyle.value == 'clock-weather2':  # !! clock-weather <-> weather_xxx
+                          elif config.plugins.SevenHD.ClockStyle.value == 'clock-icon':  # !! clock-weather <-> weather_xxx
                              self.download_tgz('weather', 'weather' + config.plugins.SevenHD.weather_server.value)
                           elif config.plugins.SevenHD.ClockStyle.value == 'clock-android':   
                              self.download_tgz(entrie, config.plugins.SevenHD.ClockStyle.value + config.plugins.SevenHD.weather_server.value)
@@ -997,8 +1125,8 @@ class SevenHD(Screen):
                    #background only in HD Mode
 		   eConsole().ePopen("rm -rf /usr/share/enigma2/SevenHD/back/*.*; rm -rf /usr/share/enigma2/SevenHD/back")
                 
-                   if self.Background.startswith('back'):
-		      self.download_tgz('back', str(self.Background))
+                   if self.BackgroundLeft.startswith('back'):
+		      self.download_tgz('back', str(self.BackgroundLeft))
                    if self.BackgroundRight.startswith('back'):
                       self.download_tgz('back', str(self.BackgroundRight))
 		   if self.BackgroundIB1.startswith('back'):
@@ -1025,7 +1153,7 @@ class SevenHD(Screen):
                       tar_gz.write(res.content)
                       tar_gz.close()
         
-                      sub = subprocess.Popen("tar xf /tmp/Albatros.tar.gz -C /usr/lib/enigma2/python/Plugins/Extensions/Albatros/skin/", shell=True)
+                      sub = subprocess.Popen("tar xf /tmp/Albatros.tar.gz -C /usr/lib/enigma2/python/Plugins/Extensions/Alabtros", shell=True)
                       sub.wait()
         
                       remove('/tmp/Albatros.tar.gz')
@@ -1046,14 +1174,20 @@ class SevenHD(Screen):
         
                       remove('/tmp/MediaPortal.tar.gz')
                 
+                self.debug('download tgz complett')
                 
-                self.debug('download tgz complett')	
+                self.makeGradientBackgrounds()
+                self.debug('png generation complete')
+                
                 self.skin_ok = True
         except:
            config.plugins.SevenHD.debug.setValue(True)
            self.debug('Error creating Skin!')
            self.skin_ok = False
            
+        self.makeGradientBackgrounds()
+        self.debug('png generation complete')
+                
         if self.skin_ok:   
            self.reboot(_("GUI needs a restart to download files and apply a new skin.\nDo you want to Restart the GUI now?"))
         else:
@@ -1314,7 +1448,193 @@ class SevenHD(Screen):
               f.write('[PluginScreen]' + str(what) + ' error: ' + str(error) + '\n')
            else:
               f.write('[PluginScreen]' + str(what) + '\n')
-           f.close()    
+           f.close()
+           
+    def makeGradientBackgrounds(self):
+
+        if config.plugins.SevenHD.skin_mode.value=="1":
+            width=1280
+            height=720
+            iboneheights=[
+                ("sysinfo_1",142),
+                ("ibtop_1",74),
+                ("sibleft_1",440),
+                ("ibone_1",206),
+                ("weatherbig_1",118),
+                ("sibleftmetrix_1",670),
+                ("sibleftdouble_1",710)
+                ]
+            ibtwoheights=[
+                ("sibtop_1",40),
+                ("sibtopbig_1",74),
+                ("sibright_1",420),
+                ("sibrightmetrix_1",620),
+                ("sibrightdouble_1",710)
+                ]
+            csleftheights=[
+                ("cssmall_1",132),
+                ("csleft_1",720)
+                ]
+            csmiddleheights=[
+                ("csmiddle_1",708),
+                ]
+            csrightheights=[
+                ("cstop_1",60),
+                ("csrightsmall_1",564),
+                ("csright_1",720)
+                ]
+            menurightheights=[
+                ("menutop_1",60),
+                ("menuright_1",708),
+                ("menurightsmall_1",564)
+                ]
+            menumainheights=[
+                ("menuplayer_1",108),
+                ("menuplayersmall_1",54),
+                ("menuquick_1",272),
+                ("menusmall_1",132),
+                ("menumain_1",720)
+                ]
+        elif config.plugins.SevenHD.skin_mode.value=="2":
+            width=1920
+            height=1080
+            iboneheights=[
+                ("sysinfo_1",213),
+                ("ibtop_1",111),
+                ("sibleft_1",660),
+                ("ibone_1",309),
+                ("weatherbig_1",177),
+                ("sibleftmetrix_1",1005),
+                ("sibleftdouble_1",1065)
+                ]
+            ibtwoheights=[
+                ("sibtop_1",60),
+                ("sibtopbig_1",111),
+                ("sibright_1",630),
+                ("sibrightmetrix_1",930),
+                ("sibrightdouble_1",1065)
+                ]
+            csleftheights=[
+                ("cssmall_1",198),
+                ("csleft_1",1080)
+                ]
+            csmiddleheights=[
+                ("csmiddle_1",1062),
+                ]
+            csrightheights=[
+                ("cstop_1",90),
+                ("csrightsmall_1",846),
+                ("csright_1",1080)
+                ]
+            menurightheights=[
+                ("menutop_1",90),
+                ("menuright_1",1062),
+                ("menurightsmall_1",846)
+                ]
+            menumainheights=[
+                ("menuplayer_1",162),
+                ("menuplayersmall_1",81),
+                ("menuquick_1",408),
+                ("menusmall_1",198),
+                ("menumain_1",1080)
+                ]
+        elif config.plugins.SevenHD.skin_mode.value=="3":
+            width=3840
+            height=2160
+            iboneheights=[
+                ("sysinfo_1",426),
+                ("ibtop_1",222),
+                ("sibleft_1",1320),
+                ("ibone_1",618),
+                ("weatherbig_1",354),
+                ("sibleftmetrix_1",2010),
+                ("sibleftdouble_1",2130)
+                ]
+            ibtwoheights=[
+                ("sibtop_1",120),
+                ("sibtopbig_1",222),
+                ("sibright_1",1260),
+                ("sibrightmetrix_1",1860),
+                ("sibrightdouble_1",2130)
+                ]
+            csleftheights=[
+                ("cssmall_1",396),
+                ("csleft_1",2160)
+                ]
+            csmiddleheights=[
+                ("csmiddle_1",2124),
+                ]
+            csrightheights=[
+                ("cstop_1",180),
+                ("csrightsmall_1",1692),
+                ("csright_1",2130)
+                ]
+            menurightheights=[
+                ("menutop_1",180),
+                ("menuright_1",2124),
+                ("menurightsmall_1",1692)
+                ]
+            menumainheights=[
+                ("menuplayer_1",324),
+                ("menuplayersmall_1",162),
+                ("menuquick_1",816),
+                ("menusmall_1",396),
+                ("menumain_1",2130)
+                ]
+
+        if config.plugins.SevenHD.BackgroundLeft.value=="back_gradient_main":
+            for pair in menumainheights:
+                self.makeGradientPng(pair[0],width,pair[1],config.plugins.SevenHD.GradientMenuTop.value,config.plugins.SevenHD.GradientMenuBottom.value,config.plugins.SevenHD.BackgroundLeftColorTrans.value)
+        if config.plugins.SevenHD.BackgroundRight.value=="back_gradient_right":
+            for pair in menurightheights:
+                self.makeGradientPng(pair[0],width,pair[1],config.plugins.SevenHD.GradientMenuRightTop.value,config.plugins.SevenHD.GradientMenuRightBottom.value,config.plugins.SevenHD.BackgroundRightColorTrans.value)
+        if config.plugins.SevenHD.BackgroundIB1.value=="back_gradient_ib1":
+            for pair in iboneheights:
+                self.makeGradientPng(pair[0],width,pair[1],config.plugins.SevenHD.GradientIB1Top.value,config.plugins.SevenHD.GradientIB1Bottom.value,config.plugins.SevenHD.IB1ColorTrans.value)
+        if config.plugins.SevenHD.BackgroundIB2.value=="back_gradient_ib2":
+            for pair in ibtwoheights:
+                self.makeGradientPng(pair[0],width,pair[1],config.plugins.SevenHD.GradientIB2Top.value,config.plugins.SevenHD.GradientIB2Bottom.value,config.plugins.SevenHD.IB2ColorTrans.value)
+        if config.plugins.SevenHD.ChannelBack1.value=="back_gradient_csleft":
+            for pair in csleftheights:
+                self.makeGradientPng(pair[0],width,pair[1],config.plugins.SevenHD.GradientCSLeftTop.value,config.plugins.SevenHD.GradientCSLeftBottom.value,config.plugins.SevenHD.CSLeftColorTrans.value)
+        if config.plugins.SevenHD.ChannelBack3.value=="back_gradient_csmiddle":
+            for pair in csmiddleheights:
+                self.makeGradientPng(pair[0],width,pair[1],config.plugins.SevenHD.GradientCSMiddleTop.value,config.plugins.SevenHD.GradientCSMiddleBottom.value,config.plugins.SevenHD.CSMiddleColorTrans.value)
+        if config.plugins.SevenHD.ChannelBack2.value=="back_gradient_csright":
+            for pair in csrightheights:
+                self.makeGradientPng(pair[0],width,pair[1],config.plugins.SevenHD.GradientCSRightTop.value,config.plugins.SevenHD.GradientCSRightBottom.value,config.plugins.SevenHD.CSRightColorTrans.value)
+
+    def makeGradientPng(self,name,width,height,color1,color2,trans):
+
+        path="/usr/share/enigma2/SevenHD/back/"
+        if not os.path.exists(path):
+            os.makedirs(path)
+    
+        width=int(width)
+        height=int(height)
+        
+        color1=color1[-6:]
+        r1=int(color1[0:2],16)
+        g1=int(color1[2:4],16)
+        b1=int(color1[4:6],16)
+
+        color2=color2[-6:]
+        r2=int(color2[0:2],16)
+        g2=int(color2[2:4],16)
+        b2=int(color2[4:6],16)
+
+        trans=255-int(trans,16)
+
+        gradient=Image.new("RGBA",(1,height))
+        for pos in range(0,height):
+            p=pos/float(height)
+            r=r2*p+r1*(1-p)
+            g=g2*p+g1*(1-p)
+            b=b2*p+b1*(1-p)
+            gradient.putpixel((0,pos),(int(r),int(g),int(b),int(trans)))
+        gradient=gradient.resize((width,height))
+        gradient.save(path+name+".png")
+
 ################################################################################        
 def main(session, **kwargs):
         if fileExists("/tmp/kraven_debug.txt"):

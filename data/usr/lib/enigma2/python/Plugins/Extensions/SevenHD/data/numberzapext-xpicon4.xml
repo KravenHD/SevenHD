@@ -1,20 +1,20 @@
 		<!--/* NumberZapExt -->
 	<screen backgroundColor="transparent" flags="wfNoBorder" name="NumberZapExt" position="430,center" size="440,320" title="Channel" transparent="0">
-		<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="NumberZapExt" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
+		<!--<eLabel backgroundColor="SevenFontBackgroundLeft" font="Regular;13" foregroundColor="red" text="NumberZapExt" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
 		<widget alphatest="blend" name="chPicon" position="105,40" size="220,132" transparent="1" zPosition="1" backgroundColor="SevenBackgroundIB1" />
-		<widget font="Regular2; 20" backgroundColor="SevenFontBackground" foregroundColor="SevenFont1" halign="left" name="number" position="15,218" size="122,27" transparent="1" />
-		<widget font="Regular; 20" backgroundColor="SevenFontBackground" foregroundColor="SevenFont2" halign="left" name="chNum" position="137,218" size="240,27" transparent="1" />
-		<widget font="Regular2; 20" backgroundColor="SevenFontBackground" foregroundColor="SevenFont1" halign="left" name="channel" position="15,246" size="122,26" transparent="1" />
-		<widget font="Regular; 20" backgroundColor="SevenFontBackground" foregroundColor="SevenFont2" halign="left" name="chName" noWrap="1" position="137,245" size="288,26" transparent="1" />
-		<widget font="Regular2; 20" backgroundColor="SevenFontBackground" foregroundColor="SevenFont1" halign="left" name="bouquet" position="15,271" size="122,26" transparent="1" />
-		<widget font="Regular; 20" backgroundColor="SevenFontBackground" foregroundColor="SevenFont2" halign="left" name="chBouq" noWrap="1" position="137,271" size="288,26" transparent="1" />
+		<widget font="Regular2; 20" backgroundColor="SevenFontBackgroundLeft" foregroundColor="SevenFont1" halign="left" name="number" position="15,218" size="122,27" transparent="1" />
+		<widget font="Regular; 20" backgroundColor="SevenFontBackgroundLeft" foregroundColor="SevenFont2" halign="left" name="chNum" position="137,218" size="240,27" transparent="1" />
+		<widget font="Regular2; 20" backgroundColor="SevenFontBackgroundLeft" foregroundColor="SevenFont1" halign="left" name="channel" position="15,246" size="122,26" transparent="1" />
+		<widget font="Regular; 20" backgroundColor="SevenFontBackgroundLeft" foregroundColor="SevenFont2" halign="left" name="chName" noWrap="1" position="137,245" size="288,26" transparent="1" />
+		<widget font="Regular2; 20" backgroundColor="SevenFontBackgroundLeft" foregroundColor="SevenFont1" halign="left" name="bouquet" position="15,271" size="122,26" transparent="1" />
+		<widget font="Regular; 20" backgroundColor="SevenFontBackgroundLeft" foregroundColor="SevenFont2" halign="left" name="chBouq" noWrap="1" position="137,271" size="288,26" transparent="1" />
 		<eLabel backgroundColor="SevenBackgroundIB1" position="5,206" size="420,104" zPosition="-8" />
 		<eLabel backgroundColor="SevenBackgroundIB1" name="new eLabel" position="5,6" size="419,200" zPosition="-8" />
 		<ePixmap pixmap="SevenHD/back/menumain.png" position="4,6" size="420,304" alphatest="blend" zPosition="-7" />
-		<eLabel backgroundColor="SevenBorder" position="4,6" size="420,2" />
-		<eLabel backgroundColor="SevenBorder" position="4,204" size="420,2" />
-		<eLabel backgroundColor="SevenBorder" position="4,308" size="420,2" />
-		<eLabel backgroundColor="SevenBorder" position="423,6" size="2,304" />
-		<eLabel backgroundColor="SevenBorder" position="4,6" size="2,304" />
+		<!--<eLabel backgroundColor="SevenBorder" position="4,6" size="420,2" zPosition="101" />-->
+		<!--<eLabel backgroundColor="SevenBorder" position="4,204" size="420,2" zPosition="101" />-->
+		<!--<eLabel backgroundColor="SevenBorder" position="4,308" size="420,2" zPosition="101" />-->
+		<!--<eLabel backgroundColor="SevenBorder" position="423,6" size="2,304" zPosition="101" />-->
+		<!--<eLabel backgroundColor="SevenBorder" position="4,6" size="2,304" zPosition="101" />-->
 	</screen>
 		<!-- NumberZapExt */-->

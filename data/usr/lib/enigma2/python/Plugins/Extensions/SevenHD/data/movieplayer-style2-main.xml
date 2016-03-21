@@ -1,0 +1,21 @@
+		<!-- MoviePlayer -->
+	<screen backgroundColor="transparent" flags="wfNoBorder" name="MoviePlayer" position="0,0" size="1280,720" title="InfoBar">
+		<!--<eLabel backgroundColor="SevenFontBackgroundLeft" font="Regular;13" foregroundColor="red" text="MoviePlayer" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
+		
+		<widget backgroundColor="SevenFontBackgroundLeft" font="Regular; 20" noWrap="1" position="302,669" render="SevenHDRunningText" options="movetype=running,startpoint=0,startdelay=2000,steptime=90,wrap=0,always=0,repeat=2,oneshot=1" size="676,25" source="session.CurrentService" transparent="1" valign="center" halign="center" zPosition="1">
+			<convert type="ServiceName">Name</convert>
+		</widget>
+		<widget backgroundColor="SevenFontBackgroundLeft" font="Regular; 18" halign="right" position="201,685" render="Label" shadowColor="SevenBackground" shadowOffset="-1,-1" size="90,25" source="session.CurrentService" transparent="1" valign="center" zPosition="1" foregroundColor="SevenFont1">
+			<convert type="ServicePosition">Position</convert>
+		</widget>
+		<widget backgroundColor="SevenFontBackgroundLeft" font="Regular; 18" halign="left" position="989,685" render="Label" size="90,25" source="session.CurrentService" transparent="1" valign="center" zPosition="1">
+			<convert type="ServicePosition">Remaining</convert>
+		</widget>
+		<widget position="302,696" render="PositionGauge" size="676,9" source="session.CurrentService" zPosition="2" transparent="1">
+			<convert type="ServicePosition">Gauge</convert>
+		</widget>
+		<widget borderWidth="0" position="302,698" render="Progress" size="676,5" source="session.CurrentService" zPosition="1" transparent="1" foregroundColor="SevenProgress" pixmap="SevenHD/progress/progress858.png">
+			<convert type="ServicePosition">Position</convert>
+		</widget>
+		<!--<eLabel backgroundColor="SevenLine" position="302,700" size="676,1" zPosition="108" />-->
+		

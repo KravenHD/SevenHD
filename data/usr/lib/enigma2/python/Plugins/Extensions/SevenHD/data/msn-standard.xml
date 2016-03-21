@@ -1,32 +1,32 @@
 		<!-- MSNWeatherPlugin -->
 	<screen name="MSNWeatherPlugin" backgroundColor="transparent" flags="wfNoBorder" position="0,0" size="1280,720" title="Weather Plugin">
-		<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="MSNWeatherPlugin" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
-		<widget render="Label" source="caption" position="155,80" size="600,30" font="Regular;23" backgroundColor="SevenFontBackground" foregroundColor="SevenFont1" halign="left" transparent="1" />
+		<!--<eLabel backgroundColor="SevenFontBackgroundLeft" font="Regular;13" foregroundColor="red" text="MSNWeatherPlugin" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
+		<widget render="Label" source="caption" position="155,80" size="600,30" font="Regular;23" backgroundColor="SevenFontBackgroundLeft" foregroundColor="SevenFont1" halign="left" transparent="1" />
 		<widget render="Label" source="observationpoint" position="926,82" size="300,120" font="Regular;23" backgroundColor="SevenFontBackgroundRight" foregroundColor="SevenFont1" transparent="1" halign="center" />
 		<widget render="Label" source="observationtime" position="1005,221" size="150,34" font="Regular;23" backgroundColor="SevenFontBackgroundRight" foregroundColor="SevenFont1" transparent="1" halign="center" />
-		<eLabel font="Regular; 20" halign="left" position="155,134" size="600,30" text="Today" backgroundColor="SevenFontBackground" foregroundColor="SevenFont1" render="Label" transparent="1" />
-		<widget name="currenticon" position="971,275" zPosition="1" size="220,220" alphatest="blend" backgroundColor="SevenFontBackground" />
+		<eLabel font="Regular; 20" halign="left" position="155,134" size="600,30" text="Today" backgroundColor="SevenFontBackgroundLeft" foregroundColor="SevenFont1" render="Label" transparent="1" />
+		<widget name="currenticon" position="971,275" zPosition="1" size="220,220" alphatest="blend" backgroundColor="SevenFontBackgroundLeft" />
 		<widget render="Label" source="condition" position="986,511" size="195,55" font="Regular2;16" backgroundColor="SevenFontBackgroundRight" foregroundColor="SevenFont1" transparent="1" zPosition="2" halign="center" />
-		<eLabel render="Label" text="Aktuell:" position="155,190" size="100,30" font="Regular; 22" backgroundColor="SevenFontBackground" foregroundColor="SevenFont1" transparent="1" />
-		<widget render="Label" source="currentTemp" position="300,190" size="100,30" font="Regular;22" backgroundColor="SevenFontBackground" foregroundColor="SevenFont1" transparent="1" />
-		<widget render="Label" source="feelsliketemp" position="368,190" size="200,30" font="Regular;22" backgroundColor="SevenFontBackground" foregroundColor="SevenFont1" transparent="1" />
-		<eLabel render="Label" text="Max./Min.:" position="155,230" size="100,30" font="Regular; 22" backgroundColor="SevenFontBackground" foregroundColor="SevenFont1" transparent="1" />
-		<widget render="Label" source="weekday1_temp" position="305,220" size="300,60" font="Regular;22" backgroundColor="SevenFontBackground" foregroundColor="SevenFont1" transparent="1" zPosition="10" />
-		<eLabel render="Label" text="Wind:" position="155,290" size="100,30" font="Regular; 22" backgroundColor="SevenFontBackground" foregroundColor="SevenFont1" transparent="1" />
-		<widget render="Label" source="wind_condition" position="305,290" size="300,30" font="Regular;22" foregroundColor="SevenFont1" backgroundColor="SevenFontBackground" transparent="1" />
-		<widget render="Label" source="humidity" position="155,331" size="300,30" font="Regular;22" backgroundColor="SevenFontBackground" foregroundColor="SevenFont1" transparent="1" />
-		<widget render="Label" source="weekday2" position="155,400" zPosition="1" size="105,50" halign="center" valign="center" font="Regular;18" backgroundColor="SevenFontBackground" foregroundColor="SevenFont1" transparent="1" />
+		<eLabel render="Label" text="Aktuell:" position="155,190" size="100,30" font="Regular; 22" backgroundColor="SevenFontBackgroundLeft" foregroundColor="SevenFont1" transparent="1" />
+		<widget render="Label" source="currentTemp" position="300,190" size="100,30" font="Regular;22" backgroundColor="SevenFontBackgroundLeft" foregroundColor="SevenFont1" transparent="1" />
+		<widget render="Label" source="feelsliketemp" position="368,190" size="200,30" font="Regular;22" backgroundColor="SevenFontBackgroundLeft" foregroundColor="SevenFont1" transparent="1" />
+		<eLabel render="Label" text="Max./Min.:" position="155,230" size="100,30" font="Regular; 22" backgroundColor="SevenFontBackgroundLeft" foregroundColor="SevenFont1" transparent="1" />
+		<widget render="Label" source="weekday1_temp" position="305,220" size="300,60" font="Regular;22" backgroundColor="SevenFontBackgroundLeft" foregroundColor="SevenFont1" transparent="1" zPosition="10" />
+		<eLabel render="Label" text="Wind:" position="155,290" size="100,30" font="Regular; 22" backgroundColor="SevenFontBackgroundLeft" foregroundColor="SevenFont1" transparent="1" />
+		<widget render="Label" source="wind_condition" position="305,290" size="300,30" font="Regular;22" foregroundColor="SevenFont1" backgroundColor="SevenFontBackgroundLeft" transparent="1" />
+		<widget render="Label" source="humidity" position="155,331" size="300,30" font="Regular;22" backgroundColor="SevenFontBackgroundLeft" foregroundColor="SevenFont1" transparent="1" />
+		<widget render="Label" source="weekday2" position="155,400" zPosition="1" size="105,50" halign="center" valign="center" font="Regular;18" backgroundColor="SevenFontBackgroundLeft" foregroundColor="SevenFont1" transparent="1" />
 		<widget name="weekday2_icon" position="180,455" zPosition="1" size="55,45" alphatest="blend" />
-		<widget render="Label" source="weekday2_temp" position="155,510" zPosition="1" size="105,60" halign="center" valign="bottom" font="Regular;16" backgroundColor="SevenFontBackground" foregroundColor="SevenFont1" transparent="1" />
-		<widget render="Label" source="weekday3" position="275,400" zPosition="1" size="105,50" halign="center" valign="center" font="Regular;18" backgroundColor="SevenFontBackground" foregroundColor="SevenFont1" transparent="1" />
+		<widget render="Label" source="weekday2_temp" position="155,510" zPosition="1" size="105,60" halign="center" valign="bottom" font="Regular;16" backgroundColor="SevenFontBackgroundLeft" foregroundColor="SevenFont1" transparent="1" />
+		<widget render="Label" source="weekday3" position="275,400" zPosition="1" size="105,50" halign="center" valign="center" font="Regular;18" backgroundColor="SevenFontBackgroundLeft" foregroundColor="SevenFont1" transparent="1" />
 		<widget name="weekday3_icon" position="300,455" zPosition="1" size="55,45" alphatest="blend" />
-		<widget render="Label" source="weekday3_temp" position="275,510" zPosition="1" size="105,60" halign="center" valign="bottom" font="Regular;16" backgroundColor="SevenFontBackground" foregroundColor="SevenFont1" transparent="1" />
-		<widget render="Label" source="weekday4" position="395,400" zPosition="1" size="105,50" halign="center" valign="center" font="Regular;18" backgroundColor="SevenFontBackground" foregroundColor="SevenFont1" transparent="1" />
+		<widget render="Label" source="weekday3_temp" position="275,510" zPosition="1" size="105,60" halign="center" valign="bottom" font="Regular;16" backgroundColor="SevenFontBackgroundLeft" foregroundColor="SevenFont1" transparent="1" />
+		<widget render="Label" source="weekday4" position="395,400" zPosition="1" size="105,50" halign="center" valign="center" font="Regular;18" backgroundColor="SevenFontBackgroundLeft" foregroundColor="SevenFont1" transparent="1" />
 		<widget name="weekday4_icon" position="420,455" zPosition="1" size="55,45" alphatest="blend" />
-		<widget render="Label" source="weekday4_temp" position="395,510" zPosition="1" size="105,60" halign="center" valign="bottom" font="Regular;16" backgroundColor="SevenFontBackground" foregroundColor="SevenFont1" transparent="1" />
-		<widget render="Label" source="weekday5" position="515,400" zPosition="1" size="105,50" halign="center" valign="center" font="Regular;18" backgroundColor="SevenFontBackground" foregroundColor="SevenFont1" transparent="1" />
+		<widget render="Label" source="weekday4_temp" position="395,510" zPosition="1" size="105,60" halign="center" valign="bottom" font="Regular;16" backgroundColor="SevenFontBackgroundLeft" foregroundColor="SevenFont1" transparent="1" />
+		<widget render="Label" source="weekday5" position="515,400" zPosition="1" size="105,50" halign="center" valign="center" font="Regular;18" backgroundColor="SevenFontBackgroundLeft" foregroundColor="SevenFont1" transparent="1" />
 		<widget name="weekday5_icon" position="540,455" zPosition="1" size="55,45" alphatest="blend" />
-		<widget render="Label" source="weekday5_temp" position="515,510" zPosition="1" size="105,60" halign="center" valign="bottom" font="Regular;16" backgroundColor="SevenFontBackground" foregroundColor="SevenFont1" transparent="1" />
-		<widget render="Label" source="statustext" position="26,671" zPosition="1" size="800,24" font="Regular;20" backgroundColor="SevenFontBackground" foregroundColor="SevenFont1" valign="center" transparent="1" />
+		<widget render="Label" source="weekday5_temp" position="515,510" zPosition="1" size="105,60" halign="center" valign="bottom" font="Regular;16" backgroundColor="SevenFontBackgroundLeft" foregroundColor="SevenFont1" transparent="1" />
+		<widget render="Label" source="statustext" position="26,671" zPosition="1" size="800,24" font="Regular;20" backgroundColor="SevenFontBackgroundLeft" foregroundColor="SevenFont1" valign="center" transparent="1" />
 		<panel name="template_menu_left_right" />
 	</screen>

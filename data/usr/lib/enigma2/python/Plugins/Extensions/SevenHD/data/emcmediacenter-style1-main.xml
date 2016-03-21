@@ -1,20 +1,20 @@
 		<!-- EMCMediaCenter -->
 	<screen backgroundColor="transparent" flags="wfNoBorder" name="EMCMediaCenter" position="0,0" size="1280,720" title="InfoBar">
-		<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="EMCMediaCenter" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
-		<widget source="global.CurrentTime" position="910,637" size="65,32" font="Regular; 20" render="Label" halign="right" zPosition="1" backgroundColor="SevenFontBackground" foregroundColor="SevenFont1" transparent="1">
+		<!--<eLabel backgroundColor="SevenFontBackgroundLeft" font="Regular;13" foregroundColor="red" text="EMCMediaCenter" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
+		<widget source="global.CurrentTime" position="910,637" size="65,32" font="Regular; 20" render="Label" halign="right" zPosition="1" backgroundColor="SevenFontBackgroundLeft" foregroundColor="SevenFont1" transparent="1">
 			<convert type="SevenHDClockToText">Default</convert>
 		</widget>
-		<widget backgroundColor="SevenFontBackground" font="Regular; 30" noWrap="1" position="210,620" render="SevenHDRunningText" options="movetype=running,startpoint=0,startdelay=2000,steptime=90,wrap=0,always=0,repeat=2,oneshot=1" size="708,40" source="session.CurrentService" transparent="1" valign="center" zPosition="1">
+		<widget backgroundColor="SevenFontBackgroundLeft" font="Regular; 30" noWrap="1" position="210,620" render="SevenHDRunningText" options="movetype=running,startpoint=0,startdelay=2000,steptime=90,wrap=0,always=0,repeat=2,oneshot=1" size="708,40" source="session.CurrentService" transparent="1" valign="center" zPosition="1">
 			<convert type="ServiceName">Name</convert>
 		</widget>
-		<widget backgroundColor="SevenFontBackground" font="Regular; 18" halign="left" position="624,683" render="Label" size="80,25" source="session.CurrentService" transparent="1" valign="center" zPosition="1" foregroundColor="SevenFont1">
+		<widget backgroundColor="SevenFontBackgroundLeft" font="Regular; 18" halign="left" position="624,683" render="Label" size="80,25" source="session.CurrentService" transparent="1" valign="center" zPosition="1" foregroundColor="SevenFont1">
 			<convert type="ServicePosition">Length</convert>
 		</widget>
-		<eLabel backgroundColor="SevenFontBackground" font="Regular; 18" halign="center" position="604,683" size="20,25" text="/" transparent="1" valign="center" zPosition="1" foregroundColor="SevenFont1" />
-		<widget backgroundColor="SevenFontBackground" font="Regular; 18" halign="right" position="530,683" render="Label" shadowColor="SevenBackground" shadowOffset="-1,-1" size="74,25" source="session.CurrentService" transparent="1" valign="center" zPosition="1" foregroundColor="SevenFont1">
+		<eLabel backgroundColor="SevenFontBackgroundLeft" font="Regular; 18" halign="center" position="604,683" size="20,25" text="/" transparent="1" valign="center" zPosition="1" foregroundColor="SevenFont1" />
+		<widget backgroundColor="SevenFontBackgroundLeft" font="Regular; 18" halign="right" position="530,683" render="Label" shadowColor="SevenBackground" shadowOffset="-1,-1" size="74,25" source="session.CurrentService" transparent="1" valign="center" zPosition="1" foregroundColor="SevenFont1">
 			<convert type="ServicePosition">Position</convert>
 		</widget>
-		<widget backgroundColor="SevenFontBackground" font="Regular; 20" halign="right" position="926,607" render="Label" size="100,35" source="session.CurrentService" transparent="1" valign="center" zPosition="1">
+		<widget backgroundColor="SevenFontBackgroundLeft" font="Regular; 20" halign="right" position="926,607" render="Label" size="100,35" source="session.CurrentService" transparent="1" valign="center" zPosition="1">
 			<convert type="ServicePosition">Remaining</convert>
 		</widget>
 		<widget alphatest="blend" pixmap="SevenHD/buttons/ico_rec_on.png" position="315,680" render="Pixmap" size="32,32" source="session.RecordState" zPosition="5">
@@ -35,7 +35,7 @@
 			<convert type="SevenHDServiceInfo">IsHD</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
-		<widget source="session.CurrentService" render="Label" zPosition="3" position="363,683" size="145,25" font="Regular; 18" halign="center" backgroundColor="SevenFontBackground" foregroundColor="SevenFont1" transparent="1">
+		<widget source="session.CurrentService" render="Label" zPosition="3" position="363,683" size="145,25" font="Regular; 18" halign="center" backgroundColor="SevenFontBackgroundLeft" foregroundColor="SevenFont1" transparent="1">
 			<convert type="SevenHDExtraInfo2">ResolutionString</convert>
 		</widget>
 		<widget position="210,666" render="PositionGauge" size="858,9" source="session.CurrentService" zPosition="2" transparent="1">
@@ -44,15 +44,15 @@
 		<widget borderWidth="0" position="210,668" render="Progress" size="858,5" source="session.CurrentService" zPosition="1" transparent="1" foregroundColor="SevenProgress" pixmap="SevenHD/progress/progress858.png">
 			<convert type="ServicePosition">Position</convert>
 		</widget>
-		<eLabel backgroundColor="SevenFontBackground" font="Regular; 20" halign="right" position="1017,607" size="50,35" text="min" transparent="1" valign="center" zPosition="1" />
-		<eLabel backgroundColor="SevenLine" foregroundColor="SevenFont1" position="210,670" size="858,1" zPosition="-1" />
-		<widget source="session.CurrentService" render="Label" position="1002,633" size="65,35" font="Regular; 20" halign="right" valign="center" backgroundColor="SevenFontBackground" transparent="1" zPosition="1" text="23:55" foregroundColor="SevenFont1">
+		<eLabel backgroundColor="SevenFontBackgroundLeft" font="Regular; 20" halign="right" position="1017,607" size="50,35" text="min" transparent="1" valign="center" zPosition="1" />
+		<eLabel backgroundColor="SevenProgressLinePlug" position="210,670" size="858,1" zPosition="-1" />
+		<widget source="session.CurrentService" render="Label" position="1002,633" size="65,35" font="Regular; 20" halign="right" valign="center" backgroundColor="SevenFontBackgroundLeft" transparent="1" zPosition="1" text="23:55" foregroundColor="SevenFont1">
 			<convert type="SevenHDServiceEndTime">EndTime</convert>
 		</widget>
-		<eLabel backgroundColor="SevenFontBackground" font="Regular; 20" halign="center" position="978,633" size="40,35" text="---&gt;" transparent="1" valign="center" zPosition="1" foregroundColor="SevenFont1" />
-		<widget backgroundColor="SevenFontBackground" font="Regular; 19" halign="center" position="722,683" render="Label" size="224,25" source="session.CurrentService" text="Dolby Digital" transparent="1" valign="center" zPosition="3">
+		<eLabel backgroundColor="SevenFontBackgroundLeft" font="Regular; 20" halign="center" position="978,633" size="40,35" text="---&gt;" transparent="1" valign="center" zPosition="1" foregroundColor="SevenFont1" />
+		<widget backgroundColor="SevenFontBackgroundLeft" font="Regular; 19" halign="center" position="722,683" render="Label" size="224,25" source="session.CurrentService" text="Dolby Digital" transparent="1" valign="center" zPosition="3">
 			<convert type="SevenHDExtraInfo2">AudioCodec</convert>
 		</widget>
-		<widget backgroundColor="SevenFontBackground" font="Regular; 19" halign="center" position="960,683" render="Label" size="107,25" source="session.CurrentService" transparent="1" valign="center" zPosition="3">
+		<widget backgroundColor="SevenFontBackgroundLeft" font="Regular; 19" halign="center" position="960,683" render="Label" size="107,25" source="session.CurrentService" transparent="1" valign="center" zPosition="3">
 			<convert type="SevenHDExtraInfo2">VideoCodec</convert>
 		</widget>

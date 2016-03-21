@@ -11,9 +11,9 @@
 		<widget backgroundColor="SevenFontBackgroundIB1" font="Regular;16" foregroundColor="SevenSat" halign="center" position="977,216" render="Label" size="283,45" source="session.CurrentService" transparent="1" valign="center">
 			<convert type="SevenHDExtraInfo">CryptoInfo</convert>
 		</widget>
-		<eLabel backgroundColor="SevenBorderIB" position="974,264" size="290,2" zPosition="2" />
-		<eLabel backgroundColor="SevenBorderIB" position="974,123" size="290,2" zPosition="2" />
-		<eLabel backgroundColor="SevenBorderIB" position="974,123" size="2,142" zPosition="2" />
-		<eLabel backgroundColor="SevenBorderIB" position="1262,123" size="2,143" zPosition="2" />
+		<!--<eLabel backgroundColor="SevenBorderIB" position="974,264" size="290,2" zPosition="103" />-->
+		<!--<eLabel backgroundColor="SevenBorderIB" position="974,123" size="290,2" zPosition="103" />-->
+		<!--<eLabel backgroundColor="SevenBorderIB" position="974,123" size="2,142" zPosition="103" />-->
+		<!--<eLabel backgroundColor="SevenBorderIB" position="1262,123" size="2,143" zPosition="103" />-->
 		<eLabel backgroundColor="SevenBackgroundIB1" position="974,124" size="290,142" transparent="0" zPosition="-10" />
-		<ePixmap pixmap="SevenHD/back/ibone.png" position="974,124" size="290,142" alphatest="blend" zPosition="-8" />
+		<ePixmap pixmap="SevenHD/back/sysinfo.png" position="974,124" size="290,142" alphatest="blend" zPosition="-8" />

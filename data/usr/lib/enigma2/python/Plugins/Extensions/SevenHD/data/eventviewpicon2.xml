@@ -1,7 +1,7 @@
 
 	<screen backgroundColor="transparent" flags="wfNoBorder" name="EventView" position="0,0" size="1280,720" title="Eventview">
-		<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="EventView" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
-		<widget backgroundColor="SevenFontBackground" scrollbarMode="showNever" font="Regular2; 26" name="epg_description" position="17,78" size="689,564" transparent="1" halign="center" />
+		<!--<eLabel backgroundColor="SevenFontBackgroundLeft" font="Regular;13" foregroundColor="red" text="EventView" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
+		<widget backgroundColor="SevenFontBackgroundLeft" scrollbarMode="showNever" font="Regular2; 26" name="epg_description" position="17,78" size="689,564" transparent="1" halign="center" />
 		<widget alphatest="blend" pixmap="SevenHD/buttons/ico_dolby_on.png" position="884,154" render="Pixmap" size="32,32" source="session.CurrentService" zPosition="2">
 			<convert type="SevenHDServiceInfo">IsMultichannel</convert>
 			<convert type="ConditionalShowHide" />

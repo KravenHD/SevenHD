@@ -1,42 +1,42 @@
 		<!-- /* EMC MiniTV -->
 	<screen name="EMCSelection" position="0,0" size="1280,720" title="Enhanced Movie Center" flags="wfNoBorder" backgroundColor="transparent">
-		<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="EMCSelection" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
-		<eLabel text="Enhanced Movie Center" position="70,12" size="708,46" font="Regular2;34" foregroundColor="SevenFont2" halign="center" valign="center" backgroundColor="SevenFontBackground" transparent="1" />
-		<widget name="list" position="50,338" size="781,295" itemHeight="30" CoolFont="Regular;20" CoolSelectFont="Regular;20" CoolDateFont="Regular;20" CoolProgressPos="50" CoolBarPos="35" CoolBarHPos="10" CoolBarSize="50,10" CoolBarSizeSa="50,10" CoolMoviePos="90" CoolMovieSize="500" CoolFolderSize="575" CoolDatePos="650" CoolDateWidth="105" CoolPiconPos="90" CoolPiconHPos="2" CoolPiconWidth="45" CoolPiconHeight="26" CoolMoviePiconPos="140" CoolMoviePiconSize="450" CoolTitleColor="1" CoolDateColor="1" CoolHighlightColor="0" DefaultColor="SevenFont1" UnwatchedColor="SevenFont1" WatchingColor="blue" FinishedColor="green" RecordingColor="red" BackColor="SevenBackground" BackColorSel="SevenSelection" FrontColorSel="SevenSelFont" backgroundColorSelected="SevenSelection" foregroundColorSelected="SevenSelFont" backgroundColor="SevenFontBackground" foregroundColor="SevenFont1" scrollbarMode="showNever" transparent="1" />
-		<widget source="Service" render="Label" position="18,70" size="452,28" font="Regular; 22" noWrap="1" foregroundColor="SevenFont1" backgroundColor="SevenFontBackground" transparent="1" valign="center" halign="left">
+		<!--<eLabel backgroundColor="SevenFontBackgroundLeft" font="Regular;13" foregroundColor="red" text="EMCSelection" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
+		<eLabel text="Enhanced Movie Center" position="70,12" size="708,46" font="Regular2;34" foregroundColor="SevenFont2" halign="center" valign="center" backgroundColor="SevenFontBackgroundLeft" transparent="1" />
+		<widget name="list" position="50,338" size="781,295" itemHeight="30" CoolFont="Regular;20" CoolSelectFont="Regular;20" CoolDateFont="Regular;20" CoolProgressPos="50" CoolBarPos="35" CoolBarHPos="10" CoolBarSize="50,10" CoolBarSizeSa="50,10" CoolMoviePos="90" CoolMovieSize="500" CoolFolderSize="575" CoolDatePos="650" CoolDateWidth="105" CoolPiconPos="90" CoolPiconHPos="2" CoolPiconWidth="45" CoolPiconHeight="26" CoolMoviePiconPos="140" CoolMoviePiconSize="450" CoolTitleColor="1" CoolDateColor="1" CoolHighlightColor="0" DefaultColor="SevenFont1" UnwatchedColor="SevenFont1" WatchingColor="blue" FinishedColor="green" RecordingColor="red" BackColor="SevenBackground" BackColorSel="SevenSelection" FrontColorSel="SevenSelFont" backgroundColorSelected="SevenSelection" foregroundColorSelected="SevenSelFont" backgroundColor="SevenFontBackgroundLeft" foregroundColor="SevenFont1" scrollbarMode="showNever" transparent="1" />
+		<widget source="Service" render="Label" position="18,70" size="452,28" font="Regular; 22" noWrap="1" foregroundColor="SevenFont1" backgroundColor="SevenFontBackgroundLeft" transparent="1" valign="center" halign="left">
 			<convert type="SevenHDDiskSpace">path</convert>
 		</widget>
-		<widget source="Service" render="Label" position="481,70" size="352,28" font="Regular; 22" foregroundColor="SevenFont1" backgroundColor="SevenFontBackground" transparent="1" valign="center" halign="right">
+		<widget source="Service" render="Label" position="481,70" size="352,28" font="Regular; 22" foregroundColor="SevenFont1" backgroundColor="SevenFontBackgroundLeft" transparent="1" valign="center" halign="right">
 			<convert type="SevenHDDiskSpace">both</convert>
 		</widget>
-		<widget name="wait" position="31,309" size="1198,50" zPosition="1" font="Regular; 32" foregroundColor="SevenFont1" backgroundColor="SevenFontBackground" transparent="1" halign="center" valign="center" />
-		<widget source="Service" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,steptime=90,wrap=1,always=0,repeat=2,oneshot=1" position="455,108" wrap="1" size="269,62" font="Regular; 24" halign="center" backgroundColor="SevenFontBackground" transparent="1">
+		<widget name="wait" position="31,309" size="1198,50" zPosition="1" font="Regular; 32" foregroundColor="SevenFont1" backgroundColor="SevenFontBackgroundLeft" transparent="1" halign="center" valign="center" />
+		<widget source="Service" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,steptime=90,wrap=1,always=0,repeat=2,oneshot=1" position="455,108" wrap="1" size="269,62" font="Regular; 24" halign="center" backgroundColor="SevenFontBackgroundLeft" transparent="1">
 			<convert type="EMCEventName">Name</convert>
 		</widget>
-		<widget source="Service" render="Label" position="455,208" size="269,40" font="Regular; 22" halign="center" backgroundColor="SevenFontBackground" transparent="1">
+		<widget source="Service" render="Label" position="455,208" size="269,40" font="Regular; 22" halign="center" backgroundColor="SevenFontBackgroundLeft" transparent="1">
 			<convert type="EMCMovieInfo">RecordServiceName</convert>
 		</widget>
 		<widget source="Service" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,steptime=90,wrap=1,always=0,repeat=2,oneshot=1" position="888,69" size="379,626" font="Regular; 22" foregroundColor="SevenFont1" backgroundColor="SevenFontBackgroundRight" transparent="1" zPosition="2" halign="center" valign="top">
 			<convert type="EMCEventName">FullDescription</convert>
 		</widget>
-		<widget source="Service" render="Label" position="455,173" size="269,30" font="Regular2; 21" halign="center" backgroundColor="SevenFontBackground" foregroundColor="SevenFont2" transparent="1">
+		<widget source="Service" render="Label" position="455,173" size="269,30" font="Regular2; 21" halign="center" backgroundColor="SevenFontBackgroundLeft" foregroundColor="SevenFont2" transparent="1">
 			<convert type="EMCServiceTime">StartTime</convert>
 			<convert type="EMCClockToText">Date</convert>
 		</widget>
-		<widget source="Service" render="Label" position="455,254" size="269,33" font="Regular2; 20" halign="center" backgroundColor="SevenFontBackground" foregroundColor="SevenFont2" transparent="1">
+		<widget source="Service" render="Label" position="455,254" size="269,33" font="Regular2; 20" halign="center" backgroundColor="SevenFontBackgroundLeft" foregroundColor="SevenFont2" transparent="1">
 			<convert type="EMCMovieInfo">FileSize</convert>
 		</widget>
-		<widget source="Service" render="Label" position="455,295" size="269,33" font="Regular; 20" halign="center" backgroundColor="SevenFontBackground" transparent="1">
+		<widget source="Service" render="Label" position="455,295" size="269,33" font="Regular; 20" halign="center" backgroundColor="SevenFontBackgroundLeft" transparent="1">
 			<convert type="EMCServiceTime">Duration</convert>
 			<convert type="EMCClockToText">InMinutes</convert>
 		</widget>
 		<widget source="session.VideoPicture" render="Pig" position="49,108" size="400,220" backgroundColor="transparent" zPosition="2" />
-		<widget name="Cover" position="730,108" size="100,151" zPosition="4" backgroundColor="SevenBackground" alphatest="on" transparent="1" />
+		<widget name="Cover" position="730,108" size="100,151" zPosition="4" backgroundColor="SevenBackgroundLeft" alphatest="on" transparent="1" />
 		<panel name="template_emc2" />
 		<panel name="template_colorkey_text" />
-		<eLabel backgroundColor="SevenLine" position="49,328" size="402,4" zPosition="5" />
-		<eLabel backgroundColor="SevenLine" position="47,106" size="404,4" zPosition="5" />
-		<eLabel backgroundColor="SevenLine" position="448,106" size="4,226" zPosition="5" />
-		<eLabel backgroundColor="SevenLine" position="47,106" size="4,226" zPosition="5" />
+		<!--<eLabel backgroundColor="SevenLine" position="49,328" size="402,4" zPosition="108" />-->
+		<!--<eLabel backgroundColor="SevenLine" position="47,106" size="404,4" zPosition="108" />-->
+		<!--<eLabel backgroundColor="SevenLine" position="448,106" size="4,226" zPosition="108" />-->
+		<!--<eLabel backgroundColor="SevenLine" position="47,106" size="4,226" zPosition="108" />-->
 	</screen>
 		<!-- EMC MiniTV */-->

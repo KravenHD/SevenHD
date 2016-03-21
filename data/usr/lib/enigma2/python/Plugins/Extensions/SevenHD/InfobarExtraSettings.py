@@ -161,7 +161,7 @@ class InfobarExtraSettings(ConfigListScreen, Screen):
               list.append(getConfigListEntry(_("weather"),                       config.plugins.SevenHD.WeatherStyle_2,    'Zeigt das Wetter an.',                                                        '1',        ''))
            config.plugins.SevenHD.WeatherStyle_1.setValue('none')
            
-        if config.plugins.SevenHD.WeatherStyle_1.value != 'none' or config.plugins.SevenHD.WeatherStyle_2.value != 'none' or config.plugins.SevenHD.ClockStyle.value == "clock-android" or config.plugins.SevenHD.ClockStyle.value == "clock-weather":
+        if config.plugins.SevenHD.WeatherStyle_1.value != 'none' or config.plugins.SevenHD.WeatherStyle_2.value != 'none' or config.plugins.SevenHD.ClockStyle.value == "clock-android" or config.plugins.SevenHD.ClockStyle.value == "clock-weather" or config.plugins.SevenHD.ClockStyle.value == "clock-icon":
            
            list.append(getConfigListEntry(_("Server"),                        config.plugins.SevenHD.weather_server,  'Stellt den Server ein, wor\xc3\xbcber die Wetterdaten gesucht werden sollen.','4',        'server'))
            list.append(getConfigListEntry(_("Search by"),                     config.plugins.SevenHD.weather_search_over,'Stell hier ein, wie gesucht werden sollen.',                               '4',        'server'))
@@ -342,7 +342,7 @@ class InfobarExtraSettings(ConfigListScreen, Screen):
     
     def save(self):
         
-        if config.plugins.SevenHD.WeatherStyle_1.value != 'none' or config.plugins.SevenHD.WeatherStyle_2.value != 'none' or config.plugins.SevenHD.ClockStyle.value == "clock-android" or config.plugins.SevenHD.ClockStyle.value == "clock-weather":
+        if config.plugins.SevenHD.WeatherStyle_1.value != 'none' or config.plugins.SevenHD.WeatherStyle_2.value != 'none' or config.plugins.SevenHD.ClockStyle.value == "clock-android" or config.plugins.SevenHD.ClockStyle.value == "clock-weather" or config.plugins.SevenHD.ClockStyle.value == "clock-icon":
            self.preview = False
            self.get_weather_data()
            
@@ -497,10 +497,7 @@ class InfobarExtraSettings(ConfigListScreen, Screen):
            res = requests.request('get', 'http://maps.googleapis.com/maps/api/geocode/json?address=' + str(lat) + ',' + str(lon) + '&sensor=true')
            data = res.json()
            
-           for info in data['results'][0]['address_components']:
-              if 'locality' in info['types']:
-                 self.city = info['long_name']
-           
+           self.city = data['results'][0]['address_components'][1]['long_name']
            self.lat = data['results'][0]['geometry']['location']['lat']
            self.lon = data['results'][0]['geometry']['location']['lng']
            

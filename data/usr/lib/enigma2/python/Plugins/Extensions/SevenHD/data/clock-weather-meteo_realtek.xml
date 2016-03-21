@@ -1,5 +1,5 @@
 		<!-- Clock Weather */-->
-		<widget position="1100,543" size="60,60" render="Label" font="Meteo3;60" halign="center" valign="center" foregroundColor="SevenClockWeather" backgroundColor="SevenFontBackgroundIB1" noWrap="1" source="session.CurrentService" transparent="1" zPosition="8">
+		<widget position="1100,543" size="60,60" render="Label" font="Meteo;60" halign="center" valign="center" foregroundColor="SevenClockWeather" backgroundColor="SevenFontBackgroundIB1" noWrap="1" source="session.CurrentService" transparent="1" zPosition="8">
 			<convert type="SevenHDWeather_realtek">Day_0,MeteoFont</convert>
 		</widget>
 		<widget noWrap="1" backgroundColor="SevenFontBackgroundIB1" foregroundColor="SevenClockWeather" font="Regular; 22" render="Label" position="1185,544" size="80,34" source="session.CurrentService" transparent="1" zPosition="12" halign="left" >

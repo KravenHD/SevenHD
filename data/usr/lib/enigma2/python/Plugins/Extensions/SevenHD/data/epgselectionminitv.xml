@@ -1,18 +1,18 @@
 		<!-- EPGSelection -->
 	<screen backgroundColor="transparent" flags="wfNoBorder" name="EPGSelection" position="0,0" size="1280,720" title="EPG Selection">
-		<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="EPGSelection" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
-		<widget backgroundColor="SevenFontBackground" itemHeight="32" foregroundColor="SevenFont1" font="Regular; 22" name="list" enableWrapAround="1" scrollbarWidth="2" position="554,80" size="708,570" transparent="1" zPosition="3" />
-		<widget backgroundColor="SevenFontBackground" font="Regular2; 21" foregroundColor="SevenFont2" position="70,306" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,steptime=90,wrap=1,always=0,repeat=2,oneshot=1" size="400,332" source="Event" valign="top" halign="center" transparent="1" zPosition="0">
+		<!--<eLabel backgroundColor="SevenFontBackgroundLeft" font="Regular;13" foregroundColor="red" text="EPGSelection" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
+		<widget backgroundColor="SevenFontBackgroundLeft" itemHeight="32" foregroundColor="SevenFont1" font="Regular; 22" name="list" enableWrapAround="1" scrollbarWidth="2" position="554,80" size="708,570" transparent="1" zPosition="3" />
+		<widget backgroundColor="SevenFontBackgroundLeft" font="Regular2; 21" foregroundColor="SevenFont2" position="70,306" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,steptime=90,wrap=1,always=0,repeat=2,oneshot=1" size="400,332" source="Event" valign="top" halign="center" transparent="1" zPosition="0">
 			<convert type="SevenHDEventName">BothDescriptionsFiltered</convert>
 		</widget>
 		<widget alphatest="blend" position="1174,662" render="SevenHDXPicon" size="80,48" source="Service" transparent="1" zPosition="4">
 			<convert type="ServiceName">Reference</convert>
 		</widget>
 		<widget source="session.VideoPicture" render="Pig" position="72,78" size="400,220" backgroundColor="transparent" zPosition="2" />
-		<eLabel backgroundColor="SevenLine" position="73,294" size="396,4" zPosition="5" />
-		<eLabel backgroundColor="SevenLine" position="75,76" size="396,4" zPosition="5" />
-		<eLabel backgroundColor="SevenLine" position="468,76" size="4,222" zPosition="5" />
-		<eLabel backgroundColor="SevenLine" position="72,76" size="4,222" zPosition="5" />
+		<!--<eLabel backgroundColor="SevenLine" position="73,294" size="396,4" zPosition="108" />-->
+		<!--<eLabel backgroundColor="SevenLine" position="75,76" size="396,4" zPosition="108" />-->
+		<!--<eLabel backgroundColor="SevenLine" position="468,76" size="4,222" zPosition="108" />-->
+		<!--<eLabel backgroundColor="SevenLine" position="72,76" size="4,222" zPosition="108" />-->
 		<panel name="template_menu_full_button" />
 		<panel name="template_colorkey_text" />
 	</screen>

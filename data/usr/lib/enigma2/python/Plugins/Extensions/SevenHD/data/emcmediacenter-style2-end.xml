@@ -1,8 +1,8 @@
 
-		<eLabel backgroundColor="SevenBorder" position="200,715" size="880,2" zPosition="2" />
-		<eLabel backgroundColor="SevenBorder" position="200,664" size="880,2" zPosition="2" />
-		<eLabel backgroundColor="SevenBorder" position="200,664" size="2,52" zPosition="2" />
-		<eLabel backgroundColor="SevenBorder" position="1078,664" size="2,52" zPosition="2" />
-		<eLabel backgroundColor="SevenBackground" position="200,665" size="880,52" transparent="0" zPosition="-9" />
-		<ePixmap pixmap="SevenHD/back/menumain.png" position="200,664" size="880,53" alphatest="blend" zPosition="-8" />
+		<!--<eLabel backgroundColor="SevenBorder" position="200,715" size="880,2" zPosition="101" />-->
+		<!--<eLabel backgroundColor="SevenBorder" position="200,664" size="880,2" zPosition="101" />-->
+		<!--<eLabel backgroundColor="SevenBorder" position="200,664" size="2,52" zPosition="101" />-->
+		<!--<eLabel backgroundColor="SevenBorder" position="1078,664" size="2,52" zPosition="101" />-->
+		<eLabel backgroundColor="SevenBackgroundLeft" position="200,665" size="880,52" transparent="0" zPosition="-9" />
+		<ePixmap pixmap="SevenHD/back/menuplayersmall.png" position="200,665" size="880,52" alphatest="blend" zPosition="-8" />
 	</screen>

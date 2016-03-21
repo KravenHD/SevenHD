@@ -2,10 +2,10 @@
 		<widget position="16,378" render="SevenHDMovieThumb" size="207,132" source="session.CurrentService" transparent="1" zPosition="14">
 			<convert type="ServiceName">NameAndEvent</convert>
 		</widget>
-		<eLabel backgroundColor="SevenBorderIB" position="222,376" size="2,134" zPosition="15" />
-		<eLabel backgroundColor="SevenBorderIB" position="14,376" size="2,136" zPosition="15" />
-		<eLabel backgroundColor="SevenBorderIB" position="14,376" size="210,2" zPosition="15" />
-		<eLabel backgroundColor="SevenBorderIB" position="14,510" size="210,2" zPosition="15" />
+		<!--<eLabel backgroundColor="SevenBorderIB" position="222,376" size="2,134" zPosition="103" />-->
+		<!--<eLabel backgroundColor="SevenBorderIB" position="14,376" size="2,136" zPosition="103" />-->
+		<!--<eLabel backgroundColor="SevenBorderIB" position="14,376" size="210,2" zPosition="103" />-->
+		<!--<eLabel backgroundColor="SevenBorderIB" position="14,510" size="210,2" zPosition="103" />-->
 		<widget font="Regular2; 40" foregroundColor="SevenFontCN"  halign="right" noWrap="1" position="353,450" render="Label" size="770,60" source="session.CurrentService" transparent="1" valign="center" zPosition="1" alphatest="blend">
 			<convert type="SevenHDExtServiceInfo">ServiceNumberAndName</convert>
 		</widget>

@@ -1,6 +1,6 @@
 		<!-- /* ChannelSelection X/miniTV -->
 	<screen backgroundColor="transparent" flags="wfNoBorder" name="ChannelSelection" position="0,0" size="1280,720" title="Channel Selection">
-		<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="ChannelSelection" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
+		<!--<eLabel backgroundColor="SevenFontBackgroundLeft" font="Regular;13" foregroundColor="red" text="ChannelSelection" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
 		<widget backgroundColor="SevenFontBackCS" scrollbarMode="showNever" picServiceEventProgressbar="SevenHD/progresslistcs/progresslistcs52.png" colorEventProgressbar="SevenProgressListCS" colorEventProgressbarSelected="SevenProgressListCS" foregroundColorMarkedSelected="green" foregroundColor="SevenNameList" colorEventProgressbarBorder="SevenProgressBorderCS" colorEventProgressbarBorderSelected="SevenProgressBorderCS" colorServiceDescription="SevenProgramList" colorServiceDescriptionSelected="SevenSelFont" colorServiceRecording="red" foregroundColorServiceNotAvail="yellow" itemHeight="50" name="list" position="18,68" serviceInfoFont="Regular;23" serviceItemHeight="35" serviceNameFont="Regular;25" serviceNumberFont="Regular;25" size="680,418" transparent="1" />
 		<widget font="Regular; 24" foregroundColor="SevenDestcriptionCS" position="730,308" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,steptime=90,wrap=1,always=0,repeat=2,oneshot=1" size="530,310" source="ServiceEvent" valign="top" backgroundColor="SevenFontBackRightCS" transparent="1">
 			<convert type="SevenHDEventName">BothDescriptionsFiltered</convert>
@@ -34,11 +34,11 @@
 		<widget font="Regular; 30" foregroundColor="SevenProgramCS" position="730,18" halign="center" render="SevenHDRunningText" options="movetype=running,startpoint=0,startdelay=2000,steptime=90,wrap=0,always=0,repeat=2,oneshot=1" size="530,40" source="ServiceEvent" backgroundColor="SevenFontBackRightCS" transparent="1" valign="bottom">
 			<convert type="SevenHDEventName">Name</convert>
 		</widget>
-		<eLabel backgroundColor="SevenLineRightCS" position="730,623" size="530,2" zPosition="2" />
-		<eLabel backgroundColor="SevenLineCS" position="795,289" size="404,4" zPosition="5" />
-		<eLabel backgroundColor="SevenLineCS" position="795,71" size="404,4" zPosition="5" />
-		<eLabel backgroundColor="SevenLineCS" position="1195,71" size="4,222" zPosition="5" />
-		<eLabel backgroundColor="SevenLineCS" position="795,71" size="4,222" zPosition="5" />
+		<!--<eLabel backgroundColor="SevenLineRightCS" position="730,623" size="530,2" zPosition="2" />-->
+		<!--<eLabel backgroundColor="SevenLineCS" position="795,289" size="404,4" zPosition="5" />-->
+		<!--<eLabel backgroundColor="SevenLineCS" position="795,71" size="404,4" zPosition="5" />-->
+		<!--<eLabel backgroundColor="SevenLineCS" position="1195,71" size="4,222" zPosition="5" />-->
+		<!--<eLabel backgroundColor="SevenLineCS" position="795,71" size="4,222" zPosition="5" />-->
 		<panel name="template_menu_cs14_button" />
 	</screen>
 		<!-- ChannelSelection X/MiniTV */-->

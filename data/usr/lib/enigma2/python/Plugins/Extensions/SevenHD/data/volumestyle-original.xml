@@ -1,14 +1,14 @@
 		<!--/* Volume -->
 	<screen name="Volume" position="47,38" size="330,80" title="Volume" flags="wfNoBorder" backgroundColor="transparent" zPosition="99">
-		<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="Volume" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
+		<!--<eLabel backgroundColor="SevenFontBackgroundLeft" font="Regular;13" foregroundColor="red" text="Volume" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
 		<widget name="Volume" position="72,36" size="170,5" zPosition="3" transparent="1" foregroundColor="SevenProgressVol" pixmap="SevenHD/progressvol/progressvol170.png" />
 		<ePixmap position="6,7" size="64,64" zPosition="1" pixmap="SevenHD/buttons/volume.png" transparent="0" alphatest="blend" />
-		<widget font="Regular;40" foregroundColor="SevenFont1" backgroundColor="SevenBackground" halign="center" valign="center" render="SevenHDVolumeText" source="global.CurrentTime" position="243,8" size="82,60" zPosition="20" transparent="0" />
-		<eLabel position="72,38" size="170,1" backgroundColor="SevenLine" foregroundColor="SevenLine" />
-		<eLabel position="2,1" size="327,77" backgroundColor="SevenBackground" zPosition="-2" transparent="0" />
-		<eLabel backgroundColor="SevenBorder" position="1,1" size="328,2" zPosition="2" />
-		<eLabel backgroundColor="SevenBorder" position="2,77" size="327,2" zPosition="2" />
-		<eLabel backgroundColor="SevenBorder" position="1,1" size="2,78" zPosition="2" />
-		<eLabel backgroundColor="SevenBorder" position="327,1" size="2,78" zPosition="2" />
+		<widget font="Regular;40" foregroundColor="SevenFont1" backgroundColor="SevenFontBackgroundLeft" halign="center" valign="center" render="SevenHDVolumeText" source="global.CurrentTime" position="243,8" size="82,60" zPosition="20" transparent="1" />
+		<eLabel position="72,38" size="170,1" backgroundColor="SevenProgressLineVol" />
+		<eLabel position="0,0" size="330,80" backgroundColor="SevenBackgroundLeft" zPosition="-2" />
+		<!--<eLabel backgroundColor="SevenBorder" position="1,1" size="328,2" zPosition="101" />-->
+		<!--<eLabel backgroundColor="SevenBorder" position="2,77" size="327,2" zPosition="101" />-->
+		<!--<eLabel backgroundColor="SevenBorder" position="1,1" size="2,78" zPosition="101" />-->
+		<!--<eLabel backgroundColor="SevenBorder" position="327,1" size="2,78" zPosition="101" />-->
 	</screen>
 		<!-- Volume */-->

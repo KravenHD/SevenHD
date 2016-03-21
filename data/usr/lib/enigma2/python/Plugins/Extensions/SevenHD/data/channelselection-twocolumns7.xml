@@ -1,6 +1,6 @@
 		<!-- /* ChannelSelection Two Columns-->
 	<screen backgroundColor="transparent" flags="wfNoBorder" name="ChannelSelection" position="0,0" size="1280,720" title="Channel Selection">
-		<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="ChannelSelection" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
+		<!--<eLabel backgroundColor="SevenFontBackgroundLeft" font="Regular;13" foregroundColor="red" text="ChannelSelection" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
 		<widget backgroundColor="SevenFontBackCS" scrollbarMode="showNever" picServiceEventProgressbar="SevenHD/progresslistcs/progresslistcs52.png" colorEventProgressbar="SevenProgressListCS" colorEventProgressbarSelected="SevenProgressListCS" foregroundColorMarkedSelected="green" foregroundColor="SevenNameList" colorEventProgressbarBorder="SevenProgressBorderCS" colorEventProgressbarBorderSelected="SevenProgressBorderCS" colorServiceDescription="SevenProgramList" colorServiceDescriptionSelected="SevenSelFont" colorServiceRecording="red" foregroundColorServiceNotAvail="yellow" itemHeight="50" name="list" position="17,78" serviceInfoFont="Regular;23" serviceItemHeight="35" serviceNameFont="Regular2;25" serviceNumberFont="Regular;25" size="816,564" transparent="1" />
 		<widget source="ServiceEvent" render="SevenHDSingleEpgList" position="891,561" size="362,113" noWrap="1" font="Regular2;22" foregroundColor="SevenNextCS" backgroundColor="SevenFontBackRightCS" transparent="1">
 		</widget>
@@ -38,10 +38,10 @@
 		<widget position="999,16" render="SevenHDMovieThumb" size="147,127" source="ServiceEvent" transparent="1" zPosition="14">
 			<convert type="SevenHDEventName">Name</convert>
 		</widget>
-		<eLabel backgroundColor="SevenLineRightCS" position="999,16" size="148,2" zPosition="15" />
-		<eLabel backgroundColor="SevenLineRightCS" position="999,142" size="148,2" zPosition="15" />
-		<eLabel backgroundColor="SevenLineRightCS" position="1146,16" size="2,128" zPosition="15" />
-		<eLabel backgroundColor="SevenLineRightCS" position="999,16" size="2,128" zPosition="15" />
+		<!--<eLabel backgroundColor="SevenLineRightCS" position="999,16" size="148,2" zPosition="15" />-->
+		<!--<eLabel backgroundColor="SevenLineRightCS" position="999,142" size="148,2" zPosition="15" />-->
+		<!--<eLabel backgroundColor="SevenLineRightCS" position="1146,16" size="2,128" zPosition="15" />-->
+		<!--<eLabel backgroundColor="SevenLineRightCS" position="999,16" size="2,128" zPosition="15" />-->
 		<panel name="template_menu_cs_button" />
 	</screen>
 		<!-- /* ChannelSelection Two Columns -->

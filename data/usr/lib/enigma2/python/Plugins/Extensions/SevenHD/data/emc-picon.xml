@@ -2,11 +2,11 @@
 		<widget alphatest="blend" position="19,612" render="SevenHDXPicon" size="172,103" source="Service" transparent="1" zPosition="2">
 			<convert type="ServiceName">Reference</convert>
 		</widget>
-		<eLabel backgroundColor="SevenBorder" position="17,715" size="176,2" zPosition="2" />
-		<eLabel backgroundColor="SevenBorder" position="17,610" size="176,2" zPosition="2" />
-		<eLabel backgroundColor="SevenBorder" position="17,610" size="2,107" zPosition="2" />
-		<eLabel backgroundColor="SevenBorder" position="191,610" size="2,107" zPosition="2" />
-		<eLabel backgroundColor="SevenBackground" position="17,610" size="176,107" transparent="0" zPosition="-9" />
+		<!--<eLabel backgroundColor="SevenBorder" position="17,715" size="176,2" zPosition="101" />-->
+		<!--<eLabel backgroundColor="SevenBorder" position="17,610" size="176,2" zPosition="101" />-->
+		<!--<eLabel backgroundColor="SevenBorder" position="17,610" size="2,107" zPosition="101" />-->
+		<!--<eLabel backgroundColor="SevenBorder" position="191,610" size="2,107" zPosition="101" />-->
+		<eLabel backgroundColor="SevenBackgroundLeft" position="17,610" size="176,107" transparent="0" zPosition="-9" />
 		<ePixmap pixmap="SevenHD/back/menumain.png" position="17,610" size="176,107" alphatest="blend" zPosition="-8" />
   
   

@@ -135,10 +135,19 @@ class ChannelSettings(ConfigListScreen, Screen):
            list.append(getConfigListEntry(_("prime time"),                config.plugins.SevenHD.PrimeTimeTime,              'Zeigt dir in der Kanalliste die PrimeTime an.',                   '4',       'primetime'))
         list.append(getConfigListEntry(_('_____________________________background________________________________________'), ))
         list.append(getConfigListEntry(_("color left"),                   config.plugins.SevenHD.ChannelBack1,               'Stellt den Hintergrund der linken Spalte ein.',                   '4',       'colorleftcs'))
+        if config.plugins.SevenHD.ChannelBack1.value=="back_gradient_csleft":
+            list.append(getConfigListEntry(_("gradient top"),                 config.plugins.SevenHD.GradientCSLeftTop,          'Stellt die obere Farbe vom Farbverlauf der linken Spalte ein.',                   '4',       'colorleftcs'))
+            list.append(getConfigListEntry(_("gradient bottom"),              config.plugins.SevenHD.GradientCSLeftBottom,       'Stellt die untere Farbe vom Farbverlauf der linken Spalte ein.',                   '4',       'colorleftcs'))
         if ChannelSelectionStyle.startswith('channelselection-threecolumns'):
            list.append(getConfigListEntry(_("color middle"),              config.plugins.SevenHD.ChannelBack3,               'Stellt den Hinergrund der mittleren Spalte ein',                  '4',       'colormiddlecs'))
+           if config.plugins.SevenHD.ChannelBack3.value=="back_gradient_csmiddle":
+               list.append(getConfigListEntry(_("gradient top"),              config.plugins.SevenHD.GradientCSMiddleTop,        'Stellt die obere Farbe vom Farbverlauf der mittleren Spalte ein',                  '4',       'colormiddlecs'))
+               list.append(getConfigListEntry(_("gradient bottom"),              config.plugins.SevenHD.GradientCSMiddleBottom,       'Stellt die untere Farbe vom Farbverlauf der mittleren Spalte ein',                  '4',       'colormiddlecs'))
         if not ChannelSelectionStyle.startswith('channelselection-onecolumn'):
            list.append(getConfigListEntry(_("color right"),                  config.plugins.SevenHD.ChannelBack2,               'Stellt den Hintergrund der rechten Spalte ein.',                  '4',       'colorrightcs'))
+           if config.plugins.SevenHD.ChannelBack2.value=="back_gradient_csright":
+               list.append(getConfigListEntry(_("gradient top"),                 config.plugins.SevenHD.GradientCSRightTop,               'Stellt die obere Farbe vom Farbverlauf der rechten Spalte ein.',                  '4',       'colorrightcs'))
+               list.append(getConfigListEntry(_("gradient bottom"),              config.plugins.SevenHD.GradientCSRightBottom,               'Stellt die unteren Farbe vom Farbverlauf der rechten Spalte ein.',                  '4',       'colorrightcs'))
         list.append(getConfigListEntry(_('__________________________________transparency_____________________________________________'), ))
         list.append(getConfigListEntry(_("left window"),                  config.plugins.SevenHD.CSLeftColorTrans,           'Stellt die Transparenz des linken Fenster ein.',                  '4',       'csleft'))
         if ChannelSelectionStyle.startswith('channelselection-threecolumns'):
@@ -302,6 +311,18 @@ class ChannelSettings(ConfigListScreen, Screen):
               preview = self.generate(config.plugins.SevenHD.ProgressListCS.value)
         elif returnValue == config.plugins.SevenHD.ProgressBorderCS:
               preview = self.generate(config.plugins.SevenHD.ProgressBorderCS.value)
+        elif returnValue == config.plugins.SevenHD.GradientCSLeftTop:
+              preview = self.generate(config.plugins.SevenHD.GradientCSLeftTop.value)
+        elif returnValue == config.plugins.SevenHD.GradientCSLeftBottom:
+              preview = self.generate(config.plugins.SevenHD.GradientCSLeftBottom.value)
+        elif returnValue == config.plugins.SevenHD.GradientCSMiddleTop:
+              preview = self.generate(config.plugins.SevenHD.GradientCSMiddleTop.value)
+        elif returnValue == config.plugins.SevenHD.GradientCSMiddleBottom:
+              preview = self.generate(config.plugins.SevenHD.GradientCSMiddleBottom.value)
+        elif returnValue == config.plugins.SevenHD.GradientCSRightTop:
+              preview = self.generate(config.plugins.SevenHD.GradientCSRightTop.value)
+        elif returnValue == config.plugins.SevenHD.GradientCSRightBottom:
+              preview = self.generate(config.plugins.SevenHD.GradientCSRightBottom.value)
         else:
               self["colorthump"].instance.hide()
         return str(preview)
@@ -329,6 +350,8 @@ class ChannelSettings(ConfigListScreen, Screen):
            return str(MAIN_IMAGE_PATH) + "slate.png"
         elif 'brownleather' in color:
            return str(MAIN_IMAGE_PATH) + "brownleather.png"
+        elif 'gradient' in color:
+           return str(MAIN_IMAGE_PATH) + "gradient.png"
         
     def keyLeft(self):
         ConfigListScreen.keyLeft(self)
@@ -388,6 +411,12 @@ class ChannelSettings(ConfigListScreen, Screen):
         self.setInputToDefault(config.plugins.SevenHD.CSLeftColorTrans)
         self.setInputToDefault(config.plugins.SevenHD.CSMiddleColorTrans)
         self.setInputToDefault(config.plugins.SevenHD.CSRightColorTrans)
+        self.setInputToDefault(config.plugins.SevenHD.GradientCSLeftTop)
+        self.setInputToDefault(config.plugins.SevenHD.GradientCSLeftBottom)
+        self.setInputToDefault(config.plugins.SevenHD.GradientCSRightTop)
+        self.setInputToDefault(config.plugins.SevenHD.GradientCSRightBottom)
+        self.setInputToDefault(config.plugins.SevenHD.GradientCSMiddleTop)
+        self.setInputToDefault(config.plugins.SevenHD.GradientCSMiddleBottom)
         self.save()
 
     def setInputToDefault(self, configItem):

@@ -31,8 +31,10 @@
 		<color name="SevenFont1" value="#SevenFont_1" />
 		<color name="SevenFont2" value="#SevenFont_2" />
 		<color name="SevenBackground" value="#00000000" />
+		<color name="SevenBackgroundLeft" value="#00000000" />
 		<color name="SevenBackgroundRight" value="#00000000" />
 		<color name="SevenFontBackground" value="#00000000" />
+		<color name="SevenFontBackgroundLeft" value="#00000000" />
 		<color name="SevenFontBackgroundRight" value="#00000000" />
 		<color name="SevenBorder" value="#Seven_Border" />
 		<color name="SevenBorderRight" value="#SevenBorder_Right" />
@@ -86,6 +88,8 @@
 		<color name="SevenProgressLineIB" value="#SevenProgress_LineIB" />
 		<color name="SevenProgressVol" value="#00fffff3" />
 		<color name="SevenProgressCS" value="#00fffff4" />
+		<color name="SevenProgressLinePlug" value="#SevenProgress_LinePlug" />
+		<color name="SevenProgressLineVol" value="#SevenProgress_LineVol" />
 		<color name="SevenProgressListCS" value="#00fffff5" />
 		<color name="SevenProgressIB" value="#00fffff2" />
 		<color name="SevenMeteoFont" value="#SevenMeteo_Font" />
@@ -163,9 +167,9 @@
 	</subtitles>
 	<windowstyle id="0" type="skinned">
 		<title font="Regular;24" offset="20,5" />
-		<color color="SevenBackground" name="Background" />
+		<color color="SevenBackgroundLeft" name="Background" />
 		<color color="SevenFont1" name="LabelForeground" />
-		<color color="SevenBackground" name="ListboxBackground" />
+		<color color="SevenBackgroundLeft" name="ListboxBackground" />
 		<color color="SevenFont1" name="ListboxForeground" />
 		<color color="SevenSelection" name="ListboxSelectedBackground" />
 		<color color="SevenSelFont" name="ListboxSelectedForeground" />
@@ -174,7 +178,7 @@
 		<color color="SevenSelection" name="ListboxMarkedAndSelectedBackground" />
 		<color color="SevenSelFont" name="ListboxMarkedAndSelectedForeground" />
 		<color color="SevenFont1" name="WindowTitleForeground" />
-		<color color="SevenBackground" name="WindowTitleBackground" />
+		<color color="SevenBackgroundLeft" name="WindowTitleBackground" />
 		<borderset name="bsWindow">
 			<pixmap filename="SevenHD/bsWindow/bs_tl.png" pos="bpTopLeft" />
 			<pixmap filename="SevenHD/bsWindow/bs_t.png" pos="bpTop" />

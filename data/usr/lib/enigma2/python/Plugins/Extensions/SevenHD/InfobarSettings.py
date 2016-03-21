@@ -145,8 +145,14 @@ class InfobarSettings(ConfigListScreen, Screen):
         if config.plugins.SevenHD.SIB.value == '-picon':
            list.append(getConfigListEntry(_("second infobar"),       config.plugins.SevenHD.SIB,               'W\xc3\xa4hle den Stil der zweiten Infobar',                                                            '4',       'SIB8'))
         list.append(getConfigListEntry(_('_____________________________background________________________________________'), ))
-        list.append(getConfigListEntry(_("primary color"),           config.plugins.SevenHD.BackgroundIB1,     'Stellt die Farbe der linken Seite sowie den unteren Bereich der Infobar ein.',                        '4',       'Color1'))
-        list.append(getConfigListEntry(_("secondary color"),         config.plugins.SevenHD.BackgroundIB2,     'Stellt die Farbe der rechten Seite sowie den mittigen Bereich der Infobar ein.',                      '4',       'Color2'))
+        list.append(getConfigListEntry(_("primary color"),           config.plugins.SevenHD.BackgroundIB1,     'Stellt die Farbe der linken Seite sowie den unteren Bereich der Infobar ein.',                         '4',       'Color1'))
+        if config.plugins.SevenHD.BackgroundIB1.value=="back_gradient_ib1":
+            list.append(getConfigListEntry(_("gradient top"),            config.plugins.SevenHD.GradientIB1Top,    'Stellt die obere Farbe des Farbverlauf der linken Seite sowie den unteren Bereich der Infobar ein.',   '4',       'Color1'))
+            list.append(getConfigListEntry(_("gradient bottom"),         config.plugins.SevenHD.GradientIB1Bottom, 'Stellt die untere Frabe des Farbverlauf der linken Seite sowie den unteren Bereich der Infobar ein.',  '4',       'Color1'))
+        list.append(getConfigListEntry(_("secondary color"),         config.plugins.SevenHD.BackgroundIB2,     'Stellt die Farbe der rechten Seite sowie den mittigen Bereich der Infobar ein.',                       '4',       'Color2'))
+        if config.plugins.SevenHD.BackgroundIB2.value=="back_gradient_ib2":
+            list.append(getConfigListEntry(_("gradient top"),            config.plugins.SevenHD.GradientIB2Top,    'Stellt die obere Farbe des Farbverlauf der rechten Seite sowie den mittigen Bereich der Infobar ein.', '4',       'Color1'))
+            list.append(getConfigListEntry(_("gradient bottom"),         config.plugins.SevenHD.GradientIB2Bottom, 'Stellt die untere Frabe des Farbverlauf der rechten Seite sowie den mittigen Bereich der Infobar ein.','4',       'Color1'))
         list.append(getConfigListEntry(_('__________________________________transparency_____________________________________________'), ))
         list.append(getConfigListEntry(_("primary transparency"),    config.plugins.SevenHD.IB1ColorTrans,     'Stellt die Transparenz der linken Seite sowie den unteren Bereich der Infobar ein.',                  '4',       'ib1'))
         list.append(getConfigListEntry(_("secondary transparency"),  config.plugins.SevenHD.IB2ColorTrans,     'Stellt die Transparenz der rechten Seite sowie den unteren Bereich der Infobar ein.',                 '4',       'ib2'))
@@ -188,7 +194,7 @@ class InfobarSettings(ConfigListScreen, Screen):
 	   list.append(getConfigListEntry(_("color time"),           config.plugins.SevenHD.ClockTime,         'Stellt die Farbe der Zeit ein.',                                                                       '4',       'ClockTime'))
 	   list.append(getConfigListEntry(_("color date"),           config.plugins.SevenHD.ClockDate,         'Stellt die Farbe des Datum ein.',                                                                      '4',       'ClockDate'))
 	   list.append(getConfigListEntry(_("color weekday"),        config.plugins.SevenHD.ClockWeek,         'Stellt die Farbe des Wochetages ein.',                                                                 '4',       'ClockWeek'))
-        if config.plugins.SevenHD.ClockStyle.value == "clock-weather" or config.plugins.SevenHD.ClockStyle.value == "clock-weather2" or config.plugins.SevenHD.ClockStyle.value == "clock-weather-meteo":
+        if config.plugins.SevenHD.ClockStyle.value == "clock-weather" or config.plugins.SevenHD.ClockStyle.value == "clock-icon" or config.plugins.SevenHD.ClockStyle.value == "clock-weather-meteo":
 	   list.append(getConfigListEntry(_("color time"),           config.plugins.SevenHD.ClockTime,         'Stellt die Farbe der Zeit ein.',                                                                       '4',       'ClockTime'))
 	   list.append(getConfigListEntry(_("color date"),           config.plugins.SevenHD.ClockDate,         'Stellt die Farbe des Datum ein.',                                                                      '4',       'ClockDate'))
 	   list.append(getConfigListEntry(_("color weather"),        config.plugins.SevenHD.ClockWeather,      'Stellt die Farbe von der Temperatur ein.',                                                             '4',       'ClockWeather'))
@@ -306,6 +312,14 @@ class InfobarSettings(ConfigListScreen, Screen):
               preview = self.generate(config.plugins.SevenHD.ClockWeek.value)
         elif returnValue == config.plugins.SevenHD.ClockWeather:
               preview = self.generate(config.plugins.SevenHD.ClockWeather.value)
+        elif returnValue == config.plugins.SevenHD.GradientIB1Top:
+              preview = self.generate(config.plugins.SevenHD.GradientIB1Top.value)
+        elif returnValue == config.plugins.SevenHD.GradientIB1Bottom:
+              preview = self.generate(config.plugins.SevenHD.GradientIB1Bottom.value)
+        elif returnValue == config.plugins.SevenHD.GradientIB2Top:
+              preview = self.generate(config.plugins.SevenHD.GradientIB2Top.value)
+        elif returnValue == config.plugins.SevenHD.GradientIB2Bottom:
+              preview = self.generate(config.plugins.SevenHD.GradientIB2Bottom.value)
         else:                                             
               self["colorthump"].instance.hide()
         return str(preview)
@@ -333,6 +347,8 @@ class InfobarSettings(ConfigListScreen, Screen):
            return str(MAIN_IMAGE_PATH) + "slate.png"
         elif 'brownleather' in color:
            return str(MAIN_IMAGE_PATH) + "brownleather.png"
+        elif 'gradient' in color:
+           return str(MAIN_IMAGE_PATH) + "gradient.png"
         
     def keyLeft(self):
         ConfigListScreen.keyLeft(self)
@@ -386,6 +402,10 @@ class InfobarSettings(ConfigListScreen, Screen):
         self.setInputToDefault(config.plugins.SevenHD.ProgressIB)
         self.setInputToDefault(config.plugins.SevenHD.IB1ColorTrans)
         self.setInputToDefault(config.plugins.SevenHD.IB2ColorTrans)
+        self.setInputToDefault(config.plugins.SevenHD.GradientIB1Top)
+        self.setInputToDefault(config.plugins.SevenHD.GradientIB1Bottom)
+        self.setInputToDefault(config.plugins.SevenHD.GradientIB2Top)
+        self.setInputToDefault(config.plugins.SevenHD.GradientIB2Bottom)
         self.save()
 
     def setInputToDefault(self, configItem):

@@ -2,8 +2,8 @@
 		<widget position="16,337" render="SevenHDMovieThumb" size="207,132" source="session.CurrentService" transparent="1" zPosition="14">
 			<convert type="ServiceName">NameAndEvent</convert>
 		</widget>
-		<eLabel backgroundColor="SevenBorderIB" position="223,336" size="2,134" zPosition="15" />
-		<eLabel backgroundColor="SevenBorderIB" position="14,335" size="2,136" zPosition="15" />
-		<eLabel backgroundColor="SevenBorderIB" position="15,335" size="210,2" zPosition="15" />
-		<eLabel backgroundColor="SevenBorderIB" position="15,469" size="210,2" zPosition="15" />
+		<!--<eLabel backgroundColor="SevenBorderIB" position="223,336" size="2,134" zPosition="103" />-->
+		<!--<eLabel backgroundColor="SevenBorderIB" position="14,335" size="2,136" zPosition="103" />-->
+		<!--<eLabel backgroundColor="SevenBorderIB" position="15,335" size="210,2" zPosition="103" />-->
+		<!--<eLabel backgroundColor="SevenBorderIB" position="15,469" size="210,2" zPosition="103" />-->
 

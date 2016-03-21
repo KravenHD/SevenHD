@@ -1,15 +1,17 @@
 		<!-- /* InfoBar Original -->
 	<screen backgroundColor="transparent" flags="wfNoBorder" name="InfoBar" position="0,0" size="1280,720" title="InfoBar">
-		<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="InfoBar" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
+		<!--<eLabel backgroundColor="SevenFontBackgroundLeft" font="Regular;13" foregroundColor="red" text="InfoBar" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
 		<widget source="session.CurrentService" render="Pixmap" pixmap="SevenHD/update.png" position="1240,679" size="20,20" zPosition="3" alphatest="blend">
 			<convert type="SevenHDUpdate">Update</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
-		<eLabel backgroundColor="SevenBackgroundIB1" position="14,533" size="1250,168" zPosition="-9" />
-		<eLabel backgroundColor="SevenBorderIB" position="1262,533" size="2,170" zPosition="2" />
-		<eLabel backgroundColor="SevenBorderIB" position="14,533" size="2,170" zPosition="2" />
-		<eLabel backgroundColor="SevenBorderIB" position="14,533" size="1250,2" zPosition="2" />
-		<eLabel backgroundColor="SevenBorderIB" position="14,701" size="1250,2" zPosition="2" />
+		<eLabel backgroundColor="SevenBackgroundIB1" position="14,534" size="1250,186" zPosition="-9" />
+		<!--<eLabel backgroundColor="SevenBorderIB" position="1262,533" size="2,170" zPosition="103" />-->
+		<!--<eLabel backgroundColor="SevenBorderIB" position="14,533" size="2,170" zPosition="103" />-->
+		<!--<eLabel backgroundColor="SevenBorderIB" position="14,533" size="1250,2" zPosition="103" />-->
+		<!--<eLabel backgroundColor="SevenBorderIB" position="14,702" size="2,18" zPosition="103" />-->
+		<!--<eLabel backgroundColor="SevenBorderIB" position="1262,700" size="2,18" zPosition="103" />-->
+		<!--<eLabel backgroundColor="SevenBorderIB" position="14,718" size="1250,2" zPosition="103" />-->
 		<eLabel backgroundColor="SevenProgressLineIB" position="14,516" size="1250,2" zPosition="2" />
 		<widget position="14,514" backgroundColor="SevenFontBackgroundIB1" render="Progress" size="1250,6" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgressIB" pixmap="SevenHD/progressib/progressib1280.png">
 			<convert type="SevenHDEventTime">Progress</convert>
@@ -48,4 +50,4 @@
 		<widget font="Regular2;36" halign="center" valign="center" noWrap="1" position="215,630" render="SevenHDRunningText" options="movetype=running,startpoint=0,startdelay=2000,steptime=90,wrap=0,always=0,repeat=2,oneshot=1" size="850,48" source="session.Event_Next" backgroundColor="SevenFontBackgroundIB1" transparent="1" zPosition="1" foregroundColor="SevenNextIB">
 			<convert type="SevenHDEventName">Name</convert>
 		</widget>
-		<ePixmap pixmap="SevenHD/back/ibone.png" position="14,533" size="1250,170" alphatest="blend" zPosition="-8" />
+		<ePixmap pixmap="SevenHD/back/ibone.png" position="14,533" size="1250,186" alphatest="blend" zPosition="-8" />

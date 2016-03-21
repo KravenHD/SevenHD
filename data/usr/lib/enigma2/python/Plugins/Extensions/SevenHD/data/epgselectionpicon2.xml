@@ -1,6 +1,6 @@
 		<!-- EPGSelection -->
 	<screen backgroundColor="transparent" flags="wfNoBorder" name="EPGSelection" position="0,0" size="1280,720" title="EPG Selection">
-		<widget backgroundColor="SevenFontBackground" itemHeight="32" foregroundColor="SevenFont1" font="Regular; 22" name="list" enableWrapAround="1" scrollbarWidth="2" position="17,78" size="689,564" transparent="1" zPosition="3" />
+		<widget backgroundColor="SevenFontBackgroundLeft" itemHeight="32" foregroundColor="SevenFont1" font="Regular; 22" name="list" enableWrapAround="1" scrollbarWidth="2" position="17,78" size="689,564" transparent="1" zPosition="3" />
 		<widget alphatest="blend" position="886,15" render="SevenHDXPicon" size="220,132" source="Service" transparent="1" zPosition="4">
 			<convert type="ServiceName">Reference</convert>
 		</widget>

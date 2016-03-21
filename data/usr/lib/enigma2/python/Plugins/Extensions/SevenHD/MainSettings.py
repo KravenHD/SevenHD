@@ -137,6 +137,11 @@ class MainSettings(ConfigListScreen, Screen):
         list.append(getConfigListEntry(_("plugin icons"),              config.plugins.SevenHD.IconStyle,                 'Stellt die Farbe der [+] und | im PluginBrowser sowie NetzwerkBrowser ein.',                         '4',                'Icons'))
         list.append(getConfigListEntry(_("volume style"),              config.plugins.SevenHD.VolumeStyle,               '\xc3\x84ndert die Darstellung der Lautst\xc3\xa4rkeanzeige.',                                        '1',                ''))
         list.append(getConfigListEntry(_("volumebar"),                 config.plugins.SevenHD.ProgressVol,               'Stellt die Farbe der Lautst\xc3\xa4rkeanzeige ein.',                                                 '4',                'progressvol'))
+        if config.plugins.SevenHD.VolumeStyle.value == 'volumestyle-original':
+           list.append(getConfigListEntry(_("volumebar line"),         config.plugins.SevenHD.ProgressLineVol,           'Stellt die Farbe der Linie unter der Lautst\xc3\xa4rkeanzeige ein.',                                 '4',                'progressvol'))
+        #list.append(getConfigListEntry(_('_____________________________background messagebox and widgets________________________________________'), ))
+        #list.append(getConfigListEntry(_("color"),                     config.plugins.SevenHD.Background,                'Stellt die Farbe der Narichtenfenster und anderer Widgets ein.',                                     '4',      'message'))
+        #list.append(getConfigListEntry(_("transparency"),              config.plugins.SevenHD.BackgroundColorTrans,      'Stellt die Transparenz der Narichtenfenster und anderer Widgets ein.',                               '4',      'transparency'))
         list.append(getConfigListEntry(_('_____________________________listselection______________________________________'), ))
         list.append(getConfigListEntry(_("color"),              config.plugins.SevenHD.SelectionBackground,    'Stellt die Farbe des Auswahlbalken ein.',                                                                      '4',     'Listselection'))
         list.append(getConfigListEntry(_("border"),             config.plugins.SevenHD.SelectionBorder,        'Stellt die Farbe des Rahmen ein.',                                                                             '4',     'Listborder'))
@@ -210,12 +215,16 @@ class MainSettings(ConfigListScreen, Screen):
         preview = ''
         if returnValue == config.plugins.SevenHD.ProgressVol:
               preview = self.generate(config.plugins.SevenHD.ProgressVol.value)
+        elif returnValue == config.plugins.SevenHD.ProgressLineVol:
+              preview = self.generate(config.plugins.SevenHD.ProgressLineVol.value)
         elif returnValue == config.plugins.SevenHD.SelectionBackground:
               preview = self.generate(config.plugins.SevenHD.SelectionBackground.value)
         elif returnValue == config.plugins.SevenHD.SelectionBorder:
               preview = self.generate(config.plugins.SevenHD.SelectionBorder.value)
         elif returnValue == config.plugins.SevenHD.SelectionFont:
               preview = self.generate(config.plugins.SevenHD.SelectionFont.value)
+        elif returnValue == config.plugins.SevenHD.Background:
+              preview = self.generate(config.plugins.SevenHD.Background.value)
         else:
               self["colorthump"].instance.hide()
         return str(preview)
@@ -322,9 +331,12 @@ class MainSettings(ConfigListScreen, Screen):
         self.setInputToDefault(config.plugins.SevenHD.Steptime)
         self.setInputToDefault(config.plugins.SevenHD.Volume)
         self.setInputToDefault(config.plugins.SevenHD.ProgressVol)
+        self.setInputToDefault(config.plugins.SevenHD.ProgressLineVol)
         self.setInputToDefault(config.plugins.SevenHD.SelectionBackground)
         self.setInputToDefault(config.plugins.SevenHD.SelectionBorder)
         self.setInputToDefault(config.plugins.SevenHD.SelectionFont)
+        self.setInputToDefault(config.plugins.SevenHD.Background)
+        self.setInputToDefault(config.plugins.SevenHD.BackgroundColorTrans)
 
         self.save()
 

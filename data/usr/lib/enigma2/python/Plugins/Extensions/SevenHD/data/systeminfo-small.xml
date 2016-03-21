@@ -15,9 +15,9 @@
 		<widget source="session.CurrentService" render="Label" font="Regular;16" position="1203,291" size="54,20" halign="right" valign="bottom" backgroundColor="SevenFontBackgroundIB1" transparent="1" noWrap="1" foregroundColor="SevenSys2">
 			<convert type="SevenHDLayoutInfo">LoadAvg</convert>
 		</widget>
-		<eLabel backgroundColor="SevenBorderIB" position="974,264" size="2,56" zPosition="2" />
-		<eLabel backgroundColor="SevenBorderIB" position="1262,264" size="2,56" zPosition="2" />
-		<eLabel backgroundColor="SevenBorderIB" position="974,264" size="290,2" zPosition="2" />
-		<eLabel backgroundColor="SevenBorderIB" position="974,318" size="290,2" zPosition="2" />
+		<!--<eLabel backgroundColor="SevenBorderIB" position="974,264" size="2,56" zPosition="103" />-->
+		<!--<eLabel backgroundColor="SevenBorderIB" position="1262,264" size="2,56" zPosition="103" />-->
+		<!--<eLabel backgroundColor="SevenBorderIB" position="974,264" size="290,2" zPosition="103" />-->
+		<!--<eLabel backgroundColor="SevenBorderIB" position="974,318" size="290,2" zPosition="103" />-->
 		<eLabel backgroundColor="SevenBackgroundIB1" position="974,264" size="290,56" transparent="0" zPosition="-10" />
-		<ePixmap pixmap="SevenHD/back/ibone.png" position="974,264" size="290,56" alphatest="blend" zPosition="-8" />
+		<ePixmap pixmap="SevenHD/back/ibtop.png" position="974,264" size="290,56" alphatest="blend" zPosition="-8" />

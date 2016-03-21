@@ -1,5 +1,5 @@
 <screen backgroundColor="transparent" flags="wfNoBorder" name="ChannelSelection" position="0,0" size="1280,720" title="Channel Selection">
-		<!--<eLabel backgroundColor="SevenFontBackground" font="Regular;13" foregroundColor="red" text="ChannelSelection" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
+		<!--<eLabel backgroundColor="SevenFontBackgroundLeft" font="Regular;13" foregroundColor="red" text="ChannelSelection" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
 		<widget backgroundColor="SevenFontBackCS" foregroundColor="SevenNameList" scrollbarMode="showNever" picServiceEventProgressbar="SevenHD/progresslistcs/progresslistcs52.png" colorEventProgressbar="SevenProgressListCS" colorEventProgressbarSelected="SevenProgressListCS" foregroundColorMarkedSelected="green" colorEventProgressbarBorder="SevenProgressBorderCS" colorEventProgressbarBorderSelected="SevenProgressBorderCS" colorServiceDescription="SevenProgramList" colorServiceDescriptionSelected="SevenSelFont" colorServiceRecording="red" foregroundColorServiceNotAvail="yellow" itemHeight="50" name="list" position="30,74" serviceInfoFont="Regular2;22" serviceItemHeight="37" serviceNameFont="Regular;26" serviceNumberFont="Regular;26" size="662,564" transparent="1" />
 		<widget font="Regular; 22" foregroundColor="SevenDestcriptionCS" position="742,402" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,steptime=90,wrap=1,always=0,repeat=2,oneshot=1" size="505,164" source="ServiceEvent" valign="top" backgroundColor="SevenFontBackRightCS" zPosition="1" transparent="1">
 			<convert type="SevenHDEventName">BothDescriptionsFiltered</convert>
@@ -21,9 +21,9 @@
 		<widget backgroundColor="SevenFontBackRightCS" font="Regular;22" foregroundColor="SevenPrimeCS" position="742,628" render="Label" size="505,30" source="ServiceEvent" transparent="1" zPosition="5" noWrap="1">
 			<convert type="SevenHDNextEvents">PrimeTime,noDuration</convert>
 		</widget>
-		<eLabel backgroundColor="SevenLineRightCS" position="742,387" size="505,4" zPosition="5" />
-		<eLabel backgroundColor="SevenLineRightCS" position="742,108" size="505,4" zPosition="5" />
-		<eLabel backgroundColor="SevenLineRightCS" position="1243,108" size="4,282" zPosition="5" />
-		<eLabel backgroundColor="SevenLineRightCS" position="742,108" size="4,282" zPosition="5" />
+		<!--<eLabel backgroundColor="SevenLineRightCS" position="742,387" size="505,4" zPosition="5" />-->
+		<!--<eLabel backgroundColor="SevenLineRightCS" position="742,108" size="505,4" zPosition="5" />-->
+		<!--<eLabel backgroundColor="SevenLineRightCS" position="1243,108" size="4,282" zPosition="5" />-->
+		<!--<eLabel backgroundColor="SevenLineRightCS" position="742,108" size="4,282" zPosition="5" />-->
 		<panel name="template_menu_cs13_button" />
 	</screen>

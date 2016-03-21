@@ -1,15 +1,15 @@
 		<eLabel backgroundColor="SevenBackgroundIB2" position="14,2" size="1250,40" zPosition="-9" />
-		<eLabel backgroundColor="SevenBorderIB2" position="14,40" size="1250,2" zPosition="2" />
-		<eLabel backgroundColor="SevenBorderIB2" position="14,1" size="1250,2" zPosition="2" />
-		<eLabel backgroundColor="SevenBorderIB2" position="14,1" size="2,40" zPosition="2" />
-		<eLabel backgroundColor="SevenBorderIB2" position="1262,1" size="2,40" zPosition="2" />
+		<!--<eLabel backgroundColor="SevenBorderIB2" position="14,40" size="1250,2" zPosition="104" />-->
+		<!--<eLabel backgroundColor="SevenBorderIB2" position="14,1" size="1250,2" zPosition="104" />-->
+		<!--<eLabel backgroundColor="SevenBorderIB2" position="14,1" size="2,40" zPosition="104" />-->
+		<!--<eLabel backgroundColor="SevenBorderIB2" position="1262,1" size="2,40" zPosition="104" />-->
 		<eLabel backgroundColor="SevenBackgroundIB1" position="14,47" size="620,420" zPosition="-9" />
-		<eLabel backgroundColor="SevenBorderIB" position="14,465" size="620,2" zPosition="2" />
-		<eLabel backgroundColor="SevenBorderIB" position="14,45" size="620,2" zPosition="2" />
-		<eLabel backgroundColor="SevenBorderIB" position="14,45" size="2,422" zPosition="2" />
-		<eLabel backgroundColor="SevenBorderIB2" position="1262,45" size="2,422" zPosition="2" />
-		<eLabel backgroundColor="SevenBorderIB" position="633,45" size="2,422" zPosition="2" />
-		<eLabel backgroundColor="SevenBorderIB2" position="643,45" size="2,422" zPosition="2" />
+		<!--<eLabel backgroundColor="SevenBorderIB" position="14,465" size="620,2" zPosition="103" />-->
+		<!--<eLabel backgroundColor="SevenBorderIB" position="14,45" size="620,2" zPosition="103" />-->
+		<!--<eLabel backgroundColor="SevenBorderIB" position="14,45" size="2,422" zPosition="103" />-->
+		<!--<eLabel backgroundColor="SevenBorderIB2" position="1262,45" size="2,422" zPosition="104" />-->
+		<!--<eLabel backgroundColor="SevenBorderIB" position="633,45" size="2,422" zPosition="103" />-->
+		<!--<eLabel backgroundColor="SevenBorderIB2" position="643,45" size="2,422" zPosition="104" />-->
 		<widget source="session.CurrentService" position="37,10" size="500,22" font="Regular2;12" render="Label" halign="left" valign="bottom" foregroundColor="SevenSNRIB" backgroundColor="SevenFontBackgroundIB2" transparent="1" zPosition="1">
 			<convert type="SevenHDECMLine">ShortReader,FTAVisible</convert>
 		</widget>
@@ -39,23 +39,21 @@
 		<widget backgroundColor="SevenFontBackgroundIB2" font="Regular; 24" foregroundColor="SevenNextIB" halign="center" position="666,93" render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,steptime=90,wrap=1,always=0,repeat=2,oneshot=1" size="578,367" source="session.Event_Next" zPosition="1" transparent="1">
 			<convert type="SevenHDEventName">BothDescriptionsFiltered</convert>
 		</widget>
-		<eLabel backgroundColor="SevenBorderIB2" position="643,45" size="620,2" zPosition="2" />
-		<eLabel backgroundColor="SevenBorderIB2" position="643,465" size="620,2" zPosition="2" />
+		<!--<eLabel backgroundColor="SevenBorderIB2" position="643,45" size="620,2" zPosition="104" />-->
+		<!--<eLabel backgroundColor="SevenBorderIB2" position="643,465" size="620,2" zPosition="104" />-->
 		<eLabel backgroundColor="SevenBackgroundIB2" position="643,47" size="620,420" zPosition="-9" />
-		<eLabel backgroundColor="SevenBackgroundIB1" position="14,533" size="1250,168" zPosition="-9" />
-		<eLabel backgroundColor="SevenBorderIB" position="1262,533" size="2,170" zPosition="2" />
-		<eLabel backgroundColor="SevenBorderIB" position="14,533" size="2,170" zPosition="2" />
-		
-		<eLabel backgroundColor="SevenBorderIB" position="14,701" size="1250,2" zPosition="2" />
+
 		<widget source="session.CurrentService" render="Pixmap" pixmap="SevenHD/update.png" position="1240,679" size="20,20" zPosition="3" alphatest="blend">
 			<convert type="SevenHDUpdate">Update</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
-		<eLabel backgroundColor="SevenBackgroundIB1" position="14,533" size="1250,168" zPosition="-9" />
-		<eLabel backgroundColor="SevenBorderIB" position="1262,533" size="2,170" zPosition="2" />
-		<eLabel backgroundColor="SevenBorderIB" position="14,533" size="2,170" zPosition="2" />
+		<eLabel backgroundColor="SevenBackgroundIB1" position="14,533" size="1250,186" zPosition="-9" />
+		<!--<eLabel backgroundColor="SevenBorderIB" position="1262,533" size="2,170" zPosition="103" />-->
+		<!--<eLabel backgroundColor="SevenBorderIB" position="14,533" size="2,170" zPosition="103" />-->
+		<!--<eLabel backgroundColor="SevenBorderIB" position="14,702" size="2,18" zPosition="103" />-->
+		<!--<eLabel backgroundColor="SevenBorderIB" position="1262,700" size="2,18" zPosition="103" />-->
+		<!--<eLabel backgroundColor="SevenBorderIB" position="14,718" size="1250,2" zPosition="103" />-->
 		
-		<eLabel backgroundColor="SevenBorderIB" position="14,701" size="1250,2" zPosition="2" />
 		<eLabel backgroundColor="SevenProgressLineIB" position="273,595" size="793,2" zPosition="2" />
 		<widget position="273,593" backgroundColor="SevenFontBackgroundIB1" render="Progress" size="793,6" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgressIB" pixmap="SevenHD/progressib/progressib793.png">
 			<convert type="SevenHDEventTime">Progress</convert>
@@ -158,23 +156,23 @@
 			<convert type="SevenHDEventTime">Duration</convert>
 			<convert type="SevenHDClockToText">InMinutes</convert>
 		</widget>
-		<ePixmap pixmap="SevenHD/back/ibone.png" position="14,533" size="1250,170" alphatest="blend" zPosition="-8" />
+
 		<eLabel backgroundColor="SevenFontBackgroundIB1" foregroundColor="SevenFont1" font="Regular; 19" halign="left" noWrap="1" position="275,611" size="196,25" text="Sendung läuft seit" transparent="1" valign="center" zPosition="1" />
 		<widget backgroundColor="SevenFontBackgroundIB1" foregroundColor="SevenFont1" font="Regular; 19" halign="left" position="443,611" render="Label" size="75,25" source="session.Event_Now" transparent="1" valign="center" zPosition="1">
 			<convert type="SevenHDEventTime">RunTime</convert>
 			<convert type="SevenHDRemainingToText">InMinutes</convert>
 		</widget>
-		<eLabel backgroundColor="SevenBorderIB2" position="248,533" size="2,112" zPosition="2" />
-		<eLabel backgroundColor="SevenBorderIB2" position="1076,533" size="2,112" zPosition="2" />
-		<eLabel backgroundColor="SevenBorderIB2" position="248,643" size="830,2" zPosition="2" />
-		<ePixmap pixmap="SevenHD/back/ibone.png" position="14,533" size="1250,170" alphatest="blend" zPosition="-8" />
-		<ePixmap pixmap="SevenHD/back/ibone.png" position="14,47" size="620,420" alphatest="blend" zPosition="-8" />
-		<ePixmap pixmap="SevenHD/back/ibtwo.png" position="14,2" size="1250,40" alphatest="blend" zPosition="-8" />
-		<ePixmap pixmap="SevenHD/back/ibtwo.png" position="643,47" size="620,420" alphatest="blend" zPosition="-8" />
-		<ePixmap pixmap="SevenHD/back/ibtwo.png" position="249,533" size="828,111" alphatest="blend" zPosition="-6" />
+		<!--<eLabel backgroundColor="SevenBorderIB2" position="248,533" size="2,112" zPosition="104" />-->
+		<!--<eLabel backgroundColor="SevenBorderIB2" position="1076,533" size="2,112" zPosition="104" />-->
+		<!--<eLabel backgroundColor="SevenBorderIB2" position="248,643" size="830,2" zPosition="104" />-->
+		<ePixmap pixmap="SevenHD/back/ibone.png" position="14,533" size="1250,186" alphatest="blend" zPosition="-5" />
+		<ePixmap pixmap="SevenHD/back/sibleft.png" position="14,47" size="620,420" alphatest="blend" zPosition="-8" />
+		<ePixmap pixmap="SevenHD/back/sibtop.png" position="14,2" size="1250,40" alphatest="blend" zPosition="-8" />
+		<ePixmap pixmap="SevenHD/back/sibright.png" position="643,47" size="620,420" alphatest="blend" zPosition="-8" />
+		
 		<eLabel backgroundColor="SevenBackgroundIB2" position="249,533" size="828,111" zPosition="-7" />
-		<eLabel backgroundColor="SevenBorderIB" position="1076,533" size="186,2" zPosition="1" />
-		<eLabel backgroundColor="SevenBorderIB" position="14,533" size="236,2" zPosition="1" />
-		<eLabel backgroundColor="SevenBorderIB2" position="248,533" size="830,2" zPosition="2" />
+		<!--<eLabel backgroundColor="SevenBorderIB" position="1076,533" size="186,2" zPosition="103" />-->
+		<!--<eLabel backgroundColor="SevenBorderIB" position="14,533" size="236,2" zPosition="103" />-->
+		<!--<eLabel backgroundColor="SevenBorderIB2" position="248,533" size="830,2" zPosition="104" />-->
 	</screen>
 		<!-- SecondInfobar XPicon*/-->
