@@ -1,10 +1,10 @@
-#version = '3.6.76'
+#version = '3.6.77'
 import os
 try:
    opkg_info = os.popen("opkg list-installed enigma2-plugin-skins-sevenhd | cut -d ' ' -f3").read()
    version = str(opkg_info.strip().split('+')[0])
 except:
-   version = '3.6.76'
+   version = '3.6.77'
 import re
 import time
 import math
@@ -433,7 +433,7 @@ config.plugins.SevenHD.EventView = ConfigSelection(default="eventviewnopicon", c
 				("eventviewpicon", _("Style 2")),
 				("eventviewminitv", _("Style 3")),
 				("eventviewpicon2", _("Style 4")),
-				#("eventviewthumb", _("Style 5"))
+				("eventviewthumb", _("Style 5"))
 				])
 				
 config.plugins.SevenHD.EPGSelection = ConfigSelection(default="epgselectionnopicon", choices = [
@@ -442,7 +442,7 @@ config.plugins.SevenHD.EPGSelection = ConfigSelection(default="epgselectionnopic
 				("epgselectionminitv", _("Style 3")),
 				("epgselectiononecolumn", _("Style 4")),
 				("epgselectionpicon2", _("Style 5")),
-				#("epgselectionthumb", _("Style 6"))
+				("epgselectionthumb", _("Style 6"))
 				])
 				
 config.plugins.SevenHD.TimerEdit = ConfigSelection(default="timereditleft", choices = [
@@ -596,10 +596,10 @@ config.plugins.SevenHD.InfobarChannelName = ConfigSelection(default="none", choi
 				("-fanartname", _("Fanart and channelname")),
 				("-fanartnumber", _("Fanart and channelnumber")),
 				("-fanartnamenumber", _("Fanart, channelname and channelnumber")),
-				#("-thumb", _("MovieThumb")),
-				#("-thumbname", _("MovieThumb and channelname")),
-				#("-thumbnumber", _("MovieThumb and channelnumber")),
-				#("-thumbnamenumber", _("MovieThumb, channelname and channelnumber")),
+				("-thumb", _("MovieThumb")),
+				("-thumbname", _("MovieThumb and channelname")),
+				("-thumbnumber", _("MovieThumb and channelnumber")),
+				("-thumbnamenumber", _("MovieThumb, channelname and channelnumber")),
 				("-ICN", _("channelname")),
 				("-ICNumber", _("channelnumber")),
 				("-ICNameandNumber", _("channelnumber and channelname"))
@@ -787,7 +787,7 @@ CSList = [
 	("channelselection-twocolumns4", _("two columns 4")),
 	("channelselection-twocolumns5", _("two columns 5")),
 	("channelselection-twocolumns6", _("two columns 6")),
-	#("channelselection-twocolumns7", _("two columns 7")),
+	("channelselection-twocolumns7", _("two columns 7")),
 	("channelselection-twocolumns8", _("two columns 8")),
 	("channelselection-twocolumns9", _("two columns 9")),
 	("channelselection-minitv1", _("two columns 10")),

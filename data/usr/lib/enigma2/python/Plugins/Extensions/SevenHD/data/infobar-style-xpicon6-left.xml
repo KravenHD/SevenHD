@@ -49,7 +49,7 @@
 			<convert type="SevenHDUpdate">Update</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
-		<eLabel backgroundColor="SevenBackgroundIB1" position="1076,534" size="188,168" zPosition="-9" />
+		<eLabel backgroundColor="SevenBackgroundIB1" position="1076,534" size="188,186" zPosition="-9" />
 		<!--<eLabel backgroundColor="SevenBorderIB2" position="1076,533" size="2,128" zPosition="104" />-->
 		<!--<eLabel backgroundColor="SevenBorderIB" position="14,533" size="2,170" zPosition="103" />-->
 		<!--<eLabel backgroundColor="SevenBorderIB" position="14,702" size="2,18" zPosition="103" />-->
@@ -60,7 +60,7 @@
 		<!--<eLabel backgroundColor="SevenBorderIB" position="1262,533" size="2,170" zPosition="103" />-->
 		<!--<eLabel backgroundColor="SevenBorderIB2" position="248,533" size="2,128" zPosition="104" />-->
 		<eLabel backgroundColor="SevenBackgroundIB2" position="248,534" size="828,126" zPosition="-7" />
-		<eLabel backgroundColor="SevenBackgroundIB1" position="248,659" size="828,43" zPosition="-9" />
+		<eLabel backgroundColor="SevenBackgroundIB1" position="248,659" size="828,60" zPosition="-9" />
 		<eLabel backgroundColor="SevenBackgroundIB1" position="14,534" size="234,186" zPosition="-9" />
 		<widget alphatest="blend" pixmap="SevenHD/buttons/ico_rec_on.png" position="1228,537" render="Pixmap" size="32,32" source="session.RecordState" zPosition="15" transparent="1">
 			<convert type="ConditionalShowHide">Blink</convert>

@@ -1,11 +1,11 @@
 		<!-- Clock Weather */-->
 		<widget alphatest="blend" render="SevenHDWetterPicon" backgroundColor="SevenFontBackgroundIB1" position="1091,567" size="96,96" source="session.CurrentService" path="WetterIcons" transparent="1" zPosition="8">
-			<convert type="SevenHDWeather_accu">Day_0,MeteoIcon</convert>
+			<convert type="SevenHDWeather_realtek">Day_0,MeteoIcon</convert>
 		</widget>
 		<widget source="global.CurrentTime" position="1188,621" size="70,28" font="Regular; 24" render="Label" halign="center" valign="center" zPosition="12" backgroundColor="SevenFontBackgroundIB1" foregroundColor="SevenClockTime" transparent="1">
 			<convert type="SevenHDClockToText">Default</convert>
 		</widget>
 		<widget noWrap="1" backgroundColor="SevenFontBackgroundIB1" foregroundColor="SevenClockWeather" font="Regular2; 22" render="Label" position="1188,583" size="70,28" source="session.CurrentService" transparent="1" zPosition="12" halign="center" valign="center" >
-			<convert type="SevenHDWeather_accu">Day_0,DayTemp</convert>
+			<convert type="SevenHDWeather_realtek">Day_0,DayTemp</convert>
 		</widget>
 		<!-- Clock Weather */-->

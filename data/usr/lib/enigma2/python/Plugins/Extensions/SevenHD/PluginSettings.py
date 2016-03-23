@@ -127,11 +127,11 @@ class PluginSettings(ConfigListScreen, Screen):
         list.append(getConfigListEntry(_('_______________________________plugins__________________________________________'), ))                                           
         list.append(getConfigListEntry(_("Event View"),                config.plugins.SevenHD.EventView,              'Auswahl der Darstellung von Event View.',                    '1',     ''))
         list.append(getConfigListEntry(_("EPG Selection"),             config.plugins.SevenHD.EPGSelection,           'Auswahl der Darstellung von EPG Selection.',                 '1',     ''))
-        #if config.plugins.SevenHD.use_epg_thumb.value:
-           #list.append(getConfigListEntry(_("graphical epg preview"),  config.plugins.SevenHD.use_epg_thumb,          'EPG Vorschau',                                               '4', 'Preview'))
-           #list.append(getConfigListEntry(_("graphical epg cache"),    config.plugins.SevenHD.epg_thumb_cache,        'EPG Vorschau Speicherort',                                   '4', 'PreviewSave'))
-        #else:
-           #list.append(getConfigListEntry(_("graphical epg preview"),  config.plugins.SevenHD.use_epg_thumb,          'EPG Vorschau',                                               '4', 'PreviewNone'))
+        if config.plugins.SevenHD.use_epg_thumb.value:
+           list.append(getConfigListEntry(_("graphical epg preview"),  config.plugins.SevenHD.use_epg_thumb,          'EPG Vorschau',                                               '4', 'Preview'))
+           list.append(getConfigListEntry(_("graphical epg cache"),    config.plugins.SevenHD.epg_thumb_cache,        'EPG Vorschau Speicherort',                                   '4', 'PreviewSave'))
+        else:
+           list.append(getConfigListEntry(_("graphical epg preview"),  config.plugins.SevenHD.use_epg_thumb,          'EPG Vorschau',                                               '4', 'PreviewNone'))
         list.append(getConfigListEntry(_("Timer Edit"),                config.plugins.SevenHD.TimerEdit,              'Auswahl der Darstellung von Timer Edit.',                    '1',     ''))
         list.append(getConfigListEntry(_("Movie Selection"),           config.plugins.SevenHD.MovieSelectionStyle,    'Auswahl der Covergr\xc3\xb6\xc3\x9fe.',                      '1',     ''))
         list.append(getConfigListEntry(_("Movie Player"),              config.plugins.SevenHD.MoviePlayer,            'Auswahl der darstellung von MoviePlayer.',                   '1',     ''))

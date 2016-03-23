@@ -48,12 +48,10 @@ class SevenHDMovieThumb(Renderer):
             size = self.instance.size()
             self.picload.setPara((size.width(), size.height(), self.sc[0], self.sc[1], 0, 0, '#ff000000'))
             self.picload.PictureData.get().append(self.gotPic)
-            
-            res = requests.request('get','http://ajax.googleapis.com/ajax/services/search/video?v=1.0&q=%s' % str(self.source.text))
+            res = requests.request('get','https://www.googleapis.com/youtube/v3/search?part=snippet&q=%s&maxResults=2&key=AIzaSyBqXp0Uo2ktJcMRpL_ZwF5inLTWZfsCYqY' % str(self.source.text))
             data = res.json()
-            
-            jpg_url = data['responseData']['results'][0]['tbUrl'].split('?')[0]
-            downloadPage(str(jpg_url.replace('default','hqdefault')), self.jpg_name).addCallback(self.on_finish).addErrback(self.Error)
+            jpg_url = data['items'][0]['snippet']['thumbnails']['medium']['url']
+            downloadPage(str(jpg_url), self.jpg_name).addCallback(self.on_finish).addErrback(self.Error)
         
         except:
             self.instance.hide()

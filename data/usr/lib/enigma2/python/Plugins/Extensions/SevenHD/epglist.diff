@@ -38,11 +38,11 @@
 +                                   
 +                                      if not os.path.isfile(new_image_name):
 +                                         try:
-+                                            resonse = requests.request('get','http://ajax.googleapis.com/ajax/services/search/video?v=1.0&q=%s' % str(event_title.replace('&', '').replace("'", '').replace('`', '')))
-+                                            data = resonse.json()
-+                                        
-+                                            jpg_url = data['responseData']['results'][0]['tbUrl'].split('?')[0]
-+                                            os.system('wget "%s" -O %s' % (str(jpg_url.replace('https','http').replace('default','hqdefault')), str(image_name)))
++                                            res = requests.request('get','https://www.googleapis.com/youtube/v3/search?part=snippet&q=%s&maxResults=2&key=AIzaSyBqXp0Uo2ktJcMRpL_ZwF5inLTWZfsCYqY' % str(event_title))
++                                            data = res.json()
++
++                                            jpg_url = data['items'][0]['snippet']['thumbnails']['medium']['url']
++                                            os.system('wget "%s" -O %s' % (str(jpg_url.replace('https','http')), str(image_name)))
 +                                         
 +                                            foreground = Image.open(str(image_name))
 +                                            foreground.thumbnail((self.thumb_w, self.thumb_h))

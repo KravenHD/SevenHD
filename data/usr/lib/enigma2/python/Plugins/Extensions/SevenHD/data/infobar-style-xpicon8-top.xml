@@ -8,7 +8,7 @@
 		<!--<eLabel backgroundColor="SevenBorderIB" position="14,702" size="2,18" zPosition="103" />-->
 		<!--<eLabel backgroundColor="SevenBorderIB" position="1262,700" size="2,18" zPosition="103" />-->
 		<!--<eLabel backgroundColor="SevenBorderIB" position="14,718" size="1250,2" zPosition="103" />-->
-		<!--<eLabel backgroundColor="SevenBorderIB" position="14,701" size="1250,2" zPosition="103" />-->
+		<!--<eLabel backgroundColor="SevenBorderIB" position="14,533" size="1250,2" zPosition="103" />-->
 		<eLabel backgroundColor="SevenProgressLineIB" position="273,599" size="793,2" zPosition="2" />
 		<widget position="273,597" backgroundColor="SevenFontBackgroundIB1" render="Progress" size="793,6" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="SevenProgressIB" pixmap="SevenHD/progressib/progressib793.png">
 			<convert type="SevenHDEventTime">Progress</convert>
