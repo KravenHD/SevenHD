@@ -251,13 +251,6 @@
 		<widget name="lab3" position="70,113" halign="center" size="700,26" zPosition="1" foregroundColor="SevenFont2" font="Regular2; 22" transparent="1" backgroundColor="SevenFontBackgroundLeft" />
 		<panel name="template_menu_left" />
 	</screen>
-		<!-- LED_GigaSetup -->
-	<screen name="LED_GigaSetup" position="0,0" size="1280,720" title="LED Setup" backgroundColor="transparent">
-		<!--<eLabel backgroundColor="SevenFontBackgroundLeft" font="Regular;13" foregroundColor="red" text="LED_GigaSetup" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
-		<widget name="config" position="70,80" size="708,540" backgroundColor="SevenFontBackgroundLeft" transparent="1" />
-		<panel name="template_menu_left_button" />
-		<panel name="template_colorkey_text_source" />
-	</screen>
 		<!-- SoftcamSetup -->
 	<screen name="SoftcamSetup" position="0,0" size="1280,720" title="SoftcamSetup" backgroundColor="transparent">
 		<!--<eLabel backgroundColor="SevenFontBackgroundLeft" font="Regular;13" foregroundColor="red" text="SoftcamSetup" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->

@@ -721,28 +721,46 @@
 		<panel name="template_colorkey_text" />
 	</screen>
 		<!-- ********** MediaInfo ********** -->
-		<!-- MediaInfo -->
+		<!-- MediaInfo 2.x -->
 	<screen backgroundColor="transparent" flags="wfNoBorder" name="mediaInfo" position="0,0" size="1280,720" title="MediaInfo">
-		<!--<eLabel backgroundColor="SevenFontBackgroundLeft" font="Regular;13" foregroundColor="red" text="mediaInfo" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
-		<widget backgroundColor="SevenFontBackgroundLeft"  font="Regular;30" foregroundColor="SevenFont1" halign="center" name="head" position="60,90" size="1160,45" transparent="1" valign="center" zPosition="5" />
-		<widget backgroundColor="SevenFontBackgroundLeft"  name="downloadList" itemHeight="65" font="Regular;24" position="21,152" scrollbarMode="showNever" size="1240,490" scrollbarWidth="5" scrollbarSliderForegroundColor="SevenFont1" scrollbarSliderBorderColor="darkgrey" scrollbarSliderBorderWidth="1" transparent="1" zPosition="-1" />
+		<widget backgroundColor="SevenBackgroundLeft" font="Regular;24" halign="center" name="info" position="60,90" size="1160,45" transparent="0" valign="center" zPosition="5" />
+		<widget backgroundColor="SevenBackgroundLeft" font="Regular;30" foregroundColor="SevenFont1" halign="center" name="head" position="60,143" size="1160,45" transparent="1" valign="center" zPosition="5" />
+		<widget backgroundColor="SevenBackgroundLeft" name="downloadList" itemHeight="65" position="21,215" scrollbarMode="showNever" size="1240,405" transparent="1" zPosition="-1" />
 		<panel name="template_menu_full_button" />
 		<panel name="template_colorkey_text" />
 	</screen>
 		<!-- mediaInfoFolderScreen -->
 	<screen backgroundColor="transparent" flags="wfNoBorder" name="mediaInfoFolderScreen" position="0,0" size="1280,720" title="MediaInfo">
-		<!--<eLabel backgroundColor="SevenFontBackgroundLeft" font="Regular;13" foregroundColor="red" text="mediaInfoFolderScreen" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
-		<widget font="Regular; 26" name="media" position="30,120" size="940,40" backgroundColor="SevenFontBackgroundLeft"  transparent="1" valign="top" />
-		<widget name="folderlist" backgroundColor="SevenFontBackgroundLeft"  itemHeight="30" font="Regular;22" position="21,168" scrollbarMode="showNever" size="1240,440" scrollbarWidth="5" scrollbarSliderForegroundColor="SevenFont1" scrollbarSliderBorderColor="darkgrey" scrollbarSliderBorderWidth="1" transparent="1" />
+		<widget font="Regular; 26" name="media" position="30,80" size="940,40" transparent="1" valign="top" />
+		<widget name="folderlist" backgroundColor="SevenBackgroundLeft" itemHeight="30" font="Regular;22" position="20,120" scrollbarMode="showNever" size="1240,500"  transparent="1" />
+		<panel name="template_menu_full_button" />
+		<panel name="template_colorkey_text_source" />
+	</screen>
+		<!-- mediaInfoConfigScreen -->
+	<screen backgroundColor="transparent" flags="wfNoBorder" name="mediaInfoConfigScreen" position="0,0" size="1280,720" title="MediaInfo">
+		<widget name="config" backgroundColor="SevenBackgroundLeft" position="20,70" size="1240,580" itemHeight="30" font="Regular;22" scrollbarMode="showNever"  transparent="1" />
+		<panel name="template_menu_full_button" />
+		<panel name="template_colorkey_text" />
+	</screen>
+		<!-- ********** MediaInfo ********** -->
+		<!-- MediaInfo 3.x -->
+	<screen backgroundColor="transparent" flags="wfNoBorder" name="MediaInfo" position="0,0" size="1280,720" title="">
+		<widget backgroundColor="SevenBackgroundLeft"  font="Regular;30" foregroundColor="SevenFont1" halign="center" name="head" position="60,90" size="1140,45" transparent="1" valign="center" zPosition="5" />
+		<widget backgroundColor="SevenBackgroundLeft"  name="downloadList" itemHeight="50" font="Regular;24" position="40,152" scrollbarMode="showNever" size="1200,490"  transparent="1" zPosition="-1" />
+		<panel name="template_menu_full_button" />
+		<panel name="template_colorkey_text" />
+	</screen>
+		<!-- mediaInfoFolderScreen -->
+	<screen backgroundColor="transparent" flags="wfNoBorder" name="MediaInfoFolderScreen" position="0,0" size="1280,720" title="">
+		<widget font="Regular; 26" name="media" position="30,100" size="940,40" backgroundColor="SevenBackgroundLeft"  transparent="1" valign="top" />
+		<widget name="folderlist" backgroundColor="SevenBackgroundLeft"  itemHeight="30" font="Regular;22" position="30,148" scrollbarMode="showNever" size="1220,440"  transparent="1" />
 		<panel name="template_menu_full_button" />
 		<panel name="template_colorkey_text" />
 	</screen>
 		<!-- mediaInfoConfigScreen -->
-	<screen backgroundColor="transparent" flags="wfNoBorder" name="mediaInfoConfigScreen" position="0,0" size="1280,720" title="MediaInfo">
-		<!--<eLabel backgroundColor="SevenFontBackgroundLeft" font="Regular;13" foregroundColor="red" text="mediaInfoConfigScreen" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
-		<widget backgroundColor="SevenFontBackgroundLeft"  font="Regular;24" halign="center" name="head" position="60,90" size="1160,45" transparent="1" valign="center" zPosition="5" />
-		<widget backgroundColor="SevenFontBackgroundLeft"  font="Regular;24" foregroundColor="SevenFont1" halign="center" name="check" position="60,143" size="1160,45" transparent="1" valign="center" zPosition="5" />
-		<widget backgroundColor="SevenFontBackgroundLeft"  name="config" itemHeight="30" font="Regular;22" position="21,215" scrollbarMode="showNever" size="1240,405" scrollbarWidth="5" scrollbarSliderForegroundColor="SevenFont1" scrollbarSliderBorderColor="darkgrey" scrollbarSliderBorderWidth="1" transparent="1" zPosition="-1" />
+	<screen backgroundColor="transparent" flags="wfNoBorder" name="MediaInfoConfigScreen" position="0,0" size="1280,720" title="">
+		<widget backgroundColor="SevenBackgroundLeft"  font="Regular;24" halign="center" name="head" position="60,90" size="1160,45" transparent="1" valign="center" zPosition="5" />
+		<widget backgroundColor="SevenBackgroundLeft"  name="config" itemHeight="30" font="Regular;22" position="30,100" scrollbarMode="showNever" size="1220,405"  transparent="1" zPosition="-1" />
 		<panel name="template_menu_full_button" />
 		<panel name="template_colorkey_text" />
 	</screen>
@@ -2749,7 +2767,7 @@
 	</screen>
 	<screen name="SeriesPluginChannelEditor" backgroundColor="transparent" position="center,center" size="1280,720">
 		<!--<eLabel backgroundColor="SevenFontBackgroundLeft" font="Regular;13" foregroundColor="red" text="SeriesPluginChannelEditor" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
-		<widget name="list" position="70,80" size="608,540" itemHeight="30" font="Regular;35" backgroundColor="SevenBackgroundLeft"  transparent="1" />
+		<widget name="list" position="70,80" size="608,540" itemHeight="30" font="Regular;22" backgroundColor="SevenBackgroundLeft"  transparent="1" />
 		<panel name="template_menu_left_button" />
 		<panel name="template_colorkey_text" />
 	</screen>

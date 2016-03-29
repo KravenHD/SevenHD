@@ -209,24 +209,6 @@
 		<panel name="template_colorkey_text_source" />
 		<panel name="template_menu_left_button" />
 	</screen>
-		<!-- LED_GigaSetup -->
-	<screen name="LED_GigaSetup" position="0,0" size="1280,720" title="LED Setup" backgroundColor="transparent">
-		<!--<eLabel backgroundColor="SevenFontBackgroundLeft" font="Regular;13" foregroundColor="red" text="LED_GigaSetup" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
-		<widget name="config" position="70,80" size="708,540" backgroundColor="SevenFontBackgroundLeft" transparent="1" />
-		<panel name="template_menu_left_button" />
-		<panel name="template_colorkey_text_source" />
-	</screen>
-		<!-- VFDSkinSelector -->
-	<screen name="VFDSkinSelector" position="0,0" size="1280,720" title="LCD Skin-Selector" backgroundColor="transparent">
-		<!--<eLabel backgroundColor="SevenFontBackgroundLeft" font="Regular;13" foregroundColor="red" text="VFDSkinSelector" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
-		<widget name="lab1" position="70,111" size="250,26" zPosition="1" font="Regular2; 22" halign="left" transparent="1" backgroundColor="SevenFontBackgroundLeft" foregroundColor="SevenFont2" />
-		<widget name="lab2" position="423,201" size="250,26" zPosition="1" font="Regular2; 22" halign="left" transparent="1" backgroundColor="SevenFontBackgroundLeft" foregroundColor="SevenFont2" />
-		<widget name="SkinList" position="70,158" size="270,371" enableWrapAround="1" backgroundColor="SevenFontBackgroundLeft" transparent="1" itemHeight="27" font="Regular;22" />
-		<widget name="Preview" position="422,261" size="280,210" zPosition="2" backgroundColor="SevenFontBackgroundLeft" transparent="1" alphatest="on" itemHeight="27" font="Regular;22" />
-		<widget name="lab3" position="70,549" halign="center" size="700,26" zPosition="1" foregroundColor="SevenFont2" backgroundColor="SevenFontBackgroundLeft" font="Regular2; 22" transparent="1" />
-		<panel name="template_menu_left_button" />
-		<panel name="template_colorkey_text" />
-	</screen>
 		<!-- HFD Toolbox -->
 	<screen name="Fantastic" position="0,0" size="1280,720" title="HDF Toolbox" backgroundColor="transparent">
 		<!--<eLabel backgroundColor="SevenFontBackgroundLeft" font="Regular;13" foregroundColor="red" text="Fantastic" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
