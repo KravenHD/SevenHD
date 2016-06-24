@@ -1901,7 +1901,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,orgpos.y()))
 		<!--<eLabel backgroundColor="SevenFontBackgroundLeft" font="Regular;13" foregroundColor="red" text="doFlashImage" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
 		<widget name="imageList" position="70,80" size="708,540" itemHeight="30" font="Regular;21" foregroundColor="SevenFont1" halign="left" valign="top" transparent="1" backgroundColor="SevenFontBackgroundLeft" />
 		<panel name="template_menu_left_button" />
-		<panel name="template_colorkey_text" />
+		<panel name="template_colorkey_text_source" />
 	</screen>
 		<!-- FlashOnline -->
 	<screen name="FlashOnline" position="0,0" size="1280,720" title="FlashOnline" flags="wfNoBorder" backgroundColor="transparent">
@@ -1909,7 +1909,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,orgpos.y()))
 		<widget name="info-online" position="70,80" zPosition="1" size="708,242" font="Regular;22" foregroundColor="SevenFont1" halign="left" valign="top" transparent="1" backgroundColor="SevenFontBackgroundLeft" />
 		<widget name="info-local" position="70,340" zPosition="1" size="708,242" font="Regular;22" foregroundColor="SevenFont1" halign="left" valign="top" transparent="1" backgroundColor="SevenFontBackgroundLeft" />
 		<panel name="template_menu_left_button" />
-		<panel name="template_colorkey_text" />
+		<panel name="template_colorkey_text_source" />
 	</screen>
 		<!-- JobView -->
 	<screen name="JobView" position="0,0" size="1280,720" title="JobView" flags="wfNoBorder" backgroundColor="transparent">
@@ -2293,7 +2293,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,orgpos.y()))
 		<widget name="info-hdd" position="70,80" zPosition="1" size="708,150" font="Regular;22" foregroundColor="SevenFont1" halign="left" valign="top" transparent="1" backgroundColor="SevenFontBackgroundLeft" />
 		<widget name="info-usb" position="70,245" zPosition="1" size="708,330" font="Regular;22" foregroundColor="SevenFont1" halign="left" valign="top" transparent="1" backgroundColor="SevenFontBackgroundLeft" />
 		<panel name="template_menu_left_button" />
-		<panel name="template_colorkey_text" />
+		<panel name="template_colorkey_text_source" />
 	</screen>
 		<!-- RestoreMenu -->
 	<screen backgroundColor="transparent" flags="wfNoBorder" name="RestoreMenu" position="0,0" size="1280,720" title="Restore Backups">

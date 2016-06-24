@@ -1,10 +1,10 @@
-#version = '3.6.78'
+#version = '3.6.81'
 import os
 try:
    opkg_info = os.popen("opkg list-installed enigma2-plugin-skins-sevenhd | cut -d ' ' -f3").read()
    version = str(opkg_info.strip().split('+')[0])
 except:
-   version = '3.6.78'
+   version = '3.6.81'
 import re
 import time
 import math
@@ -15,7 +15,7 @@ import requests
 import subprocess
 from Plugins.Plugin import PluginDescriptor
 try:
-  from Plugins.SystemPlugins.OSDPositionSetup.plugin import OSDScreenPosition
+  from Plugins.SystemPlugins.OSDPositionSetup.overscanwizard import OverscanWizard
   OSDScreenPosition_plugin = True
 except ImportError:
   from Screens.UserInterfacePositioner import UserInterfacePositioner

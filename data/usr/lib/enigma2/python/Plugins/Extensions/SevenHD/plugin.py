@@ -251,7 +251,7 @@ class SevenHD(Screen):
                 self.session.open(SkinParts)
             elif selectedKey == "OSDPositionSetup":
                 if OSDScreenPosition_plugin:
-                   self.session.open(OSDScreenPosition)
+                   self.session.open(OverscanWizard)
                 else:
                    self.session.open(UserInterfacePositioner)
                                    
