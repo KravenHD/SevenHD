@@ -1291,7 +1291,7 @@ class SevenHD(Screen):
         
         options.extend(((_("Share my Skin"), boundFunction(self.Share_Skin)),))
         options.extend(((_("ChangeLog"), boundFunction(self.ChangeLog)),))
-        options.extend(((_("About Team"), boundFunction(self.send_to_msg_box, "Team Kraven\n\xc3\xb6rlgrey, TBX, stony272, thomele, Philipswalther and Kraven")),))
+        options.extend(((_("About Team"), boundFunction(self.send_to_msg_box, "Team Kraven\n\TBX, stony272, thomele, Philipswalther, xc3\xb6rlgrey, and Apachi 70")),))
         
         if fileExists(FILE):
            options.extend(((_("About Skin"), boundFunction(self.About)),))

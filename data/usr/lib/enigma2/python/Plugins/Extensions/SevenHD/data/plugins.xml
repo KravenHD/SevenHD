@@ -2794,19 +2794,19 @@
 		<panel name="template_menu_left_button" />
 		<panel name="template_colorkey_text" />
 	</screen>
-	<screen name="XMLTVImportSources" position="0,0" title="XMLTVImport Sources" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
+	<screen name="EPGImportSources" position="0,0" title="EPGImport Sources" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
 		<!--<eLabel backgroundColor="SevenFontBackgroundLeft" font="Regular;13" foregroundColor="red" text="XMLTVImportSources" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
 		<widget name="list" position="70,80" size="708,540" backgroundColor="SevenFontBackgroundLeft"  itemHeight="30" font="Regular;18" transparent="1" />
 		<panel name="template_menu_left_button" />
 		<panel name="template_colorkey_text" />
 	</screen>
-	<screen name="XMLTVImportConfig" position="0,0" title="XMLTVImport Config" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
+	<screen name="EPGImportConfig" position="0,0" title="EPGImport Config" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
 		<!--<eLabel backgroundColor="SevenFontBackgroundLeft" font="Regular;13" foregroundColor="red" text="XMLTVImportConfig" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
 		<widget name="config" position="70,80" size="708,540" backgroundColor="SevenFontBackgroundLeft"  itemHeight="30" font="Regular;18" transparent="1" />
 		<panel name="template_menu_left_button" />
 		<panel name="template_colorkey_text" />
 	</screen>
-	<screen name="XMLTVImportLog" position="0,0" title="XMLTVImport Log" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
+	<screen name="EPGImportLog" position="0,0" title="EPGImport Log" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
 		<!--<eLabel backgroundColor="SevenFontBackgroundLeft" font="Regular;13" foregroundColor="red" text="XMLTVImportLog" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
 		<widget name="list" position="70,80" size="708,540" backgroundColor="SevenFontBackgroundLeft"  itemHeight="30" font="Regular;18" transparent="1" />
 		<panel name="template_menu_left_button" />
@@ -2851,5 +2851,84 @@
 		<panel name="template_colorkey_text_source" />
 		<panel name="template_menu_left_button" />
 	</screen>
-
+		<!-- Bootlogo -->
+	<screen backgroundColor="transparent" name="Bootlogo" position="0,0" size="1280,720" title="Bootlogo">
+        <!--<eLabel backgroundColor="SevenFontBackgroundLeft" font="Regular;13" foregroundColor="red" text="Bootlogo-Setup" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
+        <widget name="config" backgroundColor="SevenFontBackgroundLeft" position="70,80" size="708,540" itemHeight="30" font="Regular;24" halign="center" valign="center" />
+        <widget name="bootlogohelperimage" position="891,274" size="372,209" zPosition="1" backgroundColor="SevenFontBackgroundLeft" />
+        <eLabel text="Cancel" position="64,662" size="148,48" zPosition="1" font="Regular; 18" halign="left" valign="center" backgroundColor="SevenFontBackgroundLeft" foregroundColor="SevenButtonText" transparent="1" />
+        <eLabel text="Save" position="264,662" size="148,48" zPosition="1" font="Regular; 18" halign="left" valign="center" backgroundColor="SevenFontBackgroundLeft" foregroundColor="SevenButtonText" transparent="1" />
+        <panel name="template_menu_left_right_button" />
+   </screen>
+		<!-- Bootlogo-Setup -->
+	<screen backgroundColor="transparent" name="Bootlogos" position="0,0" size="1280,720" title="Bootlogo Selector by Stony272">
+        <!--<eLabel backgroundColor="SevenFontBackgroundLeft" font="Regular;13" foregroundColor="red" text="Bootlogo-Setup" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
+        <widget name="config" backgroundColor="SevenFontBackgroundLeft" position="70,80" size="708,540" itemHeight="30" font="Regular;24" halign="center" valign="center" />
+        <widget name="bootlogohelperimage" position="891,274" size="372,209" zPosition="1" backgroundColor="SevenFontBackgroundLeft" />
+        <eLabel text="Cancel" position="64,662" size="148,48" zPosition="1" font="Regular; 18" halign="left" valign="center" backgroundColor="SevenFontBackgroundLeft" foregroundColor="SevenButtonText" transparent="1" />
+        <eLabel text="Save" position="264,662" size="148,48" zPosition="1" font="Regular; 18" halign="left" valign="center" backgroundColor="SevenFontBackgroundLeft" foregroundColor="SevenButtonText" transparent="1" />
+        <panel name="template_menu_left_right_button" />
+   </screen>
+		<!-- BootlogoKids-Setup -->
+	<screen backgroundColor="transparent" name="BootlogosKids" position="0,0" size="1280,720" title="Bootlogo Selector for Kids by Stony272">
+        <!--<eLabel backgroundColor="SevenFontBackgroundLeft" font="Regular;13" foregroundColor="red" text="BootlogoKids-Setup" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
+        <widget name="config" backgroundColor="SevenFontBackgroundLeft" position="70,80" size="708,540" itemHeight="30" font="Regular;24" halign="center" valign="center" />
+        <widget name="bootlogohelperimage" position="891,274" size="372,209" zPosition="1" backgroundColor="SevenFontBackgroundLeft" />
+        <eLabel text="Cancel" position="64,662" size="148,48" zPosition="1" font="Regular; 18" halign="left" valign="center" backgroundColor="SevenFontBackgroundLeft" foregroundColor="SevenButtonText" transparent="1" />
+        <eLabel text="Save" position="264,662" size="148,48" zPosition="1" font="Regular; 18" halign="left" valign="center" backgroundColor="SevenFontBackgroundLeft" foregroundColor="SevenButtonText" transparent="1" />
+        <panel name="template_menu_left_right_button" />
+   </screen>
+		<!-- Radiologo-Setup -->
+	<screen backgroundColor="transparent" name="Radiologos" position="0,0" size="1280,720" title="Radiologo Selector by Stony272">
+        <!--<eLabel backgroundColor="SevenFontBackgroundLeft" font="Regular;13" foregroundColor="red" text="Radiologo-Setup" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
+        <widget name="config" backgroundColor="SevenFontBackgroundLeft" position="70,80" size="708,540" itemHeight="30" font="Regular;24" halign="center" valign="center" />
+        <widget name="bootlogohelperimage" position="891,274" size="372,209" zPosition="1" backgroundColor="SevenFontBackgroundLeft" />
+        <eLabel text="Cancel" position="64,662" size="148,48" zPosition="1" font="Regular; 18" halign="left" valign="center" backgroundColor="SevenFontBackgroundLeft" foregroundColor="SevenButtonText" transparent="1" />
+        <eLabel text="Save" position="264,662" size="148,48" zPosition="1" font="Regular; 18" halign="left" valign="center" backgroundColor="SevenFontBackgroundLeft" foregroundColor="SevenButtonText" transparent="1" />
+        <panel name="template_menu_left_right_button" />
+   </screen>
+		<!-- SpinnerSelectionBox -->
+   <screen backgroundColor="transparent" name="SpinnerSelectionBox" position="0,0" size="1280,720" title="Spinner Selector by Stony272">
+        <!--<eLabel backgroundColor="SevenFontBackgroundLeft" font="Regular;13" foregroundColor="red" text="SpinnerSelectionBox" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
+        <widget name="text" backgroundColor="SevenFontBackgroundLeft" position="70,80" size="708,30" itemHeight="30" font="Regular2;24" halign="center" valign="center" />
+        <widget name="list" backgroundColor="SevenFontBackgroundLeft" position="70,125" size="708,450" itemHeight="30" font="Regular;24" halign="center" valign="center" />
+        <widget name="bild" position="1010,290" size="150,150" zPosition="1" backgroundColor="SevenFontBackgroundLeft" />
+        <panel name="template_menu_left" />
+   </screen>
+		<!-- BootlogosGigablue-Setup -->
+	<screen backgroundColor="transparent" name="BootlogosGigablue" position="0,0" size="1280,720" title="Bootlogo Selector by Stony272">
+        <!--<eLabel backgroundColor="SevenFontBackgroundLeft" font="Regular;13" foregroundColor="red" text="BootlogosGigablue-Setup" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
+        <widget name="config" backgroundColor="SevenFontBackgroundLeft" position="70,80" size="708,540" itemHeight="30" font="Regular;24" halign="center" valign="center" />
+        <widget name="bootlogohelperimage" position="891,274" size="372,209" zPosition="1" backgroundColor="SevenFontBackgroundLeft" />
+        <eLabel text="Cancel" position="64,662" size="148,48" zPosition="1" font="Regular; 18" halign="left" valign="center" backgroundColor="SevenFontBackgroundLeft" foregroundColor="SevenButtonText" transparent="1" />
+        <eLabel text="Save" position="264,662" size="148,48" zPosition="1" font="Regular; 18" halign="left" valign="center" backgroundColor="SevenFontBackgroundLeft" foregroundColor="SevenButtonText" transparent="1" />
+        <panel name="template_menu_left_right_button" />
+   </screen>
+		<!-- RadiologosGigablue-Setup -->
+	<screen backgroundColor="transparent" name="RadiologosGigablue" position="0,0" size="1280,720" title="Radiologo Selector by Stony272">
+        <!--<eLabel backgroundColor="SevenFontBackgroundLeft" font="Regular;13" foregroundColor="red" text="RadiologosGigablue-Setup" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
+        <widget name="config" backgroundColor="SevenFontBackgroundLeft" position="70,80" size="708,540" itemHeight="30" font="Regular;24" halign="center" valign="center" />
+        <widget name="bootlogohelperimage" position="891,274" size="372,209" zPosition="1" backgroundColor="SevenFontBackgroundLeft" />
+        <eLabel text="Cancel" position="64,662" size="148,48" zPosition="1" font="Regular; 18" halign="left" valign="center" backgroundColor="SevenFontBackgroundLeft" foregroundColor="SevenButtonText" transparent="1" />
+        <eLabel text="Save" position="264,662" size="148,48" zPosition="1" font="Regular; 18" halign="left" valign="center" backgroundColor="SevenFontBackgroundLeft" foregroundColor="SevenButtonText" transparent="1" />
+        <panel name="template_menu_left_right_button" />
+   </screen>
+		<!-- BootlogosNFR-Setup -->
+	<screen backgroundColor="transparent" name="BootlogosNFR" position="0,0" size="1280,720" title="Bootlogo Selector by Stony272">
+        <!--<eLabel backgroundColor="SevenFontBackgroundLeft" font="Regular;13" foregroundColor="red" text="BootlogosNFR-Setup" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
+        <widget name="config" backgroundColor="SevenFontBackgroundLeft" position="70,80" size="708,540" itemHeight="30" font="Regular;24" halign="center" valign="center" />
+        <widget name="bootlogohelperimage" position="891,274" size="372,209" zPosition="1" backgroundColor="SevenFontBackgroundLeft" />
+        <eLabel text="Cancel" position="64,662" size="148,48" zPosition="1" font="Regular; 18" halign="left" valign="center" backgroundColor="SevenFontBackgroundLeft" foregroundColor="SevenButtonText" transparent="1" />
+        <eLabel text="Save" position="264,662" size="148,48" zPosition="1" font="Regular; 18" halign="left" valign="center" backgroundColor="SevenFontBackgroundLeft" foregroundColor="SevenButtonText" transparent="1" />
+        <panel name="template_menu_left_right_button" />
+   </screen>
+		<!-- RadiologosNFR-Setup -->
+	<screen backgroundColor="transparent" name="RadiologosNFR" position="0,0" size="1280,720" title="Radiologo Selector by Stony272">
+        <!--<eLabel backgroundColor="SevenFontBackgroundLeft" font="Regular;13" foregroundColor="red" text="RadiologosNFR-Setup" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
+        <widget name="config" backgroundColor="SevenFontBackgroundLeft" position="70,80" size="708,540" itemHeight="30" font="Regular;24" halign="center" valign="center" />
+        <widget name="bootlogohelperimage" position="891,274" size="372,209" zPosition="1" backgroundColor="SevenFontBackgroundLeft" />
+        <eLabel text="Cancel" position="64,662" size="148,48" zPosition="1" font="Regular; 18" halign="left" valign="center" backgroundColor="SevenFontBackgroundLeft" foregroundColor="SevenButtonText" transparent="1" />
+        <eLabel text="Save" position="264,662" size="148,48" zPosition="1" font="Regular; 18" halign="left" valign="center" backgroundColor="SevenFontBackgroundLeft" foregroundColor="SevenButtonText" transparent="1" />
+        <panel name="template_menu_left_right_button" />
+   </screen>
 		<!-- plugins -->

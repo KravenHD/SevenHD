@@ -1,10 +1,10 @@
-#version = '3.6.81'
+#version = '3.6.82'
 import os
 try:
    opkg_info = os.popen("opkg list-installed enigma2-plugin-skins-sevenhd | cut -d ' ' -f3").read()
    version = str(opkg_info.strip().split('+')[0])
 except:
-   version = '3.6.81'
+   version = '3.6.82'
 import re
 import time
 import math
@@ -133,7 +133,7 @@ else:
    entrie = os.popen('cat /proc/cmdline').read()
    
    if brand:
-      if getBoxType() == 'vusolo4k':
+      if getBoxType() in 'vusolo4k ax51 mutant51':
          mem = re.findall('_cma=(.*?)M', entrie)
       else:   
          mem = re.findall('bmem=(.*?)M', entrie)
