@@ -1,10 +1,10 @@
-#version = '3.6.82'
+#version = '3.6.83'
 import os
 try:
    opkg_info = os.popen("opkg list-installed enigma2-plugin-skins-sevenhd | cut -d ' ' -f3").read()
    version = str(opkg_info.strip().split('+')[0])
 except:
-   version = '3.6.82'
+   version = '3.6.83'
 import re
 import time
 import math

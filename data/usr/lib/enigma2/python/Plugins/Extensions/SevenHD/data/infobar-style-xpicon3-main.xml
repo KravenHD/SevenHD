@@ -8,7 +8,6 @@
 		<eLabel backgroundColor="SevenBackgroundIB1" position="1076,534" size="188,186" zPosition="-9" />
 		<!--<eLabel backgroundColor="SevenBorderIB2" position="1076,533" size="2,128" zPosition="104" />-->
 		<!--<eLabel backgroundColor="SevenBorderIB" position="14,533" size="2,170" zPosition="103" />-->
-		<!--<eLabel backgroundColor="SevenBorderIB" position="14,702" size="1250,2" zPosition="103" />-->
 		<!--<eLabel backgroundColor="SevenBorderIB2" position="248,660" size="830,2" zPosition="104" />-->
 		<eLabel backgroundColor="SevenProgressLineIB" position="273,605" size="793,2" zPosition="2" />
 		
@@ -134,6 +133,7 @@
 		<ePixmap pixmap="SevenHD/back/ibone.png" position="14,534" size="1250,186" alphatest="blend" zPosition="-5" />
 		
 		<!--<eLabel backgroundColor="SevenBorderIB" position="1262,700" size="2,18" zPosition="103" />-->
+		<!--<eLabel backgroundColor="SevenBorderIB" position="14,700" size="2,18" zPosition="103" />-->
 		<!--<eLabel backgroundColor="SevenBorderIB" position="14,718" size="1250,2" zPosition="103" />-->
 		<!--<eLabel backgroundColor="SevenBorderIB" position="1076,533" size="186,2" zPosition="103" />-->
 		<!--<eLabel backgroundColor="SevenBorderIB" position="14,533" size="236,2" zPosition="103" />-->
