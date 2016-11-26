@@ -1937,7 +1937,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,orgpos.y()))
 		<!-- Dish -->
 	<screen backgroundColor="transparent" flags="wfNoBorder" name="Dish" position="900,90" size="170,170" title="Dish" zPosition="-1">
 		<!--<eLabel backgroundColor="SevenFontBackgroundLeft" font="Regular;13" foregroundColor="red" text="Dish" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
-		<widget alphatest="off" name="Dishpixmap" itemHeight="30" font="Regular;22" pixmap="SevenHD/buttons/dish.png" position="0,0" size="171,170" />
+		<widget alphatest="off" name="Dishpixmap" pixmap="SevenHD/buttons/dish.png" position="0,0" size="171,170" />
 	</screen>
 		<!-- NimSelection -->
 	<screen backgroundColor="transparent" flags="wfNoBorder" name="NimSelection" position="0,0" size="1280,720" title="Choose Tuner">
