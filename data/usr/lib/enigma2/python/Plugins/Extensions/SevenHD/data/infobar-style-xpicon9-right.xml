@@ -86,7 +86,7 @@
 		<widget alphatest="blend" pixmap="SevenHD/buttons/ico_rec_on.png" position="318,138" render="Pixmap" size="32,32" source="session.RecordState" zPosition="15" transparent="1">
 			<convert type="ConditionalShowHide">Blink</convert>
 		</widget>
-		<widget source="session.TunerInfo" render="Pixmap" pixmap="SevenHD/buttons/a_on.png" position="469,138" zPosition="2" size="32,32" backgroundColor="SevenFontBackgroundIB1" alphatest="blend" valign="center">
+		<widget source="session.TunerInfo" render="Pixmap" pixmap="SevenHD/buttons/a_on.png" position="469,138" zPosition="2" size="32,32" backgroundColor="SevenFontBackgroundIB1" alphatest="blend" >
 			<convert type="TunerInfo">TunerUseMask</convert>
 			<convert type="ValueBitTest">1</convert>
 			<convert type="ConditionalShowHide" />
@@ -95,17 +95,17 @@
 		<ePixmap pixmap="SevenHD/buttons/b_off.png" position="509,138" size="32,32" zPosition="1" alphatest="blend" /> <!-- TunerB -->
 		<ePixmap pixmap="SevenHD/buttons/c_off.png" position="549,138" size="32,32" zPosition="1" alphatest="blend" /> <!-- TunerC -->
 		<ePixmap pixmap="SevenHD/buttons/d_off.png" position="589,138" size="32,32" zPosition="1" alphatest="blend" /> <!-- TunerD -->
-		<widget source="session.TunerInfo" render="Pixmap" pixmap="SevenHD/buttons/b_on.png" position="509,138" zPosition="2" size="32,32" backgroundColor="SevenFontBackgroundIB1" alphatest="blend" valign="center">
+		<widget source="session.TunerInfo" render="Pixmap" pixmap="SevenHD/buttons/b_on.png" position="509,138" zPosition="2" size="32,32" backgroundColor="SevenFontBackgroundIB1" alphatest="blend" >
 			<convert type="TunerInfo">TunerUseMask</convert>
 			<convert type="ValueBitTest">2</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
-		<widget source="session.TunerInfo" render="Pixmap" pixmap="SevenHD/buttons/c_on.png" position="549,138" zPosition="2" size="32,32" backgroundColor="SevenFontBackgroundIB1" alphatest="blend" valign="center">
+		<widget source="session.TunerInfo" render="Pixmap" pixmap="SevenHD/buttons/c_on.png" position="549,138" zPosition="2" size="32,32" backgroundColor="SevenFontBackgroundIB1" alphatest="blend" >
 			<convert type="TunerInfo">TunerUseMask</convert>
 			<convert type="ValueBitTest">4</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
-		<widget source="session.TunerInfo" render="Pixmap" pixmap="SevenHD/buttons/d_on.png" position="589,138" zPosition="2" size="32,32" backgroundColor="SevenFontBackgroundIB1" alphatest="blend" valign="center">
+		<widget source="session.TunerInfo" render="Pixmap" pixmap="SevenHD/buttons/d_on.png" position="589,138" zPosition="2" size="32,32" backgroundColor="SevenFontBackgroundIB1" alphatest="blend" >
 			<convert type="TunerInfo">TunerUseMask</convert>
 			<convert type="ValueBitTest">8</convert>
 			<convert type="ConditionalShowHide" />

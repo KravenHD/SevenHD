@@ -70,22 +70,22 @@
 			<convert type="SevenHDServiceInfo">IsWidescreen</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
-		<widget source="session.TunerInfo" render="Pixmap" pixmap="SevenHD/buttons/c_on.png" position="993,666" zPosition="2" size="32,32" backgroundColor="SevenFontBackgroundIB2" alphatest="blend" valign="center">
+		<widget source="session.TunerInfo" render="Pixmap" pixmap="SevenHD/buttons/c_on.png" position="993,666" zPosition="2" size="32,32" backgroundColor="SevenFontBackgroundIB2" alphatest="blend" >
 			<convert type="TunerInfo">TunerUseMask</convert>
 			<convert type="ValueBitTest">4</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
-		<widget source="session.TunerInfo" render="Pixmap" pixmap="SevenHD/buttons/b_on.png" position="953,666" zPosition="2" size="32,32" backgroundColor="SevenFontBackgroundIB2" alphatest="blend" valign="center">
+		<widget source="session.TunerInfo" render="Pixmap" pixmap="SevenHD/buttons/b_on.png" position="953,666" zPosition="2" size="32,32" backgroundColor="SevenFontBackgroundIB2" alphatest="blend" >
 			<convert type="TunerInfo">TunerUseMask</convert>
 			<convert type="ValueBitTest">2</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
-		<widget source="session.TunerInfo" render="Pixmap" pixmap="SevenHD/buttons/a_on.png" position="913,666" zPosition="2" size="32,32" backgroundColor="SevenFontBackgroundIB2" alphatest="blend" valign="center">
+		<widget source="session.TunerInfo" render="Pixmap" pixmap="SevenHD/buttons/a_on.png" position="913,666" zPosition="2" size="32,32" backgroundColor="SevenFontBackgroundIB2" alphatest="blend" >
 			<convert type="TunerInfo">TunerUseMask</convert>
 			<convert type="ValueBitTest">1</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
-		<widget source="session.TunerInfo" render="Pixmap" pixmap="SevenHD/buttons/d_on.png" position="1034,666" zPosition="2" size="32,32" backgroundColor="SevenFontBackgroundIB2" alphatest="blend" valign="center">
+		<widget source="session.TunerInfo" render="Pixmap" pixmap="SevenHD/buttons/d_on.png" position="1034,666" zPosition="2" size="32,32" backgroundColor="SevenFontBackgroundIB2" alphatest="blend" >
 			<convert type="TunerInfo">TunerUseMask</convert>
 			<convert type="ValueBitTest">8</convert>
 			<convert type="ConditionalShowHide" />
