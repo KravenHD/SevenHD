@@ -1550,7 +1550,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		</applet>
 	</screen>
 		<!-- MessageBox -->
-	<screen name="MessageBox" flags="wfNoBorder" borderWidth="2" borderColor="SevenBorder" position="207,177" size="833,482" zPosition="1" title="Message" backgroundColor="transparent">
+	<screen name="MessageBox" flags="wfNoBorder" position="207,177" size="833,482" zPosition="1" title="Message" backgroundColor="transparent">
 		<!--<eLabel backgroundColor="SevenFontBackgroundLeft" font="Regular;13" foregroundColor="red" text="MessageBox" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
 		<eLabel backgroundColor="SevenBackgroundLeft" position="0,0" size="833,482" transparent="0" zPosition="-9" />
 		<ePixmap pixmap="SevenHD/back/menumain.png" position="0,0" size="833,482" alphatest="blend" zPosition="-8" />
