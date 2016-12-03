@@ -920,7 +920,7 @@
 		<widget name="entrylist" position="70,146" zPosition="1" size="708,450" font="Regular; 22" halign="left" valign="top" transparent="1" backgroundColor="SevenFontBackgroundLeft"  foregroundColor="SevenFont1" />
 		<widget source="city" render="Label" position="70,105" size="220,28" font="Regular2; 20" halign="left" valign="center" transparent="1" backgroundColor="SevenFontBackgroundLeft"  foregroundColor="SevenFont2" />
 		<widget source="text" render="Label" position="297,105" size="480,28" font="Regular2; 22" halign="left" valign="center" transparent="1" backgroundColor="SevenFontBackgroundLeft"  foregroundColor="SevenFont2" />
-		<widget name="HelpWindow" position="70,423" size="532,200" backgroundColor="SevenFontBackgroundLeft"  transparent="1" flags="wfNoBorder" />
+		<widget name="HelpWindow" position="70,423" size="532,200" backgroundColor="SevenFontBackgroundLeft"  transparent="1" />
 		<panel name="template_menu_left_button" />
 		<panel name="template_colorkey_text_source" />
 	</screen>
@@ -928,7 +928,7 @@
 	<screen name="MSNWeatherPluginEntryConfigScreen" position="0,0" size="1280,720" title="WeatherPlugin: Edit Entry" flags="wfNoBorder" backgroundColor="transparent">
 		<!--<eLabel backgroundColor="SevenFontBackgroundLeft" font="Regular;13" foregroundColor="red" text="MSNWeatherPluginEntryConfigScreen" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
 		<widget name="config" position="70,80" zPosition="1" size="708,540" font="Regular; 22" halign="left" valign="top" transparent="1" backgroundColor="SevenFontBackgroundLeft"  foregroundColor="SevenFont1" />
-		<widget name="HelpWindow" position="70,423" size="532,200" backgroundColor="SevenBackgroundLeft"  transparent="1" flags="wfNoBorder" />
+		<widget name="HelpWindow" position="70,423" size="532,200" backgroundColor="SevenBackgroundLeft"  transparent="1" />
 		<panel name="template_menu_left_button" />
 		<panel name="template_colorkey_text_source" />
 	</screen>
@@ -936,7 +936,7 @@
 	<screen name="MSNWeatherPluginSearch" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
 		<!--<eLabel backgroundColor="SevenFontBackgroundLeft" font="Regular;13" foregroundColor="red" text="MSNWeatherPluginSearch" position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->
 		<widget name="entrylist" position="70,80" zPosition="1" size="708,540" font="Regular; 22" halign="left" valign="top" transparent="1" backgroundColor="SevenFontBackgroundLeft"  foregroundColor="SevenFont1" />
-		<widget name="HelpWindow" position="70,423" size="532,200" backgroundColor="SevenBackgroundLeft"  transparent="1" flags="wfNoBorder" />
+		<widget name="HelpWindow" position="70,423" size="532,200" backgroundColor="SevenBackgroundLeft"  transparent="1" />
 		<panel name="template_menu_left_button" />
 		<panel name="template_colorkey_text_source" />
 	</screen>
