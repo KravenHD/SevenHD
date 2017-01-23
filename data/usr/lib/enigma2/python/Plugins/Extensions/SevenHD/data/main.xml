@@ -1821,7 +1821,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2,orgpos.y()))
 		<ePixmap pixmap="SevenHD/buttons/key_exit.png" position="339,387" size="32,32" zPosition="3" alphatest="blend" />
 		<eLabel text="Cancel" backgroundColor="SevenFontBackgroundLeft" font="Regular;18" foregroundColor="SevenButtonText" halign="left" position="378,393" size="220,30" transparent="1" zPosition="1" />
 		<ePixmap pixmap="SevenHD/buttons/key_ok.png" alphatest="blend" position="35,387" size="32,32" zPosition="3" />
-		<eLabel text="Auswahl" backgroundColor="SevenFontBackgroundLeft" font="Regular;18" foregroundColor="SevenButtonText" halign="left" position="75,393" size="220,30" transparent="1" zPosition="3" />
+		<eLabel text="Selection" backgroundColor="SevenFontBackgroundLeft" font="Regular;18" foregroundColor="SevenButtonText" halign="left" position="75,393" size="220,30" transparent="1" zPosition="3" />
 	</screen>
 		<!-- Change_volume -->
 	<screen name="Change_volume" position="0,0" size="1280,720" title="Change Volume offset" flags="wfNoBorder" backgroundColor="transparent">
