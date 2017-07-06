@@ -133,8 +133,10 @@ else:
    entrie = os.popen('cat /proc/cmdline').read()
    
    if brand:
-      if getBoxType() in 'vusolo4k ax51 mutant51':
+      if getBoxType() in 'vusolo4k ax51 mutant51 gbquad4k':
          mem = re.findall('_cma=(.*?)M', entrie)
+      elif getBoxType() in 'sf4008':
+         mem = re.findall('bmem=(.*?)m', entrie)
       else:   
          mem = re.findall('bmem=(.*?)M', entrie)
    else:   
@@ -151,8 +153,8 @@ SkinModeList = []
 SkinModeList.append(("1", _("HD Skin 1280 x 720")))
 if bmem > 180:
    SkinModeList.append(("2", _("FullHD Skin 1920 x 1080")))
-if bmem > 440:
-   SkinModeList.append(("3", _("UHD Skin 3840 x 2160")))
+#if bmem > 440:
+#   SkinModeList.append(("3", _("UHD Skin 3840 x 2160")))
    #SkinModeList.append(("4", _("4K Skin 4096 x 2160")))
 #if bmem > 880:
    #SkinModeList.append(("5", _("FullUHD Skin 7680 x 4320")))
