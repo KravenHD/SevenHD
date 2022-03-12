@@ -105,7 +105,7 @@ class SevenHDWeather_owm(Poll, Converter, object):
 		global WEATHER_LOAD
 		if WEATHER_LOAD == True:
 			try:
-				print "SevenWeather: Weather download from OpenWeatherMap"
+				print("SevenWeather: Weather download from OpenWeatherMap")
 				res = requests.request('get', URL)
 				self.data = res.json()
 				WEATHER_DATA = self.data

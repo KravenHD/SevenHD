@@ -147,16 +147,16 @@ class PluginSettings(ConfigListScreen, Screen):
               list.append(getConfigListEntry(_("EMCMediaCenter Extra Info"),             config.plugins.SevenHD.EMCPicon,           'Anzeige von Extrainformationen im EMCMediaCenter.',              '1',     ''))
         if os.path.isdir(PLUGIN_PATH + "Extensions/Albatros") :
            if config.plugins.SevenHD.use_alba_skin.value:
-              list.append(getConfigListEntry(_("Use Albatros Skin"),   config.plugins.SevenHD.use_alba_skin,          'Wenn ja wird das SevenHD Skin für Albatros installiert.',    '1',     ''))
+              list.append(getConfigListEntry(_("Use Albatros Skin"),   config.plugins.SevenHD.use_alba_skin,          'Wenn ja wird das SevenHD Skin fÃ¼r Albatros installiert.',    '1',     ''))
            else:
-              list.append(getConfigListEntry(_("Use Albatros Skin"),   config.plugins.SevenHD.use_alba_skin,          'Wenn ja wird das SevenHD Skin für Albatros installiert.',    '4',     'none'))
+              list.append(getConfigListEntry(_("Use Albatros Skin"),   config.plugins.SevenHD.use_alba_skin,          'Wenn ja wird das SevenHD Skin fÃ¼r Albatros installiert.',    '4',     'none'))
         else:
            list.append(getConfigListEntry(_('{:<121}{:>1}'.format('Albatros','not installed')), )) 
         if os.path.isdir(PLUGIN_PATH + "Extensions/MediaPortal") :
            if config.plugins.SevenHD.use_mp_skin.value:
-              list.append(getConfigListEntry(_("Use MediaPortal Skin"),config.plugins.SevenHD.use_mp_skin,            'Wenn ja wird das SevenHD Skin für MediaPortal installiert.', '1',     ''))
+              list.append(getConfigListEntry(_("Use MediaPortal Skin"),config.plugins.SevenHD.use_mp_skin,            'Wenn ja wird das SevenHD Skin fÃ¼r MediaPortal installiert.', '1',     ''))
            else:
-              list.append(getConfigListEntry(_("Use MediaPortal Skin"),config.plugins.SevenHD.use_mp_skin,            'Wenn ja wird das SevenHD Skin für MediaPortal installiert.', '4',     'none'))
+              list.append(getConfigListEntry(_("Use MediaPortal Skin"),config.plugins.SevenHD.use_mp_skin,            'Wenn ja wird das SevenHD Skin fÃ¼r MediaPortal installiert.', '4',     'none'))
         else:
            list.append(getConfigListEntry(_('{:<121}{:>1}'.format('MediaPortal','not installed')), )) 
         if config.plugins.SevenHD.NumberZapExtImport.value:

@@ -111,7 +111,7 @@ class SevenHDWeather_accu(Poll, Converter, object):
 		global WEATHER_LOAD
 		if WEATHER_LOAD == True:
 			try:
-				print "SevenWeather: Weather download from AccuWeather"
+				print("SevenWeather: Weather download from AccuWeather")
 				res = requests.request('get', URL)
 				self.data = res.json()
 				WEATHER_DATA1 = self.data

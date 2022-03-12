@@ -223,4 +223,4 @@ class PartPreview(Screen):
         self.onLayoutFinish.append(self.hello)
         
     def hello(self):
-        print 'here i am'
+        print('here i am')

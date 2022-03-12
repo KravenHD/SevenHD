@@ -59,16 +59,16 @@ gettext.textdomain("enigma2")
 gettext.bindtextdomain("SevenHD", "%s%s" % (resolveFilename(SCOPE_PLUGINS), "Extensions/SevenHD/locale/"))
 
 def _(txt):
-	t = gettext.dgettext("SevenHD", txt)
-	if t == txt:
-		t = gettext.gettext(txt)
-	return t
+    t = gettext.dgettext("SevenHD", txt)
+    if t == txt:
+        t = gettext.gettext(txt)
+    return t
 
 def translateBlock(block):
-	for x in TranslationHelper:
-		if block.__contains__(x[0]):
-			block = block.replace(x[0], x[1])
-	return block
+    for x in TranslationHelper:
+        if block.__contains__(x[0]):
+            block = block.replace(x[0], x[1])
+    return block
 #############################################################
 class SevenHD(Screen):
     skin =  """
@@ -143,7 +143,7 @@ class SevenHD(Screen):
                 "yellow": self.reboot,
                 "blue": self.showInfo
                 
-            }, -1)	
+            }, -1)    
            
         list = []  
         list.append(MenuEntryItem(_("main setting"), "MainSettings"))
@@ -239,7 +239,7 @@ class SevenHD(Screen):
                 self.session.open(InfobarSettings)
             elif selectedKey == "InfobarExtraSettings":
                 self.session.open(InfobarExtraSettings)
-    	    elif selectedKey == "ChannelSettings":
+            elif selectedKey == "ChannelSettings":
                 self.session.open(ChannelSettings)  
             elif selectedKey == "SonstigeSettings":
                 self.session.open(SonstigeSettings)
@@ -308,7 +308,7 @@ class SevenHD(Screen):
         self.skin_lines = []        
         try:
                 #global tag search and replace in all skin elements
-		self.skinSearchAndReplace = []
+                self.skinSearchAndReplace = []
                 # Normal Font
                 self.FontStyle_1 = config.plugins.SevenHD.FontStyle_1.value
                 self.FontStyleHeight_1 = config.plugins.SevenHD.FontStyleHeight_1.value
@@ -460,137 +460,137 @@ class SevenHD(Screen):
                    self.skinSearchAndReplace.append(['name="SevenFontBackMiddleCS" value="#00000000"', 'name="SevenFontBackMiddleCS" value="#%s%s"' % (config.plugins.SevenHD.CSMiddleColorTrans.value, self.ChannelBack3[2:8])])
                    self.skinSearchAndReplace.append(['pixmap="SevenHD/back/csmiddle.png"',""])
                 
-		self.skinSearchAndReplace.append(['name="SevenBackground" value="#00000000"', 'name="SevenBackground" value="#%s%s"' % (config.plugins.SevenHD.BackgroundColorTrans.value, config.plugins.SevenHD.Background.value[2:8])])
-		self.skinSearchAndReplace.append(['name="SevenFontBackground" value="#00000000"', 'name="SevenFontBackground" value="#%s%s"' % (config.plugins.SevenHD.BackgroundColorTrans.value, config.plugins.SevenHD.Background.value[2:8])])
+                self.skinSearchAndReplace.append(['name="SevenBackground" value="#00000000"', 'name="SevenBackground" value="#%s%s"' % (config.plugins.SevenHD.BackgroundColorTrans.value, config.plugins.SevenHD.Background.value[2:8])])
+                self.skinSearchAndReplace.append(['name="SevenFontBackground" value="#00000000"', 'name="SevenFontBackground" value="#%s%s"' % (config.plugins.SevenHD.BackgroundColorTrans.value, config.plugins.SevenHD.Background.value[2:8])])
 
-		self.skinSearchAndReplace.append(["Seven_Selection", config.plugins.SevenHD.SelectionBackground.value])
-		self.skinSearchAndReplace.append(["SevenFont_1", config.plugins.SevenHD.Font1.value])
-		self.skinSearchAndReplace.append(["SevenFont_2", config.plugins.SevenHD.Font2.value])
-		self.skinSearchAndReplace.append(["SevenSel_Font", config.plugins.SevenHD.SelectionFont.value])
-		self.skinSearchAndReplace.append(["SevenButton_Text", config.plugins.SevenHD.ButtonText.value])
-		if not config.plugins.SevenHD.Border.value == "ff000000":
-			self.skinSearchAndReplace.append(['<!--<eLabel backgroundColor="SevenBorder"', '<eLabel backgroundColor="SevenBorder"'])
-			self.skinSearchAndReplace.append(['zPosition="101" />-->', 'zPosition="101" />'])
-		else:
-			self.skinSearchAndReplace.append(['borderWidth="2" borderColor="SevenBorder"', ' '])
-			self.skinSearchAndReplace.append(['borderColor="SevenBorder" borderWidth="2"', ' '])
-			self.skinSearchAndReplace.append(['borderColor="SevenBorder" borderWidth="1"', ' '])
-		self.skinSearchAndReplace.append(["Seven_Border", config.plugins.SevenHD.Border.value])
-		if not config.plugins.SevenHD.Line.value == "ff000000":
-			self.skinSearchAndReplace.append(['<!--<eLabel backgroundColor="SevenLine"', '<eLabel backgroundColor="SevenLine"'])
-			self.skinSearchAndReplace.append(['zPosition="108" />-->', 'zPosition="108" />'])
-		self.skinSearchAndReplace.append(["Seven_Line", config.plugins.SevenHD.Line.value])
-		if not config.plugins.SevenHD.BorderRight.value == "ff000000":
-			self.skinSearchAndReplace.append(['<!--<eLabel backgroundColor="SevenBorderRight"', '<eLabel backgroundColor="SevenBorderRight"'])
-			self.skinSearchAndReplace.append(['zPosition="102" />-->', 'zPosition="102" />'])
-		self.skinSearchAndReplace.append(["SevenBorder_Right", config.plugins.SevenHD.BorderRight.value])
-		if not config.plugins.SevenHD.LineRight.value == "ff000000":
-			self.skinSearchAndReplace.append(['<!--<eLabel backgroundColor="SevenLineRight"', '<eLabel backgroundColor="SevenLineRight"'])
-			self.skinSearchAndReplace.append(['zPosition="109" />-->', 'zPosition="109" />'])
-		self.skinSearchAndReplace.append(["SevenLine_Right", config.plugins.SevenHD.LineRight.value])
+                self.skinSearchAndReplace.append(["Seven_Selection", config.plugins.SevenHD.SelectionBackground.value])
+                self.skinSearchAndReplace.append(["SevenFont_1", config.plugins.SevenHD.Font1.value])
+                self.skinSearchAndReplace.append(["SevenFont_2", config.plugins.SevenHD.Font2.value])
+                self.skinSearchAndReplace.append(["SevenSel_Font", config.plugins.SevenHD.SelectionFont.value])
+                self.skinSearchAndReplace.append(["SevenButton_Text", config.plugins.SevenHD.ButtonText.value])
+                if not config.plugins.SevenHD.Border.value == "ff000000":
+                    self.skinSearchAndReplace.append(['<!--<eLabel backgroundColor="SevenBorder"', '<eLabel backgroundColor="SevenBorder"'])
+                    self.skinSearchAndReplace.append(['zPosition="101" />-->', 'zPosition="101" />'])
+                else:
+                    self.skinSearchAndReplace.append(['borderWidth="2" borderColor="SevenBorder"', ' '])
+                    self.skinSearchAndReplace.append(['borderColor="SevenBorder" borderWidth="2"', ' '])
+                    self.skinSearchAndReplace.append(['borderColor="SevenBorder" borderWidth="1"', ' '])
+                self.skinSearchAndReplace.append(["Seven_Border", config.plugins.SevenHD.Border.value])
+                if not config.plugins.SevenHD.Line.value == "ff000000":
+                    self.skinSearchAndReplace.append(['<!--<eLabel backgroundColor="SevenLine"', '<eLabel backgroundColor="SevenLine"'])
+                    self.skinSearchAndReplace.append(['zPosition="108" />-->', 'zPosition="108" />'])
+                self.skinSearchAndReplace.append(["Seven_Line", config.plugins.SevenHD.Line.value])
+                if not config.plugins.SevenHD.BorderRight.value == "ff000000":
+                    self.skinSearchAndReplace.append(['<!--<eLabel backgroundColor="SevenBorderRight"', '<eLabel backgroundColor="SevenBorderRight"'])
+                    self.skinSearchAndReplace.append(['zPosition="102" />-->', 'zPosition="102" />'])
+                self.skinSearchAndReplace.append(["SevenBorder_Right", config.plugins.SevenHD.BorderRight.value])
+                if not config.plugins.SevenHD.LineRight.value == "ff000000":
+                    self.skinSearchAndReplace.append(['<!--<eLabel backgroundColor="SevenLineRight"', '<eLabel backgroundColor="SevenLineRight"'])
+                    self.skinSearchAndReplace.append(['zPosition="109" />-->', 'zPosition="109" />'])
+                self.skinSearchAndReplace.append(["SevenLine_Right", config.plugins.SevenHD.LineRight.value])
 
-		self.skinSearchAndReplace.append(["SevenFont_ECM", config.plugins.SevenHD.SevenECM.value])
-		self.skinSearchAndReplace.append(["SevenFont_Sat", config.plugins.SevenHD.SevenSat.value])
-		self.skinSearchAndReplace.append(["SevenFont_Sys1", config.plugins.SevenHD.SevenSys1.value])
-		self.skinSearchAndReplace.append(["SevenFont_Sys2", config.plugins.SevenHD.SevenSys2.value])
-		self.skinSearchAndReplace.append(["SevenFont_Weather1", config.plugins.SevenHD.SevenWeather1.value])
-		self.skinSearchAndReplace.append(["SevenFont_Weather2", config.plugins.SevenHD.SevenWeather2.value])
-		self.skinSearchAndReplace.append(["SevenFont_Weather3", config.plugins.SevenHD.SevenWeather3.value])
+                self.skinSearchAndReplace.append(["SevenFont_ECM", config.plugins.SevenHD.SevenECM.value])
+                self.skinSearchAndReplace.append(["SevenFont_Sat", config.plugins.SevenHD.SevenSat.value])
+                self.skinSearchAndReplace.append(["SevenFont_Sys1", config.plugins.SevenHD.SevenSys1.value])
+                self.skinSearchAndReplace.append(["SevenFont_Sys2", config.plugins.SevenHD.SevenSys2.value])
+                self.skinSearchAndReplace.append(["SevenFont_Weather1", config.plugins.SevenHD.SevenWeather1.value])
+                self.skinSearchAndReplace.append(["SevenFont_Weather2", config.plugins.SevenHD.SevenWeather2.value])
+                self.skinSearchAndReplace.append(["SevenFont_Weather3", config.plugins.SevenHD.SevenWeather3.value])
 
-		self.skinSearchAndReplace.append(["SevenMeteo_Font", config.plugins.SevenHD.MeteoColor.value])
-
-
-		self.skinSearchAndReplace.append(["SevenProgress_BorderCS", config.plugins.SevenHD.ProgressBorderCS.value])
-		self.skinSearchAndReplace.append(["SevenProgress_LineCS", config.plugins.SevenHD.ProgressLineCS.value])
-		self.skinSearchAndReplace.append(["SevenProgress_LineIB", config.plugins.SevenHD.ProgressLineIB.value])
-		self.skinSearchAndReplace.append(["SevenProgress_LinePlug", config.plugins.SevenHD.ProgressLinePlug.value])
-		self.skinSearchAndReplace.append(["SevenProgress_LineVol", config.plugins.SevenHD.ProgressLineVol.value])
+                self.skinSearchAndReplace.append(["SevenMeteo_Font", config.plugins.SevenHD.MeteoColor.value])
 
 
-		self.skinSearchAndReplace.append(["SevenProgress_IB", config.plugins.SevenHD.ProgressIB.value])
-		self.skinSearchAndReplace.append(["SevenProgress_Vol", config.plugins.SevenHD.ProgressVol.value])
-		self.skinSearchAndReplace.append(["SevenProgress_CS", config.plugins.SevenHD.ProgressCS.value])
-		self.skinSearchAndReplace.append(["SevenProgress_ListCS", config.plugins.SevenHD.ProgressListCS.value])
+                self.skinSearchAndReplace.append(["SevenProgress_BorderCS", config.plugins.SevenHD.ProgressBorderCS.value])
+                self.skinSearchAndReplace.append(["SevenProgress_LineCS", config.plugins.SevenHD.ProgressLineCS.value])
+                self.skinSearchAndReplace.append(["SevenProgress_LineIB", config.plugins.SevenHD.ProgressLineIB.value])
+                self.skinSearchAndReplace.append(["SevenProgress_LinePlug", config.plugins.SevenHD.ProgressLinePlug.value])
+                self.skinSearchAndReplace.append(["SevenProgress_LineVol", config.plugins.SevenHD.ProgressLineVol.value])
 
 
-		self.skinSearchAndReplace.append(["SevenProgress_IB", config.plugins.SevenHD.ProgressIB.value])
-		self.skinSearchAndReplace.append(["SevenProgress_Vol", config.plugins.SevenHD.ProgressVol.value])
+                self.skinSearchAndReplace.append(["SevenProgress_IB", config.plugins.SevenHD.ProgressIB.value])
+                self.skinSearchAndReplace.append(["SevenProgress_Vol", config.plugins.SevenHD.ProgressVol.value])
+                self.skinSearchAndReplace.append(["SevenProgress_CS", config.plugins.SevenHD.ProgressCS.value])
+                self.skinSearchAndReplace.append(["SevenProgress_ListCS", config.plugins.SevenHD.ProgressListCS.value])
 
 
-		if not config.plugins.SevenHD.InfobarBorder.value == "ff000000":
-			self.skinSearchAndReplace.append(['<!--<eLabel backgroundColor="SevenBorderIB"', '<eLabel backgroundColor="SevenBorderIB"'])
-			self.skinSearchAndReplace.append(['zPosition="103" />-->', 'zPosition="103" />'])
-		else:
-			self.skinSearchAndReplace.append(['borderWidth="2" borderColor="SevenBorderIB"', ' '])
-		self.skinSearchAndReplace.append(["SevenBorder_IB", config.plugins.SevenHD.InfobarBorder.value])
-		if not config.plugins.SevenHD.InfobarLine.value == "ff000000":
-			self.skinSearchAndReplace.append(['<!--<eLabel backgroundColor="SevenLineIB"', '<eLabel backgroundColor="SevenLineIB"'])
-			self.skinSearchAndReplace.append(['zPosition="110" />-->', 'zPosition="110" />'])
-		self.skinSearchAndReplace.append(["SevenLine_IB", config.plugins.SevenHD.InfobarLine.value])
-		if not config.plugins.SevenHD.InfobarBorder2.value == "ff000000":
-			self.skinSearchAndReplace.append(['<!--<eLabel backgroundColor="SevenBorderIB2"', '<eLabel backgroundColor="SevenBorderIB2"'])
-			self.skinSearchAndReplace.append(['zPosition="104" />-->', 'zPosition="104" />'])
-		self.skinSearchAndReplace.append(["SevenBorder2_IB", config.plugins.SevenHD.InfobarBorder2.value])
-		if not config.plugins.SevenHD.InfobarLine2.value == "ff000000":
-			self.skinSearchAndReplace.append(['<!--<eLabel backgroundColor="SevenLineIB2"', '<eLabel backgroundColor="SevenLineIB2"'])
-			self.skinSearchAndReplace.append(['zPosition="111" />-->', 'zPosition="111" />'])
-		self.skinSearchAndReplace.append(["SevenLine2_IB", config.plugins.SevenHD.InfobarLine2.value])
-		self.skinSearchAndReplace.append(["SevenNext_IB", config.plugins.SevenHD.NextEvent.value])
-		self.skinSearchAndReplace.append(["SevenNow_IB", config.plugins.SevenHD.NowEvent.value])
-		self.skinSearchAndReplace.append(["SevenSNR_IB", config.plugins.SevenHD.SNR.value])
-		self.skinSearchAndReplace.append(["SevenFont_CN", config.plugins.SevenHD.FontCN.value])
+                self.skinSearchAndReplace.append(["SevenProgress_IB", config.plugins.SevenHD.ProgressIB.value])
+                self.skinSearchAndReplace.append(["SevenProgress_Vol", config.plugins.SevenHD.ProgressVol.value])
 
 
-		self.skinSearchAndReplace.append(["SevenClock_Date", config.plugins.SevenHD.ClockDate.value])
-		self.skinSearchAndReplace.append(["SevenClock_H", config.plugins.SevenHD.ClockTimeh.value])
-		self.skinSearchAndReplace.append(["SevenClock_M", config.plugins.SevenHD.ClockTimem.value])
-		self.skinSearchAndReplace.append(["SevenClock_S", config.plugins.SevenHD.ClockTimes.value])
-		self.skinSearchAndReplace.append(["SevenClock_Time", config.plugins.SevenHD.ClockTime.value])
-		self.skinSearchAndReplace.append(["SevenClock_Weather", config.plugins.SevenHD.ClockWeather.value])
-		self.skinSearchAndReplace.append(["SevenClock_Weekday", config.plugins.SevenHD.ClockWeek.value])
+                if not config.plugins.SevenHD.InfobarBorder.value == "ff000000":
+                    self.skinSearchAndReplace.append(['<!--<eLabel backgroundColor="SevenBorderIB"', '<eLabel backgroundColor="SevenBorderIB"'])
+                    self.skinSearchAndReplace.append(['zPosition="103" />-->', 'zPosition="103" />'])
+                else:
+                    self.skinSearchAndReplace.append(['borderWidth="2" borderColor="SevenBorderIB"', ' '])
+                self.skinSearchAndReplace.append(["SevenBorder_IB", config.plugins.SevenHD.InfobarBorder.value])
+                if not config.plugins.SevenHD.InfobarLine.value == "ff000000":
+                    self.skinSearchAndReplace.append(['<!--<eLabel backgroundColor="SevenLineIB"', '<eLabel backgroundColor="SevenLineIB"'])
+                    self.skinSearchAndReplace.append(['zPosition="110" />-->', 'zPosition="110" />'])
+                self.skinSearchAndReplace.append(["SevenLine_IB", config.plugins.SevenHD.InfobarLine.value])
+                if not config.plugins.SevenHD.InfobarBorder2.value == "ff000000":
+                    self.skinSearchAndReplace.append(['<!--<eLabel backgroundColor="SevenBorderIB2"', '<eLabel backgroundColor="SevenBorderIB2"'])
+                    self.skinSearchAndReplace.append(['zPosition="104" />-->', 'zPosition="104" />'])
+                self.skinSearchAndReplace.append(["SevenBorder2_IB", config.plugins.SevenHD.InfobarBorder2.value])
+                if not config.plugins.SevenHD.InfobarLine2.value == "ff000000":
+                    self.skinSearchAndReplace.append(['<!--<eLabel backgroundColor="SevenLineIB2"', '<eLabel backgroundColor="SevenLineIB2"'])
+                    self.skinSearchAndReplace.append(['zPosition="111" />-->', 'zPosition="111" />'])
+                self.skinSearchAndReplace.append(["SevenLine2_IB", config.plugins.SevenHD.InfobarLine2.value])
+                self.skinSearchAndReplace.append(["SevenNext_IB", config.plugins.SevenHD.NextEvent.value])
+                self.skinSearchAndReplace.append(["SevenNow_IB", config.plugins.SevenHD.NowEvent.value])
+                self.skinSearchAndReplace.append(["SevenSNR_IB", config.plugins.SevenHD.SNR.value])
+                self.skinSearchAndReplace.append(["SevenFont_CN", config.plugins.SevenHD.FontCN.value])
 
 
-		if not config.plugins.SevenHD.ChannelLine.value == "ff000000":
-			self.skinSearchAndReplace.append(['<!--<eLabel backgroundColor="SevenLineCS"', '<eLabel backgroundColor="SevenLineCS"'])
-			self.skinSearchAndReplace.append(['zPosition="112" />-->', 'zPosition="112" />'])
-		self.skinSearchAndReplace.append(["SevenLine_CS", config.plugins.SevenHD.ChannelLine.value])
-		if not config.plugins.SevenHD.ChannelLineRight.value == "ff000000":
-			self.skinSearchAndReplace.append(['<!--<eLabel backgroundColor="SevenLineRightCS"', '<eLabel backgroundColor="SevenLineRightCS"'])
-			self.skinSearchAndReplace.append(['zPosition="113" />-->', 'zPosition="113" />'])
-		self.skinSearchAndReplace.append(["SevenLineRight_CS", config.plugins.SevenHD.ChannelLineRight.value])
-		if not config.plugins.SevenHD.ChannelLineMiddle.value == "ff000000":
-			self.skinSearchAndReplace.append(['<!--<eLabel backgroundColor="SevenLineMiddleCS"', '<eLabel backgroundColor="SevenLineMiddleCS"'])
-			self.skinSearchAndReplace.append(['zPosition="114" />-->', 'zPosition="114" />'])
-		self.skinSearchAndReplace.append(["SevenLineMiddle_CS", config.plugins.SevenHD.ChannelLineMiddle.value])
-		if not config.plugins.SevenHD.ChannelBorder.value == "ff000000":
-			self.skinSearchAndReplace.append(['<!--<eLabel backgroundColor="SevenBorderCS"', '<eLabel backgroundColor="SevenBorderCS"'])
-			self.skinSearchAndReplace.append(['zPosition="105" />-->', 'zPosition="105" />'])
-		self.skinSearchAndReplace.append(["SevenBorder_CS", config.plugins.SevenHD.ChannelBorder.value])
-		if not config.plugins.SevenHD.ChannelBorderRight.value == "ff000000":
-			self.skinSearchAndReplace.append(['<!--<eLabel backgroundColor="SevenBorderRightCS"', '<eLabel backgroundColor="SevenBorderRightCS"'])
-			self.skinSearchAndReplace.append(['zPosition="106" />-->', 'zPosition="106" />'])
-		self.skinSearchAndReplace.append(["SevenBorderRight_CS", config.plugins.SevenHD.ChannelBorderRight.value])
-		if not config.plugins.SevenHD.ChannelBorderMiddle.value == "ff000000":
-			self.skinSearchAndReplace.append(["SevenBorderMiddle_CS", config.plugins.SevenHD.ChannelBorderMiddle.value])
-			self.skinSearchAndReplace.append(['<!--<eLabel backgroundColor="SevenBorderMiddleCS"', '<eLabel backgroundColor="SevenBorderMiddleCS"'])
-			self.skinSearchAndReplace.append(['zPosition="107" />-->', 'zPosition="107" />'])
-		self.skinSearchAndReplace.append(["SevenBorderMiddle_CS", config.plugins.SevenHD.ChannelBorderMiddle.value])
-		self.skinSearchAndReplace.append(["SevenButtons_CS", config.plugins.SevenHD.ChannelColorButton.value])
-		self.skinSearchAndReplace.append(["SevenBouquet_CS", config.plugins.SevenHD.ChannelColorBouquet.value])
-		self.skinSearchAndReplace.append(["SevenChannel_CS", config.plugins.SevenHD.ChannelColorChannel.value])
-		self.skinSearchAndReplace.append(["SevenNext_CS", config.plugins.SevenHD.ChannelColorNext.value])
-		self.skinSearchAndReplace.append(["SevenDestcriptionNext_CS", config.plugins.SevenHD.ChannelColorDesciptionNext.value])
-		self.skinSearchAndReplace.append(["SevenDestcriptionLater_CS", config.plugins.SevenHD.ChannelColorDesciptionLater.value])
-		self.skinSearchAndReplace.append(["SevenRuntime_CS", config.plugins.SevenHD.ChannelColorRuntime.value])
-		self.skinSearchAndReplace.append(["SevenProgram_CS", config.plugins.SevenHD.ChannelColorProgram.value])
-		self.skinSearchAndReplace.append(["SevenTime_CS", config.plugins.SevenHD.ChannelColorTimeCS.value])
-		self.skinSearchAndReplace.append(["SevenPrime_CS", config.plugins.SevenHD.ChannelColorPrimeTime.value])
-		self.skinSearchAndReplace.append(["SevenDestcription_CS", config.plugins.SevenHD.ChannelColorDesciption.value])
-		self.skinSearchAndReplace.append(["SevenName_List", config.plugins.SevenHD.ChannelColorChannelName.value])
-		self.skinSearchAndReplace.append(["SevenNumber_List", config.plugins.SevenHD.ChannelColorChannelNumber.value])
-		self.skinSearchAndReplace.append(["SevenProgram_List", config.plugins.SevenHD.ChannelColorEvent.value])
-		
-		# Weather Font
+                self.skinSearchAndReplace.append(["SevenClock_Date", config.plugins.SevenHD.ClockDate.value])
+                self.skinSearchAndReplace.append(["SevenClock_H", config.plugins.SevenHD.ClockTimeh.value])
+                self.skinSearchAndReplace.append(["SevenClock_M", config.plugins.SevenHD.ClockTimem.value])
+                self.skinSearchAndReplace.append(["SevenClock_S", config.plugins.SevenHD.ClockTimes.value])
+                self.skinSearchAndReplace.append(["SevenClock_Time", config.plugins.SevenHD.ClockTime.value])
+                self.skinSearchAndReplace.append(["SevenClock_Weather", config.plugins.SevenHD.ClockWeather.value])
+                self.skinSearchAndReplace.append(["SevenClock_Weekday", config.plugins.SevenHD.ClockWeek.value])
+
+
+                if not config.plugins.SevenHD.ChannelLine.value == "ff000000":
+                    self.skinSearchAndReplace.append(['<!--<eLabel backgroundColor="SevenLineCS"', '<eLabel backgroundColor="SevenLineCS"'])
+                    self.skinSearchAndReplace.append(['zPosition="112" />-->', 'zPosition="112" />'])
+                self.skinSearchAndReplace.append(["SevenLine_CS", config.plugins.SevenHD.ChannelLine.value])
+                if not config.plugins.SevenHD.ChannelLineRight.value == "ff000000":
+                    self.skinSearchAndReplace.append(['<!--<eLabel backgroundColor="SevenLineRightCS"', '<eLabel backgroundColor="SevenLineRightCS"'])
+                    self.skinSearchAndReplace.append(['zPosition="113" />-->', 'zPosition="113" />'])
+                self.skinSearchAndReplace.append(["SevenLineRight_CS", config.plugins.SevenHD.ChannelLineRight.value])
+                if not config.plugins.SevenHD.ChannelLineMiddle.value == "ff000000":
+                    self.skinSearchAndReplace.append(['<!--<eLabel backgroundColor="SevenLineMiddleCS"', '<eLabel backgroundColor="SevenLineMiddleCS"'])
+                    self.skinSearchAndReplace.append(['zPosition="114" />-->', 'zPosition="114" />'])
+                self.skinSearchAndReplace.append(["SevenLineMiddle_CS", config.plugins.SevenHD.ChannelLineMiddle.value])
+                if not config.plugins.SevenHD.ChannelBorder.value == "ff000000":
+                    self.skinSearchAndReplace.append(['<!--<eLabel backgroundColor="SevenBorderCS"', '<eLabel backgroundColor="SevenBorderCS"'])
+                    self.skinSearchAndReplace.append(['zPosition="105" />-->', 'zPosition="105" />'])
+                self.skinSearchAndReplace.append(["SevenBorder_CS", config.plugins.SevenHD.ChannelBorder.value])
+                if not config.plugins.SevenHD.ChannelBorderRight.value == "ff000000":
+                    self.skinSearchAndReplace.append(['<!--<eLabel backgroundColor="SevenBorderRightCS"', '<eLabel backgroundColor="SevenBorderRightCS"'])
+                    self.skinSearchAndReplace.append(['zPosition="106" />-->', 'zPosition="106" />'])
+                self.skinSearchAndReplace.append(["SevenBorderRight_CS", config.plugins.SevenHD.ChannelBorderRight.value])
+                if not config.plugins.SevenHD.ChannelBorderMiddle.value == "ff000000":
+                    self.skinSearchAndReplace.append(["SevenBorderMiddle_CS", config.plugins.SevenHD.ChannelBorderMiddle.value])
+                    self.skinSearchAndReplace.append(['<!--<eLabel backgroundColor="SevenBorderMiddleCS"', '<eLabel backgroundColor="SevenBorderMiddleCS"'])
+                    self.skinSearchAndReplace.append(['zPosition="107" />-->', 'zPosition="107" />'])
+                self.skinSearchAndReplace.append(["SevenBorderMiddle_CS", config.plugins.SevenHD.ChannelBorderMiddle.value])
+                self.skinSearchAndReplace.append(["SevenButtons_CS", config.plugins.SevenHD.ChannelColorButton.value])
+                self.skinSearchAndReplace.append(["SevenBouquet_CS", config.plugins.SevenHD.ChannelColorBouquet.value])
+                self.skinSearchAndReplace.append(["SevenChannel_CS", config.plugins.SevenHD.ChannelColorChannel.value])
+                self.skinSearchAndReplace.append(["SevenNext_CS", config.plugins.SevenHD.ChannelColorNext.value])
+                self.skinSearchAndReplace.append(["SevenDestcriptionNext_CS", config.plugins.SevenHD.ChannelColorDesciptionNext.value])
+                self.skinSearchAndReplace.append(["SevenDestcriptionLater_CS", config.plugins.SevenHD.ChannelColorDesciptionLater.value])
+                self.skinSearchAndReplace.append(["SevenRuntime_CS", config.plugins.SevenHD.ChannelColorRuntime.value])
+                self.skinSearchAndReplace.append(["SevenProgram_CS", config.plugins.SevenHD.ChannelColorProgram.value])
+                self.skinSearchAndReplace.append(["SevenTime_CS", config.plugins.SevenHD.ChannelColorTimeCS.value])
+                self.skinSearchAndReplace.append(["SevenPrime_CS", config.plugins.SevenHD.ChannelColorPrimeTime.value])
+                self.skinSearchAndReplace.append(["SevenDestcription_CS", config.plugins.SevenHD.ChannelColorDesciption.value])
+                self.skinSearchAndReplace.append(["SevenName_List", config.plugins.SevenHD.ChannelColorChannelName.value])
+                self.skinSearchAndReplace.append(["SevenNumber_List", config.plugins.SevenHD.ChannelColorChannelNumber.value])
+                self.skinSearchAndReplace.append(["SevenProgram_List", config.plugins.SevenHD.ChannelColorEvent.value])
+                
+                # Weather Font
                 provider = config.plugins.SevenHD.weather_server.value
                 if provider == '_accu' or provider == '_realtek':
                    font = 'Meteo'   
@@ -682,93 +682,93 @@ class SevenHD(Screen):
                    self.skinSearchAndReplace.append(["00fffff5", config.plugins.SevenHD.ProgressListCS.value])
                    self.skinSearchAndReplace.append(['picServiceEventProgressbar="SevenHD/progresslistcs/progresslistcs52.png"',""])
 
-		self.skinSearchAndReplace.append(["buttons_seven_white", config.plugins.SevenHD.ButtonStyle.value])
-		self.skinSearchAndReplace.append(["icons_seven_white", config.plugins.SevenHD.IconStyle.value])
+                self.skinSearchAndReplace.append(["buttons_seven_white", config.plugins.SevenHD.ButtonStyle.value])
+                self.skinSearchAndReplace.append(["icons_seven_white", config.plugins.SevenHD.IconStyle.value])
 
-		### FrontInfo
-		if config.plugins.SevenHD.FrontInfo.value == "db":
-		   self.skinSearchAndReplace.append(['<convert type="FrontendInfo">SNR' , '<convert type="FrontendInfo">SNRdB'])
+                ### FrontInfo
+                if config.plugins.SevenHD.FrontInfo.value == "db":
+                   self.skinSearchAndReplace.append(['<convert type="FrontendInfo">SNR' , '<convert type="FrontendInfo">SNRdB'])
 
-		### Text (running, writing, none)
-		if config.plugins.SevenHD.RunningText.value == "writing":
-			self.skinSearchAndReplace.append(['render="SevenHDRunningText" options="movetype=running,startpoint=0,startdelay=2000,steptime=90,wrap=1,always=0,repeat=2,oneshot=1"', 'render="SevenHDEmptyEpg"'])
-			self.skinSearchAndReplace.append(['render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,steptime=90,wrap=1,always=0,repeat=2,oneshot=1"', 'render="SevenHDEmptyEpg"'])
-			self.skinSearchAndReplace.append(['render="SevenHDRunningText" options="movetype=running,startpoint=0,startdelay=2000,steptime=90,wrap=0,always=0,repeat=2,oneshot=1"', 'render="SevenHDEmptyEpg"'])
-		elif config.plugins.SevenHD.RunningText.value == "none":
-			self.skinSearchAndReplace.append(['render="SevenHDRunningText" options="movetype=running,startpoint=0,startdelay=2000,steptime=90,wrap=1,always=0,repeat=2,oneshot=1"', 'render="Label"'])
-			self.skinSearchAndReplace.append(['render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,steptime=90,wrap=1,always=0,repeat=2,oneshot=1"', 'render="Label"'])
-			self.skinSearchAndReplace.append(['render="SevenHDRunningText" options="movetype=running,startpoint=0,startdelay=2000,steptime=90,wrap=0,always=0,repeat=2,oneshot=1"', 'render="Label"'])
-		
-		self.skinSearchAndReplace.append(["startdelay=2000", "startdelay=%s" % str(int(config.plugins.SevenHD.Startdelay.value) * 1000)])
-		
-		self.skinSearchAndReplace.append(["steptime=90", "steptime=%s" % str(config.plugins.SevenHD.Steptime.value)])
-			
-		if not config.plugins.SevenHD.SelectionBorder.value == "none":
-			self.selectionbordercolor = config.plugins.SevenHD.SelectionBorder.value
-			self.borset = ("borset_" + self.selectionbordercolor + ".png")
-			self.skinSearchAndReplace.append(["borset.png", self.borset])
-		
-		self.analogstylecolor = config.plugins.SevenHD.AnalogStyle.value
-		self.analog = ("analog_" + self.analogstylecolor + ".png")
-		self.skinSearchAndReplace.append(["analog.png", self.analog])
-		
-		self.tuner_Count = self.getTunerCount()
-		self.debug("verbaute Tuner: " + str(self.tuner_Count))
-		
+                ### Text (running, writing, none)
+                if config.plugins.SevenHD.RunningText.value == "writing":
+                    self.skinSearchAndReplace.append(['render="SevenHDRunningText" options="movetype=running,startpoint=0,startdelay=2000,steptime=90,wrap=1,always=0,repeat=2,oneshot=1"', 'render="SevenHDEmptyEpg"'])
+                    self.skinSearchAndReplace.append(['render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,steptime=90,wrap=1,always=0,repeat=2,oneshot=1"', 'render="SevenHDEmptyEpg"'])
+                    self.skinSearchAndReplace.append(['render="SevenHDRunningText" options="movetype=running,startpoint=0,startdelay=2000,steptime=90,wrap=0,always=0,repeat=2,oneshot=1"', 'render="SevenHDEmptyEpg"'])
+                elif config.plugins.SevenHD.RunningText.value == "none":
+                    self.skinSearchAndReplace.append(['render="SevenHDRunningText" options="movetype=running,startpoint=0,startdelay=2000,steptime=90,wrap=1,always=0,repeat=2,oneshot=1"', 'render="Label"'])
+                    self.skinSearchAndReplace.append(['render="SevenHDRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=2000,steptime=90,wrap=1,always=0,repeat=2,oneshot=1"', 'render="Label"'])
+                    self.skinSearchAndReplace.append(['render="SevenHDRunningText" options="movetype=running,startpoint=0,startdelay=2000,steptime=90,wrap=0,always=0,repeat=2,oneshot=1"', 'render="Label"'])
+                
+                self.skinSearchAndReplace.append(["startdelay=2000", "startdelay=%s" % str(int(config.plugins.SevenHD.Startdelay.value) * 1000)])
+                
+                self.skinSearchAndReplace.append(["steptime=90", "steptime=%s" % str(config.plugins.SevenHD.Steptime.value)])
+                    
+                if not config.plugins.SevenHD.SelectionBorder.value == "none":
+                    self.selectionbordercolor = config.plugins.SevenHD.SelectionBorder.value
+                    self.borset = ("borset_" + self.selectionbordercolor + ".png")
+                    self.skinSearchAndReplace.append(["borset.png", self.borset])
+                
+                self.analogstylecolor = config.plugins.SevenHD.AnalogStyle.value
+                self.analog = ("analog_" + self.analogstylecolor + ".png")
+                self.skinSearchAndReplace.append(["analog.png", self.analog])
+                
+                self.tuner_Count = self.getTunerCount()
+                self.debug("verbaute Tuner: " + str(self.tuner_Count))
+                
                 if str(self.tuner_Count) == str('1'):
-		   self.skinSearchAndReplace.append(['<ePixmap pixmap="SevenHD/buttons/b_off.png"', '<!-- ePixmap pixmap="SevenHD/buttons/b_off.png"'])
-		   self.skinSearchAndReplace.append(['<ePixmap pixmap="SevenHD/buttons/c_off.png"', '<!-- ePixmap pixmap="SevenHD/buttons/c_off.png"'])
-		   self.skinSearchAndReplace.append(['<ePixmap pixmap="SevenHD/buttons/d_off.png"', '<!-- ePixmap pixmap="SevenHD/buttons/d_off.png"'])
-		   self.skinSearchAndReplace.append(['size="32,32" zPosition="1" alphatest="blend" /> <!-- TunerB -->', 'size="32,32" zPosition="1" alphatest="blend" / --> <!-- TunerB -->'])
-		   self.skinSearchAndReplace.append(['size="32,32" zPosition="1" alphatest="blend" /> <!-- TunerC -->', 'size="32,32" zPosition="1" alphatest="blend" / --> <!-- TunerC -->'])
-		   self.skinSearchAndReplace.append(['size="32,32" zPosition="1" alphatest="blend" /> <!-- TunerD -->', 'size="32,32" zPosition="1" alphatest="blend" / --> <!-- TunerD -->'])
-		if str(self.tuner_Count) == str('2'):
-		   self.skinSearchAndReplace.append(['<ePixmap pixmap="SevenHD/buttons/c_off.png"', '<!-- ePixmap pixmap="SevenHD/buttons/c_off.png"'])
-		   self.skinSearchAndReplace.append(['<ePixmap pixmap="SevenHD/buttons/d_off.png"', '<!-- ePixmap pixmap="SevenHD/buttons/d_off.png"'])
-		   self.skinSearchAndReplace.append(['size="32,32" zPosition="1" alphatest="blend" /> <!-- TunerC -->', 'size="32,32" zPosition="1" alphatest="blend" / --> <!-- TunerC -->'])
-		   self.skinSearchAndReplace.append(['size="32,32" zPosition="1" alphatest="blend" /> <!-- TunerD -->', 'size="32,32" zPosition="1" alphatest="blend" / --> <!-- TunerD -->'])
+                   self.skinSearchAndReplace.append(['<ePixmap pixmap="SevenHD/buttons/b_off.png"', '<!-- ePixmap pixmap="SevenHD/buttons/b_off.png"'])
+                   self.skinSearchAndReplace.append(['<ePixmap pixmap="SevenHD/buttons/c_off.png"', '<!-- ePixmap pixmap="SevenHD/buttons/c_off.png"'])
+                   self.skinSearchAndReplace.append(['<ePixmap pixmap="SevenHD/buttons/d_off.png"', '<!-- ePixmap pixmap="SevenHD/buttons/d_off.png"'])
+                   self.skinSearchAndReplace.append(['size="32,32" zPosition="1" alphatest="blend" /> <!-- TunerB -->', 'size="32,32" zPosition="1" alphatest="blend" / --> <!-- TunerB -->'])
+                   self.skinSearchAndReplace.append(['size="32,32" zPosition="1" alphatest="blend" /> <!-- TunerC -->', 'size="32,32" zPosition="1" alphatest="blend" / --> <!-- TunerC -->'])
+                   self.skinSearchAndReplace.append(['size="32,32" zPosition="1" alphatest="blend" /> <!-- TunerD -->', 'size="32,32" zPosition="1" alphatest="blend" / --> <!-- TunerD -->'])
+                if str(self.tuner_Count) == str('2'):
+                   self.skinSearchAndReplace.append(['<ePixmap pixmap="SevenHD/buttons/c_off.png"', '<!-- ePixmap pixmap="SevenHD/buttons/c_off.png"'])
+                   self.skinSearchAndReplace.append(['<ePixmap pixmap="SevenHD/buttons/d_off.png"', '<!-- ePixmap pixmap="SevenHD/buttons/d_off.png"'])
+                   self.skinSearchAndReplace.append(['size="32,32" zPosition="1" alphatest="blend" /> <!-- TunerC -->', 'size="32,32" zPosition="1" alphatest="blend" / --> <!-- TunerC -->'])
+                   self.skinSearchAndReplace.append(['size="32,32" zPosition="1" alphatest="blend" /> <!-- TunerD -->', 'size="32,32" zPosition="1" alphatest="blend" / --> <!-- TunerD -->'])
                 if str(self.tuner_Count) == str('3'):
-		   self.skinSearchAndReplace.append(['<ePixmap pixmap="SevenHD/buttons/d_off.png"', '<!-- ePixmap pixmap="SevenHD/buttons/d_off.png"'])
-		   self.skinSearchAndReplace.append(['size="32,32" zPosition="1" alphatest="blend" /> <!-- TunerD -->', 'size="32,32" zPosition="1" alphatest="blend" / --> <!-- TunerD -->'])
-		
-		
-		### Menu (Logo)
-		if  config.plugins.SevenHD.Logo.value == "menu-icons1":
-			self.skinSearchAndReplace.append(['<panel name="template_menu_main_nologo" />', '<panel name="template_menu_main_logo" />'])
-			self.skinSearchAndReplace.append(['<panel name="template_menu_main_button_nologo" />', '<panel name="template_menu_main_button_logo" />'])
-			self.skinSearchAndReplace.append(['<panel name="template_title_main_nologo" />', '<panel name="template_title_main_logo" />'])
-			self.skinSearchAndReplace.append(['<panel name="template_title_main_button_nologo" />', '<panel name="template_title_main_button_logo" />'])
-		elif  config.plugins.SevenHD.Logo.value == "menu-icons2":
-			self.skinSearchAndReplace.append(['<panel name="template_menu_main_nologo" />', '<panel name="template_menu_main_logo2" />'])
-			self.skinSearchAndReplace.append(['<panel name="template_menu_main_button_nologo" />', '<panel name="template_menu_main_button_logo2" />'])
-			self.skinSearchAndReplace.append(['<panel name="template_title_main_nologo" />', '<panel name="template_title_main_logo2" />'])
-			self.skinSearchAndReplace.append(['<panel name="template_title_main_button_nologo" />', '<panel name="template_title_main_button_logo2" />'])
-		elif  config.plugins.SevenHD.Logo.value == "menu-icons3":
-			self.skinSearchAndReplace.append(['<panel name="template_menu_main_nologo" />', '<panel name="template_menu_main_logo3" />'])
-			self.skinSearchAndReplace.append(['<panel name="template_menu_main_button_nologo" />', '<panel name="template_menu_main_button_logo3" />'])
-			self.skinSearchAndReplace.append(['<panel name="template_title_main_nologo" />', '<panel name="template_title_main_logo3" />'])
-			self.skinSearchAndReplace.append(['<panel name="template_title_main_button_nologo" />', '<panel name="template_title_main_button_logo3" />'])
-		elif  config.plugins.SevenHD.Logo.value == "menu-icons4":
-			self.skinSearchAndReplace.append(['<panel name="template_menu_main_nologo" />', '<panel name="template_menu_main_logo4" />'])
-			self.skinSearchAndReplace.append(['<panel name="template_menu_main_button_nologo" />', '<panel name="template_menu_main_button_logo4" />'])
-			self.skinSearchAndReplace.append(['<panel name="template_title_main_nologo" />', '<panel name="template_title_main_logo4" />'])
-			self.skinSearchAndReplace.append(['<panel name="template_title_main_button_nologo" />', '<panel name="template_title_main_button_logo4" />'])
-			
-		#Debug Screen Names in Skins
+                   self.skinSearchAndReplace.append(['<ePixmap pixmap="SevenHD/buttons/d_off.png"', '<!-- ePixmap pixmap="SevenHD/buttons/d_off.png"'])
+                   self.skinSearchAndReplace.append(['size="32,32" zPosition="1" alphatest="blend" /> <!-- TunerD -->', 'size="32,32" zPosition="1" alphatest="blend" / --> <!-- TunerD -->'])
+                
+                
+                ### Menu (Logo)
+                if  config.plugins.SevenHD.Logo.value == "menu-icons1":
+                    self.skinSearchAndReplace.append(['<panel name="template_menu_main_nologo" />', '<panel name="template_menu_main_logo" />'])
+                    self.skinSearchAndReplace.append(['<panel name="template_menu_main_button_nologo" />', '<panel name="template_menu_main_button_logo" />'])
+                    self.skinSearchAndReplace.append(['<panel name="template_title_main_nologo" />', '<panel name="template_title_main_logo" />'])
+                    self.skinSearchAndReplace.append(['<panel name="template_title_main_button_nologo" />', '<panel name="template_title_main_button_logo" />'])
+                elif  config.plugins.SevenHD.Logo.value == "menu-icons2":
+                    self.skinSearchAndReplace.append(['<panel name="template_menu_main_nologo" />', '<panel name="template_menu_main_logo2" />'])
+                    self.skinSearchAndReplace.append(['<panel name="template_menu_main_button_nologo" />', '<panel name="template_menu_main_button_logo2" />'])
+                    self.skinSearchAndReplace.append(['<panel name="template_title_main_nologo" />', '<panel name="template_title_main_logo2" />'])
+                    self.skinSearchAndReplace.append(['<panel name="template_title_main_button_nologo" />', '<panel name="template_title_main_button_logo2" />'])
+                elif  config.plugins.SevenHD.Logo.value == "menu-icons3":
+                    self.skinSearchAndReplace.append(['<panel name="template_menu_main_nologo" />', '<panel name="template_menu_main_logo3" />'])
+                    self.skinSearchAndReplace.append(['<panel name="template_menu_main_button_nologo" />', '<panel name="template_menu_main_button_logo3" />'])
+                    self.skinSearchAndReplace.append(['<panel name="template_title_main_nologo" />', '<panel name="template_title_main_logo3" />'])
+                    self.skinSearchAndReplace.append(['<panel name="template_title_main_button_nologo" />', '<panel name="template_title_main_button_logo3" />'])
+                elif  config.plugins.SevenHD.Logo.value == "menu-icons4":
+                    self.skinSearchAndReplace.append(['<panel name="template_menu_main_nologo" />', '<panel name="template_menu_main_logo4" />'])
+                    self.skinSearchAndReplace.append(['<panel name="template_menu_main_button_nologo" />', '<panel name="template_menu_main_button_logo4" />'])
+                    self.skinSearchAndReplace.append(['<panel name="template_title_main_nologo" />', '<panel name="template_title_main_logo4" />'])
+                    self.skinSearchAndReplace.append(['<panel name="template_title_main_button_nologo" />', '<panel name="template_title_main_button_logo4" />'])
+                    
+                #Debug Screen Names in Skins
                 if config.plugins.SevenHD.debug_screen_names.value:
                    self.skinSearchAndReplace.append(['<!--<eLabel backgroundColor="SevenFontBackgroundLeft" font="Regular;13" foregroundColor="red"', '<eLabel backgroundColor="SevenFontBackgroundLeft" font="Regular;15" foregroundColor="red"'])
-		   self.skinSearchAndReplace.append(['position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->', 'position="50,13" size="500,19" halign="left" valign="top" transparent="1" />'])
-				
+                   self.skinSearchAndReplace.append(['position="50,13" size="500,16" halign="left" valign="center" transparent="1" />-->', 'position="50,13" size="500,19" halign="left" valign="top" transparent="1" />'])
+                        
                 ### Header
-		self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.Header.value + "-begin" + XML)
-		if not config.plugins.SevenHD.SelectionBorder.value == "none":
-			self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.Header.value + "-middle" + XML)
-		self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.Header.value + "-end" + XML)
+                self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.Header.value + "-begin" + XML)
+                if not config.plugins.SevenHD.SelectionBorder.value == "none":
+                    self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.Header.value + "-middle" + XML)
+                self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.Header.value + "-end" + XML)
                 self.debug(MAIN_DATA_PATH + 'header' + XML)
                 
                 ### Volume
                 self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.VolumeStyle.value + XML)
-                self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.VolumeStyle.value + XML)	
+                self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.VolumeStyle.value + XML)    
                 
                 ###ChannelSelection
                 self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.ChannelSelectionStyle.value + XML)
@@ -855,12 +855,12 @@ class SevenHD(Screen):
                    self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.WeatherStyle_1.value + XML)      
                 
                 ###weather-style_2 Infobar
-                   if config.plugins.SevenHD.WeatherStyle_2.value != 'none':
-                      self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.WeatherStyle_2.value + str(config.plugins.SevenHD.weather_server.value) + XML)
-                      self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.WeatherStyle_2.value + str(config.plugins.SevenHD.weather_server.value) + XML)
-                   else:
-                      self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.WeatherStyle_2.value + XML)
-                      self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.WeatherStyle_2.value + XML) 
+                if config.plugins.SevenHD.WeatherStyle_2.value != 'none':
+                   self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.WeatherStyle_2.value + str(config.plugins.SevenHD.weather_server.value) + XML)
+                   self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.WeatherStyle_2.value + str(config.plugins.SevenHD.weather_server.value) + XML)
+                else:
+                   self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.WeatherStyle_2.value + XML)
+                   self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.WeatherStyle_2.value + XML) 
                 
                 ###Infobar_middle
                 self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.InfobarStyle.value + "-middle.xml")
@@ -916,96 +916,96 @@ class SevenHD(Screen):
                           self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.ECMInfo.value + XML)        
                 
                 ###Infobar_end
-		self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.InfobarStyle.value + config.plugins.SevenHD.SIB.value + XML)
+                self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.InfobarStyle.value + config.plugins.SevenHD.SIB.value + XML)
                 self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.InfobarStyle.value + config.plugins.SevenHD.SIB.value + XML)       
-		
+        
                 ###Main XML
-		self.appendSkinFile(MAIN_DATA_PATH + "main.xml")
+                self.appendSkinFile(MAIN_DATA_PATH + "main.xml")
                 self.debug(MAIN_DATA_PATH + "main.xml")       
                 
                 ###Plugins XML
-		self.appendSkinFile(MAIN_DATA_PATH + "plugins.xml")
+                self.appendSkinFile(MAIN_DATA_PATH + "plugins.xml")
                 self.debug(MAIN_DATA_PATH + "plugins.xml")        
                 
                 #EMCSTYLE
-		self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.EMCStyle.value + XML)
+                self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.EMCStyle.value + XML)
                 self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.EMCStyle.value + XML)        
                 
                 ###EMCMedia_main
-		self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.EMCMedia.value + "-main.xml")
+                self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.EMCMedia.value + "-main.xml")
                 self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.EMCMedia.value + "-main.xml")       
-				
+                
                 ###picon
-		self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.EMCPicon.value + XML)
+                self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.EMCPicon.value + XML)
                 self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.EMCPicon.value + XML)        
-				
+                
                 ###EMCMedia_end
-		self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.EMCMedia.value + "-end.xml")
+                self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.EMCMedia.value + "-end.xml")
                 self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.EMCMedia.value + "-end.xml")       
                 
                 #MOVIESELECTIONSTYLE
-		self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.MovieSelectionStyle.value + XML)
+                self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.MovieSelectionStyle.value + XML)
                 self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.MovieSelectionStyle.value + XML)        
                  
                 ###MoviePlayer_main
-		self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.MoviePlayer.value + "-main.xml")
+                self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.MoviePlayer.value + "-main.xml")
                 self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.MoviePlayer.value + "-main.xml")       
                 
                 ###picon
-		self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.MoviePlayerCover.value + XML)
+                self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.MoviePlayerCover.value + XML)
                 self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.MoviePlayerCover.value + XML)        
                 
                 ###MoviePlayer_end
-		self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.MoviePlayer.value + "-end.xml")
+                self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.MoviePlayer.value + "-end.xml")
                 self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.MoviePlayer.value + "-end.xml")       
                 
                 #NumberZapExtStyle
-		self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.NumberZapExt.value + XML)
+                self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.NumberZapExt.value + XML)
                 self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.NumberZapExt.value + XML)       
                 
                 #MSNWeatherPlugin
-		if fileExists(PLUGIN_PATH + "Extensions/WeatherPlugin/plugin.pyo"):
-			self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.MSNWeather.value + XML)
-			self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.MSNWeather.value + XML)         
+                if fileExists(PLUGIN_PATH + "Extensions/WeatherPlugin/plugin.pyo"):
+                    self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.MSNWeather.value + XML)
+                    self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.MSNWeather.value + XML)         
                
                 ###cooltv
-		self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.CoolTVGuide.value + XML)
+                self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.CoolTVGuide.value + XML)
                 self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.CoolTVGuide.value + XML)      
                 
                 ###eventview
-		self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.EventView.value + XML)
+                self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.EventView.value + XML)
                 self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.EventView.value + XML)      
                 
                 ###epgselection
-		self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.EPGSelection.value + XML)
+                self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.EPGSelection.value + XML)
                 self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.EPGSelection.value + XML)      
                 
                 ###timeredit
-		self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.TimerEdit.value + XML)
+                self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.TimerEdit.value + XML)
                 self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.TimerEdit.value + XML)      
                 
                 ###custom-main XML
-		self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.Image.value + XML)
+                self.appendSkinFile(MAIN_DATA_PATH + config.plugins.SevenHD.Image.value + XML)
                 self.debug(MAIN_DATA_PATH + config.plugins.SevenHD.Image.value + XML)        
                 
                 ###skin-user
-		if config.plugins.SevenHD.use_skin_parts.value != 'none':
-                   if config.plugins.SevenHD.use_skin_parts.value == 'skin_user':
-                      try:
-		         self.appendSkinFile(MAIN_DATA_PATH + "skin-user.xml")
-		      except:
-		         pass
-                   else:
-		       try:
+                if config.plugins.SevenHD.use_skin_parts.value != 'none':
+                    if config.plugins.SevenHD.use_skin_parts.value == 'skin_user':
+                        try:
+                            self.appendSkinFile(MAIN_DATA_PATH + "skin-user.xml")
+                        except:
+                            pass
+                    else:
+                        try:
                           list_dir = os.listdir(MAIN_USER_PATH)
                           for part in list_dir:
                              if part.endswith('.part'): 
                                 self.appendSkinFile(MAIN_USER_PATH + part)
-                       except:
-		           pass
-		           
+                        except:
+                            pass
+                   
                 ###skin-end
-		self.appendSkinFile(MAIN_DATA_PATH + "skin-end.xml")
+                self.appendSkinFile(MAIN_DATA_PATH + "skin-end.xml")
                 self.debug(MAIN_DATA_PATH + "skin-end.xml")       
                 
                 try:
@@ -1064,14 +1064,14 @@ class SevenHD(Screen):
                    else:
                       rename(TMPFILE, FILE)
                       self.debug('rename : ' + TMPFILE + ' to ' + FILE + "\n")
-		
+        
                 # user_font
                 if fileExists(MAIN_USER_PATH + 'user_font.txt'):
                    os.system('python /usr/lib/enigma2/python/Plugins/Extensions/SevenHD/ChangeFont.py %s' % str(self.value))
                 
-                self.debug('Console')	
-		
-                #DOWNLOADS	
+                self.debug('Console')    
+        
+                #DOWNLOADS    
                 download_list = ['buttons', 'vkeys', 'WetterIcons', 'clock', 'volume', 'icons', 'progress', 'progressvol', 'progressib', 'progresscs', 'progresslistcs', 'menu-icons']
                 
                 for entrie in download_list:
@@ -1123,22 +1123,22 @@ class SevenHD(Screen):
                 
                 if config.plugins.SevenHD.skin_mode.value == '1' or '2' or '3':
                    #background only in HD Mode
-		   eConsole().ePopen("rm -rf /usr/share/enigma2/SevenHD/back/*.*; rm -rf /usr/share/enigma2/SevenHD/back")
+                   eConsole().ePopen("rm -rf /usr/share/enigma2/SevenHD/back/*.*; rm -rf /usr/share/enigma2/SevenHD/back")
                 
                    if self.BackgroundLeft.startswith('back'):
-		      self.download_tgz('back', str(self.BackgroundLeft))
+                      self.download_tgz('back', str(self.BackgroundLeft))
                    if self.BackgroundRight.startswith('back'):
                       self.download_tgz('back', str(self.BackgroundRight))
-		   if self.BackgroundIB1.startswith('back'):
-		      self.download_tgz('back', str(self.BackgroundIB1))
-		   if self.BackgroundIB2.startswith('back'):
-		      self.download_tgz('back', str(self.BackgroundIB2))
-		   if self.ChannelBack1.startswith('back'):
-		      self.download_tgz('back', str(self.ChannelBack1))
-		   if self.ChannelBack2.startswith('back'):
-		      self.download_tgz('back', str(self.ChannelBack2))
+                   if self.BackgroundIB1.startswith('back'):
+                      self.download_tgz('back', str(self.BackgroundIB1))
+                   if self.BackgroundIB2.startswith('back'):
+                      self.download_tgz('back', str(self.BackgroundIB2))
+                   if self.ChannelBack1.startswith('back'):
+                      self.download_tgz('back', str(self.ChannelBack1))
+                   if self.ChannelBack2.startswith('back'):
+                      self.download_tgz('back', str(self.ChannelBack2))
                    if self.ChannelBack3.startswith('back'):
-		      self.download_tgz('back', str(self.ChannelBack3))
+                      self.download_tgz('back', str(self.ChannelBack3))
                 
                 if fileExists(PLUGIN_PATH + "Extensions/WeatherPlugin/plugin.pyo") and config.plugins.SevenHD.MSNWeather.value == 'msn-icon':
                    self.download_tgz('msn', 'msn-icon')
@@ -1367,7 +1367,7 @@ class SevenHD(Screen):
         self.session.open(Console, _("About Skin"), cmdlist=[("cat /tmp/about_skin.txt")])
     
     def ChangeLog(self):                          
-	res = requests.request('get', DOWNLOAD_UPDATE_URL + 'SevenHDChangeLog.txt')
+        res = requests.request('get', DOWNLOAD_UPDATE_URL + 'SevenHDChangeLog.txt')
         self.session.open(Console, _("Show Debug Log"), cmdlist=[("echo '%s'" % res.text)])
         
     def send_to_msg_box(self, my_msg):
@@ -1636,7 +1636,8 @@ class SevenHD(Screen):
         gradient.save(path+name+".png")
 
 ################################################################################        
-def main(session, **kwargs):
+    def main(session, **kwargs):
+        global updateInstance
         if fileExists("/tmp/kraven_debug.txt"):
            remove('/tmp/kraven_debug.txt')
            
@@ -1644,13 +1645,12 @@ def main(session, **kwargs):
         session.open(SevenHD)
         
         if config.plugins.SevenHD.AutoUpdatePluginStart.value or config.plugins.SevenHD.AutoUpdate.value:
-           global updateInstance
            if updateInstance is None:
               updateInstance = Update(session)
 
-def Plugins(**kwargs):
-	screenwidth = getDesktop(0).size().width()
-	if screenwidth and screenwidth == 1920:
-		return [PluginDescriptor(name="SevenHD", description=_("Configuration tool for SevenHD"), where = PluginDescriptor.WHERE_PLUGINMENU, icon='pluginfhd.png', fnc=main)]
-	else:
-		return [PluginDescriptor(name="SevenHD", description=_("Configuration tool for SevenHD"), where = PluginDescriptor.WHERE_PLUGINMENU, icon='plugin.png', fnc=main)]
+    def Plugins(**kwargs):
+        screenwidth = getDesktop(0).size().width()
+        if screenwidth and screenwidth == 1920:
+            return [PluginDescriptor(name="SevenHD", description=_("Configuration tool for SevenHD"), where = PluginDescriptor.WHERE_PLUGINMENU, icon='pluginfhd.png', fnc=main)]
+        else:
+            return [PluginDescriptor(name="SevenHD", description=_("Configuration tool for SevenHD"), where = PluginDescriptor.WHERE_PLUGINMENU, icon='plugin.png', fnc=main)]
