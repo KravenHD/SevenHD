@@ -57,14 +57,14 @@ class SevenHDMovieThumb(Renderer):
             self.instance.hide()
     
     def on_finish(self, what):
-        print '[SevenHDMovieThumb] downlod complet'
+        print('[SevenHDMovieThumb] downlod complet')
         if os.path.isfile(self.jpg_name):
-           print '[SevenHDMovieThumb] found Thumb'
+           print('[SevenHDMovieThumb] found Thumb')
            self.instance.show()
            self.picload.startDecode(self.jpg_name)
         
     def Error(self, errors):
-        print '[SevenHDMovieThumb] found no Thumb'
+        print('[SevenHDMovieThumb] found no Thumb')
         self.instance.hide()
         
     def onShow(self):

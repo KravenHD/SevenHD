@@ -13,10 +13,10 @@ gettext.textdomain("enigma2")
 gettext.bindtextdomain("SevenHD", "%s%s" % (resolveFilename(SCOPE_PLUGINS), "Extensions/SevenHD/locale/"))
 
 def _(txt):
-	t = gettext.dgettext("SevenHD", txt)
-	if t == txt:
-		t = gettext.gettext(txt)
-	return t
+    t = gettext.dgettext("SevenHD", txt)
+    if t == txt:
+        t = gettext.gettext(txt)
+    return t
 
 class SevenHDDiskSpace(Poll, Converter, object):
     free = 0
@@ -96,10 +96,10 @@ class SevenHDDiskSpace(Poll, Converter, object):
                     return 'N/A'
 
             elif self.type == self.path:
-				if "." in str(service.getPath()) or "@" in str(service.getPath()) or "Latest Recordings" in str(service.getPath()):
-					return service.getPath().rsplit('/', 1)[0]
-				else:
-					return service.getPath().replace('/Latest Recordings','')
+                if "." in str(service.getPath()) or "@" in str(service.getPath()) or "Latest Recordings" in str(service.getPath()):
+                    return service.getPath().rsplit('/', 1)[0]
+                else:
+                    return service.getPath().replace('/Latest Recordings','')
 
         return ""
 

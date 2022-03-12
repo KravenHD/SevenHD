@@ -57,8 +57,8 @@ class ShareSkinSettings:
                if entrie != "":
                   self.debug('Entrie: ' + str(entrie))
                   try:
-                     exec entrie
-                     exec entrie.replace('.value', '.save()').split(' ')[0]
+                     exec(entrie)
+                     exec(entrie.replace('.value', '.save()').split(' ')[0])
                      self.debug('Entrie: ' + str(entrie.replace('.value', '.save()').split(' ')[0]))
                   except:
                      self.debug('\nError by: ' + str(entrie) + '\n')

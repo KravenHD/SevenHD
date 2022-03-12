@@ -9,87 +9,87 @@ from Components.Converter.Converter import Converter
 URL = 'https://raw.githubusercontent.com/KravenHD/SevenHD-Daten/master/update/version.txt'
 
 class SevenHDUpdate(Converter, object):
-	def __init__(self, type):
-		Converter.__init__(self, type)
-                
-                if type == 'Update':
-                   self.type = 'Update'
-                elif type == 'Version':
-                   self.type = 'Version'
-                
-                self.git_version = '0.0.0.0'   
-                self.check_timer = eTimer()
-                self.check_timer.callback.append(self.get)
-                self.check_timer.start(30000)
-	
-	@cached
-	def getText(self):
-            if self.type == 'Update':
-               self.info = self.look('1')
-            if self.type == 'Version':
-               self.info = self.get_version()
-            return str(self.info)
+    def __init__(self, type):
+        Converter.__init__(self, type)
 
-	text = property(getText)
+        if type == 'Update':
+           self.type = 'Update'
+        elif type == 'Version':
+           self.type = 'Version'
 
-        @cached
-	def getBoolean(self):
-	    if self.type == 'Update':
-               self.info = self.look('2')
-            if self.type == 'Version':
-               self.info = True
-            return self.info
+        self.git_version = '0.0.0.0'   
+        self.check_timer = eTimer()
+        self.check_timer.callback.append(self.get)
+        self.check_timer.start(30000)
 
-	boolean = property(getBoolean)
+    @cached
+    def getText(self):
+        if self.type == 'Update':
+           self.info = self.look('1')
+        if self.type == 'Version':
+           self.info = self.get_version()
+        return str(self.info)
 
-        def get(self):
-            getPage(URL).addCallback(self.put).addErrback(self.debug)
-        
-        def put(self, what):
-            self.git_version = str(what)
-            self.check_timer.start(30000, True)    
-        
-        def look(self, what):
-            if self.git_version == '0.0.0.0':
-               self.get()
-            box_version = config.plugins.SevenHD.version.value
-            online_version = self.git_version
-	            
-	    version_on_box = self.change_to_int(box_version)
-	    version_on_line = self.change_to_int(online_version)
-	    
-            if int(version_on_box) < int(version_on_line):
-                if str(what) == str('1'):   
-                   self.update_available = 'Last Version on Server ' + str(online_version)
-                else:
-                   self.update_available = True
-            else:
-                if str(what) == str('1'):   
-                   self.update_available = 'Last Version on Server ' + str(box_version)
-                else:
-                   self.update_available = False
+    text = property(getText)
 
-            return self.update_available
-        
-        def change_to_int(self, versionnumber):
-            versionnumber = versionnumber.replace('.','').split('+')[0]
-            if str(len(versionnumber)) <= str('3'): 
-                   versionnumber = versionnumber + str('0')
-                   if str(len(versionnumber)) < str('4'): 
-                      versionnumber = versionnumber + str('0')
-            return versionnumber
+    @cached
+    def getBoolean(self):
+        if self.type == 'Update':
+           self.info = self.look('2')
+        if self.type == 'Version':
+           self.info = True
+        return self.info
 
-        def get_version(self):
-            opkg_info = os.popen("opkg list-installed enigma2-plugin-skins-sevenhd | cut -d ' ' -f3").read()
-            version = 'Version: ' + str(opkg_info.strip())
-            return version
+    boolean = property(getBoolean)
+
+    def get(self):
+        getPage(URL).addCallback(self.put).addErrback(self.debug)
+    
+    def put(self, what):
+        self.git_version = str(what)
+        self.check_timer.start(30000, True)    
+    
+    def look(self, what):
+        if self.git_version == '0.0.0.0':
+           self.get()
+        box_version = config.plugins.SevenHD.version.value
+        online_version = self.git_version
             
-        def changed(self, what):
-	    Converter.changed(self, (self.CHANGED_POLL,))
+        version_on_box = self.change_to_int(box_version)
+        version_on_line = self.change_to_int(online_version)
+    
+        if int(version_on_box) < int(version_on_line):
+            if str(what) == str('1'):   
+               self.update_available = 'Last Version on Server ' + str(online_version)
+            else:
+               self.update_available = True
+        else:
+            if str(what) == str('1'):   
+               self.update_available = 'Last Version on Server ' + str(box_version)
+            else:
+               self.update_available = False
+
+        return self.update_available
+    
+    def change_to_int(self, versionnumber):
+        versionnumber = versionnumber.replace('.','').split('+')[0]
+        if str(len(versionnumber)) <= str('3'): 
+            versionnumber = versionnumber + str('0')
+        if str(len(versionnumber)) < str('4'): 
+            versionnumber = versionnumber + str('0')
+        return versionnumber
+
+    def get_version(self):
+        opkg_info = os.popen("opkg list-installed enigma2-plugin-skins-sevenhd | cut -d ' ' -f3").read()
+        version = 'Version: ' + str(opkg_info.strip())
+        return version
         
-        def debug(self, what):
-            if config.plugins.SevenHD.debug.value:
-               f = open('/tmp/kraven_debug.txt', 'a+')
-               f.write('[OnlineUpdateConverter]' + str(what) + '\n')
-               f.close()
-            print 'SevenHD Update Request Fails' 
+    def changed(self, what):
+        Converter.changed(self, (self.CHANGED_POLL,))
+    
+    def debug(self, what):
+        if config.plugins.SevenHD.debug.value:
+           f = open('/tmp/kraven_debug.txt', 'a+')
+           f.write('[OnlineUpdateConverter]' + str(what) + '\n')
+           f.close()
+        print('SevenHD Update Request Fails')

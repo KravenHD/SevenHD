@@ -106,7 +106,7 @@ class SevenHDWeather_realtek(Poll, Converter, object):
 		global WEATHER_LOAD
 		if WEATHER_LOAD == True:
 			try:
-				print "SevenWeather: Weather download from RealTek"
+				print("SevenWeather: Weather download from RealTek")
 				self.data = {}
 				index = 0
 				res = requests.request('get', URL)

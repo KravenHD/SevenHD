@@ -65,7 +65,7 @@ class SevenHDTempFanInfo(Poll, Converter, object):
                 f.close()
         except:
             pass
-        if systemp <> "N/A":
+        if systemp != "N/A":
             if len(systemp) > 2:
                 systemp = systemp[:2]
             systemp = systemp + str('\xc2\xb0') + "C"
@@ -80,7 +80,7 @@ class SevenHDTempFanInfo(Poll, Converter, object):
                 f.close()
         except:
             pass
-        if faninfo <> "N/A":
+        if faninfo != "N/A":
             faninfo = faninfo[:-4]
         return faninfo
 
